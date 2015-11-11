@@ -1,0 +1,11 @@
+c:\users\dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\Tricore.exe.config
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\Tricore.exe
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\Tricore.pdb
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.csprojResolveAssemblyReference.cache
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.Properties.Resources.resources
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.csproj.GenerateResource.Cache
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.exe
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.pdb
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\MySql.Data.dll
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.MainWindow.resources
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Tricore.MySQLWindow.resources

@@ -1,0 +1,2 @@
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\Mantic-TC.exe.config
+C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\bin\Debug\Mantic.exe.config
