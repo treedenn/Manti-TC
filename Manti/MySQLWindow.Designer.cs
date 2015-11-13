@@ -57,9 +57,9 @@
             this.labelAddress.AutoSize = true;
             this.labelAddress.Location = new System.Drawing.Point(6, 20);
             this.labelAddress.Name = "labelAddress";
-            this.labelAddress.Size = new System.Drawing.Size(86, 13);
+            this.labelAddress.Size = new System.Drawing.Size(48, 13);
             this.labelAddress.TabIndex = 0;
-            this.labelAddress.Text = "MySQL Address:";
+            this.labelAddress.Text = "Address:";
             // 
             // textBoxAddress
             // 
@@ -120,7 +120,7 @@
             this.groupBox3.Size = new System.Drawing.Size(250, 129);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Database(s)";
+            this.groupBox3.Text = "Databases";
             // 
             // textBoxWorld
             // 
@@ -188,7 +188,7 @@
             this.groupBox2.Size = new System.Drawing.Size(250, 129);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Details";
+            this.groupBox2.Text = "Login Form";
             // 
             // textBoxPort
             // 

@@ -102,19 +102,19 @@ namespace Tricore
             {
                 string accountQuery =
                 "SELECT id, username, email, reg_mail, joindate, last_ip, locked, online, expansion " +
-                "FROM account WHERE id='" + accountID.ToString() + "';";
+                "FROM account WHERE id='" + accountID + "';";
 
                 string banQuery =
                     "SELECT bandate, unbandate, banreason, bannedby, active " +
-                    "FROM account_banned WHERE id='" + accountID.ToString() + "';";
+                    "FROM account_banned WHERE id='" + accountID + "';";
 
                 string muteQuery =
                     "SELECT mutedate, mutetime, mutereason, mutedby " +
-                    "FROM account_muted WHERE guid='" + accountID.ToString() + "';";
+                    "FROM account_muted WHERE guid='" + accountID + "';";
 
                 string accessQuery =
                     "SELECT gmlevel, RealmID " +
-                    "FROM account_access WHERE id='" + accountID.ToString() + "';";
+                    "FROM account_access WHERE id='" + accountID + "';";
 
                 string finalQuery = accountQuery + banQuery + muteQuery + accessQuery;
 
@@ -128,8 +128,8 @@ namespace Tricore
                     textBoxAccountAccountRegmail.Text = AccountTable.Tables[0].Rows[0][3].ToString();
                     textBoxAccountAccountJoindate.Text = AccountTable.Tables[0].Rows[0][4].ToString();
                     textBoxAccountAccountLastIP.Text = AccountTable.Tables[0].Rows[0][5].ToString();
-                    checkBoxAccountAccountLocked.Checked = Convert.ToBoolean(Convert.ToInt16(AccountTable.Tables[0].Rows[0][6]));
-                    checkBoxAccountAccountOnline.Checked = Convert.ToBoolean(Convert.ToInt16(AccountTable.Tables[0].Rows[0][7]));
+                    checkBoxAccountAccountLocked.Checked = Convert.ToBoolean(AccountTable.Tables[0].Rows[0][6]);
+                    checkBoxAccountAccountOnline.Checked = Convert.ToBoolean(AccountTable.Tables[0].Rows[0][7]);
                     textBoxAccountAccountExpansion.Text = AccountTable.Tables[0].Rows[0][8].ToString();
                 }
 
@@ -139,7 +139,7 @@ namespace Tricore
                     textBoxAccountAccountUnbandate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][1])).ToString();
                     textBoxAccountAccountBanreason.Text = AccountTable.Tables[1].Rows[0][2].ToString();
                     textBoxAccountAccountBannedby.Text = AccountTable.Tables[1].Rows[0][3].ToString();
-                    checkBoxAccountAccountBanActive.Checked = Convert.ToBoolean(Convert.ToInt16(AccountTable.Tables[1].Rows[0][4]));
+                    checkBoxAccountAccountBanActive.Checked = Convert.ToBoolean(AccountTable.Tables[1].Rows[0][4]);
                 }
 
                 if (AccountTable.Tables[2].Rows.Count != 0)
@@ -152,13 +152,93 @@ namespace Tricore
 
                 if (AccountTable.Tables[3].Rows.Count != 0)
                 {
-                    dataGridViewAccountAccountAccess.DataSource = AccountTable.Tables[3];
+                    dataGridViewAccountAccess.DataSource = AccountTable.Tables[3];
                 }
-
-
+                
                 tabControlCategoryAccount.SelectedTab = tabPageAccountAccount;
                 ConnectionClose(connect);
             }
+        }
+
+        private void DatabaseCharacterSearch(string characterGUID)
+        {
+            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseCharacters));
+
+            if (ConnectionOpen(connect))
+            {
+                // Line 1 -> General Information : Line 2 -> Location : Line 3 ->  : Line 4 -> Stats : Line 5 -> Unknown.
+                string characterQuery = "SELECT guid, account, NAME, race, class, gender, LEVEL, money, xp, chosentitle, online, cinematic, is_logout_resting," +
+                    "map, instance_id, zone, orientation, position_x, position_y, position_z, " +
+                    "totalHonorPoints, arenaPoints, totalKills, " +
+                    "health, power1, power2, power3, power4, power5, power6, power7, " +
+                    "equipmentCache, knownTitles, exploredZones, taxi_path " +
+                    "FROM characters WHERE guid = '" + characterGUID + "';";
+
+                DataSet CharacterTable = DatabaseSearch(connect, characterQuery);
+
+                if (CharacterTable.Tables[0].Rows.Count != 0)
+                {
+                    // General Information
+                    textBoxCharacterCharacterGUID.Text = CharacterTable.Tables[0].Rows[0][0].ToString();
+                    textBoxCharacterCharacterAccount.Text = CharacterTable.Tables[0].Rows[0][1].ToString();
+                    textBoxCharacterCharacterName.Text = CharacterTable.Tables[0].Rows[0][2].ToString();
+                    textBoxCharacterCharacterRace.Text = CharacterTable.Tables[0].Rows[0][3].ToString();
+                    textBoxCharacterCharacterClass.Text = CharacterTable.Tables[0].Rows[0][4].ToString();
+                    textBoxCharacterCharacterGender.Text = CharacterTable.Tables[0].Rows[0][5].ToString();
+                    textBoxCharacterCharacterLevel.Text = CharacterTable.Tables[0].Rows[0][6].ToString();
+                    textBoxCharacterCharacterMoney.Text = CharacterTable.Tables[0].Rows[0][7].ToString();
+                    textBoxCharacterCharacterXP.Text = CharacterTable.Tables[0].Rows[0][8].ToString();
+                    textBoxCharacterCharacterTitle.Text = CharacterTable.Tables[0].Rows[0][9].ToString();
+                    checkBoxCharacterCharacterOnline.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][10]);
+                    checkBoxCharacterCharacterCinematic.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][11]);
+                    checkBoxCharacterCharacterRest.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][12]);
+                    // Location
+                    textBoxCharacterCharacterMapID.Text = CharacterTable.Tables[0].Rows[0][13].ToString();
+                    textBoxCharacterCharacterInstanceID.Text = CharacterTable.Tables[0].Rows[0][14].ToString();
+                    textBoxCharacterCharacterZoneID.Text = CharacterTable.Tables[0].Rows[0][15].ToString();
+                    textBoxCharacterCharacterCoordO.Text = CharacterTable.Tables[0].Rows[0][16].ToString();
+                    textBoxCharacterCharacterCoordX.Text = CharacterTable.Tables[0].Rows[0][17].ToString();
+                    textBoxCharacterCharacterCoordY.Text = CharacterTable.Tables[0].Rows[0][18].ToString();
+                    textBoxCharacterCharacterCoordZ.Text = CharacterTable.Tables[0].Rows[0][19].ToString();
+                    // Player vs Player
+                    textBoxCharacterCharacterHonorPoints.Text = CharacterTable.Tables[0].Rows[0][20].ToString();
+                    textBoxCharacterCharacterArenaPoints.Text = CharacterTable.Tables[0].Rows[0][21].ToString();
+                    textBoxCharacterCharacterTotalKills.Text = CharacterTable.Tables[0].Rows[0][22].ToString();
+                    // Stats
+                    textBoxCharacterCharacterHealth.Text = CharacterTable.Tables[0].Rows[0][23].ToString();
+                    textBoxCharacterCharacterPower1.Text = CharacterTable.Tables[0].Rows[0][24].ToString();
+                    textBoxCharacterCharacterPower2.Text = CharacterTable.Tables[0].Rows[0][25].ToString();
+                    textBoxCharacterCharacterPower3.Text = CharacterTable.Tables[0].Rows[0][26].ToString();
+                    textBoxCharacterCharacterPower4.Text = CharacterTable.Tables[0].Rows[0][27].ToString();
+                    textBoxCharacterCharacterPower5.Text = CharacterTable.Tables[0].Rows[0][28].ToString();
+                    textBoxCharacterCharacterPower6.Text = CharacterTable.Tables[0].Rows[0][29].ToString();
+                    textBoxCharacterCharacterPower7.Text = CharacterTable.Tables[0].Rows[0][30].ToString();
+                    // Unknown
+                    textBoxCharacterCharacterEquipmentCache.Text = CharacterTable.Tables[0].Rows[0][31].ToString();
+                    textBoxCharacterCharacterKnownTitles.Text = CharacterTable.Tables[0].Rows[0][32].ToString();
+                    textBoxCharacterCharacterExploredZones.Text = CharacterTable.Tables[0].Rows[0][33].ToString();
+                    textBoxCharacterCharacterTaxiMask.Text = CharacterTable.Tables[0].Rows[0][34].ToString();
+                }
+
+                tabControlCategoryCharacter.SelectedTab = tabPageCharacterCharacter;
+                ConnectionClose(connect);
+            }
+        }
+
+        private void DatabaseCharacterInventory(string characterGUID)
+        {
+            MySqlConnection connect = new MySqlConnection(MySQLWindow.DatabaseCharacters);
+
+            if (ConnectionOpen(connect))
+            {
+                string inventoryQuery = "SELECT * FROM character_inventory WHERE guid = '" + characterGUID + "';";
+
+                DataSet inventoryTable = DatabaseSearch(connect, inventoryQuery);
+
+                
+            }
+
+            ConnectionClose(connect);
         }
 
         private static DateTime UnixStampToDateTime(double unixStamp)
@@ -192,7 +272,7 @@ namespace Tricore
                     "FROM account WHERE id = '" + textBoxAccountSearchID.Text.Trim() + "' OR username = '" + textBoxAccountSearchUsername.Text.Trim() + "'";
 
                 DataSet AccountSearch = DatabaseSearch(connect, searchQuery.Trim());
-                dataGridViewAccountSearchSearch.DataSource = AccountSearch.Tables[0];
+                dataGridViewAccountSearch.DataSource = AccountSearch.Tables[0];
                 toolStripStatusLabelAccountSearchResult.Text = "Account(s) found: " + AccountSearch.Tables[0].Rows.Count.ToString();
             }
 
@@ -201,7 +281,7 @@ namespace Tricore
 
         private void dataGridViewAccountSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DatabaseAccountSearch(dataGridViewAccountSearchSearch.SelectedCells[0].Value.ToString());
+            DatabaseAccountSearch(dataGridViewAccountSearch.SelectedCells[0].Value.ToString());
         }
 
         private void buttonAccountAccountGenerateScript_Click(object sender, EventArgs e)
@@ -251,11 +331,16 @@ namespace Tricore
                     "' OR name = '" + textBoxCharacterSearchUsername.Text.Trim() + "';";
 
                 DataSet CharacterSearch = DatabaseSearch(connect, searchQuery.Trim());
-                dataGridViewCharacterSearchSearch.DataSource = CharacterSearch.Tables[0];
+                dataGridViewCharacterSearch.DataSource = CharacterSearch.Tables[0];
                 toolStripStatusLabelCharacterSearchResult.Text = "Character(s) found: " + CharacterSearch.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
+        }
+
+        private void dataGridViewCharacterSearchSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DatabaseCharacterSearch(dataGridViewCharacterSearch.SelectedCells[0].Value.ToString());
         }
     }
 }
