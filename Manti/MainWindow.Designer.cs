@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,14 +35,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripMainWindow = new System.Windows.Forms.MenuStrip();
             this.menuesUpHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlCategory = new System.Windows.Forms.TabControl();
             this.tabPageAccount = new System.Windows.Forms.TabPage();
             this.tabControlCategoryAccount = new System.Windows.Forms.TabControl();
             this.tabPageAccountSearch = new System.Windows.Forms.TabPage();
-            this.dataGridViewAccountSearch = new System.Windows.Forms.DataGridView();
             this.statusStripAccountSearch = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelAccountSearchResult = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonAccountSearchButton = new System.Windows.Forms.Button();
@@ -112,7 +114,47 @@
             this.labelCharacterSearchID = new System.Windows.Forms.Label();
             this.textBoxCharacterSearchID = new System.Windows.Forms.TextBox();
             this.tabPageCharacterCharacter = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBoxCharacterCharacterTaxiMask = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterTaxiMask = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterExploredZones = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterExploredZones = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterKnownTitles = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterKnownTitles = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterEquipmentCache = new System.Windows.Forms.TextBox();
+            this.groupBoxCharacterCharacterStats = new System.Windows.Forms.GroupBox();
+            this.textBoxCharacterCharacterPower7 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower7 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower6 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower6 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower5 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower5 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower4 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower4 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower3 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower3 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower2 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower2 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterPower1 = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterPower1 = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterHealth = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterHealth = new System.Windows.Forms.Label();
+            this.labelCharacterCharacterEquipmentCache = new System.Windows.Forms.Label();
             this.groupBoxCharacterCharacterLocation = new System.Windows.Forms.GroupBox();
+            this.labelCharacterCharacterZoneID = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterZoneID = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterCoordZ = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterCoordZ = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterCoordY = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterCoordY = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterCoordX = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterCoordX = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterCoordO = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterCoordO = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterInstanceID = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterInstanceID = new System.Windows.Forms.TextBox();
+            this.labelCharacterCharacterMapID = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterMapID = new System.Windows.Forms.TextBox();
             this.groupBoxCharacterCharacterPvP = new System.Windows.Forms.GroupBox();
             this.textBoxCharacterCharacterTotalKills = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterTotalKills = new System.Windows.Forms.Label();
@@ -121,6 +163,11 @@
             this.textBoxCharacterCharacterHonorPoints = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterHonorPoints = new System.Windows.Forms.Label();
             this.groupBoxCharacterCharacterGeneral = new System.Windows.Forms.GroupBox();
+            this.checkBoxCharacterCharacterRest = new System.Windows.Forms.CheckBox();
+            this.checkBoxCharacterCharacterCinematic = new System.Windows.Forms.CheckBox();
+            this.checkBoxCharacterCharacterOnline = new System.Windows.Forms.CheckBox();
+            this.labelCharacterCharacterTitle = new System.Windows.Forms.Label();
+            this.textBoxCharacterCharacterTitle = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterMoney = new System.Windows.Forms.Label();
             this.textBoxCharacterCharacterMoney = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterXP = new System.Windows.Forms.Label();
@@ -139,63 +186,41 @@
             this.textBoxCharacterCharacterAccount = new System.Windows.Forms.TextBox();
             this.textBoxCharacterCharacterGUID = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterGUID = new System.Windows.Forms.Label();
+            this.tabPageCharacterInventory = new System.Windows.Forms.TabPage();
             this.tabPageCreature = new System.Windows.Forms.TabPage();
             this.tabPageGameObject = new System.Windows.Forms.TabPage();
             this.tabPageItem = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.labelCharacterCharacterMapID = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterMapID = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterInstanceID = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterInstanceID = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterCoordO = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterCoordO = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterCoordX = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterCoordX = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterCoordY = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterCoordY = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterCoordZ = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterCoordZ = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterZoneID = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterZoneID = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterTitle = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterTitle = new System.Windows.Forms.TextBox();
-            this.checkBoxCharacterCharacterOnline = new System.Windows.Forms.CheckBox();
-            this.checkBoxCharacterCharacterCinematic = new System.Windows.Forms.CheckBox();
-            this.checkBoxCharacterCharacterRest = new System.Windows.Forms.CheckBox();
-            this.groupBoxCharacterCharacterStats = new System.Windows.Forms.GroupBox();
-            this.labelCharacterCharacterHealth = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterHealth = new System.Windows.Forms.TextBox();
-            this.textBoxCharacterCharacterPower1 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower1 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower2 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower2 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower3 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower3 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower4 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower4 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower5 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower5 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower6 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower6 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterPower7 = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterPower7 = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterEquipmentCache = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterEquipmentCache = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterKnownTitles = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterKnownTitles = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterExploredZones = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterExploredZones = new System.Windows.Forms.Label();
-            this.textBoxCharacterCharacterTaxiMask = new System.Windows.Forms.TextBox();
-            this.labelCharacterCharacterTaxiMask = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridViewAccountSearch = new System.Windows.Forms.DataGridView();
             this.dataGridViewCharacterInventory = new System.Windows.Forms.DataGridView();
+            this.ColumnCharacterSearchGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterSearchAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterSearchName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterSearchRace = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterSearchClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterSearchLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAccountSearchID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAccountSearchUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAccountSearchEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnAccountSearchExpansion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterInventoryGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterInventoryBag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterInventorySlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterInventoryItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCharacterInventoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPageCreatureSearch = new System.Windows.Forms.TabPage();
+            this.tabPageCreatureTemplate = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.menuStripMainWindow.SuspendLayout();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
             this.tabControlCategoryAccount.SuspendLayout();
             this.tabPageAccountSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).BeginInit();
             this.statusStripAccountSearch.SuspendLayout();
             this.tabPageAccountAccount.SuspendLayout();
             this.groupBoxAccountAccountBan.SuspendLayout();
@@ -210,12 +235,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterSearch)).BeginInit();
             this.statusStripCharacterSearch.SuspendLayout();
             this.tabPageCharacterCharacter.SuspendLayout();
+            this.groupBoxCharacterCharacterStats.SuspendLayout();
             this.groupBoxCharacterCharacterLocation.SuspendLayout();
             this.groupBoxCharacterCharacterPvP.SuspendLayout();
             this.groupBoxCharacterCharacterGeneral.SuspendLayout();
-            this.groupBoxCharacterCharacterStats.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageCharacterInventory.SuspendLayout();
+            this.tabPageCreature.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterInventory)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMainWindow
@@ -295,54 +323,6 @@
             this.tabPageAccountSearch.Size = new System.Drawing.Size(889, 382);
             this.tabPageAccountSearch.TabIndex = 0;
             this.tabPageAccountSearch.Text = "Search";
-            // 
-            // dataGridViewAccountSearch
-            // 
-            this.dataGridViewAccountSearch.AllowUserToAddRows = false;
-            this.dataGridViewAccountSearch.AllowUserToDeleteRows = false;
-            this.dataGridViewAccountSearch.AllowUserToResizeColumns = false;
-            this.dataGridViewAccountSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewAccountSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewAccountSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewAccountSearch.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewAccountSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewAccountSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAccountSearch.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewAccountSearch.Location = new System.Drawing.Point(-4, 71);
-            this.dataGridViewAccountSearch.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridViewAccountSearch.MultiSelect = false;
-            this.dataGridViewAccountSearch.Name = "dataGridViewAccountSearch";
-            this.dataGridViewAccountSearch.ReadOnly = true;
-            this.dataGridViewAccountSearch.RowHeadersVisible = false;
-            this.dataGridViewAccountSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewAccountSearch.RowTemplate.Height = 15;
-            this.dataGridViewAccountSearch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewAccountSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewAccountSearch.ShowEditingIcon = false;
-            this.dataGridViewAccountSearch.Size = new System.Drawing.Size(897, 286);
-            this.dataGridViewAccountSearch.TabIndex = 9;
-            this.dataGridViewAccountSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAccountSearch_CellDoubleClick);
             // 
             // statusStripAccountSearch
             // 
@@ -670,18 +650,6 @@
             this.dataGridViewAccountAccess.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewAccountAccess.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewAccountAccess.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewAccountAccess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAccountAccess.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewAccountAccess.Location = new System.Drawing.Point(6, 220);
-            this.dataGridViewAccountAccess.Name = "dataGridViewAccountAccess";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -689,14 +657,26 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewAccountAccess.RowHeadersVisible = false;
+            this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewAccountAccess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAccountAccess.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewAccountAccess.Location = new System.Drawing.Point(6, 220);
+            this.dataGridViewAccountAccess.Name = "dataGridViewAccountAccess";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewAccountAccess.RowHeadersVisible = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -930,7 +910,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterSearch);
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterCharacter);
-            this.tabControlCategoryCharacter.Controls.Add(this.tabPage1);
+            this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterInventory);
             this.tabControlCategoryCharacter.Location = new System.Drawing.Point(6, 6);
             this.tabControlCategoryCharacter.Name = "tabControlCategoryCharacter";
             this.tabControlCategoryCharacter.SelectedIndex = 0;
@@ -962,58 +942,79 @@
             this.dataGridViewCharacterSearch.AllowUserToDeleteRows = false;
             this.dataGridViewCharacterSearch.AllowUserToResizeColumns = false;
             this.dataGridViewCharacterSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCharacterSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCharacterSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCharacterSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewCharacterSearch.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCharacterSearch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewCharacterSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCharacterSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewCharacterSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewCharacterSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewCharacterSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCharacterSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCharacterSearchGUID,
+            this.ColumnCharacterSearchAccount,
+            this.ColumnCharacterSearchName,
+            this.ColumnCharacterSearchRace,
+            this.ColumnCharacterSearchClass,
+            this.ColumnCharacterSearchLevel});
             this.dataGridViewCharacterSearch.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewCharacterSearch.Location = new System.Drawing.Point(-4, 71);
+            this.dataGridViewCharacterSearch.Location = new System.Drawing.Point(0, 71);
             this.dataGridViewCharacterSearch.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewCharacterSearch.MultiSelect = false;
             this.dataGridViewCharacterSearch.Name = "dataGridViewCharacterSearch";
             this.dataGridViewCharacterSearch.ReadOnly = true;
+            this.dataGridViewCharacterSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewCharacterSearch.RowHeadersVisible = false;
             this.dataGridViewCharacterSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewCharacterSearch.RowTemplate.Height = 15;
+            this.dataGridViewCharacterSearch.RowTemplate.ReadOnly = true;
             this.dataGridViewCharacterSearch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCharacterSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCharacterSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCharacterSearch.ShowEditingIcon = false;
-            this.dataGridViewCharacterSearch.Size = new System.Drawing.Size(897, 286);
+            this.dataGridViewCharacterSearch.Size = new System.Drawing.Size(886, 286);
             this.dataGridViewCharacterSearch.TabIndex = 8;
             this.dataGridViewCharacterSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCharacterSearchSearch_CellDoubleClick);
             // 
             // statusStripCharacterSearch
             // 
-            this.statusStripCharacterSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.statusStripCharacterSearch.Dock = System.Windows.Forms.DockStyle.None;
             this.statusStripCharacterSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCharacterSearchResult});
-            this.statusStripCharacterSearch.Location = new System.Drawing.Point(3, 322);
+            this.statusStripCharacterSearch.Location = new System.Drawing.Point(3, 357);
             this.statusStripCharacterSearch.Name = "statusStripCharacterSearch";
-            this.statusStripCharacterSearch.Size = new System.Drawing.Size(129, 22);
+            this.statusStripCharacterSearch.Size = new System.Drawing.Size(883, 22);
             this.statusStripCharacterSearch.TabIndex = 7;
             this.statusStripCharacterSearch.Text = "CharacterSearch";
             // 
@@ -1105,6 +1106,254 @@
             this.tabPageCharacterCharacter.TabIndex = 1;
             this.tabPageCharacterCharacter.Text = "Character";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(6, 348);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(877, 23);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Generate Script";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCharacterCharacterTaxiMask
+            // 
+            this.textBoxCharacterCharacterTaxiMask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterTaxiMask.Location = new System.Drawing.Point(6, 322);
+            this.textBoxCharacterCharacterTaxiMask.Name = "textBoxCharacterCharacterTaxiMask";
+            this.textBoxCharacterCharacterTaxiMask.Size = new System.Drawing.Size(877, 20);
+            this.textBoxCharacterCharacterTaxiMask.TabIndex = 23;
+            // 
+            // labelCharacterCharacterTaxiMask
+            // 
+            this.labelCharacterCharacterTaxiMask.AutoSize = true;
+            this.labelCharacterCharacterTaxiMask.Location = new System.Drawing.Point(3, 306);
+            this.labelCharacterCharacterTaxiMask.Name = "labelCharacterCharacterTaxiMask";
+            this.labelCharacterCharacterTaxiMask.Size = new System.Drawing.Size(59, 13);
+            this.labelCharacterCharacterTaxiMask.TabIndex = 22;
+            this.labelCharacterCharacterTaxiMask.Text = "Taxi Mask:";
+            // 
+            // textBoxCharacterCharacterExploredZones
+            // 
+            this.textBoxCharacterCharacterExploredZones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterExploredZones.Location = new System.Drawing.Point(6, 283);
+            this.textBoxCharacterCharacterExploredZones.Name = "textBoxCharacterCharacterExploredZones";
+            this.textBoxCharacterCharacterExploredZones.Size = new System.Drawing.Size(877, 20);
+            this.textBoxCharacterCharacterExploredZones.TabIndex = 21;
+            // 
+            // labelCharacterCharacterExploredZones
+            // 
+            this.labelCharacterCharacterExploredZones.AutoSize = true;
+            this.labelCharacterCharacterExploredZones.Location = new System.Drawing.Point(3, 267);
+            this.labelCharacterCharacterExploredZones.Name = "labelCharacterCharacterExploredZones";
+            this.labelCharacterCharacterExploredZones.Size = new System.Drawing.Size(84, 13);
+            this.labelCharacterCharacterExploredZones.TabIndex = 20;
+            this.labelCharacterCharacterExploredZones.Text = "Explored Zones:";
+            // 
+            // textBoxCharacterCharacterKnownTitles
+            // 
+            this.textBoxCharacterCharacterKnownTitles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterKnownTitles.Location = new System.Drawing.Point(6, 244);
+            this.textBoxCharacterCharacterKnownTitles.Name = "textBoxCharacterCharacterKnownTitles";
+            this.textBoxCharacterCharacterKnownTitles.Size = new System.Drawing.Size(877, 20);
+            this.textBoxCharacterCharacterKnownTitles.TabIndex = 19;
+            // 
+            // labelCharacterCharacterKnownTitles
+            // 
+            this.labelCharacterCharacterKnownTitles.AutoSize = true;
+            this.labelCharacterCharacterKnownTitles.Location = new System.Drawing.Point(3, 228);
+            this.labelCharacterCharacterKnownTitles.Name = "labelCharacterCharacterKnownTitles";
+            this.labelCharacterCharacterKnownTitles.Size = new System.Drawing.Size(71, 13);
+            this.labelCharacterCharacterKnownTitles.TabIndex = 18;
+            this.labelCharacterCharacterKnownTitles.Text = "Known Titles:";
+            // 
+            // textBoxCharacterCharacterEquipmentCache
+            // 
+            this.textBoxCharacterCharacterEquipmentCache.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterEquipmentCache.Location = new System.Drawing.Point(6, 205);
+            this.textBoxCharacterCharacterEquipmentCache.Name = "textBoxCharacterCharacterEquipmentCache";
+            this.textBoxCharacterCharacterEquipmentCache.Size = new System.Drawing.Size(877, 20);
+            this.textBoxCharacterCharacterEquipmentCache.TabIndex = 17;
+            // 
+            // groupBoxCharacterCharacterStats
+            // 
+            this.groupBoxCharacterCharacterStats.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower7);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower7);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower6);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower6);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower5);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower5);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower4);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower4);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower3);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower3);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower2);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower2);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower1);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower1);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterHealth);
+            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterHealth);
+            this.groupBoxCharacterCharacterStats.Location = new System.Drawing.Point(636, 6);
+            this.groupBoxCharacterCharacterStats.Name = "groupBoxCharacterCharacterStats";
+            this.groupBoxCharacterCharacterStats.Size = new System.Drawing.Size(247, 180);
+            this.groupBoxCharacterCharacterStats.TabIndex = 3;
+            this.groupBoxCharacterCharacterStats.TabStop = false;
+            this.groupBoxCharacterCharacterStats.Text = "Health && Powers";
+            // 
+            // textBoxCharacterCharacterPower7
+            // 
+            this.textBoxCharacterCharacterPower7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterPower7.Location = new System.Drawing.Point(141, 149);
+            this.textBoxCharacterCharacterPower7.Name = "textBoxCharacterCharacterPower7";
+            this.textBoxCharacterCharacterPower7.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower7.TabIndex = 15;
+            // 
+            // labelCharacterCharacterPower7
+            // 
+            this.labelCharacterCharacterPower7.AutoSize = true;
+            this.labelCharacterCharacterPower7.Location = new System.Drawing.Point(138, 133);
+            this.labelCharacterCharacterPower7.Name = "labelCharacterCharacterPower7";
+            this.labelCharacterCharacterPower7.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower7.TabIndex = 14;
+            this.labelCharacterCharacterPower7.Text = "Power7:";
+            // 
+            // textBoxCharacterCharacterPower6
+            // 
+            this.textBoxCharacterCharacterPower6.Location = new System.Drawing.Point(9, 149);
+            this.textBoxCharacterCharacterPower6.Name = "textBoxCharacterCharacterPower6";
+            this.textBoxCharacterCharacterPower6.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower6.TabIndex = 13;
+            // 
+            // labelCharacterCharacterPower6
+            // 
+            this.labelCharacterCharacterPower6.AutoSize = true;
+            this.labelCharacterCharacterPower6.Location = new System.Drawing.Point(6, 133);
+            this.labelCharacterCharacterPower6.Name = "labelCharacterCharacterPower6";
+            this.labelCharacterCharacterPower6.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower6.TabIndex = 12;
+            this.labelCharacterCharacterPower6.Text = "Power6:";
+            // 
+            // textBoxCharacterCharacterPower5
+            // 
+            this.textBoxCharacterCharacterPower5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterPower5.Location = new System.Drawing.Point(141, 110);
+            this.textBoxCharacterCharacterPower5.Name = "textBoxCharacterCharacterPower5";
+            this.textBoxCharacterCharacterPower5.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower5.TabIndex = 11;
+            // 
+            // labelCharacterCharacterPower5
+            // 
+            this.labelCharacterCharacterPower5.AutoSize = true;
+            this.labelCharacterCharacterPower5.Location = new System.Drawing.Point(138, 94);
+            this.labelCharacterCharacterPower5.Name = "labelCharacterCharacterPower5";
+            this.labelCharacterCharacterPower5.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower5.TabIndex = 10;
+            this.labelCharacterCharacterPower5.Text = "Power5:";
+            // 
+            // textBoxCharacterCharacterPower4
+            // 
+            this.textBoxCharacterCharacterPower4.Location = new System.Drawing.Point(9, 110);
+            this.textBoxCharacterCharacterPower4.Name = "textBoxCharacterCharacterPower4";
+            this.textBoxCharacterCharacterPower4.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower4.TabIndex = 9;
+            // 
+            // labelCharacterCharacterPower4
+            // 
+            this.labelCharacterCharacterPower4.AutoSize = true;
+            this.labelCharacterCharacterPower4.Location = new System.Drawing.Point(6, 94);
+            this.labelCharacterCharacterPower4.Name = "labelCharacterCharacterPower4";
+            this.labelCharacterCharacterPower4.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower4.TabIndex = 8;
+            this.labelCharacterCharacterPower4.Text = "Power4:";
+            // 
+            // textBoxCharacterCharacterPower3
+            // 
+            this.textBoxCharacterCharacterPower3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterPower3.Location = new System.Drawing.Point(141, 71);
+            this.textBoxCharacterCharacterPower3.Name = "textBoxCharacterCharacterPower3";
+            this.textBoxCharacterCharacterPower3.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower3.TabIndex = 7;
+            // 
+            // labelCharacterCharacterPower3
+            // 
+            this.labelCharacterCharacterPower3.AutoSize = true;
+            this.labelCharacterCharacterPower3.Location = new System.Drawing.Point(138, 55);
+            this.labelCharacterCharacterPower3.Name = "labelCharacterCharacterPower3";
+            this.labelCharacterCharacterPower3.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower3.TabIndex = 6;
+            this.labelCharacterCharacterPower3.Text = "Power3:";
+            // 
+            // textBoxCharacterCharacterPower2
+            // 
+            this.textBoxCharacterCharacterPower2.Location = new System.Drawing.Point(9, 71);
+            this.textBoxCharacterCharacterPower2.Name = "textBoxCharacterCharacterPower2";
+            this.textBoxCharacterCharacterPower2.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower2.TabIndex = 5;
+            // 
+            // labelCharacterCharacterPower2
+            // 
+            this.labelCharacterCharacterPower2.AutoSize = true;
+            this.labelCharacterCharacterPower2.Location = new System.Drawing.Point(6, 55);
+            this.labelCharacterCharacterPower2.Name = "labelCharacterCharacterPower2";
+            this.labelCharacterCharacterPower2.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower2.TabIndex = 4;
+            this.labelCharacterCharacterPower2.Text = "Power2:";
+            // 
+            // textBoxCharacterCharacterPower1
+            // 
+            this.textBoxCharacterCharacterPower1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterCharacterPower1.Location = new System.Drawing.Point(141, 32);
+            this.textBoxCharacterCharacterPower1.Name = "textBoxCharacterCharacterPower1";
+            this.textBoxCharacterCharacterPower1.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterPower1.TabIndex = 3;
+            // 
+            // labelCharacterCharacterPower1
+            // 
+            this.labelCharacterCharacterPower1.AutoSize = true;
+            this.labelCharacterCharacterPower1.Location = new System.Drawing.Point(138, 16);
+            this.labelCharacterCharacterPower1.Name = "labelCharacterCharacterPower1";
+            this.labelCharacterCharacterPower1.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterPower1.TabIndex = 2;
+            this.labelCharacterCharacterPower1.Text = "Power1:";
+            // 
+            // textBoxCharacterCharacterHealth
+            // 
+            this.textBoxCharacterCharacterHealth.Location = new System.Drawing.Point(9, 32);
+            this.textBoxCharacterCharacterHealth.Name = "textBoxCharacterCharacterHealth";
+            this.textBoxCharacterCharacterHealth.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterHealth.TabIndex = 1;
+            // 
+            // labelCharacterCharacterHealth
+            // 
+            this.labelCharacterCharacterHealth.AutoSize = true;
+            this.labelCharacterCharacterHealth.Location = new System.Drawing.Point(6, 16);
+            this.labelCharacterCharacterHealth.Name = "labelCharacterCharacterHealth";
+            this.labelCharacterCharacterHealth.Size = new System.Drawing.Size(41, 13);
+            this.labelCharacterCharacterHealth.TabIndex = 0;
+            this.labelCharacterCharacterHealth.Text = "Health:";
+            // 
+            // labelCharacterCharacterEquipmentCache
+            // 
+            this.labelCharacterCharacterEquipmentCache.AutoSize = true;
+            this.labelCharacterCharacterEquipmentCache.Location = new System.Drawing.Point(3, 189);
+            this.labelCharacterCharacterEquipmentCache.Name = "labelCharacterCharacterEquipmentCache";
+            this.labelCharacterCharacterEquipmentCache.Size = new System.Drawing.Size(94, 13);
+            this.labelCharacterCharacterEquipmentCache.TabIndex = 16;
+            this.labelCharacterCharacterEquipmentCache.Text = "Equipment Cache:";
+            // 
             // groupBoxCharacterCharacterLocation
             // 
             this.groupBoxCharacterCharacterLocation.Controls.Add(this.labelCharacterCharacterZoneID);
@@ -1127,6 +1376,118 @@
             this.groupBoxCharacterCharacterLocation.TabIndex = 2;
             this.groupBoxCharacterCharacterLocation.TabStop = false;
             this.groupBoxCharacterCharacterLocation.Text = "Location";
+            // 
+            // labelCharacterCharacterZoneID
+            // 
+            this.labelCharacterCharacterZoneID.AutoSize = true;
+            this.labelCharacterCharacterZoneID.Location = new System.Drawing.Point(137, 16);
+            this.labelCharacterCharacterZoneID.Name = "labelCharacterCharacterZoneID";
+            this.labelCharacterCharacterZoneID.Size = new System.Drawing.Size(46, 13);
+            this.labelCharacterCharacterZoneID.TabIndex = 31;
+            this.labelCharacterCharacterZoneID.Text = "ZoneID:";
+            // 
+            // textBoxCharacterCharacterZoneID
+            // 
+            this.textBoxCharacterCharacterZoneID.Location = new System.Drawing.Point(140, 32);
+            this.textBoxCharacterCharacterZoneID.Name = "textBoxCharacterCharacterZoneID";
+            this.textBoxCharacterCharacterZoneID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxCharacterCharacterZoneID.TabIndex = 30;
+            // 
+            // labelCharacterCharacterCoordZ
+            // 
+            this.labelCharacterCharacterCoordZ.AutoSize = true;
+            this.labelCharacterCharacterCoordZ.Location = new System.Drawing.Point(215, 55);
+            this.labelCharacterCharacterCoordZ.Name = "labelCharacterCharacterCoordZ";
+            this.labelCharacterCharacterCoordZ.Size = new System.Drawing.Size(48, 13);
+            this.labelCharacterCharacterCoordZ.TabIndex = 29;
+            this.labelCharacterCharacterCoordZ.Text = "Z Coord:";
+            // 
+            // textBoxCharacterCharacterCoordZ
+            // 
+            this.textBoxCharacterCharacterCoordZ.Location = new System.Drawing.Point(218, 71);
+            this.textBoxCharacterCharacterCoordZ.Name = "textBoxCharacterCharacterCoordZ";
+            this.textBoxCharacterCharacterCoordZ.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterCoordZ.TabIndex = 28;
+            // 
+            // labelCharacterCharacterCoordY
+            // 
+            this.labelCharacterCharacterCoordY.AutoSize = true;
+            this.labelCharacterCharacterCoordY.Location = new System.Drawing.Point(109, 55);
+            this.labelCharacterCharacterCoordY.Name = "labelCharacterCharacterCoordY";
+            this.labelCharacterCharacterCoordY.Size = new System.Drawing.Size(48, 13);
+            this.labelCharacterCharacterCoordY.TabIndex = 27;
+            this.labelCharacterCharacterCoordY.Text = "Y Coord:";
+            // 
+            // textBoxCharacterCharacterCoordY
+            // 
+            this.textBoxCharacterCharacterCoordY.Location = new System.Drawing.Point(112, 71);
+            this.textBoxCharacterCharacterCoordY.Name = "textBoxCharacterCharacterCoordY";
+            this.textBoxCharacterCharacterCoordY.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterCoordY.TabIndex = 26;
+            // 
+            // labelCharacterCharacterCoordX
+            // 
+            this.labelCharacterCharacterCoordX.AutoSize = true;
+            this.labelCharacterCharacterCoordX.Location = new System.Drawing.Point(3, 55);
+            this.labelCharacterCharacterCoordX.Name = "labelCharacterCharacterCoordX";
+            this.labelCharacterCharacterCoordX.Size = new System.Drawing.Size(48, 13);
+            this.labelCharacterCharacterCoordX.TabIndex = 25;
+            this.labelCharacterCharacterCoordX.Text = "X Coord:";
+            // 
+            // textBoxCharacterCharacterCoordX
+            // 
+            this.textBoxCharacterCharacterCoordX.Location = new System.Drawing.Point(6, 71);
+            this.textBoxCharacterCharacterCoordX.Name = "textBoxCharacterCharacterCoordX";
+            this.textBoxCharacterCharacterCoordX.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterCoordX.TabIndex = 24;
+            // 
+            // labelCharacterCharacterCoordO
+            // 
+            this.labelCharacterCharacterCoordO.AutoSize = true;
+            this.labelCharacterCharacterCoordO.Location = new System.Drawing.Point(203, 16);
+            this.labelCharacterCharacterCoordO.Name = "labelCharacterCharacterCoordO";
+            this.labelCharacterCharacterCoordO.Size = new System.Drawing.Size(61, 13);
+            this.labelCharacterCharacterCoordO.TabIndex = 23;
+            this.labelCharacterCharacterCoordO.Text = "Orientation:";
+            // 
+            // textBoxCharacterCharacterCoordO
+            // 
+            this.textBoxCharacterCharacterCoordO.Location = new System.Drawing.Point(206, 32);
+            this.textBoxCharacterCharacterCoordO.Name = "textBoxCharacterCharacterCoordO";
+            this.textBoxCharacterCharacterCoordO.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCharacterCharacterCoordO.TabIndex = 22;
+            // 
+            // labelCharacterCharacterInstanceID
+            // 
+            this.labelCharacterCharacterInstanceID.AutoSize = true;
+            this.labelCharacterCharacterInstanceID.Location = new System.Drawing.Point(71, 16);
+            this.labelCharacterCharacterInstanceID.Name = "labelCharacterCharacterInstanceID";
+            this.labelCharacterCharacterInstanceID.Size = new System.Drawing.Size(62, 13);
+            this.labelCharacterCharacterInstanceID.TabIndex = 21;
+            this.labelCharacterCharacterInstanceID.Text = "InstanceID:";
+            // 
+            // textBoxCharacterCharacterInstanceID
+            // 
+            this.textBoxCharacterCharacterInstanceID.Location = new System.Drawing.Point(74, 32);
+            this.textBoxCharacterCharacterInstanceID.Name = "textBoxCharacterCharacterInstanceID";
+            this.textBoxCharacterCharacterInstanceID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxCharacterCharacterInstanceID.TabIndex = 20;
+            // 
+            // labelCharacterCharacterMapID
+            // 
+            this.labelCharacterCharacterMapID.AutoSize = true;
+            this.labelCharacterCharacterMapID.Location = new System.Drawing.Point(3, 16);
+            this.labelCharacterCharacterMapID.Name = "labelCharacterCharacterMapID";
+            this.labelCharacterCharacterMapID.Size = new System.Drawing.Size(42, 13);
+            this.labelCharacterCharacterMapID.TabIndex = 19;
+            this.labelCharacterCharacterMapID.Text = "MapID:";
+            // 
+            // textBoxCharacterCharacterMapID
+            // 
+            this.textBoxCharacterCharacterMapID.Location = new System.Drawing.Point(6, 32);
+            this.textBoxCharacterCharacterMapID.Name = "textBoxCharacterCharacterMapID";
+            this.textBoxCharacterCharacterMapID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxCharacterCharacterMapID.TabIndex = 18;
             // 
             // groupBoxCharacterCharacterPvP
             // 
@@ -1222,6 +1583,52 @@
             this.groupBoxCharacterCharacterGeneral.TabIndex = 0;
             this.groupBoxCharacterCharacterGeneral.TabStop = false;
             this.groupBoxCharacterCharacterGeneral.Text = "General Information";
+            // 
+            // checkBoxCharacterCharacterRest
+            // 
+            this.checkBoxCharacterCharacterRest.AutoSize = true;
+            this.checkBoxCharacterCharacterRest.Location = new System.Drawing.Point(219, 145);
+            this.checkBoxCharacterCharacterRest.Name = "checkBoxCharacterCharacterRest";
+            this.checkBoxCharacterCharacterRest.Size = new System.Drawing.Size(62, 17);
+            this.checkBoxCharacterCharacterRest.TabIndex = 22;
+            this.checkBoxCharacterCharacterRest.Text = "Resting";
+            this.checkBoxCharacterCharacterRest.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCharacterCharacterCinematic
+            // 
+            this.checkBoxCharacterCharacterCinematic.AutoSize = true;
+            this.checkBoxCharacterCharacterCinematic.Location = new System.Drawing.Point(106, 145);
+            this.checkBoxCharacterCharacterCinematic.Name = "checkBoxCharacterCharacterCinematic";
+            this.checkBoxCharacterCharacterCinematic.Size = new System.Drawing.Size(72, 17);
+            this.checkBoxCharacterCharacterCinematic.TabIndex = 21;
+            this.checkBoxCharacterCharacterCinematic.Text = "Cinematic";
+            this.checkBoxCharacterCharacterCinematic.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCharacterCharacterOnline
+            // 
+            this.checkBoxCharacterCharacterOnline.AutoSize = true;
+            this.checkBoxCharacterCharacterOnline.Location = new System.Drawing.Point(9, 145);
+            this.checkBoxCharacterCharacterOnline.Name = "checkBoxCharacterCharacterOnline";
+            this.checkBoxCharacterCharacterOnline.Size = new System.Drawing.Size(56, 17);
+            this.checkBoxCharacterCharacterOnline.TabIndex = 20;
+            this.checkBoxCharacterCharacterOnline.Text = "Online";
+            this.checkBoxCharacterCharacterOnline.UseVisualStyleBackColor = true;
+            // 
+            // labelCharacterCharacterTitle
+            // 
+            this.labelCharacterCharacterTitle.AutoSize = true;
+            this.labelCharacterCharacterTitle.Location = new System.Drawing.Point(218, 94);
+            this.labelCharacterCharacterTitle.Name = "labelCharacterCharacterTitle";
+            this.labelCharacterCharacterTitle.Size = new System.Drawing.Size(69, 13);
+            this.labelCharacterCharacterTitle.TabIndex = 19;
+            this.labelCharacterCharacterTitle.Text = "Chosen Title:";
+            // 
+            // textBoxCharacterCharacterTitle
+            // 
+            this.textBoxCharacterCharacterTitle.Location = new System.Drawing.Point(221, 110);
+            this.textBoxCharacterCharacterTitle.Name = "textBoxCharacterCharacterTitle";
+            this.textBoxCharacterCharacterTitle.Size = new System.Drawing.Size(60, 20);
+            this.textBoxCharacterCharacterTitle.TabIndex = 18;
             // 
             // labelCharacterCharacterMoney
             // 
@@ -1367,13 +1774,25 @@
             this.labelCharacterCharacterGUID.TabIndex = 0;
             this.labelCharacterCharacterGUID.Text = "GUID:";
             // 
+            // tabPageCharacterInventory
+            // 
+            this.tabPageCharacterInventory.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCharacterInventory.Controls.Add(this.dataGridViewCharacterInventory);
+            this.tabPageCharacterInventory.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCharacterInventory.Name = "tabPageCharacterInventory";
+            this.tabPageCharacterInventory.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCharacterInventory.Size = new System.Drawing.Size(889, 382);
+            this.tabPageCharacterInventory.TabIndex = 2;
+            this.tabPageCharacterInventory.Text = "Inventory";
+            // 
             // tabPageCreature
             // 
             this.tabPageCreature.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCreature.Controls.Add(this.tabControl1);
             this.tabPageCreature.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreature.Name = "tabPageCreature";
             this.tabPageCreature.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreature.Size = new System.Drawing.Size(906, 382);
+            this.tabPageCreature.Size = new System.Drawing.Size(906, 417);
             this.tabPageCreature.TabIndex = 2;
             this.tabPageCreature.Text = "Creature";
             // 
@@ -1383,7 +1802,7 @@
             this.tabPageGameObject.Location = new System.Drawing.Point(4, 22);
             this.tabPageGameObject.Name = "tabPageGameObject";
             this.tabPageGameObject.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGameObject.Size = new System.Drawing.Size(906, 382);
+            this.tabPageGameObject.Size = new System.Drawing.Size(906, 417);
             this.tabPageGameObject.TabIndex = 3;
             this.tabPageGameObject.Text = "Game Object";
             // 
@@ -1393,7 +1812,7 @@
             this.tabPageItem.Location = new System.Drawing.Point(4, 22);
             this.tabPageItem.Name = "tabPageItem";
             this.tabPageItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageItem.Size = new System.Drawing.Size(906, 382);
+            this.tabPageItem.Size = new System.Drawing.Size(906, 417);
             this.tabPageItem.TabIndex = 4;
             this.tabPageItem.Text = "Item";
             // 
@@ -1403,473 +1822,394 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(906, 382);
+            this.tabPage6.Size = new System.Drawing.Size(906, 417);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "SQL";
             // 
-            // labelCharacterCharacterMapID
-            // 
-            this.labelCharacterCharacterMapID.AutoSize = true;
-            this.labelCharacterCharacterMapID.Location = new System.Drawing.Point(3, 16);
-            this.labelCharacterCharacterMapID.Name = "labelCharacterCharacterMapID";
-            this.labelCharacterCharacterMapID.Size = new System.Drawing.Size(42, 13);
-            this.labelCharacterCharacterMapID.TabIndex = 19;
-            this.labelCharacterCharacterMapID.Text = "MapID:";
-            // 
-            // textBoxCharacterCharacterMapID
-            // 
-            this.textBoxCharacterCharacterMapID.Location = new System.Drawing.Point(6, 32);
-            this.textBoxCharacterCharacterMapID.Name = "textBoxCharacterCharacterMapID";
-            this.textBoxCharacterCharacterMapID.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCharacterCharacterMapID.TabIndex = 18;
-            // 
-            // labelCharacterCharacterInstanceID
-            // 
-            this.labelCharacterCharacterInstanceID.AutoSize = true;
-            this.labelCharacterCharacterInstanceID.Location = new System.Drawing.Point(71, 16);
-            this.labelCharacterCharacterInstanceID.Name = "labelCharacterCharacterInstanceID";
-            this.labelCharacterCharacterInstanceID.Size = new System.Drawing.Size(62, 13);
-            this.labelCharacterCharacterInstanceID.TabIndex = 21;
-            this.labelCharacterCharacterInstanceID.Text = "InstanceID:";
-            // 
-            // textBoxCharacterCharacterInstanceID
-            // 
-            this.textBoxCharacterCharacterInstanceID.Location = new System.Drawing.Point(74, 32);
-            this.textBoxCharacterCharacterInstanceID.Name = "textBoxCharacterCharacterInstanceID";
-            this.textBoxCharacterCharacterInstanceID.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCharacterCharacterInstanceID.TabIndex = 20;
-            // 
-            // labelCharacterCharacterCoordO
-            // 
-            this.labelCharacterCharacterCoordO.AutoSize = true;
-            this.labelCharacterCharacterCoordO.Location = new System.Drawing.Point(203, 16);
-            this.labelCharacterCharacterCoordO.Name = "labelCharacterCharacterCoordO";
-            this.labelCharacterCharacterCoordO.Size = new System.Drawing.Size(61, 13);
-            this.labelCharacterCharacterCoordO.TabIndex = 23;
-            this.labelCharacterCharacterCoordO.Text = "Orientation:";
-            // 
-            // textBoxCharacterCharacterCoordO
-            // 
-            this.textBoxCharacterCharacterCoordO.Location = new System.Drawing.Point(206, 32);
-            this.textBoxCharacterCharacterCoordO.Name = "textBoxCharacterCharacterCoordO";
-            this.textBoxCharacterCharacterCoordO.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterCoordO.TabIndex = 22;
-            // 
-            // labelCharacterCharacterCoordX
-            // 
-            this.labelCharacterCharacterCoordX.AutoSize = true;
-            this.labelCharacterCharacterCoordX.Location = new System.Drawing.Point(3, 55);
-            this.labelCharacterCharacterCoordX.Name = "labelCharacterCharacterCoordX";
-            this.labelCharacterCharacterCoordX.Size = new System.Drawing.Size(48, 13);
-            this.labelCharacterCharacterCoordX.TabIndex = 25;
-            this.labelCharacterCharacterCoordX.Text = "X Coord:";
-            // 
-            // textBoxCharacterCharacterCoordX
-            // 
-            this.textBoxCharacterCharacterCoordX.Location = new System.Drawing.Point(6, 71);
-            this.textBoxCharacterCharacterCoordX.Name = "textBoxCharacterCharacterCoordX";
-            this.textBoxCharacterCharacterCoordX.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterCoordX.TabIndex = 24;
-            // 
-            // labelCharacterCharacterCoordY
-            // 
-            this.labelCharacterCharacterCoordY.AutoSize = true;
-            this.labelCharacterCharacterCoordY.Location = new System.Drawing.Point(109, 55);
-            this.labelCharacterCharacterCoordY.Name = "labelCharacterCharacterCoordY";
-            this.labelCharacterCharacterCoordY.Size = new System.Drawing.Size(48, 13);
-            this.labelCharacterCharacterCoordY.TabIndex = 27;
-            this.labelCharacterCharacterCoordY.Text = "Y Coord:";
-            // 
-            // textBoxCharacterCharacterCoordY
-            // 
-            this.textBoxCharacterCharacterCoordY.Location = new System.Drawing.Point(112, 71);
-            this.textBoxCharacterCharacterCoordY.Name = "textBoxCharacterCharacterCoordY";
-            this.textBoxCharacterCharacterCoordY.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterCoordY.TabIndex = 26;
-            // 
-            // labelCharacterCharacterCoordZ
-            // 
-            this.labelCharacterCharacterCoordZ.AutoSize = true;
-            this.labelCharacterCharacterCoordZ.Location = new System.Drawing.Point(215, 55);
-            this.labelCharacterCharacterCoordZ.Name = "labelCharacterCharacterCoordZ";
-            this.labelCharacterCharacterCoordZ.Size = new System.Drawing.Size(48, 13);
-            this.labelCharacterCharacterCoordZ.TabIndex = 29;
-            this.labelCharacterCharacterCoordZ.Text = "Z Coord:";
-            // 
-            // textBoxCharacterCharacterCoordZ
-            // 
-            this.textBoxCharacterCharacterCoordZ.Location = new System.Drawing.Point(218, 71);
-            this.textBoxCharacterCharacterCoordZ.Name = "textBoxCharacterCharacterCoordZ";
-            this.textBoxCharacterCharacterCoordZ.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterCoordZ.TabIndex = 28;
-            // 
-            // labelCharacterCharacterZoneID
-            // 
-            this.labelCharacterCharacterZoneID.AutoSize = true;
-            this.labelCharacterCharacterZoneID.Location = new System.Drawing.Point(137, 16);
-            this.labelCharacterCharacterZoneID.Name = "labelCharacterCharacterZoneID";
-            this.labelCharacterCharacterZoneID.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterZoneID.TabIndex = 31;
-            this.labelCharacterCharacterZoneID.Text = "ZoneID:";
-            // 
-            // textBoxCharacterCharacterZoneID
-            // 
-            this.textBoxCharacterCharacterZoneID.Location = new System.Drawing.Point(140, 32);
-            this.textBoxCharacterCharacterZoneID.Name = "textBoxCharacterCharacterZoneID";
-            this.textBoxCharacterCharacterZoneID.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCharacterCharacterZoneID.TabIndex = 30;
-            // 
-            // labelCharacterCharacterTitle
-            // 
-            this.labelCharacterCharacterTitle.AutoSize = true;
-            this.labelCharacterCharacterTitle.Location = new System.Drawing.Point(218, 94);
-            this.labelCharacterCharacterTitle.Name = "labelCharacterCharacterTitle";
-            this.labelCharacterCharacterTitle.Size = new System.Drawing.Size(69, 13);
-            this.labelCharacterCharacterTitle.TabIndex = 19;
-            this.labelCharacterCharacterTitle.Text = "Chosen Title:";
-            // 
-            // textBoxCharacterCharacterTitle
-            // 
-            this.textBoxCharacterCharacterTitle.Location = new System.Drawing.Point(221, 110);
-            this.textBoxCharacterCharacterTitle.Name = "textBoxCharacterCharacterTitle";
-            this.textBoxCharacterCharacterTitle.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCharacterCharacterTitle.TabIndex = 18;
-            // 
-            // checkBoxCharacterCharacterOnline
-            // 
-            this.checkBoxCharacterCharacterOnline.AutoSize = true;
-            this.checkBoxCharacterCharacterOnline.Location = new System.Drawing.Point(9, 145);
-            this.checkBoxCharacterCharacterOnline.Name = "checkBoxCharacterCharacterOnline";
-            this.checkBoxCharacterCharacterOnline.Size = new System.Drawing.Size(56, 17);
-            this.checkBoxCharacterCharacterOnline.TabIndex = 20;
-            this.checkBoxCharacterCharacterOnline.Text = "Online";
-            this.checkBoxCharacterCharacterOnline.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCharacterCharacterCinematic
-            // 
-            this.checkBoxCharacterCharacterCinematic.AutoSize = true;
-            this.checkBoxCharacterCharacterCinematic.Location = new System.Drawing.Point(106, 145);
-            this.checkBoxCharacterCharacterCinematic.Name = "checkBoxCharacterCharacterCinematic";
-            this.checkBoxCharacterCharacterCinematic.Size = new System.Drawing.Size(72, 17);
-            this.checkBoxCharacterCharacterCinematic.TabIndex = 21;
-            this.checkBoxCharacterCharacterCinematic.Text = "Cinematic";
-            this.checkBoxCharacterCharacterCinematic.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxCharacterCharacterRest
-            // 
-            this.checkBoxCharacterCharacterRest.AutoSize = true;
-            this.checkBoxCharacterCharacterRest.Location = new System.Drawing.Point(219, 145);
-            this.checkBoxCharacterCharacterRest.Name = "checkBoxCharacterCharacterRest";
-            this.checkBoxCharacterCharacterRest.Size = new System.Drawing.Size(62, 17);
-            this.checkBoxCharacterCharacterRest.TabIndex = 22;
-            this.checkBoxCharacterCharacterRest.Text = "Resting";
-            this.checkBoxCharacterCharacterRest.UseVisualStyleBackColor = true;
-            // 
-            // groupBoxCharacterCharacterStats
-            // 
-            this.groupBoxCharacterCharacterStats.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower7);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower7);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower6);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower6);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower5);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower5);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower4);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower4);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower3);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower3);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower2);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower2);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterPower1);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterPower1);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.textBoxCharacterCharacterHealth);
-            this.groupBoxCharacterCharacterStats.Controls.Add(this.labelCharacterCharacterHealth);
-            this.groupBoxCharacterCharacterStats.Location = new System.Drawing.Point(636, 6);
-            this.groupBoxCharacterCharacterStats.Name = "groupBoxCharacterCharacterStats";
-            this.groupBoxCharacterCharacterStats.Size = new System.Drawing.Size(247, 180);
-            this.groupBoxCharacterCharacterStats.TabIndex = 3;
-            this.groupBoxCharacterCharacterStats.TabStop = false;
-            this.groupBoxCharacterCharacterStats.Text = "Health && Powers";
-            // 
-            // labelCharacterCharacterHealth
-            // 
-            this.labelCharacterCharacterHealth.AutoSize = true;
-            this.labelCharacterCharacterHealth.Location = new System.Drawing.Point(6, 16);
-            this.labelCharacterCharacterHealth.Name = "labelCharacterCharacterHealth";
-            this.labelCharacterCharacterHealth.Size = new System.Drawing.Size(41, 13);
-            this.labelCharacterCharacterHealth.TabIndex = 0;
-            this.labelCharacterCharacterHealth.Text = "Health:";
-            // 
-            // textBoxCharacterCharacterHealth
-            // 
-            this.textBoxCharacterCharacterHealth.Location = new System.Drawing.Point(9, 32);
-            this.textBoxCharacterCharacterHealth.Name = "textBoxCharacterCharacterHealth";
-            this.textBoxCharacterCharacterHealth.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterHealth.TabIndex = 1;
-            // 
-            // textBoxCharacterCharacterPower1
-            // 
-            this.textBoxCharacterCharacterPower1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterPower1.Location = new System.Drawing.Point(141, 32);
-            this.textBoxCharacterCharacterPower1.Name = "textBoxCharacterCharacterPower1";
-            this.textBoxCharacterCharacterPower1.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower1.TabIndex = 3;
-            // 
-            // labelCharacterCharacterPower1
-            // 
-            this.labelCharacterCharacterPower1.AutoSize = true;
-            this.labelCharacterCharacterPower1.Location = new System.Drawing.Point(138, 16);
-            this.labelCharacterCharacterPower1.Name = "labelCharacterCharacterPower1";
-            this.labelCharacterCharacterPower1.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower1.TabIndex = 2;
-            this.labelCharacterCharacterPower1.Text = "Power1:";
-            // 
-            // textBoxCharacterCharacterPower2
-            // 
-            this.textBoxCharacterCharacterPower2.Location = new System.Drawing.Point(9, 71);
-            this.textBoxCharacterCharacterPower2.Name = "textBoxCharacterCharacterPower2";
-            this.textBoxCharacterCharacterPower2.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower2.TabIndex = 5;
-            // 
-            // labelCharacterCharacterPower2
-            // 
-            this.labelCharacterCharacterPower2.AutoSize = true;
-            this.labelCharacterCharacterPower2.Location = new System.Drawing.Point(6, 55);
-            this.labelCharacterCharacterPower2.Name = "labelCharacterCharacterPower2";
-            this.labelCharacterCharacterPower2.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower2.TabIndex = 4;
-            this.labelCharacterCharacterPower2.Text = "Power2:";
-            // 
-            // textBoxCharacterCharacterPower3
-            // 
-            this.textBoxCharacterCharacterPower3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterPower3.Location = new System.Drawing.Point(141, 71);
-            this.textBoxCharacterCharacterPower3.Name = "textBoxCharacterCharacterPower3";
-            this.textBoxCharacterCharacterPower3.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower3.TabIndex = 7;
-            // 
-            // labelCharacterCharacterPower3
-            // 
-            this.labelCharacterCharacterPower3.AutoSize = true;
-            this.labelCharacterCharacterPower3.Location = new System.Drawing.Point(138, 55);
-            this.labelCharacterCharacterPower3.Name = "labelCharacterCharacterPower3";
-            this.labelCharacterCharacterPower3.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower3.TabIndex = 6;
-            this.labelCharacterCharacterPower3.Text = "Power3:";
-            // 
-            // textBoxCharacterCharacterPower4
-            // 
-            this.textBoxCharacterCharacterPower4.Location = new System.Drawing.Point(9, 110);
-            this.textBoxCharacterCharacterPower4.Name = "textBoxCharacterCharacterPower4";
-            this.textBoxCharacterCharacterPower4.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower4.TabIndex = 9;
-            // 
-            // labelCharacterCharacterPower4
-            // 
-            this.labelCharacterCharacterPower4.AutoSize = true;
-            this.labelCharacterCharacterPower4.Location = new System.Drawing.Point(6, 94);
-            this.labelCharacterCharacterPower4.Name = "labelCharacterCharacterPower4";
-            this.labelCharacterCharacterPower4.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower4.TabIndex = 8;
-            this.labelCharacterCharacterPower4.Text = "Power4:";
-            // 
-            // textBoxCharacterCharacterPower5
-            // 
-            this.textBoxCharacterCharacterPower5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterPower5.Location = new System.Drawing.Point(141, 110);
-            this.textBoxCharacterCharacterPower5.Name = "textBoxCharacterCharacterPower5";
-            this.textBoxCharacterCharacterPower5.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower5.TabIndex = 11;
-            // 
-            // labelCharacterCharacterPower5
-            // 
-            this.labelCharacterCharacterPower5.AutoSize = true;
-            this.labelCharacterCharacterPower5.Location = new System.Drawing.Point(138, 94);
-            this.labelCharacterCharacterPower5.Name = "labelCharacterCharacterPower5";
-            this.labelCharacterCharacterPower5.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower5.TabIndex = 10;
-            this.labelCharacterCharacterPower5.Text = "Power5:";
-            // 
-            // textBoxCharacterCharacterPower6
-            // 
-            this.textBoxCharacterCharacterPower6.Location = new System.Drawing.Point(9, 149);
-            this.textBoxCharacterCharacterPower6.Name = "textBoxCharacterCharacterPower6";
-            this.textBoxCharacterCharacterPower6.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower6.TabIndex = 13;
-            // 
-            // labelCharacterCharacterPower6
-            // 
-            this.labelCharacterCharacterPower6.AutoSize = true;
-            this.labelCharacterCharacterPower6.Location = new System.Drawing.Point(6, 133);
-            this.labelCharacterCharacterPower6.Name = "labelCharacterCharacterPower6";
-            this.labelCharacterCharacterPower6.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower6.TabIndex = 12;
-            this.labelCharacterCharacterPower6.Text = "Power6:";
-            // 
-            // textBoxCharacterCharacterPower7
-            // 
-            this.textBoxCharacterCharacterPower7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterPower7.Location = new System.Drawing.Point(141, 149);
-            this.textBoxCharacterCharacterPower7.Name = "textBoxCharacterCharacterPower7";
-            this.textBoxCharacterCharacterPower7.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCharacterCharacterPower7.TabIndex = 15;
-            // 
-            // labelCharacterCharacterPower7
-            // 
-            this.labelCharacterCharacterPower7.AutoSize = true;
-            this.labelCharacterCharacterPower7.Location = new System.Drawing.Point(138, 133);
-            this.labelCharacterCharacterPower7.Name = "labelCharacterCharacterPower7";
-            this.labelCharacterCharacterPower7.Size = new System.Drawing.Size(46, 13);
-            this.labelCharacterCharacterPower7.TabIndex = 14;
-            this.labelCharacterCharacterPower7.Text = "Power7:";
-            // 
-            // textBoxCharacterCharacterEquipmentCache
-            // 
-            this.textBoxCharacterCharacterEquipmentCache.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterEquipmentCache.Location = new System.Drawing.Point(6, 205);
-            this.textBoxCharacterCharacterEquipmentCache.Name = "textBoxCharacterCharacterEquipmentCache";
-            this.textBoxCharacterCharacterEquipmentCache.Size = new System.Drawing.Size(877, 20);
-            this.textBoxCharacterCharacterEquipmentCache.TabIndex = 17;
-            // 
-            // labelCharacterCharacterEquipmentCache
-            // 
-            this.labelCharacterCharacterEquipmentCache.AutoSize = true;
-            this.labelCharacterCharacterEquipmentCache.Location = new System.Drawing.Point(3, 189);
-            this.labelCharacterCharacterEquipmentCache.Name = "labelCharacterCharacterEquipmentCache";
-            this.labelCharacterCharacterEquipmentCache.Size = new System.Drawing.Size(94, 13);
-            this.labelCharacterCharacterEquipmentCache.TabIndex = 16;
-            this.labelCharacterCharacterEquipmentCache.Text = "Equipment Cache:";
-            // 
-            // textBoxCharacterCharacterKnownTitles
-            // 
-            this.textBoxCharacterCharacterKnownTitles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterKnownTitles.Location = new System.Drawing.Point(6, 244);
-            this.textBoxCharacterCharacterKnownTitles.Name = "textBoxCharacterCharacterKnownTitles";
-            this.textBoxCharacterCharacterKnownTitles.Size = new System.Drawing.Size(877, 20);
-            this.textBoxCharacterCharacterKnownTitles.TabIndex = 19;
-            // 
-            // labelCharacterCharacterKnownTitles
-            // 
-            this.labelCharacterCharacterKnownTitles.AutoSize = true;
-            this.labelCharacterCharacterKnownTitles.Location = new System.Drawing.Point(3, 228);
-            this.labelCharacterCharacterKnownTitles.Name = "labelCharacterCharacterKnownTitles";
-            this.labelCharacterCharacterKnownTitles.Size = new System.Drawing.Size(71, 13);
-            this.labelCharacterCharacterKnownTitles.TabIndex = 18;
-            this.labelCharacterCharacterKnownTitles.Text = "Known Titles:";
-            // 
-            // textBoxCharacterCharacterExploredZones
-            // 
-            this.textBoxCharacterCharacterExploredZones.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterExploredZones.Location = new System.Drawing.Point(6, 283);
-            this.textBoxCharacterCharacterExploredZones.Name = "textBoxCharacterCharacterExploredZones";
-            this.textBoxCharacterCharacterExploredZones.Size = new System.Drawing.Size(877, 20);
-            this.textBoxCharacterCharacterExploredZones.TabIndex = 21;
-            // 
-            // labelCharacterCharacterExploredZones
-            // 
-            this.labelCharacterCharacterExploredZones.AutoSize = true;
-            this.labelCharacterCharacterExploredZones.Location = new System.Drawing.Point(3, 267);
-            this.labelCharacterCharacterExploredZones.Name = "labelCharacterCharacterExploredZones";
-            this.labelCharacterCharacterExploredZones.Size = new System.Drawing.Size(84, 13);
-            this.labelCharacterCharacterExploredZones.TabIndex = 20;
-            this.labelCharacterCharacterExploredZones.Text = "Explored Zones:";
-            // 
-            // textBoxCharacterCharacterTaxiMask
-            // 
-            this.textBoxCharacterCharacterTaxiMask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxCharacterCharacterTaxiMask.Location = new System.Drawing.Point(6, 322);
-            this.textBoxCharacterCharacterTaxiMask.Name = "textBoxCharacterCharacterTaxiMask";
-            this.textBoxCharacterCharacterTaxiMask.Size = new System.Drawing.Size(877, 20);
-            this.textBoxCharacterCharacterTaxiMask.TabIndex = 23;
-            // 
-            // labelCharacterCharacterTaxiMask
-            // 
-            this.labelCharacterCharacterTaxiMask.AutoSize = true;
-            this.labelCharacterCharacterTaxiMask.Location = new System.Drawing.Point(3, 306);
-            this.labelCharacterCharacterTaxiMask.Name = "labelCharacterCharacterTaxiMask";
-            this.labelCharacterCharacterTaxiMask.Size = new System.Drawing.Size(59, 13);
-            this.labelCharacterCharacterTaxiMask.TabIndex = 22;
-            this.labelCharacterCharacterTaxiMask.Text = "Taxi Mask:";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            // dataGridViewAccountSearch
+            // 
+            this.dataGridViewAccountSearch.AllowUserToAddRows = false;
+            this.dataGridViewAccountSearch.AllowUserToDeleteRows = false;
+            this.dataGridViewAccountSearch.AllowUserToResizeColumns = false;
+            this.dataGridViewAccountSearch.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewAccountSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(6, 348);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(877, 23);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Generate Script";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.dataGridViewCharacterInventory);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(889, 382);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Inventory";
+            this.dataGridViewAccountSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAccountSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewAccountSearch.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAccountSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewAccountSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewAccountSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewAccountSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewAccountSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAccountSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnAccountSearchID,
+            this.ColumnAccountSearchUsername,
+            this.ColumnAccountSearchEmail,
+            this.ColumnAccountSearchExpansion});
+            this.dataGridViewAccountSearch.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewAccountSearch.Location = new System.Drawing.Point(0, 71);
+            this.dataGridViewAccountSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewAccountSearch.MultiSelect = false;
+            this.dataGridViewAccountSearch.Name = "dataGridViewAccountSearch";
+            this.dataGridViewAccountSearch.ReadOnly = true;
+            this.dataGridViewAccountSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewAccountSearch.RowHeadersVisible = false;
+            this.dataGridViewAccountSearch.RowHeadersWidth = 99;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowTemplate.Height = 15;
+            this.dataGridViewAccountSearch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewAccountSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewAccountSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewAccountSearch.ShowEditingIcon = false;
+            this.dataGridViewAccountSearch.Size = new System.Drawing.Size(886, 286);
+            this.dataGridViewAccountSearch.TabIndex = 9;
+            this.dataGridViewAccountSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAccountSearch_CellDoubleClick);
             // 
             // dataGridViewCharacterInventory
             // 
             this.dataGridViewCharacterInventory.AllowUserToAddRows = false;
             this.dataGridViewCharacterInventory.AllowUserToDeleteRows = false;
-            this.dataGridViewCharacterInventory.AllowUserToResizeColumns = false;
             this.dataGridViewCharacterInventory.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewCharacterInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCharacterInventory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCharacterInventory.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewCharacterInventory.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCharacterInventory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dataGridViewCharacterInventory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewCharacterInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewCharacterInventory.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewCharacterInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewCharacterInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCharacterInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCharacterInventoryGUID,
+            this.ColumnCharacterInventoryBag,
+            this.ColumnCharacterInventorySlot,
+            this.ColumnCharacterInventoryItem,
+            this.ColumnCharacterInventoryName});
             this.dataGridViewCharacterInventory.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewCharacterInventory.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewCharacterInventory.Location = new System.Drawing.Point(0, 3);
             this.dataGridViewCharacterInventory.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewCharacterInventory.MultiSelect = false;
             this.dataGridViewCharacterInventory.Name = "dataGridViewCharacterInventory";
             this.dataGridViewCharacterInventory.ReadOnly = true;
+            this.dataGridViewCharacterInventory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewCharacterInventory.RowHeadersVisible = false;
             this.dataGridViewCharacterInventory.RowHeadersWidth = 99;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewCharacterInventory.RowTemplate.Height = 15;
+            this.dataGridViewCharacterInventory.RowTemplate.ReadOnly = true;
             this.dataGridViewCharacterInventory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCharacterInventory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCharacterInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCharacterInventory.ShowEditingIcon = false;
-            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(883, 300);
+            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(886, 286);
             this.dataGridViewCharacterInventory.TabIndex = 9;
+            // 
+            // ColumnCharacterSearchGUID
+            // 
+            this.ColumnCharacterSearchGUID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterSearchGUID.Frozen = true;
+            this.ColumnCharacterSearchGUID.HeaderText = "guid";
+            this.ColumnCharacterSearchGUID.Name = "ColumnCharacterSearchGUID";
+            this.ColumnCharacterSearchGUID.ReadOnly = true;
+            this.ColumnCharacterSearchGUID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchGUID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterSearchGUID.Width = 148;
+            // 
+            // ColumnCharacterSearchAccount
+            // 
+            this.ColumnCharacterSearchAccount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterSearchAccount.Frozen = true;
+            this.ColumnCharacterSearchAccount.HeaderText = "account";
+            this.ColumnCharacterSearchAccount.Name = "ColumnCharacterSearchAccount";
+            this.ColumnCharacterSearchAccount.ReadOnly = true;
+            this.ColumnCharacterSearchAccount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchAccount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterSearchAccount.Width = 147;
+            // 
+            // ColumnCharacterSearchName
+            // 
+            this.ColumnCharacterSearchName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterSearchName.Frozen = true;
+            this.ColumnCharacterSearchName.HeaderText = "name";
+            this.ColumnCharacterSearchName.Name = "ColumnCharacterSearchName";
+            this.ColumnCharacterSearchName.ReadOnly = true;
+            this.ColumnCharacterSearchName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterSearchName.Width = 148;
+            // 
+            // ColumnCharacterSearchRace
+            // 
+            this.ColumnCharacterSearchRace.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterSearchRace.Frozen = true;
+            this.ColumnCharacterSearchRace.HeaderText = "race";
+            this.ColumnCharacterSearchRace.Name = "ColumnCharacterSearchRace";
+            this.ColumnCharacterSearchRace.ReadOnly = true;
+            this.ColumnCharacterSearchRace.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchRace.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterSearchRace.Width = 148;
+            // 
+            // ColumnCharacterSearchClass
+            // 
+            this.ColumnCharacterSearchClass.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterSearchClass.Frozen = true;
+            this.ColumnCharacterSearchClass.HeaderText = "class";
+            this.ColumnCharacterSearchClass.Name = "ColumnCharacterSearchClass";
+            this.ColumnCharacterSearchClass.ReadOnly = true;
+            this.ColumnCharacterSearchClass.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchClass.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterSearchClass.Width = 147;
+            // 
+            // ColumnCharacterSearchLevel
+            // 
+            this.ColumnCharacterSearchLevel.HeaderText = "level";
+            this.ColumnCharacterSearchLevel.Name = "ColumnCharacterSearchLevel";
+            this.ColumnCharacterSearchLevel.ReadOnly = true;
+            this.ColumnCharacterSearchLevel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterSearchLevel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumnAccountSearchID
+            // 
+            this.ColumnAccountSearchID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnAccountSearchID.Frozen = true;
+            this.ColumnAccountSearchID.HeaderText = "id";
+            this.ColumnAccountSearchID.Name = "ColumnAccountSearchID";
+            this.ColumnAccountSearchID.ReadOnly = true;
+            this.ColumnAccountSearchID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAccountSearchID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAccountSearchID.Width = 222;
+            // 
+            // ColumnAccountSearchUsername
+            // 
+            this.ColumnAccountSearchUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnAccountSearchUsername.Frozen = true;
+            this.ColumnAccountSearchUsername.HeaderText = "username";
+            this.ColumnAccountSearchUsername.Name = "ColumnAccountSearchUsername";
+            this.ColumnAccountSearchUsername.ReadOnly = true;
+            this.ColumnAccountSearchUsername.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAccountSearchUsername.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAccountSearchUsername.Width = 221;
+            // 
+            // ColumnAccountSearchEmail
+            // 
+            this.ColumnAccountSearchEmail.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnAccountSearchEmail.Frozen = true;
+            this.ColumnAccountSearchEmail.HeaderText = "email";
+            this.ColumnAccountSearchEmail.Name = "ColumnAccountSearchEmail";
+            this.ColumnAccountSearchEmail.ReadOnly = true;
+            this.ColumnAccountSearchEmail.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAccountSearchEmail.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAccountSearchEmail.Width = 221;
+            // 
+            // ColumnAccountSearchExpansion
+            // 
+            this.ColumnAccountSearchExpansion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnAccountSearchExpansion.Frozen = true;
+            this.ColumnAccountSearchExpansion.HeaderText = "expansion";
+            this.ColumnAccountSearchExpansion.Name = "ColumnAccountSearchExpansion";
+            this.ColumnAccountSearchExpansion.ReadOnly = true;
+            this.ColumnAccountSearchExpansion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnAccountSearchExpansion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnAccountSearchExpansion.Width = 222;
+            // 
+            // ColumnCharacterInventoryGUID
+            // 
+            this.ColumnCharacterInventoryGUID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterInventoryGUID.Frozen = true;
+            this.ColumnCharacterInventoryGUID.HeaderText = "guid";
+            this.ColumnCharacterInventoryGUID.Name = "ColumnCharacterInventoryGUID";
+            this.ColumnCharacterInventoryGUID.ReadOnly = true;
+            this.ColumnCharacterInventoryGUID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterInventoryGUID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterInventoryGUID.Width = 177;
+            // 
+            // ColumnCharacterInventoryBag
+            // 
+            this.ColumnCharacterInventoryBag.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterInventoryBag.Frozen = true;
+            this.ColumnCharacterInventoryBag.HeaderText = "bag";
+            this.ColumnCharacterInventoryBag.Name = "ColumnCharacterInventoryBag";
+            this.ColumnCharacterInventoryBag.ReadOnly = true;
+            this.ColumnCharacterInventoryBag.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterInventoryBag.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterInventoryBag.Width = 177;
+            // 
+            // ColumnCharacterInventorySlot
+            // 
+            this.ColumnCharacterInventorySlot.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterInventorySlot.Frozen = true;
+            this.ColumnCharacterInventorySlot.HeaderText = "slot";
+            this.ColumnCharacterInventorySlot.Name = "ColumnCharacterInventorySlot";
+            this.ColumnCharacterInventorySlot.ReadOnly = true;
+            this.ColumnCharacterInventorySlot.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterInventorySlot.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterInventorySlot.Width = 177;
+            // 
+            // ColumnCharacterInventoryItem
+            // 
+            this.ColumnCharacterInventoryItem.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterInventoryItem.Frozen = true;
+            this.ColumnCharacterInventoryItem.HeaderText = "item";
+            this.ColumnCharacterInventoryItem.Name = "ColumnCharacterInventoryItem";
+            this.ColumnCharacterInventoryItem.ReadOnly = true;
+            this.ColumnCharacterInventoryItem.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterInventoryItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterInventoryItem.Width = 177;
+            // 
+            // ColumnCharacterInventoryName
+            // 
+            this.ColumnCharacterInventoryName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnCharacterInventoryName.Frozen = true;
+            this.ColumnCharacterInventoryName.HeaderText = "name";
+            this.ColumnCharacterInventoryName.Name = "ColumnCharacterInventoryName";
+            this.ColumnCharacterInventoryName.ReadOnly = true;
+            this.ColumnCharacterInventoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ColumnCharacterInventoryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnCharacterInventoryName.Width = 177;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPageCreatureSearch);
+            this.tabControl1.Controls.Add(this.tabPageCreatureTemplate);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(3, 6);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(900, 408);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPageCreatureSearch
+            // 
+            this.tabPageCreatureSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCreatureSearch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCreatureSearch.Name = "tabPageCreatureSearch";
+            this.tabPageCreatureSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCreatureSearch.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCreatureSearch.TabIndex = 0;
+            this.tabPageCreatureSearch.Text = "Search";
+            // 
+            // tabPageCreatureTemplate
+            // 
+            this.tabPageCreatureTemplate.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCreatureTemplate.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCreatureTemplate.Name = "tabPageCreatureTemplate";
+            this.tabPageCreatureTemplate.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCreatureTemplate.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCreatureTemplate.TabIndex = 1;
+            this.tabPageCreatureTemplate.Text = "Template";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(892, 382);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Location";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(892, 382);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "tabPage2";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(892, 382);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "Control";
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(892, 382);
+            this.tabPage4.TabIndex = 5;
+            this.tabPage4.Text = "tabPage4";
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(892, 382);
+            this.tabPage5.TabIndex = 6;
+            this.tabPage5.Text = "tabPage5";
             // 
             // MainWindow
             // 
@@ -1883,7 +2223,7 @@
             this.Name = "MainWindow";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tricore : The new Manager!";
+            this.Text = "Manti - TC Manager";
             this.menuStripMainWindow.ResumeLayout(false);
             this.menuStripMainWindow.PerformLayout();
             this.tabControlCategory.ResumeLayout(false);
@@ -1891,7 +2231,6 @@
             this.tabControlCategoryAccount.ResumeLayout(false);
             this.tabPageAccountSearch.ResumeLayout(false);
             this.tabPageAccountSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).EndInit();
             this.statusStripAccountSearch.ResumeLayout(false);
             this.statusStripAccountSearch.PerformLayout();
             this.tabPageAccountAccount.ResumeLayout(false);
@@ -1915,16 +2254,19 @@
             this.statusStripCharacterSearch.PerformLayout();
             this.tabPageCharacterCharacter.ResumeLayout(false);
             this.tabPageCharacterCharacter.PerformLayout();
+            this.groupBoxCharacterCharacterStats.ResumeLayout(false);
+            this.groupBoxCharacterCharacterStats.PerformLayout();
             this.groupBoxCharacterCharacterLocation.ResumeLayout(false);
             this.groupBoxCharacterCharacterLocation.PerformLayout();
             this.groupBoxCharacterCharacterPvP.ResumeLayout(false);
             this.groupBoxCharacterCharacterPvP.PerformLayout();
             this.groupBoxCharacterCharacterGeneral.ResumeLayout(false);
             this.groupBoxCharacterCharacterGeneral.PerformLayout();
-            this.groupBoxCharacterCharacterStats.ResumeLayout(false);
-            this.groupBoxCharacterCharacterStats.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
+            this.tabPageCharacterInventory.ResumeLayout(false);
+            this.tabPageCreature.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterInventory)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2007,7 +2349,6 @@
         private System.Windows.Forms.StatusStrip statusStripCharacterSearch;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCharacterSearchResult;
         private System.Windows.Forms.Button buttonCharacterSearchSearch;
-        private System.Windows.Forms.DataGridView dataGridViewAccountSearch;
         private System.Windows.Forms.GroupBox groupBoxCharacterCharacterLocation;
         private System.Windows.Forms.GroupBox groupBoxCharacterCharacterPvP;
         private System.Windows.Forms.TextBox textBoxCharacterCharacterTotalKills;
@@ -2080,7 +2421,31 @@
         private System.Windows.Forms.TextBox textBoxCharacterCharacterEquipmentCache;
         private System.Windows.Forms.Label labelCharacterCharacterEquipmentCache;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPageCharacterInventory;
+        private System.Windows.Forms.DataGridView dataGridViewAccountSearch;
         private System.Windows.Forms.DataGridView dataGridViewCharacterInventory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchExpansion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchGUID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchAccount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchRace;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchClass;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryGUID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryBag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventorySlot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryName;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPageCreatureSearch;
+        private System.Windows.Forms.TabPage tabPageCreatureTemplate;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
     }
 }

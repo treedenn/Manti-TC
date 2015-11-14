@@ -63,6 +63,7 @@ namespace Tricore
                 Password = textBoxPassword.Text;
                 DatabaseAuth = textBoxAuth.Text;
                 DatabaseCharacters = textBoxCharacters.Text;
+                DatabaseWorld = textBoxWorld.Text;
 
                 //MessageBox.Show("MySQL Connection Established.", "MySQL", MessageBoxButtons.OK, MessageBoxIcon.None);
                 this.Hide();

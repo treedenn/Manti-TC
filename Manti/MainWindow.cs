@@ -25,7 +25,8 @@ namespace Tricore
             CUSTOM FUNCTIONS
         */
 
-        private static string ConnectionString(string database)
+            // Generates the string required to create a connection
+        private static string DatabaseString(string database)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
 
@@ -38,6 +39,8 @@ namespace Tricore
             return builder.ToString();
         }
 
+
+            // Tries to open the connection between the program and database.
         private bool ConnectionOpen(MySqlConnection connect)
         {
             try
@@ -53,6 +56,7 @@ namespace Tricore
             return false;
         }
 
+            // Tries to close the connection between the program and database.
         private bool ConnectionClose(MySqlConnection connect)
         {
             try
@@ -68,6 +72,7 @@ namespace Tricore
             return false;
         }
 
+            // Searching the database with a specific query, then saves in a DataSet.
         private DataSet DatabaseSearch(MySqlConnection connect, string sqlQuery)
         {
             DataSet ds = new DataSet();
@@ -82,6 +87,7 @@ namespace Tricore
             return ds;
         }
 
+            // Updates the database with a specific query and returns the row affected.
         private int DatabaseUpdate(MySqlConnection connect, string sqlQuery)
         {
             if (connect.State == ConnectionState.Open)
@@ -94,9 +100,10 @@ namespace Tricore
             return 0;
         }
 
+            // Searches the data for a specific account.
         private void DatabaseAccountSearch(string accountID)
         {
-            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseAuth));
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseAuth));
 
             if (ConnectionOpen(connect))
             {
@@ -120,6 +127,7 @@ namespace Tricore
 
                 DataSet AccountTable = DatabaseSearch(connect, finalQuery);
 
+                    // account data
                 if (AccountTable.Tables[0].Rows.Count != 0)
                 {
                     textBoxAccountAccountID.Text = AccountTable.Tables[0].Rows[0][0].ToString();
@@ -133,6 +141,7 @@ namespace Tricore
                     textBoxAccountAccountExpansion.Text = AccountTable.Tables[0].Rows[0][8].ToString();
                 }
 
+                    // ban data
                 if (AccountTable.Tables[1].Rows.Count != 0)
                 {
                     textBoxAccountAccountBandate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][0])).ToString();
@@ -142,6 +151,7 @@ namespace Tricore
                     checkBoxAccountAccountBanActive.Checked = Convert.ToBoolean(AccountTable.Tables[1].Rows[0][4]);
                 }
 
+                    // mute data
                 if (AccountTable.Tables[2].Rows.Count != 0)
                 {
                     textBoxAccountAccountMutedate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])).ToString();
@@ -150,6 +160,7 @@ namespace Tricore
                     textBoxAccountAccountMutedby.Text = AccountTable.Tables[2].Rows[0][3].ToString();
                 }
 
+                    // acces data
                 if (AccountTable.Tables[3].Rows.Count != 0)
                 {
                     dataGridViewAccountAccess.DataSource = AccountTable.Tables[3];
@@ -160,9 +171,10 @@ namespace Tricore
             }
         }
 
+            // Searches for data for a specific character.
         private void DatabaseCharacterSearch(string characterGUID)
         {
-            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseCharacters));
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
 
             if (ConnectionOpen(connect))
             {
@@ -225,20 +237,77 @@ namespace Tricore
             }
         }
 
+            // Outputs the inventory for a specific player.
         private void DatabaseCharacterInventory(string characterGUID)
         {
-            MySqlConnection connect = new MySqlConnection(MySQLWindow.DatabaseCharacters);
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
 
             if (ConnectionOpen(connect))
             {
                 string inventoryQuery = "SELECT * FROM character_inventory WHERE guid = '" + characterGUID + "';";
 
-                DataSet inventoryTable = DatabaseSearch(connect, inventoryQuery);
+                DataSet iTable = DatabaseSearch(connect, inventoryQuery);
 
-                
+                if (iTable.Tables[0].Rows.Count != 0)
+                {
+                    // Adds a new column 'name'
+                    iTable.Tables[0].Columns.Add("name", typeof(string));
+                    
+                    // loops every inventory item for name
+                    for (int i = 0; i < iTable.Tables[0].Rows.Count; i++)
+                    {   
+                        // sets the column 'name' to the itemname
+                        iTable.Tables[0].Rows[i]["name"] = DatabaseItemGetName( DatabaseItemGetEntry( Convert.ToUInt32(iTable.Tables[0].Rows[i][3]) ) );
+                    }
+
+                    dataGridViewCharacterInventory.DataSource = iTable.Tables[0];
+                }
             }
 
             ConnectionClose(connect);
+        }
+
+            // Gets the Item Entry with global item identifier.
+        private uint DatabaseItemGetEntry(uint itemIdentifier)
+        {
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
+
+            if (ConnectionOpen(connect))
+            {
+                // Get the ItemID
+                string instanceQuery = "SELECT itemEntry FROM item_instance WHERE guid = '" + itemIdentifier + "';";
+
+                // Item_instance Table
+                DataSet iiTable = DatabaseSearch(connect, instanceQuery);
+
+                if (iiTable.Tables[0].Rows.Count != 0) { return Convert.ToUInt32(iiTable.Tables[0].Rows[0][0]); }
+            }
+
+            ConnectionClose(connect);
+            return 0;
+        }
+
+            // Gets the item name from itemIdentifier.
+        private string DatabaseItemGetName(uint itemEntry)
+        {
+
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+
+                // Get the ItemID
+                string nameQuery = "SELECT name FROM item_template WHERE entry = '" + itemEntry + "';";
+
+                // item_template
+                DataSet itTable = DatabaseSearch(connect, nameQuery);
+
+                return itTable.Tables[0].Rows[0][0].ToString();
+            }
+
+            ConnectionClose(connect);
+
+            return "";
         }
 
         private static DateTime UnixStampToDateTime(double unixStamp)
@@ -254,6 +323,14 @@ namespace Tricore
             return ( TimeZoneInfo.ConvertTimeToUtc(dateTime) - new DateTime(1970, 1, 1)).TotalSeconds;
         }
 
+        private void DataGridViewDisableSort(DataGridView gridview)
+        {
+            foreach (DataGridViewColumn column in gridview.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
         // CUSTOM FUNCTIONS ENDS
 
         /*
@@ -264,7 +341,7 @@ namespace Tricore
 
         private void buttonAccountSearchButton_Click(object sender, EventArgs e)
         {
-            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseAuth));
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseAuth));
 
             if (ConnectionOpen(connect))
             {
@@ -272,16 +349,22 @@ namespace Tricore
                     "FROM account WHERE id = '" + textBoxAccountSearchID.Text.Trim() + "' OR username = '" + textBoxAccountSearchUsername.Text.Trim() + "'";
 
                 DataSet AccountSearch = DatabaseSearch(connect, searchQuery.Trim());
+                dataGridViewAccountSearch.Columns.Clear();
                 dataGridViewAccountSearch.DataSource = AccountSearch.Tables[0];
-                toolStripStatusLabelAccountSearchResult.Text = "Account(s) found: " + AccountSearch.Tables[0].Rows.Count.ToString();
-            }
+                DataGridViewDisableSort(dataGridViewAccountSearch);
 
-            ConnectionClose(connect);
+                toolStripStatusLabelAccountSearchResult.Text = "Account(s) found: " + AccountSearch.Tables[0].Rows.Count.ToString();
+
+                ConnectionClose(connect);
+            }
         }
 
         private void dataGridViewAccountSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DatabaseAccountSearch(dataGridViewAccountSearch.SelectedCells[0].Value.ToString());
+            if (dataGridViewAccountSearch.RowCount != 0)
+            {
+                DatabaseAccountSearch(dataGridViewAccountSearch.SelectedCells[0].Value.ToString());
+            }
         }
 
         private void buttonAccountAccountGenerateScript_Click(object sender, EventArgs e)
@@ -302,15 +385,14 @@ namespace Tricore
 
         private void buttonAccountScriptUpdate_Click(object sender, EventArgs e)
         {
-            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseAuth));
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseAuth));
             
             if (ConnectionOpen(connect))
             {
                 int rows = DatabaseUpdate(connect, textBoxAccountScript.Text.Trim());
                 toolStripStatusLabelAccountScriptResult.Text = "Row(s) affected: " + rows.ToString();
                 ConnectionClose(connect);
-            }
-            
+            } 
         }
 
         /*
@@ -319,9 +401,10 @@ namespace Tricore
             ---------------------------------------------------------------
         */
 
+            // Search button on Character -> Search tab.
         private void buttonCharacterSearchSearch_Click(object sender, EventArgs e)
         {
-            MySqlConnection connect = new MySqlConnection(ConnectionString(MySQLWindow.DatabaseCharacters));
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
 
             if (ConnectionOpen(connect))
             {
@@ -331,16 +414,25 @@ namespace Tricore
                     "' OR name = '" + textBoxCharacterSearchUsername.Text.Trim() + "';";
 
                 DataSet CharacterSearch = DatabaseSearch(connect, searchQuery.Trim());
+                dataGridViewCharacterSearch.Columns.Clear();
                 dataGridViewCharacterSearch.DataSource = CharacterSearch.Tables[0];
+                DataGridViewDisableSort(dataGridViewCharacterSearch);
+
                 toolStripStatusLabelCharacterSearchResult.Text = "Character(s) found: " + CharacterSearch.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
         }
-
+            // Cell Doubleclick.
         private void dataGridViewCharacterSearchSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            DatabaseCharacterSearch(dataGridViewCharacterSearch.SelectedCells[0].Value.ToString());
+            if (dataGridViewCharacterSearch.RowCount != 0)
+            {
+                DatabaseCharacterSearch(dataGridViewCharacterSearch.SelectedCells[0].Value.ToString());
+                dataGridViewCharacterInventory.Columns.Clear();
+                DatabaseCharacterInventory(dataGridViewCharacterSearch.SelectedCells[0].Value.ToString());
+                DataGridViewDisableSort(dataGridViewCharacterInventory);
+            }
         }
     }
 }
