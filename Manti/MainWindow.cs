@@ -21,9 +21,9 @@ namespace Tricore
             tabControlCategory.SelectedTab = tabPageCreature;
         }
 
-        /*
-            CUSTOM FUNCTIONS
-        */
+        #region CustomFunctions
+
+        #region DatabaseFunctions
 
             // Generates the string required to create a connection
         private static string DatabaseString(string database)
@@ -38,8 +38,6 @@ namespace Tricore
 
             return builder.ToString();
         }
-
-
             // Tries to open the connection between the program and database.
         private bool ConnectionOpen(MySqlConnection connect)
         {
@@ -55,7 +53,6 @@ namespace Tricore
 
             return false;
         }
-
             // Tries to close the connection between the program and database.
         private bool ConnectionClose(MySqlConnection connect)
         {
@@ -71,7 +68,6 @@ namespace Tricore
 
             return false;
         }
-
             // Searching the database with a specific query, then saves in a DataSet.
         private DataSet DatabaseSearch(MySqlConnection connect, string sqlQuery)
         {
@@ -86,7 +82,6 @@ namespace Tricore
 
             return ds;
         }
-
             // Updates the database with a specific query and returns the row affected.
         private int DatabaseUpdate(MySqlConnection connect, string sqlQuery)
         {
@@ -100,7 +95,10 @@ namespace Tricore
             return 0;
         }
 
-            // Searches the data for a specific account.
+        #endregion
+        #region Account
+
+        // Searches the data for a specific account.
         private void DatabaseAccountSearch(string accountID)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseAuth));
@@ -171,7 +169,10 @@ namespace Tricore
             }
         }
 
-            // Searches for data for a specific character.
+        #endregion
+        #region Character
+
+        // Searches for data for a specific character.
         private void DatabaseCharacterSearch(string characterGUID)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
@@ -236,8 +237,7 @@ namespace Tricore
                 ConnectionClose(connect);
             }
         }
-
-            // Outputs the inventory for a specific player.
+        // Outputs the inventory for a specific player.
         private void DatabaseCharacterInventory(string characterGUID)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
@@ -267,6 +267,9 @@ namespace Tricore
             ConnectionClose(connect);
         }
 
+        #endregion
+        #region Creature
+            // Searches the database for the creature's information.
         private void DatabaseCreatureSearch(string creatureEntryID)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseWorld));
@@ -383,8 +386,45 @@ namespace Tricore
 
 
         }
+            // Searches the database for the creature's spawnlocations
+        private void DatabaseCreatureLocation(string creatureEntryID)
+        {
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseWorld));
 
-            // Gets the Item Entry with global item identifier.
+            if (ConnectionOpen(connect))
+            {
+                string query = "SELECT id, guid, map, zoneId, areaId, position_x, position_y, position_z, orientation, spawntimesecs, spawndist " +
+                    "FROM creature WHERE id = '"+creatureEntryID+"';";
+
+                // CreatureTable
+                DataSet ctTable = DatabaseSearch(connect, query);
+
+                dataGridViewCreatureLocation.DataSource = ctTable.Tables[0];
+
+                ConnectionClose(connect);
+            }
+        }
+            // Searches the database for the creature's loot
+        private void DatabaseCreatureLoot(string lootID)
+        {
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                string query = "SELECT * FROM creature_loot_template WHERE Entry = '" + lootID + "';";
+
+                // Creature Loot Template Table
+                DataSet cltTable = DatabaseSearch(connect, query);
+
+                dataGridViewCreatureLootTemplate.DataSource = cltTable.Tables[0];
+
+                ConnectionClose(connect);
+            }
+        }
+        #endregion
+        #region GlobalFunctions
+
+        // Gets the Item Entry with global item identifier.
         private uint DatabaseItemGetEntry(uint itemIdentifier)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
@@ -427,8 +467,8 @@ namespace Tricore
             return "";
         }
 
-            // Its a method to check a textbox if it has text, if it does, add the query and 'OR' to the query.
-            // The ntextbox is next textbox, if thats not empty, it will
+        // Its a method to check a textbox if it has text, if it does, add the query and 'OR' to the query.
+        // The ntextbox is next textbox, if thats not empty, it will
         private string DatabaseQueryFilter(string value, string query)
         {
             if (value != "")
@@ -458,8 +498,11 @@ namespace Tricore
             return ( TimeZoneInfo.ConvertTimeToUtc(dateTime) - new DateTime(1970, 1, 1)).TotalSeconds;
         }
 
-        // CUSTOM FUNCTIONS ENDS
+        #endregion
 
+        #endregion
+    
+        #region AccountSection
         /*
             ---------------------------------------------------------------
                                 ACCOUNT SECTION
@@ -520,13 +563,16 @@ namespace Tricore
             } 
         }
 
+        #endregion AccountSection
+        #region CharacterSection
+
         /*
             ---------------------------------------------------------------
                                CHARACTER SECTION
             ---------------------------------------------------------------
         */
 
-            // Search button on Character -> Search tab.
+        // Search button on Character -> Search tab.
         private void buttonCharacterSearchSearch_Click(object sender, EventArgs e)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
@@ -556,17 +602,21 @@ namespace Tricore
             }
         }
 
+        #endregion
+        #region CreatureSection
+
         /*
             ---------------------------------------------------------------
                                CREATURE SECTION
             ---------------------------------------------------------------
         */
 
+        // Search button
         private void buttonCreatureSearchSearch_Click(object sender, EventArgs e)
         {
-            Boolean totalSearch = true; DialogResult dr; string finalquery;
+            bool totalSearch = true; DialogResult dr; string finalquery;
 
-            string query = "SELECT entry, NAME, subname, minlevel, maxlevel FROM creature_template WHERE '1' = '1'";
+            string query = "SELECT entry, NAME, subname, minlevel, maxlevel, rank, lootid FROM creature_template WHERE '1' = '1'";
             string wq = "";
 
             foreach (Control ct in tabPageCreatureSearch.Controls)
@@ -590,6 +640,7 @@ namespace Tricore
                 wq += DatabaseQueryFilter(textBoxCreatureSearchSubname.Text, "subname");
                 wq += DatabaseQueryFilter(textBoxCreatureSearchLevelMin.Text, "minlevel");
                 wq += DatabaseQueryFilter(textBoxCreatureSearchLevelMax.Text, "maxlevel");
+                wq += DatabaseQueryFilter(textBoxCreatureSearchRank.Text, "rank");
 
                 finalquery = query + wq;
 
@@ -620,8 +671,12 @@ namespace Tricore
             if (dataGridViewCreatureSearch.Rows.Count != 0)
             {
                 DatabaseCreatureSearch( dataGridViewCreatureSearch.SelectedCells[0].Value.ToString() );
+                DatabaseCreatureLocation( dataGridViewCreatureSearch.SelectedCells[0].Value.ToString() );
+                DatabaseCreatureLoot(dataGridViewCreatureSearch.SelectedCells[6].Value.ToString());
             }
         }
+
+        #endregion
 
     }
 }
