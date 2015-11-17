@@ -18,7 +18,12 @@ namespace Tricore
         {
             InitializeComponent();
 
-            tabControlCategory.SelectedTab = tabPageCreature;
+            tabControlCategory.SelectedTab = tabPageQuest;
+
+            if (MySQLWindow.Offline == true)
+            {
+                tabControlCategory.Enabled = false;
+            }
         }
 
         #region CustomFunctions
@@ -424,7 +429,7 @@ namespace Tricore
         #endregion
         #region GlobalFunctions
 
-        // Gets the Item Entry with global item identifier.
+            // Gets the Item Entry with global item identifier.
         private uint DatabaseItemGetEntry(uint itemIdentifier)
         {
             MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseCharacters));
@@ -443,7 +448,6 @@ namespace Tricore
             ConnectionClose(connect);
             return 0;
         }
-
             // Gets the item name from itemIdentifier.
         private string DatabaseItemGetName(uint itemEntry)
         {
@@ -466,25 +470,41 @@ namespace Tricore
 
             return "";
         }
-
-        // Its a method to check a textbox if it has text, if it does, add the query and 'OR' to the query.
-        // The ntextbox is next textbox, if thats not empty, it will
+            // Its a method to check a textbox if it has text, if it does, add the query and 'OR' to the query.
+            // The ntextbox is next textbox, if thats not empty, it will
         private string DatabaseQueryFilter(string value, string query)
         {
             if (value != "")
             {
-                if (!value.Trim().StartsWith("%") && !value.Trim().EndsWith("%"))
+                if (value.Trim().StartsWith("%") || value.Trim().EndsWith("%"))
                 {
-                    value = " AND " + query + " = '" + value + "'";
+                    value = " AND " + query + " LIKE '" + value + "'";
                 } else
                 {
-                    value = " AND " + query + " LIKE '%" + value + "%'";
+                    value = " AND " + query + " = '" + value + "'";
                 }
             }
 
             return value;
         }
+            
+            // Check if all textboxes are empty
+        private bool CheckTextboxEmpty(Control control)
+        {
+            foreach (Control ct in control.Controls)
+            {
+                if (ct is TextBox)
+                {
+                    if (ct.Text != "")
+                    {
+                        return false;
+                    }
+                }
+            }
 
+            return true;
+        }
+        
         private static DateTime UnixStampToDateTime(double unixStamp)
         {
             DateTime DateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
@@ -497,12 +517,13 @@ namespace Tricore
         {
             return ( TimeZoneInfo.ConvertTimeToUtc(dateTime) - new DateTime(1970, 1, 1)).TotalSeconds;
         }
-
         #endregion
 
         #endregion
-    
-        #region AccountSection
+
+        #region Tabs
+
+        #region Account
         /*
             ---------------------------------------------------------------
                                 ACCOUNT SECTION
@@ -564,7 +585,7 @@ namespace Tricore
         }
 
         #endregion AccountSection
-        #region CharacterSection
+        #region Character
 
         /*
             ---------------------------------------------------------------
@@ -603,7 +624,7 @@ namespace Tricore
         }
 
         #endregion
-        #region CreatureSection
+        #region Creature
 
         /*
             ---------------------------------------------------------------
@@ -614,20 +635,10 @@ namespace Tricore
         // Search button
         private void buttonCreatureSearchSearch_Click(object sender, EventArgs e)
         {
-            bool totalSearch = true; DialogResult dr; string finalquery;
+            bool totalSearch = CheckTextboxEmpty(tabPageCreatureSearch); DialogResult dr; string finalquery;
 
             string query = "SELECT entry, NAME, subname, minlevel, maxlevel, rank, lootid FROM creature_template WHERE '1' = '1'";
             string wq = "";
-
-            foreach (Control ct in tabPageCreatureSearch.Controls)
-            {  
-                if (ct is TextBox)
-                {
-                    if (ct.Text != "") {
-                        totalSearch = false;
-                    }
-                }
-            }
 
             if (totalSearch)
             {
@@ -660,7 +671,7 @@ namespace Tricore
                 DataSet ctTable = DatabaseSearch(connect, finalquery);
 
                 dataGridViewCreatureSearch.DataSource = ctTable.Tables[0];
-                toolStripStatusLabelCreatureSearchRow.Text = ctTable.Tables[0].Rows.Count.ToString();
+                toolStripStatusLabelCreatureSearchRow.Text = "Creature(s) found: " + ctTable.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
@@ -670,13 +681,123 @@ namespace Tricore
         {
             if (dataGridViewCreatureSearch.Rows.Count != 0)
             {
-                DatabaseCreatureSearch( dataGridViewCreatureSearch.SelectedCells[0].Value.ToString() );
-                DatabaseCreatureLocation( dataGridViewCreatureSearch.SelectedCells[0].Value.ToString() );
+                DatabaseCreatureSearch(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
+                DatabaseCreatureLocation(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
                 DatabaseCreatureLoot(dataGridViewCreatureSearch.SelectedCells[6].Value.ToString());
+            }
+        } 
+
+        #endregion
+        #region Quest
+        private void buttonQuestSearch_Click(object sender, EventArgs e)
+        {
+            bool totalSearch = CheckTextboxEmpty(tabPageQuestSearch); DialogResult dr; string finalquery = "";
+
+            string query = "SELECT ID, LogTitle, LogDescription FROM quest_template WHERE '1' = '1'";
+            string qsQuery = "SELECT quest FROM creature_queststarter WHERE '1' = '1'"; // queststart query
+            string qeQuery = "SELECT quest FROM creature_questender WHERE '1' = '1'"; // questender query
+
+            if (totalSearch)
+            {
+                dr = MessageBox.Show("You sure, you want to load them all?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                finalquery = query;
+            } else
+            {
+                query += DatabaseQueryFilter(textBoxQuestSearchID.Text, "ID");
+                query += DatabaseQueryFilter(textBoxQuestSearchTitle.Text, "logTitle");
+                query += DatabaseQueryFilter(textBoxQuestSearchType.Text, "QuestType");
+                qsQuery += DatabaseQueryFilter(textBoxQuestSearchGiver.Text, "id");
+                qeQuery += DatabaseQueryFilter(textBoxQuestSearchTaker.Text, "id");
+
+                query += ";"; qsQuery += ";"; qeQuery += ";";
+
+                if (textBoxQuestSearchID.Text != "" || textBoxQuestSearchTitle.Text != "" || textBoxQuestSearchType.Text != "")
+                {
+                    finalquery += query;
+                }
+                if (textBoxQuestSearchGiver.Text != "")
+                {
+                    finalquery += qsQuery;
+                }
+                if (textBoxQuestSearchTaker.Text != "")
+                {
+                    finalquery += qeQuery;
+                }
+
+                dr = DialogResult.OK;
+            }
+
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            MySqlConnection connect = new MySqlConnection(DatabaseString(MySQLWindow.DatabaseWorld));
+            
+            if (ConnectionOpen(connect))
+            {
+
+                // Combined DataSet with all the tables.
+                DataSet combinedTable = DatabaseSearch(connect, finalquery);
+
+                if (!totalSearch)
+                {
+                    DataTable QuestID = new DataTable(); string newQuery = "SELECT ID, LogTitle, LogDescription FROM quest_template WHERE '1' = '1' AND ID IN (";
+
+                    QuestID.Columns.Add("quest", typeof(UInt32));
+
+                    if (combinedTable.Tables.Count == 1)
+                    {
+                        foreach (DataRow Drow in combinedTable.Tables[0].Rows)
+                        {
+                            QuestID.Rows.Add(Drow[0]);
+                        }
+                    }
+
+                    if (combinedTable.Tables.Count == 2)
+                    {
+                        foreach (DataRow Drow in combinedTable.Tables[1].Rows)
+                        {
+                            QuestID.Rows.Add(Drow[0]);
+                        }
+                    }
+
+                    if (combinedTable.Tables.Count == 3)
+                    {
+                        foreach (DataRow drow in combinedTable.Tables[2].Rows)
+                        {
+                            QuestID.Rows.Add(drow[0]);
+                        }
+                    }
+
+                    int i = 0;
+
+                    foreach (DataRow drow in QuestID.Rows)
+                    {
+                        if (i == QuestID.Rows.Count - 1)
+                        {
+                            newQuery += drow[0];
+                        }
+                        else
+                        {
+                            newQuery += drow[0] + ", ";
+                        }
+
+                        i++;
+                    }
+
+                    combinedTable = DatabaseSearch(connect, newQuery + ");");
+                }
+
+                dataGridViewQuestSearch.DataSource = combinedTable.Tables[0];
+                toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
+
+                ConnectionClose(connect);
             }
         }
 
         #endregion
 
+        #endregion
     }
 }

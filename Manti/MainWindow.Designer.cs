@@ -56,6 +56,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStripMainWindow = new System.Windows.Forms.MenuStrip();
             this.menuesUpHereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlCategory = new System.Windows.Forms.TabControl();
@@ -220,6 +232,8 @@
             this.tabPageCreature = new System.Windows.Forms.TabPage();
             this.tabControlCategoryCreature = new System.Windows.Forms.TabControl();
             this.tabPageCreatureSearch = new System.Windows.Forms.TabPage();
+            this.labelCreatureSearchRank = new System.Windows.Forms.Label();
+            this.textBoxCreatureSearchRank = new System.Windows.Forms.TextBox();
             this.labelCreatureSearchLevelMax = new System.Windows.Forms.Label();
             this.textBoxCreatureSearchLevelMax = new System.Windows.Forms.TextBox();
             this.labelCreatureSearchLevelMin = new System.Windows.Forms.Label();
@@ -227,6 +241,13 @@
             this.buttonCreatureSearchSearch = new System.Windows.Forms.Button();
             this.labelCreatureSearchEntry = new System.Windows.Forms.Label();
             this.dataGridViewCreatureSearch = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumnCSE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSMIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSMAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumnCSLID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripCreatureSearch = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCreatureSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelCreatureSearchName = new System.Windows.Forms.Label();
@@ -381,17 +402,6 @@
             this.labelCreatureTemplateEntry = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridViewCreatureLocation = new System.Windows.Forms.DataGridView();
-            this.tabPageCreatureLootTemplate = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPageGameObject = new System.Windows.Forms.TabPage();
-            this.tabPageItem = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridViewCreatureLootTemplate = new System.Windows.Forms.DataGridView();
-            this.labelCreatureSearchRank = new System.Windows.Forms.Label();
-            this.textBoxCreatureSearchRank = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumnCLID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnCLGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnCLMap = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -403,6 +413,8 @@
             this.dataGridViewTextBoxColumnCLPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnCLST = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageCreatureLootTemplate = new System.Windows.Forms.TabPage();
+            this.dataGridViewCreatureLootTemplate = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumnLTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnLTI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnLTR = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -413,13 +425,56 @@
             this.dataGridViewTextBoxColumnLTMINC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnLTMAXC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnLTCOM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSMIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSMAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnCSLID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageQuest = new System.Windows.Forms.TabPage();
+            this.tabControlQuest = new System.Windows.Forms.TabControl();
+            this.tabPageQuestSearch = new System.Windows.Forms.TabPage();
+            this.dataGridViewQuestSearch = new System.Windows.Forms.DataGridView();
+            this.statusStripQuestSearch = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelQuestSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tabPageGameObject = new System.Windows.Forms.TabPage();
+            this.tabControlGameObject = new System.Windows.Forms.TabControl();
+            this.tabPageGameObjectSearch = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStripGameObjectSearch = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelGameObjectSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tabPageItem = new System.Windows.Forms.TabPage();
+            this.tabControlItem = new System.Windows.Forms.TabControl();
+            this.tabPageItemSearch = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStripItemSearch = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelItemSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.labelQuestSearchID = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchID = new System.Windows.Forms.TextBox();
+            this.textBoxQuestSearchTitle = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchTitle = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchGiver = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchGiver = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchTaker = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchTaker = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchPQID = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchPQID = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchNQID = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchNQID = new System.Windows.Forms.Label();
+            this.buttonQuestSearch = new System.Windows.Forms.Button();
+            this.textBoxQuestSearchType = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchType = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStripMainWindow.SuspendLayout();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
@@ -466,6 +521,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLocation)).BeginInit();
             this.tabPageCreatureLootTemplate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLootTemplate)).BeginInit();
+            this.tabPageQuest.SuspendLayout();
+            this.tabControlQuest.SuspendLayout();
+            this.tabPageQuestSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestSearch)).BeginInit();
+            this.statusStripQuestSearch.SuspendLayout();
+            this.tabPageGameObject.SuspendLayout();
+            this.tabControlGameObject.SuspendLayout();
+            this.tabPageGameObjectSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.statusStripGameObjectSearch.SuspendLayout();
+            this.tabPageItem.SuspendLayout();
+            this.tabControlItem.SuspendLayout();
+            this.tabPageItemSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.statusStripItemSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripMainWindow
@@ -493,13 +563,13 @@
             this.tabControlCategory.Controls.Add(this.tabPageAccount);
             this.tabControlCategory.Controls.Add(this.tabPageCharacter);
             this.tabControlCategory.Controls.Add(this.tabPageCreature);
+            this.tabControlCategory.Controls.Add(this.tabPageQuest);
             this.tabControlCategory.Controls.Add(this.tabPageGameObject);
             this.tabControlCategory.Controls.Add(this.tabPageItem);
-            this.tabControlCategory.Controls.Add(this.tabPage6);
             this.tabControlCategory.Location = new System.Drawing.Point(0, 27);
             this.tabControlCategory.Name = "tabControlCategory";
             this.tabControlCategory.SelectedIndex = 0;
-            this.tabControlCategory.Size = new System.Drawing.Size(914, 443);
+            this.tabControlCategory.Size = new System.Drawing.Size(914, 562);
             this.tabControlCategory.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlCategory.TabIndex = 1;
             // 
@@ -510,7 +580,7 @@
             this.tabPageAccount.Location = new System.Drawing.Point(4, 22);
             this.tabPageAccount.Name = "tabPageAccount";
             this.tabPageAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAccount.Size = new System.Drawing.Size(906, 417);
+            this.tabPageAccount.Size = new System.Drawing.Size(906, 536);
             this.tabPageAccount.TabIndex = 0;
             this.tabPageAccount.Text = "Account";
             // 
@@ -522,10 +592,10 @@
             this.tabControlCategoryAccount.Controls.Add(this.tabPageAccountSearch);
             this.tabControlCategoryAccount.Controls.Add(this.tabPageAccountAccount);
             this.tabControlCategoryAccount.Controls.Add(this.tabPageAccountScript);
-            this.tabControlCategoryAccount.Location = new System.Drawing.Point(3, 6);
+            this.tabControlCategoryAccount.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryAccount.Name = "tabControlCategoryAccount";
             this.tabControlCategoryAccount.SelectedIndex = 0;
-            this.tabControlCategoryAccount.Size = new System.Drawing.Size(900, 408);
+            this.tabControlCategoryAccount.Size = new System.Drawing.Size(900, 530);
             this.tabControlCategoryAccount.TabIndex = 0;
             // 
             // tabPageAccountSearch
@@ -542,7 +612,7 @@
             this.tabPageAccountSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageAccountSearch.Name = "tabPageAccountSearch";
             this.tabPageAccountSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAccountSearch.Size = new System.Drawing.Size(892, 382);
+            this.tabPageAccountSearch.Size = new System.Drawing.Size(892, 504);
             this.tabPageAccountSearch.TabIndex = 0;
             this.tabPageAccountSearch.Text = "Search";
             // 
@@ -610,7 +680,7 @@
             this.dataGridViewAccountSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewAccountSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewAccountSearch.ShowEditingIcon = false;
-            this.dataGridViewAccountSearch.Size = new System.Drawing.Size(889, 300);
+            this.dataGridViewAccountSearch.Size = new System.Drawing.Size(889, 422);
             this.dataGridViewAccountSearch.TabIndex = 9;
             this.dataGridViewAccountSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAccountSearch_CellDoubleClick);
             // 
@@ -666,7 +736,7 @@
             // 
             this.statusStripAccountSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelAccountSearchRow});
-            this.statusStripAccountSearch.Location = new System.Drawing.Point(3, 357);
+            this.statusStripAccountSearch.Location = new System.Drawing.Point(3, 479);
             this.statusStripAccountSearch.Name = "statusStripAccountSearch";
             this.statusStripAccountSearch.Size = new System.Drawing.Size(886, 22);
             this.statusStripAccountSearch.SizingGrip = false;
@@ -733,7 +803,7 @@
             this.tabPageAccountAccount.Location = new System.Drawing.Point(4, 22);
             this.tabPageAccountAccount.Name = "tabPageAccountAccount";
             this.tabPageAccountAccount.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAccountAccount.Size = new System.Drawing.Size(892, 382);
+            this.tabPageAccountAccount.Size = new System.Drawing.Size(892, 504);
             this.tabPageAccountAccount.TabIndex = 1;
             this.tabPageAccountAccount.Text = "Account";
             // 
@@ -745,7 +815,7 @@
             this.buttonAccountAccountGenerateScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAccountAccountGenerateScript.Location = new System.Drawing.Point(310, 286);
             this.buttonAccountAccountGenerateScript.Name = "buttonAccountAccountGenerateScript";
-            this.buttonAccountAccountGenerateScript.Size = new System.Drawing.Size(575, 90);
+            this.buttonAccountAccountGenerateScript.Size = new System.Drawing.Size(575, 212);
             this.buttonAccountAccountGenerateScript.TabIndex = 12;
             this.buttonAccountAccountGenerateScript.Text = "Generate Script";
             this.buttonAccountAccountGenerateScript.UseVisualStyleBackColor = true;
@@ -971,7 +1041,7 @@
             this.groupBoxAccountAccountGeneral.Controls.Add(this.labelAccountAccountLastIP);
             this.groupBoxAccountAccountGeneral.Location = new System.Drawing.Point(6, 6);
             this.groupBoxAccountAccountGeneral.Name = "groupBoxAccountAccountGeneral";
-            this.groupBoxAccountAccountGeneral.Size = new System.Drawing.Size(298, 370);
+            this.groupBoxAccountAccountGeneral.Size = new System.Drawing.Size(298, 492);
             this.groupBoxAccountAccountGeneral.TabIndex = 9;
             this.groupBoxAccountAccountGeneral.TabStop = false;
             this.groupBoxAccountAccountGeneral.Text = "General Information";
@@ -1021,7 +1091,7 @@
             this.dataGridViewAccountAccess.RowTemplate.Height = 15;
             this.dataGridViewAccountAccess.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewAccountAccess.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewAccountAccess.Size = new System.Drawing.Size(286, 144);
+            this.dataGridViewAccountAccess.Size = new System.Drawing.Size(286, 266);
             this.dataGridViewAccountAccess.TabIndex = 16;
             // 
             // textBoxAccountAccountExpansion
@@ -1185,7 +1255,7 @@
             this.tabPageAccountScript.Location = new System.Drawing.Point(4, 22);
             this.tabPageAccountScript.Name = "tabPageAccountScript";
             this.tabPageAccountScript.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAccountScript.Size = new System.Drawing.Size(892, 382);
+            this.tabPageAccountScript.Size = new System.Drawing.Size(892, 504);
             this.tabPageAccountScript.TabIndex = 5;
             this.tabPageAccountScript.Text = "Script";
             // 
@@ -1193,9 +1263,10 @@
             // 
             this.statusStripAccountScript.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelAccountScriptResult});
-            this.statusStripAccountScript.Location = new System.Drawing.Point(3, 357);
+            this.statusStripAccountScript.Location = new System.Drawing.Point(3, 479);
             this.statusStripAccountScript.Name = "statusStripAccountScript";
             this.statusStripAccountScript.Size = new System.Drawing.Size(886, 22);
+            this.statusStripAccountScript.SizingGrip = false;
             this.statusStripAccountScript.TabIndex = 2;
             this.statusStripAccountScript.Text = "AccountScript";
             // 
@@ -1210,7 +1281,7 @@
             this.buttonAccountScriptUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAccountScriptUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAccountScriptUpdate.Location = new System.Drawing.Point(6, 331);
+            this.buttonAccountScriptUpdate.Location = new System.Drawing.Point(6, 453);
             this.buttonAccountScriptUpdate.Name = "buttonAccountScriptUpdate";
             this.buttonAccountScriptUpdate.Size = new System.Drawing.Size(880, 23);
             this.buttonAccountScriptUpdate.TabIndex = 1;
@@ -1227,7 +1298,7 @@
             this.textBoxAccountScript.Location = new System.Drawing.Point(6, 6);
             this.textBoxAccountScript.Multiline = true;
             this.textBoxAccountScript.Name = "textBoxAccountScript";
-            this.textBoxAccountScript.Size = new System.Drawing.Size(880, 319);
+            this.textBoxAccountScript.Size = new System.Drawing.Size(880, 441);
             this.textBoxAccountScript.TabIndex = 0;
             // 
             // tabPageCharacter
@@ -1237,7 +1308,7 @@
             this.tabPageCharacter.Location = new System.Drawing.Point(4, 22);
             this.tabPageCharacter.Name = "tabPageCharacter";
             this.tabPageCharacter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacter.Size = new System.Drawing.Size(906, 417);
+            this.tabPageCharacter.Size = new System.Drawing.Size(906, 536);
             this.tabPageCharacter.TabIndex = 1;
             this.tabPageCharacter.Text = "Character";
             // 
@@ -1249,10 +1320,10 @@
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterSearch);
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterCharacter);
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterInventory);
-            this.tabControlCategoryCharacter.Location = new System.Drawing.Point(3, 6);
+            this.tabControlCategoryCharacter.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryCharacter.Name = "tabControlCategoryCharacter";
             this.tabControlCategoryCharacter.SelectedIndex = 0;
-            this.tabControlCategoryCharacter.Size = new System.Drawing.Size(900, 408);
+            this.tabControlCategoryCharacter.Size = new System.Drawing.Size(900, 530);
             this.tabControlCategoryCharacter.TabIndex = 0;
             // 
             // tabPageCharacterSearch
@@ -1270,7 +1341,7 @@
             this.tabPageCharacterSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageCharacterSearch.Name = "tabPageCharacterSearch";
             this.tabPageCharacterSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacterSearch.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCharacterSearch.Size = new System.Drawing.Size(892, 504);
             this.tabPageCharacterSearch.TabIndex = 0;
             this.tabPageCharacterSearch.Text = "Search";
             // 
@@ -1349,7 +1420,7 @@
             this.dataGridViewCharacterSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCharacterSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCharacterSearch.ShowEditingIcon = false;
-            this.dataGridViewCharacterSearch.Size = new System.Drawing.Size(889, 300);
+            this.dataGridViewCharacterSearch.Size = new System.Drawing.Size(889, 422);
             this.dataGridViewCharacterSearch.TabIndex = 8;
             this.dataGridViewCharacterSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCharacterSearchSearch_CellDoubleClick);
             // 
@@ -1426,7 +1497,7 @@
             // 
             this.statusStripCharacterSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCharacterSearchRow});
-            this.statusStripCharacterSearch.Location = new System.Drawing.Point(3, 357);
+            this.statusStripCharacterSearch.Location = new System.Drawing.Point(3, 479);
             this.statusStripCharacterSearch.Name = "statusStripCharacterSearch";
             this.statusStripCharacterSearch.Size = new System.Drawing.Size(886, 22);
             this.statusStripCharacterSearch.SizingGrip = false;
@@ -1517,7 +1588,7 @@
             this.tabPageCharacterCharacter.Location = new System.Drawing.Point(4, 22);
             this.tabPageCharacterCharacter.Name = "tabPageCharacterCharacter";
             this.tabPageCharacterCharacter.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacterCharacter.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCharacterCharacter.Size = new System.Drawing.Size(892, 409);
             this.tabPageCharacterCharacter.TabIndex = 1;
             this.tabPageCharacterCharacter.Text = "Character";
             // 
@@ -1529,7 +1600,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(6, 348);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(880, 23);
+            this.button1.Size = new System.Drawing.Size(880, 26);
             this.button1.TabIndex = 24;
             this.button1.Text = "Generate Script";
             this.button1.UseVisualStyleBackColor = true;
@@ -2196,7 +2267,7 @@
             this.tabPageCharacterInventory.Location = new System.Drawing.Point(4, 22);
             this.tabPageCharacterInventory.Name = "tabPageCharacterInventory";
             this.tabPageCharacterInventory.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCharacterInventory.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCharacterInventory.Size = new System.Drawing.Size(892, 409);
             this.tabPageCharacterInventory.TabIndex = 2;
             this.tabPageCharacterInventory.Text = "Inventory";
             // 
@@ -2266,7 +2337,7 @@
             this.dataGridViewCharacterInventory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCharacterInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCharacterInventory.ShowEditingIcon = false;
-            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(889, 286);
+            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(889, 313);
             this.dataGridViewCharacterInventory.TabIndex = 9;
             // 
             // ColumnCharacterInventoryGUID
@@ -2336,7 +2407,7 @@
             this.tabPageCreature.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreature.Name = "tabPageCreature";
             this.tabPageCreature.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreature.Size = new System.Drawing.Size(906, 417);
+            this.tabPageCreature.Size = new System.Drawing.Size(906, 536);
             this.tabPageCreature.TabIndex = 2;
             this.tabPageCreature.Text = "Creature";
             // 
@@ -2349,13 +2420,10 @@
             this.tabControlCategoryCreature.Controls.Add(this.tabPageCreatureTemplate);
             this.tabControlCategoryCreature.Controls.Add(this.tabPage1);
             this.tabControlCategoryCreature.Controls.Add(this.tabPageCreatureLootTemplate);
-            this.tabControlCategoryCreature.Controls.Add(this.tabPage3);
-            this.tabControlCategoryCreature.Controls.Add(this.tabPage4);
-            this.tabControlCategoryCreature.Controls.Add(this.tabPage5);
-            this.tabControlCategoryCreature.Location = new System.Drawing.Point(3, 6);
+            this.tabControlCategoryCreature.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryCreature.Name = "tabControlCategoryCreature";
             this.tabControlCategoryCreature.SelectedIndex = 0;
-            this.tabControlCategoryCreature.Size = new System.Drawing.Size(900, 408);
+            this.tabControlCategoryCreature.Size = new System.Drawing.Size(900, 530);
             this.tabControlCategoryCreature.TabIndex = 0;
             // 
             // tabPageCreatureSearch
@@ -2379,9 +2447,25 @@
             this.tabPageCreatureSearch.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatureSearch.Name = "tabPageCreatureSearch";
             this.tabPageCreatureSearch.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatureSearch.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCreatureSearch.Size = new System.Drawing.Size(892, 504);
             this.tabPageCreatureSearch.TabIndex = 0;
             this.tabPageCreatureSearch.Text = "Search";
+            // 
+            // labelCreatureSearchRank
+            // 
+            this.labelCreatureSearchRank.AutoSize = true;
+            this.labelCreatureSearchRank.Location = new System.Drawing.Point(506, 11);
+            this.labelCreatureSearchRank.Name = "labelCreatureSearchRank";
+            this.labelCreatureSearchRank.Size = new System.Drawing.Size(36, 13);
+            this.labelCreatureSearchRank.TabIndex = 23;
+            this.labelCreatureSearchRank.Text = "Rank:";
+            // 
+            // textBoxCreatureSearchRank
+            // 
+            this.textBoxCreatureSearchRank.Location = new System.Drawing.Point(509, 27);
+            this.textBoxCreatureSearchRank.Name = "textBoxCreatureSearchRank";
+            this.textBoxCreatureSearchRank.Size = new System.Drawing.Size(60, 20);
+            this.textBoxCreatureSearchRank.TabIndex = 22;
             // 
             // labelCreatureSearchLevelMax
             // 
@@ -2502,15 +2586,88 @@
             this.dataGridViewCreatureSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCreatureSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCreatureSearch.ShowEditingIcon = false;
-            this.dataGridViewCreatureSearch.Size = new System.Drawing.Size(889, 300);
+            this.dataGridViewCreatureSearch.Size = new System.Drawing.Size(889, 422);
             this.dataGridViewCreatureSearch.TabIndex = 15;
             this.dataGridViewCreatureSearch.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreatureSearch_CellDoubleClick);
+            // 
+            // dataGridViewTextBoxColumnCSE
+            // 
+            this.dataGridViewTextBoxColumnCSE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumnCSE.DataPropertyName = "entry";
+            this.dataGridViewTextBoxColumnCSE.Frozen = true;
+            this.dataGridViewTextBoxColumnCSE.HeaderText = "entry";
+            this.dataGridViewTextBoxColumnCSE.Name = "dataGridViewTextBoxColumnCSE";
+            this.dataGridViewTextBoxColumnCSE.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumnCSN
+            // 
+            this.dataGridViewTextBoxColumnCSN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumnCSN.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumnCSN.Frozen = true;
+            this.dataGridViewTextBoxColumnCSN.HeaderText = "name";
+            this.dataGridViewTextBoxColumnCSN.Name = "dataGridViewTextBoxColumnCSN";
+            this.dataGridViewTextBoxColumnCSN.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSN.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumnCSN.Width = 200;
+            // 
+            // dataGridViewTextBoxColumnCSS
+            // 
+            this.dataGridViewTextBoxColumnCSS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumnCSS.DataPropertyName = "subname";
+            this.dataGridViewTextBoxColumnCSS.Frozen = true;
+            this.dataGridViewTextBoxColumnCSS.HeaderText = "subname";
+            this.dataGridViewTextBoxColumnCSS.Name = "dataGridViewTextBoxColumnCSS";
+            this.dataGridViewTextBoxColumnCSS.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSS.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumnCSS.Width = 200;
+            // 
+            // dataGridViewTextBoxColumnCSMIL
+            // 
+            this.dataGridViewTextBoxColumnCSMIL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumnCSMIL.DataPropertyName = "minlevel";
+            this.dataGridViewTextBoxColumnCSMIL.Frozen = true;
+            this.dataGridViewTextBoxColumnCSMIL.HeaderText = "minlevel";
+            this.dataGridViewTextBoxColumnCSMIL.Name = "dataGridViewTextBoxColumnCSMIL";
+            this.dataGridViewTextBoxColumnCSMIL.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSMIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSMIL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumnCSMAL
+            // 
+            this.dataGridViewTextBoxColumnCSMAL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumnCSMAL.DataPropertyName = "maxlevel";
+            this.dataGridViewTextBoxColumnCSMAL.Frozen = true;
+            this.dataGridViewTextBoxColumnCSMAL.HeaderText = "maxlevel";
+            this.dataGridViewTextBoxColumnCSMAL.Name = "dataGridViewTextBoxColumnCSMAL";
+            this.dataGridViewTextBoxColumnCSMAL.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSMAL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSMAL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumnCSR
+            // 
+            this.dataGridViewTextBoxColumnCSR.DataPropertyName = "rank";
+            this.dataGridViewTextBoxColumnCSR.HeaderText = "rank";
+            this.dataGridViewTextBoxColumnCSR.Name = "dataGridViewTextBoxColumnCSR";
+            this.dataGridViewTextBoxColumnCSR.ReadOnly = true;
+            this.dataGridViewTextBoxColumnCSR.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumnCSR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumnCSLID
+            // 
+            this.dataGridViewTextBoxColumnCSLID.DataPropertyName = "lootId";
+            this.dataGridViewTextBoxColumnCSLID.HeaderText = "lootid";
+            this.dataGridViewTextBoxColumnCSLID.Name = "dataGridViewTextBoxColumnCSLID";
+            this.dataGridViewTextBoxColumnCSLID.ReadOnly = true;
             // 
             // statusStripCreatureSearch
             // 
             this.statusStripCreatureSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCreatureSearchRow});
-            this.statusStripCreatureSearch.Location = new System.Drawing.Point(3, 357);
+            this.statusStripCreatureSearch.Location = new System.Drawing.Point(3, 479);
             this.statusStripCreatureSearch.Name = "statusStripCreatureSearch";
             this.statusStripCreatureSearch.Size = new System.Drawing.Size(886, 22);
             this.statusStripCreatureSearch.SizingGrip = false;
@@ -2580,7 +2737,7 @@
             this.tabPageCreatureTemplate.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatureTemplate.Name = "tabPageCreatureTemplate";
             this.tabPageCreatureTemplate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatureTemplate.Size = new System.Drawing.Size(892, 382);
+            this.tabPageCreatureTemplate.Size = new System.Drawing.Size(892, 385);
             this.tabPageCreatureTemplate.TabIndex = 1;
             this.tabPageCreatureTemplate.Text = "Template";
             // 
@@ -3878,12 +4035,11 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.dataGridViewCreatureLocation);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(892, 382);
+            this.tabPage1.Size = new System.Drawing.Size(892, 504);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "Location";
             // 
@@ -3959,180 +4115,8 @@
             this.dataGridViewCreatureLocation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCreatureLocation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCreatureLocation.ShowEditingIcon = false;
-            this.dataGridViewCreatureLocation.Size = new System.Drawing.Size(889, 288);
+            this.dataGridViewCreatureLocation.Size = new System.Drawing.Size(889, 410);
             this.dataGridViewCreatureLocation.TabIndex = 16;
-            // 
-            // tabPageCreatureLootTemplate
-            // 
-            this.tabPageCreatureLootTemplate.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageCreatureLootTemplate.Controls.Add(this.dataGridViewCreatureLootTemplate);
-            this.tabPageCreatureLootTemplate.Location = new System.Drawing.Point(4, 22);
-            this.tabPageCreatureLootTemplate.Name = "tabPageCreatureLootTemplate";
-            this.tabPageCreatureLootTemplate.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageCreatureLootTemplate.Size = new System.Drawing.Size(892, 382);
-            this.tabPageCreatureLootTemplate.TabIndex = 3;
-            this.tabPageCreatureLootTemplate.Text = "Loot Template";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(892, 382);
-            this.tabPage3.TabIndex = 4;
-            this.tabPage3.Text = "Control";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(892, 382);
-            this.tabPage4.TabIndex = 5;
-            this.tabPage4.Text = "tabPage4";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(892, 382);
-            this.tabPage5.TabIndex = 6;
-            this.tabPage5.Text = "tabPage5";
-            // 
-            // tabPageGameObject
-            // 
-            this.tabPageGameObject.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageGameObject.Location = new System.Drawing.Point(4, 22);
-            this.tabPageGameObject.Name = "tabPageGameObject";
-            this.tabPageGameObject.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGameObject.Size = new System.Drawing.Size(906, 417);
-            this.tabPageGameObject.TabIndex = 3;
-            this.tabPageGameObject.Text = "Game Object";
-            // 
-            // tabPageItem
-            // 
-            this.tabPageItem.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageItem.Location = new System.Drawing.Point(4, 22);
-            this.tabPageItem.Name = "tabPageItem";
-            this.tabPageItem.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageItem.Size = new System.Drawing.Size(906, 417);
-            this.tabPageItem.TabIndex = 4;
-            this.tabPageItem.Text = "Item";
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(906, 417);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Quest";
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(806, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 25);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Generate Script";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewCreatureLootTemplate
-            // 
-            this.dataGridViewCreatureLootTemplate.AllowUserToAddRows = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToDeleteRows = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToResizeColumns = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridViewCreatureLootTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCreatureLootTemplate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCreatureLootTemplate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewCreatureLootTemplate.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCreatureLootTemplate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewCreatureLootTemplate.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCreatureLootTemplate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumnLTE,
-            this.dataGridViewTextBoxColumnLTI,
-            this.dataGridViewTextBoxColumnLTR,
-            this.dataGridViewTextBoxColumnLTCHANCE,
-            this.dataGridViewTextBoxColumnLTQR,
-            this.dataGridViewTextBoxColumnLTLM,
-            this.dataGridViewTextBoxColumnLTGID,
-            this.dataGridViewTextBoxColumnLTMINC,
-            this.dataGridViewTextBoxColumnLTMAXC,
-            this.dataGridViewTextBoxColumnLTCOM});
-            this.dataGridViewCreatureLootTemplate.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewCreatureLootTemplate.Location = new System.Drawing.Point(1, 3);
-            this.dataGridViewCreatureLootTemplate.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridViewCreatureLootTemplate.MultiSelect = false;
-            this.dataGridViewCreatureLootTemplate.Name = "dataGridViewCreatureLootTemplate";
-            this.dataGridViewCreatureLootTemplate.ReadOnly = true;
-            this.dataGridViewCreatureLootTemplate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridViewCreatureLootTemplate.RowHeadersVisible = false;
-            this.dataGridViewCreatureLootTemplate.RowHeadersWidth = 99;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.Height = 15;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.ReadOnly = true;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCreatureLootTemplate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewCreatureLootTemplate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCreatureLootTemplate.ShowEditingIcon = false;
-            this.dataGridViewCreatureLootTemplate.Size = new System.Drawing.Size(889, 288);
-            this.dataGridViewCreatureLootTemplate.TabIndex = 17;
-            // 
-            // labelCreatureSearchRank
-            // 
-            this.labelCreatureSearchRank.AutoSize = true;
-            this.labelCreatureSearchRank.Location = new System.Drawing.Point(506, 11);
-            this.labelCreatureSearchRank.Name = "labelCreatureSearchRank";
-            this.labelCreatureSearchRank.Size = new System.Drawing.Size(36, 13);
-            this.labelCreatureSearchRank.TabIndex = 23;
-            this.labelCreatureSearchRank.Text = "Rank:";
-            // 
-            // textBoxCreatureSearchRank
-            // 
-            this.textBoxCreatureSearchRank.Location = new System.Drawing.Point(509, 27);
-            this.textBoxCreatureSearchRank.Name = "textBoxCreatureSearchRank";
-            this.textBoxCreatureSearchRank.Size = new System.Drawing.Size(60, 20);
-            this.textBoxCreatureSearchRank.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumnCLID
             // 
@@ -4242,6 +4226,91 @@
             this.dataGridViewTextBoxColumnSD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnSD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
+            // tabPageCreatureLootTemplate
+            // 
+            this.tabPageCreatureLootTemplate.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCreatureLootTemplate.Controls.Add(this.dataGridViewCreatureLootTemplate);
+            this.tabPageCreatureLootTemplate.Location = new System.Drawing.Point(4, 22);
+            this.tabPageCreatureLootTemplate.Name = "tabPageCreatureLootTemplate";
+            this.tabPageCreatureLootTemplate.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageCreatureLootTemplate.Size = new System.Drawing.Size(892, 504);
+            this.tabPageCreatureLootTemplate.TabIndex = 3;
+            this.tabPageCreatureLootTemplate.Text = "Loot Template";
+            // 
+            // dataGridViewCreatureLootTemplate
+            // 
+            this.dataGridViewCreatureLootTemplate.AllowUserToAddRows = false;
+            this.dataGridViewCreatureLootTemplate.AllowUserToDeleteRows = false;
+            this.dataGridViewCreatureLootTemplate.AllowUserToResizeColumns = false;
+            this.dataGridViewCreatureLootTemplate.AllowUserToResizeRows = false;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridViewCreatureLootTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewCreatureLootTemplate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCreatureLootTemplate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewCreatureLootTemplate.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCreatureLootTemplate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewCreatureLootTemplate.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewCreatureLootTemplate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
+            this.dataGridViewCreatureLootTemplate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCreatureLootTemplate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumnLTE,
+            this.dataGridViewTextBoxColumnLTI,
+            this.dataGridViewTextBoxColumnLTR,
+            this.dataGridViewTextBoxColumnLTCHANCE,
+            this.dataGridViewTextBoxColumnLTQR,
+            this.dataGridViewTextBoxColumnLTLM,
+            this.dataGridViewTextBoxColumnLTGID,
+            this.dataGridViewTextBoxColumnLTMINC,
+            this.dataGridViewTextBoxColumnLTMAXC,
+            this.dataGridViewTextBoxColumnLTCOM});
+            this.dataGridViewCreatureLootTemplate.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewCreatureLootTemplate.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewCreatureLootTemplate.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewCreatureLootTemplate.MultiSelect = false;
+            this.dataGridViewCreatureLootTemplate.Name = "dataGridViewCreatureLootTemplate";
+            this.dataGridViewCreatureLootTemplate.ReadOnly = true;
+            this.dataGridViewCreatureLootTemplate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.dataGridViewCreatureLootTemplate.RowHeadersVisible = false;
+            this.dataGridViewCreatureLootTemplate.RowHeadersWidth = 99;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.Height = 15;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.ReadOnly = true;
+            this.dataGridViewCreatureLootTemplate.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCreatureLootTemplate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewCreatureLootTemplate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCreatureLootTemplate.ShowEditingIcon = false;
+            this.dataGridViewCreatureLootTemplate.Size = new System.Drawing.Size(889, 410);
+            this.dataGridViewCreatureLootTemplate.TabIndex = 17;
+            // 
             // dataGridViewTextBoxColumnLTE
             // 
             this.dataGridViewTextBoxColumnLTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -4343,84 +4412,695 @@
             this.dataGridViewTextBoxColumnLTCOM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnLTCOM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // dataGridViewTextBoxColumnCSE
+            // tabPageQuest
             // 
-            this.dataGridViewTextBoxColumnCSE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnCSE.DataPropertyName = "entry";
-            this.dataGridViewTextBoxColumnCSE.Frozen = true;
-            this.dataGridViewTextBoxColumnCSE.HeaderText = "entry";
-            this.dataGridViewTextBoxColumnCSE.Name = "dataGridViewTextBoxColumnCSE";
-            this.dataGridViewTextBoxColumnCSE.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.tabPageQuest.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageQuest.Controls.Add(this.tabControlQuest);
+            this.tabPageQuest.Location = new System.Drawing.Point(4, 22);
+            this.tabPageQuest.Name = "tabPageQuest";
+            this.tabPageQuest.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageQuest.Size = new System.Drawing.Size(906, 536);
+            this.tabPageQuest.TabIndex = 5;
+            this.tabPageQuest.Text = "Quest";
             // 
-            // dataGridViewTextBoxColumnCSN
+            // tabControlQuest
             // 
-            this.dataGridViewTextBoxColumnCSN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnCSN.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumnCSN.Frozen = true;
-            this.dataGridViewTextBoxColumnCSN.HeaderText = "name";
-            this.dataGridViewTextBoxColumnCSN.Name = "dataGridViewTextBoxColumnCSN";
-            this.dataGridViewTextBoxColumnCSN.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSN.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnCSN.Width = 200;
+            this.tabControlQuest.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlQuest.Controls.Add(this.tabPageQuestSearch);
+            this.tabControlQuest.Location = new System.Drawing.Point(3, 3);
+            this.tabControlQuest.Name = "tabControlQuest";
+            this.tabControlQuest.SelectedIndex = 0;
+            this.tabControlQuest.Size = new System.Drawing.Size(900, 530);
+            this.tabControlQuest.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumnCSS
+            // tabPageQuestSearch
             // 
-            this.dataGridViewTextBoxColumnCSS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnCSS.DataPropertyName = "subname";
-            this.dataGridViewTextBoxColumnCSS.Frozen = true;
-            this.dataGridViewTextBoxColumnCSS.HeaderText = "subname";
-            this.dataGridViewTextBoxColumnCSS.Name = "dataGridViewTextBoxColumnCSS";
-            this.dataGridViewTextBoxColumnCSS.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSS.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSS.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnCSS.Width = 200;
+            this.tabPageQuestSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchType);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchType);
+            this.tabPageQuestSearch.Controls.Add(this.buttonQuestSearch);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchNQID);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchNQID);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchPQID);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchPQID);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchTaker);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchTaker);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchGiver);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchGiver);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchTitle);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchTitle);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchID);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchID);
+            this.tabPageQuestSearch.Controls.Add(this.dataGridViewQuestSearch);
+            this.tabPageQuestSearch.Controls.Add(this.statusStripQuestSearch);
+            this.tabPageQuestSearch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageQuestSearch.Name = "tabPageQuestSearch";
+            this.tabPageQuestSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageQuestSearch.Size = new System.Drawing.Size(892, 504);
+            this.tabPageQuestSearch.TabIndex = 0;
+            this.tabPageQuestSearch.Text = "Search";
             // 
-            // dataGridViewTextBoxColumnCSMIL
+            // dataGridViewQuestSearch
             // 
-            this.dataGridViewTextBoxColumnCSMIL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnCSMIL.DataPropertyName = "minlevel";
-            this.dataGridViewTextBoxColumnCSMIL.Frozen = true;
-            this.dataGridViewTextBoxColumnCSMIL.HeaderText = "minlevel";
-            this.dataGridViewTextBoxColumnCSMIL.Name = "dataGridViewTextBoxColumnCSMIL";
-            this.dataGridViewTextBoxColumnCSMIL.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSMIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSMIL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewQuestSearch.AllowUserToAddRows = false;
+            this.dataGridViewQuestSearch.AllowUserToDeleteRows = false;
+            this.dataGridViewQuestSearch.AllowUserToResizeColumns = false;
+            this.dataGridViewQuestSearch.AllowUserToResizeRows = false;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridViewQuestSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewQuestSearch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewQuestSearch.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewQuestSearch.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewQuestSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewQuestSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewQuestSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            this.dataGridViewQuestSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewQuestSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
+            this.dataGridViewQuestSearch.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewQuestSearch.Location = new System.Drawing.Point(1, 101);
+            this.dataGridViewQuestSearch.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewQuestSearch.MultiSelect = false;
+            this.dataGridViewQuestSearch.Name = "dataGridViewQuestSearch";
+            this.dataGridViewQuestSearch.ReadOnly = true;
+            this.dataGridViewQuestSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dataGridViewQuestSearch.RowHeadersVisible = false;
+            this.dataGridViewQuestSearch.RowHeadersWidth = 99;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowTemplate.Height = 15;
+            this.dataGridViewQuestSearch.RowTemplate.ReadOnly = true;
+            this.dataGridViewQuestSearch.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewQuestSearch.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewQuestSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewQuestSearch.ShowEditingIcon = false;
+            this.dataGridViewQuestSearch.Size = new System.Drawing.Size(889, 378);
+            this.dataGridViewQuestSearch.TabIndex = 16;
             // 
-            // dataGridViewTextBoxColumnCSMAL
+            // statusStripQuestSearch
             // 
-            this.dataGridViewTextBoxColumnCSMAL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnCSMAL.DataPropertyName = "maxlevel";
-            this.dataGridViewTextBoxColumnCSMAL.Frozen = true;
-            this.dataGridViewTextBoxColumnCSMAL.HeaderText = "maxlevel";
-            this.dataGridViewTextBoxColumnCSMAL.Name = "dataGridViewTextBoxColumnCSMAL";
-            this.dataGridViewTextBoxColumnCSMAL.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSMAL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSMAL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.statusStripQuestSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelQuestSearchRow});
+            this.statusStripQuestSearch.Location = new System.Drawing.Point(3, 479);
+            this.statusStripQuestSearch.Name = "statusStripQuestSearch";
+            this.statusStripQuestSearch.Size = new System.Drawing.Size(886, 22);
+            this.statusStripQuestSearch.SizingGrip = false;
+            this.statusStripQuestSearch.TabIndex = 15;
+            this.statusStripQuestSearch.Text = "CharacterSearch";
             // 
-            // dataGridViewTextBoxColumnCSR
+            // toolStripStatusLabelQuestSearchRow
             // 
-            this.dataGridViewTextBoxColumnCSR.DataPropertyName = "rank";
-            this.dataGridViewTextBoxColumnCSR.HeaderText = "rank";
-            this.dataGridViewTextBoxColumnCSR.Name = "dataGridViewTextBoxColumnCSR";
-            this.dataGridViewTextBoxColumnCSR.ReadOnly = true;
-            this.dataGridViewTextBoxColumnCSR.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.toolStripStatusLabelQuestSearchRow.Name = "toolStripStatusLabelQuestSearchRow";
+            this.toolStripStatusLabelQuestSearchRow.Size = new System.Drawing.Size(92, 17);
+            this.toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: ";
             // 
-            // dataGridViewTextBoxColumnCSLID
+            // tabPageGameObject
             // 
-            this.dataGridViewTextBoxColumnCSLID.DataPropertyName = "lootId";
-            this.dataGridViewTextBoxColumnCSLID.HeaderText = "lootid";
-            this.dataGridViewTextBoxColumnCSLID.Name = "dataGridViewTextBoxColumnCSLID";
-            this.dataGridViewTextBoxColumnCSLID.ReadOnly = true;
+            this.tabPageGameObject.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageGameObject.Controls.Add(this.tabControlGameObject);
+            this.tabPageGameObject.Location = new System.Drawing.Point(4, 22);
+            this.tabPageGameObject.Name = "tabPageGameObject";
+            this.tabPageGameObject.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageGameObject.Size = new System.Drawing.Size(906, 536);
+            this.tabPageGameObject.TabIndex = 3;
+            this.tabPageGameObject.Text = "Game Object";
+            // 
+            // tabControlGameObject
+            // 
+            this.tabControlGameObject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlGameObject.Controls.Add(this.tabPageGameObjectSearch);
+            this.tabControlGameObject.Location = new System.Drawing.Point(3, 3);
+            this.tabControlGameObject.Name = "tabControlGameObject";
+            this.tabControlGameObject.SelectedIndex = 0;
+            this.tabControlGameObject.Size = new System.Drawing.Size(900, 435);
+            this.tabControlGameObject.TabIndex = 0;
+            // 
+            // tabPageGameObjectSearch
+            // 
+            this.tabPageGameObjectSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageGameObjectSearch.Controls.Add(this.dataGridView1);
+            this.tabPageGameObjectSearch.Controls.Add(this.statusStripGameObjectSearch);
+            this.tabPageGameObjectSearch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageGameObjectSearch.Name = "tabPageGameObjectSearch";
+            this.tabPageGameObjectSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageGameObjectSearch.Size = new System.Drawing.Size(892, 409);
+            this.tabPageGameObjectSearch.TabIndex = 0;
+            this.tabPageGameObjectSearch.Text = "Search";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 57);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 99;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView1.RowTemplate.Height = 15;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowEditingIcon = false;
+            this.dataGridView1.Size = new System.Drawing.Size(889, 327);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "entry";
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "subname";
+            this.dataGridViewTextBoxColumn3.Frozen = true;
+            this.dataGridViewTextBoxColumn3.HeaderText = "subname";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "minlevel";
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            this.dataGridViewTextBoxColumn4.HeaderText = "minlevel";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "maxlevel";
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            this.dataGridViewTextBoxColumn5.HeaderText = "maxlevel";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "rank";
+            this.dataGridViewTextBoxColumn6.HeaderText = "rank";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "lootId";
+            this.dataGridViewTextBoxColumn7.HeaderText = "lootid";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // statusStripGameObjectSearch
+            // 
+            this.statusStripGameObjectSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelGameObjectSearchRow});
+            this.statusStripGameObjectSearch.Location = new System.Drawing.Point(3, 384);
+            this.statusStripGameObjectSearch.Name = "statusStripGameObjectSearch";
+            this.statusStripGameObjectSearch.Size = new System.Drawing.Size(886, 22);
+            this.statusStripGameObjectSearch.SizingGrip = false;
+            this.statusStripGameObjectSearch.TabIndex = 15;
+            this.statusStripGameObjectSearch.Text = "CharacterSearch";
+            // 
+            // toolStripStatusLabelGameObjectSearchRow
+            // 
+            this.toolStripStatusLabelGameObjectSearchRow.Name = "toolStripStatusLabelGameObjectSearchRow";
+            this.toolStripStatusLabelGameObjectSearchRow.Size = new System.Drawing.Size(106, 17);
+            this.toolStripStatusLabelGameObjectSearchRow.Text = "Creature(s) found: ";
+            // 
+            // tabPageItem
+            // 
+            this.tabPageItem.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItem.Controls.Add(this.tabControlItem);
+            this.tabPageItem.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItem.Name = "tabPageItem";
+            this.tabPageItem.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItem.Size = new System.Drawing.Size(906, 536);
+            this.tabPageItem.TabIndex = 4;
+            this.tabPageItem.Text = "Item";
+            // 
+            // tabControlItem
+            // 
+            this.tabControlItem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlItem.Controls.Add(this.tabPageItemSearch);
+            this.tabControlItem.Location = new System.Drawing.Point(3, 3);
+            this.tabControlItem.Name = "tabControlItem";
+            this.tabControlItem.SelectedIndex = 0;
+            this.tabControlItem.Size = new System.Drawing.Size(900, 435);
+            this.tabControlItem.TabIndex = 2;
+            // 
+            // tabPageItemSearch
+            // 
+            this.tabPageItemSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemSearch.Controls.Add(this.dataGridView3);
+            this.tabPageItemSearch.Controls.Add(this.statusStripItemSearch);
+            this.tabPageItemSearch.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemSearch.Name = "tabPageItemSearch";
+            this.tabPageItemSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemSearch.Size = new System.Drawing.Size(892, 409);
+            this.tabPageItemSearch.TabIndex = 0;
+            this.tabPageItemSearch.Text = "Search";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AllowUserToAddRows = false;
+            this.dataGridView3.AllowUserToDeleteRows = false;
+            this.dataGridView3.AllowUserToResizeColumns = false;
+            this.dataGridView3.AllowUserToResizeRows = false;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridView3.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView3.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView3.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21});
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridView3.Location = new System.Drawing.Point(1, 57);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridView3.MultiSelect = false;
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
+            this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.dataGridView3.RowHeadersVisible = false;
+            this.dataGridView3.RowHeadersWidth = 99;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            this.dataGridView3.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridView3.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView3.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridView3.RowTemplate.Height = 15;
+            this.dataGridView3.RowTemplate.ReadOnly = true;
+            this.dataGridView3.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView3.ShowEditingIcon = false;
+            this.dataGridView3.Size = new System.Drawing.Size(889, 327);
+            this.dataGridView3.TabIndex = 16;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "entry";
+            this.dataGridViewTextBoxColumn15.Frozen = true;
+            this.dataGridViewTextBoxColumn15.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn16.Frozen = true;
+            this.dataGridViewTextBoxColumn16.HeaderText = "name";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "subname";
+            this.dataGridViewTextBoxColumn17.Frozen = true;
+            this.dataGridViewTextBoxColumn17.HeaderText = "subname";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn17.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "minlevel";
+            this.dataGridViewTextBoxColumn18.Frozen = true;
+            this.dataGridViewTextBoxColumn18.HeaderText = "minlevel";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "maxlevel";
+            this.dataGridViewTextBoxColumn19.Frozen = true;
+            this.dataGridViewTextBoxColumn19.HeaderText = "maxlevel";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "rank";
+            this.dataGridViewTextBoxColumn20.HeaderText = "rank";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "lootId";
+            this.dataGridViewTextBoxColumn21.HeaderText = "lootid";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            // 
+            // statusStripItemSearch
+            // 
+            this.statusStripItemSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelItemSearchRow});
+            this.statusStripItemSearch.Location = new System.Drawing.Point(3, 384);
+            this.statusStripItemSearch.Name = "statusStripItemSearch";
+            this.statusStripItemSearch.Size = new System.Drawing.Size(886, 22);
+            this.statusStripItemSearch.SizingGrip = false;
+            this.statusStripItemSearch.TabIndex = 15;
+            this.statusStripItemSearch.Text = "CharacterSearch";
+            // 
+            // toolStripStatusLabelItemSearchRow
+            // 
+            this.toolStripStatusLabelItemSearchRow.Name = "toolStripStatusLabelItemSearchRow";
+            this.toolStripStatusLabelItemSearchRow.Size = new System.Drawing.Size(106, 17);
+            this.toolStripStatusLabelItemSearchRow.Text = "Creature(s) found: ";
+            // 
+            // labelQuestSearchID
+            // 
+            this.labelQuestSearchID.AutoSize = true;
+            this.labelQuestSearchID.Location = new System.Drawing.Point(10, 10);
+            this.labelQuestSearchID.Name = "labelQuestSearchID";
+            this.labelQuestSearchID.Size = new System.Drawing.Size(49, 13);
+            this.labelQuestSearchID.TabIndex = 17;
+            this.labelQuestSearchID.Text = "QuestID:";
+            // 
+            // textBoxQuestSearchID
+            // 
+            this.textBoxQuestSearchID.Location = new System.Drawing.Point(13, 26);
+            this.textBoxQuestSearchID.Name = "textBoxQuestSearchID";
+            this.textBoxQuestSearchID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQuestSearchID.TabIndex = 18;
+            // 
+            // textBoxQuestSearchTitle
+            // 
+            this.textBoxQuestSearchTitle.Location = new System.Drawing.Point(119, 26);
+            this.textBoxQuestSearchTitle.Name = "textBoxQuestSearchTitle";
+            this.textBoxQuestSearchTitle.Size = new System.Drawing.Size(378, 20);
+            this.textBoxQuestSearchTitle.TabIndex = 20;
+            // 
+            // labelQuestSearchTitle
+            // 
+            this.labelQuestSearchTitle.AutoSize = true;
+            this.labelQuestSearchTitle.Location = new System.Drawing.Point(116, 10);
+            this.labelQuestSearchTitle.Name = "labelQuestSearchTitle";
+            this.labelQuestSearchTitle.Size = new System.Drawing.Size(30, 13);
+            this.labelQuestSearchTitle.TabIndex = 19;
+            this.labelQuestSearchTitle.Text = "Title:";
+            // 
+            // textBoxQuestSearchGiver
+            // 
+            this.textBoxQuestSearchGiver.Location = new System.Drawing.Point(13, 65);
+            this.textBoxQuestSearchGiver.Name = "textBoxQuestSearchGiver";
+            this.textBoxQuestSearchGiver.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQuestSearchGiver.TabIndex = 22;
+            // 
+            // labelQuestSearchGiver
+            // 
+            this.labelQuestSearchGiver.AutoSize = true;
+            this.labelQuestSearchGiver.Location = new System.Drawing.Point(10, 49);
+            this.labelQuestSearchGiver.Name = "labelQuestSearchGiver";
+            this.labelQuestSearchGiver.Size = new System.Drawing.Size(66, 13);
+            this.labelQuestSearchGiver.TabIndex = 21;
+            this.labelQuestSearchGiver.Text = "Quest Giver:";
+            // 
+            // textBoxQuestSearchTaker
+            // 
+            this.textBoxQuestSearchTaker.Location = new System.Drawing.Point(119, 65);
+            this.textBoxQuestSearchTaker.Name = "textBoxQuestSearchTaker";
+            this.textBoxQuestSearchTaker.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQuestSearchTaker.TabIndex = 24;
+            // 
+            // labelQuestSearchTaker
+            // 
+            this.labelQuestSearchTaker.AutoSize = true;
+            this.labelQuestSearchTaker.Location = new System.Drawing.Point(116, 49);
+            this.labelQuestSearchTaker.Name = "labelQuestSearchTaker";
+            this.labelQuestSearchTaker.Size = new System.Drawing.Size(69, 13);
+            this.labelQuestSearchTaker.TabIndex = 23;
+            this.labelQuestSearchTaker.Text = "Quest Taker:";
+            // 
+            // textBoxQuestSearchPQID
+            // 
+            this.textBoxQuestSearchPQID.Location = new System.Drawing.Point(225, 65);
+            this.textBoxQuestSearchPQID.Name = "textBoxQuestSearchPQID";
+            this.textBoxQuestSearchPQID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQuestSearchPQID.TabIndex = 26;
+            // 
+            // labelQuestSearchPQID
+            // 
+            this.labelQuestSearchPQID.AutoSize = true;
+            this.labelQuestSearchPQID.Location = new System.Drawing.Point(222, 49);
+            this.labelQuestSearchPQID.Name = "labelQuestSearchPQID";
+            this.labelQuestSearchPQID.Size = new System.Drawing.Size(73, 13);
+            this.labelQuestSearchPQID.TabIndex = 25;
+            this.labelQuestSearchPQID.Text = "Previous QID:";
+            // 
+            // textBoxQuestSearchNQID
+            // 
+            this.textBoxQuestSearchNQID.Location = new System.Drawing.Point(331, 65);
+            this.textBoxQuestSearchNQID.Name = "textBoxQuestSearchNQID";
+            this.textBoxQuestSearchNQID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxQuestSearchNQID.TabIndex = 28;
+            // 
+            // labelQuestSearchNQID
+            // 
+            this.labelQuestSearchNQID.AutoSize = true;
+            this.labelQuestSearchNQID.Location = new System.Drawing.Point(328, 49);
+            this.labelQuestSearchNQID.Name = "labelQuestSearchNQID";
+            this.labelQuestSearchNQID.Size = new System.Drawing.Size(54, 13);
+            this.labelQuestSearchNQID.TabIndex = 27;
+            this.labelQuestSearchNQID.Text = "Next QID:";
+            // 
+            // buttonQuestSearch
+            // 
+            this.buttonQuestSearch.Location = new System.Drawing.Point(806, 6);
+            this.buttonQuestSearch.Name = "buttonQuestSearch";
+            this.buttonQuestSearch.Size = new System.Drawing.Size(80, 25);
+            this.buttonQuestSearch.TabIndex = 29;
+            this.buttonQuestSearch.Text = "Search";
+            this.buttonQuestSearch.UseVisualStyleBackColor = true;
+            this.buttonQuestSearch.Click += new System.EventHandler(this.buttonQuestSearch_Click);
+            // 
+            // textBoxQuestSearchType
+            // 
+            this.textBoxQuestSearchType.Location = new System.Drawing.Point(437, 65);
+            this.textBoxQuestSearchType.Name = "textBoxQuestSearchType";
+            this.textBoxQuestSearchType.Size = new System.Drawing.Size(60, 20);
+            this.textBoxQuestSearchType.TabIndex = 31;
+            // 
+            // labelQuestSearchType
+            // 
+            this.labelQuestSearchType.AutoSize = true;
+            this.labelQuestSearchType.Location = new System.Drawing.Point(434, 49);
+            this.labelQuestSearchType.Name = "labelQuestSearchType";
+            this.labelQuestSearchType.Size = new System.Drawing.Size(34, 13);
+            this.labelQuestSearchType.TabIndex = 30;
+            this.labelQuestSearchType.Text = "Type:";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn8.Frozen = true;
+            this.dataGridViewTextBoxColumn8.HeaderText = "id";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn8.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "LogTitle";
+            this.dataGridViewTextBoxColumn9.Frozen = true;
+            this.dataGridViewTextBoxColumn9.HeaderText = "title";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn9.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LogDescription";
+            this.dataGridViewTextBoxColumn10.Frozen = true;
+            this.dataGridViewTextBoxColumn10.HeaderText = "description";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn10.Width = 639;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(911, 468);
+            this.ClientSize = new System.Drawing.Size(911, 587);
             this.Controls.Add(this.tabControlCategory);
             this.Controls.Add(this.menuStripMainWindow);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -4502,6 +5182,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLocation)).EndInit();
             this.tabPageCreatureLootTemplate.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLootTemplate)).EndInit();
+            this.tabPageQuest.ResumeLayout(false);
+            this.tabControlQuest.ResumeLayout(false);
+            this.tabPageQuestSearch.ResumeLayout(false);
+            this.tabPageQuestSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestSearch)).EndInit();
+            this.statusStripQuestSearch.ResumeLayout(false);
+            this.statusStripQuestSearch.PerformLayout();
+            this.tabPageGameObject.ResumeLayout(false);
+            this.tabControlGameObject.ResumeLayout(false);
+            this.tabPageGameObjectSearch.ResumeLayout(false);
+            this.tabPageGameObjectSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.statusStripGameObjectSearch.ResumeLayout(false);
+            this.statusStripGameObjectSearch.PerformLayout();
+            this.tabPageItem.ResumeLayout(false);
+            this.tabControlItem.ResumeLayout(false);
+            this.tabPageItemSearch.ResumeLayout(false);
+            this.tabPageItemSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.statusStripItemSearch.ResumeLayout(false);
+            this.statusStripItemSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4663,10 +5364,7 @@
         private System.Windows.Forms.TabPage tabPageCreatureTemplate;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPageCreatureLootTemplate;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPageQuest;
         private System.Windows.Forms.Label labelCreatureSearchEntry;
         private System.Windows.Forms.DataGridView dataGridViewCreatureSearch;
         private System.Windows.Forms.StatusStrip statusStripCreatureSearch;
@@ -4841,7 +5539,6 @@
         private System.Windows.Forms.TextBox textBoxCreatureTemplateSpell7;
         private System.Windows.Forms.TextBox textBoxCreatureTemplateSpell3;
         private System.Windows.Forms.DataGridView dataGridViewCreatureLocation;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridViewCreatureLootTemplate;
         private System.Windows.Forms.Label labelCreatureSearchRank;
         private System.Windows.Forms.TextBox textBoxCreatureSearchRank;
@@ -4873,5 +5570,52 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSMAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSR;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSLID;
+        private System.Windows.Forms.TabControl tabControlGameObject;
+        private System.Windows.Forms.TabPage tabPageGameObjectSearch;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.StatusStrip statusStripGameObjectSearch;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelGameObjectSearchRow;
+        private System.Windows.Forms.TabControl tabControlQuest;
+        private System.Windows.Forms.TabPage tabPageQuestSearch;
+        private System.Windows.Forms.DataGridView dataGridViewQuestSearch;
+        private System.Windows.Forms.StatusStrip statusStripQuestSearch;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelQuestSearchRow;
+        private System.Windows.Forms.TabControl tabControlItem;
+        private System.Windows.Forms.TabPage tabPageItemSearch;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.StatusStrip statusStripItemSearch;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelItemSearchRow;
+        private System.Windows.Forms.Button buttonQuestSearch;
+        private System.Windows.Forms.TextBox textBoxQuestSearchNQID;
+        private System.Windows.Forms.Label labelQuestSearchNQID;
+        private System.Windows.Forms.TextBox textBoxQuestSearchPQID;
+        private System.Windows.Forms.Label labelQuestSearchPQID;
+        private System.Windows.Forms.TextBox textBoxQuestSearchTaker;
+        private System.Windows.Forms.Label labelQuestSearchTaker;
+        private System.Windows.Forms.TextBox textBoxQuestSearchGiver;
+        private System.Windows.Forms.Label labelQuestSearchGiver;
+        private System.Windows.Forms.TextBox textBoxQuestSearchTitle;
+        private System.Windows.Forms.Label labelQuestSearchTitle;
+        private System.Windows.Forms.TextBox textBoxQuestSearchID;
+        private System.Windows.Forms.Label labelQuestSearchID;
+        private System.Windows.Forms.TextBox textBoxQuestSearchType;
+        private System.Windows.Forms.Label labelQuestSearchType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

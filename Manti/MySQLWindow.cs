@@ -19,6 +19,8 @@ namespace Tricore
             InitializeComponent();
         }
 
+        public static bool Offline = false;
+
         public static string Andress;
         public static UInt16 Port;
         public static string Username;
@@ -94,16 +96,26 @@ namespace Tricore
             return isConnected;
         }
 
-        private void buttonTestConnect_Click(object sender, EventArgs e)
+        private void buttonClear_Click(object sender, EventArgs e)
         {
             textBoxAddress.Clear();
             textBoxUsername.Clear();
-            textBoxPassword.Clear() ;
+            textBoxPassword.Clear();
             textBoxPort.Clear();
 
             textBoxAuth.Clear();
             textBoxCharacters.Clear();
             textBoxWorld.Clear();
+        }
+
+        private void buttonOffline_Click(object sender, EventArgs e)
+        {
+            Offline = true;
+
+            this.Hide();
+            MainWindow mf = new MainWindow();
+            mf.FormClosed += (s, args) => this.Close();
+            mf.Show();
         }
     }
 }

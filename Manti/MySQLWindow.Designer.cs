@@ -46,7 +46,8 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
-            this.buttonTestConnect = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonOffline = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -219,28 +220,39 @@
             // 
             this.buttonConnect.Location = new System.Drawing.Point(18, 172);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(250, 23);
+            this.buttonConnect.Size = new System.Drawing.Size(158, 25);
             this.buttonConnect.TabIndex = 6;
             this.buttonConnect.Text = "Connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
-            // buttonTestConnect
+            // buttonClear
             // 
-            this.buttonTestConnect.Location = new System.Drawing.Point(274, 172);
-            this.buttonTestConnect.Name = "buttonTestConnect";
-            this.buttonTestConnect.Size = new System.Drawing.Size(250, 23);
-            this.buttonTestConnect.TabIndex = 7;
-            this.buttonTestConnect.Text = "Clear";
-            this.buttonTestConnect.UseVisualStyleBackColor = true;
-            this.buttonTestConnect.Click += new System.EventHandler(this.buttonTestConnect_Click);
+            this.buttonClear.Location = new System.Drawing.Point(366, 172);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(158, 25);
+            this.buttonClear.TabIndex = 7;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonOffline
+            // 
+            this.buttonOffline.Location = new System.Drawing.Point(192, 172);
+            this.buttonOffline.Name = "buttonOffline";
+            this.buttonOffline.Size = new System.Drawing.Size(158, 25);
+            this.buttonOffline.TabIndex = 8;
+            this.buttonOffline.Text = "Offline";
+            this.buttonOffline.UseVisualStyleBackColor = true;
+            this.buttonOffline.Click += new System.EventHandler(this.buttonOffline_Click);
             // 
             // MySQLWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 202);
-            this.Controls.Add(this.buttonTestConnect);
+            this.Controls.Add(this.buttonOffline);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -273,13 +285,14 @@
         private System.Windows.Forms.Label labelAuth;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonConnect;
-        private System.Windows.Forms.Button buttonTestConnect;
+        private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxWorld;
         private System.Windows.Forms.TextBox textBoxCharacters;
         private System.Windows.Forms.TextBox textBoxAuth;
         private System.Windows.Forms.TextBox textBoxPort;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
+        private System.Windows.Forms.Button buttonOffline;
     }
 }
 
