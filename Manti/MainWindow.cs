@@ -689,39 +689,34 @@ namespace Tricore
 
         #endregion
         #region Quest
-        private void buttonQuestSearch_Click(object sender, EventArgs e)
+        private void buttonQuestSearch_Click(object sender, EventArgs e) // DET HELE SKAL SKRIVES OM!
         {
-            bool totalSearch = CheckTextboxEmpty(tabPageQuestSearch); DialogResult dr; string finalquery = "";
+            bool totalSearch = CheckTextboxEmpty(tabPageQuestSearch); DialogResult dr;
 
             string query = "SELECT ID, LogTitle, LogDescription FROM quest_template WHERE '1' = '1'";
-            string qsQuery = "SELECT quest FROM creature_queststarter WHERE '1' = '1'"; // queststart query
-            string qeQuery = "SELECT quest FROM creature_questender WHERE '1' = '1'"; // questender query
+            string qsQuery = " AND ID IN (SELECT quest FROM creature_queststarter WHERE id = '"+ textBoxQuestSearchGiver.Text +"')"; // queststart query
+            string qeQuery = " AND ID IN (SELECT quest FROM creature_questender WHERE id = '"+ textBoxQuestSearchTaker.Text + "')"; // questender query
 
             if (totalSearch)
             {
                 dr = MessageBox.Show("You sure, you want to load them all?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                finalquery = query;
             } else
             {
-                query += DatabaseQueryFilter(textBoxQuestSearchID.Text, "ID");
-                query += DatabaseQueryFilter(textBoxQuestSearchTitle.Text, "logTitle");
-                query += DatabaseQueryFilter(textBoxQuestSearchType.Text, "QuestType");
-                qsQuery += DatabaseQueryFilter(textBoxQuestSearchGiver.Text, "id");
-                qeQuery += DatabaseQueryFilter(textBoxQuestSearchTaker.Text, "id");
-
-                query += ";"; qsQuery += ";"; qeQuery += ";";
-
                 if (textBoxQuestSearchID.Text != "" || textBoxQuestSearchTitle.Text != "" || textBoxQuestSearchType.Text != "")
                 {
-                    finalquery += query;
+                    query += DatabaseQueryFilter(textBoxQuestSearchID.Text, "ID");
+                    query += DatabaseQueryFilter(textBoxQuestSearchTitle.Text, "logTitle");
+                    query += DatabaseQueryFilter(textBoxQuestSearchType.Text, "QuestType");
                 }
+
                 if (textBoxQuestSearchGiver.Text != "")
                 {
-                    finalquery += qsQuery;
+                    query += qsQuery;
                 }
+
                 if (textBoxQuestSearchTaker.Text != "")
                 {
-                    finalquery += qeQuery;
+                    query += qeQuery;
                 }
 
                 dr = DialogResult.OK;
@@ -736,58 +731,8 @@ namespace Tricore
             
             if (ConnectionOpen(connect))
             {
-
                 // Combined DataSet with all the tables.
-                DataSet combinedTable = DatabaseSearch(connect, finalquery);
-
-                if (!totalSearch)
-                {
-                    DataTable QuestID = new DataTable(); string newQuery = "SELECT ID, LogTitle, LogDescription FROM quest_template WHERE '1' = '1' AND ID IN (";
-
-                    QuestID.Columns.Add("quest", typeof(UInt32));
-
-                    if (combinedTable.Tables.Count == 1)
-                    {
-                        foreach (DataRow Drow in combinedTable.Tables[0].Rows)
-                        {
-                            QuestID.Rows.Add(Drow[0]);
-                        }
-                    }
-
-                    if (combinedTable.Tables.Count == 2)
-                    {
-                        foreach (DataRow Drow in combinedTable.Tables[1].Rows)
-                        {
-                            QuestID.Rows.Add(Drow[0]);
-                        }
-                    }
-
-                    if (combinedTable.Tables.Count == 3)
-                    {
-                        foreach (DataRow drow in combinedTable.Tables[2].Rows)
-                        {
-                            QuestID.Rows.Add(drow[0]);
-                        }
-                    }
-
-                    int i = 0;
-
-                    foreach (DataRow drow in QuestID.Rows)
-                    {
-                        if (i == QuestID.Rows.Count - 1)
-                        {
-                            newQuery += drow[0];
-                        }
-                        else
-                        {
-                            newQuery += drow[0] + ", ";
-                        }
-
-                        i++;
-                    }
-
-                    combinedTable = DatabaseSearch(connect, newQuery + ");");
-                }
+                DataSet combinedTable = DatabaseSearch(connect, query);
 
                 dataGridViewQuestSearch.DataSource = combinedTable.Tables[0];
                 toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
