@@ -8,14 +8,3 @@ C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\
 C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Manti.csproj.GenerateResource.Cache
 C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Manti.exe
 C:\Users\Dennis\documents\visual studio 2015\Projects\Tricore\Tricore\obj\Debug\Manti.pdb
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\bin\Debug\Manti.exe.config
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\bin\Debug\Manti.exe
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\bin\Debug\Manti.pdb
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\bin\Debug\MySql.Data.dll
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Manti.csprojResolveAssemblyReference.cache
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Tricore.MainWindow.resources
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Tricore.MySQLWindow.resources
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Manti.Properties.Resources.resources
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Manti.csproj.GenerateResource.Cache
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Manti.exe
-C:\Users\Dennis\Documents\Visual Studio 2015\Projects\Manti\Manti\obj\Debug\Manti.pdb

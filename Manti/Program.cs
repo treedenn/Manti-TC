@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tricore
+namespace Manti
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Tricore
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MySQLWindow());
+            Application.Run(new FormMySQL());
         }
     }
 }

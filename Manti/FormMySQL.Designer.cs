@@ -1,6 +1,6 @@
-﻿namespace Tricore
+﻿namespace Manti
 {
-    partial class MySQLWindow
+    partial class FormMySQL
     {
         /// <summary>
         /// Required designer variable.
@@ -33,24 +33,26 @@
             this.labelUsername = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelPort = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMySQL = new System.Windows.Forms.GroupBox();
+            this.groupBoxMySQLDatabase = new System.Windows.Forms.GroupBox();
             this.textBoxWorld = new System.Windows.Forms.TextBox();
             this.textBoxCharacters = new System.Windows.Forms.TextBox();
             this.textBoxAuth = new System.Windows.Forms.TextBox();
             this.labelWorld = new System.Windows.Forms.Label();
             this.labelCharacters = new System.Windows.Forms.Label();
             this.labelAuth = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxMySQLLogin = new System.Windows.Forms.GroupBox();
             this.textBoxPort = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonOffline = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.checkBoxSaveInformation = new System.Windows.Forms.CheckBox();
+            this.checkBoxSavePassword = new System.Windows.Forms.CheckBox();
+            this.groupBoxMySQL.SuspendLayout();
+            this.groupBoxMySQLDatabase.SuspendLayout();
+            this.groupBoxMySQLLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelAddress
@@ -68,7 +70,6 @@
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(146, 20);
             this.textBoxAddress.TabIndex = 1;
-            this.textBoxAddress.Text = "127.0.0.1";
             // 
             // labelUsername
             // 
@@ -97,31 +98,33 @@
             this.labelPort.TabIndex = 4;
             this.labelPort.Text = "Port:";
             // 
-            // groupBox1
+            // groupBoxMySQL
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(519, 154);
-            this.groupBox1.TabIndex = 5;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MySQL Information";
+            this.groupBoxMySQL.Controls.Add(this.checkBoxSavePassword);
+            this.groupBoxMySQL.Controls.Add(this.checkBoxSaveInformation);
+            this.groupBoxMySQL.Controls.Add(this.groupBoxMySQLDatabase);
+            this.groupBoxMySQL.Controls.Add(this.groupBoxMySQLLogin);
+            this.groupBoxMySQL.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxMySQL.Name = "groupBoxMySQL";
+            this.groupBoxMySQL.Size = new System.Drawing.Size(519, 154);
+            this.groupBoxMySQL.TabIndex = 5;
+            this.groupBoxMySQL.TabStop = false;
+            this.groupBoxMySQL.Text = "MySQL Information";
             // 
-            // groupBox3
+            // groupBoxMySQLDatabase
             // 
-            this.groupBox3.Controls.Add(this.textBoxWorld);
-            this.groupBox3.Controls.Add(this.textBoxCharacters);
-            this.groupBox3.Controls.Add(this.textBoxAuth);
-            this.groupBox3.Controls.Add(this.labelWorld);
-            this.groupBox3.Controls.Add(this.labelCharacters);
-            this.groupBox3.Controls.Add(this.labelAuth);
-            this.groupBox3.Location = new System.Drawing.Point(262, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(250, 129);
-            this.groupBox3.TabIndex = 7;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Databases";
+            this.groupBoxMySQLDatabase.Controls.Add(this.textBoxWorld);
+            this.groupBoxMySQLDatabase.Controls.Add(this.textBoxCharacters);
+            this.groupBoxMySQLDatabase.Controls.Add(this.textBoxAuth);
+            this.groupBoxMySQLDatabase.Controls.Add(this.labelWorld);
+            this.groupBoxMySQLDatabase.Controls.Add(this.labelCharacters);
+            this.groupBoxMySQLDatabase.Controls.Add(this.labelAuth);
+            this.groupBoxMySQLDatabase.Location = new System.Drawing.Point(262, 19);
+            this.groupBoxMySQLDatabase.Name = "groupBoxMySQLDatabase";
+            this.groupBoxMySQLDatabase.Size = new System.Drawing.Size(250, 99);
+            this.groupBoxMySQLDatabase.TabIndex = 7;
+            this.groupBoxMySQLDatabase.TabStop = false;
+            this.groupBoxMySQLDatabase.Text = "Databases";
             // 
             // textBoxWorld
             // 
@@ -129,7 +132,6 @@
             this.textBoxWorld.Name = "textBoxWorld";
             this.textBoxWorld.Size = new System.Drawing.Size(146, 20);
             this.textBoxWorld.TabIndex = 10;
-            this.textBoxWorld.Text = "world";
             // 
             // textBoxCharacters
             // 
@@ -137,7 +139,6 @@
             this.textBoxCharacters.Name = "textBoxCharacters";
             this.textBoxCharacters.Size = new System.Drawing.Size(146, 20);
             this.textBoxCharacters.TabIndex = 9;
-            this.textBoxCharacters.Text = "characters";
             // 
             // textBoxAuth
             // 
@@ -145,7 +146,6 @@
             this.textBoxAuth.Name = "textBoxAuth";
             this.textBoxAuth.Size = new System.Drawing.Size(146, 20);
             this.textBoxAuth.TabIndex = 8;
-            this.textBoxAuth.Text = "auth";
             // 
             // labelWorld
             // 
@@ -174,22 +174,22 @@
             this.labelAuth.TabIndex = 5;
             this.labelAuth.Text = "Auth:";
             // 
-            // groupBox2
+            // groupBoxMySQLLogin
             // 
-            this.groupBox2.Controls.Add(this.textBoxPort);
-            this.groupBox2.Controls.Add(this.textBoxPassword);
-            this.groupBox2.Controls.Add(this.textBoxUsername);
-            this.groupBox2.Controls.Add(this.textBoxAddress);
-            this.groupBox2.Controls.Add(this.labelPort);
-            this.groupBox2.Controls.Add(this.labelAddress);
-            this.groupBox2.Controls.Add(this.labelPassword);
-            this.groupBox2.Controls.Add(this.labelUsername);
-            this.groupBox2.Location = new System.Drawing.Point(6, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(250, 129);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Login Form";
+            this.groupBoxMySQLLogin.Controls.Add(this.textBoxPort);
+            this.groupBoxMySQLLogin.Controls.Add(this.textBoxPassword);
+            this.groupBoxMySQLLogin.Controls.Add(this.textBoxUsername);
+            this.groupBoxMySQLLogin.Controls.Add(this.textBoxAddress);
+            this.groupBoxMySQLLogin.Controls.Add(this.labelPort);
+            this.groupBoxMySQLLogin.Controls.Add(this.labelAddress);
+            this.groupBoxMySQLLogin.Controls.Add(this.labelPassword);
+            this.groupBoxMySQLLogin.Controls.Add(this.labelUsername);
+            this.groupBoxMySQLLogin.Location = new System.Drawing.Point(6, 19);
+            this.groupBoxMySQLLogin.Name = "groupBoxMySQLLogin";
+            this.groupBoxMySQLLogin.Size = new System.Drawing.Size(250, 129);
+            this.groupBoxMySQLLogin.TabIndex = 6;
+            this.groupBoxMySQLLogin.TabStop = false;
+            this.groupBoxMySQLLogin.Text = "Login Form";
             // 
             // textBoxPort
             // 
@@ -197,7 +197,6 @@
             this.textBoxPort.Name = "textBoxPort";
             this.textBoxPort.Size = new System.Drawing.Size(146, 20);
             this.textBoxPort.TabIndex = 7;
-            this.textBoxPort.Text = "3306";
             // 
             // textBoxPassword
             // 
@@ -206,7 +205,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(146, 20);
             this.textBoxPassword.TabIndex = 6;
-            this.textBoxPassword.Text = "password";
             // 
             // textBoxUsername
             // 
@@ -214,10 +212,10 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(146, 20);
             this.textBoxUsername.TabIndex = 5;
-            this.textBoxUsername.Text = "root";
             // 
             // buttonConnect
             // 
+            this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonConnect.Location = new System.Drawing.Point(18, 172);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(158, 25);
@@ -228,6 +226,7 @@
             // 
             // buttonClear
             // 
+            this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonClear.Location = new System.Drawing.Point(366, 172);
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.Size = new System.Drawing.Size(158, 25);
@@ -238,6 +237,7 @@
             // 
             // buttonOffline
             // 
+            this.buttonOffline.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.buttonOffline.Location = new System.Drawing.Point(192, 172);
             this.buttonOffline.Name = "buttonOffline";
             this.buttonOffline.Size = new System.Drawing.Size(158, 25);
@@ -246,7 +246,27 @@
             this.buttonOffline.UseVisualStyleBackColor = true;
             this.buttonOffline.Click += new System.EventHandler(this.buttonOffline_Click);
             // 
-            // MySQLWindow
+            // checkBoxSaveInformation
+            // 
+            this.checkBoxSaveInformation.AutoSize = true;
+            this.checkBoxSaveInformation.Location = new System.Drawing.Point(262, 127);
+            this.checkBoxSaveInformation.Name = "checkBoxSaveInformation";
+            this.checkBoxSaveInformation.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxSaveInformation.TabIndex = 8;
+            this.checkBoxSaveInformation.Text = "Save Information";
+            this.checkBoxSaveInformation.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSavePassword
+            // 
+            this.checkBoxSavePassword.AutoSize = true;
+            this.checkBoxSavePassword.Location = new System.Drawing.Point(412, 127);
+            this.checkBoxSavePassword.Name = "checkBoxSavePassword";
+            this.checkBoxSavePassword.Size = new System.Drawing.Size(100, 17);
+            this.checkBoxSavePassword.TabIndex = 9;
+            this.checkBoxSavePassword.Text = "Save Password";
+            this.checkBoxSavePassword.UseVisualStyleBackColor = true;
+            // 
+            // FormMySQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,19 +274,21 @@
             this.Controls.Add(this.buttonOffline);
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonConnect);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxMySQL);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MySQLWindow";
+            this.Name = "FormMySQL";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tricore - MySQL Connection";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.Load += new System.EventHandler(this.FormMySQL_Load);
+            this.groupBoxMySQL.ResumeLayout(false);
+            this.groupBoxMySQL.PerformLayout();
+            this.groupBoxMySQLDatabase.ResumeLayout(false);
+            this.groupBoxMySQLDatabase.PerformLayout();
+            this.groupBoxMySQLLogin.ResumeLayout(false);
+            this.groupBoxMySQLLogin.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -278,12 +300,12 @@
         private System.Windows.Forms.Label labelUsername;
         private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelPort;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxMySQL;
+        private System.Windows.Forms.GroupBox groupBoxMySQLDatabase;
         private System.Windows.Forms.Label labelWorld;
         private System.Windows.Forms.Label labelCharacters;
         private System.Windows.Forms.Label labelAuth;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxMySQLLogin;
         private System.Windows.Forms.Button buttonConnect;
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxWorld;
@@ -293,6 +315,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUsername;
         private System.Windows.Forms.Button buttonOffline;
+        private System.Windows.Forms.CheckBox checkBoxSavePassword;
+        private System.Windows.Forms.CheckBox checkBoxSaveInformation;
     }
 }
 
