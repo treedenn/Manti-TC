@@ -96,7 +96,7 @@ namespace Manti
         }
 
         #region ToolStrip
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuHelp_Click(object sender, EventArgs e)
         {
             var fa = new FormAbout();
             fa.ShowDialog();
