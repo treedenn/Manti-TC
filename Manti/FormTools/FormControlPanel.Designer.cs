@@ -30,15 +30,16 @@
         {
             this.buttonWorldServer = new System.Windows.Forms.Button();
             this.groupBoxWorldServer = new System.Windows.Forms.GroupBox();
+            this.checkBoxHideWorld = new System.Windows.Forms.CheckBox();
             this.labelWorldStatus = new System.Windows.Forms.Label();
             this.buttonWorldPath = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxHideAuth = new System.Windows.Forms.CheckBox();
             this.labelAuthStatus = new System.Windows.Forms.Label();
             this.buttonAuthPath = new System.Windows.Forms.Button();
             this.buttonAuthServer = new System.Windows.Forms.Button();
             this.textBoxPathServer = new System.Windows.Forms.TextBox();
-            this.checkBoxHideWorld = new System.Windows.Forms.CheckBox();
-            this.checkBoxHideAuth = new System.Windows.Forms.CheckBox();
+            this.buttonPathDialog = new System.Windows.Forms.Button();
             this.groupBoxWorldServer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,16 @@
             this.groupBoxWorldServer.TabIndex = 1;
             this.groupBoxWorldServer.TabStop = false;
             this.groupBoxWorldServer.Text = "World Server";
+            // 
+            // checkBoxHideWorld
+            // 
+            this.checkBoxHideWorld.AutoSize = true;
+            this.checkBoxHideWorld.Location = new System.Drawing.Point(6, 50);
+            this.checkBoxHideWorld.Name = "checkBoxHideWorld";
+            this.checkBoxHideWorld.Size = new System.Drawing.Size(89, 17);
+            this.checkBoxHideWorld.TabIndex = 2;
+            this.checkBoxHideWorld.Text = "Hide Process";
+            this.checkBoxHideWorld.UseVisualStyleBackColor = true;
             // 
             // labelWorldStatus
             // 
@@ -98,6 +109,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auth Server";
             // 
+            // checkBoxHideAuth
+            // 
+            this.checkBoxHideAuth.AutoSize = true;
+            this.checkBoxHideAuth.Location = new System.Drawing.Point(6, 50);
+            this.checkBoxHideAuth.Name = "checkBoxHideAuth";
+            this.checkBoxHideAuth.Size = new System.Drawing.Size(89, 17);
+            this.checkBoxHideAuth.TabIndex = 2;
+            this.checkBoxHideAuth.Text = "Hide Process";
+            this.checkBoxHideAuth.UseVisualStyleBackColor = true;
+            // 
             // labelAuthStatus
             // 
             this.labelAuthStatus.AutoSize = true;
@@ -129,42 +150,35 @@
             // 
             // textBoxPathServer
             // 
+            this.textBoxPathServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxPathServer.Location = new System.Drawing.Point(12, 91);
             this.textBoxPathServer.Name = "textBoxPathServer";
             this.textBoxPathServer.Size = new System.Drawing.Size(546, 20);
             this.textBoxPathServer.TabIndex = 2;
             this.textBoxPathServer.Visible = false;
             // 
-            // checkBoxHideWorld
+            // buttonPathDialog
             // 
-            this.checkBoxHideWorld.AutoSize = true;
-            this.checkBoxHideWorld.Location = new System.Drawing.Point(6, 50);
-            this.checkBoxHideWorld.Name = "checkBoxHideWorld";
-            this.checkBoxHideWorld.Size = new System.Drawing.Size(89, 17);
-            this.checkBoxHideWorld.TabIndex = 2;
-            this.checkBoxHideWorld.Text = "Hide Process";
-            this.checkBoxHideWorld.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxHideAuth
-            // 
-            this.checkBoxHideAuth.AutoSize = true;
-            this.checkBoxHideAuth.Location = new System.Drawing.Point(6, 50);
-            this.checkBoxHideAuth.Name = "checkBoxHideAuth";
-            this.checkBoxHideAuth.Size = new System.Drawing.Size(89, 17);
-            this.checkBoxHideAuth.TabIndex = 2;
-            this.checkBoxHideAuth.Text = "Hide Process";
-            this.checkBoxHideAuth.UseVisualStyleBackColor = true;
+            this.buttonPathDialog.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonPathDialog.Location = new System.Drawing.Point(539, 92);
+            this.buttonPathDialog.Name = "buttonPathDialog";
+            this.buttonPathDialog.Size = new System.Drawing.Size(18, 18);
+            this.buttonPathDialog.TabIndex = 36;
+            this.buttonPathDialog.UseVisualStyleBackColor = false;
+            this.buttonPathDialog.Visible = false;
+            this.buttonPathDialog.Click += new System.EventHandler(this.buttonPathDialog_Click);
             // 
             // FormControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 117);
+            this.Controls.Add(this.buttonPathDialog);
             this.Controls.Add(this.textBoxPathServer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxWorldServer);
             this.Name = "FormControlPanel";
-            this.Text = "Control Panel";
+            this.Text = "Control Panel (ALPHA)";
             this.groupBoxWorldServer.ResumeLayout(false);
             this.groupBoxWorldServer.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -187,5 +201,6 @@
         private System.Windows.Forms.Label labelAuthStatus;
         private System.Windows.Forms.CheckBox checkBoxHideWorld;
         private System.Windows.Forms.CheckBox checkBoxHideAuth;
+        private System.Windows.Forms.Button buttonPathDialog;
     }
 }

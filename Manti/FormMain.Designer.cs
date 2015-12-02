@@ -29,50 +29,63 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlCategory = new System.Windows.Forms.TabControl();
             this.tabPageAccount = new System.Windows.Forms.TabPage();
             this.tabControlCategoryAccount = new System.Windows.Forms.TabControl();
@@ -83,8 +96,7 @@
             this.ColumnAccountSearchEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnAccountSearchExpansion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripAccountSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelAccountSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
-            this.buttonAccountSearchButton = new System.Windows.Forms.Button();
+            this.buttonAccountSearchSearch = new System.Windows.Forms.Button();
             this.textBoxAccountSearchUsername = new System.Windows.Forms.TextBox();
             this.labelAccountSearchName = new System.Windows.Forms.Label();
             this.textBoxAccountSearchID = new System.Windows.Forms.TextBox();
@@ -130,7 +142,7 @@
             this.labelAccountAccountLastIP = new System.Windows.Forms.Label();
             this.tabPageAccountScript = new System.Windows.Forms.TabPage();
             this.statusStripAccountScript = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelAccountScriptResult = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelAffected = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonAccountScriptUpdate = new System.Windows.Forms.Button();
             this.textBoxAccountScript = new System.Windows.Forms.TextBox();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
@@ -144,7 +156,6 @@
             this.ColumnCharacterSearchClass = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCharacterSearchLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripCharacterSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelCharacterSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonCharacterSearchSearch = new System.Windows.Forms.Button();
             this.labelCharacterSearchAccount = new System.Windows.Forms.Label();
             this.textBoxCharacterSearchAccount = new System.Windows.Forms.TextBox();
@@ -252,7 +263,6 @@
             this.dataGridViewTextBoxColumnCSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnCSLID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripCreatureSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelCreatureSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.labelCreatureSearchName = new System.Windows.Forms.Label();
             this.textBoxCreatureSearchName = new System.Windows.Forms.TextBox();
             this.labelCreatureSearchSubname = new System.Windows.Forms.Label();
@@ -417,23 +427,23 @@
             this.dataGridViewTextBoxColumnCLST = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageCreatureLootTemplate = new System.Windows.Forms.TabPage();
-            this.dataGridViewCreatureLootTemplate = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumnLTE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTCHANCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTQR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTLM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTGID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTMINC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTMAXC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumnLTCOM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCreatureLoot = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageQuest = new System.Windows.Forms.TabPage();
             this.tabControlCategoryQuest = new System.Windows.Forms.TabControl();
             this.tabPageQuestSearch = new System.Windows.Forms.TabPage();
             this.textBoxQuestSearchType = new System.Windows.Forms.TextBox();
             this.labelQuestSearchType = new System.Windows.Forms.Label();
-            this.buttonQuestSearch = new System.Windows.Forms.Button();
+            this.buttonQuestSearchSearch = new System.Windows.Forms.Button();
             this.textBoxQuestSearchNQID = new System.Windows.Forms.TextBox();
             this.labelQuestSearchNQID = new System.Windows.Forms.Label();
             this.textBoxQuestSearchPQID = new System.Windows.Forms.TextBox();
@@ -451,7 +461,6 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripQuestSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelQuestSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabPageQuestSection1 = new System.Windows.Forms.TabPage();
             this.groupBoxQuestSectionQuestInformation = new System.Windows.Forms.GroupBox();
             this.labelQuestSectionOther = new System.Windows.Forms.GroupBox();
@@ -653,27 +662,74 @@
             this.dataGridViewTextBoxColumnGOT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnGON = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripGameObjectSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelGameObjectSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tabPageGameObjectTemplate = new System.Windows.Forms.TabPage();
+            this.groupBoxGameObjectTempData18 = new System.Windows.Forms.GroupBox();
+            this.textBoxGameObjectTempD23 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD22 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD21 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD20 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD19 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD18 = new System.Windows.Forms.TextBox();
+            this.groupBoxGameObjectTempData12 = new System.Windows.Forms.GroupBox();
+            this.textBoxGameObjectTempD17 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD16 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD15 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD14 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD13 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD12 = new System.Windows.Forms.TextBox();
+            this.groupBoxGameObjectTempData6 = new System.Windows.Forms.GroupBox();
+            this.textBoxGameObjectTempD11 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD10 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD9 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD8 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD7 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD6 = new System.Windows.Forms.TextBox();
+            this.groupBoxGameObjectTempData0 = new System.Windows.Forms.GroupBox();
+            this.textBoxGameObjectTempD5 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD4 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD3 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD2 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD1 = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempD0 = new System.Windows.Forms.TextBox();
+            this.groupBoxGameObjectTempGeneral = new System.Windows.Forms.GroupBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label85 = new System.Windows.Forms.Label();
+            this.textBoxGameObjectTempType = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempDID = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempName = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempScriptName = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempAIName = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempSize = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempFlags = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempFaction = new System.Windows.Forms.TextBox();
+            this.textBoxGameObjectTempEntry = new System.Windows.Forms.TextBox();
             this.tabPageItem = new System.Windows.Forms.TabPage();
             this.tabControlCategoryItem = new System.Windows.Forms.TabControl();
             this.tabPageItemSearch = new System.Windows.Forms.TabPage();
             this.comboBoxItemSearchQuality = new System.Windows.Forms.ComboBox();
             this.buttonItemSearchToolSubclass = new System.Windows.Forms.Button();
-            this.buttonItemSearchToolClass = new System.Windows.Forms.Button();
+            this.buttonItemSearchClassPopup = new System.Windows.Forms.Button();
             this.textBoxItemSearchILevel = new System.Windows.Forms.TextBox();
-            this.labelItemSearchILevel = new System.Windows.Forms.Label();
             this.textBoxItemSearchReqLevel = new System.Windows.Forms.TextBox();
-            this.labelItemSearchReqLevel = new System.Windows.Forms.Label();
             this.textBoxItemSearchDescription = new System.Windows.Forms.TextBox();
-            this.labelItemSearchDescription = new System.Windows.Forms.Label();
-            this.labelItemSearchQuality = new System.Windows.Forms.Label();
             this.textBoxItemSearchSubclass = new System.Windows.Forms.TextBox();
-            this.labelItemSearchSubclass = new System.Windows.Forms.Label();
             this.textBoxItemSearchClass = new System.Windows.Forms.TextBox();
-            this.labelItemSearchClass = new System.Windows.Forms.Label();
-            this.labelItemSearchName = new System.Windows.Forms.Label();
             this.textBoxItemSearchEntry = new System.Windows.Forms.TextBox();
             this.textBoxItemSearchName = new System.Windows.Forms.TextBox();
+            this.labelItemSearchILevel = new System.Windows.Forms.Label();
+            this.labelItemSearchReqLevel = new System.Windows.Forms.Label();
+            this.labelItemSearchDescription = new System.Windows.Forms.Label();
+            this.labelItemSearchQuality = new System.Windows.Forms.Label();
+            this.labelItemSearchSubclass = new System.Windows.Forms.Label();
+            this.labelItemSearchClass = new System.Windows.Forms.Label();
+            this.labelItemSearchName = new System.Windows.Forms.Label();
             this.labelItemSearchEntry = new System.Windows.Forms.Label();
             this.buttonItemSearchSearch = new System.Windows.Forms.Button();
             this.dataGridViewItemSearch = new System.Windows.Forms.DataGridView();
@@ -686,235 +742,260 @@
             this.dataGridViewTextBoxColumnISR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumnISIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStripItemSearch = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabelItemSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.tabPageItemTemplate = new System.Windows.Forms.TabPage();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.groupBoxItemTemplateSpell = new System.Windows.Forms.GroupBox();
             this.label84 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
             this.label82 = new System.Windows.Forms.Label();
             this.label81 = new System.Windows.Forms.Label();
-            this.textBox133 = new System.Windows.Forms.TextBox();
-            this.textBox132 = new System.Windows.Forms.TextBox();
-            this.textBox128 = new System.Windows.Forms.TextBox();
-            this.textBox127 = new System.Windows.Forms.TextBox();
-            this.textBox123 = new System.Windows.Forms.TextBox();
-            this.textBox131 = new System.Windows.Forms.TextBox();
-            this.textBox122 = new System.Windows.Forms.TextBox();
-            this.textBox126 = new System.Windows.Forms.TextBox();
-            this.textBox114 = new System.Windows.Forms.TextBox();
-            this.textBox130 = new System.Windows.Forms.TextBox();
-            this.textBox121 = new System.Windows.Forms.TextBox();
-            this.textBox125 = new System.Windows.Forms.TextBox();
-            this.textBox115 = new System.Windows.Forms.TextBox();
-            this.textBox129 = new System.Windows.Forms.TextBox();
-            this.textBox120 = new System.Windows.Forms.TextBox();
-            this.textBox124 = new System.Windows.Forms.TextBox();
-            this.textBox116 = new System.Windows.Forms.TextBox();
-            this.textBox119 = new System.Windows.Forms.TextBox();
-            this.textBox117 = new System.Windows.Forms.TextBox();
-            this.textBox118 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategoryCD5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategoryCD4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategory5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategory4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCD5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategoryCD3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCD4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategory3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRate5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategoryCD2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCD3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategory2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRate4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategoryCD1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCD2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCategory1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRate3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCD1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRate2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRate1 = new System.Windows.Forms.TextBox();
             this.label80 = new System.Windows.Forms.Label();
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
-            this.textBox113 = new System.Windows.Forms.TextBox();
-            this.textBox112 = new System.Windows.Forms.TextBox();
-            this.textBox108 = new System.Windows.Forms.TextBox();
-            this.textBox107 = new System.Windows.Forms.TextBox();
-            this.textBox111 = new System.Windows.Forms.TextBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox106 = new System.Windows.Forms.TextBox();
-            this.textBox110 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.textBox109 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCharges5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCharges4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempTrigger5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempTrigger4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCharges3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSpellID5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempTrigger3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCharges2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSpellID4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempTrigger2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempCharges1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSpellID3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempTrigger1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSpellID2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSpellID1 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateOther = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempFlagsC = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
-            this.textBox95 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempMoneyMax = new System.Windows.Forms.TextBox();
             this.label74 = new System.Windows.Forms.Label();
-            this.textBox94 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempMoneyMin = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
-            this.textBox93 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDisenchantID = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
-            this.textBox92 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempFoodType = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
-            this.textBox91 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempHolidayID = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
-            this.textBox90 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempLimitCate = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBox89 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDuration = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.textBox88 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempModifier = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.textBox87 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempMap = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
-            this.textBox86 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempArea = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
-            this.textBox85 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempPageMaterial = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
-            this.textBox84 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempLanguage = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox83 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempPageText = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.textBox82 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempLockID = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
-            this.textBox81 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSuffix = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.textBox80 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempProperty = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
-            this.textBox79 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempMaterial = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
-            this.textBox78 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStartQuest = new System.Windows.Forms.TextBox();
             this.label57 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateDetails = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempItemSet = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
-            this.textBox76 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSheath = new System.Windows.Forms.TextBox();
             this.label55 = new System.Windows.Forms.Label();
-            this.textBox75 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDurability = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.textBox74 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempBlock = new System.Windows.Forms.TextBox();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox73 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempBonding = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
-            this.textBox72 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempRangedMod = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
-            this.textBox71 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempAmmoType = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.textBox70 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDelay = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateSocket = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempGemProper = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.textBox66 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSocketBonus = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempContent3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempColor3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempContent2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempColor2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempContent1 = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox60 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempColor1 = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateResistance = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempResisArcane = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox52 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempResisShadow = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox51 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempResisFrost = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox50 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempResisNature = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempResisFire = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempResisHoly = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateDamage = new System.Windows.Forms.GroupBox();
+            this.buttonItemTempDmgType2Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempDmgType1Popup = new System.Windows.Forms.Button();
+            this.textBoxItemTempDmgMax2 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDmgMin2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDmgType2 = new System.Windows.Forms.TextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.textBox56 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDmgMax1 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDmgMin1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDmgType1 = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateStats = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempStatsScaleValue = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.textBox68 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsScaleDist = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue10 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue8 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue6 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue9 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue7 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType10 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType8 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsValue1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType9 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType7 = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType6 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStatsType1 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateRequirements = new System.Windows.Forms.GroupBox();
+            this.buttonItemTempClassPopup = new System.Windows.Forms.Button();
+            this.buttonItemTempReqRacePopup = new System.Windows.Forms.Button();
+            this.textBoxItemTempReqItemLevel = new System.Windows.Forms.TextBox();
             this.label77 = new System.Windows.Forms.Label();
-            this.textBox97 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqDisenchant = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
-            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqRepRank = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqRepFaction = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqCityRank = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqHonorRank = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqSpell = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqSkillRank = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqSkill = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqLevel = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqRace = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempReqClass = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.groupBoxItemTemplateGeneral = new System.Windows.Forms.GroupBox();
+            this.textBoxItemTempStatsC = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempContainer = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempStack = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempMaxC = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempEFlags = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempFlags = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDescription = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempInventory = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSellP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempBuyP = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempBuyC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempQuality = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempDisplayID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempName = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempSubclass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempClass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxItemTempEntry = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabPageItemLoot = new System.Windows.Forms.TabPage();
+            this.textBoxItemLootMAC = new System.Windows.Forms.TextBox();
+            this.textBoxItemLootMIC = new System.Windows.Forms.TextBox();
+            this.labelItemLootLM = new System.Windows.Forms.Label();
+            this.textBoxItemLootGID = new System.Windows.Forms.TextBox();
+            this.labelItemLootMAC = new System.Windows.Forms.Label();
+            this.textBoxItemLootLM = new System.Windows.Forms.TextBox();
+            this.labelItemLootMIC = new System.Windows.Forms.Label();
+            this.labelItemLootGID = new System.Windows.Forms.Label();
+            this.textBoxItemLootQR = new System.Windows.Forms.TextBox();
+            this.labelItemLootQR = new System.Windows.Forms.Label();
+            this.textBoxItemLootChance = new System.Windows.Forms.TextBox();
+            this.labelItemLootChance = new System.Windows.Forms.Label();
+            this.textBoxItemLootReference = new System.Windows.Forms.TextBox();
+            this.labelItemLootReference = new System.Windows.Forms.Label();
+            this.textBoxItemLootItemID = new System.Windows.Forms.TextBox();
+            this.labelItemLootItemID = new System.Windows.Forms.Label();
+            this.textBoxItemLootEntry = new System.Windows.Forms.TextBox();
+            this.labelItemLootEntry = new System.Windows.Forms.Label();
+            this.buttonItemLootGenerate = new System.Windows.Forms.Button();
+            this.buttonItemLootDelete = new System.Windows.Forms.Button();
+            this.buttonItemLootRefresh = new System.Windows.Forms.Button();
+            this.buttonItemLootAdd = new System.Windows.Forms.Button();
+            this.dataGridViewItemLoot = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -925,19 +1006,72 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.tabPageItemProspecting = new System.Windows.Forms.TabPage();
+            this.dataGridViewItemProspecting = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageItemMilling = new System.Windows.Forms.TabPage();
+            this.dataGridViewItemMilling = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn39 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn40 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn42 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn43 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageItemDisenchant = new System.Windows.Forms.TabPage();
+            this.dataGridViewItemDisenchant = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn44 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn45 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn46 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn47 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn48 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn50 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn51 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn52 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn53 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageItemScript = new System.Windows.Forms.TabPage();
+            this.buttonItemScriptUpdate = new System.Windows.Forms.Button();
+            this.statusStripItemAffected = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBoxItemScriptOutput = new System.Windows.Forms.TextBox();
+            this.toolStripStatusLabelAccountSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelAccountScriptResult = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelCharacterSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelCreatureSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelQuestSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelGameObjectSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelItemSearchRow = new System.Windows.Forms.ToolStripStatusLabel();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlPanelToolStripMenuItemTools = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlPanelToolStripMenuTools = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
             this.tabControlCategoryAccount.SuspendLayout();
             this.tabPageAccountSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).BeginInit();
-            this.statusStripAccountSearch.SuspendLayout();
             this.tabPageAccountAccount.SuspendLayout();
             this.groupBoxAccountAccountBan.SuspendLayout();
             this.groupBoxAccountAccountMute.SuspendLayout();
@@ -949,7 +1083,6 @@
             this.tabControlCategoryCharacter.SuspendLayout();
             this.tabPageCharacterSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterSearch)).BeginInit();
-            this.statusStripCharacterSearch.SuspendLayout();
             this.tabPageCharacterCharacter.SuspendLayout();
             this.groupBoxCharacterCharacterStats.SuspendLayout();
             this.groupBoxCharacterCharacterLocation.SuspendLayout();
@@ -961,7 +1094,6 @@
             this.tabControlCategoryCreature.SuspendLayout();
             this.tabPageCreatureSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureSearch)).BeginInit();
-            this.statusStripCreatureSearch.SuspendLayout();
             this.tabPageCreatureTemplate.SuspendLayout();
             this.groupBoxCreatureTemplateSpells.SuspendLayout();
             this.groupBoxCreatureTemplateResis.SuspendLayout();
@@ -976,12 +1108,11 @@
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLocation)).BeginInit();
             this.tabPageCreatureLootTemplate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLootTemplate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLoot)).BeginInit();
             this.tabPageQuest.SuspendLayout();
             this.tabControlCategoryQuest.SuspendLayout();
             this.tabPageQuestSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestSearch)).BeginInit();
-            this.statusStripQuestSearch.SuspendLayout();
             this.tabPageQuestSection1.SuspendLayout();
             this.groupBoxQuestSectionQuestInformation.SuspendLayout();
             this.labelQuestSectionOther.SuspendLayout();
@@ -1008,24 +1139,36 @@
             this.tabControlCategoryGameObject.SuspendLayout();
             this.tabPageGameObjectSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGameObjectSearch)).BeginInit();
-            this.statusStripGameObjectSearch.SuspendLayout();
+            this.tabPageGameObjectTemplate.SuspendLayout();
+            this.groupBoxGameObjectTempData18.SuspendLayout();
+            this.groupBoxGameObjectTempData12.SuspendLayout();
+            this.groupBoxGameObjectTempData6.SuspendLayout();
+            this.groupBoxGameObjectTempData0.SuspendLayout();
+            this.groupBoxGameObjectTempGeneral.SuspendLayout();
             this.tabPageItem.SuspendLayout();
             this.tabControlCategoryItem.SuspendLayout();
             this.tabPageItemSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemSearch)).BeginInit();
-            this.statusStripItemSearch.SuspendLayout();
             this.tabPageItemTemplate.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBoxItemTemplateSpell.SuspendLayout();
+            this.groupBoxItemTemplateOther.SuspendLayout();
+            this.groupBoxItemTemplateDetails.SuspendLayout();
+            this.groupBoxItemTemplateSocket.SuspendLayout();
+            this.groupBoxItemTemplateResistance.SuspendLayout();
+            this.groupBoxItemTemplateDamage.SuspendLayout();
+            this.groupBoxItemTemplateStats.SuspendLayout();
+            this.groupBoxItemTemplateRequirements.SuspendLayout();
+            this.groupBoxItemTemplateGeneral.SuspendLayout();
+            this.tabPageItemLoot.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemLoot)).BeginInit();
+            this.tabPageItemProspecting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemProspecting)).BeginInit();
+            this.tabPageItemMilling.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemMilling)).BeginInit();
+            this.tabPageItemDisenchant.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemDisenchant)).BeginInit();
+            this.tabPageItemScript.SuspendLayout();
+            this.statusStripItemAffected.SuspendLayout();
             this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1046,6 +1189,7 @@
             this.tabControlCategory.Size = new System.Drawing.Size(977, 591);
             this.tabControlCategory.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControlCategory.TabIndex = 1;
+            this.tabControlCategory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tabControlCategory_KeyDown);
             // 
             // tabPageAccount
             // 
@@ -1077,7 +1221,7 @@
             this.tabPageAccountSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageAccountSearch.Controls.Add(this.dataGridViewAccountSearch);
             this.tabPageAccountSearch.Controls.Add(this.statusStripAccountSearch);
-            this.tabPageAccountSearch.Controls.Add(this.buttonAccountSearchButton);
+            this.tabPageAccountSearch.Controls.Add(this.buttonAccountSearchSearch);
             this.tabPageAccountSearch.Controls.Add(this.textBoxAccountSearchUsername);
             this.tabPageAccountSearch.Controls.Add(this.labelAccountSearchName);
             this.tabPageAccountSearch.Controls.Add(this.textBoxAccountSearchID);
@@ -1096,12 +1240,12 @@
             this.dataGridViewAccountSearch.AllowUserToDeleteRows = false;
             this.dataGridViewAccountSearch.AllowUserToResizeColumns = false;
             this.dataGridViewAccountSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle57;
             this.dataGridViewAccountSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1111,12 +1255,12 @@
             this.dataGridViewAccountSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewAccountSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewAccountSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle58;
             this.dataGridViewAccountSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAccountSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnAccountSearchID,
@@ -1130,20 +1274,20 @@
             this.dataGridViewAccountSearch.Name = "dataGridViewAccountSearch";
             this.dataGridViewAccountSearch.ReadOnly = true;
             this.dataGridViewAccountSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle59;
             this.dataGridViewAccountSearch.RowHeadersVisible = false;
             this.dataGridViewAccountSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle60;
             this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1207,8 +1351,6 @@
             // 
             // statusStripAccountSearch
             // 
-            this.statusStripAccountSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelAccountSearchRow});
             this.statusStripAccountSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripAccountSearch.Name = "statusStripAccountSearch";
             this.statusStripAccountSearch.Size = new System.Drawing.Size(949, 22);
@@ -1216,22 +1358,19 @@
             this.statusStripAccountSearch.TabIndex = 6;
             this.statusStripAccountSearch.Text = "AccountSearch";
             // 
-            // toolStripStatusLabelAccountSearchRow
+            // buttonAccountSearchSearch
             // 
-            this.toolStripStatusLabelAccountSearchRow.Name = "toolStripStatusLabelAccountSearchRow";
-            this.toolStripStatusLabelAccountSearchRow.Size = new System.Drawing.Size(112, 17);
-            this.toolStripStatusLabelAccountSearchRow.Text = "Account(s) found: 0";
-            // 
-            // buttonAccountSearchButton
-            // 
-            this.buttonAccountSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAccountSearchButton.Location = new System.Drawing.Point(869, 6);
-            this.buttonAccountSearchButton.Name = "buttonAccountSearchButton";
-            this.buttonAccountSearchButton.Size = new System.Drawing.Size(80, 25);
-            this.buttonAccountSearchButton.TabIndex = 4;
-            this.buttonAccountSearchButton.Text = "Search";
-            this.buttonAccountSearchButton.UseVisualStyleBackColor = true;
-            this.buttonAccountSearchButton.Click += new System.EventHandler(this.buttonAccountSearchButton_Click);
+            this.buttonAccountSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAccountSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonAccountSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAccountSearchSearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonAccountSearchSearch.Image")));
+            this.buttonAccountSearchSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAccountSearchSearch.Location = new System.Drawing.Point(904, 6);
+            this.buttonAccountSearchSearch.Name = "buttonAccountSearchSearch";
+            this.buttonAccountSearchSearch.Size = new System.Drawing.Size(45, 45);
+            this.buttonAccountSearchSearch.TabIndex = 4;
+            this.buttonAccountSearchSearch.UseVisualStyleBackColor = true;
+            this.buttonAccountSearchSearch.Click += new System.EventHandler(this.buttonAccountSearchSearch_Click);
             // 
             // textBoxAccountSearchUsername
             // 
@@ -1530,33 +1669,33 @@
             this.dataGridViewAccountAccess.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridViewAccountAccess.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewAccountAccess.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle61.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle61.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle61.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle61;
             this.dataGridViewAccountAccess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAccountAccess.GridColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridViewAccountAccess.Location = new System.Drawing.Point(6, 220);
             this.dataGridViewAccountAccess.Name = "dataGridViewAccountAccess";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle62;
             this.dataGridViewAccountAccess.RowHeadersVisible = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle63;
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
             this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -1734,7 +1873,7 @@
             // statusStripAccountScript
             // 
             this.statusStripAccountScript.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelAccountScriptResult});
+            this.toolStripStatusLabelAffected});
             this.statusStripAccountScript.Location = new System.Drawing.Point(3, 508);
             this.statusStripAccountScript.Name = "statusStripAccountScript";
             this.statusStripAccountScript.Size = new System.Drawing.Size(949, 22);
@@ -1742,11 +1881,11 @@
             this.statusStripAccountScript.TabIndex = 2;
             this.statusStripAccountScript.Text = "AccountScript";
             // 
-            // toolStripStatusLabelAccountScriptResult
+            // toolStripStatusLabelAffected
             // 
-            this.toolStripStatusLabelAccountScriptResult.Name = "toolStripStatusLabelAccountScriptResult";
-            this.toolStripStatusLabelAccountScriptResult.Size = new System.Drawing.Size(95, 17);
-            this.toolStripStatusLabelAccountScriptResult.Text = "Row(s) affected: ";
+            this.toolStripStatusLabelAffected.Name = "toolStripStatusLabelAffected";
+            this.toolStripStatusLabelAffected.Size = new System.Drawing.Size(103, 17);
+            this.toolStripStatusLabelAffected.Text = "Row(s) Affected: 0";
             // 
             // buttonAccountScriptUpdate
             // 
@@ -1823,12 +1962,12 @@
             this.dataGridViewCharacterSearch.AllowUserToDeleteRows = false;
             this.dataGridViewCharacterSearch.AllowUserToResizeColumns = false;
             this.dataGridViewCharacterSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle64;
             this.dataGridViewCharacterSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1838,12 +1977,12 @@
             this.dataGridViewCharacterSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewCharacterSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewCharacterSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle65;
             this.dataGridViewCharacterSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCharacterSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCharacterSearchGUID,
@@ -1852,14 +1991,14 @@
             this.ColumnCharacterSearchRace,
             this.ColumnCharacterSearchClass,
             this.ColumnCharacterSearchLevel});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCharacterSearch.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle66.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle66.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle66.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle66.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCharacterSearch.DefaultCellStyle = dataGridViewCellStyle66;
             this.dataGridViewCharacterSearch.GridColor = System.Drawing.SystemColors.HotTrack;
             this.dataGridViewCharacterSearch.Location = new System.Drawing.Point(1, 57);
             this.dataGridViewCharacterSearch.Margin = new System.Windows.Forms.Padding(0);
@@ -1867,20 +2006,20 @@
             this.dataGridViewCharacterSearch.Name = "dataGridViewCharacterSearch";
             this.dataGridViewCharacterSearch.ReadOnly = true;
             this.dataGridViewCharacterSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle67.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle67.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle67.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle67.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle67;
             this.dataGridViewCharacterSearch.RowHeadersVisible = false;
             this.dataGridViewCharacterSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle68.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle68.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle68.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle68;
             this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1966,8 +2105,6 @@
             // 
             // statusStripCharacterSearch
             // 
-            this.statusStripCharacterSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelCharacterSearchRow});
             this.statusStripCharacterSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripCharacterSearch.Name = "statusStripCharacterSearch";
             this.statusStripCharacterSearch.Size = new System.Drawing.Size(949, 22);
@@ -1975,20 +2112,15 @@
             this.statusStripCharacterSearch.TabIndex = 7;
             this.statusStripCharacterSearch.Text = "CharacterSearch";
             // 
-            // toolStripStatusLabelCharacterSearchRow
-            // 
-            this.toolStripStatusLabelCharacterSearchRow.Name = "toolStripStatusLabelCharacterSearchRow";
-            this.toolStripStatusLabelCharacterSearchRow.Size = new System.Drawing.Size(118, 17);
-            this.toolStripStatusLabelCharacterSearchRow.Text = "Character(s) found: 0";
-            // 
             // buttonCharacterSearchSearch
             // 
             this.buttonCharacterSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCharacterSearchSearch.Location = new System.Drawing.Point(869, 6);
+            this.buttonCharacterSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonCharacterSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCharacterSearchSearch.Location = new System.Drawing.Point(904, 6);
             this.buttonCharacterSearchSearch.Name = "buttonCharacterSearchSearch";
-            this.buttonCharacterSearchSearch.Size = new System.Drawing.Size(80, 25);
+            this.buttonCharacterSearchSearch.Size = new System.Drawing.Size(45, 45);
             this.buttonCharacterSearchSearch.TabIndex = 6;
-            this.buttonCharacterSearchSearch.Text = "Search";
             this.buttonCharacterSearchSearch.UseVisualStyleBackColor = true;
             this.buttonCharacterSearchSearch.Click += new System.EventHandler(this.buttonCharacterSearchSearch_Click);
             // 
@@ -2747,12 +2879,12 @@
             this.dataGridViewCharacterInventory.AllowUserToAddRows = false;
             this.dataGridViewCharacterInventory.AllowUserToDeleteRows = false;
             this.dataGridViewCharacterInventory.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle69.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle69.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle69;
             this.dataGridViewCharacterInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -2763,12 +2895,12 @@
             this.dataGridViewCharacterInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewCharacterInventory.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewCharacterInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle70.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle70.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle70.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle70;
             this.dataGridViewCharacterInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCharacterInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCharacterInventoryGUID,
@@ -2783,20 +2915,20 @@
             this.dataGridViewCharacterInventory.Name = "dataGridViewCharacterInventory";
             this.dataGridViewCharacterInventory.ReadOnly = true;
             this.dataGridViewCharacterInventory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle71.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle71.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle71.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle71.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle71;
             this.dataGridViewCharacterInventory.RowHeadersVisible = false;
             this.dataGridViewCharacterInventory.RowHeadersWidth = 99;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle72.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle72.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle72.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle72;
             this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -2869,7 +3001,7 @@
             this.ColumnCharacterInventoryName.ReadOnly = true;
             this.ColumnCharacterInventoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ColumnCharacterInventoryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnCharacterInventoryName.Width = 177;
+            this.ColumnCharacterInventoryName.Width = 1000;
             // 
             // tabPageCreature
             // 
@@ -2973,11 +3105,12 @@
             // buttonCreatureSearchSearch
             // 
             this.buttonCreatureSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCreatureSearchSearch.Location = new System.Drawing.Point(869, 6);
+            this.buttonCreatureSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonCreatureSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCreatureSearchSearch.Location = new System.Drawing.Point(904, 6);
             this.buttonCreatureSearchSearch.Name = "buttonCreatureSearchSearch";
-            this.buttonCreatureSearchSearch.Size = new System.Drawing.Size(80, 25);
+            this.buttonCreatureSearchSearch.Size = new System.Drawing.Size(45, 45);
             this.buttonCreatureSearchSearch.TabIndex = 17;
-            this.buttonCreatureSearchSearch.Text = "Search";
             this.buttonCreatureSearchSearch.UseVisualStyleBackColor = true;
             this.buttonCreatureSearchSearch.Click += new System.EventHandler(this.buttonCreatureSearchSearch_Click);
             // 
@@ -2996,12 +3129,12 @@
             this.dataGridViewCreatureSearch.AllowUserToDeleteRows = false;
             this.dataGridViewCreatureSearch.AllowUserToResizeColumns = false;
             this.dataGridViewCreatureSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle73.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle73.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle73.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle73.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle73;
             this.dataGridViewCreatureSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -3011,12 +3144,12 @@
             this.dataGridViewCreatureSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewCreatureSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewCreatureSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle74;
             this.dataGridViewCreatureSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCreatureSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCSE,
@@ -3033,20 +3166,20 @@
             this.dataGridViewCreatureSearch.Name = "dataGridViewCreatureSearch";
             this.dataGridViewCreatureSearch.ReadOnly = true;
             this.dataGridViewCreatureSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle75.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle75.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle75.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle75.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle75;
             this.dataGridViewCreatureSearch.RowHeadersVisible = false;
             this.dataGridViewCreatureSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureSearch.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle76.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle76.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle76.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureSearch.RowsDefaultCellStyle = dataGridViewCellStyle76;
             this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -3136,20 +3269,12 @@
             // 
             // statusStripCreatureSearch
             // 
-            this.statusStripCreatureSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelCreatureSearchRow});
             this.statusStripCreatureSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripCreatureSearch.Name = "statusStripCreatureSearch";
             this.statusStripCreatureSearch.Size = new System.Drawing.Size(949, 22);
             this.statusStripCreatureSearch.SizingGrip = false;
             this.statusStripCreatureSearch.TabIndex = 14;
             this.statusStripCreatureSearch.Text = "CharacterSearch";
-            // 
-            // toolStripStatusLabelCreatureSearchRow
-            // 
-            this.toolStripStatusLabelCreatureSearchRow.Name = "toolStripStatusLabelCreatureSearchRow";
-            this.toolStripStatusLabelCreatureSearchRow.Size = new System.Drawing.Size(112, 17);
-            this.toolStripStatusLabelCreatureSearchRow.Text = "Creature(s) found: 0";
             // 
             // labelCreatureSearchName
             // 
@@ -4519,12 +4644,12 @@
             this.dataGridViewCreatureLocation.AllowUserToDeleteRows = false;
             this.dataGridViewCreatureLocation.AllowUserToResizeColumns = false;
             this.dataGridViewCreatureLocation.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLocation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle77.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle77.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLocation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle77;
             this.dataGridViewCreatureLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -4534,12 +4659,12 @@
             this.dataGridViewCreatureLocation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewCreatureLocation.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewCreatureLocation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLocation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLocation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle78;
             this.dataGridViewCreatureLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCreatureLocation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCLID,
@@ -4560,20 +4685,20 @@
             this.dataGridViewCreatureLocation.Name = "dataGridViewCreatureLocation";
             this.dataGridViewCreatureLocation.ReadOnly = true;
             this.dataGridViewCreatureLocation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLocation.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle79.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle79.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle79.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLocation.RowHeadersDefaultCellStyle = dataGridViewCellStyle79;
             this.dataGridViewCreatureLocation.RowHeadersVisible = false;
             this.dataGridViewCreatureLocation.RowHeadersWidth = 99;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLocation.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle80.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLocation.RowsDefaultCellStyle = dataGridViewCellStyle80;
             this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -4699,7 +4824,7 @@
             // tabPageCreatureLootTemplate
             // 
             this.tabPageCreatureLootTemplate.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageCreatureLootTemplate.Controls.Add(this.dataGridViewCreatureLootTemplate);
+            this.tabPageCreatureLootTemplate.Controls.Add(this.dataGridViewCreatureLoot);
             this.tabPageCreatureLootTemplate.Location = new System.Drawing.Point(4, 22);
             this.tabPageCreatureLootTemplate.Name = "tabPageCreatureLootTemplate";
             this.tabPageCreatureLootTemplate.Padding = new System.Windows.Forms.Padding(3);
@@ -4707,180 +4832,191 @@
             this.tabPageCreatureLootTemplate.TabIndex = 3;
             this.tabPageCreatureLootTemplate.Text = "Loot";
             // 
-            // dataGridViewCreatureLootTemplate
+            // dataGridViewCreatureLoot
             // 
-            this.dataGridViewCreatureLootTemplate.AllowUserToAddRows = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToDeleteRows = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToResizeColumns = false;
-            this.dataGridViewCreatureLootTemplate.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dataGridViewCreatureLootTemplate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataGridViewCreatureLoot.AllowUserToAddRows = false;
+            this.dataGridViewCreatureLoot.AllowUserToDeleteRows = false;
+            this.dataGridViewCreatureLoot.AllowUserToResizeRows = false;
+            dataGridViewCellStyle81.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle81.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle81;
+            this.dataGridViewCreatureLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewCreatureLootTemplate.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewCreatureLootTemplate.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridViewCreatureLootTemplate.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCreatureLootTemplate.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridViewCreatureLootTemplate.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridViewCreatureLootTemplate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCreatureLootTemplate.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumnLTE,
-            this.dataGridViewTextBoxColumnLTI,
-            this.dataGridViewTextBoxColumnLTR,
-            this.dataGridViewTextBoxColumnLTCHANCE,
-            this.dataGridViewTextBoxColumnLTQR,
-            this.dataGridViewTextBoxColumnLTLM,
-            this.dataGridViewTextBoxColumnLTGID,
-            this.dataGridViewTextBoxColumnLTMINC,
-            this.dataGridViewTextBoxColumnLTMAXC,
-            this.dataGridViewTextBoxColumnLTCOM});
-            this.dataGridViewCreatureLootTemplate.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewCreatureLootTemplate.Location = new System.Drawing.Point(1, 3);
-            this.dataGridViewCreatureLootTemplate.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridViewCreatureLootTemplate.MultiSelect = false;
-            this.dataGridViewCreatureLootTemplate.Name = "dataGridViewCreatureLootTemplate";
-            this.dataGridViewCreatureLootTemplate.ReadOnly = true;
-            this.dataGridViewCreatureLootTemplate.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridViewCreatureLootTemplate.RowHeadersVisible = false;
-            this.dataGridViewCreatureLootTemplate.RowHeadersWidth = 99;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.Height = 15;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.ReadOnly = true;
-            this.dataGridViewCreatureLootTemplate.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCreatureLootTemplate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewCreatureLootTemplate.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewCreatureLootTemplate.ShowEditingIcon = false;
-            this.dataGridViewCreatureLootTemplate.Size = new System.Drawing.Size(952, 439);
-            this.dataGridViewCreatureLootTemplate.TabIndex = 17;
+            this.dataGridViewCreatureLoot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCreatureLoot.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewCreatureLoot.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCreatureLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewCreatureLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewCreatureLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle82;
+            this.dataGridViewCreatureLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCreatureLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23});
+            this.dataGridViewCreatureLoot.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewCreatureLoot.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewCreatureLoot.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewCreatureLoot.MultiSelect = false;
+            this.dataGridViewCreatureLoot.Name = "dataGridViewCreatureLoot";
+            this.dataGridViewCreatureLoot.ReadOnly = true;
+            this.dataGridViewCreatureLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle83.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle83.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle83;
+            this.dataGridViewCreatureLoot.RowHeadersVisible = false;
+            this.dataGridViewCreatureLoot.RowHeadersWidth = 99;
+            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.RowsDefaultCellStyle = dataGridViewCellStyle84;
+            this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewCreatureLoot.RowTemplate.Height = 15;
+            this.dataGridViewCreatureLoot.RowTemplate.ReadOnly = true;
+            this.dataGridViewCreatureLoot.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCreatureLoot.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewCreatureLoot.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewCreatureLoot.ShowEditingIcon = false;
+            this.dataGridViewCreatureLoot.Size = new System.Drawing.Size(952, 439);
+            this.dataGridViewCreatureLoot.TabIndex = 19;
             // 
-            // dataGridViewTextBoxColumnLTE
+            // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumnLTE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnLTE.DataPropertyName = "Entry";
-            this.dataGridViewTextBoxColumnLTE.Frozen = true;
-            this.dataGridViewTextBoxColumnLTE.HeaderText = "entry";
-            this.dataGridViewTextBoxColumnLTE.Name = "dataGridViewTextBoxColumnLTE";
-            this.dataGridViewTextBoxColumnLTE.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnLTE.Width = 75;
+            this.dataGridViewTextBoxColumn14.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Entry";
+            this.dataGridViewTextBoxColumn14.Frozen = true;
+            this.dataGridViewTextBoxColumn14.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn14.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTI
+            // dataGridViewTextBoxColumn15
             // 
-            this.dataGridViewTextBoxColumnLTI.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnLTI.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumnLTI.Frozen = true;
-            this.dataGridViewTextBoxColumnLTI.HeaderText = "item";
-            this.dataGridViewTextBoxColumnLTI.Name = "dataGridViewTextBoxColumnLTI";
-            this.dataGridViewTextBoxColumnLTI.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTI.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnLTI.Width = 75;
+            this.dataGridViewTextBoxColumn15.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Item";
+            this.dataGridViewTextBoxColumn15.Frozen = true;
+            this.dataGridViewTextBoxColumn15.HeaderText = "item";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
+            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn15.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTR
+            // dataGridViewTextBoxColumn16
             // 
-            this.dataGridViewTextBoxColumnLTR.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnLTR.DataPropertyName = "Reference";
-            this.dataGridViewTextBoxColumnLTR.Frozen = true;
-            this.dataGridViewTextBoxColumnLTR.HeaderText = "reference";
-            this.dataGridViewTextBoxColumnLTR.Name = "dataGridViewTextBoxColumnLTR";
-            this.dataGridViewTextBoxColumnLTR.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTR.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnLTR.Width = 50;
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Reference";
+            this.dataGridViewTextBoxColumn16.Frozen = true;
+            this.dataGridViewTextBoxColumn16.HeaderText = "reference";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTCHANCE
+            // dataGridViewTextBoxColumn17
             // 
-            this.dataGridViewTextBoxColumnLTCHANCE.DataPropertyName = "Chance";
-            this.dataGridViewTextBoxColumnLTCHANCE.HeaderText = "chance";
-            this.dataGridViewTextBoxColumnLTCHANCE.Name = "dataGridViewTextBoxColumnLTCHANCE";
-            this.dataGridViewTextBoxColumnLTCHANCE.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTCHANCE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTCHANCE.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "Chance";
+            this.dataGridViewTextBoxColumn17.HeaderText = "chance";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn17.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTQR
+            // dataGridViewTextBoxColumn18
             // 
-            this.dataGridViewTextBoxColumnLTQR.DataPropertyName = "QuestRequired";
-            this.dataGridViewTextBoxColumnLTQR.HeaderText = "questrequired";
-            this.dataGridViewTextBoxColumnLTQR.Name = "dataGridViewTextBoxColumnLTQR";
-            this.dataGridViewTextBoxColumnLTQR.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTQR.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTQR.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "QuestRequired";
+            this.dataGridViewTextBoxColumn18.HeaderText = "questrequired";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn18.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTLM
+            // dataGridViewTextBoxColumn19
             // 
-            this.dataGridViewTextBoxColumnLTLM.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnLTLM.DataPropertyName = "LootMode";
-            this.dataGridViewTextBoxColumnLTLM.HeaderText = "lootmode";
-            this.dataGridViewTextBoxColumnLTLM.Name = "dataGridViewTextBoxColumnLTLM";
-            this.dataGridViewTextBoxColumnLTLM.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTLM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTLM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "LootMode";
+            this.dataGridViewTextBoxColumn19.HeaderText = "lootmode";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn19.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTGID
+            // dataGridViewTextBoxColumn20
             // 
-            this.dataGridViewTextBoxColumnLTGID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.dataGridViewTextBoxColumnLTGID.DataPropertyName = "GroupId";
-            this.dataGridViewTextBoxColumnLTGID.HeaderText = "groupid";
-            this.dataGridViewTextBoxColumnLTGID.Name = "dataGridViewTextBoxColumnLTGID";
-            this.dataGridViewTextBoxColumnLTGID.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTGID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTGID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "GroupId";
+            this.dataGridViewTextBoxColumn20.HeaderText = "groupid";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn20.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTMINC
+            // dataGridViewTextBoxColumn21
             // 
-            this.dataGridViewTextBoxColumnLTMINC.DataPropertyName = "MinCount";
-            this.dataGridViewTextBoxColumnLTMINC.HeaderText = "mincount";
-            this.dataGridViewTextBoxColumnLTMINC.Name = "dataGridViewTextBoxColumnLTMINC";
-            this.dataGridViewTextBoxColumnLTMINC.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTMINC.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTMINC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "MinCount";
+            this.dataGridViewTextBoxColumn21.HeaderText = "mincount";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn21.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTMAXC
+            // dataGridViewTextBoxColumn22
             // 
-            this.dataGridViewTextBoxColumnLTMAXC.DataPropertyName = "MaxCount";
-            this.dataGridViewTextBoxColumnLTMAXC.HeaderText = "maxcount";
-            this.dataGridViewTextBoxColumnLTMAXC.Name = "dataGridViewTextBoxColumnLTMAXC";
-            this.dataGridViewTextBoxColumnLTMAXC.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTMAXC.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTMAXC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "MaxCount";
+            this.dataGridViewTextBoxColumn22.HeaderText = "maxcount";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn22.Width = 75;
             // 
-            // dataGridViewTextBoxColumnLTCOM
+            // dataGridViewTextBoxColumn23
             // 
-            this.dataGridViewTextBoxColumnLTCOM.DataPropertyName = "Comment";
-            this.dataGridViewTextBoxColumnLTCOM.HeaderText = "comment";
-            this.dataGridViewTextBoxColumnLTCOM.Name = "dataGridViewTextBoxColumnLTCOM";
-            this.dataGridViewTextBoxColumnLTCOM.ReadOnly = true;
-            this.dataGridViewTextBoxColumnLTCOM.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnLTCOM.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn23.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn23.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn23.HeaderText = "name";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            this.dataGridViewTextBoxColumn23.ReadOnly = true;
+            this.dataGridViewTextBoxColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn23.Width = 1000;
             // 
             // tabPageQuest
             // 
@@ -4912,7 +5048,7 @@
             this.tabPageQuestSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchType);
             this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchType);
-            this.tabPageQuestSearch.Controls.Add(this.buttonQuestSearch);
+            this.tabPageQuestSearch.Controls.Add(this.buttonQuestSearchSearch);
             this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchNQID);
             this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchNQID);
             this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchPQID);
@@ -4950,16 +5086,17 @@
             this.labelQuestSearchType.TabIndex = 30;
             this.labelQuestSearchType.Text = "Type:";
             // 
-            // buttonQuestSearch
+            // buttonQuestSearchSearch
             // 
-            this.buttonQuestSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonQuestSearch.Location = new System.Drawing.Point(869, 6);
-            this.buttonQuestSearch.Name = "buttonQuestSearch";
-            this.buttonQuestSearch.Size = new System.Drawing.Size(80, 25);
-            this.buttonQuestSearch.TabIndex = 29;
-            this.buttonQuestSearch.Text = "Search";
-            this.buttonQuestSearch.UseVisualStyleBackColor = true;
-            this.buttonQuestSearch.Click += new System.EventHandler(this.buttonQuestSearch_Click);
+            this.buttonQuestSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonQuestSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonQuestSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonQuestSearchSearch.Location = new System.Drawing.Point(904, 6);
+            this.buttonQuestSearchSearch.Name = "buttonQuestSearchSearch";
+            this.buttonQuestSearchSearch.Size = new System.Drawing.Size(45, 45);
+            this.buttonQuestSearchSearch.TabIndex = 29;
+            this.buttonQuestSearchSearch.UseVisualStyleBackColor = true;
+            this.buttonQuestSearchSearch.Click += new System.EventHandler(this.buttonQuestSearchSearch_Click);
             // 
             // textBoxQuestSearchNQID
             // 
@@ -5063,12 +5200,12 @@
             this.dataGridViewQuestSearch.AllowUserToDeleteRows = false;
             this.dataGridViewQuestSearch.AllowUserToResizeColumns = false;
             this.dataGridViewQuestSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewQuestSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle85;
             this.dataGridViewQuestSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -5078,12 +5215,12 @@
             this.dataGridViewQuestSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewQuestSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewQuestSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewQuestSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle86;
             this.dataGridViewQuestSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewQuestSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
@@ -5096,20 +5233,20 @@
             this.dataGridViewQuestSearch.Name = "dataGridViewQuestSearch";
             this.dataGridViewQuestSearch.ReadOnly = true;
             this.dataGridViewQuestSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewQuestSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle87.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle87.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle87.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle87;
             this.dataGridViewQuestSearch.RowHeadersVisible = false;
             this.dataGridViewQuestSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewQuestSearch.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle88.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle88.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle88.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle88.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewQuestSearch.RowsDefaultCellStyle = dataGridViewCellStyle88;
             this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -5162,20 +5299,12 @@
             // 
             // statusStripQuestSearch
             // 
-            this.statusStripQuestSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelQuestSearchRow});
             this.statusStripQuestSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripQuestSearch.Name = "statusStripQuestSearch";
             this.statusStripQuestSearch.Size = new System.Drawing.Size(949, 22);
             this.statusStripQuestSearch.SizingGrip = false;
             this.statusStripQuestSearch.TabIndex = 15;
             this.statusStripQuestSearch.Text = "CharacterSearch";
-            // 
-            // toolStripStatusLabelQuestSearchRow
-            // 
-            this.toolStripStatusLabelQuestSearchRow.Name = "toolStripStatusLabelQuestSearchRow";
-            this.toolStripStatusLabelQuestSearchRow.Size = new System.Drawing.Size(98, 17);
-            this.toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: 0";
             // 
             // tabPageQuestSection1
             // 
@@ -6851,6 +6980,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlCategoryGameObject.Controls.Add(this.tabPageGameObjectSearch);
+            this.tabControlCategoryGameObject.Controls.Add(this.tabPageGameObjectTemplate);
             this.tabControlCategoryGameObject.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryGameObject.Name = "tabControlCategoryGameObject";
             this.tabControlCategoryGameObject.SelectedIndex = 0;
@@ -6879,11 +7009,12 @@
             // buttonGameObjectSearchSearch
             // 
             this.buttonGameObjectSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonGameObjectSearchSearch.Location = new System.Drawing.Point(869, 6);
+            this.buttonGameObjectSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonGameObjectSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonGameObjectSearchSearch.Location = new System.Drawing.Point(904, 6);
             this.buttonGameObjectSearchSearch.Name = "buttonGameObjectSearchSearch";
-            this.buttonGameObjectSearchSearch.Size = new System.Drawing.Size(80, 25);
+            this.buttonGameObjectSearchSearch.Size = new System.Drawing.Size(45, 45);
             this.buttonGameObjectSearchSearch.TabIndex = 23;
-            this.buttonGameObjectSearchSearch.Text = "Search";
             this.buttonGameObjectSearchSearch.UseVisualStyleBackColor = true;
             this.buttonGameObjectSearchSearch.Click += new System.EventHandler(this.buttonGameObjectSearchSearch_Click);
             // 
@@ -6941,12 +7072,12 @@
             this.dataGridViewGameObjectSearch.AllowUserToDeleteRows = false;
             this.dataGridViewGameObjectSearch.AllowUserToResizeColumns = false;
             this.dataGridViewGameObjectSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewGameObjectSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle89.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle89.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle89.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle89.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewGameObjectSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle89;
             this.dataGridViewGameObjectSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -6956,12 +7087,12 @@
             this.dataGridViewGameObjectSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewGameObjectSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewGameObjectSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewGameObjectSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle90.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle90.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle90.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle90.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewGameObjectSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle90;
             this.dataGridViewGameObjectSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGameObjectSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnGOE,
@@ -6974,20 +7105,20 @@
             this.dataGridViewGameObjectSearch.Name = "dataGridViewGameObjectSearch";
             this.dataGridViewGameObjectSearch.ReadOnly = true;
             this.dataGridViewGameObjectSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewGameObjectSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle91.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle91.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle91.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle91.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewGameObjectSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle91;
             this.dataGridViewGameObjectSearch.RowHeadersVisible = false;
             this.dataGridViewGameObjectSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewGameObjectSearch.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle92.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle92.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle92.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle92.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewGameObjectSearch.RowsDefaultCellStyle = dataGridViewCellStyle92;
             this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -7001,6 +7132,7 @@
             this.dataGridViewGameObjectSearch.ShowEditingIcon = false;
             this.dataGridViewGameObjectSearch.Size = new System.Drawing.Size(952, 451);
             this.dataGridViewGameObjectSearch.TabIndex = 16;
+            this.dataGridViewGameObjectSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewGameObjectSearch_CellContentDoubleClick);
             // 
             // dataGridViewTextBoxColumnGOE
             // 
@@ -7033,12 +7165,10 @@
             this.dataGridViewTextBoxColumnGON.ReadOnly = true;
             this.dataGridViewTextBoxColumnGON.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnGON.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnGON.Width = 700;
+            this.dataGridViewTextBoxColumnGON.Width = 1000;
             // 
             // statusStripGameObjectSearch
             // 
-            this.statusStripGameObjectSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelGameObjectSearchRow});
             this.statusStripGameObjectSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripGameObjectSearch.Name = "statusStripGameObjectSearch";
             this.statusStripGameObjectSearch.Size = new System.Drawing.Size(949, 22);
@@ -7046,11 +7176,419 @@
             this.statusStripGameObjectSearch.TabIndex = 15;
             this.statusStripGameObjectSearch.Text = "CharacterSearch";
             // 
-            // toolStripStatusLabelGameObjectSearchRow
+            // tabPageGameObjectTemplate
             // 
-            this.toolStripStatusLabelGameObjectSearchRow.Name = "toolStripStatusLabelGameObjectSearchRow";
-            this.toolStripStatusLabelGameObjectSearchRow.Size = new System.Drawing.Size(136, 17);
-            this.toolStripStatusLabelGameObjectSearchRow.Text = "Game Object(s) found: 0";
+            this.tabPageGameObjectTemplate.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageGameObjectTemplate.Controls.Add(this.groupBoxGameObjectTempData18);
+            this.tabPageGameObjectTemplate.Controls.Add(this.groupBoxGameObjectTempData12);
+            this.tabPageGameObjectTemplate.Controls.Add(this.groupBoxGameObjectTempData6);
+            this.tabPageGameObjectTemplate.Controls.Add(this.groupBoxGameObjectTempData0);
+            this.tabPageGameObjectTemplate.Controls.Add(this.groupBoxGameObjectTempGeneral);
+            this.tabPageGameObjectTemplate.Location = new System.Drawing.Point(4, 22);
+            this.tabPageGameObjectTemplate.Name = "tabPageGameObjectTemplate";
+            this.tabPageGameObjectTemplate.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageGameObjectTemplate.Size = new System.Drawing.Size(955, 533);
+            this.tabPageGameObjectTemplate.TabIndex = 1;
+            this.tabPageGameObjectTemplate.Text = "Template";
+            // 
+            // groupBoxGameObjectTempData18
+            // 
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD23);
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD22);
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD21);
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD20);
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD19);
+            this.groupBoxGameObjectTempData18.Controls.Add(this.textBoxGameObjectTempD18);
+            this.groupBoxGameObjectTempData18.Location = new System.Drawing.Point(327, 112);
+            this.groupBoxGameObjectTempData18.Name = "groupBoxGameObjectTempData18";
+            this.groupBoxGameObjectTempData18.Size = new System.Drawing.Size(99, 179);
+            this.groupBoxGameObjectTempData18.TabIndex = 1;
+            this.groupBoxGameObjectTempData18.TabStop = false;
+            this.groupBoxGameObjectTempData18.Text = "Data 18-23";
+            // 
+            // textBoxGameObjectTempD23
+            // 
+            this.textBoxGameObjectTempD23.Location = new System.Drawing.Point(9, 149);
+            this.textBoxGameObjectTempD23.Name = "textBoxGameObjectTempD23";
+            this.textBoxGameObjectTempD23.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD23.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD22
+            // 
+            this.textBoxGameObjectTempD22.Location = new System.Drawing.Point(9, 123);
+            this.textBoxGameObjectTempD22.Name = "textBoxGameObjectTempD22";
+            this.textBoxGameObjectTempD22.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD22.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD21
+            // 
+            this.textBoxGameObjectTempD21.Location = new System.Drawing.Point(9, 97);
+            this.textBoxGameObjectTempD21.Name = "textBoxGameObjectTempD21";
+            this.textBoxGameObjectTempD21.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD21.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD20
+            // 
+            this.textBoxGameObjectTempD20.Location = new System.Drawing.Point(9, 71);
+            this.textBoxGameObjectTempD20.Name = "textBoxGameObjectTempD20";
+            this.textBoxGameObjectTempD20.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD20.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD19
+            // 
+            this.textBoxGameObjectTempD19.Location = new System.Drawing.Point(9, 45);
+            this.textBoxGameObjectTempD19.Name = "textBoxGameObjectTempD19";
+            this.textBoxGameObjectTempD19.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD19.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD18
+            // 
+            this.textBoxGameObjectTempD18.Location = new System.Drawing.Point(9, 19);
+            this.textBoxGameObjectTempD18.Name = "textBoxGameObjectTempD18";
+            this.textBoxGameObjectTempD18.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD18.TabIndex = 0;
+            // 
+            // groupBoxGameObjectTempData12
+            // 
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD17);
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD16);
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD15);
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD14);
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD13);
+            this.groupBoxGameObjectTempData12.Controls.Add(this.textBoxGameObjectTempD12);
+            this.groupBoxGameObjectTempData12.Location = new System.Drawing.Point(222, 112);
+            this.groupBoxGameObjectTempData12.Name = "groupBoxGameObjectTempData12";
+            this.groupBoxGameObjectTempData12.Size = new System.Drawing.Size(99, 179);
+            this.groupBoxGameObjectTempData12.TabIndex = 1;
+            this.groupBoxGameObjectTempData12.TabStop = false;
+            this.groupBoxGameObjectTempData12.Text = "Data 12-17";
+            // 
+            // textBoxGameObjectTempD17
+            // 
+            this.textBoxGameObjectTempD17.Location = new System.Drawing.Point(9, 149);
+            this.textBoxGameObjectTempD17.Name = "textBoxGameObjectTempD17";
+            this.textBoxGameObjectTempD17.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD17.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD16
+            // 
+            this.textBoxGameObjectTempD16.Location = new System.Drawing.Point(9, 123);
+            this.textBoxGameObjectTempD16.Name = "textBoxGameObjectTempD16";
+            this.textBoxGameObjectTempD16.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD16.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD15
+            // 
+            this.textBoxGameObjectTempD15.Location = new System.Drawing.Point(9, 97);
+            this.textBoxGameObjectTempD15.Name = "textBoxGameObjectTempD15";
+            this.textBoxGameObjectTempD15.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD15.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD14
+            // 
+            this.textBoxGameObjectTempD14.Location = new System.Drawing.Point(9, 71);
+            this.textBoxGameObjectTempD14.Name = "textBoxGameObjectTempD14";
+            this.textBoxGameObjectTempD14.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD14.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD13
+            // 
+            this.textBoxGameObjectTempD13.Location = new System.Drawing.Point(9, 45);
+            this.textBoxGameObjectTempD13.Name = "textBoxGameObjectTempD13";
+            this.textBoxGameObjectTempD13.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD13.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD12
+            // 
+            this.textBoxGameObjectTempD12.Location = new System.Drawing.Point(9, 19);
+            this.textBoxGameObjectTempD12.Name = "textBoxGameObjectTempD12";
+            this.textBoxGameObjectTempD12.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD12.TabIndex = 0;
+            // 
+            // groupBoxGameObjectTempData6
+            // 
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD11);
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD10);
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD9);
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD8);
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD7);
+            this.groupBoxGameObjectTempData6.Controls.Add(this.textBoxGameObjectTempD6);
+            this.groupBoxGameObjectTempData6.Location = new System.Drawing.Point(114, 112);
+            this.groupBoxGameObjectTempData6.Name = "groupBoxGameObjectTempData6";
+            this.groupBoxGameObjectTempData6.Size = new System.Drawing.Size(99, 179);
+            this.groupBoxGameObjectTempData6.TabIndex = 1;
+            this.groupBoxGameObjectTempData6.TabStop = false;
+            this.groupBoxGameObjectTempData6.Text = "Data 6-11";
+            // 
+            // textBoxGameObjectTempD11
+            // 
+            this.textBoxGameObjectTempD11.Location = new System.Drawing.Point(9, 149);
+            this.textBoxGameObjectTempD11.Name = "textBoxGameObjectTempD11";
+            this.textBoxGameObjectTempD11.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD11.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD10
+            // 
+            this.textBoxGameObjectTempD10.Location = new System.Drawing.Point(9, 123);
+            this.textBoxGameObjectTempD10.Name = "textBoxGameObjectTempD10";
+            this.textBoxGameObjectTempD10.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD10.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD9
+            // 
+            this.textBoxGameObjectTempD9.Location = new System.Drawing.Point(9, 97);
+            this.textBoxGameObjectTempD9.Name = "textBoxGameObjectTempD9";
+            this.textBoxGameObjectTempD9.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD9.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD8
+            // 
+            this.textBoxGameObjectTempD8.Location = new System.Drawing.Point(9, 71);
+            this.textBoxGameObjectTempD8.Name = "textBoxGameObjectTempD8";
+            this.textBoxGameObjectTempD8.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD8.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD7
+            // 
+            this.textBoxGameObjectTempD7.Location = new System.Drawing.Point(9, 45);
+            this.textBoxGameObjectTempD7.Name = "textBoxGameObjectTempD7";
+            this.textBoxGameObjectTempD7.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD7.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD6
+            // 
+            this.textBoxGameObjectTempD6.Location = new System.Drawing.Point(9, 19);
+            this.textBoxGameObjectTempD6.Name = "textBoxGameObjectTempD6";
+            this.textBoxGameObjectTempD6.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD6.TabIndex = 0;
+            // 
+            // groupBoxGameObjectTempData0
+            // 
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD5);
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD4);
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD3);
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD2);
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD1);
+            this.groupBoxGameObjectTempData0.Controls.Add(this.textBoxGameObjectTempD0);
+            this.groupBoxGameObjectTempData0.Location = new System.Drawing.Point(6, 112);
+            this.groupBoxGameObjectTempData0.Name = "groupBoxGameObjectTempData0";
+            this.groupBoxGameObjectTempData0.Size = new System.Drawing.Size(99, 179);
+            this.groupBoxGameObjectTempData0.TabIndex = 1;
+            this.groupBoxGameObjectTempData0.TabStop = false;
+            this.groupBoxGameObjectTempData0.Text = "Data 0-5";
+            // 
+            // textBoxGameObjectTempD5
+            // 
+            this.textBoxGameObjectTempD5.Location = new System.Drawing.Point(9, 149);
+            this.textBoxGameObjectTempD5.Name = "textBoxGameObjectTempD5";
+            this.textBoxGameObjectTempD5.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD5.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD4
+            // 
+            this.textBoxGameObjectTempD4.Location = new System.Drawing.Point(9, 123);
+            this.textBoxGameObjectTempD4.Name = "textBoxGameObjectTempD4";
+            this.textBoxGameObjectTempD4.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD4.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD3
+            // 
+            this.textBoxGameObjectTempD3.Location = new System.Drawing.Point(9, 97);
+            this.textBoxGameObjectTempD3.Name = "textBoxGameObjectTempD3";
+            this.textBoxGameObjectTempD3.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD3.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD2
+            // 
+            this.textBoxGameObjectTempD2.Location = new System.Drawing.Point(9, 71);
+            this.textBoxGameObjectTempD2.Name = "textBoxGameObjectTempD2";
+            this.textBoxGameObjectTempD2.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD2.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD1
+            // 
+            this.textBoxGameObjectTempD1.Location = new System.Drawing.Point(9, 45);
+            this.textBoxGameObjectTempD1.Name = "textBoxGameObjectTempD1";
+            this.textBoxGameObjectTempD1.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD1.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempD0
+            // 
+            this.textBoxGameObjectTempD0.Location = new System.Drawing.Point(9, 19);
+            this.textBoxGameObjectTempD0.Name = "textBoxGameObjectTempD0";
+            this.textBoxGameObjectTempD0.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempD0.TabIndex = 0;
+            // 
+            // groupBoxGameObjectTempGeneral
+            // 
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label88);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label87);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label86);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label93);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label92);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label91);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label90);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label89);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.label85);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempType);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempDID);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempName);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempScriptName);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempAIName);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempSize);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempFlags);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempFaction);
+            this.groupBoxGameObjectTempGeneral.Controls.Add(this.textBoxGameObjectTempEntry);
+            this.groupBoxGameObjectTempGeneral.Location = new System.Drawing.Point(6, 6);
+            this.groupBoxGameObjectTempGeneral.Name = "groupBoxGameObjectTempGeneral";
+            this.groupBoxGameObjectTempGeneral.Size = new System.Drawing.Size(420, 100);
+            this.groupBoxGameObjectTempGeneral.TabIndex = 0;
+            this.groupBoxGameObjectTempGeneral.TabStop = false;
+            this.groupBoxGameObjectTempGeneral.Text = "General";
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Location = new System.Drawing.Point(72, 16);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(34, 13);
+            this.label88.TabIndex = 1;
+            this.label88.Text = "Type:";
+            // 
+            // label87
+            // 
+            this.label87.AutoSize = true;
+            this.label87.Location = new System.Drawing.Point(138, 16);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(58, 13);
+            this.label87.TabIndex = 1;
+            this.label87.Text = "Display ID:";
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Location = new System.Drawing.Point(204, 16);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(38, 13);
+            this.label86.TabIndex = 1;
+            this.label86.Text = "Name:";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(326, 55);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(65, 13);
+            this.label93.TabIndex = 1;
+            this.label93.Text = "ScriptName:";
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Location = new System.Drawing.Point(231, 55);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(51, 13);
+            this.label92.TabIndex = 1;
+            this.label92.Text = "AI Name:";
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Location = new System.Drawing.Point(156, 55);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(30, 13);
+            this.label91.TabIndex = 1;
+            this.label91.Text = "Size:";
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Location = new System.Drawing.Point(81, 55);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(35, 13);
+            this.label90.TabIndex = 1;
+            this.label90.Text = "Flags:";
+            // 
+            // label89
+            // 
+            this.label89.AutoSize = true;
+            this.label89.Location = new System.Drawing.Point(6, 55);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(45, 13);
+            this.label89.TabIndex = 1;
+            this.label89.Text = "Faction:";
+            // 
+            // label85
+            // 
+            this.label85.AutoSize = true;
+            this.label85.Location = new System.Drawing.Point(6, 16);
+            this.label85.Name = "label85";
+            this.label85.Size = new System.Drawing.Size(34, 13);
+            this.label85.TabIndex = 1;
+            this.label85.Text = "Entry:";
+            // 
+            // textBoxGameObjectTempType
+            // 
+            this.textBoxGameObjectTempType.Location = new System.Drawing.Point(75, 32);
+            this.textBoxGameObjectTempType.Name = "textBoxGameObjectTempType";
+            this.textBoxGameObjectTempType.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempType.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempDID
+            // 
+            this.textBoxGameObjectTempDID.Location = new System.Drawing.Point(141, 32);
+            this.textBoxGameObjectTempDID.Name = "textBoxGameObjectTempDID";
+            this.textBoxGameObjectTempDID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempDID.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempName
+            // 
+            this.textBoxGameObjectTempName.Location = new System.Drawing.Point(207, 32);
+            this.textBoxGameObjectTempName.Name = "textBoxGameObjectTempName";
+            this.textBoxGameObjectTempName.Size = new System.Drawing.Size(203, 20);
+            this.textBoxGameObjectTempName.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempScriptName
+            // 
+            this.textBoxGameObjectTempScriptName.Location = new System.Drawing.Point(329, 71);
+            this.textBoxGameObjectTempScriptName.Name = "textBoxGameObjectTempScriptName";
+            this.textBoxGameObjectTempScriptName.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempScriptName.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempAIName
+            // 
+            this.textBoxGameObjectTempAIName.Location = new System.Drawing.Point(234, 71);
+            this.textBoxGameObjectTempAIName.Name = "textBoxGameObjectTempAIName";
+            this.textBoxGameObjectTempAIName.Size = new System.Drawing.Size(80, 20);
+            this.textBoxGameObjectTempAIName.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempSize
+            // 
+            this.textBoxGameObjectTempSize.Location = new System.Drawing.Point(159, 71);
+            this.textBoxGameObjectTempSize.Name = "textBoxGameObjectTempSize";
+            this.textBoxGameObjectTempSize.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempSize.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempFlags
+            // 
+            this.textBoxGameObjectTempFlags.Location = new System.Drawing.Point(84, 71);
+            this.textBoxGameObjectTempFlags.Name = "textBoxGameObjectTempFlags";
+            this.textBoxGameObjectTempFlags.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempFlags.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempFaction
+            // 
+            this.textBoxGameObjectTempFaction.Location = new System.Drawing.Point(9, 71);
+            this.textBoxGameObjectTempFaction.Name = "textBoxGameObjectTempFaction";
+            this.textBoxGameObjectTempFaction.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempFaction.TabIndex = 0;
+            // 
+            // textBoxGameObjectTempEntry
+            // 
+            this.textBoxGameObjectTempEntry.Location = new System.Drawing.Point(9, 32);
+            this.textBoxGameObjectTempEntry.Name = "textBoxGameObjectTempEntry";
+            this.textBoxGameObjectTempEntry.Size = new System.Drawing.Size(60, 20);
+            this.textBoxGameObjectTempEntry.TabIndex = 0;
             // 
             // tabPageItem
             // 
@@ -7070,7 +7608,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlCategoryItem.Controls.Add(this.tabPageItemSearch);
             this.tabControlCategoryItem.Controls.Add(this.tabPageItemTemplate);
-            this.tabControlCategoryItem.Controls.Add(this.tabPage2);
+            this.tabControlCategoryItem.Controls.Add(this.tabPageItemLoot);
+            this.tabControlCategoryItem.Controls.Add(this.tabPageItemProspecting);
+            this.tabControlCategoryItem.Controls.Add(this.tabPageItemMilling);
+            this.tabControlCategoryItem.Controls.Add(this.tabPageItemDisenchant);
+            this.tabControlCategoryItem.Controls.Add(this.tabPageItemScript);
             this.tabControlCategoryItem.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryItem.Name = "tabControlCategoryItem";
             this.tabControlCategoryItem.SelectedIndex = 0;
@@ -7082,21 +7624,21 @@
             this.tabPageItemSearch.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageItemSearch.Controls.Add(this.comboBoxItemSearchQuality);
             this.tabPageItemSearch.Controls.Add(this.buttonItemSearchToolSubclass);
-            this.tabPageItemSearch.Controls.Add(this.buttonItemSearchToolClass);
+            this.tabPageItemSearch.Controls.Add(this.buttonItemSearchClassPopup);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchILevel);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchILevel);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchReqLevel);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchReqLevel);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchDescription);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchDescription);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchQuality);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchSubclass);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchSubclass);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchClass);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchClass);
-            this.tabPageItemSearch.Controls.Add(this.labelItemSearchName);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchEntry);
             this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchName);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchILevel);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchReqLevel);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchDescription);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchQuality);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchSubclass);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchClass);
+            this.tabPageItemSearch.Controls.Add(this.labelItemSearchName);
             this.tabPageItemSearch.Controls.Add(this.labelItemSearchEntry);
             this.tabPageItemSearch.Controls.Add(this.buttonItemSearchSearch);
             this.tabPageItemSearch.Controls.Add(this.dataGridViewItemSearch);
@@ -7131,16 +7673,16 @@
             this.buttonItemSearchToolSubclass.Size = new System.Drawing.Size(18, 18);
             this.buttonItemSearchToolSubclass.TabIndex = 34;
             this.buttonItemSearchToolSubclass.UseVisualStyleBackColor = true;
-            this.buttonItemSearchToolSubclass.Click += new System.EventHandler(this.buttonItemSearchToolSubclass_Click);
+            this.buttonItemSearchToolSubclass.Click += new System.EventHandler(this.buttonItemSearchSubclassPopup_Click);
             // 
-            // buttonItemSearchToolClass
+            // buttonItemSearchClassPopup
             // 
-            this.buttonItemSearchToolClass.Location = new System.Drawing.Point(272, 28);
-            this.buttonItemSearchToolClass.Name = "buttonItemSearchToolClass";
-            this.buttonItemSearchToolClass.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemSearchToolClass.TabIndex = 34;
-            this.buttonItemSearchToolClass.UseVisualStyleBackColor = true;
-            this.buttonItemSearchToolClass.Click += new System.EventHandler(this.buttonItemSearchToolClass_Click);
+            this.buttonItemSearchClassPopup.Location = new System.Drawing.Point(272, 28);
+            this.buttonItemSearchClassPopup.Name = "buttonItemSearchClassPopup";
+            this.buttonItemSearchClassPopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemSearchClassPopup.TabIndex = 34;
+            this.buttonItemSearchClassPopup.UseVisualStyleBackColor = true;
+            this.buttonItemSearchClassPopup.Click += new System.EventHandler(this.buttonItemSearchClassPopup_Click);
             // 
             // textBoxItemSearchILevel
             // 
@@ -7148,6 +7690,48 @@
             this.textBoxItemSearchILevel.Name = "textBoxItemSearchILevel";
             this.textBoxItemSearchILevel.Size = new System.Drawing.Size(60, 20);
             this.textBoxItemSearchILevel.TabIndex = 33;
+            // 
+            // textBoxItemSearchReqLevel
+            // 
+            this.textBoxItemSearchReqLevel.Location = new System.Drawing.Point(605, 27);
+            this.textBoxItemSearchReqLevel.Name = "textBoxItemSearchReqLevel";
+            this.textBoxItemSearchReqLevel.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemSearchReqLevel.TabIndex = 31;
+            // 
+            // textBoxItemSearchDescription
+            // 
+            this.textBoxItemSearchDescription.Location = new System.Drawing.Point(459, 27);
+            this.textBoxItemSearchDescription.Name = "textBoxItemSearchDescription";
+            this.textBoxItemSearchDescription.Size = new System.Drawing.Size(140, 20);
+            this.textBoxItemSearchDescription.TabIndex = 29;
+            // 
+            // textBoxItemSearchSubclass
+            // 
+            this.textBoxItemSearchSubclass.Location = new System.Drawing.Point(297, 27);
+            this.textBoxItemSearchSubclass.Name = "textBoxItemSearchSubclass";
+            this.textBoxItemSearchSubclass.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemSearchSubclass.TabIndex = 25;
+            // 
+            // textBoxItemSearchClass
+            // 
+            this.textBoxItemSearchClass.Location = new System.Drawing.Point(231, 27);
+            this.textBoxItemSearchClass.Name = "textBoxItemSearchClass";
+            this.textBoxItemSearchClass.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemSearchClass.TabIndex = 23;
+            // 
+            // textBoxItemSearchEntry
+            // 
+            this.textBoxItemSearchEntry.Location = new System.Drawing.Point(19, 27);
+            this.textBoxItemSearchEntry.Name = "textBoxItemSearchEntry";
+            this.textBoxItemSearchEntry.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemSearchEntry.TabIndex = 20;
+            // 
+            // textBoxItemSearchName
+            // 
+            this.textBoxItemSearchName.Location = new System.Drawing.Point(85, 27);
+            this.textBoxItemSearchName.Name = "textBoxItemSearchName";
+            this.textBoxItemSearchName.Size = new System.Drawing.Size(140, 20);
+            this.textBoxItemSearchName.TabIndex = 19;
             // 
             // labelItemSearchILevel
             // 
@@ -7158,13 +7742,6 @@
             this.labelItemSearchILevel.TabIndex = 32;
             this.labelItemSearchILevel.Text = "Item Level:";
             // 
-            // textBoxItemSearchReqLevel
-            // 
-            this.textBoxItemSearchReqLevel.Location = new System.Drawing.Point(605, 27);
-            this.textBoxItemSearchReqLevel.Name = "textBoxItemSearchReqLevel";
-            this.textBoxItemSearchReqLevel.Size = new System.Drawing.Size(60, 20);
-            this.textBoxItemSearchReqLevel.TabIndex = 31;
-            // 
             // labelItemSearchReqLevel
             // 
             this.labelItemSearchReqLevel.AutoSize = true;
@@ -7173,13 +7750,6 @@
             this.labelItemSearchReqLevel.Size = new System.Drawing.Size(59, 13);
             this.labelItemSearchReqLevel.TabIndex = 30;
             this.labelItemSearchReqLevel.Text = "Req Level:";
-            // 
-            // textBoxItemSearchDescription
-            // 
-            this.textBoxItemSearchDescription.Location = new System.Drawing.Point(459, 27);
-            this.textBoxItemSearchDescription.Name = "textBoxItemSearchDescription";
-            this.textBoxItemSearchDescription.Size = new System.Drawing.Size(140, 20);
-            this.textBoxItemSearchDescription.TabIndex = 29;
             // 
             // labelItemSearchDescription
             // 
@@ -7199,13 +7769,6 @@
             this.labelItemSearchQuality.TabIndex = 26;
             this.labelItemSearchQuality.Text = "Quality:";
             // 
-            // textBoxItemSearchSubclass
-            // 
-            this.textBoxItemSearchSubclass.Location = new System.Drawing.Point(297, 27);
-            this.textBoxItemSearchSubclass.Name = "textBoxItemSearchSubclass";
-            this.textBoxItemSearchSubclass.Size = new System.Drawing.Size(60, 20);
-            this.textBoxItemSearchSubclass.TabIndex = 25;
-            // 
             // labelItemSearchSubclass
             // 
             this.labelItemSearchSubclass.AutoSize = true;
@@ -7214,13 +7777,6 @@
             this.labelItemSearchSubclass.Size = new System.Drawing.Size(53, 13);
             this.labelItemSearchSubclass.TabIndex = 24;
             this.labelItemSearchSubclass.Text = "Subclass:";
-            // 
-            // textBoxItemSearchClass
-            // 
-            this.textBoxItemSearchClass.Location = new System.Drawing.Point(231, 27);
-            this.textBoxItemSearchClass.Name = "textBoxItemSearchClass";
-            this.textBoxItemSearchClass.Size = new System.Drawing.Size(60, 20);
-            this.textBoxItemSearchClass.TabIndex = 23;
             // 
             // labelItemSearchClass
             // 
@@ -7240,20 +7796,6 @@
             this.labelItemSearchName.TabIndex = 21;
             this.labelItemSearchName.Text = "Name:";
             // 
-            // textBoxItemSearchEntry
-            // 
-            this.textBoxItemSearchEntry.Location = new System.Drawing.Point(19, 27);
-            this.textBoxItemSearchEntry.Name = "textBoxItemSearchEntry";
-            this.textBoxItemSearchEntry.Size = new System.Drawing.Size(60, 20);
-            this.textBoxItemSearchEntry.TabIndex = 20;
-            // 
-            // textBoxItemSearchName
-            // 
-            this.textBoxItemSearchName.Location = new System.Drawing.Point(85, 27);
-            this.textBoxItemSearchName.Name = "textBoxItemSearchName";
-            this.textBoxItemSearchName.Size = new System.Drawing.Size(140, 20);
-            this.textBoxItemSearchName.TabIndex = 19;
-            // 
             // labelItemSearchEntry
             // 
             this.labelItemSearchEntry.AutoSize = true;
@@ -7266,11 +7808,12 @@
             // buttonItemSearchSearch
             // 
             this.buttonItemSearchSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonItemSearchSearch.Location = new System.Drawing.Point(869, 6);
+            this.buttonItemSearchSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+            this.buttonItemSearchSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemSearchSearch.Location = new System.Drawing.Point(904, 6);
             this.buttonItemSearchSearch.Name = "buttonItemSearchSearch";
-            this.buttonItemSearchSearch.Size = new System.Drawing.Size(80, 25);
+            this.buttonItemSearchSearch.Size = new System.Drawing.Size(45, 45);
             this.buttonItemSearchSearch.TabIndex = 17;
-            this.buttonItemSearchSearch.Text = "Search";
             this.buttonItemSearchSearch.UseVisualStyleBackColor = true;
             this.buttonItemSearchSearch.Click += new System.EventHandler(this.buttonItemSearchSearch_Click);
             // 
@@ -7280,12 +7823,12 @@
             this.dataGridViewItemSearch.AllowUserToDeleteRows = false;
             this.dataGridViewItemSearch.AllowUserToResizeColumns = false;
             this.dataGridViewItemSearch.AllowUserToResizeRows = false;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewItemSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle93.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle93.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle93.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle93.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle93;
             this.dataGridViewItemSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -7295,12 +7838,12 @@
             this.dataGridViewItemSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewItemSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.dataGridViewItemSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewItemSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle94.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle94.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle94.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle94.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle94;
             this.dataGridViewItemSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewItemSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnISE,
@@ -7318,20 +7861,20 @@
             this.dataGridViewItemSearch.Name = "dataGridViewItemSearch";
             this.dataGridViewItemSearch.ReadOnly = true;
             this.dataGridViewItemSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewItemSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle95.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle95.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle95.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle95.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle95;
             this.dataGridViewItemSearch.RowHeadersVisible = false;
             this.dataGridViewItemSearch.RowHeadersWidth = 99;
-            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridViewItemSearch.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle96.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle96.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle96.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle96.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemSearch.RowsDefaultCellStyle = dataGridViewCellStyle96;
             this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
             this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -7345,6 +7888,7 @@
             this.dataGridViewItemSearch.ShowEditingIcon = false;
             this.dataGridViewItemSearch.Size = new System.Drawing.Size(952, 451);
             this.dataGridViewItemSearch.TabIndex = 16;
+            this.dataGridViewItemSearch.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewItemSearch_CellContentDoubleClick);
             // 
             // dataGridViewTextBoxColumnISE
             // 
@@ -7437,8 +7981,6 @@
             // 
             // statusStripItemSearch
             // 
-            this.statusStripItemSearch.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelItemSearchRow});
             this.statusStripItemSearch.Location = new System.Drawing.Point(3, 508);
             this.statusStripItemSearch.Name = "statusStripItemSearch";
             this.statusStripItemSearch.Size = new System.Drawing.Size(949, 22);
@@ -7446,24 +7988,18 @@
             this.statusStripItemSearch.TabIndex = 15;
             this.statusStripItemSearch.Text = "CharacterSearch";
             // 
-            // toolStripStatusLabelItemSearchRow
-            // 
-            this.toolStripStatusLabelItemSearchRow.Name = "toolStripStatusLabelItemSearchRow";
-            this.toolStripStatusLabelItemSearchRow.Size = new System.Drawing.Size(85, 17);
-            this.toolStripStatusLabelItemSearchRow.Text = "Item(s) found: ";
-            // 
             // tabPageItemTemplate
             // 
             this.tabPageItemTemplate.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageItemTemplate.Controls.Add(this.groupBox10);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox9);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox8);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox6);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox5);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox4);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox3);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox2);
-            this.tabPageItemTemplate.Controls.Add(this.groupBox1);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateSpell);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateOther);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateDetails);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateSocket);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateResistance);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateDamage);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateStats);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateRequirements);
+            this.tabPageItemTemplate.Controls.Add(this.groupBoxItemTemplateGeneral);
             this.tabPageItemTemplate.Location = new System.Drawing.Point(4, 22);
             this.tabPageItemTemplate.Name = "tabPageItemTemplate";
             this.tabPageItemTemplate.Padding = new System.Windows.Forms.Padding(3);
@@ -7471,56 +8007,56 @@
             this.tabPageItemTemplate.TabIndex = 1;
             this.tabPageItemTemplate.Text = "Template";
             // 
-            // groupBox10
+            // groupBoxItemTemplateSpell
             // 
-            this.groupBox10.Controls.Add(this.label84);
-            this.groupBox10.Controls.Add(this.label83);
-            this.groupBox10.Controls.Add(this.label82);
-            this.groupBox10.Controls.Add(this.label81);
-            this.groupBox10.Controls.Add(this.textBox133);
-            this.groupBox10.Controls.Add(this.textBox132);
-            this.groupBox10.Controls.Add(this.textBox128);
-            this.groupBox10.Controls.Add(this.textBox127);
-            this.groupBox10.Controls.Add(this.textBox123);
-            this.groupBox10.Controls.Add(this.textBox131);
-            this.groupBox10.Controls.Add(this.textBox122);
-            this.groupBox10.Controls.Add(this.textBox126);
-            this.groupBox10.Controls.Add(this.textBox114);
-            this.groupBox10.Controls.Add(this.textBox130);
-            this.groupBox10.Controls.Add(this.textBox121);
-            this.groupBox10.Controls.Add(this.textBox125);
-            this.groupBox10.Controls.Add(this.textBox115);
-            this.groupBox10.Controls.Add(this.textBox129);
-            this.groupBox10.Controls.Add(this.textBox120);
-            this.groupBox10.Controls.Add(this.textBox124);
-            this.groupBox10.Controls.Add(this.textBox116);
-            this.groupBox10.Controls.Add(this.textBox119);
-            this.groupBox10.Controls.Add(this.textBox117);
-            this.groupBox10.Controls.Add(this.textBox118);
-            this.groupBox10.Controls.Add(this.label80);
-            this.groupBox10.Controls.Add(this.label78);
-            this.groupBox10.Controls.Add(this.label79);
-            this.groupBox10.Controls.Add(this.textBox113);
-            this.groupBox10.Controls.Add(this.textBox112);
-            this.groupBox10.Controls.Add(this.textBox108);
-            this.groupBox10.Controls.Add(this.textBox107);
-            this.groupBox10.Controls.Add(this.textBox111);
-            this.groupBox10.Controls.Add(this.textBox103);
-            this.groupBox10.Controls.Add(this.textBox106);
-            this.groupBox10.Controls.Add(this.textBox110);
-            this.groupBox10.Controls.Add(this.textBox102);
-            this.groupBox10.Controls.Add(this.textBox105);
-            this.groupBox10.Controls.Add(this.textBox109);
-            this.groupBox10.Controls.Add(this.textBox101);
-            this.groupBox10.Controls.Add(this.textBox104);
-            this.groupBox10.Controls.Add(this.textBox99);
-            this.groupBox10.Controls.Add(this.textBox100);
-            this.groupBox10.Location = new System.Drawing.Point(8, 219);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(493, 163);
-            this.groupBox10.TabIndex = 8;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Spell";
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label84);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label83);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label82);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label81);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategoryCD5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategoryCD4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategory5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategory4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCD5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategoryCD3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCD4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategory3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempRate5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategoryCD2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCD3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategory2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempRate4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategoryCD1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCD2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCategory1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempRate3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCD1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempRate2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempRate1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label80);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label78);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.label79);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCharges5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCharges4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempTrigger5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempTrigger4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCharges3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempSpellID5);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempTrigger3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCharges2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempSpellID4);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempTrigger2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempCharges1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempSpellID3);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempTrigger1);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempSpellID2);
+            this.groupBoxItemTemplateSpell.Controls.Add(this.textBoxItemTempSpellID1);
+            this.groupBoxItemTemplateSpell.Location = new System.Drawing.Point(8, 219);
+            this.groupBoxItemTemplateSpell.Name = "groupBoxItemTemplateSpell";
+            this.groupBoxItemTemplateSpell.Size = new System.Drawing.Size(493, 163);
+            this.groupBoxItemTemplateSpell.TabIndex = 8;
+            this.groupBoxItemTemplateSpell.TabStop = false;
+            this.groupBoxItemTemplateSpell.Text = "Spell";
             // 
             // label84
             // 
@@ -7558,145 +8094,145 @@
             this.label81.TabIndex = 48;
             this.label81.Text = "PPM Rate:";
             // 
-            // textBox133
+            // textBoxItemTempCategoryCD5
             // 
-            this.textBox133.Location = new System.Drawing.Point(403, 136);
-            this.textBox133.Name = "textBox133";
-            this.textBox133.Size = new System.Drawing.Size(60, 20);
-            this.textBox133.TabIndex = 49;
+            this.textBoxItemTempCategoryCD5.Location = new System.Drawing.Point(403, 136);
+            this.textBoxItemTempCategoryCD5.Name = "textBoxItemTempCategoryCD5";
+            this.textBoxItemTempCategoryCD5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategoryCD5.TabIndex = 49;
             // 
-            // textBox132
+            // textBoxItemTempCategoryCD4
             // 
-            this.textBox132.Location = new System.Drawing.Point(403, 110);
-            this.textBox132.Name = "textBox132";
-            this.textBox132.Size = new System.Drawing.Size(60, 20);
-            this.textBox132.TabIndex = 50;
+            this.textBoxItemTempCategoryCD4.Location = new System.Drawing.Point(403, 110);
+            this.textBoxItemTempCategoryCD4.Name = "textBoxItemTempCategoryCD4";
+            this.textBoxItemTempCategoryCD4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategoryCD4.TabIndex = 50;
             // 
-            // textBox128
+            // textBoxItemTempCategory5
             // 
-            this.textBox128.Location = new System.Drawing.Point(337, 136);
-            this.textBox128.Name = "textBox128";
-            this.textBox128.Size = new System.Drawing.Size(60, 20);
-            this.textBox128.TabIndex = 49;
+            this.textBoxItemTempCategory5.Location = new System.Drawing.Point(337, 136);
+            this.textBoxItemTempCategory5.Name = "textBoxItemTempCategory5";
+            this.textBoxItemTempCategory5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategory5.TabIndex = 49;
             // 
-            // textBox127
+            // textBoxItemTempCategory4
             // 
-            this.textBox127.Location = new System.Drawing.Point(337, 110);
-            this.textBox127.Name = "textBox127";
-            this.textBox127.Size = new System.Drawing.Size(60, 20);
-            this.textBox127.TabIndex = 50;
+            this.textBoxItemTempCategory4.Location = new System.Drawing.Point(337, 110);
+            this.textBoxItemTempCategory4.Name = "textBoxItemTempCategory4";
+            this.textBoxItemTempCategory4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategory4.TabIndex = 50;
             // 
-            // textBox123
+            // textBoxItemTempCD5
             // 
-            this.textBox123.Location = new System.Drawing.Point(271, 136);
-            this.textBox123.Name = "textBox123";
-            this.textBox123.Size = new System.Drawing.Size(60, 20);
-            this.textBox123.TabIndex = 49;
+            this.textBoxItemTempCD5.Location = new System.Drawing.Point(271, 136);
+            this.textBoxItemTempCD5.Name = "textBoxItemTempCD5";
+            this.textBoxItemTempCD5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCD5.TabIndex = 49;
             // 
-            // textBox131
+            // textBoxItemTempCategoryCD3
             // 
-            this.textBox131.Location = new System.Drawing.Point(403, 84);
-            this.textBox131.Name = "textBox131";
-            this.textBox131.Size = new System.Drawing.Size(60, 20);
-            this.textBox131.TabIndex = 51;
+            this.textBoxItemTempCategoryCD3.Location = new System.Drawing.Point(403, 84);
+            this.textBoxItemTempCategoryCD3.Name = "textBoxItemTempCategoryCD3";
+            this.textBoxItemTempCategoryCD3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategoryCD3.TabIndex = 51;
             // 
-            // textBox122
+            // textBoxItemTempCD4
             // 
-            this.textBox122.Location = new System.Drawing.Point(271, 110);
-            this.textBox122.Name = "textBox122";
-            this.textBox122.Size = new System.Drawing.Size(60, 20);
-            this.textBox122.TabIndex = 50;
+            this.textBoxItemTempCD4.Location = new System.Drawing.Point(271, 110);
+            this.textBoxItemTempCD4.Name = "textBoxItemTempCD4";
+            this.textBoxItemTempCD4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCD4.TabIndex = 50;
             // 
-            // textBox126
+            // textBoxItemTempCategory3
             // 
-            this.textBox126.Location = new System.Drawing.Point(337, 84);
-            this.textBox126.Name = "textBox126";
-            this.textBox126.Size = new System.Drawing.Size(60, 20);
-            this.textBox126.TabIndex = 51;
+            this.textBoxItemTempCategory3.Location = new System.Drawing.Point(337, 84);
+            this.textBoxItemTempCategory3.Name = "textBoxItemTempCategory3";
+            this.textBoxItemTempCategory3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategory3.TabIndex = 51;
             // 
-            // textBox114
+            // textBoxItemTempRate5
             // 
-            this.textBox114.Location = new System.Drawing.Point(205, 136);
-            this.textBox114.Name = "textBox114";
-            this.textBox114.Size = new System.Drawing.Size(60, 20);
-            this.textBox114.TabIndex = 49;
+            this.textBoxItemTempRate5.Location = new System.Drawing.Point(205, 136);
+            this.textBoxItemTempRate5.Name = "textBoxItemTempRate5";
+            this.textBoxItemTempRate5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRate5.TabIndex = 49;
             // 
-            // textBox130
+            // textBoxItemTempCategoryCD2
             // 
-            this.textBox130.Location = new System.Drawing.Point(403, 58);
-            this.textBox130.Name = "textBox130";
-            this.textBox130.Size = new System.Drawing.Size(60, 20);
-            this.textBox130.TabIndex = 52;
+            this.textBoxItemTempCategoryCD2.Location = new System.Drawing.Point(403, 58);
+            this.textBoxItemTempCategoryCD2.Name = "textBoxItemTempCategoryCD2";
+            this.textBoxItemTempCategoryCD2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategoryCD2.TabIndex = 52;
             // 
-            // textBox121
+            // textBoxItemTempCD3
             // 
-            this.textBox121.Location = new System.Drawing.Point(271, 84);
-            this.textBox121.Name = "textBox121";
-            this.textBox121.Size = new System.Drawing.Size(60, 20);
-            this.textBox121.TabIndex = 51;
+            this.textBoxItemTempCD3.Location = new System.Drawing.Point(271, 84);
+            this.textBoxItemTempCD3.Name = "textBoxItemTempCD3";
+            this.textBoxItemTempCD3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCD3.TabIndex = 51;
             // 
-            // textBox125
+            // textBoxItemTempCategory2
             // 
-            this.textBox125.Location = new System.Drawing.Point(337, 58);
-            this.textBox125.Name = "textBox125";
-            this.textBox125.Size = new System.Drawing.Size(60, 20);
-            this.textBox125.TabIndex = 52;
+            this.textBoxItemTempCategory2.Location = new System.Drawing.Point(337, 58);
+            this.textBoxItemTempCategory2.Name = "textBoxItemTempCategory2";
+            this.textBoxItemTempCategory2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategory2.TabIndex = 52;
             // 
-            // textBox115
+            // textBoxItemTempRate4
             // 
-            this.textBox115.Location = new System.Drawing.Point(205, 110);
-            this.textBox115.Name = "textBox115";
-            this.textBox115.Size = new System.Drawing.Size(60, 20);
-            this.textBox115.TabIndex = 50;
+            this.textBoxItemTempRate4.Location = new System.Drawing.Point(205, 110);
+            this.textBoxItemTempRate4.Name = "textBoxItemTempRate4";
+            this.textBoxItemTempRate4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRate4.TabIndex = 50;
             // 
-            // textBox129
+            // textBoxItemTempCategoryCD1
             // 
-            this.textBox129.Location = new System.Drawing.Point(403, 32);
-            this.textBox129.Name = "textBox129";
-            this.textBox129.Size = new System.Drawing.Size(60, 20);
-            this.textBox129.TabIndex = 53;
+            this.textBoxItemTempCategoryCD1.Location = new System.Drawing.Point(403, 32);
+            this.textBoxItemTempCategoryCD1.Name = "textBoxItemTempCategoryCD1";
+            this.textBoxItemTempCategoryCD1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategoryCD1.TabIndex = 53;
             // 
-            // textBox120
+            // textBoxItemTempCD2
             // 
-            this.textBox120.Location = new System.Drawing.Point(271, 58);
-            this.textBox120.Name = "textBox120";
-            this.textBox120.Size = new System.Drawing.Size(60, 20);
-            this.textBox120.TabIndex = 52;
+            this.textBoxItemTempCD2.Location = new System.Drawing.Point(271, 58);
+            this.textBoxItemTempCD2.Name = "textBoxItemTempCD2";
+            this.textBoxItemTempCD2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCD2.TabIndex = 52;
             // 
-            // textBox124
+            // textBoxItemTempCategory1
             // 
-            this.textBox124.Location = new System.Drawing.Point(337, 32);
-            this.textBox124.Name = "textBox124";
-            this.textBox124.Size = new System.Drawing.Size(60, 20);
-            this.textBox124.TabIndex = 53;
+            this.textBoxItemTempCategory1.Location = new System.Drawing.Point(337, 32);
+            this.textBoxItemTempCategory1.Name = "textBoxItemTempCategory1";
+            this.textBoxItemTempCategory1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCategory1.TabIndex = 53;
             // 
-            // textBox116
+            // textBoxItemTempRate3
             // 
-            this.textBox116.Location = new System.Drawing.Point(205, 84);
-            this.textBox116.Name = "textBox116";
-            this.textBox116.Size = new System.Drawing.Size(60, 20);
-            this.textBox116.TabIndex = 51;
+            this.textBoxItemTempRate3.Location = new System.Drawing.Point(205, 84);
+            this.textBoxItemTempRate3.Name = "textBoxItemTempRate3";
+            this.textBoxItemTempRate3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRate3.TabIndex = 51;
             // 
-            // textBox119
+            // textBoxItemTempCD1
             // 
-            this.textBox119.Location = new System.Drawing.Point(271, 32);
-            this.textBox119.Name = "textBox119";
-            this.textBox119.Size = new System.Drawing.Size(60, 20);
-            this.textBox119.TabIndex = 53;
+            this.textBoxItemTempCD1.Location = new System.Drawing.Point(271, 32);
+            this.textBoxItemTempCD1.Name = "textBoxItemTempCD1";
+            this.textBoxItemTempCD1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCD1.TabIndex = 53;
             // 
-            // textBox117
+            // textBoxItemTempRate2
             // 
-            this.textBox117.Location = new System.Drawing.Point(205, 58);
-            this.textBox117.Name = "textBox117";
-            this.textBox117.Size = new System.Drawing.Size(60, 20);
-            this.textBox117.TabIndex = 52;
+            this.textBoxItemTempRate2.Location = new System.Drawing.Point(205, 58);
+            this.textBoxItemTempRate2.Name = "textBoxItemTempRate2";
+            this.textBoxItemTempRate2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRate2.TabIndex = 52;
             // 
-            // textBox118
+            // textBoxItemTempRate1
             // 
-            this.textBox118.Location = new System.Drawing.Point(205, 32);
-            this.textBox118.Name = "textBox118";
-            this.textBox118.Size = new System.Drawing.Size(60, 20);
-            this.textBox118.TabIndex = 53;
+            this.textBoxItemTempRate1.Location = new System.Drawing.Point(205, 32);
+            this.textBoxItemTempRate1.Name = "textBoxItemTempRate1";
+            this.textBoxItemTempRate1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRate1.TabIndex = 53;
             // 
             // label80
             // 
@@ -7725,164 +8261,164 @@
             this.label79.TabIndex = 46;
             this.label79.Text = "ID:";
             // 
-            // textBox113
+            // textBoxItemTempCharges5
             // 
-            this.textBox113.Location = new System.Drawing.Point(139, 136);
-            this.textBox113.Name = "textBox113";
-            this.textBox113.Size = new System.Drawing.Size(60, 20);
-            this.textBox113.TabIndex = 47;
+            this.textBoxItemTempCharges5.Location = new System.Drawing.Point(139, 136);
+            this.textBoxItemTempCharges5.Name = "textBoxItemTempCharges5";
+            this.textBoxItemTempCharges5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCharges5.TabIndex = 47;
             // 
-            // textBox112
+            // textBoxItemTempCharges4
             // 
-            this.textBox112.Location = new System.Drawing.Point(139, 110);
-            this.textBox112.Name = "textBox112";
-            this.textBox112.Size = new System.Drawing.Size(60, 20);
-            this.textBox112.TabIndex = 47;
+            this.textBoxItemTempCharges4.Location = new System.Drawing.Point(139, 110);
+            this.textBoxItemTempCharges4.Name = "textBoxItemTempCharges4";
+            this.textBoxItemTempCharges4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCharges4.TabIndex = 47;
             // 
-            // textBox108
+            // textBoxItemTempTrigger5
             // 
-            this.textBox108.Location = new System.Drawing.Point(73, 136);
-            this.textBox108.Name = "textBox108";
-            this.textBox108.Size = new System.Drawing.Size(60, 20);
-            this.textBox108.TabIndex = 47;
+            this.textBoxItemTempTrigger5.Location = new System.Drawing.Point(73, 136);
+            this.textBoxItemTempTrigger5.Name = "textBoxItemTempTrigger5";
+            this.textBoxItemTempTrigger5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempTrigger5.TabIndex = 47;
             // 
-            // textBox107
+            // textBoxItemTempTrigger4
             // 
-            this.textBox107.Location = new System.Drawing.Point(73, 110);
-            this.textBox107.Name = "textBox107";
-            this.textBox107.Size = new System.Drawing.Size(60, 20);
-            this.textBox107.TabIndex = 47;
+            this.textBoxItemTempTrigger4.Location = new System.Drawing.Point(73, 110);
+            this.textBoxItemTempTrigger4.Name = "textBoxItemTempTrigger4";
+            this.textBoxItemTempTrigger4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempTrigger4.TabIndex = 47;
             // 
-            // textBox111
+            // textBoxItemTempCharges3
             // 
-            this.textBox111.Location = new System.Drawing.Point(139, 84);
-            this.textBox111.Name = "textBox111";
-            this.textBox111.Size = new System.Drawing.Size(60, 20);
-            this.textBox111.TabIndex = 47;
+            this.textBoxItemTempCharges3.Location = new System.Drawing.Point(139, 84);
+            this.textBoxItemTempCharges3.Name = "textBoxItemTempCharges3";
+            this.textBoxItemTempCharges3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCharges3.TabIndex = 47;
             // 
-            // textBox103
+            // textBoxItemTempSpellID5
             // 
-            this.textBox103.Location = new System.Drawing.Point(7, 136);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(60, 20);
-            this.textBox103.TabIndex = 47;
+            this.textBoxItemTempSpellID5.Location = new System.Drawing.Point(7, 136);
+            this.textBoxItemTempSpellID5.Name = "textBoxItemTempSpellID5";
+            this.textBoxItemTempSpellID5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSpellID5.TabIndex = 47;
             // 
-            // textBox106
+            // textBoxItemTempTrigger3
             // 
-            this.textBox106.Location = new System.Drawing.Point(73, 84);
-            this.textBox106.Name = "textBox106";
-            this.textBox106.Size = new System.Drawing.Size(60, 20);
-            this.textBox106.TabIndex = 47;
+            this.textBoxItemTempTrigger3.Location = new System.Drawing.Point(73, 84);
+            this.textBoxItemTempTrigger3.Name = "textBoxItemTempTrigger3";
+            this.textBoxItemTempTrigger3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempTrigger3.TabIndex = 47;
             // 
-            // textBox110
+            // textBoxItemTempCharges2
             // 
-            this.textBox110.Location = new System.Drawing.Point(139, 58);
-            this.textBox110.Name = "textBox110";
-            this.textBox110.Size = new System.Drawing.Size(60, 20);
-            this.textBox110.TabIndex = 47;
+            this.textBoxItemTempCharges2.Location = new System.Drawing.Point(139, 58);
+            this.textBoxItemTempCharges2.Name = "textBoxItemTempCharges2";
+            this.textBoxItemTempCharges2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCharges2.TabIndex = 47;
             // 
-            // textBox102
+            // textBoxItemTempSpellID4
             // 
-            this.textBox102.Location = new System.Drawing.Point(7, 110);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(60, 20);
-            this.textBox102.TabIndex = 47;
+            this.textBoxItemTempSpellID4.Location = new System.Drawing.Point(7, 110);
+            this.textBoxItemTempSpellID4.Name = "textBoxItemTempSpellID4";
+            this.textBoxItemTempSpellID4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSpellID4.TabIndex = 47;
             // 
-            // textBox105
+            // textBoxItemTempTrigger2
             // 
-            this.textBox105.Location = new System.Drawing.Point(73, 58);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(60, 20);
-            this.textBox105.TabIndex = 47;
+            this.textBoxItemTempTrigger2.Location = new System.Drawing.Point(73, 58);
+            this.textBoxItemTempTrigger2.Name = "textBoxItemTempTrigger2";
+            this.textBoxItemTempTrigger2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempTrigger2.TabIndex = 47;
             // 
-            // textBox109
+            // textBoxItemTempCharges1
             // 
-            this.textBox109.Location = new System.Drawing.Point(139, 32);
-            this.textBox109.Name = "textBox109";
-            this.textBox109.Size = new System.Drawing.Size(60, 20);
-            this.textBox109.TabIndex = 47;
+            this.textBoxItemTempCharges1.Location = new System.Drawing.Point(139, 32);
+            this.textBoxItemTempCharges1.Name = "textBoxItemTempCharges1";
+            this.textBoxItemTempCharges1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempCharges1.TabIndex = 47;
             // 
-            // textBox101
+            // textBoxItemTempSpellID3
             // 
-            this.textBox101.Location = new System.Drawing.Point(7, 84);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(60, 20);
-            this.textBox101.TabIndex = 47;
+            this.textBoxItemTempSpellID3.Location = new System.Drawing.Point(7, 84);
+            this.textBoxItemTempSpellID3.Name = "textBoxItemTempSpellID3";
+            this.textBoxItemTempSpellID3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSpellID3.TabIndex = 47;
             // 
-            // textBox104
+            // textBoxItemTempTrigger1
             // 
-            this.textBox104.Location = new System.Drawing.Point(73, 32);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(60, 20);
-            this.textBox104.TabIndex = 47;
+            this.textBoxItemTempTrigger1.Location = new System.Drawing.Point(73, 32);
+            this.textBoxItemTempTrigger1.Name = "textBoxItemTempTrigger1";
+            this.textBoxItemTempTrigger1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempTrigger1.TabIndex = 47;
             // 
-            // textBox99
+            // textBoxItemTempSpellID2
             // 
-            this.textBox99.Location = new System.Drawing.Point(7, 58);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(60, 20);
-            this.textBox99.TabIndex = 47;
+            this.textBoxItemTempSpellID2.Location = new System.Drawing.Point(7, 58);
+            this.textBoxItemTempSpellID2.Name = "textBoxItemTempSpellID2";
+            this.textBoxItemTempSpellID2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSpellID2.TabIndex = 47;
             // 
-            // textBox100
+            // textBoxItemTempSpellID1
             // 
-            this.textBox100.Location = new System.Drawing.Point(7, 32);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(60, 20);
-            this.textBox100.TabIndex = 47;
+            this.textBoxItemTempSpellID1.Location = new System.Drawing.Point(7, 32);
+            this.textBoxItemTempSpellID1.Name = "textBoxItemTempSpellID1";
+            this.textBoxItemTempSpellID1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSpellID1.TabIndex = 47;
             // 
-            // groupBox9
+            // groupBoxItemTemplateOther
             // 
-            this.groupBox9.Controls.Add(this.textBox96);
-            this.groupBox9.Controls.Add(this.label75);
-            this.groupBox9.Controls.Add(this.textBox95);
-            this.groupBox9.Controls.Add(this.label74);
-            this.groupBox9.Controls.Add(this.textBox94);
-            this.groupBox9.Controls.Add(this.label73);
-            this.groupBox9.Controls.Add(this.textBox93);
-            this.groupBox9.Controls.Add(this.label72);
-            this.groupBox9.Controls.Add(this.textBox92);
-            this.groupBox9.Controls.Add(this.label71);
-            this.groupBox9.Controls.Add(this.textBox91);
-            this.groupBox9.Controls.Add(this.label70);
-            this.groupBox9.Controls.Add(this.textBox90);
-            this.groupBox9.Controls.Add(this.label69);
-            this.groupBox9.Controls.Add(this.textBox89);
-            this.groupBox9.Controls.Add(this.label68);
-            this.groupBox9.Controls.Add(this.textBox88);
-            this.groupBox9.Controls.Add(this.label67);
-            this.groupBox9.Controls.Add(this.textBox87);
-            this.groupBox9.Controls.Add(this.label66);
-            this.groupBox9.Controls.Add(this.textBox86);
-            this.groupBox9.Controls.Add(this.label65);
-            this.groupBox9.Controls.Add(this.textBox85);
-            this.groupBox9.Controls.Add(this.label64);
-            this.groupBox9.Controls.Add(this.textBox84);
-            this.groupBox9.Controls.Add(this.label63);
-            this.groupBox9.Controls.Add(this.textBox83);
-            this.groupBox9.Controls.Add(this.label62);
-            this.groupBox9.Controls.Add(this.textBox82);
-            this.groupBox9.Controls.Add(this.label61);
-            this.groupBox9.Controls.Add(this.textBox81);
-            this.groupBox9.Controls.Add(this.label60);
-            this.groupBox9.Controls.Add(this.textBox80);
-            this.groupBox9.Controls.Add(this.label59);
-            this.groupBox9.Controls.Add(this.textBox79);
-            this.groupBox9.Controls.Add(this.label58);
-            this.groupBox9.Controls.Add(this.textBox78);
-            this.groupBox9.Controls.Add(this.label57);
-            this.groupBox9.Location = new System.Drawing.Point(6, 388);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(495, 138);
-            this.groupBox9.TabIndex = 7;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Other:";
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempFlagsC);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label75);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempMoneyMax);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label74);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempMoneyMin);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label73);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempDisenchantID);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label72);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempFoodType);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label71);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempHolidayID);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label70);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempLimitCate);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label69);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempDuration);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label68);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempModifier);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label67);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempMap);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label66);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempArea);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label65);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempPageMaterial);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label64);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempLanguage);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label63);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempPageText);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label62);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempLockID);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label61);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempSuffix);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label60);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempProperty);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label59);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempMaterial);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label58);
+            this.groupBoxItemTemplateOther.Controls.Add(this.textBoxItemTempStartQuest);
+            this.groupBoxItemTemplateOther.Controls.Add(this.label57);
+            this.groupBoxItemTemplateOther.Location = new System.Drawing.Point(6, 388);
+            this.groupBoxItemTemplateOther.Name = "groupBoxItemTemplateOther";
+            this.groupBoxItemTemplateOther.Size = new System.Drawing.Size(495, 138);
+            this.groupBoxItemTemplateOther.TabIndex = 7;
+            this.groupBoxItemTemplateOther.TabStop = false;
+            this.groupBoxItemTemplateOther.Text = "Other:";
             // 
-            // textBox96
+            // textBoxItemTempFlagsC
             // 
-            this.textBox96.Location = new System.Drawing.Point(339, 110);
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(60, 20);
-            this.textBox96.TabIndex = 49;
+            this.textBoxItemTempFlagsC.Location = new System.Drawing.Point(339, 110);
+            this.textBoxItemTempFlagsC.Name = "textBoxItemTempFlagsC";
+            this.textBoxItemTempFlagsC.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempFlagsC.TabIndex = 49;
             // 
             // label75
             // 
@@ -7893,12 +8429,12 @@
             this.label75.TabIndex = 48;
             this.label75.Text = "FlagsCustom:";
             // 
-            // textBox95
+            // textBoxItemTempMoneyMax
             // 
-            this.textBox95.Location = new System.Drawing.Point(273, 110);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(60, 20);
-            this.textBox95.TabIndex = 47;
+            this.textBoxItemTempMoneyMax.Location = new System.Drawing.Point(273, 110);
+            this.textBoxItemTempMoneyMax.Name = "textBoxItemTempMoneyMax";
+            this.textBoxItemTempMoneyMax.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempMoneyMax.TabIndex = 47;
             // 
             // label74
             // 
@@ -7909,12 +8445,12 @@
             this.label74.TabIndex = 46;
             this.label74.Text = "Max Money:";
             // 
-            // textBox94
+            // textBoxItemTempMoneyMin
             // 
-            this.textBox94.Location = new System.Drawing.Point(207, 110);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(60, 20);
-            this.textBox94.TabIndex = 45;
+            this.textBoxItemTempMoneyMin.Location = new System.Drawing.Point(207, 110);
+            this.textBoxItemTempMoneyMin.Name = "textBoxItemTempMoneyMin";
+            this.textBoxItemTempMoneyMin.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempMoneyMin.TabIndex = 45;
             // 
             // label73
             // 
@@ -7925,12 +8461,12 @@
             this.label73.TabIndex = 44;
             this.label73.Text = "Min Money:";
             // 
-            // textBox93
+            // textBoxItemTempDisenchantID
             // 
-            this.textBox93.Location = new System.Drawing.Point(405, 33);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(60, 20);
-            this.textBox93.TabIndex = 43;
+            this.textBoxItemTempDisenchantID.Location = new System.Drawing.Point(405, 33);
+            this.textBoxItemTempDisenchantID.Name = "textBoxItemTempDisenchantID";
+            this.textBoxItemTempDisenchantID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDisenchantID.TabIndex = 43;
             // 
             // label72
             // 
@@ -7941,12 +8477,12 @@
             this.label72.TabIndex = 42;
             this.label72.Text = "DisenchantID:";
             // 
-            // textBox92
+            // textBoxItemTempFoodType
             // 
-            this.textBox92.Location = new System.Drawing.Point(207, 71);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(60, 20);
-            this.textBox92.TabIndex = 41;
+            this.textBoxItemTempFoodType.Location = new System.Drawing.Point(207, 71);
+            this.textBoxItemTempFoodType.Name = "textBoxItemTempFoodType";
+            this.textBoxItemTempFoodType.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempFoodType.TabIndex = 41;
             // 
             // label71
             // 
@@ -7957,12 +8493,12 @@
             this.label71.TabIndex = 40;
             this.label71.Text = "FoodType:";
             // 
-            // textBox91
+            // textBoxItemTempHolidayID
             // 
-            this.textBox91.Location = new System.Drawing.Point(339, 71);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(60, 20);
-            this.textBox91.TabIndex = 39;
+            this.textBoxItemTempHolidayID.Location = new System.Drawing.Point(339, 71);
+            this.textBoxItemTempHolidayID.Name = "textBoxItemTempHolidayID";
+            this.textBoxItemTempHolidayID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempHolidayID.TabIndex = 39;
             // 
             // label70
             // 
@@ -7973,12 +8509,12 @@
             this.label70.TabIndex = 38;
             this.label70.Text = "HolidayID:";
             // 
-            // textBox90
+            // textBoxItemTempLimitCate
             // 
-            this.textBox90.Location = new System.Drawing.Point(141, 110);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(60, 20);
-            this.textBox90.TabIndex = 37;
+            this.textBoxItemTempLimitCate.Location = new System.Drawing.Point(141, 110);
+            this.textBoxItemTempLimitCate.Name = "textBoxItemTempLimitCate";
+            this.textBoxItemTempLimitCate.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempLimitCate.TabIndex = 37;
             // 
             // label69
             // 
@@ -7989,12 +8525,12 @@
             this.label69.TabIndex = 36;
             this.label69.Text = "LimitCate:";
             // 
-            // textBox89
+            // textBoxItemTempDuration
             // 
-            this.textBox89.Location = new System.Drawing.Point(75, 110);
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(60, 20);
-            this.textBox89.TabIndex = 35;
+            this.textBoxItemTempDuration.Location = new System.Drawing.Point(75, 110);
+            this.textBoxItemTempDuration.Name = "textBoxItemTempDuration";
+            this.textBoxItemTempDuration.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDuration.TabIndex = 35;
             // 
             // label68
             // 
@@ -8005,12 +8541,12 @@
             this.label68.TabIndex = 34;
             this.label68.Text = "Duration:";
             // 
-            // textBox88
+            // textBoxItemTempModifier
             // 
-            this.textBox88.Location = new System.Drawing.Point(9, 110);
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(60, 20);
-            this.textBox88.TabIndex = 33;
+            this.textBoxItemTempModifier.Location = new System.Drawing.Point(9, 110);
+            this.textBoxItemTempModifier.Name = "textBoxItemTempModifier";
+            this.textBoxItemTempModifier.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempModifier.TabIndex = 33;
             // 
             // label67
             // 
@@ -8021,12 +8557,12 @@
             this.label67.TabIndex = 32;
             this.label67.Text = "Modifier:";
             // 
-            // textBox87
+            // textBoxItemTempMap
             // 
-            this.textBox87.Location = new System.Drawing.Point(339, 33);
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(60, 20);
-            this.textBox87.TabIndex = 31;
+            this.textBoxItemTempMap.Location = new System.Drawing.Point(339, 33);
+            this.textBoxItemTempMap.Name = "textBoxItemTempMap";
+            this.textBoxItemTempMap.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempMap.TabIndex = 31;
             // 
             // label66
             // 
@@ -8037,12 +8573,12 @@
             this.label66.TabIndex = 30;
             this.label66.Text = "Map:";
             // 
-            // textBox86
+            // textBoxItemTempArea
             // 
-            this.textBox86.Location = new System.Drawing.Point(273, 33);
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(60, 20);
-            this.textBox86.TabIndex = 29;
+            this.textBoxItemTempArea.Location = new System.Drawing.Point(273, 33);
+            this.textBoxItemTempArea.Name = "textBoxItemTempArea";
+            this.textBoxItemTempArea.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempArea.TabIndex = 29;
             // 
             // label65
             // 
@@ -8053,12 +8589,12 @@
             this.label65.TabIndex = 28;
             this.label65.Text = "Area:";
             // 
-            // textBox85
+            // textBoxItemTempPageMaterial
             // 
-            this.textBox85.Location = new System.Drawing.Point(141, 71);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(60, 20);
-            this.textBox85.TabIndex = 27;
+            this.textBoxItemTempPageMaterial.Location = new System.Drawing.Point(141, 71);
+            this.textBoxItemTempPageMaterial.Name = "textBoxItemTempPageMaterial";
+            this.textBoxItemTempPageMaterial.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempPageMaterial.TabIndex = 27;
             // 
             // label64
             // 
@@ -8069,12 +8605,12 @@
             this.label64.TabIndex = 26;
             this.label64.Text = "PageMat:";
             // 
-            // textBox84
+            // textBoxItemTempLanguage
             // 
-            this.textBox84.Location = new System.Drawing.Point(75, 71);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(60, 20);
-            this.textBox84.TabIndex = 25;
+            this.textBoxItemTempLanguage.Location = new System.Drawing.Point(75, 71);
+            this.textBoxItemTempLanguage.Name = "textBoxItemTempLanguage";
+            this.textBoxItemTempLanguage.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempLanguage.TabIndex = 25;
             // 
             // label63
             // 
@@ -8085,12 +8621,12 @@
             this.label63.TabIndex = 24;
             this.label63.Text = "LanguageID:";
             // 
-            // textBox83
+            // textBoxItemTempPageText
             // 
-            this.textBox83.Location = new System.Drawing.Point(9, 71);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(60, 20);
-            this.textBox83.TabIndex = 23;
+            this.textBoxItemTempPageText.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempPageText.Name = "textBoxItemTempPageText";
+            this.textBoxItemTempPageText.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempPageText.TabIndex = 23;
             // 
             // label62
             // 
@@ -8101,12 +8637,12 @@
             this.label62.TabIndex = 22;
             this.label62.Text = "PageText:";
             // 
-            // textBox82
+            // textBoxItemTempLockID
             // 
-            this.textBox82.Location = new System.Drawing.Point(273, 71);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(60, 20);
-            this.textBox82.TabIndex = 21;
+            this.textBoxItemTempLockID.Location = new System.Drawing.Point(273, 71);
+            this.textBoxItemTempLockID.Name = "textBoxItemTempLockID";
+            this.textBoxItemTempLockID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempLockID.TabIndex = 21;
             // 
             // label61
             // 
@@ -8117,12 +8653,12 @@
             this.label61.TabIndex = 20;
             this.label61.Text = "LockID:";
             // 
-            // textBox81
+            // textBoxItemTempSuffix
             // 
-            this.textBox81.Location = new System.Drawing.Point(207, 32);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(60, 20);
-            this.textBox81.TabIndex = 19;
+            this.textBoxItemTempSuffix.Location = new System.Drawing.Point(207, 32);
+            this.textBoxItemTempSuffix.Name = "textBoxItemTempSuffix";
+            this.textBoxItemTempSuffix.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSuffix.TabIndex = 19;
             // 
             // label60
             // 
@@ -8133,12 +8669,12 @@
             this.label60.TabIndex = 18;
             this.label60.Text = "Suffix:";
             // 
-            // textBox80
+            // textBoxItemTempProperty
             // 
-            this.textBox80.Location = new System.Drawing.Point(141, 32);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(60, 20);
-            this.textBox80.TabIndex = 17;
+            this.textBoxItemTempProperty.Location = new System.Drawing.Point(141, 32);
+            this.textBoxItemTempProperty.Name = "textBoxItemTempProperty";
+            this.textBoxItemTempProperty.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempProperty.TabIndex = 17;
             // 
             // label59
             // 
@@ -8149,12 +8685,12 @@
             this.label59.TabIndex = 16;
             this.label59.Text = "Property:";
             // 
-            // textBox79
+            // textBoxItemTempMaterial
             // 
-            this.textBox79.Location = new System.Drawing.Point(75, 32);
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(60, 20);
-            this.textBox79.TabIndex = 15;
+            this.textBoxItemTempMaterial.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempMaterial.Name = "textBoxItemTempMaterial";
+            this.textBoxItemTempMaterial.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempMaterial.TabIndex = 15;
             // 
             // label58
             // 
@@ -8165,12 +8701,12 @@
             this.label58.TabIndex = 14;
             this.label58.Text = "Material:";
             // 
-            // textBox78
+            // textBoxItemTempStartQuest
             // 
-            this.textBox78.Location = new System.Drawing.Point(9, 32);
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(60, 20);
-            this.textBox78.TabIndex = 13;
+            this.textBoxItemTempStartQuest.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempStartQuest.Name = "textBoxItemTempStartQuest";
+            this.textBoxItemTempStartQuest.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStartQuest.TabIndex = 13;
             // 
             // label57
             // 
@@ -8181,37 +8717,37 @@
             this.label57.TabIndex = 12;
             this.label57.Text = "StartQuest:";
             // 
-            // groupBox8
+            // groupBoxItemTemplateDetails
             // 
-            this.groupBox8.Controls.Add(this.textBox77);
-            this.groupBox8.Controls.Add(this.label56);
-            this.groupBox8.Controls.Add(this.textBox76);
-            this.groupBox8.Controls.Add(this.label55);
-            this.groupBox8.Controls.Add(this.textBox75);
-            this.groupBox8.Controls.Add(this.label54);
-            this.groupBox8.Controls.Add(this.textBox74);
-            this.groupBox8.Controls.Add(this.label53);
-            this.groupBox8.Controls.Add(this.textBox73);
-            this.groupBox8.Controls.Add(this.label52);
-            this.groupBox8.Controls.Add(this.textBox72);
-            this.groupBox8.Controls.Add(this.label51);
-            this.groupBox8.Controls.Add(this.textBox71);
-            this.groupBox8.Controls.Add(this.label50);
-            this.groupBox8.Controls.Add(this.textBox70);
-            this.groupBox8.Controls.Add(this.label49);
-            this.groupBox8.Location = new System.Drawing.Point(225, 112);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(276, 102);
-            this.groupBox8.TabIndex = 6;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Item Details:";
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempItemSet);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label56);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempSheath);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label55);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempDurability);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label54);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempBlock);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label53);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempBonding);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label52);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempRangedMod);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label51);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempAmmoType);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label50);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.textBoxItemTempDelay);
+            this.groupBoxItemTemplateDetails.Controls.Add(this.label49);
+            this.groupBoxItemTemplateDetails.Location = new System.Drawing.Point(225, 112);
+            this.groupBoxItemTemplateDetails.Name = "groupBoxItemTemplateDetails";
+            this.groupBoxItemTemplateDetails.Size = new System.Drawing.Size(276, 102);
+            this.groupBoxItemTemplateDetails.TabIndex = 6;
+            this.groupBoxItemTemplateDetails.TabStop = false;
+            this.groupBoxItemTemplateDetails.Text = "Item Details:";
             // 
-            // textBox77
+            // textBoxItemTempItemSet
             // 
-            this.textBox77.Location = new System.Drawing.Point(207, 33);
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(60, 20);
-            this.textBox77.TabIndex = 59;
+            this.textBoxItemTempItemSet.Location = new System.Drawing.Point(207, 33);
+            this.textBoxItemTempItemSet.Name = "textBoxItemTempItemSet";
+            this.textBoxItemTempItemSet.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempItemSet.TabIndex = 59;
             // 
             // label56
             // 
@@ -8222,12 +8758,12 @@
             this.label56.TabIndex = 58;
             this.label56.Text = "Item Set:";
             // 
-            // textBox76
+            // textBoxItemTempSheath
             // 
-            this.textBox76.Location = new System.Drawing.Point(207, 71);
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(60, 20);
-            this.textBox76.TabIndex = 57;
+            this.textBoxItemTempSheath.Location = new System.Drawing.Point(207, 71);
+            this.textBoxItemTempSheath.Name = "textBoxItemTempSheath";
+            this.textBoxItemTempSheath.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempSheath.TabIndex = 57;
             // 
             // label55
             // 
@@ -8238,12 +8774,12 @@
             this.label55.TabIndex = 56;
             this.label55.Text = "Sheath:";
             // 
-            // textBox75
+            // textBoxItemTempDurability
             // 
-            this.textBox75.Location = new System.Drawing.Point(141, 71);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(60, 20);
-            this.textBox75.TabIndex = 55;
+            this.textBoxItemTempDurability.Location = new System.Drawing.Point(141, 71);
+            this.textBoxItemTempDurability.Name = "textBoxItemTempDurability";
+            this.textBoxItemTempDurability.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDurability.TabIndex = 55;
             // 
             // label54
             // 
@@ -8254,12 +8790,12 @@
             this.label54.TabIndex = 54;
             this.label54.Text = "Durability:";
             // 
-            // textBox74
+            // textBoxItemTempBlock
             // 
-            this.textBox74.Location = new System.Drawing.Point(75, 71);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(60, 20);
-            this.textBox74.TabIndex = 53;
+            this.textBoxItemTempBlock.Location = new System.Drawing.Point(75, 71);
+            this.textBoxItemTempBlock.Name = "textBoxItemTempBlock";
+            this.textBoxItemTempBlock.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempBlock.TabIndex = 53;
             // 
             // label53
             // 
@@ -8270,12 +8806,12 @@
             this.label53.TabIndex = 52;
             this.label53.Text = "Block:";
             // 
-            // textBox73
+            // textBoxItemTempBonding
             // 
-            this.textBox73.Location = new System.Drawing.Point(9, 71);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(60, 20);
-            this.textBox73.TabIndex = 51;
+            this.textBoxItemTempBonding.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempBonding.Name = "textBoxItemTempBonding";
+            this.textBoxItemTempBonding.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempBonding.TabIndex = 51;
             // 
             // label52
             // 
@@ -8286,12 +8822,12 @@
             this.label52.TabIndex = 50;
             this.label52.Text = "Bonding:";
             // 
-            // textBox72
+            // textBoxItemTempRangedMod
             // 
-            this.textBox72.Location = new System.Drawing.Point(141, 33);
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(60, 20);
-            this.textBox72.TabIndex = 47;
+            this.textBoxItemTempRangedMod.Location = new System.Drawing.Point(141, 33);
+            this.textBoxItemTempRangedMod.Name = "textBoxItemTempRangedMod";
+            this.textBoxItemTempRangedMod.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempRangedMod.TabIndex = 47;
             // 
             // label51
             // 
@@ -8302,12 +8838,12 @@
             this.label51.TabIndex = 46;
             this.label51.Text = "RangedMod:";
             // 
-            // textBox71
+            // textBoxItemTempAmmoType
             // 
-            this.textBox71.Location = new System.Drawing.Point(75, 32);
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(60, 20);
-            this.textBox71.TabIndex = 49;
+            this.textBoxItemTempAmmoType.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempAmmoType.Name = "textBoxItemTempAmmoType";
+            this.textBoxItemTempAmmoType.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempAmmoType.TabIndex = 49;
             // 
             // label50
             // 
@@ -8318,12 +8854,12 @@
             this.label50.TabIndex = 48;
             this.label50.Text = "AmmoType:";
             // 
-            // textBox70
+            // textBoxItemTempDelay
             // 
-            this.textBox70.Location = new System.Drawing.Point(9, 32);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(60, 20);
-            this.textBox70.TabIndex = 47;
+            this.textBoxItemTempDelay.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempDelay.Name = "textBoxItemTempDelay";
+            this.textBoxItemTempDelay.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDelay.TabIndex = 47;
             // 
             // label49
             // 
@@ -8334,33 +8870,33 @@
             this.label49.TabIndex = 46;
             this.label49.Text = "Delay:";
             // 
-            // groupBox6
+            // groupBoxItemTemplateSocket
             // 
-            this.groupBox6.Controls.Add(this.textBox67);
-            this.groupBox6.Controls.Add(this.label46);
-            this.groupBox6.Controls.Add(this.textBox66);
-            this.groupBox6.Controls.Add(this.label45);
-            this.groupBox6.Controls.Add(this.textBox64);
-            this.groupBox6.Controls.Add(this.textBox65);
-            this.groupBox6.Controls.Add(this.textBox62);
-            this.groupBox6.Controls.Add(this.textBox63);
-            this.groupBox6.Controls.Add(this.textBox61);
-            this.groupBox6.Controls.Add(this.label44);
-            this.groupBox6.Controls.Add(this.textBox60);
-            this.groupBox6.Controls.Add(this.label43);
-            this.groupBox6.Location = new System.Drawing.Point(656, 112);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(143, 190);
-            this.groupBox6.TabIndex = 5;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Socket";
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempGemProper);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.label46);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempSocketBonus);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.label45);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempContent3);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempColor3);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempContent2);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempColor2);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempContent1);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.label44);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.textBoxItemTempColor1);
+            this.groupBoxItemTemplateSocket.Controls.Add(this.label43);
+            this.groupBoxItemTemplateSocket.Location = new System.Drawing.Point(656, 112);
+            this.groupBoxItemTemplateSocket.Name = "groupBoxItemTemplateSocket";
+            this.groupBoxItemTemplateSocket.Size = new System.Drawing.Size(143, 190);
+            this.groupBoxItemTemplateSocket.TabIndex = 5;
+            this.groupBoxItemTemplateSocket.TabStop = false;
+            this.groupBoxItemTemplateSocket.Text = "Socket";
             // 
-            // textBox67
+            // textBoxItemTempGemProper
             // 
-            this.textBox67.Location = new System.Drawing.Point(9, 162);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(126, 20);
-            this.textBox67.TabIndex = 57;
+            this.textBoxItemTempGemProper.Location = new System.Drawing.Point(9, 162);
+            this.textBoxItemTempGemProper.Name = "textBoxItemTempGemProper";
+            this.textBoxItemTempGemProper.Size = new System.Drawing.Size(126, 20);
+            this.textBoxItemTempGemProper.TabIndex = 57;
             // 
             // label46
             // 
@@ -8371,12 +8907,12 @@
             this.label46.TabIndex = 56;
             this.label46.Text = "Gem Properties:";
             // 
-            // textBox66
+            // textBoxItemTempSocketBonus
             // 
-            this.textBox66.Location = new System.Drawing.Point(9, 123);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(126, 20);
-            this.textBox66.TabIndex = 55;
+            this.textBoxItemTempSocketBonus.Location = new System.Drawing.Point(9, 123);
+            this.textBoxItemTempSocketBonus.Name = "textBoxItemTempSocketBonus";
+            this.textBoxItemTempSocketBonus.Size = new System.Drawing.Size(126, 20);
+            this.textBoxItemTempSocketBonus.TabIndex = 55;
             // 
             // label45
             // 
@@ -8387,40 +8923,40 @@
             this.label45.TabIndex = 54;
             this.label45.Text = "Socket Bonus:";
             // 
-            // textBox64
+            // textBoxItemTempContent3
             // 
-            this.textBox64.Location = new System.Drawing.Point(75, 84);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(60, 20);
-            this.textBox64.TabIndex = 53;
+            this.textBoxItemTempContent3.Location = new System.Drawing.Point(75, 84);
+            this.textBoxItemTempContent3.Name = "textBoxItemTempContent3";
+            this.textBoxItemTempContent3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempContent3.TabIndex = 53;
             // 
-            // textBox65
+            // textBoxItemTempColor3
             // 
-            this.textBox65.Location = new System.Drawing.Point(9, 84);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(60, 20);
-            this.textBox65.TabIndex = 52;
+            this.textBoxItemTempColor3.Location = new System.Drawing.Point(9, 84);
+            this.textBoxItemTempColor3.Name = "textBoxItemTempColor3";
+            this.textBoxItemTempColor3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempColor3.TabIndex = 52;
             // 
-            // textBox62
+            // textBoxItemTempContent2
             // 
-            this.textBox62.Location = new System.Drawing.Point(75, 58);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(60, 20);
-            this.textBox62.TabIndex = 51;
+            this.textBoxItemTempContent2.Location = new System.Drawing.Point(75, 58);
+            this.textBoxItemTempContent2.Name = "textBoxItemTempContent2";
+            this.textBoxItemTempContent2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempContent2.TabIndex = 51;
             // 
-            // textBox63
+            // textBoxItemTempColor2
             // 
-            this.textBox63.Location = new System.Drawing.Point(9, 58);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(60, 20);
-            this.textBox63.TabIndex = 50;
+            this.textBoxItemTempColor2.Location = new System.Drawing.Point(9, 58);
+            this.textBoxItemTempColor2.Name = "textBoxItemTempColor2";
+            this.textBoxItemTempColor2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempColor2.TabIndex = 50;
             // 
-            // textBox61
+            // textBoxItemTempContent1
             // 
-            this.textBox61.Location = new System.Drawing.Point(75, 32);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(60, 20);
-            this.textBox61.TabIndex = 49;
+            this.textBoxItemTempContent1.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempContent1.Name = "textBoxItemTempContent1";
+            this.textBoxItemTempContent1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempContent1.TabIndex = 49;
             // 
             // label44
             // 
@@ -8431,12 +8967,12 @@
             this.label44.TabIndex = 48;
             this.label44.Text = "Content:";
             // 
-            // textBox60
+            // textBoxItemTempColor1
             // 
-            this.textBox60.Location = new System.Drawing.Point(9, 32);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(60, 20);
-            this.textBox60.TabIndex = 47;
+            this.textBoxItemTempColor1.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempColor1.Name = "textBoxItemTempColor1";
+            this.textBoxItemTempColor1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempColor1.TabIndex = 47;
             // 
             // label43
             // 
@@ -8447,33 +8983,33 @@
             this.label43.TabIndex = 46;
             this.label43.Text = "Color:";
             // 
-            // groupBox5
+            // groupBoxItemTemplateResistance
             // 
-            this.groupBox5.Controls.Add(this.textBox53);
-            this.groupBox5.Controls.Add(this.label36);
-            this.groupBox5.Controls.Add(this.textBox52);
-            this.groupBox5.Controls.Add(this.label35);
-            this.groupBox5.Controls.Add(this.textBox51);
-            this.groupBox5.Controls.Add(this.label34);
-            this.groupBox5.Controls.Add(this.textBox50);
-            this.groupBox5.Controls.Add(this.label33);
-            this.groupBox5.Controls.Add(this.textBox49);
-            this.groupBox5.Controls.Add(this.label32);
-            this.groupBox5.Controls.Add(this.textBox48);
-            this.groupBox5.Controls.Add(this.label31);
-            this.groupBox5.Location = new System.Drawing.Point(507, 112);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(143, 138);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Resistance";
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisArcane);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label36);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisShadow);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label35);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisFrost);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label34);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisNature);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label33);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisFire);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label32);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.textBoxItemTempResisHoly);
+            this.groupBoxItemTemplateResistance.Controls.Add(this.label31);
+            this.groupBoxItemTemplateResistance.Location = new System.Drawing.Point(507, 112);
+            this.groupBoxItemTemplateResistance.Name = "groupBoxItemTemplateResistance";
+            this.groupBoxItemTemplateResistance.Size = new System.Drawing.Size(143, 138);
+            this.groupBoxItemTemplateResistance.TabIndex = 4;
+            this.groupBoxItemTemplateResistance.TabStop = false;
+            this.groupBoxItemTemplateResistance.Text = "Resistance";
             // 
-            // textBox53
+            // textBoxItemTempResisArcane
             // 
-            this.textBox53.Location = new System.Drawing.Point(75, 109);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(60, 20);
-            this.textBox53.TabIndex = 35;
+            this.textBoxItemTempResisArcane.Location = new System.Drawing.Point(75, 109);
+            this.textBoxItemTempResisArcane.Name = "textBoxItemTempResisArcane";
+            this.textBoxItemTempResisArcane.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisArcane.TabIndex = 35;
             // 
             // label36
             // 
@@ -8484,12 +9020,12 @@
             this.label36.TabIndex = 34;
             this.label36.Text = "Arcane:";
             // 
-            // textBox52
+            // textBoxItemTempResisShadow
             // 
-            this.textBox52.Location = new System.Drawing.Point(75, 70);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(60, 20);
-            this.textBox52.TabIndex = 33;
+            this.textBoxItemTempResisShadow.Location = new System.Drawing.Point(75, 70);
+            this.textBoxItemTempResisShadow.Name = "textBoxItemTempResisShadow";
+            this.textBoxItemTempResisShadow.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisShadow.TabIndex = 33;
             // 
             // label35
             // 
@@ -8500,12 +9036,12 @@
             this.label35.TabIndex = 32;
             this.label35.Text = "Shadow:";
             // 
-            // textBox51
+            // textBoxItemTempResisFrost
             // 
-            this.textBox51.Location = new System.Drawing.Point(75, 31);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(60, 20);
-            this.textBox51.TabIndex = 31;
+            this.textBoxItemTempResisFrost.Location = new System.Drawing.Point(75, 31);
+            this.textBoxItemTempResisFrost.Name = "textBoxItemTempResisFrost";
+            this.textBoxItemTempResisFrost.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisFrost.TabIndex = 31;
             // 
             // label34
             // 
@@ -8516,12 +9052,12 @@
             this.label34.TabIndex = 30;
             this.label34.Text = "Frost:";
             // 
-            // textBox50
+            // textBoxItemTempResisNature
             // 
-            this.textBox50.Location = new System.Drawing.Point(9, 110);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(60, 20);
-            this.textBox50.TabIndex = 29;
+            this.textBoxItemTempResisNature.Location = new System.Drawing.Point(9, 110);
+            this.textBoxItemTempResisNature.Name = "textBoxItemTempResisNature";
+            this.textBoxItemTempResisNature.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisNature.TabIndex = 29;
             // 
             // label33
             // 
@@ -8532,12 +9068,12 @@
             this.label33.TabIndex = 28;
             this.label33.Text = "Nature:";
             // 
-            // textBox49
+            // textBoxItemTempResisFire
             // 
-            this.textBox49.Location = new System.Drawing.Point(9, 71);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(60, 20);
-            this.textBox49.TabIndex = 27;
+            this.textBoxItemTempResisFire.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempResisFire.Name = "textBoxItemTempResisFire";
+            this.textBoxItemTempResisFire.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisFire.TabIndex = 27;
             // 
             // label32
             // 
@@ -8548,12 +9084,12 @@
             this.label32.TabIndex = 26;
             this.label32.Text = "Fire:";
             // 
-            // textBox48
+            // textBoxItemTempResisHoly
             // 
-            this.textBox48.Location = new System.Drawing.Point(9, 32);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(60, 20);
-            this.textBox48.TabIndex = 25;
+            this.textBoxItemTempResisHoly.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempResisHoly.Name = "textBoxItemTempResisHoly";
+            this.textBoxItemTempResisHoly.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempResisHoly.TabIndex = 25;
             // 
             // label31
             // 
@@ -8564,33 +9100,53 @@
             this.label31.TabIndex = 24;
             this.label31.Text = "Holy:";
             // 
-            // groupBox4
+            // groupBoxItemTemplateDamage
             // 
-            this.groupBox4.Controls.Add(this.textBox57);
-            this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Controls.Add(this.textBox58);
-            this.groupBox4.Controls.Add(this.textBox59);
-            this.groupBox4.Controls.Add(this.label41);
-            this.groupBox4.Controls.Add(this.label42);
-            this.groupBox4.Controls.Add(this.textBox56);
-            this.groupBox4.Controls.Add(this.label39);
-            this.groupBox4.Controls.Add(this.textBox55);
-            this.groupBox4.Controls.Add(this.textBox54);
-            this.groupBox4.Controls.Add(this.label38);
-            this.groupBox4.Controls.Add(this.label37);
-            this.groupBox4.Location = new System.Drawing.Point(6, 112);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(213, 102);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Damage";
+            this.groupBoxItemTemplateDamage.Controls.Add(this.buttonItemTempDmgType2Popup);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.buttonItemTempDmgType1Popup);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgMax2);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label40);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgMin2);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgType2);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label41);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label42);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgMax1);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label39);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgMin1);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.textBoxItemTempDmgType1);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label38);
+            this.groupBoxItemTemplateDamage.Controls.Add(this.label37);
+            this.groupBoxItemTemplateDamage.Location = new System.Drawing.Point(6, 112);
+            this.groupBoxItemTemplateDamage.Name = "groupBoxItemTemplateDamage";
+            this.groupBoxItemTemplateDamage.Size = new System.Drawing.Size(213, 102);
+            this.groupBoxItemTemplateDamage.TabIndex = 3;
+            this.groupBoxItemTemplateDamage.TabStop = false;
+            this.groupBoxItemTemplateDamage.Text = "Damage";
             // 
-            // textBox57
+            // buttonItemTempDmgType2Popup
             // 
-            this.textBox57.Location = new System.Drawing.Point(141, 71);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(60, 20);
-            this.textBox57.TabIndex = 45;
+            this.buttonItemTempDmgType2Popup.Location = new System.Drawing.Point(50, 72);
+            this.buttonItemTempDmgType2Popup.Name = "buttonItemTempDmgType2Popup";
+            this.buttonItemTempDmgType2Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempDmgType2Popup.TabIndex = 46;
+            this.buttonItemTempDmgType2Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempDmgType2Popup.Click += new System.EventHandler(this.buttonItemTempDmgType2Popup_Click);
+            // 
+            // buttonItemTempDmgType1Popup
+            // 
+            this.buttonItemTempDmgType1Popup.Location = new System.Drawing.Point(50, 33);
+            this.buttonItemTempDmgType1Popup.Name = "buttonItemTempDmgType1Popup";
+            this.buttonItemTempDmgType1Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempDmgType1Popup.TabIndex = 46;
+            this.buttonItemTempDmgType1Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempDmgType1Popup.Click += new System.EventHandler(this.buttonItemTempDmgType1Popup_Click);
+            // 
+            // textBoxItemTempDmgMax2
+            // 
+            this.textBoxItemTempDmgMax2.Location = new System.Drawing.Point(141, 71);
+            this.textBoxItemTempDmgMax2.Name = "textBoxItemTempDmgMax2";
+            this.textBoxItemTempDmgMax2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgMax2.TabIndex = 45;
             // 
             // label40
             // 
@@ -8601,19 +9157,19 @@
             this.label40.TabIndex = 44;
             this.label40.Text = "Maximum:";
             // 
-            // textBox58
+            // textBoxItemTempDmgMin2
             // 
-            this.textBox58.Location = new System.Drawing.Point(75, 71);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(60, 20);
-            this.textBox58.TabIndex = 42;
+            this.textBoxItemTempDmgMin2.Location = new System.Drawing.Point(75, 71);
+            this.textBoxItemTempDmgMin2.Name = "textBoxItemTempDmgMin2";
+            this.textBoxItemTempDmgMin2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgMin2.TabIndex = 42;
             // 
-            // textBox59
+            // textBoxItemTempDmgType2
             // 
-            this.textBox59.Location = new System.Drawing.Point(9, 71);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(60, 20);
-            this.textBox59.TabIndex = 43;
+            this.textBoxItemTempDmgType2.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempDmgType2.Name = "textBoxItemTempDmgType2";
+            this.textBoxItemTempDmgType2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgType2.TabIndex = 43;
             // 
             // label41
             // 
@@ -8633,12 +9189,12 @@
             this.label42.TabIndex = 41;
             this.label42.Text = "Type:";
             // 
-            // textBox56
+            // textBoxItemTempDmgMax1
             // 
-            this.textBox56.Location = new System.Drawing.Point(141, 32);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(60, 20);
-            this.textBox56.TabIndex = 39;
+            this.textBoxItemTempDmgMax1.Location = new System.Drawing.Point(141, 32);
+            this.textBoxItemTempDmgMax1.Name = "textBoxItemTempDmgMax1";
+            this.textBoxItemTempDmgMax1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgMax1.TabIndex = 39;
             // 
             // label39
             // 
@@ -8649,19 +9205,19 @@
             this.label39.TabIndex = 38;
             this.label39.Text = "Maximum:";
             // 
-            // textBox55
+            // textBoxItemTempDmgMin1
             // 
-            this.textBox55.Location = new System.Drawing.Point(75, 32);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(60, 20);
-            this.textBox55.TabIndex = 37;
+            this.textBoxItemTempDmgMin1.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempDmgMin1.Name = "textBoxItemTempDmgMin1";
+            this.textBoxItemTempDmgMin1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgMin1.TabIndex = 37;
             // 
-            // textBox54
+            // textBoxItemTempDmgType1
             // 
-            this.textBox54.Location = new System.Drawing.Point(9, 32);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(60, 20);
-            this.textBox54.TabIndex = 37;
+            this.textBoxItemTempDmgType1.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempDmgType1.Name = "textBoxItemTempDmgType1";
+            this.textBoxItemTempDmgType1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempDmgType1.TabIndex = 37;
             // 
             // label38
             // 
@@ -8681,47 +9237,47 @@
             this.label37.TabIndex = 36;
             this.label37.Text = "Type:";
             // 
-            // groupBox3
+            // groupBoxItemTemplateStats
             // 
-            this.groupBox3.Controls.Add(this.textBox69);
-            this.groupBox3.Controls.Add(this.label48);
-            this.groupBox3.Controls.Add(this.textBox68);
-            this.groupBox3.Controls.Add(this.label47);
-            this.groupBox3.Controls.Add(this.textBox47);
-            this.groupBox3.Controls.Add(this.textBox43);
-            this.groupBox3.Controls.Add(this.textBox35);
-            this.groupBox3.Controls.Add(this.textBox42);
-            this.groupBox3.Controls.Add(this.textBox31);
-            this.groupBox3.Controls.Add(this.textBox46);
-            this.groupBox3.Controls.Add(this.textBox41);
-            this.groupBox3.Controls.Add(this.textBox34);
-            this.groupBox3.Controls.Add(this.textBox45);
-            this.groupBox3.Controls.Add(this.textBox40);
-            this.groupBox3.Controls.Add(this.textBox39);
-            this.groupBox3.Controls.Add(this.textBox29);
-            this.groupBox3.Controls.Add(this.textBox44);
-            this.groupBox3.Controls.Add(this.textBox33);
-            this.groupBox3.Controls.Add(this.textBox38);
-            this.groupBox3.Controls.Add(this.label30);
-            this.groupBox3.Controls.Add(this.textBox37);
-            this.groupBox3.Controls.Add(this.textBox32);
-            this.groupBox3.Controls.Add(this.textBox36);
-            this.groupBox3.Controls.Add(this.textBox30);
-            this.groupBox3.Controls.Add(this.textBox28);
-            this.groupBox3.Controls.Add(this.label29);
-            this.groupBox3.Location = new System.Drawing.Point(805, 112);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(144, 372);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Stats";
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsScaleValue);
+            this.groupBoxItemTemplateStats.Controls.Add(this.label48);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsScaleDist);
+            this.groupBoxItemTemplateStats.Controls.Add(this.label47);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue10);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue8);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue4);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue6);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue2);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue9);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue7);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue3);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType10);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue5);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType8);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsValue1);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType9);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType4);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType7);
+            this.groupBoxItemTemplateStats.Controls.Add(this.label30);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType6);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType3);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType5);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType2);
+            this.groupBoxItemTemplateStats.Controls.Add(this.textBoxItemTempStatsType1);
+            this.groupBoxItemTemplateStats.Controls.Add(this.label29);
+            this.groupBoxItemTemplateStats.Location = new System.Drawing.Point(805, 112);
+            this.groupBoxItemTemplateStats.Name = "groupBoxItemTemplateStats";
+            this.groupBoxItemTemplateStats.Size = new System.Drawing.Size(144, 372);
+            this.groupBoxItemTemplateStats.TabIndex = 2;
+            this.groupBoxItemTemplateStats.TabStop = false;
+            this.groupBoxItemTemplateStats.Text = "Stats";
             // 
-            // textBox69
+            // textBoxItemTempStatsScaleValue
             // 
-            this.textBox69.Location = new System.Drawing.Point(10, 344);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(128, 20);
-            this.textBox69.TabIndex = 31;
+            this.textBoxItemTempStatsScaleValue.Location = new System.Drawing.Point(10, 344);
+            this.textBoxItemTempStatsScaleValue.Name = "textBoxItemTempStatsScaleValue";
+            this.textBoxItemTempStatsScaleValue.Size = new System.Drawing.Size(128, 20);
+            this.textBoxItemTempStatsScaleValue.TabIndex = 31;
             // 
             // label48
             // 
@@ -8732,12 +9288,12 @@
             this.label48.TabIndex = 30;
             this.label48.Text = "Scaling Stat Value:";
             // 
-            // textBox68
+            // textBoxItemTempStatsScaleDist
             // 
-            this.textBox68.Location = new System.Drawing.Point(10, 305);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(125, 20);
-            this.textBox68.TabIndex = 29;
+            this.textBoxItemTempStatsScaleDist.Location = new System.Drawing.Point(10, 305);
+            this.textBoxItemTempStatsScaleDist.Name = "textBoxItemTempStatsScaleDist";
+            this.textBoxItemTempStatsScaleDist.Size = new System.Drawing.Size(125, 20);
+            this.textBoxItemTempStatsScaleDist.TabIndex = 29;
             // 
             // label47
             // 
@@ -8748,110 +9304,110 @@
             this.label47.TabIndex = 28;
             this.label47.Text = "Scaling Stat Distrubution:";
             // 
-            // textBox47
+            // textBoxItemTempStatsValue10
             // 
-            this.textBox47.Location = new System.Drawing.Point(75, 266);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(60, 20);
-            this.textBox47.TabIndex = 27;
+            this.textBoxItemTempStatsValue10.Location = new System.Drawing.Point(75, 266);
+            this.textBoxItemTempStatsValue10.Name = "textBoxItemTempStatsValue10";
+            this.textBoxItemTempStatsValue10.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue10.TabIndex = 27;
             // 
-            // textBox43
+            // textBoxItemTempStatsValue8
             // 
-            this.textBox43.Location = new System.Drawing.Point(75, 214);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(60, 20);
-            this.textBox43.TabIndex = 27;
+            this.textBoxItemTempStatsValue8.Location = new System.Drawing.Point(75, 214);
+            this.textBoxItemTempStatsValue8.Name = "textBoxItemTempStatsValue8";
+            this.textBoxItemTempStatsValue8.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue8.TabIndex = 27;
             // 
-            // textBox35
+            // textBoxItemTempStatsValue4
             // 
-            this.textBox35.Location = new System.Drawing.Point(75, 110);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(60, 20);
-            this.textBox35.TabIndex = 27;
+            this.textBoxItemTempStatsValue4.Location = new System.Drawing.Point(75, 110);
+            this.textBoxItemTempStatsValue4.Name = "textBoxItemTempStatsValue4";
+            this.textBoxItemTempStatsValue4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue4.TabIndex = 27;
             // 
-            // textBox42
+            // textBoxItemTempStatsValue6
             // 
-            this.textBox42.Location = new System.Drawing.Point(75, 162);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(60, 20);
-            this.textBox42.TabIndex = 27;
+            this.textBoxItemTempStatsValue6.Location = new System.Drawing.Point(75, 162);
+            this.textBoxItemTempStatsValue6.Name = "textBoxItemTempStatsValue6";
+            this.textBoxItemTempStatsValue6.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue6.TabIndex = 27;
             // 
-            // textBox31
+            // textBoxItemTempStatsValue2
             // 
-            this.textBox31.Location = new System.Drawing.Point(75, 58);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(60, 20);
-            this.textBox31.TabIndex = 27;
+            this.textBoxItemTempStatsValue2.Location = new System.Drawing.Point(75, 58);
+            this.textBoxItemTempStatsValue2.Name = "textBoxItemTempStatsValue2";
+            this.textBoxItemTempStatsValue2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue2.TabIndex = 27;
             // 
-            // textBox46
+            // textBoxItemTempStatsValue9
             // 
-            this.textBox46.Location = new System.Drawing.Point(75, 240);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(60, 20);
-            this.textBox46.TabIndex = 27;
+            this.textBoxItemTempStatsValue9.Location = new System.Drawing.Point(75, 240);
+            this.textBoxItemTempStatsValue9.Name = "textBoxItemTempStatsValue9";
+            this.textBoxItemTempStatsValue9.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue9.TabIndex = 27;
             // 
-            // textBox41
+            // textBoxItemTempStatsValue7
             // 
-            this.textBox41.Location = new System.Drawing.Point(75, 188);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(60, 20);
-            this.textBox41.TabIndex = 27;
+            this.textBoxItemTempStatsValue7.Location = new System.Drawing.Point(75, 188);
+            this.textBoxItemTempStatsValue7.Name = "textBoxItemTempStatsValue7";
+            this.textBoxItemTempStatsValue7.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue7.TabIndex = 27;
             // 
-            // textBox34
+            // textBoxItemTempStatsValue3
             // 
-            this.textBox34.Location = new System.Drawing.Point(75, 84);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(60, 20);
-            this.textBox34.TabIndex = 27;
+            this.textBoxItemTempStatsValue3.Location = new System.Drawing.Point(75, 84);
+            this.textBoxItemTempStatsValue3.Name = "textBoxItemTempStatsValue3";
+            this.textBoxItemTempStatsValue3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue3.TabIndex = 27;
             // 
-            // textBox45
+            // textBoxItemTempStatsType10
             // 
-            this.textBox45.Location = new System.Drawing.Point(9, 266);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(60, 20);
-            this.textBox45.TabIndex = 25;
+            this.textBoxItemTempStatsType10.Location = new System.Drawing.Point(9, 266);
+            this.textBoxItemTempStatsType10.Name = "textBoxItemTempStatsType10";
+            this.textBoxItemTempStatsType10.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType10.TabIndex = 25;
             // 
-            // textBox40
+            // textBoxItemTempStatsValue5
             // 
-            this.textBox40.Location = new System.Drawing.Point(75, 136);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(60, 20);
-            this.textBox40.TabIndex = 27;
+            this.textBoxItemTempStatsValue5.Location = new System.Drawing.Point(75, 136);
+            this.textBoxItemTempStatsValue5.Name = "textBoxItemTempStatsValue5";
+            this.textBoxItemTempStatsValue5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue5.TabIndex = 27;
             // 
-            // textBox39
+            // textBoxItemTempStatsType8
             // 
-            this.textBox39.Location = new System.Drawing.Point(9, 214);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(60, 20);
-            this.textBox39.TabIndex = 25;
+            this.textBoxItemTempStatsType8.Location = new System.Drawing.Point(9, 214);
+            this.textBoxItemTempStatsType8.Name = "textBoxItemTempStatsType8";
+            this.textBoxItemTempStatsType8.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType8.TabIndex = 25;
             // 
-            // textBox29
+            // textBoxItemTempStatsValue1
             // 
-            this.textBox29.Location = new System.Drawing.Point(75, 32);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(60, 20);
-            this.textBox29.TabIndex = 27;
+            this.textBoxItemTempStatsValue1.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempStatsValue1.Name = "textBoxItemTempStatsValue1";
+            this.textBoxItemTempStatsValue1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsValue1.TabIndex = 27;
             // 
-            // textBox44
+            // textBoxItemTempStatsType9
             // 
-            this.textBox44.Location = new System.Drawing.Point(9, 240);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(60, 20);
-            this.textBox44.TabIndex = 25;
+            this.textBoxItemTempStatsType9.Location = new System.Drawing.Point(9, 240);
+            this.textBoxItemTempStatsType9.Name = "textBoxItemTempStatsType9";
+            this.textBoxItemTempStatsType9.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType9.TabIndex = 25;
             // 
-            // textBox33
+            // textBoxItemTempStatsType4
             // 
-            this.textBox33.Location = new System.Drawing.Point(9, 110);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(60, 20);
-            this.textBox33.TabIndex = 25;
+            this.textBoxItemTempStatsType4.Location = new System.Drawing.Point(9, 110);
+            this.textBoxItemTempStatsType4.Name = "textBoxItemTempStatsType4";
+            this.textBoxItemTempStatsType4.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType4.TabIndex = 25;
             // 
-            // textBox38
+            // textBoxItemTempStatsType7
             // 
-            this.textBox38.Location = new System.Drawing.Point(9, 188);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(60, 20);
-            this.textBox38.TabIndex = 25;
+            this.textBoxItemTempStatsType7.Location = new System.Drawing.Point(9, 188);
+            this.textBoxItemTempStatsType7.Name = "textBoxItemTempStatsType7";
+            this.textBoxItemTempStatsType7.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType7.TabIndex = 25;
             // 
             // label30
             // 
@@ -8862,40 +9418,40 @@
             this.label30.TabIndex = 26;
             this.label30.Text = "Value:";
             // 
-            // textBox37
+            // textBoxItemTempStatsType6
             // 
-            this.textBox37.Location = new System.Drawing.Point(9, 162);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(60, 20);
-            this.textBox37.TabIndex = 25;
+            this.textBoxItemTempStatsType6.Location = new System.Drawing.Point(9, 162);
+            this.textBoxItemTempStatsType6.Name = "textBoxItemTempStatsType6";
+            this.textBoxItemTempStatsType6.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType6.TabIndex = 25;
             // 
-            // textBox32
+            // textBoxItemTempStatsType3
             // 
-            this.textBox32.Location = new System.Drawing.Point(9, 84);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(60, 20);
-            this.textBox32.TabIndex = 25;
+            this.textBoxItemTempStatsType3.Location = new System.Drawing.Point(9, 84);
+            this.textBoxItemTempStatsType3.Name = "textBoxItemTempStatsType3";
+            this.textBoxItemTempStatsType3.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType3.TabIndex = 25;
             // 
-            // textBox36
+            // textBoxItemTempStatsType5
             // 
-            this.textBox36.Location = new System.Drawing.Point(9, 136);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(60, 20);
-            this.textBox36.TabIndex = 25;
+            this.textBoxItemTempStatsType5.Location = new System.Drawing.Point(9, 136);
+            this.textBoxItemTempStatsType5.Name = "textBoxItemTempStatsType5";
+            this.textBoxItemTempStatsType5.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType5.TabIndex = 25;
             // 
-            // textBox30
+            // textBoxItemTempStatsType2
             // 
-            this.textBox30.Location = new System.Drawing.Point(9, 58);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(60, 20);
-            this.textBox30.TabIndex = 25;
+            this.textBoxItemTempStatsType2.Location = new System.Drawing.Point(9, 58);
+            this.textBoxItemTempStatsType2.Name = "textBoxItemTempStatsType2";
+            this.textBoxItemTempStatsType2.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType2.TabIndex = 25;
             // 
-            // textBox28
+            // textBoxItemTempStatsType1
             // 
-            this.textBox28.Location = new System.Drawing.Point(9, 32);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(60, 20);
-            this.textBox28.TabIndex = 25;
+            this.textBoxItemTempStatsType1.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempStatsType1.Name = "textBoxItemTempStatsType1";
+            this.textBoxItemTempStatsType1.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempStatsType1.TabIndex = 25;
             // 
             // label29
             // 
@@ -8906,45 +9462,65 @@
             this.label29.TabIndex = 24;
             this.label29.Text = "Type:";
             // 
-            // groupBox2
+            // groupBoxItemTemplateRequirements
             // 
-            this.groupBox2.Controls.Add(this.textBox98);
-            this.groupBox2.Controls.Add(this.label77);
-            this.groupBox2.Controls.Add(this.textBox97);
-            this.groupBox2.Controls.Add(this.label76);
-            this.groupBox2.Controls.Add(this.textBox20);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.textBox19);
-            this.groupBox2.Controls.Add(this.textBox18);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.textBox17);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox16);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBox15);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox14);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(591, 308);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(208, 176);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Requirements";
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.buttonItemTempClassPopup);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.buttonItemTempReqRacePopup);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqItemLevel);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label77);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqDisenchant);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label76);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqRepRank);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label21);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqRepFaction);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqCityRank);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label20);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label19);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqHonorRank);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label18);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqSpell);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label17);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqSkillRank);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label16);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqSkill);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label15);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqLevel);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label14);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqRace);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label13);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.textBoxItemTempReqClass);
+            this.groupBoxItemTemplateRequirements.Controls.Add(this.label12);
+            this.groupBoxItemTemplateRequirements.Location = new System.Drawing.Point(591, 308);
+            this.groupBoxItemTemplateRequirements.Name = "groupBoxItemTemplateRequirements";
+            this.groupBoxItemTemplateRequirements.Size = new System.Drawing.Size(208, 176);
+            this.groupBoxItemTemplateRequirements.TabIndex = 1;
+            this.groupBoxItemTemplateRequirements.TabStop = false;
+            this.groupBoxItemTemplateRequirements.Text = "Requirements";
             // 
-            // textBox98
+            // buttonItemTempClassPopup
             // 
-            this.textBox98.Location = new System.Drawing.Point(141, 149);
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(60, 20);
-            this.textBox98.TabIndex = 27;
+            this.buttonItemTempClassPopup.Location = new System.Drawing.Point(116, 33);
+            this.buttonItemTempClassPopup.Name = "buttonItemTempClassPopup";
+            this.buttonItemTempClassPopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempClassPopup.TabIndex = 36;
+            this.buttonItemTempClassPopup.UseVisualStyleBackColor = true;
+            this.buttonItemTempClassPopup.Click += new System.EventHandler(this.buttonItemTempClassPopup_Click);
+            // 
+            // buttonItemTempReqRacePopup
+            // 
+            this.buttonItemTempReqRacePopup.Location = new System.Drawing.Point(50, 33);
+            this.buttonItemTempReqRacePopup.Name = "buttonItemTempReqRacePopup";
+            this.buttonItemTempReqRacePopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempReqRacePopup.TabIndex = 35;
+            this.buttonItemTempReqRacePopup.UseVisualStyleBackColor = true;
+            this.buttonItemTempReqRacePopup.Click += new System.EventHandler(this.buttonItemTempRacePopup_Click);
+            // 
+            // textBoxItemTempReqItemLevel
+            // 
+            this.textBoxItemTempReqItemLevel.Location = new System.Drawing.Point(141, 149);
+            this.textBoxItemTempReqItemLevel.Name = "textBoxItemTempReqItemLevel";
+            this.textBoxItemTempReqItemLevel.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqItemLevel.TabIndex = 27;
             // 
             // label77
             // 
@@ -8955,12 +9531,12 @@
             this.label77.TabIndex = 26;
             this.label77.Text = "Item Level:";
             // 
-            // textBox97
+            // textBoxItemTempReqDisenchant
             // 
-            this.textBox97.Location = new System.Drawing.Point(141, 110);
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(60, 20);
-            this.textBox97.TabIndex = 25;
+            this.textBoxItemTempReqDisenchant.Location = new System.Drawing.Point(141, 110);
+            this.textBoxItemTempReqDisenchant.Name = "textBoxItemTempReqDisenchant";
+            this.textBoxItemTempReqDisenchant.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqDisenchant.TabIndex = 25;
             // 
             // label76
             // 
@@ -8971,12 +9547,12 @@
             this.label76.TabIndex = 24;
             this.label76.Text = "Disenchant:";
             // 
-            // textBox20
+            // textBoxItemTempReqRepRank
             // 
-            this.textBox20.Location = new System.Drawing.Point(75, 110);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(60, 20);
-            this.textBox20.TabIndex = 23;
+            this.textBoxItemTempReqRepRank.Location = new System.Drawing.Point(75, 110);
+            this.textBoxItemTempReqRepRank.Name = "textBoxItemTempReqRepRank";
+            this.textBoxItemTempReqRepRank.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqRepRank.TabIndex = 23;
             // 
             // label21
             // 
@@ -8987,19 +9563,19 @@
             this.label21.TabIndex = 22;
             this.label21.Text = "Rep Rank:";
             // 
-            // textBox19
+            // textBoxItemTempReqRepFaction
             // 
-            this.textBox19.Location = new System.Drawing.Point(9, 110);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(60, 20);
-            this.textBox19.TabIndex = 21;
+            this.textBoxItemTempReqRepFaction.Location = new System.Drawing.Point(9, 110);
+            this.textBoxItemTempReqRepFaction.Name = "textBoxItemTempReqRepFaction";
+            this.textBoxItemTempReqRepFaction.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqRepFaction.TabIndex = 21;
             // 
-            // textBox18
+            // textBoxItemTempReqCityRank
             // 
-            this.textBox18.Location = new System.Drawing.Point(75, 149);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(60, 20);
-            this.textBox18.TabIndex = 19;
+            this.textBoxItemTempReqCityRank.Location = new System.Drawing.Point(75, 149);
+            this.textBoxItemTempReqCityRank.Name = "textBoxItemTempReqCityRank";
+            this.textBoxItemTempReqCityRank.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqCityRank.TabIndex = 19;
             // 
             // label20
             // 
@@ -9019,12 +9595,12 @@
             this.label19.TabIndex = 18;
             this.label19.Text = "City Rank:";
             // 
-            // textBox17
+            // textBoxItemTempReqHonorRank
             // 
-            this.textBox17.Location = new System.Drawing.Point(141, 71);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(60, 20);
-            this.textBox17.TabIndex = 17;
+            this.textBoxItemTempReqHonorRank.Location = new System.Drawing.Point(141, 71);
+            this.textBoxItemTempReqHonorRank.Name = "textBoxItemTempReqHonorRank";
+            this.textBoxItemTempReqHonorRank.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqHonorRank.TabIndex = 17;
             // 
             // label18
             // 
@@ -9035,12 +9611,12 @@
             this.label18.TabIndex = 16;
             this.label18.Text = "Honorrank:";
             // 
-            // textBox16
+            // textBoxItemTempReqSpell
             // 
-            this.textBox16.Location = new System.Drawing.Point(12, 149);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(60, 20);
-            this.textBox16.TabIndex = 15;
+            this.textBoxItemTempReqSpell.Location = new System.Drawing.Point(12, 149);
+            this.textBoxItemTempReqSpell.Name = "textBoxItemTempReqSpell";
+            this.textBoxItemTempReqSpell.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqSpell.TabIndex = 15;
             // 
             // label17
             // 
@@ -9051,12 +9627,12 @@
             this.label17.TabIndex = 14;
             this.label17.Text = "Spell:";
             // 
-            // textBox15
+            // textBoxItemTempReqSkillRank
             // 
-            this.textBox15.Location = new System.Drawing.Point(75, 71);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(60, 20);
-            this.textBox15.TabIndex = 13;
+            this.textBoxItemTempReqSkillRank.Location = new System.Drawing.Point(75, 71);
+            this.textBoxItemTempReqSkillRank.Name = "textBoxItemTempReqSkillRank";
+            this.textBoxItemTempReqSkillRank.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqSkillRank.TabIndex = 13;
             // 
             // label16
             // 
@@ -9067,12 +9643,12 @@
             this.label16.TabIndex = 12;
             this.label16.Text = "Skill Rank:";
             // 
-            // textBox14
+            // textBoxItemTempReqSkill
             // 
-            this.textBox14.Location = new System.Drawing.Point(9, 71);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(60, 20);
-            this.textBox14.TabIndex = 11;
+            this.textBoxItemTempReqSkill.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempReqSkill.Name = "textBoxItemTempReqSkill";
+            this.textBoxItemTempReqSkill.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqSkill.TabIndex = 11;
             // 
             // label15
             // 
@@ -9083,12 +9659,12 @@
             this.label15.TabIndex = 10;
             this.label15.Text = "Skill:";
             // 
-            // textBox13
+            // textBoxItemTempReqLevel
             // 
-            this.textBox13.Location = new System.Drawing.Point(141, 32);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(60, 20);
-            this.textBox13.TabIndex = 9;
+            this.textBoxItemTempReqLevel.Location = new System.Drawing.Point(141, 32);
+            this.textBoxItemTempReqLevel.Name = "textBoxItemTempReqLevel";
+            this.textBoxItemTempReqLevel.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqLevel.TabIndex = 9;
             // 
             // label14
             // 
@@ -9099,12 +9675,12 @@
             this.label14.TabIndex = 8;
             this.label14.Text = "Req Level:";
             // 
-            // textBox12
+            // textBoxItemTempReqRace
             // 
-            this.textBox12.Location = new System.Drawing.Point(9, 32);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(60, 20);
-            this.textBox12.TabIndex = 7;
+            this.textBoxItemTempReqRace.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempReqRace.Name = "textBoxItemTempReqRace";
+            this.textBoxItemTempReqRace.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqRace.TabIndex = 7;
             // 
             // label13
             // 
@@ -9115,12 +9691,12 @@
             this.label13.TabIndex = 6;
             this.label13.Text = "Race:";
             // 
-            // textBox11
+            // textBoxItemTempReqClass
             // 
-            this.textBox11.Location = new System.Drawing.Point(75, 32);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(60, 20);
-            this.textBox11.TabIndex = 5;
+            this.textBoxItemTempReqClass.Location = new System.Drawing.Point(75, 32);
+            this.textBoxItemTempReqClass.Name = "textBoxItemTempReqClass";
+            this.textBoxItemTempReqClass.Size = new System.Drawing.Size(60, 20);
+            this.textBoxItemTempReqClass.TabIndex = 5;
             // 
             // label12
             // 
@@ -9131,55 +9707,55 @@
             this.label12.TabIndex = 4;
             this.label12.Text = "Class:";
             // 
-            // groupBox1
+            // groupBoxItemTemplateGeneral
             // 
-            this.groupBox1.Controls.Add(this.textBox27);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.textBox26);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.textBox25);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.textBox24);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.textBox23);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.textBox22);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.textBox21);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.textBox10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox9);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(943, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "General";
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempStatsC);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label28);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempContainer);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label27);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempStack);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label26);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempMaxC);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label25);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempEFlags);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label24);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempFlags);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label23);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempDescription);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label22);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempInventory);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label11);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempSellP);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label10);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempBuyP);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label9);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempBuyC);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label8);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempQuality);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label7);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempDisplayID);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label5);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempName);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label6);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempSubclass);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label4);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempClass);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label3);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempEntry);
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.label2);
+            this.groupBoxItemTemplateGeneral.Location = new System.Drawing.Point(6, 6);
+            this.groupBoxItemTemplateGeneral.Name = "groupBoxItemTemplateGeneral";
+            this.groupBoxItemTemplateGeneral.Size = new System.Drawing.Size(943, 100);
+            this.groupBoxItemTemplateGeneral.TabIndex = 0;
+            this.groupBoxItemTemplateGeneral.TabStop = false;
+            this.groupBoxItemTemplateGeneral.Text = "General";
             // 
-            // textBox27
+            // textBoxItemTempStatsC
             // 
-            this.textBox27.Location = new System.Drawing.Point(857, 71);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(80, 20);
-            this.textBox27.TabIndex = 35;
+            this.textBoxItemTempStatsC.Location = new System.Drawing.Point(857, 71);
+            this.textBoxItemTempStatsC.Name = "textBoxItemTempStatsC";
+            this.textBoxItemTempStatsC.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempStatsC.TabIndex = 35;
             // 
             // label28
             // 
@@ -9190,12 +9766,12 @@
             this.label28.TabIndex = 34;
             this.label28.Text = "Stats Count:";
             // 
-            // textBox26
+            // textBoxItemTempContainer
             // 
-            this.textBox26.Location = new System.Drawing.Point(579, 71);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(80, 20);
-            this.textBox26.TabIndex = 33;
+            this.textBoxItemTempContainer.Location = new System.Drawing.Point(579, 71);
+            this.textBoxItemTempContainer.Name = "textBoxItemTempContainer";
+            this.textBoxItemTempContainer.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempContainer.TabIndex = 33;
             // 
             // label27
             // 
@@ -9206,12 +9782,12 @@
             this.label27.TabIndex = 32;
             this.label27.Text = "Container Slot:";
             // 
-            // textBox25
+            // textBoxItemTempStack
             // 
-            this.textBox25.Location = new System.Drawing.Point(475, 71);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(80, 20);
-            this.textBox25.TabIndex = 31;
+            this.textBoxItemTempStack.Location = new System.Drawing.Point(475, 71);
+            this.textBoxItemTempStack.Name = "textBoxItemTempStack";
+            this.textBoxItemTempStack.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempStack.TabIndex = 31;
             // 
             // label26
             // 
@@ -9222,12 +9798,12 @@
             this.label26.TabIndex = 30;
             this.label26.Text = "Stackable:";
             // 
-            // textBox24
+            // textBoxItemTempMaxC
             // 
-            this.textBox24.Location = new System.Drawing.Point(371, 71);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(80, 20);
-            this.textBox24.TabIndex = 29;
+            this.textBoxItemTempMaxC.Location = new System.Drawing.Point(371, 71);
+            this.textBoxItemTempMaxC.Name = "textBoxItemTempMaxC";
+            this.textBoxItemTempMaxC.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempMaxC.TabIndex = 29;
             // 
             // label25
             // 
@@ -9238,12 +9814,12 @@
             this.label25.TabIndex = 28;
             this.label25.Text = "Max Count:";
             // 
-            // textBox23
+            // textBoxItemTempEFlags
             // 
-            this.textBox23.Location = new System.Drawing.Point(267, 71);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(80, 20);
-            this.textBox23.TabIndex = 27;
+            this.textBoxItemTempEFlags.Location = new System.Drawing.Point(267, 71);
+            this.textBoxItemTempEFlags.Name = "textBoxItemTempEFlags";
+            this.textBoxItemTempEFlags.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempEFlags.TabIndex = 27;
             // 
             // label24
             // 
@@ -9254,12 +9830,12 @@
             this.label24.TabIndex = 26;
             this.label24.Text = "Extra Flags:";
             // 
-            // textBox22
+            // textBoxItemTempFlags
             // 
-            this.textBox22.Location = new System.Drawing.Point(181, 71);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(80, 20);
-            this.textBox22.TabIndex = 25;
+            this.textBoxItemTempFlags.Location = new System.Drawing.Point(181, 71);
+            this.textBoxItemTempFlags.Name = "textBoxItemTempFlags";
+            this.textBoxItemTempFlags.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempFlags.TabIndex = 25;
             // 
             // label23
             // 
@@ -9270,12 +9846,12 @@
             this.label23.TabIndex = 24;
             this.label23.Text = "Flags:";
             // 
-            // textBox21
+            // textBoxItemTempDescription
             // 
-            this.textBox21.Location = new System.Drawing.Point(488, 32);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(277, 20);
-            this.textBox21.TabIndex = 23;
+            this.textBoxItemTempDescription.Location = new System.Drawing.Point(488, 32);
+            this.textBoxItemTempDescription.Name = "textBoxItemTempDescription";
+            this.textBoxItemTempDescription.Size = new System.Drawing.Size(277, 20);
+            this.textBoxItemTempDescription.TabIndex = 23;
             // 
             // label22
             // 
@@ -9286,12 +9862,12 @@
             this.label22.TabIndex = 22;
             this.label22.Text = "Description:";
             // 
-            // textBox10
+            // textBoxItemTempInventory
             // 
-            this.textBox10.Location = new System.Drawing.Point(95, 71);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(80, 20);
-            this.textBox10.TabIndex = 21;
+            this.textBoxItemTempInventory.Location = new System.Drawing.Point(95, 71);
+            this.textBoxItemTempInventory.Name = "textBoxItemTempInventory";
+            this.textBoxItemTempInventory.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempInventory.TabIndex = 21;
             // 
             // label11
             // 
@@ -9302,12 +9878,12 @@
             this.label11.TabIndex = 20;
             this.label11.Text = "Inventory:";
             // 
-            // textBox9
+            // textBoxItemTempSellP
             // 
-            this.textBox9.Location = new System.Drawing.Point(771, 71);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(80, 20);
-            this.textBox9.TabIndex = 19;
+            this.textBoxItemTempSellP.Location = new System.Drawing.Point(771, 71);
+            this.textBoxItemTempSellP.Name = "textBoxItemTempSellP";
+            this.textBoxItemTempSellP.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempSellP.TabIndex = 19;
             // 
             // label10
             // 
@@ -9318,12 +9894,12 @@
             this.label10.TabIndex = 18;
             this.label10.Text = "SellPrice:";
             // 
-            // textBox8
+            // textBoxItemTempBuyP
             // 
-            this.textBox8.Location = new System.Drawing.Point(683, 71);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(80, 20);
-            this.textBox8.TabIndex = 17;
+            this.textBoxItemTempBuyP.Location = new System.Drawing.Point(683, 71);
+            this.textBoxItemTempBuyP.Name = "textBoxItemTempBuyP";
+            this.textBoxItemTempBuyP.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempBuyP.TabIndex = 17;
             // 
             // label9
             // 
@@ -9334,12 +9910,12 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "BuyPrice:";
             // 
-            // textBox7
+            // textBoxItemTempBuyC
             // 
-            this.textBox7.Location = new System.Drawing.Point(9, 71);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(80, 20);
-            this.textBox7.TabIndex = 15;
+            this.textBoxItemTempBuyC.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempBuyC.Name = "textBoxItemTempBuyC";
+            this.textBoxItemTempBuyC.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempBuyC.TabIndex = 15;
             // 
             // label8
             // 
@@ -9350,12 +9926,12 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Buy Count:";
             // 
-            // textBox6
+            // textBoxItemTempQuality
             // 
-            this.textBox6.Location = new System.Drawing.Point(857, 32);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(80, 20);
-            this.textBox6.TabIndex = 13;
+            this.textBoxItemTempQuality.Location = new System.Drawing.Point(857, 32);
+            this.textBoxItemTempQuality.Name = "textBoxItemTempQuality";
+            this.textBoxItemTempQuality.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempQuality.TabIndex = 13;
             // 
             // label7
             // 
@@ -9366,12 +9942,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Quality:";
             // 
-            // textBox4
+            // textBoxItemTempDisplayID
             // 
-            this.textBox4.Location = new System.Drawing.Point(771, 32);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(80, 20);
-            this.textBox4.TabIndex = 11;
+            this.textBoxItemTempDisplayID.Location = new System.Drawing.Point(771, 32);
+            this.textBoxItemTempDisplayID.Name = "textBoxItemTempDisplayID";
+            this.textBoxItemTempDisplayID.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempDisplayID.TabIndex = 11;
             // 
             // label5
             // 
@@ -9382,12 +9958,12 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "DisplayID:";
             // 
-            // textBox5
+            // textBoxItemTempName
             // 
-            this.textBox5.Location = new System.Drawing.Point(267, 32);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(215, 20);
-            this.textBox5.TabIndex = 9;
+            this.textBoxItemTempName.Location = new System.Drawing.Point(267, 32);
+            this.textBoxItemTempName.Name = "textBoxItemTempName";
+            this.textBoxItemTempName.Size = new System.Drawing.Size(215, 20);
+            this.textBoxItemTempName.TabIndex = 9;
             // 
             // label6
             // 
@@ -9398,12 +9974,12 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Name:";
             // 
-            // textBox3
+            // textBoxItemTempSubclass
             // 
-            this.textBox3.Location = new System.Drawing.Point(181, 32);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(80, 20);
-            this.textBox3.TabIndex = 5;
+            this.textBoxItemTempSubclass.Location = new System.Drawing.Point(181, 32);
+            this.textBoxItemTempSubclass.Name = "textBoxItemTempSubclass";
+            this.textBoxItemTempSubclass.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempSubclass.TabIndex = 5;
             // 
             // label4
             // 
@@ -9414,12 +9990,12 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Subclass:";
             // 
-            // textBox2
+            // textBoxItemTempClass
             // 
-            this.textBox2.Location = new System.Drawing.Point(95, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(80, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxItemTempClass.Location = new System.Drawing.Point(95, 32);
+            this.textBoxItemTempClass.Name = "textBoxItemTempClass";
+            this.textBoxItemTempClass.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempClass.TabIndex = 3;
             // 
             // label3
             // 
@@ -9430,12 +10006,12 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Class:";
             // 
-            // textBox1
+            // textBoxItemTempEntry
             // 
-            this.textBox1.Location = new System.Drawing.Point(9, 32);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxItemTempEntry.Location = new System.Drawing.Point(9, 32);
+            this.textBoxItemTempEntry.Name = "textBoxItemTempEntry";
+            this.textBoxItemTempEntry.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemTempEntry.TabIndex = 1;
             // 
             // label2
             // 
@@ -9446,46 +10022,255 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Entry:";
             // 
-            // tabPage2
+            // tabPageItemLoot
             // 
-            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(955, 533);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Loot";
+            this.tabPageItemLoot.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootMAC);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootMIC);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootLM);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootGID);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootMAC);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootLM);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootMIC);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootGID);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootQR);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootQR);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootChance);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootChance);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootReference);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootReference);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootItemID);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootItemID);
+            this.tabPageItemLoot.Controls.Add(this.textBoxItemLootEntry);
+            this.tabPageItemLoot.Controls.Add(this.labelItemLootEntry);
+            this.tabPageItemLoot.Controls.Add(this.buttonItemLootGenerate);
+            this.tabPageItemLoot.Controls.Add(this.buttonItemLootDelete);
+            this.tabPageItemLoot.Controls.Add(this.buttonItemLootRefresh);
+            this.tabPageItemLoot.Controls.Add(this.buttonItemLootAdd);
+            this.tabPageItemLoot.Controls.Add(this.dataGridViewItemLoot);
+            this.tabPageItemLoot.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemLoot.Name = "tabPageItemLoot";
+            this.tabPageItemLoot.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemLoot.Size = new System.Drawing.Size(955, 533);
+            this.tabPageItemLoot.TabIndex = 2;
+            this.tabPageItemLoot.Text = "Loot";
             // 
-            // dataGridView1
+            // textBoxItemLootMAC
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxItemLootMAC.Location = new System.Drawing.Point(694, 507);
+            this.textBoxItemLootMAC.Name = "textBoxItemLootMAC";
+            this.textBoxItemLootMAC.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootMAC.TabIndex = 23;
+            // 
+            // textBoxItemLootMIC
+            // 
+            this.textBoxItemLootMIC.Location = new System.Drawing.Point(608, 507);
+            this.textBoxItemLootMIC.Name = "textBoxItemLootMIC";
+            this.textBoxItemLootMIC.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootMIC.TabIndex = 23;
+            // 
+            // labelItemLootLM
+            // 
+            this.labelItemLootLM.AutoSize = true;
+            this.labelItemLootLM.Location = new System.Drawing.Point(433, 491);
+            this.labelItemLootLM.Name = "labelItemLootLM";
+            this.labelItemLootLM.Size = new System.Drawing.Size(57, 13);
+            this.labelItemLootLM.TabIndex = 22;
+            this.labelItemLootLM.Text = "Lootmode:";
+            // 
+            // textBoxItemLootGID
+            // 
+            this.textBoxItemLootGID.Location = new System.Drawing.Point(522, 507);
+            this.textBoxItemLootGID.Name = "textBoxItemLootGID";
+            this.textBoxItemLootGID.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootGID.TabIndex = 23;
+            // 
+            // labelItemLootMAC
+            // 
+            this.labelItemLootMAC.AutoSize = true;
+            this.labelItemLootMAC.Location = new System.Drawing.Point(691, 491);
+            this.labelItemLootMAC.Name = "labelItemLootMAC";
+            this.labelItemLootMAC.Size = new System.Drawing.Size(61, 13);
+            this.labelItemLootMAC.TabIndex = 22;
+            this.labelItemLootMAC.Text = "Max Count:";
+            // 
+            // textBoxItemLootLM
+            // 
+            this.textBoxItemLootLM.Location = new System.Drawing.Point(436, 507);
+            this.textBoxItemLootLM.Name = "textBoxItemLootLM";
+            this.textBoxItemLootLM.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootLM.TabIndex = 23;
+            // 
+            // labelItemLootMIC
+            // 
+            this.labelItemLootMIC.AutoSize = true;
+            this.labelItemLootMIC.Location = new System.Drawing.Point(605, 491);
+            this.labelItemLootMIC.Name = "labelItemLootMIC";
+            this.labelItemLootMIC.Size = new System.Drawing.Size(58, 13);
+            this.labelItemLootMIC.TabIndex = 22;
+            this.labelItemLootMIC.Text = "Min Count:";
+            // 
+            // labelItemLootGID
+            // 
+            this.labelItemLootGID.AutoSize = true;
+            this.labelItemLootGID.Location = new System.Drawing.Point(519, 491);
+            this.labelItemLootGID.Name = "labelItemLootGID";
+            this.labelItemLootGID.Size = new System.Drawing.Size(53, 13);
+            this.labelItemLootGID.TabIndex = 22;
+            this.labelItemLootGID.Text = "Group ID:";
+            // 
+            // textBoxItemLootQR
+            // 
+            this.textBoxItemLootQR.Location = new System.Drawing.Point(350, 507);
+            this.textBoxItemLootQR.Name = "textBoxItemLootQR";
+            this.textBoxItemLootQR.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootQR.TabIndex = 23;
+            // 
+            // labelItemLootQR
+            // 
+            this.labelItemLootQR.AutoSize = true;
+            this.labelItemLootQR.Location = new System.Drawing.Point(347, 491);
+            this.labelItemLootQR.Name = "labelItemLootQR";
+            this.labelItemLootQR.Size = new System.Drawing.Size(81, 13);
+            this.labelItemLootQR.TabIndex = 22;
+            this.labelItemLootQR.Text = "QuestRequired:";
+            // 
+            // textBoxItemLootChance
+            // 
+            this.textBoxItemLootChance.Location = new System.Drawing.Point(264, 507);
+            this.textBoxItemLootChance.Name = "textBoxItemLootChance";
+            this.textBoxItemLootChance.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootChance.TabIndex = 23;
+            // 
+            // labelItemLootChance
+            // 
+            this.labelItemLootChance.AutoSize = true;
+            this.labelItemLootChance.Location = new System.Drawing.Point(261, 491);
+            this.labelItemLootChance.Name = "labelItemLootChance";
+            this.labelItemLootChance.Size = new System.Drawing.Size(47, 13);
+            this.labelItemLootChance.TabIndex = 22;
+            this.labelItemLootChance.Text = "Chance:";
+            // 
+            // textBoxItemLootReference
+            // 
+            this.textBoxItemLootReference.Location = new System.Drawing.Point(92, 507);
+            this.textBoxItemLootReference.Name = "textBoxItemLootReference";
+            this.textBoxItemLootReference.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootReference.TabIndex = 23;
+            // 
+            // labelItemLootReference
+            // 
+            this.labelItemLootReference.AutoSize = true;
+            this.labelItemLootReference.Location = new System.Drawing.Point(89, 491);
+            this.labelItemLootReference.Name = "labelItemLootReference";
+            this.labelItemLootReference.Size = new System.Drawing.Size(60, 13);
+            this.labelItemLootReference.TabIndex = 22;
+            this.labelItemLootReference.Text = "Reference:";
+            // 
+            // textBoxItemLootItemID
+            // 
+            this.textBoxItemLootItemID.Location = new System.Drawing.Point(178, 507);
+            this.textBoxItemLootItemID.Name = "textBoxItemLootItemID";
+            this.textBoxItemLootItemID.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootItemID.TabIndex = 23;
+            // 
+            // labelItemLootItemID
+            // 
+            this.labelItemLootItemID.AutoSize = true;
+            this.labelItemLootItemID.Location = new System.Drawing.Point(175, 491);
+            this.labelItemLootItemID.Name = "labelItemLootItemID";
+            this.labelItemLootItemID.Size = new System.Drawing.Size(44, 13);
+            this.labelItemLootItemID.TabIndex = 22;
+            this.labelItemLootItemID.Text = "Item ID:";
+            // 
+            // textBoxItemLootEntry
+            // 
+            this.textBoxItemLootEntry.Location = new System.Drawing.Point(6, 507);
+            this.textBoxItemLootEntry.Name = "textBoxItemLootEntry";
+            this.textBoxItemLootEntry.Size = new System.Drawing.Size(80, 20);
+            this.textBoxItemLootEntry.TabIndex = 23;
+            // 
+            // labelItemLootEntry
+            // 
+            this.labelItemLootEntry.AutoSize = true;
+            this.labelItemLootEntry.Location = new System.Drawing.Point(3, 491);
+            this.labelItemLootEntry.Name = "labelItemLootEntry";
+            this.labelItemLootEntry.Size = new System.Drawing.Size(34, 13);
+            this.labelItemLootEntry.TabIndex = 22;
+            this.labelItemLootEntry.Text = "Entry:";
+            // 
+            // buttonItemLootGenerate
+            // 
+            this.buttonItemLootGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonItemLootGenerate.BackgroundImage")));
+            this.buttonItemLootGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemLootGenerate.Location = new System.Drawing.Point(900, 498);
+            this.buttonItemLootGenerate.Name = "buttonItemLootGenerate";
+            this.buttonItemLootGenerate.Size = new System.Drawing.Size(29, 29);
+            this.buttonItemLootGenerate.TabIndex = 21;
+            this.buttonItemLootGenerate.UseVisualStyleBackColor = true;
+            this.buttonItemLootGenerate.Click += new System.EventHandler(this.buttonItemLootGenerate_Click);
+            // 
+            // buttonItemLootDelete
+            // 
+            this.buttonItemLootDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
+            this.buttonItemLootDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemLootDelete.Location = new System.Drawing.Point(850, 498);
+            this.buttonItemLootDelete.Name = "buttonItemLootDelete";
+            this.buttonItemLootDelete.Size = new System.Drawing.Size(29, 29);
+            this.buttonItemLootDelete.TabIndex = 21;
+            this.buttonItemLootDelete.UseVisualStyleBackColor = true;
+            this.buttonItemLootDelete.Click += new System.EventHandler(this.buttonItemLootDelete_Click);
+            // 
+            // buttonItemLootRefresh
+            // 
+            this.buttonItemLootRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
+            this.buttonItemLootRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemLootRefresh.Location = new System.Drawing.Point(815, 498);
+            this.buttonItemLootRefresh.Name = "buttonItemLootRefresh";
+            this.buttonItemLootRefresh.Size = new System.Drawing.Size(29, 29);
+            this.buttonItemLootRefresh.TabIndex = 20;
+            this.buttonItemLootRefresh.UseVisualStyleBackColor = true;
+            this.buttonItemLootRefresh.Click += new System.EventHandler(this.buttonItemLootRefresh_Click);
+            // 
+            // buttonItemLootAdd
+            // 
+            this.buttonItemLootAdd.BackgroundImage = global::Manti.Properties.Resources.iconAdd;
+            this.buttonItemLootAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemLootAdd.Location = new System.Drawing.Point(780, 498);
+            this.buttonItemLootAdd.Name = "buttonItemLootAdd";
+            this.buttonItemLootAdd.Size = new System.Drawing.Size(29, 29);
+            this.buttonItemLootAdd.TabIndex = 19;
+            this.buttonItemLootAdd.UseVisualStyleBackColor = true;
+            this.buttonItemLootAdd.Click += new System.EventHandler(this.buttonItemLootAdd_Click);
+            // 
+            // dataGridViewItemLoot
+            // 
+            this.dataGridViewItemLoot.AllowUserToAddRows = false;
+            this.dataGridViewItemLoot.AllowUserToDeleteRows = false;
+            this.dataGridViewItemLoot.AllowUserToResizeRows = false;
+            dataGridViewCellStyle97.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle97.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle97.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle97.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle97;
+            this.dataGridViewItemLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewItemLoot.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewItemLoot.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewItemLoot.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewItemLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewItemLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle98.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle98.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle98.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle98.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle98;
+            this.dataGridViewItemLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItemLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -9496,40 +10281,40 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn13});
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 0);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 99;
-            dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle44;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            this.dataGridView1.RowTemplate.Height = 15;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.Size = new System.Drawing.Size(952, 439);
-            this.dataGridView1.TabIndex = 18;
+            this.dataGridViewItemLoot.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewItemLoot.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewItemLoot.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewItemLoot.MultiSelect = false;
+            this.dataGridViewItemLoot.Name = "dataGridViewItemLoot";
+            this.dataGridViewItemLoot.ReadOnly = true;
+            this.dataGridViewItemLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle99.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle99.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle99.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle99.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle99;
+            this.dataGridViewItemLoot.RowHeadersVisible = false;
+            this.dataGridViewItemLoot.RowHeadersWidth = 99;
+            dataGridViewCellStyle100.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle100.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle100.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle100.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.RowsDefaultCellStyle = dataGridViewCellStyle100;
+            this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemLoot.RowTemplate.Height = 15;
+            this.dataGridViewItemLoot.RowTemplate.ReadOnly = true;
+            this.dataGridViewItemLoot.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewItemLoot.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewItemLoot.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItemLoot.ShowEditingIcon = false;
+            this.dataGridViewItemLoot.Size = new System.Drawing.Size(952, 479);
+            this.dataGridViewItemLoot.TabIndex = 18;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -9565,25 +10350,29 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn3.Width = 50;
+            this.dataGridViewTextBoxColumn3.Width = 75;
             // 
             // dataGridViewTextBoxColumn4
             // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Chance";
             this.dataGridViewTextBoxColumn4.HeaderText = "chance";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 75;
             // 
             // dataGridViewTextBoxColumn5
             // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn5.DataPropertyName = "QuestRequired";
             this.dataGridViewTextBoxColumn5.HeaderText = "questrequired";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 75;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -9594,6 +10383,7 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn6.Width = 75;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -9604,46 +10394,726 @@
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.Width = 75;
             // 
             // dataGridViewTextBoxColumn11
             // 
+            this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn11.DataPropertyName = "MinCount";
             this.dataGridViewTextBoxColumn11.HeaderText = "mincount";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn11.Width = 75;
             // 
             // dataGridViewTextBoxColumn12
             // 
+            this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn12.DataPropertyName = "MaxCount";
             this.dataGridViewTextBoxColumn12.HeaderText = "maxcount";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn12.Width = 75;
             // 
             // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Comment";
-            this.dataGridViewTextBoxColumn13.HeaderText = "comment";
+            this.dataGridViewTextBoxColumn13.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn13.HeaderText = "name";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn13.Width = 1000;
             // 
-            // menuStripMain
+            // tabPageItemProspecting
             // 
-            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.settingsToolStripMenuItem,
-            this.toolsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
-            this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(974, 24);
-            this.menuStripMain.TabIndex = 2;
-            this.menuStripMain.Text = "menuStrip1";
+            this.tabPageItemProspecting.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemProspecting.Controls.Add(this.dataGridViewItemProspecting);
+            this.tabPageItemProspecting.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemProspecting.Name = "tabPageItemProspecting";
+            this.tabPageItemProspecting.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemProspecting.Size = new System.Drawing.Size(955, 533);
+            this.tabPageItemProspecting.TabIndex = 3;
+            this.tabPageItemProspecting.Text = "Prospecting";
+            // 
+            // dataGridViewItemProspecting
+            // 
+            this.dataGridViewItemProspecting.AllowUserToAddRows = false;
+            this.dataGridViewItemProspecting.AllowUserToDeleteRows = false;
+            this.dataGridViewItemProspecting.AllowUserToResizeRows = false;
+            dataGridViewCellStyle101.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle101.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle101;
+            this.dataGridViewItemProspecting.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewItemProspecting.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewItemProspecting.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewItemProspecting.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemProspecting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewItemProspecting.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewItemProspecting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle102.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle102.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle102.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle102;
+            this.dataGridViewItemProspecting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItemProspecting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26,
+            this.dataGridViewTextBoxColumn27,
+            this.dataGridViewTextBoxColumn28,
+            this.dataGridViewTextBoxColumn29,
+            this.dataGridViewTextBoxColumn30,
+            this.dataGridViewTextBoxColumn31,
+            this.dataGridViewTextBoxColumn32,
+            this.dataGridViewTextBoxColumn33});
+            this.dataGridViewItemProspecting.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewItemProspecting.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewItemProspecting.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewItemProspecting.MultiSelect = false;
+            this.dataGridViewItemProspecting.Name = "dataGridViewItemProspecting";
+            this.dataGridViewItemProspecting.ReadOnly = true;
+            this.dataGridViewItemProspecting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle103.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle103.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle103.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.RowHeadersDefaultCellStyle = dataGridViewCellStyle103;
+            this.dataGridViewItemProspecting.RowHeadersVisible = false;
+            this.dataGridViewItemProspecting.RowHeadersWidth = 99;
+            dataGridViewCellStyle104.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle104.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle104.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.RowsDefaultCellStyle = dataGridViewCellStyle104;
+            this.dataGridViewItemProspecting.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemProspecting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewItemProspecting.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewItemProspecting.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemProspecting.RowTemplate.Height = 15;
+            this.dataGridViewItemProspecting.RowTemplate.ReadOnly = true;
+            this.dataGridViewItemProspecting.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewItemProspecting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewItemProspecting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItemProspecting.ShowEditingIcon = false;
+            this.dataGridViewItemProspecting.Size = new System.Drawing.Size(952, 439);
+            this.dataGridViewItemProspecting.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn24.DataPropertyName = "Entry";
+            this.dataGridViewTextBoxColumn24.Frozen = true;
+            this.dataGridViewTextBoxColumn24.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.ReadOnly = true;
+            this.dataGridViewTextBoxColumn24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn24.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this.dataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn25.DataPropertyName = "Item";
+            this.dataGridViewTextBoxColumn25.Frozen = true;
+            this.dataGridViewTextBoxColumn25.HeaderText = "item";
+            this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+            this.dataGridViewTextBoxColumn25.ReadOnly = true;
+            this.dataGridViewTextBoxColumn25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn25.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this.dataGridViewTextBoxColumn26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn26.DataPropertyName = "Reference";
+            this.dataGridViewTextBoxColumn26.Frozen = true;
+            this.dataGridViewTextBoxColumn26.HeaderText = "reference";
+            this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+            this.dataGridViewTextBoxColumn26.ReadOnly = true;
+            this.dataGridViewTextBoxColumn26.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn26.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this.dataGridViewTextBoxColumn27.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn27.DataPropertyName = "Chance";
+            this.dataGridViewTextBoxColumn27.HeaderText = "chance";
+            this.dataGridViewTextBoxColumn27.Name = "dataGridViewTextBoxColumn27";
+            this.dataGridViewTextBoxColumn27.ReadOnly = true;
+            this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn27.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this.dataGridViewTextBoxColumn28.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn28.DataPropertyName = "QuestRequired";
+            this.dataGridViewTextBoxColumn28.HeaderText = "questrequired";
+            this.dataGridViewTextBoxColumn28.Name = "dataGridViewTextBoxColumn28";
+            this.dataGridViewTextBoxColumn28.ReadOnly = true;
+            this.dataGridViewTextBoxColumn28.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn28.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this.dataGridViewTextBoxColumn29.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn29.DataPropertyName = "LootMode";
+            this.dataGridViewTextBoxColumn29.HeaderText = "lootmode";
+            this.dataGridViewTextBoxColumn29.Name = "dataGridViewTextBoxColumn29";
+            this.dataGridViewTextBoxColumn29.ReadOnly = true;
+            this.dataGridViewTextBoxColumn29.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn29.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn29.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this.dataGridViewTextBoxColumn30.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn30.DataPropertyName = "GroupId";
+            this.dataGridViewTextBoxColumn30.HeaderText = "groupid";
+            this.dataGridViewTextBoxColumn30.Name = "dataGridViewTextBoxColumn30";
+            this.dataGridViewTextBoxColumn30.ReadOnly = true;
+            this.dataGridViewTextBoxColumn30.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn30.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn30.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this.dataGridViewTextBoxColumn31.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn31.DataPropertyName = "MinCount";
+            this.dataGridViewTextBoxColumn31.HeaderText = "mincount";
+            this.dataGridViewTextBoxColumn31.Name = "dataGridViewTextBoxColumn31";
+            this.dataGridViewTextBoxColumn31.ReadOnly = true;
+            this.dataGridViewTextBoxColumn31.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn31.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn31.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this.dataGridViewTextBoxColumn32.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn32.DataPropertyName = "MaxCount";
+            this.dataGridViewTextBoxColumn32.HeaderText = "maxcount";
+            this.dataGridViewTextBoxColumn32.Name = "dataGridViewTextBoxColumn32";
+            this.dataGridViewTextBoxColumn32.ReadOnly = true;
+            this.dataGridViewTextBoxColumn32.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn32.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn32.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this.dataGridViewTextBoxColumn33.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn33.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn33.HeaderText = "name";
+            this.dataGridViewTextBoxColumn33.Name = "dataGridViewTextBoxColumn33";
+            this.dataGridViewTextBoxColumn33.ReadOnly = true;
+            this.dataGridViewTextBoxColumn33.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn33.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn33.Width = 1000;
+            // 
+            // tabPageItemMilling
+            // 
+            this.tabPageItemMilling.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemMilling.Controls.Add(this.dataGridViewItemMilling);
+            this.tabPageItemMilling.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemMilling.Name = "tabPageItemMilling";
+            this.tabPageItemMilling.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemMilling.Size = new System.Drawing.Size(955, 533);
+            this.tabPageItemMilling.TabIndex = 4;
+            this.tabPageItemMilling.Text = "Milling";
+            // 
+            // dataGridViewItemMilling
+            // 
+            this.dataGridViewItemMilling.AllowUserToAddRows = false;
+            this.dataGridViewItemMilling.AllowUserToDeleteRows = false;
+            this.dataGridViewItemMilling.AllowUserToResizeRows = false;
+            dataGridViewCellStyle105.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle105.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle105.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle105.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle105;
+            this.dataGridViewItemMilling.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewItemMilling.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewItemMilling.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewItemMilling.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemMilling.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewItemMilling.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewItemMilling.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle106.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle106.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle106.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle106.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle106.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle106;
+            this.dataGridViewItemMilling.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItemMilling.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn34,
+            this.dataGridViewTextBoxColumn35,
+            this.dataGridViewTextBoxColumn36,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38,
+            this.dataGridViewTextBoxColumn39,
+            this.dataGridViewTextBoxColumn40,
+            this.dataGridViewTextBoxColumn41,
+            this.dataGridViewTextBoxColumn42,
+            this.dataGridViewTextBoxColumn43});
+            this.dataGridViewItemMilling.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewItemMilling.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewItemMilling.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewItemMilling.MultiSelect = false;
+            this.dataGridViewItemMilling.Name = "dataGridViewItemMilling";
+            this.dataGridViewItemMilling.ReadOnly = true;
+            this.dataGridViewItemMilling.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle107.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.RowHeadersDefaultCellStyle = dataGridViewCellStyle107;
+            this.dataGridViewItemMilling.RowHeadersVisible = false;
+            this.dataGridViewItemMilling.RowHeadersWidth = 99;
+            dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.RowsDefaultCellStyle = dataGridViewCellStyle108;
+            this.dataGridViewItemMilling.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemMilling.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewItemMilling.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewItemMilling.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemMilling.RowTemplate.Height = 15;
+            this.dataGridViewItemMilling.RowTemplate.ReadOnly = true;
+            this.dataGridViewItemMilling.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewItemMilling.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewItemMilling.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItemMilling.ShowEditingIcon = false;
+            this.dataGridViewItemMilling.Size = new System.Drawing.Size(952, 439);
+            this.dataGridViewItemMilling.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this.dataGridViewTextBoxColumn34.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn34.DataPropertyName = "Entry";
+            this.dataGridViewTextBoxColumn34.Frozen = true;
+            this.dataGridViewTextBoxColumn34.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
+            this.dataGridViewTextBoxColumn34.ReadOnly = true;
+            this.dataGridViewTextBoxColumn34.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn34.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn34.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this.dataGridViewTextBoxColumn35.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn35.DataPropertyName = "Item";
+            this.dataGridViewTextBoxColumn35.Frozen = true;
+            this.dataGridViewTextBoxColumn35.HeaderText = "item";
+            this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
+            this.dataGridViewTextBoxColumn35.ReadOnly = true;
+            this.dataGridViewTextBoxColumn35.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn35.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn35.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this.dataGridViewTextBoxColumn36.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn36.DataPropertyName = "Reference";
+            this.dataGridViewTextBoxColumn36.Frozen = true;
+            this.dataGridViewTextBoxColumn36.HeaderText = "reference";
+            this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
+            this.dataGridViewTextBoxColumn36.ReadOnly = true;
+            this.dataGridViewTextBoxColumn36.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn36.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn36.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this.dataGridViewTextBoxColumn37.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "Chance";
+            this.dataGridViewTextBoxColumn37.HeaderText = "chance";
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.ReadOnly = true;
+            this.dataGridViewTextBoxColumn37.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn37.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn37.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this.dataGridViewTextBoxColumn38.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "QuestRequired";
+            this.dataGridViewTextBoxColumn38.HeaderText = "questrequired";
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.ReadOnly = true;
+            this.dataGridViewTextBoxColumn38.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn38.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn38.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this.dataGridViewTextBoxColumn39.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn39.DataPropertyName = "LootMode";
+            this.dataGridViewTextBoxColumn39.HeaderText = "lootmode";
+            this.dataGridViewTextBoxColumn39.Name = "dataGridViewTextBoxColumn39";
+            this.dataGridViewTextBoxColumn39.ReadOnly = true;
+            this.dataGridViewTextBoxColumn39.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn39.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn39.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this.dataGridViewTextBoxColumn40.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn40.DataPropertyName = "GroupId";
+            this.dataGridViewTextBoxColumn40.HeaderText = "groupid";
+            this.dataGridViewTextBoxColumn40.Name = "dataGridViewTextBoxColumn40";
+            this.dataGridViewTextBoxColumn40.ReadOnly = true;
+            this.dataGridViewTextBoxColumn40.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn40.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn40.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this.dataGridViewTextBoxColumn41.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn41.DataPropertyName = "MinCount";
+            this.dataGridViewTextBoxColumn41.HeaderText = "mincount";
+            this.dataGridViewTextBoxColumn41.Name = "dataGridViewTextBoxColumn41";
+            this.dataGridViewTextBoxColumn41.ReadOnly = true;
+            this.dataGridViewTextBoxColumn41.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn41.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn41.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this.dataGridViewTextBoxColumn42.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn42.DataPropertyName = "MaxCount";
+            this.dataGridViewTextBoxColumn42.HeaderText = "maxcount";
+            this.dataGridViewTextBoxColumn42.Name = "dataGridViewTextBoxColumn42";
+            this.dataGridViewTextBoxColumn42.ReadOnly = true;
+            this.dataGridViewTextBoxColumn42.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn42.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn42.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this.dataGridViewTextBoxColumn43.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn43.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn43.HeaderText = "name";
+            this.dataGridViewTextBoxColumn43.Name = "dataGridViewTextBoxColumn43";
+            this.dataGridViewTextBoxColumn43.ReadOnly = true;
+            this.dataGridViewTextBoxColumn43.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn43.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn43.Width = 1000;
+            // 
+            // tabPageItemDisenchant
+            // 
+            this.tabPageItemDisenchant.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemDisenchant.Controls.Add(this.dataGridViewItemDisenchant);
+            this.tabPageItemDisenchant.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemDisenchant.Name = "tabPageItemDisenchant";
+            this.tabPageItemDisenchant.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemDisenchant.Size = new System.Drawing.Size(955, 533);
+            this.tabPageItemDisenchant.TabIndex = 5;
+            this.tabPageItemDisenchant.Text = "Disenchant";
+            // 
+            // dataGridViewItemDisenchant
+            // 
+            this.dataGridViewItemDisenchant.AllowUserToAddRows = false;
+            this.dataGridViewItemDisenchant.AllowUserToDeleteRows = false;
+            this.dataGridViewItemDisenchant.AllowUserToResizeRows = false;
+            dataGridViewCellStyle109.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle109.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle109.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle109;
+            this.dataGridViewItemDisenchant.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewItemDisenchant.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewItemDisenchant.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dataGridViewItemDisenchant.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemDisenchant.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewItemDisenchant.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridViewItemDisenchant.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle110.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle110;
+            this.dataGridViewItemDisenchant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItemDisenchant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn44,
+            this.dataGridViewTextBoxColumn45,
+            this.dataGridViewTextBoxColumn46,
+            this.dataGridViewTextBoxColumn47,
+            this.dataGridViewTextBoxColumn48,
+            this.dataGridViewTextBoxColumn49,
+            this.dataGridViewTextBoxColumn50,
+            this.dataGridViewTextBoxColumn51,
+            this.dataGridViewTextBoxColumn52,
+            this.dataGridViewTextBoxColumn53});
+            this.dataGridViewItemDisenchant.GridColor = System.Drawing.SystemColors.HotTrack;
+            this.dataGridViewItemDisenchant.Location = new System.Drawing.Point(1, 3);
+            this.dataGridViewItemDisenchant.Margin = new System.Windows.Forms.Padding(0);
+            this.dataGridViewItemDisenchant.MultiSelect = false;
+            this.dataGridViewItemDisenchant.Name = "dataGridViewItemDisenchant";
+            this.dataGridViewItemDisenchant.ReadOnly = true;
+            this.dataGridViewItemDisenchant.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle111.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle111.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle111.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle111.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.RowHeadersDefaultCellStyle = dataGridViewCellStyle111;
+            this.dataGridViewItemDisenchant.RowHeadersVisible = false;
+            this.dataGridViewItemDisenchant.RowHeadersWidth = 99;
+            dataGridViewCellStyle112.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle112.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle112.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle112.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.RowsDefaultCellStyle = dataGridViewCellStyle112;
+            this.dataGridViewItemDisenchant.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewItemDisenchant.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewItemDisenchant.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridViewItemDisenchant.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            this.dataGridViewItemDisenchant.RowTemplate.Height = 15;
+            this.dataGridViewItemDisenchant.RowTemplate.ReadOnly = true;
+            this.dataGridViewItemDisenchant.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewItemDisenchant.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewItemDisenchant.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItemDisenchant.ShowEditingIcon = false;
+            this.dataGridViewItemDisenchant.Size = new System.Drawing.Size(952, 439);
+            this.dataGridViewItemDisenchant.TabIndex = 19;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this.dataGridViewTextBoxColumn44.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn44.DataPropertyName = "Entry";
+            this.dataGridViewTextBoxColumn44.Frozen = true;
+            this.dataGridViewTextBoxColumn44.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
+            this.dataGridViewTextBoxColumn44.ReadOnly = true;
+            this.dataGridViewTextBoxColumn44.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn44.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn44.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this.dataGridViewTextBoxColumn45.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn45.DataPropertyName = "Item";
+            this.dataGridViewTextBoxColumn45.Frozen = true;
+            this.dataGridViewTextBoxColumn45.HeaderText = "item";
+            this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
+            this.dataGridViewTextBoxColumn45.ReadOnly = true;
+            this.dataGridViewTextBoxColumn45.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn45.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn45.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn46
+            // 
+            this.dataGridViewTextBoxColumn46.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn46.DataPropertyName = "Reference";
+            this.dataGridViewTextBoxColumn46.Frozen = true;
+            this.dataGridViewTextBoxColumn46.HeaderText = "reference";
+            this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
+            this.dataGridViewTextBoxColumn46.ReadOnly = true;
+            this.dataGridViewTextBoxColumn46.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn46.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn46.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn47
+            // 
+            this.dataGridViewTextBoxColumn47.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn47.DataPropertyName = "Chance";
+            this.dataGridViewTextBoxColumn47.HeaderText = "chance";
+            this.dataGridViewTextBoxColumn47.Name = "dataGridViewTextBoxColumn47";
+            this.dataGridViewTextBoxColumn47.ReadOnly = true;
+            this.dataGridViewTextBoxColumn47.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn47.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn47.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn48
+            // 
+            this.dataGridViewTextBoxColumn48.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn48.DataPropertyName = "QuestRequired";
+            this.dataGridViewTextBoxColumn48.HeaderText = "questrequired";
+            this.dataGridViewTextBoxColumn48.Name = "dataGridViewTextBoxColumn48";
+            this.dataGridViewTextBoxColumn48.ReadOnly = true;
+            this.dataGridViewTextBoxColumn48.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn48.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn48.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn49
+            // 
+            this.dataGridViewTextBoxColumn49.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn49.DataPropertyName = "LootMode";
+            this.dataGridViewTextBoxColumn49.HeaderText = "lootmode";
+            this.dataGridViewTextBoxColumn49.Name = "dataGridViewTextBoxColumn49";
+            this.dataGridViewTextBoxColumn49.ReadOnly = true;
+            this.dataGridViewTextBoxColumn49.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn49.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn49.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn50
+            // 
+            this.dataGridViewTextBoxColumn50.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn50.DataPropertyName = "GroupId";
+            this.dataGridViewTextBoxColumn50.HeaderText = "groupid";
+            this.dataGridViewTextBoxColumn50.Name = "dataGridViewTextBoxColumn50";
+            this.dataGridViewTextBoxColumn50.ReadOnly = true;
+            this.dataGridViewTextBoxColumn50.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn50.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn50.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn51
+            // 
+            this.dataGridViewTextBoxColumn51.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn51.DataPropertyName = "MinCount";
+            this.dataGridViewTextBoxColumn51.HeaderText = "mincount";
+            this.dataGridViewTextBoxColumn51.Name = "dataGridViewTextBoxColumn51";
+            this.dataGridViewTextBoxColumn51.ReadOnly = true;
+            this.dataGridViewTextBoxColumn51.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn51.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn51.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn52
+            // 
+            this.dataGridViewTextBoxColumn52.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn52.DataPropertyName = "MaxCount";
+            this.dataGridViewTextBoxColumn52.HeaderText = "maxcount";
+            this.dataGridViewTextBoxColumn52.Name = "dataGridViewTextBoxColumn52";
+            this.dataGridViewTextBoxColumn52.ReadOnly = true;
+            this.dataGridViewTextBoxColumn52.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn52.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn52.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn53
+            // 
+            this.dataGridViewTextBoxColumn53.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.dataGridViewTextBoxColumn53.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn53.HeaderText = "name";
+            this.dataGridViewTextBoxColumn53.Name = "dataGridViewTextBoxColumn53";
+            this.dataGridViewTextBoxColumn53.ReadOnly = true;
+            this.dataGridViewTextBoxColumn53.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn53.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn53.Width = 1000;
+            // 
+            // tabPageItemScript
+            // 
+            this.tabPageItemScript.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageItemScript.Controls.Add(this.buttonItemScriptUpdate);
+            this.tabPageItemScript.Controls.Add(this.statusStripItemAffected);
+            this.tabPageItemScript.Controls.Add(this.textBoxItemScriptOutput);
+            this.tabPageItemScript.Location = new System.Drawing.Point(4, 22);
+            this.tabPageItemScript.Name = "tabPageItemScript";
+            this.tabPageItemScript.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageItemScript.Size = new System.Drawing.Size(955, 533);
+            this.tabPageItemScript.TabIndex = 6;
+            this.tabPageItemScript.Text = "Script";
+            // 
+            // buttonItemScriptUpdate
+            // 
+            this.buttonItemScriptUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonItemScriptUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonItemScriptUpdate.Location = new System.Drawing.Point(6, 482);
+            this.buttonItemScriptUpdate.Name = "buttonItemScriptUpdate";
+            this.buttonItemScriptUpdate.Size = new System.Drawing.Size(943, 23);
+            this.buttonItemScriptUpdate.TabIndex = 2;
+            this.buttonItemScriptUpdate.Text = "Update Database";
+            this.buttonItemScriptUpdate.UseVisualStyleBackColor = true;
+            this.buttonItemScriptUpdate.Click += new System.EventHandler(this.buttonItemScriptUpdate_Click);
+            // 
+            // statusStripItemAffected
+            // 
+            this.statusStripItemAffected.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelRow});
+            this.statusStripItemAffected.Location = new System.Drawing.Point(3, 508);
+            this.statusStripItemAffected.Name = "statusStripItemAffected";
+            this.statusStripItemAffected.Size = new System.Drawing.Size(949, 22);
+            this.statusStripItemAffected.SizingGrip = false;
+            this.statusStripItemAffected.TabIndex = 1;
+            this.statusStripItemAffected.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabelRow
+            // 
+            this.toolStripStatusLabelRow.Name = "toolStripStatusLabelRow";
+            this.toolStripStatusLabelRow.Size = new System.Drawing.Size(103, 17);
+            this.toolStripStatusLabelRow.Text = "Row(s) Affected: 0";
+            // 
+            // textBoxItemScriptOutput
+            // 
+            this.textBoxItemScriptOutput.BackColor = System.Drawing.Color.Black;
+            this.textBoxItemScriptOutput.ForeColor = System.Drawing.Color.White;
+            this.textBoxItemScriptOutput.Location = new System.Drawing.Point(6, 6);
+            this.textBoxItemScriptOutput.Multiline = true;
+            this.textBoxItemScriptOutput.Name = "textBoxItemScriptOutput";
+            this.textBoxItemScriptOutput.Size = new System.Drawing.Size(943, 470);
+            this.textBoxItemScriptOutput.TabIndex = 0;
+            // 
+            // toolStripStatusLabelAccountSearchRow
+            // 
+            this.toolStripStatusLabelAccountSearchRow.Name = "toolStripStatusLabelAccountSearchRow";
+            this.toolStripStatusLabelAccountSearchRow.Size = new System.Drawing.Size(112, 17);
+            this.toolStripStatusLabelAccountSearchRow.Text = "Account(s) found: 0";
+            // 
+            // toolStripStatusLabelAccountScriptResult
+            // 
+            this.toolStripStatusLabelAccountScriptResult.Name = "toolStripStatusLabelAccountScriptResult";
+            this.toolStripStatusLabelAccountScriptResult.Size = new System.Drawing.Size(95, 17);
+            this.toolStripStatusLabelAccountScriptResult.Text = "Row(s) affected: ";
+            // 
+            // toolStripStatusLabelCharacterSearchRow
+            // 
+            this.toolStripStatusLabelCharacterSearchRow.Name = "toolStripStatusLabelCharacterSearchRow";
+            this.toolStripStatusLabelCharacterSearchRow.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabelCharacterSearchRow.Text = "Character(s) found: 0";
+            // 
+            // toolStripStatusLabelCreatureSearchRow
+            // 
+            this.toolStripStatusLabelCreatureSearchRow.Name = "toolStripStatusLabelCreatureSearchRow";
+            this.toolStripStatusLabelCreatureSearchRow.Size = new System.Drawing.Size(112, 17);
+            this.toolStripStatusLabelCreatureSearchRow.Text = "Creature(s) found: 0";
+            // 
+            // toolStripStatusLabelQuestSearchRow
+            // 
+            this.toolStripStatusLabelQuestSearchRow.Name = "toolStripStatusLabelQuestSearchRow";
+            this.toolStripStatusLabelQuestSearchRow.Size = new System.Drawing.Size(98, 17);
+            this.toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: 0";
+            // 
+            // toolStripStatusLabelGameObjectSearchRow
+            // 
+            this.toolStripStatusLabelGameObjectSearchRow.Name = "toolStripStatusLabelGameObjectSearchRow";
+            this.toolStripStatusLabelGameObjectSearchRow.Size = new System.Drawing.Size(136, 17);
+            this.toolStripStatusLabelGameObjectSearchRow.Text = "Game Object(s) found: 0";
+            // 
+            // toolStripStatusLabelItemSearchRow
+            // 
+            this.toolStripStatusLabelItemSearchRow.Name = "toolStripStatusLabelItemSearchRow";
+            this.toolStripStatusLabelItemSearchRow.Size = new System.Drawing.Size(85, 17);
+            this.toolStripStatusLabelItemSearchRow.Text = "Item(s) found: ";
             // 
             // fileToolStripMenuItem
             // 
@@ -9670,7 +11140,7 @@
             this.controlPanelToolStripMenuItemTools.Name = "controlPanelToolStripMenuItemTools";
             this.controlPanelToolStripMenuItemTools.Size = new System.Drawing.Size(146, 22);
             this.controlPanelToolStripMenuItemTools.Text = "Control Panel";
-            this.controlPanelToolStripMenuItemTools.Click += new System.EventHandler(this.controlPanelToolStripMenuItemTools_Click);
+            this.controlPanelToolStripMenuItemTools.Click += new System.EventHandler(this.controlPanelToolStripMenuTools_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -9684,6 +11154,60 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // menuStripMain
+            // 
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem1,
+            this.settingsToolStripMenuItem1,
+            this.toolsToolStripMenuItem1,
+            this.helpToolStripMenuItem1});
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Size = new System.Drawing.Size(974, 24);
+            this.menuStripMain.TabIndex = 2;
+            this.menuStripMain.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem1
+            // 
+            this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
+            this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem1.Text = "File";
+            // 
+            // settingsToolStripMenuItem1
+            // 
+            this.settingsToolStripMenuItem1.Name = "settingsToolStripMenuItem1";
+            this.settingsToolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
+            this.settingsToolStripMenuItem1.Text = "Settings";
+            // 
+            // toolsToolStripMenuItem1
+            // 
+            this.toolsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.controlPanelToolStripMenuTools});
+            this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem1.Text = "Tools";
+            // 
+            // controlPanelToolStripMenuTools
+            // 
+            this.controlPanelToolStripMenuTools.Name = "controlPanelToolStripMenuTools";
+            this.controlPanelToolStripMenuTools.Size = new System.Drawing.Size(152, 22);
+            this.controlPanelToolStripMenuTools.Text = "Control Panel";
+            this.controlPanelToolStripMenuTools.Click += new System.EventHandler(this.controlPanelToolStripMenuTools_Click);
+            // 
+            // helpToolStripMenuItem1
+            // 
+            this.helpToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem1.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -9695,7 +11219,7 @@
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Manti Manager";
+            this.Text = "Manti : Manager (ALPHA)";
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.tabControlCategory.ResumeLayout(false);
             this.tabPageAccount.ResumeLayout(false);
@@ -9703,8 +11227,6 @@
             this.tabPageAccountSearch.ResumeLayout(false);
             this.tabPageAccountSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAccountSearch)).EndInit();
-            this.statusStripAccountSearch.ResumeLayout(false);
-            this.statusStripAccountSearch.PerformLayout();
             this.tabPageAccountAccount.ResumeLayout(false);
             this.groupBoxAccountAccountBan.ResumeLayout(false);
             this.groupBoxAccountAccountBan.PerformLayout();
@@ -9722,8 +11244,6 @@
             this.tabPageCharacterSearch.ResumeLayout(false);
             this.tabPageCharacterSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterSearch)).EndInit();
-            this.statusStripCharacterSearch.ResumeLayout(false);
-            this.statusStripCharacterSearch.PerformLayout();
             this.tabPageCharacterCharacter.ResumeLayout(false);
             this.tabPageCharacterCharacter.PerformLayout();
             this.groupBoxCharacterCharacterStats.ResumeLayout(false);
@@ -9741,8 +11261,6 @@
             this.tabPageCreatureSearch.ResumeLayout(false);
             this.tabPageCreatureSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureSearch)).EndInit();
-            this.statusStripCreatureSearch.ResumeLayout(false);
-            this.statusStripCreatureSearch.PerformLayout();
             this.tabPageCreatureTemplate.ResumeLayout(false);
             this.groupBoxCreatureTemplateSpells.ResumeLayout(false);
             this.groupBoxCreatureTemplateSpells.PerformLayout();
@@ -9767,14 +11285,12 @@
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLocation)).EndInit();
             this.tabPageCreatureLootTemplate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLootTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreatureLoot)).EndInit();
             this.tabPageQuest.ResumeLayout(false);
             this.tabControlCategoryQuest.ResumeLayout(false);
             this.tabPageQuestSearch.ResumeLayout(false);
             this.tabPageQuestSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuestSearch)).EndInit();
-            this.statusStripQuestSearch.ResumeLayout(false);
-            this.statusStripQuestSearch.PerformLayout();
             this.tabPageQuestSection1.ResumeLayout(false);
             this.groupBoxQuestSectionQuestInformation.ResumeLayout(false);
             this.groupBoxQuestSectionQuestInformation.PerformLayout();
@@ -9820,36 +11336,54 @@
             this.tabPageGameObjectSearch.ResumeLayout(false);
             this.tabPageGameObjectSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGameObjectSearch)).EndInit();
-            this.statusStripGameObjectSearch.ResumeLayout(false);
-            this.statusStripGameObjectSearch.PerformLayout();
+            this.tabPageGameObjectTemplate.ResumeLayout(false);
+            this.groupBoxGameObjectTempData18.ResumeLayout(false);
+            this.groupBoxGameObjectTempData18.PerformLayout();
+            this.groupBoxGameObjectTempData12.ResumeLayout(false);
+            this.groupBoxGameObjectTempData12.PerformLayout();
+            this.groupBoxGameObjectTempData6.ResumeLayout(false);
+            this.groupBoxGameObjectTempData6.PerformLayout();
+            this.groupBoxGameObjectTempData0.ResumeLayout(false);
+            this.groupBoxGameObjectTempData0.PerformLayout();
+            this.groupBoxGameObjectTempGeneral.ResumeLayout(false);
+            this.groupBoxGameObjectTempGeneral.PerformLayout();
             this.tabPageItem.ResumeLayout(false);
             this.tabControlCategoryItem.ResumeLayout(false);
             this.tabPageItemSearch.ResumeLayout(false);
             this.tabPageItemSearch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemSearch)).EndInit();
-            this.statusStripItemSearch.ResumeLayout(false);
-            this.statusStripItemSearch.PerformLayout();
             this.tabPageItemTemplate.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBoxItemTemplateSpell.ResumeLayout(false);
+            this.groupBoxItemTemplateSpell.PerformLayout();
+            this.groupBoxItemTemplateOther.ResumeLayout(false);
+            this.groupBoxItemTemplateOther.PerformLayout();
+            this.groupBoxItemTemplateDetails.ResumeLayout(false);
+            this.groupBoxItemTemplateDetails.PerformLayout();
+            this.groupBoxItemTemplateSocket.ResumeLayout(false);
+            this.groupBoxItemTemplateSocket.PerformLayout();
+            this.groupBoxItemTemplateResistance.ResumeLayout(false);
+            this.groupBoxItemTemplateResistance.PerformLayout();
+            this.groupBoxItemTemplateDamage.ResumeLayout(false);
+            this.groupBoxItemTemplateDamage.PerformLayout();
+            this.groupBoxItemTemplateStats.ResumeLayout(false);
+            this.groupBoxItemTemplateStats.PerformLayout();
+            this.groupBoxItemTemplateRequirements.ResumeLayout(false);
+            this.groupBoxItemTemplateRequirements.PerformLayout();
+            this.groupBoxItemTemplateGeneral.ResumeLayout(false);
+            this.groupBoxItemTemplateGeneral.PerformLayout();
+            this.tabPageItemLoot.ResumeLayout(false);
+            this.tabPageItemLoot.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemLoot)).EndInit();
+            this.tabPageItemProspecting.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemProspecting)).EndInit();
+            this.tabPageItemMilling.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemMilling)).EndInit();
+            this.tabPageItemDisenchant.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemDisenchant)).EndInit();
+            this.tabPageItemScript.ResumeLayout(false);
+            this.tabPageItemScript.PerformLayout();
+            this.statusStripItemAffected.ResumeLayout(false);
+            this.statusStripItemAffected.PerformLayout();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);
@@ -9871,7 +11405,7 @@
         private System.Windows.Forms.TextBox textBoxAccountSearchUsername;
         private System.Windows.Forms.Label labelAccountSearchName;
         private System.Windows.Forms.TextBox textBoxAccountSearchID;
-        private System.Windows.Forms.Button buttonAccountSearchButton;
+        private System.Windows.Forms.Button buttonAccountSearchSearch;
         private System.Windows.Forms.TabPage tabPageAccountScript;
         private System.Windows.Forms.GroupBox groupBoxAccountAccountBan;
         private System.Windows.Forms.CheckBox checkBoxAccountAccountBanActive;
@@ -10020,11 +11554,6 @@
         private System.Windows.Forms.Label labelCreatureSearchSubname;
         private System.Windows.Forms.TextBox textBoxCreatureSearchSubname;
         private System.Windows.Forms.TextBox textBoxCreatureSearchEntry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryGUID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryBag;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventorySlot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryName;
         private System.Windows.Forms.Button buttonCreatureSearchSearch;
         private System.Windows.Forms.Label labelCreatureSearchLevelMax;
         private System.Windows.Forms.TextBox textBoxCreatureSearchLevelMax;
@@ -10175,7 +11704,6 @@
         private System.Windows.Forms.TextBox textBoxCreatureTemplateSpell7;
         private System.Windows.Forms.TextBox textBoxCreatureTemplateSpell3;
         private System.Windows.Forms.DataGridView dataGridViewCreatureLocation;
-        private System.Windows.Forms.DataGridView dataGridViewCreatureLootTemplate;
         private System.Windows.Forms.Label labelCreatureSearchRank;
         private System.Windows.Forms.TextBox textBoxCreatureSearchRank;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCLID;
@@ -10189,16 +11717,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCLPO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCLST;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnSD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTCHANCE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTQR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTLM;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTGID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTMINC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTMAXC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnLTCOM;
         private System.Windows.Forms.TabControl tabControlCategoryGameObject;
         private System.Windows.Forms.TabPage tabPageGameObjectSearch;
         private System.Windows.Forms.DataGridView dataGridViewGameObjectSearch;
@@ -10209,12 +11727,7 @@
         private System.Windows.Forms.DataGridView dataGridViewQuestSearch;
         private System.Windows.Forms.StatusStrip statusStripQuestSearch;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelQuestSearchRow;
-        private System.Windows.Forms.TabControl tabControlCategoryItem;
-        private System.Windows.Forms.TabPage tabPageItemSearch;
-        private System.Windows.Forms.DataGridView dataGridViewItemSearch;
-        private System.Windows.Forms.StatusStrip statusStripItemSearch;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelItemSearchRow;
-        private System.Windows.Forms.Button buttonQuestSearch;
+        private System.Windows.Forms.Button buttonQuestSearchSearch;
         private System.Windows.Forms.TextBox textBoxQuestSearchNQID;
         private System.Windows.Forms.Label labelQuestSearchNQID;
         private System.Windows.Forms.TextBox textBoxQuestSearchPQID;
@@ -10236,7 +11749,6 @@
         private System.Windows.Forms.TextBox textBoxGameObjectSearchType;
         private System.Windows.Forms.Label labelGameObjectSearchEntry;
         private System.Windows.Forms.TextBox textBoxGameObjectSearchEntry;
-        private System.Windows.Forms.Button buttonItemSearchSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchUsername;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnAccountSearchEmail;
@@ -10257,278 +11769,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGOE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGOT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGON;
-        private System.Windows.Forms.TextBox textBoxItemSearchILevel;
-        private System.Windows.Forms.Label labelItemSearchILevel;
-        private System.Windows.Forms.TextBox textBoxItemSearchReqLevel;
-        private System.Windows.Forms.Label labelItemSearchReqLevel;
-        private System.Windows.Forms.TextBox textBoxItemSearchDescription;
-        private System.Windows.Forms.Label labelItemSearchDescription;
-        private System.Windows.Forms.Label labelItemSearchQuality;
-        private System.Windows.Forms.TextBox textBoxItemSearchSubclass;
-        private System.Windows.Forms.Label labelItemSearchSubclass;
-        private System.Windows.Forms.TextBox textBoxItemSearchClass;
-        private System.Windows.Forms.Label labelItemSearchClass;
-        private System.Windows.Forms.Label labelItemSearchName;
-        private System.Windows.Forms.TextBox textBoxItemSearchEntry;
-        private System.Windows.Forms.TextBox textBoxItemSearchName;
-        private System.Windows.Forms.Label labelItemSearchEntry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISSB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISQ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISIL;
-        private System.Windows.Forms.Button buttonItemSearchToolClass;
-        private System.Windows.Forms.Button buttonItemSearchToolSubclass;
-        private System.Windows.Forms.ComboBox comboBoxItemSearchQuality;
-        private System.Windows.Forms.MenuStrip menuStripMain;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.TabPage tabPageItemTemplate;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.Label label75;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.Label label74;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.Label label73;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.Label label72;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.Label label70;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.Label label68;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.Label label62;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox textBox98;
-        private System.Windows.Forms.Label label77;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.Label label76;
-        private System.Windows.Forms.Label label79;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox99;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.Label label84;
-        private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.Label label82;
-        private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.TextBox textBox133;
-        private System.Windows.Forms.TextBox textBox132;
-        private System.Windows.Forms.TextBox textBox128;
-        private System.Windows.Forms.TextBox textBox127;
-        private System.Windows.Forms.TextBox textBox123;
-        private System.Windows.Forms.TextBox textBox131;
-        private System.Windows.Forms.TextBox textBox122;
-        private System.Windows.Forms.TextBox textBox126;
-        private System.Windows.Forms.TextBox textBox114;
-        private System.Windows.Forms.TextBox textBox130;
-        private System.Windows.Forms.TextBox textBox121;
-        private System.Windows.Forms.TextBox textBox125;
-        private System.Windows.Forms.TextBox textBox115;
-        private System.Windows.Forms.TextBox textBox129;
-        private System.Windows.Forms.TextBox textBox120;
-        private System.Windows.Forms.TextBox textBox124;
-        private System.Windows.Forms.TextBox textBox116;
-        private System.Windows.Forms.TextBox textBox119;
-        private System.Windows.Forms.TextBox textBox117;
-        private System.Windows.Forms.TextBox textBox118;
-        private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.TextBox textBox113;
-        private System.Windows.Forms.TextBox textBox112;
-        private System.Windows.Forms.TextBox textBox108;
-        private System.Windows.Forms.TextBox textBox107;
-        private System.Windows.Forms.TextBox textBox111;
-        private System.Windows.Forms.TextBox textBox106;
-        private System.Windows.Forms.TextBox textBox110;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.TextBox textBox109;
-        private System.Windows.Forms.TextBox textBox104;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.TabPage tabPageQuestSection1;
         private System.Windows.Forms.GroupBox groupBoxQuestSectionIdentifiers;
         private System.Windows.Forms.TextBox textBoxQuestSectionNextQuestC;
@@ -10717,5 +11961,417 @@
         private System.Windows.Forms.GroupBox groupBoxQuestSectionCompletedText;
         private System.Windows.Forms.ToolStripMenuItem controlPanelToolStripMenuItemTools;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPageGameObjectTemplate;
+        private System.Windows.Forms.GroupBox groupBoxGameObjectTempGeneral;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label85;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempType;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempDID;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempName;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempEntry;
+        private System.Windows.Forms.GroupBox groupBoxGameObjectTempData18;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD23;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD22;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD21;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD20;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD19;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD18;
+        private System.Windows.Forms.GroupBox groupBoxGameObjectTempData12;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD17;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD16;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD15;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD14;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD13;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD12;
+        private System.Windows.Forms.GroupBox groupBoxGameObjectTempData6;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD11;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD10;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD9;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD8;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD7;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD6;
+        private System.Windows.Forms.GroupBox groupBoxGameObjectTempData0;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD5;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD4;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD3;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD2;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD1;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempD0;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempScriptName;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempAIName;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempSize;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempFlags;
+        private System.Windows.Forms.TextBox textBoxGameObjectTempFaction;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGOE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGOT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnGON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryGUID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryBag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventorySlot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterInventoryName;
+        private System.Windows.Forms.DataGridView dataGridViewCreatureLoot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.TabControl tabControlCategoryItem;
+        private System.Windows.Forms.TabPage tabPageItemSearch;
+        private System.Windows.Forms.ComboBox comboBoxItemSearchQuality;
+        private System.Windows.Forms.Button buttonItemSearchToolSubclass;
+        private System.Windows.Forms.Button buttonItemSearchClassPopup;
+        private System.Windows.Forms.TextBox textBoxItemSearchILevel;
+        private System.Windows.Forms.TextBox textBoxItemSearchReqLevel;
+        private System.Windows.Forms.TextBox textBoxItemSearchDescription;
+        private System.Windows.Forms.TextBox textBoxItemSearchSubclass;
+        private System.Windows.Forms.TextBox textBoxItemSearchClass;
+        private System.Windows.Forms.TextBox textBoxItemSearchEntry;
+        private System.Windows.Forms.TextBox textBoxItemSearchName;
+        private System.Windows.Forms.Label labelItemSearchILevel;
+        private System.Windows.Forms.Label labelItemSearchReqLevel;
+        private System.Windows.Forms.Label labelItemSearchDescription;
+        private System.Windows.Forms.Label labelItemSearchQuality;
+        private System.Windows.Forms.Label labelItemSearchSubclass;
+        private System.Windows.Forms.Label labelItemSearchClass;
+        private System.Windows.Forms.Label labelItemSearchName;
+        private System.Windows.Forms.Label labelItemSearchEntry;
+        private System.Windows.Forms.Button buttonItemSearchSearch;
+        private System.Windows.Forms.DataGridView dataGridViewItemSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISSB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISQ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISIL;
+        private System.Windows.Forms.StatusStrip statusStripItemSearch;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelItemSearchRow;
+        private System.Windows.Forms.TabPage tabPageItemTemplate;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateSpell;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label83;
+        private System.Windows.Forms.Label label82;
+        private System.Windows.Forms.Label label81;
+        private System.Windows.Forms.TextBox textBoxItemTempCategoryCD5;
+        private System.Windows.Forms.TextBox textBoxItemTempCategoryCD4;
+        private System.Windows.Forms.TextBox textBoxItemTempCategory5;
+        private System.Windows.Forms.TextBox textBoxItemTempCategory4;
+        private System.Windows.Forms.TextBox textBoxItemTempCD5;
+        private System.Windows.Forms.TextBox textBoxItemTempCategoryCD3;
+        private System.Windows.Forms.TextBox textBoxItemTempCD4;
+        private System.Windows.Forms.TextBox textBoxItemTempCategory3;
+        private System.Windows.Forms.TextBox textBoxItemTempRate5;
+        private System.Windows.Forms.TextBox textBoxItemTempCategoryCD2;
+        private System.Windows.Forms.TextBox textBoxItemTempCD3;
+        private System.Windows.Forms.TextBox textBoxItemTempCategory2;
+        private System.Windows.Forms.TextBox textBoxItemTempRate4;
+        private System.Windows.Forms.TextBox textBoxItemTempCategoryCD1;
+        private System.Windows.Forms.TextBox textBoxItemTempCD2;
+        private System.Windows.Forms.TextBox textBoxItemTempCategory1;
+        private System.Windows.Forms.TextBox textBoxItemTempRate3;
+        private System.Windows.Forms.TextBox textBoxItemTempCD1;
+        private System.Windows.Forms.TextBox textBoxItemTempRate2;
+        private System.Windows.Forms.TextBox textBoxItemTempRate1;
+        private System.Windows.Forms.Label label80;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.TextBox textBoxItemTempCharges5;
+        private System.Windows.Forms.TextBox textBoxItemTempCharges4;
+        private System.Windows.Forms.TextBox textBoxItemTempTrigger5;
+        private System.Windows.Forms.TextBox textBoxItemTempTrigger4;
+        private System.Windows.Forms.TextBox textBoxItemTempCharges3;
+        private System.Windows.Forms.TextBox textBoxItemTempSpellID5;
+        private System.Windows.Forms.TextBox textBoxItemTempTrigger3;
+        private System.Windows.Forms.TextBox textBoxItemTempCharges2;
+        private System.Windows.Forms.TextBox textBoxItemTempSpellID4;
+        private System.Windows.Forms.TextBox textBoxItemTempTrigger2;
+        private System.Windows.Forms.TextBox textBoxItemTempCharges1;
+        private System.Windows.Forms.TextBox textBoxItemTempSpellID3;
+        private System.Windows.Forms.TextBox textBoxItemTempTrigger1;
+        private System.Windows.Forms.TextBox textBoxItemTempSpellID2;
+        private System.Windows.Forms.TextBox textBoxItemTempSpellID1;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateOther;
+        private System.Windows.Forms.TextBox textBoxItemTempFlagsC;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.TextBox textBoxItemTempMoneyMax;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.TextBox textBoxItemTempMoneyMin;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.TextBox textBoxItemTempDisenchantID;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.TextBox textBoxItemTempFoodType;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.TextBox textBoxItemTempHolidayID;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.TextBox textBoxItemTempLimitCate;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox textBoxItemTempDuration;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.TextBox textBoxItemTempModifier;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox textBoxItemTempMap;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox textBoxItemTempArea;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TextBox textBoxItemTempPageMaterial;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.TextBox textBoxItemTempLanguage;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.TextBox textBoxItemTempPageText;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.TextBox textBoxItemTempLockID;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.TextBox textBoxItemTempSuffix;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox textBoxItemTempProperty;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox textBoxItemTempMaterial;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox textBoxItemTempStartQuest;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateDetails;
+        private System.Windows.Forms.TextBox textBoxItemTempItemSet;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox textBoxItemTempSheath;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox textBoxItemTempDurability;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox textBoxItemTempBlock;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox textBoxItemTempBonding;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.TextBox textBoxItemTempRangedMod;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.TextBox textBoxItemTempAmmoType;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox textBoxItemTempDelay;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateSocket;
+        private System.Windows.Forms.TextBox textBoxItemTempGemProper;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox textBoxItemTempSocketBonus;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox textBoxItemTempContent3;
+        private System.Windows.Forms.TextBox textBoxItemTempColor3;
+        private System.Windows.Forms.TextBox textBoxItemTempContent2;
+        private System.Windows.Forms.TextBox textBoxItemTempColor2;
+        private System.Windows.Forms.TextBox textBoxItemTempContent1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox textBoxItemTempColor1;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateResistance;
+        private System.Windows.Forms.TextBox textBoxItemTempResisArcane;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox textBoxItemTempResisShadow;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBoxItemTempResisFrost;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBoxItemTempResisNature;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.TextBox textBoxItemTempResisFire;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBoxItemTempResisHoly;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateDamage;
+        private System.Windows.Forms.Button buttonItemTempDmgType2Popup;
+        private System.Windows.Forms.Button buttonItemTempDmgType1Popup;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgMax2;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgMin2;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgType2;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgMax1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgMin1;
+        private System.Windows.Forms.TextBox textBoxItemTempDmgType1;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateStats;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsScaleValue;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsScaleDist;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue10;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue8;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue4;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue6;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue2;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue9;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue7;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue3;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType10;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue5;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType8;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsValue1;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType9;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType4;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType7;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType6;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType3;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType5;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType2;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsType1;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateRequirements;
+        private System.Windows.Forms.Button buttonItemTempClassPopup;
+        private System.Windows.Forms.Button buttonItemTempReqRacePopup;
+        private System.Windows.Forms.TextBox textBoxItemTempReqItemLevel;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TextBox textBoxItemTempReqDisenchant;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.TextBox textBoxItemTempReqRepRank;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBoxItemTempReqRepFaction;
+        private System.Windows.Forms.TextBox textBoxItemTempReqCityRank;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox textBoxItemTempReqHonorRank;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBoxItemTempReqSpell;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBoxItemTempReqSkillRank;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBoxItemTempReqSkill;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBoxItemTempReqLevel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBoxItemTempReqRace;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxItemTempReqClass;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBoxItemTemplateGeneral;
+        private System.Windows.Forms.TextBox textBoxItemTempStatsC;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBoxItemTempContainer;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox textBoxItemTempStack;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBoxItemTempMaxC;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox textBoxItemTempEFlags;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox textBoxItemTempFlags;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBoxItemTempDescription;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBoxItemTempInventory;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxItemTempSellP;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxItemTempBuyP;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxItemTempBuyC;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxItemTempQuality;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBoxItemTempDisplayID;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxItemTempName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxItemTempSubclass;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBoxItemTempClass;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxItemTempEntry;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPageItemLoot;
+        private System.Windows.Forms.DataGridView dataGridViewItemLoot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.TabPage tabPageItemProspecting;
+        private System.Windows.Forms.DataGridView dataGridViewItemProspecting;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.TabPage tabPageItemMilling;
+        private System.Windows.Forms.DataGridView dataGridViewItemMilling;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.TabPage tabPageItemDisenchant;
+        private System.Windows.Forms.DataGridView dataGridViewItemDisenchant;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.Button buttonItemLootAdd;
+        private System.Windows.Forms.Button buttonItemLootDelete;
+        private System.Windows.Forms.Button buttonItemLootRefresh;
+        private System.Windows.Forms.TextBox textBoxItemLootMAC;
+        private System.Windows.Forms.TextBox textBoxItemLootMIC;
+        private System.Windows.Forms.Label labelItemLootLM;
+        private System.Windows.Forms.TextBox textBoxItemLootGID;
+        private System.Windows.Forms.Label labelItemLootMAC;
+        private System.Windows.Forms.TextBox textBoxItemLootLM;
+        private System.Windows.Forms.Label labelItemLootMIC;
+        private System.Windows.Forms.Label labelItemLootGID;
+        private System.Windows.Forms.TextBox textBoxItemLootQR;
+        private System.Windows.Forms.Label labelItemLootQR;
+        private System.Windows.Forms.TextBox textBoxItemLootChance;
+        private System.Windows.Forms.Label labelItemLootChance;
+        private System.Windows.Forms.TextBox textBoxItemLootReference;
+        private System.Windows.Forms.Label labelItemLootReference;
+        private System.Windows.Forms.TextBox textBoxItemLootItemID;
+        private System.Windows.Forms.Label labelItemLootItemID;
+        private System.Windows.Forms.TextBox textBoxItemLootEntry;
+        private System.Windows.Forms.Label labelItemLootEntry;
+        private System.Windows.Forms.Button buttonItemLootGenerate;
+        private System.Windows.Forms.TabPage tabPageItemScript;
+        private System.Windows.Forms.TextBox textBoxItemScriptOutput;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelAffected;
+        private System.Windows.Forms.StatusStrip statusStripItemAffected;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelRow;
+        private System.Windows.Forms.Button buttonItemScriptUpdate;
+        private System.Windows.Forms.MenuStrip menuStripMain;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolsToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlPanelToolStripMenuTools;
     }
 }

@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace Manti.FormPopup
 {
-    public partial class FormToolSelection : Form
+    public partial class FormPopupSelection : Form
     {
-        public FormToolSelection()
+        public FormPopupSelection()
         {
             InitializeComponent();
         }
+
+        #region Functions
 
         private DataTable data = new DataTable();
         private string id = "";
@@ -24,79 +26,70 @@ namespace Manti.FormPopup
         {
             set { data = value; }
         }
-
+        public string setFormTitle
+        {
+            set { this.Text = value; }
+        }
         public string getSelection
         {
             get { return id; }
         }
-
-        public string setFormText
-        {
-            set { this.Text = value; }
-        }
-
         private void addItems()
         {
-            listViewToolItemClass.Items.Clear();
+            listViewPopupSelection.Items.Clear();
 
             foreach (DataRow row in data.Rows)
             {
-                if (textBoxToolItemClassSearch.Text.Trim() != "")
+                if (textBoxPopupSearch.Text.Trim() != "")
                 {
-                    if (row["value"].ToString().ToLower().Contains(textBoxToolItemClassSearch.Text.ToLower()))
+                    if (row["value"].ToString().ToLower().Contains(textBoxPopupSearch.Text.ToLower()))
                     {
                         var item = new ListViewItem( row["id"].ToString() );
                         item.SubItems.Add( row["value"].ToString() );
-                        listViewToolItemClass.Items.Add(item);
+                        listViewPopupSelection.Items.Add(item);
                     }
                 } else
                 {
                     var item = new ListViewItem(row["id"].ToString());
                     item.SubItems.Add(row["value"].ToString());
-                    listViewToolItemClass.Items.Add(item);
+                    listViewPopupSelection.Items.Add(item);
                 }
             }
         }
 
-        private void FormToolItemClass_Load(object sender, EventArgs e)
+        #endregion
+        #region Events
+            // FormLoad
+        private void FormPopupSelection_Load(object sender, EventArgs e)
         {
             addItems();
         }
-
-            // FormClosed
-        private void FormToolItemClass_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            (this.Owner as FormMain).EnableTabs = true;
-        }
-
             // TextChanged
-        private void textBoxToolItemClassSearch_TextChanged(object sender, EventArgs e)
+        private void textBoxPopupSearch_TextChanged(object sender, EventArgs e)
         {
             addItems();
         }
-
             // Button Click OK
-        private void buttonToolItemClassOK_Click(object sender, EventArgs e)
+        private void buttonPopupOK_Click(object sender, EventArgs e)
         {
-            if (listViewToolItemClass.SelectedItems.Count > 0)
+            if (listViewPopupSelection.SelectedItems.Count > 0)
             {
-                id = listViewToolItemClass.SelectedItems[0].Text;
+                id = listViewPopupSelection.SelectedItems[0].Text;
 
                 this.Close();
             }
         }
-
             // Button Click Close
-        private void buttonToolItemClassClose_Click(object sender, EventArgs e)
+        private void buttonPopupClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
             // Double Click Grid
-        private void listViewToolItemClass_DoubleClick(object sender, EventArgs e)
+        private void listViewPopupSelection_DoubleClick(object sender, EventArgs e)
         {
-            buttonToolItemClassOK_Click(sender, e);
+            buttonPopupOK_Click(sender, e);
         }
 
+        #endregion
     }
 }

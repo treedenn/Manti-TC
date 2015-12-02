@@ -88,11 +88,17 @@
     <Compile Include="FormMySQL.Designer.cs">
       <DependentUpon>FormMySQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPopup\FormToolSelection.cs">
+    <Compile Include="FormPopup\FormPopupCheckboxList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPopup\FormToolSelection.Designer.cs">
-      <DependentUpon>FormToolSelection.cs</DependentUpon>
+    <Compile Include="FormPopup\FormPopupCheckboxList.Designer.cs">
+      <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupSelection.Designer.cs">
+      <DependentUpon>FormPopupSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTools\FormControlPanel.cs">
       <SubType>Form</SubType>
@@ -111,8 +117,11 @@
     <EmbeddedResource Include="FormMySQL.resx">
       <DependentUpon>FormMySQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPopup\FormToolSelection.resx">
-      <DependentUpon>FormToolSelection.cs</DependentUpon>
+    <EmbeddedResource Include="FormPopup\FormPopupCheckboxList.resx">
+      <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupSelection.resx">
+      <DependentUpon>FormPopupSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTools\FormControlPanel.resx">
       <DependentUpon>FormControlPanel.cs</DependentUpon>
@@ -152,7 +161,27 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\iconAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconGenerate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconSearch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconGenerate2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconGenerate-02.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

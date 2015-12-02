@@ -22,9 +22,6 @@ namespace Manti.FormTools
         private bool WorldOnline = false;
         private bool AuthOnline = false;
 
-        private string WorldConsole = "";
-        private string AuthConsole = "";
-
         private void ChangePath(bool world)
         {
             if (textBoxPathServer.Visible == true)
@@ -44,10 +41,12 @@ namespace Manti.FormTools
                 }
 
                 textBoxPathServer.Text = "";
+                buttonPathDialog.Visible = false;
                 textBoxPathServer.Visible = false;
             } else
             {
                 textBoxPathServer.Text = (world == true) ? Properties.Settings.Default.PathWorldserver : Properties.Settings.Default.PathAuthserver;
+                buttonPathDialog.Visible = true;
                 textBoxPathServer.Visible = true;
             }
         }
@@ -88,6 +87,15 @@ namespace Manti.FormTools
             }
         }
 
+        private void buttonPathDialog_Click(object sender, EventArgs e)
+        {
+            var ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                textBoxPathServer.Text = ofd.FileName;
+            }
+        }
         #region StartButtons
 
         private void buttonWorldServer_Click(object sender, EventArgs e)
@@ -137,13 +145,11 @@ namespace Manti.FormTools
         {
             ChangePath(true);
         }
-
         private void buttonAuthPath_Click(object sender, EventArgs e)
         {
             ChangePath(false);
         }
 
         #endregion
-
     }
 }
