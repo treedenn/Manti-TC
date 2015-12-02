@@ -35,6 +35,9 @@ namespace Manti
             tabControlCategory.Focus();
 
             dataGridViewItemLoot.AutoGenerateColumns = false;
+            dataGridViewItemProspect.AutoGenerateColumns = false;
+            dataGridViewItemMill.AutoGenerateColumns = false;
+            dataGridViewItemDE.AutoGenerateColumns = false;
 
             if (FormMySQL.Offline == true)
             {
@@ -182,12 +185,15 @@ namespace Manti
 
             foreach (DataGridViewRow row in dataGrid.Rows)
             {
-                query += Environment.NewLine;
+                if (row.Cells[0].Value.ToString() != "")
+                {
+                    query += Environment.NewLine;
 
-                query += "INSERT INTO " + lootTable + " VALUES (" +
-                    row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " + row.Cells[2].Value.ToString() + ", " +
-                    row.Cells[3].Value.ToString() + ", " + row.Cells[4].Value.ToString() + ", " + row.Cells[5].Value.ToString() + ", " +
-                    row.Cells[6].Value.ToString() + ", " + row.Cells[7].Value.ToString() + ", " + row.Cells[8].Value.ToString() + ", \"\");";
+                    query += "INSERT INTO " + lootTable + " VALUES (" +
+                        row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " + row.Cells[2].Value.ToString() + ", " +
+                        row.Cells[3].Value.ToString() + ", " + row.Cells[4].Value.ToString() + ", " + row.Cells[5].Value.ToString() + ", " +
+                        row.Cells[6].Value.ToString() + ", " + row.Cells[7].Value.ToString() + ", " + row.Cells[8].Value.ToString() + ", \"\");";
+                }
             }
 
             output.Text = query;
@@ -1182,13 +1188,13 @@ namespace Manti
 
             ConnectionClose(connect);
         }
-        private void DatabaseItemDisenchant(string itemEntryID)
+        private void DatabaseItemDisenchant(string DisenchantID)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
 
-            if (ConnectionOpen(connect) && itemEntryID != "")
+            if (ConnectionOpen(connect) && DisenchantID != "")
             {
-                string query = "SELECT * FROM disenchant_loot_template WHERE entry = '" + itemEntryID + "';";
+                string query = "SELECT * FROM disenchant_loot_template WHERE entry = '" + DisenchantID + "';";
 
                 DataSet datatable = DatabaseSearch(connect, query);
 
@@ -1205,7 +1211,7 @@ namespace Manti
                     }
                 }
 
-                dataGridViewItemDisenchant.DataSource = datatable.Tables[0];
+                dataGridViewItemDE.DataSource = datatable.Tables[0];
             }
 
             ConnectionClose(connect);
@@ -1233,7 +1239,7 @@ namespace Manti
                     }
                 }
 
-                dataGridViewItemMilling.DataSource = datatable.Tables[0];
+                dataGridViewItemMill.DataSource = datatable.Tables[0];
             }
 
             ConnectionClose(connect);
@@ -1261,7 +1267,7 @@ namespace Manti
                     }
                 }
 
-                dataGridViewItemProspecting.DataSource = datatable.Tables[0];
+                dataGridViewItemProspect.DataSource = datatable.Tables[0];
             }
 
             ConnectionClose(connect);
@@ -1277,44 +1283,6 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
-
-        #region LootButtons
-        private void buttonItemLootAdd_Click(object sender, EventArgs e)
-        {
-            var values = new string[] {
-                textBoxItemLootEntry.Text,
-                textBoxItemLootItemID.Text,
-                textBoxItemLootReference.Text,
-                textBoxItemLootChance.Text,
-                textBoxItemLootQR.Text,
-                textBoxItemLootLM.Text,
-                textBoxItemLootGID.Text,
-                textBoxItemLootMIC.Text,
-                textBoxItemLootMAC.Text
-            };
-
-            dataGridViewItemLoot.Rows.Add(values);
-
-        }
-        private void buttonItemLootRefresh_Click(object sender, EventArgs e)
-        {
-            DatabaseItemLoot((textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text.Trim() : textBoxItemTempEntry.Text);
-        }
-        private void buttonItemLootDelete_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewItemLoot.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dataGridViewItemLoot.SelectedRows)
-                {
-                    dataGridViewItemLoot.Rows.RemoveAt(row.Index);
-                }
-            }
-        }
-        private void buttonItemLootGenerate_Click(object sender, EventArgs e)
-        {
-            GenerateLoot("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
-        }
-        #endregion
 
         #endregion
 
@@ -1674,11 +1642,168 @@ namespace Manti
 
                 DatabaseItemSearch(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
                 DatabaseItemLoot(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
-                DatabaseItemDisenchant(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
+                DatabaseItemDisenchant(textBoxItemTempDisenchantID.Text.Trim());
                 DatabaseItemMilling(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
                 DatabaseItemProspecting(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
             }
         }
+
+        #region Loot
+        private void buttonItemLootAdd_Click(object sender, EventArgs e)
+        {
+            var values = new string[] {
+                textBoxItemLootEntry.Text,
+                textBoxItemLootItemID.Text,
+                textBoxItemLootReference.Text,
+                textBoxItemLootChance.Text,
+                textBoxItemLootQR.Text,
+                textBoxItemLootLM.Text,
+                textBoxItemLootGID.Text,
+                textBoxItemLootMIC.Text,
+                textBoxItemLootMAC.Text
+            };
+
+            if (textBoxItemLootEntry.Text.Trim() != "")
+            {
+                dataGridViewItemLoot.Rows.Add(values);
+            }
+        }
+        private void buttonItemLootRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemLoot((textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text.Trim() : textBoxItemTempEntry.Text);
+        }
+        private void buttonItemLootDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewItemLoot.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewItemLoot.SelectedRows)
+                {
+                    dataGridViewItemLoot.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonItemLootGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
+        }
+        #endregion
+        #region Prospecting
+        private void buttonItemProspectAdd_Click(object sender, EventArgs e)
+        {
+            var values = new string[] {
+                textBoxItemProspectEntry.Text,
+                textBoxItemProspectItemID.Text,
+                textBoxItemProspectReference.Text,
+                textBoxItemProspectChance.Text,
+                textBoxItemProspectQR.Text,
+                textBoxItemProspectLM.Text,
+                textBoxItemProspectGID.Text,
+                textBoxItemProspectMIC.Text,
+                textBoxItemProspectMAC.Text
+            };
+
+            if (textBoxItemProspectEntry.Text.Trim() != "")
+            {
+                dataGridViewItemProspect.Rows.Add(values);
+            }
+        }
+        private void buttonItemProspectRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemProspecting((textBoxItemProspectEntry.Text.Trim() != "") ? textBoxItemProspectEntry.Text.Trim() : textBoxItemTempEntry.Text);
+        }
+        private void buttonItemProspectDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewItemProspect.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewItemProspect.SelectedRows)
+                {
+                    dataGridViewItemProspect.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonItemProspectGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("prospecting_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+        }
+        #endregion
+        #region Milling
+        private void buttonItemMillAdd_Click(object sender, EventArgs e)
+        {
+            var values = new string[] {
+                textBoxItemMillEntry.Text,
+                textBoxItemMillItemID.Text,
+                textBoxItemMillReference.Text,
+                textBoxItemMillChance.Text,
+                textBoxItemMillQR.Text,
+                textBoxItemMillLM.Text,
+                textBoxItemMillGID.Text,
+                textBoxItemMillMIC.Text,
+                textBoxItemMillMAC.Text
+            };
+
+            if (textBoxItemMillEntry.Text.Trim() != "")
+            {
+                dataGridViewItemMill.Rows.Add(values);
+            }
+        }
+        private void buttonItemMillRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemMilling((textBoxItemMillEntry.Text.Trim() != "") ? textBoxItemMillEntry.Text.Trim() : textBoxItemTempEntry.Text);
+        }
+        private void buttonItemMillDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewItemMill.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewItemMill.SelectedRows)
+                {
+                    dataGridViewItemMill.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonItemMillGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("milling_loot_template", dataGridViewItemMill, textBoxItemScriptOutput);
+        }
+        #endregion
+        #region Disenchant
+        private void buttonItemDEAdd_Click(object sender, EventArgs e)
+        {
+            var values = new string[] {
+                textBoxItemDEEntry.Text,
+                textBoxItemDEItemID.Text,
+                textBoxItemDEReference.Text,
+                textBoxItemDEChance.Text,
+                textBoxItemDEQR.Text,
+                textBoxItemDELM.Text,
+                textBoxItemDEGID.Text,
+                textBoxItemDEMIC.Text,
+                textBoxItemDEMAC.Text
+            };
+
+            if (textBoxItemDEEntry.Text.Trim() != "")
+            {
+                dataGridViewItemDE.Rows.Add(values);
+            }
+        }
+        private void buttonItemDERefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemDisenchant((textBoxItemDEEntry.Text.Trim() != "") ? textBoxItemDEEntry.Text.Trim() : textBoxItemTempDisenchantID.Text);
+        }
+        private void buttonItemDEDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewItemDE.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewItemDE.SelectedRows)
+                {
+                    dataGridViewItemDE.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonItemDEGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("disenchant_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+        }
+        #endregion
 
         #region POPUPS
         private void buttonItemSearchClassPopup_Click(object sender, EventArgs e)
@@ -1765,5 +1890,10 @@ namespace Manti
         #endregion
 
         #endregion
+
+
+
+
+
     }
 }
