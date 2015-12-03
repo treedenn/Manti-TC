@@ -25,8 +25,6 @@ namespace Manti
                     I know, it's a great feature!
         */
 
-        #region CodeRegions
-
         #region GlobalEvents
 
         private void FormMain_Load(object sender, EventArgs e)
@@ -178,6 +176,34 @@ namespace Manti
 
             return true;
         }
+            // Create Popup : Selection
+        private void CreatePopupSelection(string formTitle, DataTable data, Control textbox)
+        {
+            var popupDialog = new FormPopup.FormPopupSelection();
+            popupDialog.setFormTitle = formTitle;
+            popupDialog.setDataTable = data;
+            popupDialog.Owner = this;
+            popupDialog.ShowDialog();
+
+            this.Activate();
+            textbox.Text = (popupDialog.getSelection == "") ? textbox.Text : popupDialog.getSelection;
+        }
+            // Create Popup : Checklist
+        private void CreatePopupChecklist(string formTitle, DataTable data, Control textbox, bool bitMask = false)
+        {
+            string currentValue = textbox.Text.Trim();
+            var popupDialog = new FormPopup.FormPopupCheckboxList();
+
+            popupDialog.setFormTitle = formTitle;
+            popupDialog.setDataTable = data;
+            popupDialog.setValue = Convert.ToInt32((currentValue == "") ? "0" : currentValue);
+            popupDialog.setBitMask = bitMask;
+            popupDialog.Owner = this;
+            popupDialog.ShowDialog();
+
+            this.Activate();
+            textbox.Text = currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
+        }
             // Generate SQL Loot
         private void GenerateLoot(string lootTable, DataGridView dataGrid, TextBox output)
         {
@@ -198,7 +224,7 @@ namespace Manti
 
             output.Text = query;
         }
-        // Convert to DateTime.
+            // Convert to DateTime.
         private DateTime UnixStampToDateTime(double unixStamp)
         {
             var DateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
@@ -331,7 +357,7 @@ namespace Manti
         {
             var iClass = new DataTable();
             iClass.Columns.Add("id", typeof(string));
-            iClass.Columns.Add("value", typeof(string));
+            iClass.Columns.Add("name", typeof(string));
 
             iClass.Rows.Add(0, "Consumables");
             iClass.Rows.Add(1, "Container");
@@ -358,7 +384,7 @@ namespace Manti
             var iSubclass = new DataTable();
 
             iSubclass.Columns.Add("id", typeof(string));
-            iSubclass.Columns.Add("value", typeof(string));
+            iSubclass.Columns.Add("name", typeof(string));
 
             switch (classID)
             {
@@ -1018,7 +1044,7 @@ namespace Manti
                 var itTable = DatabaseSearch(connect, query);
 
                 textBoxItemTempEntry.Text = itTable.Tables[0].Rows[0]["entry"].ToString();
-                textBoxItemTempClass.Text = itTable.Tables[0].Rows[0]["class"].ToString();
+                textBoxItemTempTypeClass.Text = itTable.Tables[0].Rows[0]["class"].ToString();
                 textBoxItemTempSubclass.Text = itTable.Tables[0].Rows[0]["subclass"].ToString();
                 textBoxItemTempName.Text = itTable.Tables[0].Rows[0]["name"].ToString();
                 textBoxItemTempDisplayID.Text = itTable.Tables[0].Rows[0]["displayid"].ToString();
@@ -1159,6 +1185,165 @@ namespace Manti
 
                 ConnectionClose(connect);
             }
+        }
+        private string DatabaseItemTempGenerate()
+        {
+            string query = "REPLACE INTO `item_template` (" +
+            "`entry`, `class`, `subclass`, `name`, `displayid`, `Quality`, `Flags`, `FlagsExtra`, `BuyCount`, `BuyPrice`, `SellPrice`, `InventoryType`, `maxcount`, `ContainerSlots`, " +
+            "`AllowableClass`, `AllowableRace`, `ItemLevel`, `RequiredLevel`, `RequiredSkill`, `RequiredSkillRank`, `requiredspell`, `requiredhonorrank`, `RequiredCityRank`, `RequiredReputationFaction`, `RequiredReputationRank`, `RequiredDisenchantSkill`, " +
+            "`StatsCount`, `stat_type1`, `stat_value1`, `stat_type2`, `stat_value2`, `stat_type3`, `stat_value3`, `stat_type4`, `stat_value4`, `stat_type5`, `stat_value5`, `stat_type6`, `stat_value6`, `stat_type7`, `stat_value7`, `stat_type8`, `stat_value8`, `stat_type9`, `stat_value9`, `stat_type10`, `stat_value10`, `ScalingStatDistribution`, `ScalingStatValue`, " +
+            "`spellid_1`, `spelltrigger_1`, `spellcharges_1`, `spellppmRate_1`, `spellcooldown_1`, `spellcategory_1`, `spellcategorycooldown_1`, `spellid_2`, `spelltrigger_2`, `spellcharges_2`, `spellppmRate_2`, `spellcooldown_2`, `spellcategory_2`, `spellcategorycooldown_2`, " +
+            "`spellid_3`, `spelltrigger_3`, `spellcharges_3`, `spellppmRate_3`, `spellcooldown_3`, `spellcategory_3`, `spellcategorycooldown_3`, `spellid_4`, `spelltrigger_4`, `spellcharges_4`, `spellppmRate_4`, `spellcooldown_4`, `spellcategory_4`, `spellcategorycooldown_4`, `spellid_5`, `spelltrigger_5`, `spellcharges_5`, `spellppmRate_5`, `spellcooldown_5`, `spellcategory_5`, `spellcategorycooldown_5`, " +
+            "`dmg_type1`, `dmg_min1`, `dmg_max1`, `dmg_type2`, `dmg_min2`, `dmg_max2`, " +
+            "`holy_res`, `fire_res`, `nature_res`, `frost_res`, `shadow_res`, `arcane_res`, " +
+            "`socketColor_1`, `socketContent_1`, `socketColor_2`, `socketContent_2`, `socketColor_3`, `socketContent_3`, `socketBonus`, `GemProperties`, " +
+            "`delay`, `ammo_type`, `RangedModRange`, `bonding`, `description`, `PageText`, `LanguageID`, `PageMaterial`, `startquest`, `lockid`, `Material`, `sheath`, " +
+            "`RandomProperty`, `RandomSuffix`, `block`, `itemset`, `MaxDurability`, `area`, `Map`, `DisenchantID`, `ArmorDamageModifier`, `HolidayId`, `FoodType`, `flagsCustom`, `duration`, `ItemLimitCategory`, `minMoneyLoot`, `maxMoneyLoot`" +
+            ") VALUES (" +
+
+            textBoxItemTempEntry.Text.Trim() + ", " +
+            textBoxItemTempTypeClass.Text.Trim() + ", " +
+            textBoxItemTempSubclass.Text.Trim() + ", '" +
+            textBoxItemTempName.Text.Trim() + "', " +
+            textBoxItemTempDisplayID.Text.Trim() + ", " +
+            textBoxItemTempQuality.Text.Trim() + ", " +
+            textBoxItemTempFlags.Text.Trim() + ", " +
+            textBoxItemTempEFlags.Text.Trim() + ", " +
+            textBoxItemTempBuyC.Text.Trim() + ", " +
+            textBoxItemTempBuyP.Text.Trim() + ", " +
+            textBoxItemTempSellP.Text.Trim() + ", " +
+            textBoxItemTempInventory.Text.Trim() + ", " +
+            textBoxItemTempMaxC.Text.Trim() + ", " +
+            textBoxItemTempContainer.Text.Trim() + ", " +
+
+            textBoxItemTempReqClass.Text.Trim() + ", " +
+            textBoxItemTempReqRace.Text.Trim() + ", " +
+            textBoxItemTempReqItemLevel.Text.Trim() + ", " +
+            textBoxItemTempReqLevel.Text.Trim() + ", " +
+            textBoxItemTempReqSkill.Text.Trim() + ", " +
+            textBoxItemTempReqSkillRank.Text.Trim() + ", " +
+            textBoxItemTempReqSpell.Text.Trim() + ", " +
+            textBoxItemTempReqHonorRank.Text.Trim() + ", " +
+            textBoxItemTempReqCityRank.Text.Trim() + ", " +
+            textBoxItemTempReqRepFaction.Text.Trim() + ", " +
+            textBoxItemTempReqRepRank.Text.Trim() + ", " +
+            textBoxItemTempReqDisenchant.Text.Trim() + ", " +
+            
+            textBoxItemTempStatsC.Text.Trim() + ", " +
+            textBoxItemTempStatsType1.Text.Trim() + ", " +
+            textBoxItemTempStatsValue1.Text.Trim() + ", " +
+            textBoxItemTempStatsType2.Text.Trim() + ", " +
+            textBoxItemTempStatsValue2.Text.Trim() + ", " +
+            textBoxItemTempStatsType3.Text.Trim() + ", " +
+            textBoxItemTempStatsValue3.Text.Trim() + ", " +
+            textBoxItemTempStatsType4.Text.Trim() + ", " +
+            textBoxItemTempStatsValue4.Text.Trim() + ", " +
+            textBoxItemTempStatsType5.Text.Trim() + ", " +
+            textBoxItemTempStatsValue5.Text.Trim() + ", " +
+            textBoxItemTempStatsType6.Text.Trim() + ", " +
+            textBoxItemTempStatsValue6.Text.Trim() + ", " +
+            textBoxItemTempStatsType7.Text.Trim() + ", " +
+            textBoxItemTempStatsValue7.Text.Trim() + ", " +
+            textBoxItemTempStatsType8.Text.Trim() + ", " +
+            textBoxItemTempStatsValue8.Text.Trim() + ", " +
+            textBoxItemTempStatsType9.Text.Trim() + ", " +
+            textBoxItemTempStatsValue9.Text.Trim() + ", " +
+            textBoxItemTempStatsType10.Text.Trim() + ", " +
+            textBoxItemTempStatsValue10.Text.Trim() + ", " +
+            textBoxItemTempStatsScaleDist.Text.Trim() + ", " +
+            textBoxItemTempStatsScaleValue.Text.Trim() + ", " +
+
+            textBoxItemTempSpellID1.Text.Trim() + ", " +
+            textBoxItemTempTrigger1.Text.Trim() + ", " +
+            textBoxItemTempCharges1.Text.Trim() + ", " +
+            textBoxItemTempRate1.Text.Trim() + ", " +
+            textBoxItemTempCD1.Text.Trim() + ", " +
+            textBoxItemTempCategory1.Text.Trim() + ", " +
+            textBoxItemTempCategoryCD1.Text.Trim() + ", " +
+            textBoxItemTempSpellID2.Text.Trim() + ", " +
+            textBoxItemTempTrigger2.Text.Trim() + ", " +
+            textBoxItemTempCharges2.Text.Trim() + ", " +
+            textBoxItemTempRate2.Text.Trim() + ", " +
+            textBoxItemTempCD2.Text.Trim() + ", " +
+            textBoxItemTempCategory2.Text.Trim() + ", " +
+            textBoxItemTempCategoryCD2.Text.Trim() + ", " +
+            textBoxItemTempSpellID3.Text.Trim() + ", " +
+            textBoxItemTempTrigger3.Text.Trim() + ", " +
+            textBoxItemTempCharges3.Text.Trim() + ", " +
+            textBoxItemTempRate3.Text.Trim() + ", " +
+            textBoxItemTempCD3.Text.Trim() + ", " +
+            textBoxItemTempCategory3.Text.Trim() + ", " +
+            textBoxItemTempCategoryCD3.Text.Trim() + ", " +
+            textBoxItemTempSpellID4.Text.Trim() + ", " +
+            textBoxItemTempTrigger4.Text.Trim() + ", " +
+            textBoxItemTempCharges4.Text.Trim() + ", " +
+            textBoxItemTempRate4.Text.Trim() + ", " +
+            textBoxItemTempCD4.Text.Trim() + ", " +
+            textBoxItemTempCategory4.Text.Trim() + ", " +
+            textBoxItemTempCategoryCD4.Text.Trim() + ", " +
+            textBoxItemTempSpellID5.Text.Trim() + ", " +
+            textBoxItemTempTrigger5.Text.Trim() + ", " +
+            textBoxItemTempCharges5.Text.Trim() + ", " +
+            textBoxItemTempRate5.Text.Trim() + ", " +
+            textBoxItemTempCD5.Text.Trim() + ", " +
+            textBoxItemTempCategory5.Text.Trim() + ", " +
+            textBoxItemTempCategoryCD5.Text.Trim() + ", " +
+
+            textBoxItemTempDmgType1.Text.Trim() + ", " +
+            textBoxItemTempDmgMin1.Text.Trim() + ", " +
+            textBoxItemTempDmgMax1.Text.Trim() + ", " +
+            textBoxItemTempDmgType2.Text.Trim() + ", " +
+            textBoxItemTempDmgMin2.Text.Trim() + ", " +
+            textBoxItemTempDmgMax2.Text.Trim() + ", " +
+
+            textBoxItemTempResisHoly.Text.Trim() + ", " +
+            textBoxItemTempResisFire.Text.Trim() + ", " +
+            textBoxItemTempResisNature.Text.Trim() + ", " +
+            textBoxItemTempResisFrost.Text.Trim() + ", " +
+            textBoxItemTempResisShadow.Text.Trim() + ", " +
+            textBoxItemTempResisArcane.Text.Trim() + ", " +
+
+            textBoxItemTempColor1.Text.Trim() + ", " +
+            textBoxItemTempContent1.Text.Trim() + ", " +
+            textBoxItemTempColor2.Text.Trim() + ", " +
+            textBoxItemTempContent2.Text.Trim() + ", " +
+            textBoxItemTempColor3.Text.Trim() + ", " +
+            textBoxItemTempContent3.Text.Trim() + ", " +
+            textBoxItemTempSocketBonus.Text.Trim() + ", " +
+            textBoxItemTempGemProper.Text.Trim() + ", " +
+
+            textBoxItemTempDelay.Text.Trim() + ", " +
+            textBoxItemTempAmmoType.Text.Trim() + ", " +
+            textBoxItemTempRangedMod.Text.Trim() + ", " +
+            textBoxItemTempBonding.Text.Trim() + ", '" +
+            textBoxItemTempDescription.Text.Trim() + "', " +
+            textBoxItemTempPageText.Text.Trim() + ", " +
+            textBoxItemTempLanguage.Text.Trim() + ", " +
+            textBoxItemTempPageMaterial.Text.Trim() + ", " +
+            textBoxItemTempStartQuest.Text.Trim() + ", " +
+            textBoxItemTempLockID.Text.Trim() + ", " +
+            textBoxItemTempMaterial.Text.Trim() + ", " +
+            textBoxItemTempSheath.Text.Trim() + ", " +
+            textBoxItemTempProperty.Text.Trim() + ", " +
+            textBoxItemTempSuffix.Text.Trim() + ", " +
+            textBoxItemTempBlock.Text.Trim() + ", " +
+            textBoxItemTempItemSet.Text.Trim() + ", " +
+            textBoxItemTempDurability.Text.Trim() + ", " +
+            textBoxItemTempArea.Text.Trim() + ", " +
+            textBoxItemTempMap.Text.Trim() + ", " +
+            textBoxItemTempDisenchantID.Text.Trim() + ", " +
+            textBoxItemTempModifier.Text.Trim() + ", " +
+            textBoxItemTempHolidayID.Text.Trim() + ", " +
+            textBoxItemTempFoodType.Text.Trim() + ", " +
+            textBoxItemTempFlagsC.Text.Trim() + ", " +
+            textBoxItemTempDuration.Text.Trim() + ", " +
+            textBoxItemTempLimitCate.Text.Trim() + ", " +
+            textBoxItemTempMoneyMin.Text.Trim() + ", " +
+            textBoxItemTempMoneyMax.Text.Trim() +
+
+            ");";
+
+            return query;
         }
         private void DatabaseItemLoot(string itemEntryID)
         {
@@ -1634,6 +1819,10 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
+        private void buttonItemTempGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxItemScriptOutput.Text += DatabaseItemTempGenerate();
+        }
         private void dataGridViewItemSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewItemSearch.Rows.Count > 0)
@@ -1808,92 +1997,84 @@ namespace Manti
         #region POPUPS
         private void buttonItemSearchClassPopup_Click(object sender, EventArgs e)
         {
-            var popupDialog = new FormPopup.FormPopupSelection();
-            popupDialog.setDataTable = DataItemClass();
-            popupDialog.setFormTitle = "Class Selection";
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemSearchClass.Text = (popupDialog.getSelection == "") ? textBoxItemSearchClass.Text : popupDialog.getSelection;
+            CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass);
         }
         private void buttonItemSearchSubclassPopup_Click(object sender, EventArgs e)
         {
-            var popupDialog = new FormPopup.FormPopupSelection();
-
-            popupDialog.setDataTable = DataItemSubclass(textBoxItemSearchClass.Text.Trim());
-            popupDialog.setFormTitle = "Subclass Selection";
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemSearchSubclass.Text = (popupDialog.getSelection == "") ? textBoxItemSearchSubclass.Text : popupDialog.getSelection;
+            CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass);
         }
         private void buttonItemTempRacePopup_Click(object sender, EventArgs e)
         {
-            string value = textBoxItemTempReqRace.Text.Trim();
-            var popupDialog = new FormPopup.FormPopupCheckboxList();
-
-            popupDialog.setFormTitle = "Race Requirement";
-            popupDialog.setDataTable = ReadExcelCSV("ChrRaces", 0, 14);
-            popupDialog.setValue = Convert.ToInt32((value == "") ? "0" : value);
-            popupDialog.setBitMask = true;
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemTempReqRace.Text = value = (popupDialog.getValue == "") ? value : popupDialog.getValue;
+            CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace);
         }
         private void buttonItemTempClassPopup_Click(object sender, EventArgs e)
         {
-            string value = textBoxItemTempReqClass.Text.Trim();
-            var popupDialog = new FormPopup.FormPopupCheckboxList();
-
-            popupDialog.setFormTitle = "Class Requirement";
-            popupDialog.setDataTable = ReadExcelCSV("ChrClasses", 0, 4);
-            popupDialog.setValue = Convert.ToInt32((value == "") ? "0" : value);
-            popupDialog.setBitMask = true;
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemTempReqClass.Text = value = (popupDialog.getValue == "") ? value : popupDialog.getValue;
+            CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass);
         }
         private void buttonItemTempDmgType1Popup_Click(object sender, EventArgs e)
         {
-            var popupDialog = new FormPopup.FormPopupSelection();
-            popupDialog.setDataTable = ReadExcelCSV("ItemDamageTypes", 0, 1);
-            popupDialog.setFormTitle = "Damage Type 1 Selection";
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemTempDmgType1.Text = (popupDialog.getSelection == "") ? textBoxItemTempDmgType1.Text : popupDialog.getSelection;
+            CreatePopupSelection("Damage Type I Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1);
         }
         private void buttonItemTempDmgType2Popup_Click(object sender, EventArgs e)
         {
-            var popupDialog = new FormPopup.FormPopupSelection();
-            popupDialog.setDataTable = ReadExcelCSV("ItemDamageTypes", 0, 1);
-            popupDialog.setFormTitle = "Damage Type 2 Selection";
-            popupDialog.Owner = this;
-            popupDialog.ShowDialog();
-
-            this.Activate();
-            textBoxItemTempDmgType2.Text = (popupDialog.getSelection == "") ? textBoxItemTempDmgType2.Text : popupDialog.getSelection;
+            CreatePopupSelection("Damage Type II Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2);
+        }
+        private void buttonItemTempStatsType1Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection I", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1);
+        }
+        private void buttonItemTempStatsType2Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection II", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2);
+        }
+        private void buttonItemTempStatsType3Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection III", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3);
+        }
+        private void buttonItemTempStatsType4Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection IV", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4);
+        }
+        private void buttonItemTempStatsType5Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection V", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5);
+        }
+        private void buttonItemTempStatsType6Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection VI", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6);
+        }
+        private void buttonItemTempStatsType7Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection VII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7);
+        }
+        private void buttonItemTempStatsType8Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection VIII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8);
+        }
+        private void buttonItemTempStatsType9Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection IX", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9);
+        }
+        private void buttonItemTempStatsType10Popup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Stat Selection X", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10);
+        }
+        private void buttonItemTempTypeClassPopup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass);
+        }
+        private void buttonItemTempSubclassPopup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass);
         }
 
 
+
+
         #endregion
 
         #endregion
 
         #endregion
-
-        #endregion
-
-
-
-
-
     }
 }

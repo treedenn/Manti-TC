@@ -34,6 +34,8 @@
             this.labelPassword = new System.Windows.Forms.Label();
             this.labelPort = new System.Windows.Forms.Label();
             this.groupBoxMySQL = new System.Windows.Forms.GroupBox();
+            this.checkBoxSavePassword = new System.Windows.Forms.CheckBox();
+            this.checkBoxSaveInformation = new System.Windows.Forms.CheckBox();
             this.groupBoxMySQLDatabase = new System.Windows.Forms.GroupBox();
             this.textBoxWorld = new System.Windows.Forms.TextBox();
             this.textBoxCharacters = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@
             this.buttonConnect = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonOffline = new System.Windows.Forms.Button();
-            this.checkBoxSaveInformation = new System.Windows.Forms.CheckBox();
-            this.checkBoxSavePassword = new System.Windows.Forms.CheckBox();
             this.groupBoxMySQL.SuspendLayout();
             this.groupBoxMySQLDatabase.SuspendLayout();
             this.groupBoxMySQLLogin.SuspendLayout();
@@ -110,6 +110,26 @@
             this.groupBoxMySQL.TabIndex = 5;
             this.groupBoxMySQL.TabStop = false;
             this.groupBoxMySQL.Text = "MySQL Information";
+            // 
+            // checkBoxSavePassword
+            // 
+            this.checkBoxSavePassword.AutoSize = true;
+            this.checkBoxSavePassword.Location = new System.Drawing.Point(412, 127);
+            this.checkBoxSavePassword.Name = "checkBoxSavePassword";
+            this.checkBoxSavePassword.Size = new System.Drawing.Size(100, 17);
+            this.checkBoxSavePassword.TabIndex = 9;
+            this.checkBoxSavePassword.Text = "Save Password";
+            this.checkBoxSavePassword.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSaveInformation
+            // 
+            this.checkBoxSaveInformation.AutoSize = true;
+            this.checkBoxSaveInformation.Location = new System.Drawing.Point(262, 127);
+            this.checkBoxSaveInformation.Name = "checkBoxSaveInformation";
+            this.checkBoxSaveInformation.Size = new System.Drawing.Size(106, 17);
+            this.checkBoxSaveInformation.TabIndex = 8;
+            this.checkBoxSaveInformation.Text = "Save Information";
+            this.checkBoxSaveInformation.UseVisualStyleBackColor = true;
             // 
             // groupBoxMySQLDatabase
             // 
@@ -246,26 +266,6 @@
             this.buttonOffline.UseVisualStyleBackColor = true;
             this.buttonOffline.Click += new System.EventHandler(this.buttonOffline_Click);
             // 
-            // checkBoxSaveInformation
-            // 
-            this.checkBoxSaveInformation.AutoSize = true;
-            this.checkBoxSaveInformation.Location = new System.Drawing.Point(262, 127);
-            this.checkBoxSaveInformation.Name = "checkBoxSaveInformation";
-            this.checkBoxSaveInformation.Size = new System.Drawing.Size(106, 17);
-            this.checkBoxSaveInformation.TabIndex = 8;
-            this.checkBoxSaveInformation.Text = "Save Information";
-            this.checkBoxSaveInformation.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxSavePassword
-            // 
-            this.checkBoxSavePassword.AutoSize = true;
-            this.checkBoxSavePassword.Location = new System.Drawing.Point(412, 127);
-            this.checkBoxSavePassword.Name = "checkBoxSavePassword";
-            this.checkBoxSavePassword.Size = new System.Drawing.Size(100, 17);
-            this.checkBoxSavePassword.TabIndex = 9;
-            this.checkBoxSavePassword.Text = "Save Password";
-            this.checkBoxSavePassword.UseVisualStyleBackColor = true;
-            // 
             // FormMySQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,7 +281,7 @@
             this.Name = "FormMySQL";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tricore - MySQL Connection";
+            this.Text = "Manti - MySQL Connection";
             this.Load += new System.EventHandler(this.FormMySQL_Load);
             this.groupBoxMySQL.ResumeLayout(false);
             this.groupBoxMySQL.PerformLayout();

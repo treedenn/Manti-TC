@@ -45,13 +45,13 @@ namespace Manti.FormPopup
                     if (row["value"].ToString().ToLower().Contains(textBoxPopupSearch.Text.ToLower()))
                     {
                         var item = new ListViewItem( row["id"].ToString() );
-                        item.SubItems.Add( row["value"].ToString() );
+                        item.SubItems.Add( row["name"].ToString() );
                         listViewPopupSelection.Items.Add(item);
                     }
                 } else
                 {
                     var item = new ListViewItem(row["id"].ToString());
-                    item.SubItems.Add(row["value"].ToString());
+                    item.SubItems.Add(row["name"].ToString());
                     listViewPopupSelection.Items.Add(item);
                 }
             }
@@ -91,5 +91,6 @@ namespace Manti.FormPopup
         }
 
         #endregion
+
     }
 }
