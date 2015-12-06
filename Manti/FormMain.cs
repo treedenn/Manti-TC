@@ -19,7 +19,7 @@ namespace Manti
             InitializeComponent();   
         }
 
-        /*
+        /* MUST READ
             Hello viewer. This project contains a lot of code and functions.
                 For a better overview (Visual Studio) do the command: CTRL + M + O.
                     I know, it's a great feature!
@@ -31,6 +31,8 @@ namespace Manti
         {
             tabControlCategory.SelectedTab = tabPageItem;
             tabControlCategory.Focus();
+
+            dataGridViewCharacterInventory.AutoGenerateColumns = false;
 
             dataGridViewItemLoot.AutoGenerateColumns = false;
             dataGridViewItemProspect.AutoGenerateColumns = false;
@@ -122,24 +124,31 @@ namespace Manti
             var forgetFirst = true;
 
             var dataColumn = new DataTable();
-            dataColumn.Columns.Add("id", typeof(int));
-            dataColumn.Columns.Add("name", typeof(string));
 
-            string line;
-
-            while ((line = reader.ReadLine()) != null)
+            if (reader != null)
             {
-                string[] words = line.Split(',');
+                dataColumn.Columns.Add("id", typeof(int));
+                dataColumn.Columns.Add("name", typeof(string));
 
-                if (forgetFirst == false)
+                string line;
+
+                while ((line = reader.ReadLine()) != null)
                 {
-                    dataColumn.Rows.Add(Convert.ToInt16(words[ID].Trim('"')), words[name].Trim('"'));
+                    string[] words = line.Split(',');
+
+                    if (forgetFirst == false)
+                    {
+                        dataColumn.Rows.Add(Convert.ToInt16(words[ID].Trim('"')), words[name].Trim('"'));
+                    }
+
+                    forgetFirst = false;
                 }
 
-                forgetFirst = false;
+                reader.Close();
+            } else
+            {
+                MessageBox.Show(csvName + " Could not been found in the CSV folder.", "File Directory : Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            reader.Close();
 
             return dataColumn;
         }
@@ -175,6 +184,26 @@ namespace Manti
             }
 
             return true;
+        }
+            // Convert datatable columns to string columns
+        private DataTable ConvertColumnsToString(DataTable datatable)
+        {
+            var newTable = datatable.Clone();
+
+            for (var i = 0; i < newTable.Columns.Count; i++)
+            {
+                if (newTable.Columns[i].DataType != typeof(string))
+                {
+                    newTable.Columns[i].DataType = typeof(string);
+                }
+            }
+
+            foreach (DataRow row in datatable.Rows)
+            {
+                newTable.ImportRow(row);
+            }
+
+            return newTable;
         }
             // Create Popup : Selection
         private void CreatePopupSelection(string formTitle, DataTable data, Control textbox)
@@ -619,7 +648,7 @@ namespace Manti
         #endregion
         #region Character
 
-        // Searches for data for a specific character.
+            // Searches for data for a specific character.
         private void DatabaseCharacterSearch(string characterGUID)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
@@ -683,7 +712,7 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
-        // Outputs the inventory for a specific player.
+            // Outputs the inventory for a specific player.
         private void DatabaseCharacterInventory(string characterGUID)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
@@ -692,27 +721,47 @@ namespace Manti
             {
                 string inventoryQuery = "SELECT * FROM character_inventory WHERE guid = '" + characterGUID + "';";
 
-                DataSet iTable = DatabaseSearch(connect, inventoryQuery);
+                var datatable = DatabaseSearch(connect, inventoryQuery);
 
-                if (iTable.Tables[0].Rows.Count != 0)
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    iTable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
                     
                     // loops every inventory item for name
-                    for (int i = 0; i < iTable.Tables[0].Rows.Count; i++)
-                    {   
+                    for (int i = 0; i < newTable.Rows.Count; i++)
+                    {
                         // sets the column 'name' to the itemname
-                        iTable.Tables[0].Rows[i]["name"] = DatabaseItemGetName( DatabaseItemGetEntry( Convert.ToUInt32(iTable.Tables[0].Rows[i][3]) ) );
+                        newTable.Rows[i]["name"] = DatabaseItemGetName( DatabaseItemGetEntry( Convert.ToUInt32(newTable.Rows[i][3]) ) );
                     }
                 }
 
-                dataGridViewCharacterInventory.DataSource = iTable.Tables[0];
+                dataGridViewCharacterInventory.DataSource = newTable;
             }
 
             ConnectionClose(connect);
         }
+        private string DatabaseCharacterInventoryGenerate()
+        {
 
+            string query = "DELETE FROM `character_inventory` WHERE guid = '" + dataGridViewCharacterInventory.Rows[0].Cells[0].Value.ToString() + "';";
+
+            foreach (DataGridViewRow row in dataGridViewCharacterInventory.Rows)
+            {
+                if (row.Cells[0].Value.ToString() != "")
+                {
+                    query += Environment.NewLine;
+
+                    query += "INSERT INTO `character_inventory` VALUES (" +
+                        row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " +
+                        row.Cells[2].Value.ToString() + ", " + row.Cells[3].Value.ToString() + ");";
+                }
+            }
+
+            return query;
+        }
         #endregion       
         #region Creature
         // Searches the database for the creature's information.
@@ -842,22 +891,24 @@ namespace Manti
                 string query = "SELECT * FROM creature_loot_template WHERE Entry = '" + lootID + "';";
 
                 // Creature Loot Template Table
-                DataSet cltTable = DatabaseSearch(connect, query);
+                var datatable = DatabaseSearch(connect, query);
 
-                dataGridViewCreatureLoot.DataSource = cltTable.Tables[0];
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
 
-                if (cltTable.Tables[0].Rows.Count != 0)
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    cltTable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
 
                     // loops every inventory item for name
-                    for (int i = 0; i < cltTable.Tables[0].Rows.Count; i++)
+                    for (int i = 0; i < newTable.Rows.Count; i++)
                     {
                         // sets the column 'name' to the itemname
-                        cltTable.Tables[0].Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(cltTable.Tables[0].Rows[i][1]));
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
                     }
                 }
+
+                dataGridViewCreatureLoot.DataSource = newTable;
 
                 ConnectionClose(connect);
             }
@@ -1353,22 +1404,24 @@ namespace Manti
             {
                 string itemlootQuery = "SELECT * FROM item_loot_template WHERE entry = '" + itemEntryID + "';";
 
-                DataSet ilTable = DatabaseSearch(connect, itemlootQuery);
+                var datatable = DatabaseSearch(connect, itemlootQuery);
 
-                if (ilTable.Tables[0].Rows.Count != 0)
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    ilTable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
 
                     // loops every inventory item for name
-                    for (int i = 0; i < ilTable.Tables[0].Rows.Count; i++)
+                    for (int i = 0; i < newTable.Rows.Count; i++)
                     {
                         // sets the column 'name' to the itemname
-                        ilTable.Tables[0].Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(ilTable.Tables[0].Rows[i][1]));
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
                     }
                 }
 
-                dataGridViewItemLoot.DataSource = ilTable.Tables[0];
+                dataGridViewItemLoot.DataSource = newTable;
             }
 
             ConnectionClose(connect);
@@ -1381,22 +1434,24 @@ namespace Manti
             {
                 string query = "SELECT * FROM disenchant_loot_template WHERE entry = '" + DisenchantID + "';";
 
-                DataSet datatable = DatabaseSearch(connect, query);
+                var datatable = DatabaseSearch(connect, query);
 
-                if (datatable.Tables[0].Rows.Count != 0)
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    datatable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
 
                     // loops every item for name
-                    for (int i = 0; i < datatable.Tables[0].Rows.Count; i++)
+                    for (int i = 0; i < newTable.Rows.Count; i++)
                     {
                         // sets the column 'name' to the itemname
-                        datatable.Tables[0].Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(datatable.Tables[0].Rows[i][1]));
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
                     }
                 }
 
-                dataGridViewItemDE.DataSource = datatable.Tables[0];
+                dataGridViewItemDE.DataSource = newTable;
             }
 
             ConnectionClose(connect);
@@ -1409,22 +1464,24 @@ namespace Manti
             {
                 string query = "SELECT * FROM milling_loot_template WHERE entry = '" + itemEntryID + "';";
 
-                DataSet datatable = DatabaseSearch(connect, query);
+                var datatable = DatabaseSearch(connect, query);
 
-                if (datatable.Tables[0].Rows.Count != 0)
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    datatable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
 
                     // loops every item for name
-                    for (int i = 0; i < datatable.Tables[0].Rows.Count; i++)
+                    for (int i = 0; i < newTable.Rows.Count; i++)
                     {
                         // sets the column 'name' to the itemname
-                        datatable.Tables[0].Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(datatable.Tables[0].Rows[i][1]));
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
                     }
                 }
 
-                dataGridViewItemMill.DataSource = datatable.Tables[0];
+                dataGridViewItemMill.DataSource = newTable;
             }
 
             ConnectionClose(connect);
@@ -1437,42 +1494,33 @@ namespace Manti
             {
                 string query = "SELECT * FROM prospecting_loot_template WHERE entry = '" + itemEntryID + "';";
 
-                DataSet datatable = DatabaseSearch(connect, query);
+                var datatable = DatabaseSearch(connect, query);
 
-                if (datatable.Tables[0].Rows.Count != 0)
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
                 {
                     // Adds a new column 'name'
-                    datatable.Tables[0].Columns.Add("name", typeof(string));
+                    newTable.Columns.Add("name", typeof(string));
 
                     // loops every item for name
-                    for (int i = 0; i < datatable.Tables[0].Rows.Count; i++)
+                    for (int i = 0; i < newTable.Rows.Count; i++)
                     {
                         // sets the column 'name' to the itemname
-                        datatable.Tables[0].Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(datatable.Tables[0].Rows[i][1]));
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
                     }
                 }
 
-                dataGridViewItemProspect.DataSource = datatable.Tables[0];
+                dataGridViewItemProspect.DataSource = newTable;
             }
 
             ConnectionClose(connect);
         }
-        private void buttonItemScriptUpdate_Click(object sender, EventArgs e)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect))
-            {
-                toolStripStatusLabelRow.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
-
-                ConnectionClose(connect);
-            }
-        }
 
         #endregion
 
         #endregion
-        #region Tabs
+        #region Tab Events
 
         #region Account
         private void buttonAccountSearchSearch_Click(object sender, EventArgs e)
@@ -1523,9 +1571,9 @@ namespace Manti
         }
         private void buttonAccountAccountGenerateScript_Click(object sender, EventArgs e)
         {
-            textBoxAccountScript.Clear();
+            textBoxAccountScriptOutput.Clear();
 
-            textBoxAccountScript.Text += "UPDATE account " +
+            textBoxAccountScriptOutput.Text += "UPDATE account " +
                 "SET id = " + textBoxAccountAccountID.Text.Trim() + ", username = '" + textBoxAccountAccountUsername.Text.Trim() + "', " +
                 "email = '" + textBoxAccountAccountEmail.Text.Trim() + "', reg_mail = '" + textBoxAccountAccountRegmail.Text.Trim() + "', " +
                 "last_ip = '" + textBoxAccountAccountLastIP.Text.Trim() + "', " +
@@ -1542,7 +1590,7 @@ namespace Manti
             
             if (ConnectionOpen(connect))
             {
-                int rows = DatabaseUpdate(connect, textBoxAccountScript.Text.Trim());
+                int rows = DatabaseUpdate(connect, textBoxAccountScriptOutput.Text.Trim());
                 toolStripStatusLabelAccountScriptResult.Text = "Row(s) affected: " + rows.ToString();
                 ConnectionClose(connect);
             } 
@@ -1553,7 +1601,7 @@ namespace Manti
 
         private void buttonCharacterSearchSearch_Click(object sender, EventArgs e)
         {
-            bool totalSearch = CheckEmptyControls(tabPageAccountSearch); DialogResult dr;
+            bool totalSearch = CheckEmptyControls(tabPageCharacterSearch); DialogResult dr;
 
             string query = "SELECT guid, account, name, race, class, level FROM characters WHERE '1' = '1'";
 
@@ -1598,6 +1646,41 @@ namespace Manti
 
                 tabControlCategoryCharacter.SelectedTab = tabPageCharacterCharacter;
             }
+        }
+
+        private void buttonCharacterInventoryAdd_Click(object sender, EventArgs e)
+        {
+            var values = new string[] {
+                textBoxCharacterInventoryGUID.Text,
+                textBoxCharacterInventoryBag.Text,
+                textBoxCharacterInventorySlot.Text,
+                textBoxCharacterInventoryItemID.Text
+            };
+
+            if (textBoxCharacterInventoryGUID.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCharacterInventory.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCharacterInventory.DataSource = existingData;
+            }
+        }
+        private void buttonCharacterInventoryRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseCharacterInventory((textBoxCharacterInventoryGUID.Text.Trim() != "") ? textBoxCharacterInventoryGUID.Text : textBoxCharacterCharacterGUID.Text);
+        }
+        private void buttonCharacterInventoryDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCharacterInventory.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCharacterInventory.SelectedRows)
+                {
+                    dataGridViewCharacterInventory.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonCharacterInventoryGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxCharacterScriptOutput.Text = DatabaseCharacterInventoryGenerate();
         }
 
         #endregion
@@ -1819,10 +1902,6 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
-        private void buttonItemTempGenerate_Click(object sender, EventArgs e)
-        {
-            textBoxItemScriptOutput.Text += DatabaseItemTempGenerate();
-        }
         private void dataGridViewItemSearch_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewItemSearch.Rows.Count > 0)
@@ -1836,11 +1915,26 @@ namespace Manti
                 DatabaseItemProspecting(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
             }
         }
+        private void buttonItemScriptUpdate_Click(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelRow.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
+        }
+        private void buttonItemTempGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxItemScriptOutput.Text += DatabaseItemTempGenerate();
+        }
 
         #region Loot
         private void buttonItemLootAdd_Click(object sender, EventArgs e)
         {
-            var values = new string[] {
+            var values = new object[] {
                 textBoxItemLootEntry.Text,
                 textBoxItemLootItemID.Text,
                 textBoxItemLootReference.Text,
@@ -1854,12 +1948,15 @@ namespace Manti
 
             if (textBoxItemLootEntry.Text.Trim() != "")
             {
-                dataGridViewItemLoot.Rows.Add(values);
+                var existingData = (DataTable)dataGridViewItemLoot.DataSource;
+                MessageBox.Show(existingData.Columns[4].DataType.ToString(), "");
+                existingData.Rows.Add(values);
+                dataGridViewItemLoot.DataSource = existingData;
             }
         }
         private void buttonItemLootRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemLoot((textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text.Trim() : textBoxItemTempEntry.Text);
+            DatabaseItemLoot((textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text : textBoxItemTempEntry.Text);
         }
         private void buttonItemLootDelete_Click(object sender, EventArgs e)
         {
@@ -1893,7 +1990,9 @@ namespace Manti
 
             if (textBoxItemProspectEntry.Text.Trim() != "")
             {
-                dataGridViewItemProspect.Rows.Add(values);
+                var existingData = (DataTable)dataGridViewItemProspect.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewItemProspect.DataSource = existingData;
             }
         }
         private void buttonItemProspectRefresh_Click(object sender, EventArgs e)
@@ -1932,7 +2031,9 @@ namespace Manti
 
             if (textBoxItemMillEntry.Text.Trim() != "")
             {
-                dataGridViewItemMill.Rows.Add(values);
+                var existingData = (DataTable)dataGridViewItemMill.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewItemMill.DataSource = existingData;
             }
         }
         private void buttonItemMillRefresh_Click(object sender, EventArgs e)
@@ -1971,7 +2072,9 @@ namespace Manti
 
             if (textBoxItemDEEntry.Text.Trim() != "")
             {
-                dataGridViewItemDE.Rows.Add(values);
+                var existingData = (DataTable)dataGridViewItemDE.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewItemDE.DataSource = existingData;
             }
         }
         private void buttonItemDERefresh_Click(object sender, EventArgs e)
@@ -2067,7 +2170,10 @@ namespace Manti
         {
             CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass);
         }
-
+        private void buttonItemTempQualityPopup_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Quality Selection", ReadExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality);
+        }
 
 
 
@@ -2076,5 +2182,7 @@ namespace Manti
         #endregion
 
         #endregion
+
+
     }
 }

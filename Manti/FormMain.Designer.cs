@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -86,6 +85,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControlCategory = new System.Windows.Forms.TabControl();
             this.tabPageAccount = new System.Windows.Forms.TabPage();
             this.tabControlCategoryAccount = new System.Windows.Forms.TabControl();
@@ -144,7 +144,7 @@
             this.statusStripAccountScript = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelAffected = new System.Windows.Forms.ToolStripStatusLabel();
             this.buttonAccountScriptUpdate = new System.Windows.Forms.Button();
-            this.textBoxAccountScript = new System.Windows.Forms.TextBox();
+            this.textBoxAccountScriptOutput = new System.Windows.Forms.TextBox();
             this.tabPageCharacter = new System.Windows.Forms.TabPage();
             this.tabControlCategoryCharacter = new System.Windows.Forms.TabControl();
             this.tabPageCharacterSearch = new System.Windows.Forms.TabPage();
@@ -237,12 +237,29 @@
             this.textBoxCharacterCharacterGUID = new System.Windows.Forms.TextBox();
             this.labelCharacterCharacterGUID = new System.Windows.Forms.Label();
             this.tabPageCharacterInventory = new System.Windows.Forms.TabPage();
+            this.textBoxCharacterInventoryItemID = new System.Windows.Forms.TextBox();
+            this.labelCharacterInventoryItemID = new System.Windows.Forms.Label();
+            this.textBoxCharacterInventoryBag = new System.Windows.Forms.TextBox();
+            this.labelCharacterInventoryBag = new System.Windows.Forms.Label();
+            this.textBoxCharacterInventorySlot = new System.Windows.Forms.TextBox();
+            this.labelCharacterInventorySlot = new System.Windows.Forms.Label();
+            this.textBoxCharacterInventoryGUID = new System.Windows.Forms.TextBox();
+            this.labelCharacterInventoryGUID = new System.Windows.Forms.Label();
+            this.buttonCharacterInventoryGenerate = new System.Windows.Forms.Button();
+            this.buttonCharacterInventoryDelete = new System.Windows.Forms.Button();
+            this.buttonCharacterInventoryRefresh = new System.Windows.Forms.Button();
+            this.buttonCharacterInventoryAdd = new System.Windows.Forms.Button();
             this.dataGridViewCharacterInventory = new System.Windows.Forms.DataGridView();
             this.ColumnCharacterInventoryGUID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCharacterInventoryBag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCharacterInventorySlot = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCharacterInventoryItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCharacterInventoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.statusStripCharacterScript = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelCharacterScriptAffected = new System.Windows.Forms.ToolStripStatusLabel();
+            this.buttonCharacterScriptUpdate = new System.Windows.Forms.Button();
+            this.textBoxCharacterScriptOutput = new System.Windows.Forms.TextBox();
             this.tabPageCreature = new System.Windows.Forms.TabPage();
             this.tabControlCategoryCreature = new System.Windows.Forms.TabControl();
             this.tabPageCreatureSearch = new System.Windows.Forms.TabPage();
@@ -885,6 +902,14 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.groupBoxItemTemplateStats = new System.Windows.Forms.GroupBox();
+            this.buttonItemTempStatsType10Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType9Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType8Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType7Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType6Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType5Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType4Popup = new System.Windows.Forms.Button();
+            this.buttonItemTempStatsType3Popup = new System.Windows.Forms.Button();
             this.buttonItemTempStatsType2Popup = new System.Windows.Forms.Button();
             this.buttonItemTempStatsType1Popup = new System.Windows.Forms.Button();
             this.textBoxItemTempStatsScaleValue = new System.Windows.Forms.TextBox();
@@ -941,12 +966,13 @@
             this.textBoxItemTempReqClass = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBoxItemTemplateGeneral = new System.Windows.Forms.GroupBox();
+            this.buttonItemTempQualityPopup = new System.Windows.Forms.Button();
+            this.buttonItemTempSubclassPopup = new System.Windows.Forms.Button();
+            this.buttonItemTempTypeClassPopup = new System.Windows.Forms.Button();
             this.textBoxItemTempStatsC = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.textBoxItemTempContainer = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBoxItemTempStack = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.textBoxItemTempMaxC = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBoxItemTempEFlags = new System.Windows.Forms.TextBox();
@@ -1136,16 +1162,12 @@
             this.controlPanelToolStripMenuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonItemTempStatsType3Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType4Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType5Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType10Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType9Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType8Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType7Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempStatsType6Popup = new System.Windows.Forms.Button();
-            this.buttonItemTempTypeClassPopup = new System.Windows.Forms.Button();
-            this.buttonItemTempSubclassPopup = new System.Windows.Forms.Button();
+            this.tabPageQuestScript = new System.Windows.Forms.TabPage();
+            this.buttonQuestScriptUpdate = new System.Windows.Forms.Button();
+            this.statusStripQuestScript = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelQuestScriptAffected = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBoxQuestScriptOutput = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
             this.tabControlCategoryAccount.SuspendLayout();
@@ -1169,6 +1191,8 @@
             this.groupBoxCharacterCharacterGeneral.SuspendLayout();
             this.tabPageCharacterInventory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterInventory)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.statusStripCharacterScript.SuspendLayout();
             this.tabPageCreature.SuspendLayout();
             this.tabControlCategoryCreature.SuspendLayout();
             this.tabPageCreatureSearch.SuspendLayout();
@@ -1249,6 +1273,8 @@
             this.tabPageItemScript.SuspendLayout();
             this.statusStripItemAffected.SuspendLayout();
             this.menuStripMain.SuspendLayout();
+            this.tabPageQuestScript.SuspendLayout();
+            this.statusStripQuestScript.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlCategory
@@ -1502,12 +1528,13 @@
             this.buttonAccountAccountGenerateScript.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAccountAccountGenerateScript.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
+            this.buttonAccountAccountGenerateScript.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonAccountAccountGenerateScript.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAccountAccountGenerateScript.Location = new System.Drawing.Point(310, 286);
+            this.buttonAccountAccountGenerateScript.Location = new System.Drawing.Point(899, 478);
             this.buttonAccountAccountGenerateScript.Name = "buttonAccountAccountGenerateScript";
-            this.buttonAccountAccountGenerateScript.Size = new System.Drawing.Size(638, 241);
+            this.buttonAccountAccountGenerateScript.Size = new System.Drawing.Size(49, 49);
             this.buttonAccountAccountGenerateScript.TabIndex = 12;
-            this.buttonAccountAccountGenerateScript.Text = "Generate Script";
             this.buttonAccountAccountGenerateScript.UseVisualStyleBackColor = true;
             this.buttonAccountAccountGenerateScript.Click += new System.EventHandler(this.buttonAccountAccountGenerateScript_Click);
             // 
@@ -1941,7 +1968,7 @@
             this.tabPageAccountScript.BackColor = System.Drawing.SystemColors.Control;
             this.tabPageAccountScript.Controls.Add(this.statusStripAccountScript);
             this.tabPageAccountScript.Controls.Add(this.buttonAccountScriptUpdate);
-            this.tabPageAccountScript.Controls.Add(this.textBoxAccountScript);
+            this.tabPageAccountScript.Controls.Add(this.textBoxAccountScriptOutput);
             this.tabPageAccountScript.Location = new System.Drawing.Point(4, 22);
             this.tabPageAccountScript.Name = "tabPageAccountScript";
             this.tabPageAccountScript.Padding = new System.Windows.Forms.Padding(3);
@@ -1979,17 +2006,19 @@
             this.buttonAccountScriptUpdate.UseVisualStyleBackColor = true;
             this.buttonAccountScriptUpdate.Click += new System.EventHandler(this.buttonAccountScriptUpdate_Click);
             // 
-            // textBoxAccountScript
+            // textBoxAccountScriptOutput
             // 
-            this.textBoxAccountScript.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.textBoxAccountScriptOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxAccountScript.BackColor = System.Drawing.SystemColors.Control;
-            this.textBoxAccountScript.Location = new System.Drawing.Point(6, 6);
-            this.textBoxAccountScript.Multiline = true;
-            this.textBoxAccountScript.Name = "textBoxAccountScript";
-            this.textBoxAccountScript.Size = new System.Drawing.Size(943, 470);
-            this.textBoxAccountScript.TabIndex = 0;
+            this.textBoxAccountScriptOutput.BackColor = System.Drawing.Color.Black;
+            this.textBoxAccountScriptOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAccountScriptOutput.ForeColor = System.Drawing.Color.White;
+            this.textBoxAccountScriptOutput.Location = new System.Drawing.Point(6, 6);
+            this.textBoxAccountScriptOutput.Multiline = true;
+            this.textBoxAccountScriptOutput.Name = "textBoxAccountScriptOutput";
+            this.textBoxAccountScriptOutput.Size = new System.Drawing.Size(943, 470);
+            this.textBoxAccountScriptOutput.TabIndex = 0;
             // 
             // tabPageCharacter
             // 
@@ -2010,6 +2039,7 @@
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterSearch);
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterCharacter);
             this.tabControlCategoryCharacter.Controls.Add(this.tabPageCharacterInventory);
+            this.tabControlCategoryCharacter.Controls.Add(this.tabPage2);
             this.tabControlCategoryCharacter.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryCharacter.Name = "tabControlCategoryCharacter";
             this.tabControlCategoryCharacter.SelectedIndex = 0;
@@ -2945,6 +2975,18 @@
             // tabPageCharacterInventory
             // 
             this.tabPageCharacterInventory.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCharacterInventory.Controls.Add(this.textBoxCharacterInventoryItemID);
+            this.tabPageCharacterInventory.Controls.Add(this.labelCharacterInventoryItemID);
+            this.tabPageCharacterInventory.Controls.Add(this.textBoxCharacterInventoryBag);
+            this.tabPageCharacterInventory.Controls.Add(this.labelCharacterInventoryBag);
+            this.tabPageCharacterInventory.Controls.Add(this.textBoxCharacterInventorySlot);
+            this.tabPageCharacterInventory.Controls.Add(this.labelCharacterInventorySlot);
+            this.tabPageCharacterInventory.Controls.Add(this.textBoxCharacterInventoryGUID);
+            this.tabPageCharacterInventory.Controls.Add(this.labelCharacterInventoryGUID);
+            this.tabPageCharacterInventory.Controls.Add(this.buttonCharacterInventoryGenerate);
+            this.tabPageCharacterInventory.Controls.Add(this.buttonCharacterInventoryDelete);
+            this.tabPageCharacterInventory.Controls.Add(this.buttonCharacterInventoryRefresh);
+            this.tabPageCharacterInventory.Controls.Add(this.buttonCharacterInventoryAdd);
             this.tabPageCharacterInventory.Controls.Add(this.dataGridViewCharacterInventory);
             this.tabPageCharacterInventory.Location = new System.Drawing.Point(4, 22);
             this.tabPageCharacterInventory.Name = "tabPageCharacterInventory";
@@ -2952,6 +2994,114 @@
             this.tabPageCharacterInventory.Size = new System.Drawing.Size(955, 533);
             this.tabPageCharacterInventory.TabIndex = 2;
             this.tabPageCharacterInventory.Text = "Inventory";
+            // 
+            // textBoxCharacterInventoryItemID
+            // 
+            this.textBoxCharacterInventoryItemID.Location = new System.Drawing.Point(264, 507);
+            this.textBoxCharacterInventoryItemID.Name = "textBoxCharacterInventoryItemID";
+            this.textBoxCharacterInventoryItemID.Size = new System.Drawing.Size(80, 20);
+            this.textBoxCharacterInventoryItemID.TabIndex = 60;
+            // 
+            // labelCharacterInventoryItemID
+            // 
+            this.labelCharacterInventoryItemID.AutoSize = true;
+            this.labelCharacterInventoryItemID.Location = new System.Drawing.Point(261, 491);
+            this.labelCharacterInventoryItemID.Name = "labelCharacterInventoryItemID";
+            this.labelCharacterInventoryItemID.Size = new System.Drawing.Size(44, 13);
+            this.labelCharacterInventoryItemID.TabIndex = 56;
+            this.labelCharacterInventoryItemID.Text = "Item ID:";
+            // 
+            // textBoxCharacterInventoryBag
+            // 
+            this.textBoxCharacterInventoryBag.Location = new System.Drawing.Point(92, 507);
+            this.textBoxCharacterInventoryBag.Name = "textBoxCharacterInventoryBag";
+            this.textBoxCharacterInventoryBag.Size = new System.Drawing.Size(80, 20);
+            this.textBoxCharacterInventoryBag.TabIndex = 61;
+            // 
+            // labelCharacterInventoryBag
+            // 
+            this.labelCharacterInventoryBag.AutoSize = true;
+            this.labelCharacterInventoryBag.Location = new System.Drawing.Point(89, 491);
+            this.labelCharacterInventoryBag.Name = "labelCharacterInventoryBag";
+            this.labelCharacterInventoryBag.Size = new System.Drawing.Size(29, 13);
+            this.labelCharacterInventoryBag.TabIndex = 58;
+            this.labelCharacterInventoryBag.Text = "Bag:";
+            // 
+            // textBoxCharacterInventorySlot
+            // 
+            this.textBoxCharacterInventorySlot.Location = new System.Drawing.Point(178, 507);
+            this.textBoxCharacterInventorySlot.Name = "textBoxCharacterInventorySlot";
+            this.textBoxCharacterInventorySlot.Size = new System.Drawing.Size(80, 20);
+            this.textBoxCharacterInventorySlot.TabIndex = 66;
+            // 
+            // labelCharacterInventorySlot
+            // 
+            this.labelCharacterInventorySlot.AutoSize = true;
+            this.labelCharacterInventorySlot.Location = new System.Drawing.Point(175, 491);
+            this.labelCharacterInventorySlot.Name = "labelCharacterInventorySlot";
+            this.labelCharacterInventorySlot.Size = new System.Drawing.Size(28, 13);
+            this.labelCharacterInventorySlot.TabIndex = 57;
+            this.labelCharacterInventorySlot.Text = "Slot:";
+            // 
+            // textBoxCharacterInventoryGUID
+            // 
+            this.textBoxCharacterInventoryGUID.Location = new System.Drawing.Point(6, 507);
+            this.textBoxCharacterInventoryGUID.Name = "textBoxCharacterInventoryGUID";
+            this.textBoxCharacterInventoryGUID.Size = new System.Drawing.Size(80, 20);
+            this.textBoxCharacterInventoryGUID.TabIndex = 59;
+            // 
+            // labelCharacterInventoryGUID
+            // 
+            this.labelCharacterInventoryGUID.AutoSize = true;
+            this.labelCharacterInventoryGUID.Location = new System.Drawing.Point(3, 491);
+            this.labelCharacterInventoryGUID.Name = "labelCharacterInventoryGUID";
+            this.labelCharacterInventoryGUID.Size = new System.Drawing.Size(37, 13);
+            this.labelCharacterInventoryGUID.TabIndex = 52;
+            this.labelCharacterInventoryGUID.Text = "GUID:";
+            // 
+            // buttonCharacterInventoryGenerate
+            // 
+            this.buttonCharacterInventoryGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCharacterInventoryGenerate.BackgroundImage")));
+            this.buttonCharacterInventoryGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCharacterInventoryGenerate.Location = new System.Drawing.Point(920, 498);
+            this.buttonCharacterInventoryGenerate.Name = "buttonCharacterInventoryGenerate";
+            this.buttonCharacterInventoryGenerate.Size = new System.Drawing.Size(29, 29);
+            this.buttonCharacterInventoryGenerate.TabIndex = 49;
+            this.buttonCharacterInventoryGenerate.UseVisualStyleBackColor = true;
+            this.buttonCharacterInventoryGenerate.Click += new System.EventHandler(this.buttonCharacterInventoryGenerate_Click);
+            // 
+            // buttonCharacterInventoryDelete
+            // 
+            this.buttonCharacterInventoryDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
+            this.buttonCharacterInventoryDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCharacterInventoryDelete.Location = new System.Drawing.Point(850, 498);
+            this.buttonCharacterInventoryDelete.Name = "buttonCharacterInventoryDelete";
+            this.buttonCharacterInventoryDelete.Size = new System.Drawing.Size(29, 29);
+            this.buttonCharacterInventoryDelete.TabIndex = 48;
+            this.buttonCharacterInventoryDelete.UseVisualStyleBackColor = true;
+            this.buttonCharacterInventoryDelete.Click += new System.EventHandler(this.buttonCharacterInventoryDelete_Click);
+            // 
+            // buttonCharacterInventoryRefresh
+            // 
+            this.buttonCharacterInventoryRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
+            this.buttonCharacterInventoryRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCharacterInventoryRefresh.Location = new System.Drawing.Point(815, 498);
+            this.buttonCharacterInventoryRefresh.Name = "buttonCharacterInventoryRefresh";
+            this.buttonCharacterInventoryRefresh.Size = new System.Drawing.Size(29, 29);
+            this.buttonCharacterInventoryRefresh.TabIndex = 47;
+            this.buttonCharacterInventoryRefresh.UseVisualStyleBackColor = true;
+            this.buttonCharacterInventoryRefresh.Click += new System.EventHandler(this.buttonCharacterInventoryRefresh_Click);
+            // 
+            // buttonCharacterInventoryAdd
+            // 
+            this.buttonCharacterInventoryAdd.BackgroundImage = global::Manti.Properties.Resources.iconAdd;
+            this.buttonCharacterInventoryAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonCharacterInventoryAdd.Location = new System.Drawing.Point(780, 498);
+            this.buttonCharacterInventoryAdd.Name = "buttonCharacterInventoryAdd";
+            this.buttonCharacterInventoryAdd.Size = new System.Drawing.Size(29, 29);
+            this.buttonCharacterInventoryAdd.TabIndex = 46;
+            this.buttonCharacterInventoryAdd.UseVisualStyleBackColor = true;
+            this.buttonCharacterInventoryAdd.Click += new System.EventHandler(this.buttonCharacterInventoryAdd_Click);
             // 
             // dataGridViewCharacterInventory
             // 
@@ -2988,7 +3138,7 @@
             this.ColumnCharacterInventoryItem,
             this.ColumnCharacterInventoryName});
             this.dataGridViewCharacterInventory.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dataGridViewCharacterInventory.Location = new System.Drawing.Point(0, 3);
+            this.dataGridViewCharacterInventory.Location = new System.Drawing.Point(1, 3);
             this.dataGridViewCharacterInventory.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewCharacterInventory.MultiSelect = false;
             this.dataGridViewCharacterInventory.Name = "dataGridViewCharacterInventory";
@@ -3019,7 +3169,7 @@
             this.dataGridViewCharacterInventory.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewCharacterInventory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCharacterInventory.ShowEditingIcon = false;
-            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(952, 437);
+            this.dataGridViewCharacterInventory.Size = new System.Drawing.Size(952, 479);
             this.dataGridViewCharacterInventory.TabIndex = 9;
             // 
             // ColumnCharacterInventoryGUID
@@ -3081,6 +3231,62 @@
             this.ColumnCharacterInventoryName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.ColumnCharacterInventoryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ColumnCharacterInventoryName.Width = 1000;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.statusStripCharacterScript);
+            this.tabPage2.Controls.Add(this.buttonCharacterScriptUpdate);
+            this.tabPage2.Controls.Add(this.textBoxCharacterScriptOutput);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(955, 533);
+            this.tabPage2.TabIndex = 6;
+            this.tabPage2.Text = "Script";
+            // 
+            // statusStripCharacterScript
+            // 
+            this.statusStripCharacterScript.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelCharacterScriptAffected});
+            this.statusStripCharacterScript.Location = new System.Drawing.Point(3, 508);
+            this.statusStripCharacterScript.Name = "statusStripCharacterScript";
+            this.statusStripCharacterScript.Size = new System.Drawing.Size(949, 22);
+            this.statusStripCharacterScript.SizingGrip = false;
+            this.statusStripCharacterScript.TabIndex = 2;
+            this.statusStripCharacterScript.Text = "AccountScript";
+            // 
+            // toolStripStatusLabelCharacterScriptAffected
+            // 
+            this.toolStripStatusLabelCharacterScriptAffected.Name = "toolStripStatusLabelCharacterScriptAffected";
+            this.toolStripStatusLabelCharacterScriptAffected.Size = new System.Drawing.Size(103, 17);
+            this.toolStripStatusLabelCharacterScriptAffected.Text = "Row(s) Affected: 0";
+            // 
+            // buttonCharacterScriptUpdate
+            // 
+            this.buttonCharacterScriptUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCharacterScriptUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCharacterScriptUpdate.Location = new System.Drawing.Point(6, 482);
+            this.buttonCharacterScriptUpdate.Name = "buttonCharacterScriptUpdate";
+            this.buttonCharacterScriptUpdate.Size = new System.Drawing.Size(943, 23);
+            this.buttonCharacterScriptUpdate.TabIndex = 1;
+            this.buttonCharacterScriptUpdate.Text = "Update Database";
+            this.buttonCharacterScriptUpdate.UseVisualStyleBackColor = true;
+            // 
+            // textBoxCharacterScriptOutput
+            // 
+            this.textBoxCharacterScriptOutput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCharacterScriptOutput.BackColor = System.Drawing.Color.Black;
+            this.textBoxCharacterScriptOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCharacterScriptOutput.ForeColor = System.Drawing.Color.White;
+            this.textBoxCharacterScriptOutput.Location = new System.Drawing.Point(6, 6);
+            this.textBoxCharacterScriptOutput.Multiline = true;
+            this.textBoxCharacterScriptOutput.Name = "textBoxCharacterScriptOutput";
+            this.textBoxCharacterScriptOutput.Size = new System.Drawing.Size(943, 470);
+            this.textBoxCharacterScriptOutput.TabIndex = 0;
             // 
             // tabPageCreature
             // 
@@ -5116,6 +5322,7 @@
             this.tabControlCategoryQuest.Controls.Add(this.tabPageQuestSearch);
             this.tabControlCategoryQuest.Controls.Add(this.tabPageQuestSection1);
             this.tabControlCategoryQuest.Controls.Add(this.tabPageQuestSection2);
+            this.tabControlCategoryQuest.Controls.Add(this.tabPageQuestScript);
             this.tabControlCategoryQuest.Location = new System.Drawing.Point(3, 3);
             this.tabControlCategoryQuest.Name = "tabControlCategoryQuest";
             this.tabControlCategoryQuest.SelectedIndex = 0;
@@ -6121,6 +6328,7 @@
             // tabPageQuestSection2
             // 
             this.tabPageQuestSection2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageQuestSection2.Controls.Add(this.button2);
             this.tabPageQuestSection2.Controls.Add(this.groupBoxQuestSectionRequirements);
             this.tabPageQuestSection2.Controls.Add(this.groupBoxQuestSectionRewards);
             this.tabPageQuestSection2.Location = new System.Drawing.Point(4, 22);
@@ -7977,7 +8185,6 @@
             this.dataGridViewTextBoxColumnISE.HeaderText = "entry";
             this.dataGridViewTextBoxColumnISE.Name = "dataGridViewTextBoxColumnISE";
             this.dataGridViewTextBoxColumnISE.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISE.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dataGridViewTextBoxColumnISN
             // 
@@ -7987,7 +8194,6 @@
             this.dataGridViewTextBoxColumnISN.HeaderText = "name";
             this.dataGridViewTextBoxColumnISN.Name = "dataGridViewTextBoxColumnISN";
             this.dataGridViewTextBoxColumnISN.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISN.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnISN.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumnISN.Width = 200;
             // 
@@ -7999,7 +8205,6 @@
             this.dataGridViewTextBoxColumnISC.HeaderText = "class";
             this.dataGridViewTextBoxColumnISC.Name = "dataGridViewTextBoxColumnISC";
             this.dataGridViewTextBoxColumnISC.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISC.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnISC.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumnISC.Width = 65;
             // 
@@ -8011,7 +8216,6 @@
             this.dataGridViewTextBoxColumnISSB.HeaderText = "subclass";
             this.dataGridViewTextBoxColumnISSB.Name = "dataGridViewTextBoxColumnISSB";
             this.dataGridViewTextBoxColumnISSB.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISSB.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnISSB.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumnISSB.Width = 65;
             // 
@@ -8023,7 +8227,6 @@
             this.dataGridViewTextBoxColumnISQ.HeaderText = "quality";
             this.dataGridViewTextBoxColumnISQ.Name = "dataGridViewTextBoxColumnISQ";
             this.dataGridViewTextBoxColumnISQ.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISQ.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnISQ.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumnISQ.Width = 50;
             // 
@@ -8034,9 +8237,8 @@
             this.dataGridViewTextBoxColumnISD.HeaderText = "description";
             this.dataGridViewTextBoxColumnISD.Name = "dataGridViewTextBoxColumnISD";
             this.dataGridViewTextBoxColumnISD.ReadOnly = true;
-            this.dataGridViewTextBoxColumnISD.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumnISD.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnISD.Width = 250;
+            this.dataGridViewTextBoxColumnISD.Width = 310;
             // 
             // dataGridViewTextBoxColumnISR
             // 
@@ -8091,6 +8293,7 @@
             // 
             this.buttonItemTempGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonItemTempGenerate.BackgroundImage")));
             this.buttonItemTempGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonItemTempGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonItemTempGenerate.Location = new System.Drawing.Point(920, 498);
             this.buttonItemTempGenerate.Name = "buttonItemTempGenerate";
             this.buttonItemTempGenerate.Size = new System.Drawing.Size(29, 29);
@@ -9373,6 +9576,78 @@
             this.groupBoxItemTemplateStats.TabStop = false;
             this.groupBoxItemTemplateStats.Text = "Stats";
             // 
+            // buttonItemTempStatsType10Popup
+            // 
+            this.buttonItemTempStatsType10Popup.Location = new System.Drawing.Point(50, 267);
+            this.buttonItemTempStatsType10Popup.Name = "buttonItemTempStatsType10Popup";
+            this.buttonItemTempStatsType10Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType10Popup.TabIndex = 46;
+            this.buttonItemTempStatsType10Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType10Popup.Click += new System.EventHandler(this.buttonItemTempStatsType10Popup_Click);
+            // 
+            // buttonItemTempStatsType9Popup
+            // 
+            this.buttonItemTempStatsType9Popup.Location = new System.Drawing.Point(50, 241);
+            this.buttonItemTempStatsType9Popup.Name = "buttonItemTempStatsType9Popup";
+            this.buttonItemTempStatsType9Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType9Popup.TabIndex = 45;
+            this.buttonItemTempStatsType9Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType9Popup.Click += new System.EventHandler(this.buttonItemTempStatsType9Popup_Click);
+            // 
+            // buttonItemTempStatsType8Popup
+            // 
+            this.buttonItemTempStatsType8Popup.Location = new System.Drawing.Point(50, 215);
+            this.buttonItemTempStatsType8Popup.Name = "buttonItemTempStatsType8Popup";
+            this.buttonItemTempStatsType8Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType8Popup.TabIndex = 44;
+            this.buttonItemTempStatsType8Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType8Popup.Click += new System.EventHandler(this.buttonItemTempStatsType8Popup_Click);
+            // 
+            // buttonItemTempStatsType7Popup
+            // 
+            this.buttonItemTempStatsType7Popup.Location = new System.Drawing.Point(50, 189);
+            this.buttonItemTempStatsType7Popup.Name = "buttonItemTempStatsType7Popup";
+            this.buttonItemTempStatsType7Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType7Popup.TabIndex = 43;
+            this.buttonItemTempStatsType7Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType7Popup.Click += new System.EventHandler(this.buttonItemTempStatsType7Popup_Click);
+            // 
+            // buttonItemTempStatsType6Popup
+            // 
+            this.buttonItemTempStatsType6Popup.Location = new System.Drawing.Point(50, 163);
+            this.buttonItemTempStatsType6Popup.Name = "buttonItemTempStatsType6Popup";
+            this.buttonItemTempStatsType6Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType6Popup.TabIndex = 42;
+            this.buttonItemTempStatsType6Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType6Popup.Click += new System.EventHandler(this.buttonItemTempStatsType6Popup_Click);
+            // 
+            // buttonItemTempStatsType5Popup
+            // 
+            this.buttonItemTempStatsType5Popup.Location = new System.Drawing.Point(50, 137);
+            this.buttonItemTempStatsType5Popup.Name = "buttonItemTempStatsType5Popup";
+            this.buttonItemTempStatsType5Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType5Popup.TabIndex = 41;
+            this.buttonItemTempStatsType5Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType5Popup.Click += new System.EventHandler(this.buttonItemTempStatsType5Popup_Click);
+            // 
+            // buttonItemTempStatsType4Popup
+            // 
+            this.buttonItemTempStatsType4Popup.Location = new System.Drawing.Point(50, 111);
+            this.buttonItemTempStatsType4Popup.Name = "buttonItemTempStatsType4Popup";
+            this.buttonItemTempStatsType4Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType4Popup.TabIndex = 40;
+            this.buttonItemTempStatsType4Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType4Popup.Click += new System.EventHandler(this.buttonItemTempStatsType4Popup_Click);
+            // 
+            // buttonItemTempStatsType3Popup
+            // 
+            this.buttonItemTempStatsType3Popup.Location = new System.Drawing.Point(50, 85);
+            this.buttonItemTempStatsType3Popup.Name = "buttonItemTempStatsType3Popup";
+            this.buttonItemTempStatsType3Popup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempStatsType3Popup.TabIndex = 39;
+            this.buttonItemTempStatsType3Popup.UseVisualStyleBackColor = true;
+            this.buttonItemTempStatsType3Popup.Click += new System.EventHandler(this.buttonItemTempStatsType3Popup_Click);
+            // 
             // buttonItemTempStatsType2Popup
             // 
             this.buttonItemTempStatsType2Popup.Location = new System.Drawing.Point(50, 59);
@@ -9828,14 +10103,13 @@
             // 
             // groupBoxItemTemplateGeneral
             // 
+            this.groupBoxItemTemplateGeneral.Controls.Add(this.buttonItemTempQualityPopup);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.buttonItemTempSubclassPopup);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.buttonItemTempTypeClassPopup);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempStatsC);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.label28);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempContainer);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.label27);
-            this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempStack);
-            this.groupBoxItemTemplateGeneral.Controls.Add(this.label26);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempMaxC);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.label25);
             this.groupBoxItemTemplateGeneral.Controls.Add(this.textBoxItemTempEFlags);
@@ -9871,6 +10145,33 @@
             this.groupBoxItemTemplateGeneral.TabStop = false;
             this.groupBoxItemTemplateGeneral.Text = "General";
             // 
+            // buttonItemTempQualityPopup
+            // 
+            this.buttonItemTempQualityPopup.Location = new System.Drawing.Point(70, 72);
+            this.buttonItemTempQualityPopup.Name = "buttonItemTempQualityPopup";
+            this.buttonItemTempQualityPopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempQualityPopup.TabIndex = 40;
+            this.buttonItemTempQualityPopup.UseVisualStyleBackColor = true;
+            this.buttonItemTempQualityPopup.Click += new System.EventHandler(this.buttonItemTempQualityPopup_Click);
+            // 
+            // buttonItemTempSubclassPopup
+            // 
+            this.buttonItemTempSubclassPopup.Location = new System.Drawing.Point(242, 33);
+            this.buttonItemTempSubclassPopup.Name = "buttonItemTempSubclassPopup";
+            this.buttonItemTempSubclassPopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempSubclassPopup.TabIndex = 39;
+            this.buttonItemTempSubclassPopup.UseVisualStyleBackColor = true;
+            this.buttonItemTempSubclassPopup.Click += new System.EventHandler(this.buttonItemTempSubclassPopup_Click);
+            // 
+            // buttonItemTempTypeClassPopup
+            // 
+            this.buttonItemTempTypeClassPopup.Location = new System.Drawing.Point(156, 33);
+            this.buttonItemTempTypeClassPopup.Name = "buttonItemTempTypeClassPopup";
+            this.buttonItemTempTypeClassPopup.Size = new System.Drawing.Size(18, 18);
+            this.buttonItemTempTypeClassPopup.TabIndex = 38;
+            this.buttonItemTempTypeClassPopup.UseVisualStyleBackColor = true;
+            this.buttonItemTempTypeClassPopup.Click += new System.EventHandler(this.buttonItemTempTypeClassPopup_Click);
+            // 
             // textBoxItemTempStatsC
             // 
             this.textBoxItemTempStatsC.Location = new System.Drawing.Point(857, 71);
@@ -9889,7 +10190,7 @@
             // 
             // textBoxItemTempContainer
             // 
-            this.textBoxItemTempContainer.Location = new System.Drawing.Point(579, 71);
+            this.textBoxItemTempContainer.Location = new System.Drawing.Point(567, 71);
             this.textBoxItemTempContainer.Name = "textBoxItemTempContainer";
             this.textBoxItemTempContainer.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempContainer.TabIndex = 33;
@@ -9897,31 +10198,15 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(576, 55);
+            this.label27.Location = new System.Drawing.Point(564, 55);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(76, 13);
             this.label27.TabIndex = 32;
             this.label27.Text = "Container Slot:";
             // 
-            // textBoxItemTempStack
-            // 
-            this.textBoxItemTempStack.Location = new System.Drawing.Point(475, 71);
-            this.textBoxItemTempStack.Name = "textBoxItemTempStack";
-            this.textBoxItemTempStack.Size = new System.Drawing.Size(80, 20);
-            this.textBoxItemTempStack.TabIndex = 31;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(472, 55);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 13);
-            this.label26.TabIndex = 30;
-            this.label26.Text = "Stackable:";
-            // 
             // textBoxItemTempMaxC
             // 
-            this.textBoxItemTempMaxC.Location = new System.Drawing.Point(371, 71);
+            this.textBoxItemTempMaxC.Location = new System.Drawing.Point(467, 71);
             this.textBoxItemTempMaxC.Name = "textBoxItemTempMaxC";
             this.textBoxItemTempMaxC.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempMaxC.TabIndex = 29;
@@ -9929,7 +10214,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(368, 55);
+            this.label25.Location = new System.Drawing.Point(464, 55);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 13);
             this.label25.TabIndex = 28;
@@ -9937,7 +10222,7 @@
             // 
             // textBoxItemTempEFlags
             // 
-            this.textBoxItemTempEFlags.Location = new System.Drawing.Point(267, 71);
+            this.textBoxItemTempEFlags.Location = new System.Drawing.Point(367, 71);
             this.textBoxItemTempEFlags.Name = "textBoxItemTempEFlags";
             this.textBoxItemTempEFlags.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempEFlags.TabIndex = 27;
@@ -9945,7 +10230,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(264, 55);
+            this.label24.Location = new System.Drawing.Point(364, 55);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(62, 13);
             this.label24.TabIndex = 26;
@@ -9953,7 +10238,7 @@
             // 
             // textBoxItemTempFlags
             // 
-            this.textBoxItemTempFlags.Location = new System.Drawing.Point(181, 71);
+            this.textBoxItemTempFlags.Location = new System.Drawing.Point(267, 71);
             this.textBoxItemTempFlags.Name = "textBoxItemTempFlags";
             this.textBoxItemTempFlags.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempFlags.TabIndex = 25;
@@ -9961,7 +10246,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(178, 55);
+            this.label23.Location = new System.Drawing.Point(264, 55);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(35, 13);
             this.label23.TabIndex = 24;
@@ -9971,7 +10256,7 @@
             // 
             this.textBoxItemTempDescription.Location = new System.Drawing.Point(488, 32);
             this.textBoxItemTempDescription.Name = "textBoxItemTempDescription";
-            this.textBoxItemTempDescription.Size = new System.Drawing.Size(277, 20);
+            this.textBoxItemTempDescription.Size = new System.Drawing.Size(363, 20);
             this.textBoxItemTempDescription.TabIndex = 23;
             // 
             // label22
@@ -9985,7 +10270,7 @@
             // 
             // textBoxItemTempInventory
             // 
-            this.textBoxItemTempInventory.Location = new System.Drawing.Point(95, 71);
+            this.textBoxItemTempInventory.Location = new System.Drawing.Point(181, 71);
             this.textBoxItemTempInventory.Name = "textBoxItemTempInventory";
             this.textBoxItemTempInventory.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempInventory.TabIndex = 21;
@@ -9993,7 +10278,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(92, 55);
+            this.label11.Location = new System.Drawing.Point(178, 55);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(54, 13);
             this.label11.TabIndex = 20;
@@ -10001,7 +10286,7 @@
             // 
             // textBoxItemTempSellP
             // 
-            this.textBoxItemTempSellP.Location = new System.Drawing.Point(771, 71);
+            this.textBoxItemTempSellP.Location = new System.Drawing.Point(767, 71);
             this.textBoxItemTempSellP.Name = "textBoxItemTempSellP";
             this.textBoxItemTempSellP.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempSellP.TabIndex = 19;
@@ -10009,7 +10294,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(768, 55);
+            this.label10.Location = new System.Drawing.Point(764, 55);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 18;
@@ -10017,7 +10302,7 @@
             // 
             // textBoxItemTempBuyP
             // 
-            this.textBoxItemTempBuyP.Location = new System.Drawing.Point(683, 71);
+            this.textBoxItemTempBuyP.Location = new System.Drawing.Point(667, 71);
             this.textBoxItemTempBuyP.Name = "textBoxItemTempBuyP";
             this.textBoxItemTempBuyP.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempBuyP.TabIndex = 17;
@@ -10025,7 +10310,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(680, 55);
+            this.label9.Location = new System.Drawing.Point(664, 55);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 13);
             this.label9.TabIndex = 16;
@@ -10033,7 +10318,7 @@
             // 
             // textBoxItemTempBuyC
             // 
-            this.textBoxItemTempBuyC.Location = new System.Drawing.Point(9, 71);
+            this.textBoxItemTempBuyC.Location = new System.Drawing.Point(95, 71);
             this.textBoxItemTempBuyC.Name = "textBoxItemTempBuyC";
             this.textBoxItemTempBuyC.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempBuyC.TabIndex = 15;
@@ -10041,7 +10326,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 55);
+            this.label8.Location = new System.Drawing.Point(92, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 14;
@@ -10049,7 +10334,7 @@
             // 
             // textBoxItemTempQuality
             // 
-            this.textBoxItemTempQuality.Location = new System.Drawing.Point(857, 32);
+            this.textBoxItemTempQuality.Location = new System.Drawing.Point(9, 71);
             this.textBoxItemTempQuality.Name = "textBoxItemTempQuality";
             this.textBoxItemTempQuality.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempQuality.TabIndex = 13;
@@ -10057,7 +10342,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(854, 16);
+            this.label7.Location = new System.Drawing.Point(6, 55);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 12;
@@ -10065,7 +10350,7 @@
             // 
             // textBoxItemTempDisplayID
             // 
-            this.textBoxItemTempDisplayID.Location = new System.Drawing.Point(771, 32);
+            this.textBoxItemTempDisplayID.Location = new System.Drawing.Point(857, 32);
             this.textBoxItemTempDisplayID.Name = "textBoxItemTempDisplayID";
             this.textBoxItemTempDisplayID.Size = new System.Drawing.Size(80, 20);
             this.textBoxItemTempDisplayID.TabIndex = 11;
@@ -10073,7 +10358,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(768, 16);
+            this.label5.Location = new System.Drawing.Point(854, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 10;
@@ -10398,7 +10683,6 @@
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Entry";
-            this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "entry";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -10410,7 +10694,6 @@
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "item";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -10422,7 +10705,6 @@
             // 
             this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Reference";
-            this.dataGridViewTextBoxColumn3.Frozen = true;
             this.dataGridViewTextBoxColumn3.HeaderText = "reference";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -10850,7 +11132,6 @@
             // 
             this.dataGridViewTextBoxColumn24.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn24.DataPropertyName = "Entry";
-            this.dataGridViewTextBoxColumn24.Frozen = true;
             this.dataGridViewTextBoxColumn24.HeaderText = "entry";
             this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
@@ -10862,7 +11143,6 @@
             // 
             this.dataGridViewTextBoxColumn25.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn25.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumn25.Frozen = true;
             this.dataGridViewTextBoxColumn25.HeaderText = "item";
             this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
             this.dataGridViewTextBoxColumn25.ReadOnly = true;
@@ -10874,7 +11154,6 @@
             // 
             this.dataGridViewTextBoxColumn26.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn26.DataPropertyName = "Reference";
-            this.dataGridViewTextBoxColumn26.Frozen = true;
             this.dataGridViewTextBoxColumn26.HeaderText = "reference";
             this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
             this.dataGridViewTextBoxColumn26.ReadOnly = true;
@@ -11258,7 +11537,6 @@
             // 
             this.dataGridViewTextBoxColumn34.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn34.DataPropertyName = "Entry";
-            this.dataGridViewTextBoxColumn34.Frozen = true;
             this.dataGridViewTextBoxColumn34.HeaderText = "entry";
             this.dataGridViewTextBoxColumn34.Name = "dataGridViewTextBoxColumn34";
             this.dataGridViewTextBoxColumn34.ReadOnly = true;
@@ -11270,7 +11548,6 @@
             // 
             this.dataGridViewTextBoxColumn35.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn35.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumn35.Frozen = true;
             this.dataGridViewTextBoxColumn35.HeaderText = "item";
             this.dataGridViewTextBoxColumn35.Name = "dataGridViewTextBoxColumn35";
             this.dataGridViewTextBoxColumn35.ReadOnly = true;
@@ -11282,7 +11559,6 @@
             // 
             this.dataGridViewTextBoxColumn36.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn36.DataPropertyName = "Reference";
-            this.dataGridViewTextBoxColumn36.Frozen = true;
             this.dataGridViewTextBoxColumn36.HeaderText = "reference";
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             this.dataGridViewTextBoxColumn36.ReadOnly = true;
@@ -11666,7 +11942,6 @@
             // 
             this.dataGridViewTextBoxColumn44.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn44.DataPropertyName = "Entry";
-            this.dataGridViewTextBoxColumn44.Frozen = true;
             this.dataGridViewTextBoxColumn44.HeaderText = "entry";
             this.dataGridViewTextBoxColumn44.Name = "dataGridViewTextBoxColumn44";
             this.dataGridViewTextBoxColumn44.ReadOnly = true;
@@ -11678,7 +11953,6 @@
             // 
             this.dataGridViewTextBoxColumn45.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn45.DataPropertyName = "Item";
-            this.dataGridViewTextBoxColumn45.Frozen = true;
             this.dataGridViewTextBoxColumn45.HeaderText = "item";
             this.dataGridViewTextBoxColumn45.Name = "dataGridViewTextBoxColumn45";
             this.dataGridViewTextBoxColumn45.ReadOnly = true;
@@ -11690,7 +11964,6 @@
             // 
             this.dataGridViewTextBoxColumn46.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.dataGridViewTextBoxColumn46.DataPropertyName = "Reference";
-            this.dataGridViewTextBoxColumn46.Frozen = true;
             this.dataGridViewTextBoxColumn46.HeaderText = "reference";
             this.dataGridViewTextBoxColumn46.Name = "dataGridViewTextBoxColumn46";
             this.dataGridViewTextBoxColumn46.ReadOnly = true;
@@ -11965,95 +12238,69 @@
             this.aboutToolStripMenuHelp.Text = "About";
             this.aboutToolStripMenuHelp.Click += new System.EventHandler(this.aboutToolStripMenuHelp_Click);
             // 
-            // buttonItemTempStatsType3Popup
+            // tabPageQuestScript
             // 
-            this.buttonItemTempStatsType3Popup.Location = new System.Drawing.Point(50, 85);
-            this.buttonItemTempStatsType3Popup.Name = "buttonItemTempStatsType3Popup";
-            this.buttonItemTempStatsType3Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType3Popup.TabIndex = 39;
-            this.buttonItemTempStatsType3Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType3Popup.Click += new System.EventHandler(this.buttonItemTempStatsType3Popup_Click);
+            this.tabPageQuestScript.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageQuestScript.Controls.Add(this.buttonQuestScriptUpdate);
+            this.tabPageQuestScript.Controls.Add(this.statusStripQuestScript);
+            this.tabPageQuestScript.Controls.Add(this.textBoxQuestScriptOutput);
+            this.tabPageQuestScript.Location = new System.Drawing.Point(4, 22);
+            this.tabPageQuestScript.Name = "tabPageQuestScript";
+            this.tabPageQuestScript.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageQuestScript.Size = new System.Drawing.Size(955, 533);
+            this.tabPageQuestScript.TabIndex = 7;
+            this.tabPageQuestScript.Text = "Script";
             // 
-            // buttonItemTempStatsType4Popup
+            // buttonQuestScriptUpdate
             // 
-            this.buttonItemTempStatsType4Popup.Location = new System.Drawing.Point(50, 111);
-            this.buttonItemTempStatsType4Popup.Name = "buttonItemTempStatsType4Popup";
-            this.buttonItemTempStatsType4Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType4Popup.TabIndex = 40;
-            this.buttonItemTempStatsType4Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType4Popup.Click += new System.EventHandler(this.buttonItemTempStatsType4Popup_Click);
+            this.buttonQuestScriptUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonQuestScriptUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuestScriptUpdate.Location = new System.Drawing.Point(6, 482);
+            this.buttonQuestScriptUpdate.Name = "buttonQuestScriptUpdate";
+            this.buttonQuestScriptUpdate.Size = new System.Drawing.Size(943, 23);
+            this.buttonQuestScriptUpdate.TabIndex = 2;
+            this.buttonQuestScriptUpdate.Text = "Update Database";
+            this.buttonQuestScriptUpdate.UseVisualStyleBackColor = true;
             // 
-            // buttonItemTempStatsType5Popup
+            // statusStripQuestScript
             // 
-            this.buttonItemTempStatsType5Popup.Location = new System.Drawing.Point(50, 137);
-            this.buttonItemTempStatsType5Popup.Name = "buttonItemTempStatsType5Popup";
-            this.buttonItemTempStatsType5Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType5Popup.TabIndex = 41;
-            this.buttonItemTempStatsType5Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType5Popup.Click += new System.EventHandler(this.buttonItemTempStatsType5Popup_Click);
+            this.statusStripQuestScript.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelQuestScriptAffected});
+            this.statusStripQuestScript.Location = new System.Drawing.Point(3, 508);
+            this.statusStripQuestScript.Name = "statusStripQuestScript";
+            this.statusStripQuestScript.Size = new System.Drawing.Size(949, 22);
+            this.statusStripQuestScript.SizingGrip = false;
+            this.statusStripQuestScript.TabIndex = 1;
+            this.statusStripQuestScript.Text = "statusStrip1";
             // 
-            // buttonItemTempStatsType10Popup
+            // toolStripStatusLabelQuestScriptAffected
             // 
-            this.buttonItemTempStatsType10Popup.Location = new System.Drawing.Point(50, 267);
-            this.buttonItemTempStatsType10Popup.Name = "buttonItemTempStatsType10Popup";
-            this.buttonItemTempStatsType10Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType10Popup.TabIndex = 46;
-            this.buttonItemTempStatsType10Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType10Popup.Click += new System.EventHandler(this.buttonItemTempStatsType10Popup_Click);
+            this.toolStripStatusLabelQuestScriptAffected.Name = "toolStripStatusLabelQuestScriptAffected";
+            this.toolStripStatusLabelQuestScriptAffected.Size = new System.Drawing.Size(103, 17);
+            this.toolStripStatusLabelQuestScriptAffected.Text = "Row(s) Affected: 0";
             // 
-            // buttonItemTempStatsType9Popup
+            // textBoxQuestScriptOutput
             // 
-            this.buttonItemTempStatsType9Popup.Location = new System.Drawing.Point(50, 241);
-            this.buttonItemTempStatsType9Popup.Name = "buttonItemTempStatsType9Popup";
-            this.buttonItemTempStatsType9Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType9Popup.TabIndex = 45;
-            this.buttonItemTempStatsType9Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType9Popup.Click += new System.EventHandler(this.buttonItemTempStatsType9Popup_Click);
+            this.textBoxQuestScriptOutput.BackColor = System.Drawing.Color.Black;
+            this.textBoxQuestScriptOutput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxQuestScriptOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxQuestScriptOutput.ForeColor = System.Drawing.Color.White;
+            this.textBoxQuestScriptOutput.Location = new System.Drawing.Point(6, 6);
+            this.textBoxQuestScriptOutput.Multiline = true;
+            this.textBoxQuestScriptOutput.Name = "textBoxQuestScriptOutput";
+            this.textBoxQuestScriptOutput.Size = new System.Drawing.Size(943, 470);
+            this.textBoxQuestScriptOutput.TabIndex = 0;
             // 
-            // buttonItemTempStatsType8Popup
+            // button2
             // 
-            this.buttonItemTempStatsType8Popup.Location = new System.Drawing.Point(50, 215);
-            this.buttonItemTempStatsType8Popup.Name = "buttonItemTempStatsType8Popup";
-            this.buttonItemTempStatsType8Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType8Popup.TabIndex = 44;
-            this.buttonItemTempStatsType8Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType8Popup.Click += new System.EventHandler(this.buttonItemTempStatsType8Popup_Click);
-            // 
-            // buttonItemTempStatsType7Popup
-            // 
-            this.buttonItemTempStatsType7Popup.Location = new System.Drawing.Point(50, 189);
-            this.buttonItemTempStatsType7Popup.Name = "buttonItemTempStatsType7Popup";
-            this.buttonItemTempStatsType7Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType7Popup.TabIndex = 43;
-            this.buttonItemTempStatsType7Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType7Popup.Click += new System.EventHandler(this.buttonItemTempStatsType7Popup_Click);
-            // 
-            // buttonItemTempStatsType6Popup
-            // 
-            this.buttonItemTempStatsType6Popup.Location = new System.Drawing.Point(50, 163);
-            this.buttonItemTempStatsType6Popup.Name = "buttonItemTempStatsType6Popup";
-            this.buttonItemTempStatsType6Popup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempStatsType6Popup.TabIndex = 42;
-            this.buttonItemTempStatsType6Popup.UseVisualStyleBackColor = true;
-            this.buttonItemTempStatsType6Popup.Click += new System.EventHandler(this.buttonItemTempStatsType6Popup_Click);
-            // 
-            // buttonItemTempTypeClassPopup
-            // 
-            this.buttonItemTempTypeClassPopup.Location = new System.Drawing.Point(156, 33);
-            this.buttonItemTempTypeClassPopup.Name = "buttonItemTempTypeClassPopup";
-            this.buttonItemTempTypeClassPopup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempTypeClassPopup.TabIndex = 38;
-            this.buttonItemTempTypeClassPopup.UseVisualStyleBackColor = true;
-            this.buttonItemTempTypeClassPopup.Click += new System.EventHandler(this.buttonItemTempTypeClassPopup_Click);
-            // 
-            // buttonItemTempSubclassPopup
-            // 
-            this.buttonItemTempSubclassPopup.Location = new System.Drawing.Point(242, 33);
-            this.buttonItemTempSubclassPopup.Name = "buttonItemTempSubclassPopup";
-            this.buttonItemTempSubclassPopup.Size = new System.Drawing.Size(18, 18);
-            this.buttonItemTempSubclassPopup.TabIndex = 39;
-            this.buttonItemTempSubclassPopup.UseVisualStyleBackColor = true;
-            this.buttonItemTempSubclassPopup.Click += new System.EventHandler(this.buttonItemTempSubclassPopup_Click);
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(902, 483);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(47, 47);
+            this.button2.TabIndex = 50;
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -12102,7 +12349,12 @@
             this.groupBoxCharacterCharacterGeneral.ResumeLayout(false);
             this.groupBoxCharacterCharacterGeneral.PerformLayout();
             this.tabPageCharacterInventory.ResumeLayout(false);
+            this.tabPageCharacterInventory.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCharacterInventory)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.statusStripCharacterScript.ResumeLayout(false);
+            this.statusStripCharacterScript.PerformLayout();
             this.tabPageCreature.ResumeLayout(false);
             this.tabControlCategoryCreature.ResumeLayout(false);
             this.tabPageCreatureSearch.ResumeLayout(false);
@@ -12236,6 +12488,10 @@
             this.statusStripItemAffected.PerformLayout();
             this.menuStripMain.ResumeLayout(false);
             this.menuStripMain.PerformLayout();
+            this.tabPageQuestScript.ResumeLayout(false);
+            this.tabPageQuestScript.PerformLayout();
+            this.statusStripQuestScript.ResumeLayout(false);
+            this.statusStripQuestScript.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -12296,7 +12552,7 @@
         private System.Windows.Forms.DataGridView dataGridViewAccountAccess;
         private System.Windows.Forms.Button buttonAccountAccountGenerateScript;
         private System.Windows.Forms.Button buttonAccountScriptUpdate;
-        private System.Windows.Forms.TextBox textBoxAccountScript;
+        private System.Windows.Forms.TextBox textBoxAccountScriptOutput;
         private System.Windows.Forms.StatusStrip statusStripAccountSearch;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelAccountSearchRow;
         private System.Windows.Forms.StatusStrip statusStripAccountScript;
@@ -12900,14 +13156,6 @@
         private System.Windows.Forms.Label labelItemSearchEntry;
         private System.Windows.Forms.Button buttonItemSearchSearch;
         private System.Windows.Forms.DataGridView dataGridViewItemSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISSB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISQ;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISD;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISIL;
         private System.Windows.Forms.StatusStrip statusStripItemSearch;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelItemSearchRow;
         private System.Windows.Forms.TabPage tabPageItemTemplate;
@@ -13110,8 +13358,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TextBox textBoxItemTempContainer;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBoxItemTempStack;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox textBoxItemTempMaxC;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBoxItemTempEFlags;
@@ -13142,52 +13388,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPageItemLoot;
         private System.Windows.Forms.DataGridView dataGridViewItemLoot;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.TabPage tabPageItemProspecting;
         private System.Windows.Forms.DataGridView dataGridViewItemProspect;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
         private System.Windows.Forms.TabPage tabPageItemMilling;
         private System.Windows.Forms.DataGridView dataGridViewItemMill;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
         private System.Windows.Forms.TabPage tabPageItemDisenchant;
         private System.Windows.Forms.DataGridView dataGridViewItemDE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
         private System.Windows.Forms.Button buttonItemLootAdd;
         private System.Windows.Forms.Button buttonItemLootDelete;
         private System.Windows.Forms.Button buttonItemLootRefresh;
@@ -13302,5 +13508,77 @@
         private System.Windows.Forms.Button buttonItemTempStatsType3Popup;
         private System.Windows.Forms.Button buttonItemTempSubclassPopup;
         private System.Windows.Forms.Button buttonItemTempTypeClassPopup;
+        private System.Windows.Forms.Button buttonItemTempQualityPopup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISSB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISQ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnISIL;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.StatusStrip statusStripCharacterScript;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCharacterScriptAffected;
+        private System.Windows.Forms.Button buttonCharacterScriptUpdate;
+        private System.Windows.Forms.TextBox textBoxCharacterScriptOutput;
+        private System.Windows.Forms.TextBox textBoxCharacterInventoryItemID;
+        private System.Windows.Forms.Label labelCharacterInventoryItemID;
+        private System.Windows.Forms.TextBox textBoxCharacterInventoryBag;
+        private System.Windows.Forms.Label labelCharacterInventoryBag;
+        private System.Windows.Forms.TextBox textBoxCharacterInventorySlot;
+        private System.Windows.Forms.Label labelCharacterInventorySlot;
+        private System.Windows.Forms.TextBox textBoxCharacterInventoryGUID;
+        private System.Windows.Forms.Label labelCharacterInventoryGUID;
+        private System.Windows.Forms.Button buttonCharacterInventoryGenerate;
+        private System.Windows.Forms.Button buttonCharacterInventoryDelete;
+        private System.Windows.Forms.Button buttonCharacterInventoryRefresh;
+        private System.Windows.Forms.Button buttonCharacterInventoryAdd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn27;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn28;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn29;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn30;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn32;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn33;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn34;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn35;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn36;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn39;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn40;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn41;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn42;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn43;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn44;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn48;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn50;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn51;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn52;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn53;
+        private System.Windows.Forms.TabPage tabPageQuestScript;
+        private System.Windows.Forms.Button buttonQuestScriptUpdate;
+        private System.Windows.Forms.StatusStrip statusStripQuestScript;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelQuestScriptAffected;
+        private System.Windows.Forms.TextBox textBoxQuestScriptOutput;
+        private System.Windows.Forms.Button button2;
     }
 }
