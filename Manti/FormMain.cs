@@ -32,6 +32,7 @@ namespace Manti
             tabControlCategory.SelectedTab = tabPageItem;
             tabControlCategory.Focus();
 
+
             dataGridViewCharacterInventory.AutoGenerateColumns = false;
 
             dataGridViewItemLoot.AutoGenerateColumns = false;
@@ -251,7 +252,40 @@ namespace Manti
                 }
             }
 
-            output.Text = query;
+            output.AppendText(query);
+        }
+            // Set All textboxes to ZERO.
+        private void DefaultValuesGenerate(Control parent)
+        {
+            foreach (Control child in parent.Controls)
+            {
+                if (child is TextBox)
+                {
+                    child.Text = "0";
+                } else
+                {
+                    DefaultValuesGenerate(child);
+                }
+            }
+        }
+            // Override textboxes by a list with textbox object and the replacement value.
+        private void DefaultValuesOverride(List<Tuple<TextBox, string>> exclude)
+        {
+            foreach (var data in exclude)
+            {
+                data.Item1.Text = data.Item2.ToString();
+            }
+        }
+            // Generate SQL to delete a specific 'type', specified by entry/guid and outputs it into a textbox.
+        private void GenerateDeleteSelectedRow(DataGridView gv, string sqlTable, string uniqueIndex, TextBox output)
+        {
+            if (gv.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow gvR in gv.SelectedRows)
+                {
+                    output.AppendText("DELETE FROM `" + sqlTable + "` WHERE `" + uniqueIndex + "` = '" + gvR.Cells[0].Value.ToString() + "';");
+                }
+            }
         }
             // Convert to DateTime.
         private DateTime UnixStampToDateTime(double unixStamp)
@@ -745,26 +779,31 @@ namespace Manti
         }
         private string DatabaseCharacterInventoryGenerate()
         {
+            string query = "";
 
-            string query = "DELETE FROM `character_inventory` WHERE guid = '" + dataGridViewCharacterInventory.Rows[0].Cells[0].Value.ToString() + "';";
-
-            foreach (DataGridViewRow row in dataGridViewCharacterInventory.Rows)
+            if (dataGridViewCharacterInventory.Rows.Count > 0)
             {
-                if (row.Cells[0].Value.ToString() != "")
-                {
-                    query += Environment.NewLine;
+                query = "DELETE FROM `character_inventory` WHERE guid = '" + dataGridViewCharacterInventory.Rows[0].Cells[0].Value.ToString() + "';";
 
-                    query += "INSERT INTO `character_inventory` VALUES (" +
-                        row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " +
-                        row.Cells[2].Value.ToString() + ", " + row.Cells[3].Value.ToString() + ");";
+                foreach (DataGridViewRow row in dataGridViewCharacterInventory.Rows)
+                {
+                    if (row.Cells[0].Value.ToString() != "")
+                    {
+                        query += Environment.NewLine;
+
+                        query += "INSERT INTO `character_inventory` VALUES (" +
+                            row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " +
+                            row.Cells[2].Value.ToString() + ", " + row.Cells[3].Value.ToString() + ");";
+                    }
                 }
+
             }
 
             return query;
         }
         #endregion       
         #region Creature
-        // Searches the database for the creature's information.
+            // Searches the database for the creature's information.
         private void DatabaseCreatureSearch(string creatureEntryID)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
@@ -774,7 +813,7 @@ namespace Manti
 
                 string query = "SELECT * FROM creature_template WHERE entry = '" + creatureEntryID + "'; ";
 
-                DataSet ctTable = DatabaseSearch(connect, query);
+                var ctTable = DatabaseSearch(connect, query);
 
                 textBoxCreatureTemplateEntry.Text           = ctTable.Tables[0].Rows[0]["entry"].ToString();
                 textBoxCreatureTemplateDifEntry1.Text       = ctTable.Tables[0].Rows[0]["difficulty_entry_1"].ToString();
@@ -913,6 +952,107 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
+            // Template Generation
+        private string DatabaseCreatureTempGenerate()
+        {
+            var query = "REPLACE INTO `creature_template` (" +
+            "`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `NAME`, `subname`, " +
+            "`modelid1`, `modelid2`, `modelid3`, `modelid4`, `minlevel`, `maxlevel`, `mingold`, `maxgold`, `KillCredit1`, `KillCredit2`, `rank`, `scale`, `faction`, `npcflag`, " +
+            "`HealthModifier`, `ManaModifier`, `ArmorModifier`, `DamageModifier`, `ExperienceModifier`, " +
+            "`BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `dmgschool`, " +
+            "`AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `gossip_menu_id`, `movementId`, `ScriptName`, `VehicleId`, " +
+            "`trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `lootid`, `pickpocketloot`, `skinloot`, " +
+            "`resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, " +
+            "`RegenHealth`, `mechanic_immune_mask`, `family`, `TYPE`, `type_flags`, `flags_extra`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `speed_walk`, `speed_run`, " +
+            "`spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`" +
+            ") VALUES (" +
+
+            textBoxCreatureTemplateEntry.Text.Trim() + ", " +
+            textBoxCreatureTemplateDifEntry1.Text.Trim() + ", " +
+            textBoxCreatureTemplateDifEntry2.Text.Trim() + ", " +
+            textBoxCreatureTemplateDifEntry3.Text.Trim() + ", '" +
+            textBoxCreatureTemplateName.Text.Trim() + "', '" +
+            textBoxCreatureTemplateSubname.Text.Trim() + "', " +
+
+            textBoxCreatureTemplateModelID1.Text.Trim() + ", " +
+            textBoxCreatureTemplateModelID2.Text.Trim() + ", " +
+            textBoxCreatureTemplateModelID3.Text.Trim() + ", " +
+            textBoxCreatureTemplateModelID4.Text.Trim() + ", " +
+            textBoxCreatureTemplateLevelMin.Text.Trim() + ", " +
+            textBoxCreatureTemplateLevelMax.Text.Trim() + ", " +
+            textBoxCreatureTemplateGoldMin.Text.Trim() + ", " +
+            textBoxCreatureTemplateGoldMax.Text.Trim() + ", " +
+            textBoxCreatureTemplateKillCredit1.Text.Trim() + ", " +
+            textBoxCreatureTemplateKillCredit2.Text.Trim() + ", " +
+            textBoxCreatureTemplateRank.Text.Trim() + ", " +
+            textBoxCreatureTemplateScale.Text.Trim() + ", " +
+            textBoxCreatureTemplateFaction.Text.Trim() + ", " +
+            textBoxCreatureTemplateNPCFlags.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateModHealth.Text.Trim() + ", " +
+            textBoxCreatureTemplateModMana.Text.Trim() + ", " +
+            textBoxCreatureTemplateModArmor.Text.Trim() + ", " +
+            textBoxCreatureTemplateModDamage.Text.Trim() + ", " +
+            textBoxCreatureTemplateModExperience.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateBaseAttack.Text.Trim() + ", " +
+            textBoxCreatureTemplateRangedAttack.Text.Trim() + ", " +
+            textBoxCreatureTemplateBV.Text.Trim() + ", " +
+            textBoxCreatureTemplateRV.Text.Trim() + ", " +
+            textBoxCreatureTemplateDS.Text.Trim() + ", '" +
+
+            textBoxCreatureTemplateAIName.Text.Trim() + "', " +
+            textBoxCreatureTemplateMType.Text.Trim() + ", " +
+            textBoxCreatureTemplateInhabitType.Text.Trim() + ", " +
+            textBoxCreatureTemplateHH.Text.Trim() + ", " +
+            textBoxCreatureTemplateGMID.Text.Trim() + ", " +
+            textBoxCreatureTemplateMID.Text.Trim() + ", '" +
+            textBoxCreatureTemplateScriptName.Text.Trim() + "', " +
+            textBoxCreatureTemplateVID.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateTType.Text.Trim() + ", " +
+            textBoxCreatureTemplateTSpell.Text.Trim() + ", " +
+            textBoxCreatureTemplateTRace.Text.Trim() + ", " +
+            textBoxCreatureTemplateTClass.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateLootID.Text.Trim() + ", " +
+            textBoxCreatureTemplatePickID.Text.Trim() + ", " +
+            textBoxCreatureTemplateSkinID.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateResis1.Text.Trim() + ", " +
+            textBoxCreatureTemplateResis2.Text.Trim() + ", " +
+            textBoxCreatureTemplateResis3.Text.Trim() + ", " +
+            textBoxCreatureTemplateResis4.Text.Trim() + ", " +
+            textBoxCreatureTemplateResis5.Text.Trim() + ", " +
+            textBoxCreatureTemplateResis6.Text.Trim() + ", " +
+
+            checkBoxCreatureTemplateHR.Checked.ToString() + ", " +
+            textBoxCreatureTemplateMechanic.Text.Trim() + ", " +
+            textBoxCreatureTemplateFamily.Text.Trim() + ", " +
+            textBoxCreatureTemplateType.Text.Trim() + ", " +
+            textBoxCreatureTemplateTypeFlags.Text.Trim() + ", " +
+            textBoxCreatureTemplateFlagsExtra.Text.Trim() + ", " +
+            textBoxCreatureTemplateUnitClass.Text.Trim() + ", " +
+            textBoxCreatureTemplateUnitflags.Text.Trim() + ", " +
+            textBoxCreatureTemplateUnitflags2.Text.Trim() + ", " +
+            textBoxCreatureTemplateDynamic.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateSpeedWalk.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpeedRun.Text.Trim() + ", " +
+
+            textBoxCreatureTemplateSpell1.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell2.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell3.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell4.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell5.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell6.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell7.Text.Trim() + ", " +
+            textBoxCreatureTemplateSpell8.Text.Trim() + 
+
+            ");";
+
+            return query;
+        }
         #endregion
         #region Quest
         private void DatabaseQuestSearch(string questEntryID)
@@ -970,66 +1110,176 @@ namespace Manti
                 #region Section2
                 // Requirements
                 //RewardMailTemplateID RequiredSkillID RequiredSkillPoints
-                textBoxQuestSectionReqNPCID1.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo1"].ToString();
-                textBoxQuestSectionReqNPCC1.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount1"].ToString();
-                textBoxQuestSectionReqNPCID2.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo2"].ToString();
-                textBoxQuestSectionReqNPCC2.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount2"].ToString();
-                textBoxQuestSectionReqNPCID3.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo3"].ToString();
-                textBoxQuestSectionReqNPCC3.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount3"].ToString();
-                textBoxQuestSectionReqNPCID4.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo4"].ToString();
-                textBoxQuestSectionReqNPCC4.Text = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount4"].ToString();
+                textBoxQuestSectionReqNPCID1.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo1"].ToString();
+                textBoxQuestSectionReqNPCC1.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount1"].ToString();
+                textBoxQuestSectionReqNPCID2.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo2"].ToString();
+                textBoxQuestSectionReqNPCC2.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount2"].ToString();
+                textBoxQuestSectionReqNPCID3.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo3"].ToString();
+                textBoxQuestSectionReqNPCC3.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount3"].ToString();
+                textBoxQuestSectionReqNPCID4.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo4"].ToString();
+                textBoxQuestSectionReqNPCC4.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount4"].ToString();
 
-                textBoxQuestSectionReqItemID1.Text = qtTable.Tables[0].Rows[0]["RequiredItemId1"].ToString();
-                textBoxQuestSectionReqItemC1.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount1"].ToString();
-                textBoxQuestSectionReqItemID2.Text = qtTable.Tables[0].Rows[0]["RequiredItemId2"].ToString();
-                textBoxQuestSectionReqItemC2.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount2"].ToString();
-                textBoxQuestSectionReqItemID3.Text = qtTable.Tables[0].Rows[0]["RequiredItemId3"].ToString();
-                textBoxQuestSectionReqItemC3.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount3"].ToString();
-                textBoxQuestSectionReqItemID4.Text = qtTable.Tables[0].Rows[0]["RequiredItemId4"].ToString();
-                textBoxQuestSectionReqItemC4.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount4"].ToString();
-                textBoxQuestSectionReqItemID5.Text = qtTable.Tables[0].Rows[0]["RequiredItemId5"].ToString();
-                textBoxQuestSectionReqItemC5.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount5"].ToString();
-                textBoxQuestSectionReqItemID6.Text = qtTable.Tables[0].Rows[0]["RequiredItemId6"].ToString();
-                textBoxQuestSectionReqItemC6.Text = qtTable.Tables[0].Rows[0]["RequiredItemCount6"].ToString();
+                textBoxQuestSectionReqItemID1.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId1"].ToString();
+                textBoxQuestSectionReqItemC1.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount1"].ToString();
+                textBoxQuestSectionReqItemID2.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId2"].ToString();
+                textBoxQuestSectionReqItemC2.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount2"].ToString();
+                textBoxQuestSectionReqItemID3.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId3"].ToString();
+                textBoxQuestSectionReqItemC3.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount3"].ToString();
+                textBoxQuestSectionReqItemID4.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId4"].ToString();
+                textBoxQuestSectionReqItemC4.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount4"].ToString();
+                textBoxQuestSectionReqItemID5.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId5"].ToString();
+                textBoxQuestSectionReqItemC5.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount5"].ToString();
+                textBoxQuestSectionReqItemID6.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId6"].ToString();
+                textBoxQuestSectionReqItemC6.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount6"].ToString();
 
                 // Rewards
-                textBoxQuestSectionRewItemID1.Text = qtTable.Tables[0].Rows[0]["RewardItem1"].ToString();
-                textBoxQuestSectionRewItemC1.Text = qtTable.Tables[0].Rows[0]["RewardAmount1"].ToString();
-                textBoxQuestSectionRewItemID2.Text = qtTable.Tables[0].Rows[0]["RewardItem2"].ToString();
-                textBoxQuestSectionRewItemC2.Text = qtTable.Tables[0].Rows[0]["RewardAmount2"].ToString();
-                textBoxQuestSectionRewItemID3.Text = qtTable.Tables[0].Rows[0]["RewardItem3"].ToString();
-                textBoxQuestSectionRewItemC3.Text = qtTable.Tables[0].Rows[0]["RewardAmount3"].ToString();
-                textBoxQuestSectionRewItemID4.Text = qtTable.Tables[0].Rows[0]["RewardItem4"].ToString();
-                textBoxQuestSectionRewItemC4.Text = qtTable.Tables[0].Rows[0]["RewardAmount4"].ToString();
+                textBoxQuestSectionRewItemID1.Text          = qtTable.Tables[0].Rows[0]["RewardItem1"].ToString();
+                textBoxQuestSectionRewItemC1.Text           = qtTable.Tables[0].Rows[0]["RewardAmount1"].ToString();
+                textBoxQuestSectionRewItemID2.Text          = qtTable.Tables[0].Rows[0]["RewardItem2"].ToString();
+                textBoxQuestSectionRewItemC2.Text           = qtTable.Tables[0].Rows[0]["RewardAmount2"].ToString();
+                textBoxQuestSectionRewItemID3.Text          = qtTable.Tables[0].Rows[0]["RewardItem3"].ToString();
+                textBoxQuestSectionRewItemC3.Text           = qtTable.Tables[0].Rows[0]["RewardAmount3"].ToString();
+                textBoxQuestSectionRewItemID4.Text          = qtTable.Tables[0].Rows[0]["RewardItem4"].ToString();
+                textBoxQuestSectionRewItemC4.Text           = qtTable.Tables[0].Rows[0]["RewardAmount4"].ToString();
 
-                textBoxQuestSectionRewChoiceID1.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID1"].ToString();
-                textBoxQuestSectionRewChoiceC1.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity1"].ToString();
-                textBoxQuestSectionRewChoiceID2.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID2"].ToString();
-                textBoxQuestSectionRewChoiceC2.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity2"].ToString();
-                textBoxQuestSectionRewChoiceID3.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID3"].ToString();
-                textBoxQuestSectionRewChoiceC3.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity3"].ToString();
-                textBoxQuestSectionRewChoiceID4.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID4"].ToString();
-                textBoxQuestSectionRewChoiceC4.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity4"].ToString();
-                textBoxQuestSectionRewChoiceID5.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID5"].ToString();
-                textBoxQuestSectionRewChoiceC5.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity5"].ToString();
-                textBoxQuestSectionRewChoiceID6.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemID6"].ToString();
-                textBoxQuestSectionRewChoiceC6.Text = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity6"].ToString();
+                textBoxQuestSectionRewChoiceID1.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID1"].ToString();
+                textBoxQuestSectionRewChoiceC1.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity1"].ToString();
+                textBoxQuestSectionRewChoiceID2.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID2"].ToString();
+                textBoxQuestSectionRewChoiceC2.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity2"].ToString();
+                textBoxQuestSectionRewChoiceID3.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID3"].ToString();
+                textBoxQuestSectionRewChoiceC3.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity3"].ToString();
+                textBoxQuestSectionRewChoiceID4.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID4"].ToString();
+                textBoxQuestSectionRewChoiceC4.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity4"].ToString();
+                textBoxQuestSectionRewChoiceID5.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID5"].ToString();
+                textBoxQuestSectionRewChoiceC5.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity5"].ToString();
+                textBoxQuestSectionRewChoiceID6.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID6"].ToString();
+                textBoxQuestSectionRewChoiceC6.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity6"].ToString();
 
-                textBoxQuestSectionRewOtherSpell.Text = qtTable.Tables[0].Rows[0]["RewardDisplaySpell"].ToString();
-                textBoxQuestSectionRewOtherSpellCast.Text = qtTable.Tables[0].Rows[0]["RewardSpell"].ToString();
-                textBoxQuestSectionRewOtherMoney.Text = qtTable.Tables[0].Rows[0]["RewardMoney"].ToString();
-                textBoxQuestSectionRewOtherMoneyML.Text = qtTable.Tables[0].Rows[0]["RewardBonusMoney"].ToString();
-                textBoxQuestSectionRewOtherMailID.Text = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherTitleID.Text = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherTP.Text = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherHP.Text = qtTable.Tables[0].Rows[0]["RewardHonor"].ToString();
-                textBoxQuestSectionRewOtherAP.Text = qtTable.Tables[0].Rows[0]["RewardArenaPoints"].ToString();
-                textBoxQuestSectionRewOtherTP.Text = qtTable.Tables[0].Rows[0]["RewardTalents"].ToString();
+                textBoxQuestSectionRewOtherSpell.Text       = qtTable.Tables[0].Rows[0]["RewardDisplaySpell"].ToString();
+                textBoxQuestSectionRewOtherSpellCast.Text   = qtTable.Tables[0].Rows[0]["RewardSpell"].ToString();
+                textBoxQuestSectionRewOtherMoney.Text       = qtTable.Tables[0].Rows[0]["RewardMoney"].ToString();
+                textBoxQuestSectionRewOtherMoneyML.Text     = qtTable.Tables[0].Rows[0]["RewardBonusMoney"].ToString();
+                textBoxQuestSectionRewOtherMailID.Text      = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
+                textBoxQuestSectionRewOtherTitleID.Text     = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
+                textBoxQuestSectionRewOtherTP.Text          = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
+                textBoxQuestSectionRewOtherHP.Text          = qtTable.Tables[0].Rows[0]["RewardHonor"].ToString();
+                textBoxQuestSectionRewOtherAP.Text          = qtTable.Tables[0].Rows[0]["RewardArenaPoints"].ToString();
+                textBoxQuestSectionRewOtherTP.Text          = qtTable.Tables[0].Rows[0]["RewardTalents"].ToString();
 
                 #endregion
 
                 ConnectionClose(connect);
             }
+        }
+        private string DatabaseQuestSectionGenerate()
+        {
+            string query = "REPLACE INTO `quest_template` (" +
+            "`ID`, `ExclusiveGroup`, `PrevQuestID`, `NextQuestID`, `AllowableRaces`, `AllowableClasses`, `Minlevel`, `MaxLevel`, `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, " +
+            "`Flags`, `Flags`, `TimeAllowed`, `LogTitle`, `QuestDescription`, `LogDescription`, `LogTitle`, `QuestCompletionLog`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `QuestLevel`, `SuggestedGroupNum`, `SpecialFlags`, `RequiredPlayerKills`, `QuestType`, `StartItem, `" +
+            "`RequiredNpcOrGo1`, `RequiredNpcOrGoCount1`, `RequiredNpcOrGo2`, `RequiredNpcOrGoCount2`, `RequiredNpcOrGo3`, `RequiredNpcOrGoCount3`, `RequiredNpcOrGo4`, `RequiredNpcOrGoCount4`, " +
+            "`RequiredItemId1`, `RequiredItemCount1`, `RequiredItemId2`, `RequiredItemCount2`, `RequiredItemId3`, `RequiredItemCount3`, `RequiredItemId4`, `RequiredItemCount4`, `RequiredItemId5`, `RequiredItemCount5`, `RequiredItemId6`, `RequiredItemCount6`, " +
+            "`RewardItem1`, `RewardAmount1`, `RewardItem2`, `RewardAmount2`, `RewardItem3`, `RewardAmount3`, `RewardItem4`, `RewardAmount4`, " +
+            "`RewardChoiceItemID1`, `RewardChoiceItemQuantity1`, `RewardChoiceItemID2`, `RewardChoiceItemQuantity2`, `RewardChoiceItemID3`, `RewardChoiceItemQuantity3`, `RewardChoiceItemID4`, `RewardChoiceItemQuantity4`, `RewardChoiceItemID5`, `RewardChoiceItemQuantity5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity6`, " +
+            "`RewardDisplaySpell`, `RewardSpell`, `RewardMoney`, `RewardBonusMoney`, `RewardMailTemplateID`, `RewardMailTemplateID`, `RewardMailTemplateID`, `RewardHonor`, `RewardArenaPoints`, `RewardTalents`" +
+            ") VALUES (" +
+
+            textBoxQuestSectionID.Text.Trim() + ", " +
+            textBoxQuestSectionExclusive.Text.Trim() + ", " +
+            textBoxQuestSectionPrevQuest.Text.Trim() + ", " +
+            textBoxQuestSectionNextQuest.Text.Trim() + ", " +
+
+            textBoxQuestSectionReqRace.Text.Trim() + ", " +
+            textBoxQuestSectionReqClass.Text.Trim() + ", " +
+            textBoxQuestSectionLevelMin.Text.Trim() + ", " +
+            textBoxQuestSectionLevelMax.Text.Trim() + ", " +
+            textBoxQuestSectionSkillID.Text.Trim() + ", " +
+            textBoxQuestSectionSkillPoints.Text.Trim() + ", " +
+            textBoxQuestSectionFaction1.Text.Trim() + ", " +
+            textBoxQuestSectionFaction2.Text.Trim() + ", " +
+            textBoxQuestSectionValue1.Text.Trim() + ", " +
+            textBoxQuestSectionValue2.Text.Trim() + ", " +
+
+            textBoxQuestSectionType.Text.Trim() + ", " +
+            textBoxQuestSectionType.Text.Trim() + ", " +
+            textBoxQuestSectionTimeAllowed.Text.Trim() + ", '" +
+
+            textBoxQuestSectionTitle.Text.Trim() + "', '" +
+            textBoxQuestSectionLDescription.Text.Trim() + "', '" +
+            textBoxQuestSectionQDescription.Text.Trim() + "', '" +
+            textBoxQuestSectionAreaDescription.Text.Trim() + "', '" +
+
+            textBoxQuestSectionCompleted.Text.Trim() + "', '" +
+            textBoxQuestSectionObjectives1.Text.Trim() + "', '" +
+            textBoxQuestSectionObjectives2.Text.Trim() + "', '" +
+            textBoxQuestSectionObjectives3.Text.Trim() + "', '" +
+            textBoxQuestSectionObjectives4.Text.Trim() + "', " +
+
+            // Other
+            textBoxQuestSectionQuestLevel.Text.Trim() + ", " +
+            textBoxQuestSectionOtherSP.Text.Trim() + ", " +
+            textBoxQuestSectionOtherSF.Text.Trim() + ", " +
+            textBoxQuestSectionOtherPK.Text.Trim() + ", " +
+            textBoxQuestSectionQType.Text.Trim() + ", " +
+            textBoxQuestSectionQuestStartItem.Text.Trim() + ", " +
+
+            textBoxQuestSectionReqNPCID1.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCC1.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCID2.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCC2.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCID3.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCC3.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCID4.Text.Trim() + ", " +
+            textBoxQuestSectionReqNPCC4.Text.Trim() + ", " +
+
+            textBoxQuestSectionReqItemID1.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC1.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemID2.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC2.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemID3.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC3.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemID4.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC4.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemID5.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC5.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemID6.Text.Trim() + ", " +
+            textBoxQuestSectionReqItemC6.Text.Trim() + ", " +
+
+            textBoxQuestSectionRewItemID1.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemC1.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemID2.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemC2.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemID3.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemC3.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemID4.Text.Trim() + ", " +
+            textBoxQuestSectionRewItemC4.Text.Trim() + ", " +
+
+            textBoxQuestSectionRewChoiceID1.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC1.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceID2.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC2.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceID3.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC3.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceID4.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC4.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceID5.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC5.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceID6.Text.Trim() + ", " +
+            textBoxQuestSectionRewChoiceC6.Text.Trim() + ", " +
+
+            textBoxQuestSectionRewOtherSpell.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherSpellCast.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherMoney.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherMoneyML.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherMailID.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherTitleID.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherTP.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherHP.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherAP.Text.Trim() + ", " +
+            textBoxQuestSectionRewOtherTP.Text.Trim() +
+
+            ");";
+
+            return query;
         }
         #endregion
         #region GameObject
@@ -1555,7 +1805,7 @@ namespace Manti
                 DataSet combinedTable = DatabaseSearch(connect, query);
 
                 dataGridViewAccountSearch.DataSource = combinedTable.Tables[0];
-                toolStripStatusLabelAccountSearchRow.Text = "Account(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
+                toolStripStatusLabelAccountSearchRows.Text = "Account(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
@@ -1632,7 +1882,7 @@ namespace Manti
                 DataSet combinedTable = DatabaseSearch(connect, query);
 
                 dataGridViewCharacterSearch.DataSource = combinedTable.Tables[0];
-                toolStripStatusLabelCharacterSearchRow.Text = "Character(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
+                toolStripStatusLabelCharacterSearchRows.Text = "Character(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
@@ -1721,7 +1971,7 @@ namespace Manti
                 DataSet ctTable = DatabaseSearch(connect, query);
 
                 dataGridViewCreatureSearch.DataSource = ctTable.Tables[0];
-                toolStripStatusLabelCreatureSearchRow.Text = "Creature(s) found: " + ctTable.Tables[0].Rows.Count.ToString();
+                toolStripStatusLabelCreatureSearchRows.Text = "Creature(s) found: " + ctTable.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
@@ -1737,11 +1987,58 @@ namespace Manti
 
             tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
         } 
+        private void buttonCreatureTempGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureScriptOutput.Text = DatabaseCreatureTempGenerate();
+        }
+
+        #region Loot
+        private void buttonCreatureLootAdd_Click(object sender, EventArgs e)
+        {
+            var values = new object[] {
+                textBoxCreatureLootEntry.Text,
+                textBoxCreatureLootItemID.Text,
+                textBoxCreatureLootReference.Text,
+                textBoxCreatureLootChance.Text,
+                textBoxCreatureLootQR.Text,
+                textBoxCreatureLootLM.Text,
+                textBoxCreatureLootGID.Text,
+                textBoxCreatureLootMIC.Text,
+                textBoxCreatureLootMAC.Text
+            };
+
+            if (textBoxCreatureLootEntry.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCreatureLoot.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCreatureLoot.DataSource = existingData;
+                // Scroll ned, når der tilføjes en ny 'row'
+            }
+        }
+        private void buttonCreatureLootRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemLoot((textBoxCreatureLootEntry.Text.Trim() != "") ? textBoxCreatureLootEntry.Text : textBoxCreatureTemplateEntry.Text);
+        }
+        private void buttonCreatureLootDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCreatureLoot.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCreatureLoot.SelectedRows)
+                {
+                    dataGridViewCreatureLoot.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonCreatureLootGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
+        }
+        #endregion
 
         #endregion
         #region Quest
 
-            // Quest Search
+        // Quest Search
         private void buttonQuestSearchSearch_Click(object sender, EventArgs e)
         {
             bool totalSearch = CheckEmptyControls(tabPageQuestSearch); DialogResult dr;
@@ -1788,7 +2085,7 @@ namespace Manti
                 DataSet combinedTable = DatabaseSearch(connect, query);
 
                 dataGridViewQuestSearch.DataSource = combinedTable.Tables[0];
-                toolStripStatusLabelQuestSearchRow.Text = "Quest(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
+                toolStripStatusLabelQuestSearchRows.Text = "Quest(s) found: " + combinedTable.Tables[0].Rows.Count.ToString();
 
                 ConnectionClose(connect);
             }
@@ -1803,7 +2100,11 @@ namespace Manti
                 tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
             }
         }
-        
+            // Generate
+        private void buttonQuestSectionGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxQuestScriptOutput.Text = DatabaseQuestSectionGenerate();
+        }
         #endregion
         #region GameObject
 
@@ -1841,7 +2142,7 @@ namespace Manti
 
                 dataGridViewGameObjectSearch.DataSource = goTable.Tables[0];
 
-                toolStripStatusLabelGameObjectSearchRow.Text = "Game Object(s): " + dataGridViewGameObjectSearch.Rows.Count.ToString();
+                toolStripStatusLabelGameObjectSearchRows.Text = "Game Object(s): " + dataGridViewGameObjectSearch.Rows.Count.ToString();
                 ConnectionClose(connect);
             }
         }
@@ -1853,6 +2154,24 @@ namespace Manti
 
                 tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
             }
+        }
+        
+        private void newGOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var list = new List<Tuple<TextBox, string>>();
+
+            list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempAIName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempScriptName, ""));
+
+            DefaultValuesGenerate(tabPageGameObjectTemplate);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
+        }
+        private void deleteGOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateDeleteSelectedRow(dataGridViewGameObjectSearch, "gameobject_template", "entry", textBoxGameObjectScriptOutput);
         }
 
         #endregion
@@ -1898,7 +2217,7 @@ namespace Manti
 
                 dataGridViewItemSearch.DataSource = itTable.Tables[0];
 
-                toolStripStatusLabelItemSearchRow.Text = "Item(s): " + dataGridViewItemSearch.Rows.Count.ToString();
+                toolStripStatusLabelItemSearchRows.Text = "Item(s) found: " + dataGridViewItemSearch.Rows.Count.ToString();
                 ConnectionClose(connect);
             }
         }
@@ -1921,7 +2240,7 @@ namespace Manti
 
             if (ConnectionOpen(connect))
             {
-                toolStripStatusLabelRow.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
+                toolStripStatusLabelItemScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
 
                 ConnectionClose(connect);
             }
@@ -1929,6 +2248,35 @@ namespace Manti
         private void buttonItemTempGenerate_Click(object sender, EventArgs e)
         {
             textBoxItemScriptOutput.Text += DatabaseItemTempGenerate();
+        }
+
+        private void newItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var list = new List<Tuple<TextBox, string>>();
+
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempReqRace, "1791"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempReqClass, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCD1, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD1, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCD2, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD2, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCD3, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD3, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCD4, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD4, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCD5, "-1"));
+            list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD5, "-1"));
+
+            DefaultValuesGenerate(tabPageItemTemplate);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
+        }
+        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateDeleteSelectedRow(dataGridViewItemSearch, "item_template", "entry", textBoxItemScriptOutput);
         }
 
         #region Loot
@@ -1949,7 +2297,6 @@ namespace Manti
             if (textBoxItemLootEntry.Text.Trim() != "")
             {
                 var existingData = (DataTable)dataGridViewItemLoot.DataSource;
-                MessageBox.Show(existingData.Columns[4].DataType.ToString(), "");
                 existingData.Rows.Add(values);
                 dataGridViewItemLoot.DataSource = existingData;
             }
@@ -2108,11 +2455,11 @@ namespace Manti
         }
         private void buttonItemTempRacePopup_Click(object sender, EventArgs e)
         {
-            CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace);
+            CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace, true);
         }
         private void buttonItemTempClassPopup_Click(object sender, EventArgs e)
         {
-            CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass);
+            CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass, true);
         }
         private void buttonItemTempDmgType1Popup_Click(object sender, EventArgs e)
         {
@@ -2177,12 +2524,63 @@ namespace Manti
 
 
 
+
+
         #endregion
 
         #endregion
 
         #endregion
 
+        private void newQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var list = new List<Tuple<TextBox, string>>();
 
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionTitle, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionLDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionQDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionAreaDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionCompleted, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives1, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives2, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives3, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives4, ""));
+
+            DefaultValuesGenerate(tabPageQuestSection1);
+            DefaultValuesGenerate(tabPageQuestSection2);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
+        }
+
+        private void deleteQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
+        }
+
+        private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var list = new List<Tuple<TextBox, string>>();
+
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSubname, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedWalk, "1"));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedRun, "1.4286"));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateAIName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateScriptName, ""));
+
+            DefaultValuesGenerate(tabPageCreatureTemplate);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
+        }
+
+        private void deleteCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
+        }
     }
+
+
 }

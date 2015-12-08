@@ -93,6 +93,16 @@ namespace Manti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconPlayButton {
+            get {
+                object obj = ResourceManager.GetObject("iconPlayButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconRefresh {
             get {
                 object obj = ResourceManager.GetObject("iconRefresh", resourceCulture);
@@ -106,6 +116,16 @@ namespace Manti.Properties {
         internal static System.Drawing.Bitmap iconSearch {
             get {
                 object obj = ResourceManager.GetObject("iconSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconStopButton {
+            get {
+                object obj = ResourceManager.GetObject("iconStopButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -127,10 +127,16 @@
   <data name="iconGenerate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconGenerate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconPlayButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconPlayButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconRefresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconRefresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconStopButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconStopButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

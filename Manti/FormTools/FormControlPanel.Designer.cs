@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonWorldServer = new System.Windows.Forms.Button();
             this.groupBoxWorldServer = new System.Windows.Forms.GroupBox();
             this.checkBoxHideWorld = new System.Windows.Forms.CheckBox();
             this.labelWorldStatus = new System.Windows.Forms.Label();
@@ -40,19 +39,10 @@
             this.buttonAuthServer = new System.Windows.Forms.Button();
             this.textBoxPathServer = new System.Windows.Forms.TextBox();
             this.buttonPathDialog = new System.Windows.Forms.Button();
+            this.buttonWorldServer = new System.Windows.Forms.Button();
             this.groupBoxWorldServer.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonWorldServer
-            // 
-            this.buttonWorldServer.Location = new System.Drawing.Point(6, 19);
-            this.buttonWorldServer.Name = "buttonWorldServer";
-            this.buttonWorldServer.Size = new System.Drawing.Size(80, 25);
-            this.buttonWorldServer.TabIndex = 0;
-            this.buttonWorldServer.Text = "World";
-            this.buttonWorldServer.UseVisualStyleBackColor = true;
-            this.buttonWorldServer.Click += new System.EventHandler(this.buttonWorldServer_Click);
             // 
             // groupBoxWorldServer
             // 
@@ -62,7 +52,7 @@
             this.groupBoxWorldServer.Controls.Add(this.buttonWorldServer);
             this.groupBoxWorldServer.Location = new System.Drawing.Point(12, 12);
             this.groupBoxWorldServer.Name = "groupBoxWorldServer";
-            this.groupBoxWorldServer.Size = new System.Drawing.Size(270, 73);
+            this.groupBoxWorldServer.Size = new System.Drawing.Size(170, 110);
             this.groupBoxWorldServer.TabIndex = 1;
             this.groupBoxWorldServer.TabStop = false;
             this.groupBoxWorldServer.Text = "World Server";
@@ -70,7 +60,7 @@
             // checkBoxHideWorld
             // 
             this.checkBoxHideWorld.AutoSize = true;
-            this.checkBoxHideWorld.Location = new System.Drawing.Point(6, 50);
+            this.checkBoxHideWorld.Location = new System.Drawing.Point(25, 82);
             this.checkBoxHideWorld.Name = "checkBoxHideWorld";
             this.checkBoxHideWorld.Size = new System.Drawing.Size(89, 17);
             this.checkBoxHideWorld.TabIndex = 2;
@@ -80,7 +70,7 @@
             // labelWorldStatus
             // 
             this.labelWorldStatus.AutoSize = true;
-            this.labelWorldStatus.Location = new System.Drawing.Point(178, 25);
+            this.labelWorldStatus.Location = new System.Drawing.Point(82, 53);
             this.labelWorldStatus.Name = "labelWorldStatus";
             this.labelWorldStatus.Size = new System.Drawing.Size(87, 13);
             this.labelWorldStatus.TabIndex = 1;
@@ -88,7 +78,7 @@
             // 
             // buttonWorldPath
             // 
-            this.buttonWorldPath.Location = new System.Drawing.Point(92, 19);
+            this.buttonWorldPath.Location = new System.Drawing.Point(82, 25);
             this.buttonWorldPath.Name = "buttonWorldPath";
             this.buttonWorldPath.Size = new System.Drawing.Size(80, 25);
             this.buttonWorldPath.TabIndex = 0;
@@ -102,9 +92,9 @@
             this.groupBox1.Controls.Add(this.labelAuthStatus);
             this.groupBox1.Controls.Add(this.buttonAuthPath);
             this.groupBox1.Controls.Add(this.buttonAuthServer);
-            this.groupBox1.Location = new System.Drawing.Point(288, 12);
+            this.groupBox1.Location = new System.Drawing.Point(326, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(270, 73);
+            this.groupBox1.Size = new System.Drawing.Size(170, 110);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auth Server";
@@ -112,7 +102,7 @@
             // checkBoxHideAuth
             // 
             this.checkBoxHideAuth.AutoSize = true;
-            this.checkBoxHideAuth.Location = new System.Drawing.Point(6, 50);
+            this.checkBoxHideAuth.Location = new System.Drawing.Point(25, 82);
             this.checkBoxHideAuth.Name = "checkBoxHideAuth";
             this.checkBoxHideAuth.Size = new System.Drawing.Size(89, 17);
             this.checkBoxHideAuth.TabIndex = 2;
@@ -122,7 +112,7 @@
             // labelAuthStatus
             // 
             this.labelAuthStatus.AutoSize = true;
-            this.labelAuthStatus.Location = new System.Drawing.Point(178, 25);
+            this.labelAuthStatus.Location = new System.Drawing.Point(82, 53);
             this.labelAuthStatus.Name = "labelAuthStatus";
             this.labelAuthStatus.Size = new System.Drawing.Size(87, 13);
             this.labelAuthStatus.TabIndex = 1;
@@ -130,7 +120,7 @@
             // 
             // buttonAuthPath
             // 
-            this.buttonAuthPath.Location = new System.Drawing.Point(92, 19);
+            this.buttonAuthPath.Location = new System.Drawing.Point(82, 25);
             this.buttonAuthPath.Name = "buttonAuthPath";
             this.buttonAuthPath.Size = new System.Drawing.Size(80, 25);
             this.buttonAuthPath.TabIndex = 0;
@@ -140,27 +130,29 @@
             // 
             // buttonAuthServer
             // 
-            this.buttonAuthServer.Location = new System.Drawing.Point(6, 19);
+            this.buttonAuthServer.BackgroundImage = global::Manti.Properties.Resources.iconPlayButton;
+            this.buttonAuthServer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAuthServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAuthServer.Location = new System.Drawing.Point(25, 25);
             this.buttonAuthServer.Name = "buttonAuthServer";
-            this.buttonAuthServer.Size = new System.Drawing.Size(80, 25);
+            this.buttonAuthServer.Size = new System.Drawing.Size(51, 51);
             this.buttonAuthServer.TabIndex = 0;
-            this.buttonAuthServer.Text = "Auth";
             this.buttonAuthServer.UseVisualStyleBackColor = true;
             this.buttonAuthServer.Click += new System.EventHandler(this.buttonAuthServer_Click);
             // 
             // textBoxPathServer
             // 
-            this.textBoxPathServer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPathServer.Location = new System.Drawing.Point(12, 91);
+            this.textBoxPathServer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.textBoxPathServer.Location = new System.Drawing.Point(12, 127);
             this.textBoxPathServer.Name = "textBoxPathServer";
-            this.textBoxPathServer.Size = new System.Drawing.Size(546, 20);
+            this.textBoxPathServer.Size = new System.Drawing.Size(483, 20);
             this.textBoxPathServer.TabIndex = 2;
             this.textBoxPathServer.Visible = false;
             // 
             // buttonPathDialog
             // 
-            this.buttonPathDialog.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonPathDialog.Location = new System.Drawing.Point(539, 92);
+            this.buttonPathDialog.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonPathDialog.Location = new System.Drawing.Point(476, 128);
             this.buttonPathDialog.Name = "buttonPathDialog";
             this.buttonPathDialog.Size = new System.Drawing.Size(18, 18);
             this.buttonPathDialog.TabIndex = 36;
@@ -168,17 +160,30 @@
             this.buttonPathDialog.Visible = false;
             this.buttonPathDialog.Click += new System.EventHandler(this.buttonPathDialog_Click);
             // 
+            // buttonWorldServer
+            // 
+            this.buttonWorldServer.BackgroundImage = global::Manti.Properties.Resources.iconPlayButton;
+            this.buttonWorldServer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonWorldServer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonWorldServer.Location = new System.Drawing.Point(25, 25);
+            this.buttonWorldServer.Name = "buttonWorldServer";
+            this.buttonWorldServer.Size = new System.Drawing.Size(51, 51);
+            this.buttonWorldServer.TabIndex = 0;
+            this.buttonWorldServer.UseVisualStyleBackColor = true;
+            this.buttonWorldServer.Click += new System.EventHandler(this.buttonWorldServer_Click);
+            // 
             // FormControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 117);
+            this.ClientSize = new System.Drawing.Size(507, 159);
             this.Controls.Add(this.buttonPathDialog);
             this.Controls.Add(this.textBoxPathServer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxWorldServer);
             this.Name = "FormControlPanel";
             this.Text = "Control Panel (ALPHA)";
+            this.Load += new System.EventHandler(this.FormControlPanel_Load);
             this.groupBoxWorldServer.ResumeLayout(false);
             this.groupBoxWorldServer.PerformLayout();
             this.groupBox1.ResumeLayout(false);

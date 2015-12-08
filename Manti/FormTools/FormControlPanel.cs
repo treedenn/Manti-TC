@@ -22,6 +22,14 @@ namespace Manti.FormTools
         private bool WorldOnline = false;
         private bool AuthOnline = false;
 
+        private void FormControlPanel_Load(object sender, EventArgs e)
+        {
+            buttonWorldServer.FlatAppearance.BorderSize = 0;
+            buttonAuthServer.FlatAppearance.BorderSize = 0;
+            buttonWorldServer.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+            buttonAuthServer.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+        }
+
         private void ChangePath(bool world)
         {
             if (textBoxPathServer.Visible == true)
@@ -109,12 +117,14 @@ namespace Manti.FormTools
                 WorldOnline = true;
                 labelWorldStatus.Text = "Status: ONLINE";
                 StartProcess(pathWorld, checkBoxHideWorld.Checked);
+                buttonWorldServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
             }
             else
             {
                 WorldOnline = false;
                 labelWorldStatus.Text = "Status: OFFLINE";
                 CloseProcess(pathWorld);
+                buttonWorldServer.BackgroundImage = Manti.Properties.Resources.iconPlayButton;
             }
 
         }
@@ -130,11 +140,13 @@ namespace Manti.FormTools
                 AuthOnline = true;
                 labelAuthStatus.Text = "Status: ONLINE";
                 StartProcess(pathAuth, checkBoxHideAuth.Checked);
+                buttonAuthServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
             } else
             {
                 AuthOnline = false;
                 labelAuthStatus.Text = "Status: OFFLINE";
                 CloseProcess(pathAuth);
+                buttonAuthServer.BackgroundImage = Manti.Properties.Resources.iconPlayButton;
             }
         }
 
@@ -151,5 +163,6 @@ namespace Manti.FormTools
         }
 
         #endregion
+
     }
 }
