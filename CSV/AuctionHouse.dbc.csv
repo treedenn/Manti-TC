@@ -1,0 +1,8 @@
+long,long,flags,long,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,
+1,1,0x5,5,"Stormwind Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+2,3,0x5,5,"Alliance Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+3,4,0x5,5,"Darnassus Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+4,5,0x5,5,"Undercity Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+5,6,0x5,5,"Thunder Bluff  Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+6,2,0x5,5,"Horde Auction House",,,,,,,,,,,,,,,,0xFF01FE,
+7,369,0x19,15,"Blackwater Auction House",,,,,,,,,,,,,,,,0xFF01FE,

@@ -1,0 +1,5 @@
+flags,long,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,
+0x2,173555,"Melee Weapon",,,,,,,,,,,,,,,,0xFF01FE,
+0x4,96,"Shield",,,,,,,,,,,,,,,,0xFF01FE,
+0x2,262156,"Ranged Weapon",,,,,,,,,,,,,,,,0xFF01FE,
+0x2,41105,"One-Handed Melee Weapon",,,,,,,,,,,,,,,,0xFF01FE,

@@ -34,12 +34,14 @@
             this.linkLabelAboutSource = new System.Windows.Forms.LinkLabel();
             this.labelAboutCopy = new System.Windows.Forms.Label();
             this.labelAboutCreator = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonAboutOK
             // 
             this.buttonAboutOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAboutOK.Location = new System.Drawing.Point(297, 124);
+            this.buttonAboutOK.Location = new System.Drawing.Point(295, 236);
             this.buttonAboutOK.Name = "buttonAboutOK";
             this.buttonAboutOK.Size = new System.Drawing.Size(75, 25);
             this.buttonAboutOK.TabIndex = 0;
@@ -51,31 +53,28 @@
             // 
             this.labelAboutVersion.AutoSize = true;
             this.labelAboutVersion.BackColor = System.Drawing.SystemColors.Control;
-            this.labelAboutVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelAboutVersion.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelAboutVersion.Location = new System.Drawing.Point(12, 25);
+            this.labelAboutVersion.Location = new System.Drawing.Point(9, 131);
             this.labelAboutVersion.Name = "labelAboutVersion";
-            this.labelAboutVersion.Size = new System.Drawing.Size(84, 16);
+            this.labelAboutVersion.Size = new System.Drawing.Size(92, 13);
             this.labelAboutVersion.TabIndex = 1;
-            this.labelAboutVersion.Text = "Version 1.0.0";
+            this.labelAboutVersion.Text = "Version: 0.2-alpha";
             // 
             // labelAboutManti
             // 
             this.labelAboutManti.AutoSize = true;
             this.labelAboutManti.BackColor = System.Drawing.SystemColors.Control;
-            this.labelAboutManti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAboutManti.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelAboutManti.Location = new System.Drawing.Point(12, 9);
+            this.labelAboutManti.Location = new System.Drawing.Point(9, 115);
             this.labelAboutManti.Name = "labelAboutManti";
-            this.labelAboutManti.Size = new System.Drawing.Size(114, 16);
+            this.labelAboutManti.Size = new System.Drawing.Size(285, 13);
             this.labelAboutManti.TabIndex = 2;
-            this.labelAboutManti.Text = "Manti : TrinityCore";
+            this.labelAboutManti.Text = "Manti (Manager) is a database editor, specifically for Trinity.\r\n";
             // 
             // linkLabelAboutSource
             // 
+            this.linkLabelAboutSource.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.linkLabelAboutSource.AutoSize = true;
             this.linkLabelAboutSource.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.linkLabelAboutSource.Location = new System.Drawing.Point(15, 130);
+            this.linkLabelAboutSource.Location = new System.Drawing.Point(15, 242);
             this.linkLabelAboutSource.Name = "linkLabelAboutSource";
             this.linkLabelAboutSource.Size = new System.Drawing.Size(151, 15);
             this.linkLabelAboutSource.TabIndex = 3;
@@ -87,31 +86,43 @@
             // 
             this.labelAboutCopy.AutoSize = true;
             this.labelAboutCopy.BackColor = System.Drawing.SystemColors.Control;
-            this.labelAboutCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.labelAboutCopy.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.labelAboutCopy.Location = new System.Drawing.Point(12, 41);
+            this.labelAboutCopy.Location = new System.Drawing.Point(9, 147);
             this.labelAboutCopy.Name = "labelAboutCopy";
-            this.labelAboutCopy.Size = new System.Drawing.Size(160, 16);
+            this.labelAboutCopy.Size = new System.Drawing.Size(371, 52);
             this.labelAboutCopy.TabIndex = 1;
-            this.labelAboutCopy.Text = "© 2015 All rights reserved.";
+            this.labelAboutCopy.Text = "© 2015 All rights reserved.\r\n\r\nThe contributors are not responsible for any error" +
+    "s or corruption in your server.\r\nThis program is used at own risk and the creato" +
+    "r takes no responsibility.";
             // 
             // labelAboutCreator
             // 
+            this.labelAboutCreator.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelAboutCreator.AutoSize = true;
             this.labelAboutCreator.BackColor = System.Drawing.SystemColors.Control;
-            this.labelAboutCreator.Font = new System.Drawing.Font("Adobe Garamond Pro", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAboutCreator.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.labelAboutCreator.Location = new System.Drawing.Point(27, 110);
+            this.labelAboutCreator.Location = new System.Drawing.Point(12, 225);
+            this.labelAboutCreator.Margin = new System.Windows.Forms.Padding(4);
             this.labelAboutCreator.Name = "labelAboutCreator";
-            this.labelAboutCreator.Size = new System.Drawing.Size(127, 20);
+            this.labelAboutCreator.Size = new System.Drawing.Size(99, 13);
             this.labelAboutCreator.TabIndex = 4;
-            this.labelAboutCreator.Text = "Developer: HeiTX.";
+            this.labelAboutCreator.Text = "Contributor(s): Heitx";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Manti.Properties.Resources.titleManti;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(355, 100);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // FormAbout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 161);
+            this.ClientSize = new System.Drawing.Size(382, 273);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelAboutCreator);
             this.Controls.Add(this.linkLabelAboutSource);
             this.Controls.Add(this.labelAboutManti);
@@ -122,6 +133,7 @@
             this.Name = "FormAbout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "About";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,5 +147,6 @@
         private System.Windows.Forms.LinkLabel linkLabelAboutSource;
         private System.Windows.Forms.Label labelAboutCopy;
         private System.Windows.Forms.Label labelAboutCreator;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -1,0 +1,9 @@
+id,quality
+0,Poor (grey)
+1,Common (white)
+2,Uncommon (green)
+3,Rare (blue)
+4,Epic (purple)
+5,Legendary (orange)
+6,Artifact (red)
+7,Bind to Account (gold)

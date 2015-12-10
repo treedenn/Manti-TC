@@ -1,0 +1,180 @@
+long,str,long,long,bool,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,long,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,long,float,long,float,float,long,flags,flags,flags,
+0,"Azeroth",0,0,0,"Eastern Kingdoms",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FE,"",,,,,,,,,,,,,,,,0xFF01FE,4,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+1,"Kalimdor",0,0,0,"Kalimdor",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,3,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+13,"test",0,2,0,"Testing",,,,,,,,,,,,,,,,0xFF01FE,3817,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+25,"ScottTest",0,2,0,"Scott Test",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+30,"PVPZone01",3,0,1,"Alterac Valley",,,,,,,,,,,,,,,,0xFF01FE,0,"Hidden within the Alterac Mountains, Alterac Valley is the home of Thrall's own clan of orcs, the Frostwolves.
+
+The Stormpike dwarves have established a foothold in the valley and seek to plumb its depths for riches and links to their ancestral past.
+
+The territorial Frostwolves, unwilling to suffer the dwarven incursion, have rallied an army... an army eager for righteous slaughter.",,,,,,,,,,,,,,,,0xFF01FE,"Hidden within the Alterac Mountains, Alterac Valley is the home of Thrall's own clan of orcs, the Frostwolves.
+
+The Stormpike dwarves have established a foothold in the valley and seek to plumb its depths for riches and links to their ancestral past.
+
+The territorial Frostwolves, unwilling to suffer the dwarven incursion, have rallied an army... an army eager for righteous slaughter.",,,,,,,,,,,,,,,,0xFF01FE,104,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+33,"Shadowfang",1,0,0,"Shadowfang Keep",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,204,1.0,0,-230.989364624,1571.5703125,-1,0x0,0x0,0xA,
+34,"StormwindJail",1,0,0,"Stormwind Stockade",,,,,,,,,,,,,,,,0xFF01FE,717,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,194,1.0,0,-8762.37890625,848.010314941,-1,0x0,0x0,0xA,
+35,"StormwindPrison",0,0,0,"<unused>StormwindPrison",,,,,,,,,,,,,,,,0xFF01FE,717,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,23,1.0,0,-8762.4765625,848.049133301,-1,0x0,0x0,0x0,
+36,"DeadminesInstance",1,0,0,"Deadmines",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,142,1.0,0,-11207.7988281,1681.15087891,-1,0x0,0x0,0xA,
+37,"PVPZone02",0,0,1,"Azshara Crater",,,,,,,,,,,,,,,,0xFF01FE,0,"Crush the Alliance!",,,,,,,,,,,,,,,,0xFF01FE,"Defend yourself from the onslaught of the Horde!",,,,,,,,,,,,,,,,0xFF01FF,25,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+42,"Collin",0,2,0,"Collin's Test",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,-1,0.0,0.0,-1,0x0,0x0,0x0,
+43,"WailingCaverns",1,0,0,"Wailing Caverns",,,,,,,,,,,,,,,,0xFF01FE,718,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,143,1.0,1,-751.131225586,-2209.24047852,-1,0x0,0x0,0xA,
+44,"Monastery",1,0,0,"<unused> Monastery",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,42,1.0,0,2892.41333008,-811.241333008,-1,0x0,0x0,0xA,
+47,"RazorfenKraulInstance",1,0,0,"Razorfen Kraul",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,188,1.0,1,-4459.44921875,-1660.21179199,-1,0x0,0x0,0xA,
+48,"Blackfathom",1,0,0,"Blackfathom Deeps",,,,,,,,,,,,,,,,0xFF01FE,719,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,196,1.0,1,4249.12060547,748.387084961,-1,0x0,0x0,0xA,
+70,"Uldaman",1,0,0,"Uldaman",,,,,,,,,,,,,,,,0xFF01FE,1337,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,144,1.0,0,-6060.18164063,-2954.99731445,-1,0x0,0x0,0xA,
+90,"GnomeragonInstance",1,0,0,"Gnomeregan",,,,,,,,,,,,,,,,0xFF01FE,721,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,193,1.0,0,-5162.66162109,931.598754883,-1,0x0,0x0,0xA,
+109,"SunkenTemple",1,0,0,"Sunken Temple",,,,,,,,,,,,,,,,0xFF01FE,1477,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,191,1.0,0,-10170.1035156,-3995.96801758,-1,0x0,0x0,0xA,
+129,"RazorfenDowns",1,0,0,"Razorfen Downs",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,145,1.0,1,-4662.8828125,-2535.87158203,-1,0x0,0x0,0xA,
+169,"EmeraldDream",2,0,0,"Emerald Dream",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,-1,0.0,0.0,-1,0x0,0x0,0x28,
+189,"MonasteryInstances",1,0,0,"Scarlet Monastery",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,190,1.0,0,2892.23535156,-811.263671875,-1,0x0,0x0,0xA,
+209,"TanarisInstance",1,0,0,"Zul'Farrak",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,146,1.0,1,-6790.57666016,-2891.27807617,-1,0x0,0x0,0xA,
+229,"BlackRockSpire",1,0,0,"Blackrock Spire",,,,,,,,,,,,,,,,0xFF01FE,1583,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,189,1.0,0,-7522.52685547,-1233.04150391,-1,0x0,0x0,0xA,
+230,"BlackrockDepths",1,0,0,"Blackrock Depths",,,,,,,,,,,,,,,,0xFF01FE,1584,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,103,1.0,0,-7178.09472656,-928.639465332,-1,0x0,0x0,0x5,
+249,"OnyxiaLairInstance",2,0,0,"Onyxia's Lair",,,,,,,,,,,,,,,,0xFF01FE,2159,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,61,1.0,1,-4753.3125,-3752.42114258,-1,0x0,0x0,0x28,
+269,"CavernsOfTime",1,1,0,"Opening of the Dark Portal",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,212,1.0,1,-8750.82714844,-4193.51318359,-1,0x1,0x0,0x5,
+289,"SchoolofNecromancy",1,1,0,"Scholomance",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,102,1.0,0,1274.78125,-2552.56396484,-1,0x0,0x0,0x5,
+309,"Zul'gurub",2,1,0,"Zul'Gurub",,,,,,,,,,,,,,,,0xFF01FE,1977,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,161,1.0,0,-11916.0595703,-1224.57714844,-1,0x0,0x10B30,0x14,
+329,"Stratholme",1,1,0,"Stratholme",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,101,1.0,0,3392.31689453,-3378.4831543,-1,0x0,0x0,0x5,
+349,"Mauradon",1,1,0,"Maraudon",,,,,,,,,,,,,,,,0xFF01FE,2100,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,81,1.0,1,-1432.69714355,2924.97753906,-1,0x0,0x0,0xA,
+369,"DeeprunTram",0,1,0,"Deeprun Tram",,,,,,,,,,,,,,,,0xFF01FE,2257,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,205,1.0,0,-8349.22363281,517.347961426,-1,0x0,0x0,0x0,
+389,"OrgrimmarInstance",1,1,0,"Ragefire Chasm",,,,,,,,,,,,,,,,0xFF01FE,2437,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,195,1.0,1,1816.75585938,-4423.37158203,-1,0x0,0x0,0xA,
+409,"MoltenCore",2,1,0,"Molten Core",,,,,,,,,,,,,,,,0xFF01FE,2717,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,192,1.0,0,-7510.56494141,-1036.69812012,-1,0x0,0x0,0x28,
+429,"DireMaul",1,1,0,"Dire Maul",,,,,,,,,,,,,,,,0xFF01FE,2557,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,82,1.0,1,-3908.0324707,1130.00354004,-1,0x0,0x0,0x5,
+449,"AlliancePVPBarracks",0,1,0,"Alliance PVP Barracks",,,,,,,,,,,,,,,,0xFF01FE,2918,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,181,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+450,"HordePVPBarracks",0,1,0,"Horde PVP Barracks",,,,,,,,,,,,,,,,0xFF01FE,2917,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,182,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+451,"development",0,15,0,"Development Land",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,21,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+469,"BlackwingLair",2,1,0,"Blackwing Lair",,,,,,,,,,,,,,,,0xFF01FE,2677,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,141,1.0,0,-7663.41259766,-1218.66650391,-1,0x0,0x0,0x28,
+489,"PVPZone03",3,1,1,"Warsong Gulch",,,,,,,,,,,,,,,,0xFF01FE,3277,"A valley bordering Ashenvale Forest and the Barrens, Warsong Gulch hosts a constant battle between the Horde and the Alliance.
+
+Orcs use their Warsong Mill to cut lumber reaped from Ashenvale, provoking the night elves of Silverwing Hold.
+
+Eager to aid their allies, members of every race in Azeroth rush to the Gulch to lend sword, or spell, to the conflict.",,,,,,,,,,,,,,,,0xFF01FE,"A valley bordering Ashenvale Forest and the Barrens, Warsong Gulch hosts a constant battle between the Horde and the Alliance.
+
+Orcs use their Warsong Mill to cut lumber reaped from Ashenvale, provoking the night elves of Silverwing Hold.
+
+Eager to aid their allies, members of every race in Azeroth rush to the Gulch to lend sword, or spell, to the conflict.",,,,,,,,,,,,,,,,0xFF01FE,122,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+509,"AhnQiraj",2,1,0,"Ruins of Ahn'Qiraj",,,,,,,,,,,,,,,,0xFF01FE,3429,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,184,1.0,1,-8114.46435547,1526.36572266,-1,0x0,0x10B30,0x14,
+529,"PVPZone04",3,1,1,"Arathi Basin",,,,,,,,,,,,,,,,0xFF01FE,3358,"The Arathi Basin is one of the main staging points of war between the humans and the Forsaken in Azeroth.
+
+The Defiler's elite troopers seek to sever the vital connection between the humans and their dwarven allies to the south.
+
+Meanwhile, the League of Arathor seek to reclaim lost lands for their benefactors in Stormwind.",,,,,,,,,,,,,,,,0xFF01FE,"The Arathi Basin is one of the main staging points of war between the humans and the Forsaken in Azeroth.
+
+The League of Arathor seek to reclaim lost lands for their benefactors in Stormwind.
+
+Meanwhile, the Defiler's elite troopers seek to sever the vital connection between the humans and their dwarven allies to the south.",,,,,,,,,,,,,,,,0xFF01FE,183,1.25,0,0.0,0.0,-1,0x0,0x0,0x0,
+530,"Expansion01",0,1,0,"Outland",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,198,1.0,0,0.0,0.0,-1,0x1,0x0,0x0,
+531,"AhnQirajTemple",2,0,0,"Ahn'Qiraj Temple",,,,,,,,,,,,,,,,0xFF01FE,3428,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,185,1.0,1,-8111.72412109,1526.7857666,-1,0x0,0x0,0x28,
+532,"Karazahn",2,1,0,"Karazhan",,,,,,,,,,,,,,,,0xFF01FE,3457,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,200,1.0,0,-11110.4072266,-2004.06530762,-1,0x1,0x0,0xA,
+533,"Stratholme Raid",2,0,0,"Naxxramas",,,,,,,,,,,,,,,,0xFF01FE,3456,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,197,1.0,0,0.0,0.0,-1,0x2,0x0,0x19,
+534,"HyjalPast",2,1,0,"The Battle for Mount Hyjal",,,,,,,,,,,,,,,,0xFF01FE,616,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,212,1.0,1,-8178.5078125,-4182.05029297,-1,0x1,0x0,0x19,
+540,"HellfireMilitary",1,1,0,"Hellfire Citadel: The Shattered Halls",,,,,,,,,,,,,,,,0xFF01FE,3714,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,199,1.0,530,-306.758178711,3064.43554688,-1,0x1,0x0,0x5,
+542,"HellfireDemon",1,1,0,"Hellfire Citadel: The Blood Furnace",,,,,,,,,,,,,,,,0xFF01FE,3713,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,199,1.0,530,-295.419342041,3151.99267578,-1,0x1,0x0,0x5,
+543,"HellfireRampart",1,1,0,"Hellfire Citadel: Ramparts",,,,,,,,,,,,,,,,0xFF01FE,3562,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,199,1.0,530,-360.049865723,3067.89550781,-1,0x1,0x0,0x5,
+544,"HellfireRaid",2,1,0,"Magtheridon's Lair",,,,,,,,,,,,,,,,0xFF01FE,3836,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,208,1.0,530,-330.233856201,3106.63598633,-1,0x1,0x0,0x19,
+545,"CoilfangPumping",1,1,0,"Coilfang: The Steamvault",,,,,,,,,,,,,,,,0xFF01FE,3715,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,207,1.0,530,764.219055176,6915.07958984,-1,0x1,0x0,0x5,
+546,"CoilfangMarsh",1,1,0,"Coilfang: The Underbog",,,,,,,,,,,,,,,,0xFF01FE,3716,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,207,1.0,530,764.628234863,6768.07275391,-1,0x1,0x0,0x5,
+547,"CoilfangDraenei",1,1,0,"Coilfang: The Slave Pens",,,,,,,,,,,,,,,,0xFF01FE,3717,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,207,1.0,530,742.158203125,7011.32666016,-1,0x1,0x0,0x5,
+548,"CoilfangRaid",2,1,0,"Coilfang: Serpentshrine Cavern",,,,,,,,,,,,,,,,0xFF01FE,3607,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,207,1.0,530,775.786376953,6865.24267578,-1,0x1,0x0,0x19,
+550,"TempestKeepRaid",2,1,0,"Tempest Keep",,,,,,,,,,,,,,,,0xFF01FE,3845,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,206,1.0,0,0.0,0.0,-1,0x1,0x0,0x19,
+552,"TempestKeepArcane",1,1,0,"Tempest Keep: The Arcatraz",,,,,,,,,,,,,,,,0xFF01FE,3848,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,206,1.0,0,0.0,0.0,-1,0x1,0x0,0x5,
+553,"TempestKeepAtrium",1,1,0,"Tempest Keep: The Botanica",,,,,,,,,,,,,,,,0xFF01FE,3847,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,206,1.0,0,0.0,0.0,-1,0x1,0x0,0x5,
+554,"TempestKeepFactory",1,1,0,"Tempest Keep: The Mechanar",,,,,,,,,,,,,,,,0xFF01FE,3849,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,206,1.0,0,0.0,0.0,-1,0x1,0x0,0x5,
+555,"AuchindounShadow",1,1,0,"Auchindoun: Shadow Labyrinth",,,,,,,,,,,,,,,,0xFF01FE,3789,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,201,1.0,530,-3640.68774414,4943.16259766,-1,0x1,0x0,0x5,
+556,"AuchindounDemon",1,1,0,"Auchindoun: Sethekk Halls",,,,,,,,,,,,,,,,0xFF01FE,3791,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,201,1.0,530,-3361.86254883,4665.59228516,-1,0x1,0x0,0x5,
+557,"AuchindounEthereal",1,1,0,"Auchindoun: Mana-Tombs",,,,,,,,,,,,,,,,0xFF01FE,3792,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,201,1.0,530,-3089.51635742,4942.75634766,-1,0x1,0x0,0x5,
+558,"AuchindounDraenei",1,1,0,"Auchindoun: Auchenai Crypts",,,,,,,,,,,,,,,,0xFF01FE,3790,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,201,1.0,530,-3363.43994141,5156.45507813,-1,0x1,0x0,0x5,
+559,"PVPZone05",4,1,0,"Nagrand Arena",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,219,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+560,"HillsbradPast",1,1,0,"The Escape From Durnholde",,,,,,,,,,,,,,,,0xFF01FE,267,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,212,1.0,1,-8309.80957031,-4061.50878906,-1,0x1,0x0,0x5,
+562,"bladesedgearena",4,1,0,"Blade's Edge Arena",,,,,,,,,,,,,,,,0xFF01FE,3702,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,218,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+564,"BlackTemple",2,1,0,"Black Temple",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,215,1.0,530,-3644.52734375,317.293670654,-1,0x1,0x0,0x19,
+565,"GruulsLair",2,1,0,"Gruul's Lair",,,,,,,,,,,,,,,,0xFF01FE,3923,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,213,1.0,530,3525.45288086,5144.15087891,-1,0x1,0x0,0x19,
+566,"NetherstormBG",3,1,1,"Eye of the Storm",,,,,,,,,,,,,,,,0xFF01FE,0,"Hovering high above the ravaged landscape of Netherstorm is the island known as the Eye of the Storm.
+
+This battlefield is coveted by the blood elves for its rich energy deposits.
+
+The draenei seek to claim it due to its proximity to the naaru's mysterious vessel, Tempest Keep.",,,,,,,,,,,,,,,,0xFF01FE,"Hovering high above the ravaged landscape of Netherstorm is the island known as the Eye of the Storm.
+
+The draenei seek to claim it due to its proximity to the naaru's mysterious vessel, Tempest Keep.
+
+This battlefield is coveted by the blood elves for its rich energy deposits.",,,,,,,,,,,,,,,,0xFF01FE,210,1.0,0,0.0,0.0,-1,0x1,0x0,0x0,
+568,"ZulAman",2,1,0,"Zul'Aman",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,214,1.0,530,6851.02099609,-7989.71337891,-1,0x1,0x0,0xA,
+571,"Northrend",0,29,0,"Northrend",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,216,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+572,"PVPLordaeron",4,1,0,"Ruins of Lordaeron",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,217,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+573,"ExteriorTest",0,15,0,"ExteriorTest",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+574,"Valgarde70",1,13,0,"Utgarde Keep",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,220,1.0,571,1211.75939941,-4868.421875,-1,0x2,0x0,0x5,
+575,"UtgardePinnacle",1,13,0,"Utgarde Pinnacle",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,221,1.0,571,1232.40979004,-4860.95361328,-1,0x2,0x0,0x5,
+576,"Nexus70",1,1,0,"The Nexus",,,,,,,,,,,,,,,,0xFF01FE,4265,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,226,1.0,571,3899.92578125,6985.43554687,-1,0x2,0x0,0x5,
+578,"Nexus80",1,13,0,"The Oculus",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,227,1.0,571,3865.9230957,6983.93994141,-1,0x2,0x0,0x5,
+580,"SunwellPlateau",2,1,0,"The Sunwell",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,225,1.0,530,12551.7626953,-6774.56542969,-1,0x1,0x0,0x19,
+582,"Transport176244",0,1,0,"Transport: Rut'theran to Auberdine",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+584,"Transport176231",0,1,0,"Transport: Menethil to Theramore",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+585,"Sunwell5ManFix",1,13,0,"Magister's Terrace",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,224,1.0,530,12881.9023438,-7343.09472656,-1,0x1,0x0,0x5,
+586,"Transport181645",0,1,0,"Transport: Exodar to Auberdine",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+587,"Transport177233",0,1,0,"Transport: Feathermoon Ferry",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+588,"Transport176310",0,1,0,"Transport: Menethil to Auberdine",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+589,"Transport175080",0,1,0,"Transport: Orgrimmar to Grom'Gol",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+590,"Transport176495",0,1,0,"Transport: Grom'Gol to Undercity",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+591,"Transport164871",0,1,0,"Transport: Undercity to Orgrimmar",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+592,"Transport186238",0,1,0,"Transport: Borean Tundra Test",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+593,"Transport20808",0,1,0,"Transport: Booty Bay to Ratchet",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+594,"Transport187038",0,1,0,"Transport: Howling Fjord Sister Mercy (Quest)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+595,"StratholmeCOT",1,1,0,"The Culling of Stratholme",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,222,1.0,1,-8756.08691406,-4457.41796875,-1,0x2,0x0,0x5,
+596,"Transport187263",0,1,0,"Transport: Naglfar",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+597,"CraigTest",0,15,0,"Craig Test",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+598,"Sunwell5Man",1,1,0,"Sunwell Fix (Unused)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,4,1.0,0,0.0,0.0,-1,0x1,0x0,0x5,
+599,"Ulduar70",1,13,0,"Halls of Stone",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,230,1.0,571,8921.79296875,-966.80645752,-1,0x2,0x0,0x5,
+600,"DrakTheronKeep",1,13,0,"Drak'Tharon Keep",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,228,1.0,571,4774.58300781,-2023.04907227,-1,0x2,0x0,0x5,
+601,"Azjol_Uppercity",1,13,0,"Azjol-Nerub",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,229,1.0,571,3672.21533203,2171.27514648,-1,0x2,0x0,0x5,
+602,"Ulduar80",1,13,0,"Halls of Lightning",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,231,1.0,571,9185.08789063,-1386.79064941,-1,0x2,0x0,0x5,
+603,"UlduarRaid",2,13,0,"Ulduar",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FE,244,1.0,571,9359.37109375,-1115.17541504,0,0x2,0x0,0x5,
+604,"GunDrak",1,13,0,"Gundrak",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,237,1.0,571,6708.73095703,-4654.90380859,-1,0x2,0x0,0x5,
+605,"development_nonweighted",0,17,0,"Development Land (non-weighted textures)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,21,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+606,"QA_DVD",0,31,0,"QA and DVD",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,21,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+607,"NorthrendBG",3,29,1,"Strand of the Ancients",,,,,,,,,,,,,,,,0xFF01FE,0,"To the south of Dragonblight lies the resting place of a legendary Titan artifact, known by the Alliance and Horde to possess critical information regarding the Titans and their methods.
+
+Prepare yourself for battle, for fate cannot determine success upon this Strand of the Ancients.",,,,,,,,,,,,,,,,0xFF01FE,"To the south of Dragonblight lies the resting place of a legendary Titan artifact, known by the Alliance and Horde to possess critical information regarding the Titans and their methods.
+
+Prepare yourself for battle, for fate cannot determine success upon this Strand of the Ancients.",,,,,,,,,,,,,,,,0xFF01FE,238,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+608,"DalaranPrison",1,29,0,"Violet Hold",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,235,1.0,571,5689.48974609,498.046936035,-1,0x2,0x0,0x5,
+609,"DeathKnightStart",0,29,0,"Ebon Hold",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,233,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+610,"Transport_Tirisfal _Vengeance_Landing",0,1,0,"Transport: Tirisfal to Vengeance Landing",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+612,"Transport_Menethil_Valgarde",0,1,0,"Transport: Menethil to Valgarde",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+613,"Transport_Orgrimmar_Warsong_Hold",0,1,0,"Transport: Orgrimmar to Warsong Hold",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+614,"Transport_Stormwind_Valiance_Keep",0,1,0,"Transport: Stormwind to Valiance Keep",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+615,"ChamberOfAspectsBlack",2,29,0,"The Obsidian Sanctum",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,239,1.0,571,3438.15332031,260.401306152,-1,0x2,0x0,0x0,
+616,"NexusRaid",2,29,0,"The Eye of Eternity",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,236,1.0,571,3869.98144531,6984.33007813,-1,0x2,0x0,0x5,
+617,"DalaranArena",4,29,0,"Dalaran Sewers",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,242,1.0,0,0.0,0.0,0,0x0,0x0,0x0,
+618,"OrgrimmarArena",4,29,0,"The Ring of Valor",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,240,1.0,0,0.0,0.0,720,0x0,0x0,0x0,
+619,"Azjol_LowerCity",1,29,0,"Ahn'kahet: The Old Kingdom",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,234,1.0,571,3641.45800781,2032.06384277,-1,0x2,0x0,0x0,
+620,"Transport_Moa'ki_Unu'pe",0,1,0,"Transport: Moa'ki to Unu'pe",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+621,"Transport_Moa'ki_Kamagua",0,1,0,"Transport: Moa'ki to Kamagua",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+622,"Transport192241",0,1,0,"Transport: Orgrim's Hammer",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+623,"Transport192242",0,1,0,"Transport: The Skybreaker",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+624,"WintergraspRaid",2,61,0,"Vault of Archavon",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,243,1.0,571,5488.12451172,2840.33374023,-1,0x2,0x0,0x0,
+628,"IsleofConquest",3,29,1,"Isle of Conquest",,,,,,,,,,,,,,,,0xFF01FE,0,"The Isle of Conquest is a point of strategic importance for the Alliance and Horde campaigns in Northrend.
+
+Serving as an ideal staging ground for operations in Icecrown, each side is determined to secure control of the island.
+
+With the 7th Legion and the Kor'kron Guard locked in deadly combat, both factions have issued a call to arms in hopes of tipping the scales in their favor and defeating the opposing general.",,,,,,,,,,,,,,,,0xFF01FE,"The Isle of Conquest is a point of strategic importance for the Alliance and Horde campaigns in Northrend.
+
+Serving as an ideal staging ground for operations in Icecrown, each side is determined to secure control of the island.
+
+With the 7th Legion and the Kor'kron Guard locked in deadly combat, both factions have issued a call to arms in hopes of tipping the scales in their favor and defeating the opposing general.",,,,,,,,,,,,,,,,0xFF01FE,245,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+631,"IcecrownCitadel",2,285,0,"Icecrown Citadel",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,250,1.0,571,5776.921875,2065.93237305,-1,0x2,0x0,0x0,
+632,"IcecrownCitadel5Man",1,29,0,"The Forge of Souls",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,249,1.0,571,5670.79150391,2003.62854004,-1,0x2,0x0,0x0,
+641,"Transport_AllianceAirshipBG",0,1,0,"Transport: Alliance Airship BG",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+642,"Transport_HordeAirshipBG",0,1,0,"Transport: HordeAirshipBG",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+647,"Transport_Orgrimmar_to_Thunderbluff",0,1,0,"Transport: Orgrimmar to Thunder Bluff",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+649,"ArgentTournamentRaid",2,29,0,"Trial of the Crusader",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,246,1.0,571,8515.28613281,736.137145996,-1,0x2,0x0,0x0,
+650,"ArgentTournamentDungeon",1,29,0,"Trial of the Champion",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,247,1.0,571,8571.43457031,792.22052002,-1,0x2,0x0,0x0,
+658,"QuarryofTears",1,29,0,"Pit of Saron",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,252,1.0,571,5592.05712891,2010.27087402,-1,0x2,0x0,0x0,
+668,"HallsOfReflection",1,29,0,"Halls of Reflection",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,253,1.0,571,5628.875,1973.28649902,-1,0x2,0x0,0x0,
+672,"Transport197347",0,1,0,"Transport: The Skybreaker (Icecrown Citadel Raid)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+673,"Transport197348",0,1,0,"Transport: Orgrim's Hammer (Icecrown Citadel Raid)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+712,"Transport197349",0,1,0,"Transport: The Skybreaker (IC Dungeon)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+713,"Transport197350",0,1,0,"Transport: Orgrim's Hammer (IC Dungeon)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+718,"Transport201834",0,1,0,"Trasnport: The Mighty Wind (Icecrown Citadel Raid)",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,
+723,"Stormwind",0,29,0,"Stormwind",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,0,1.0,0,0.0,0.0,-1,0x0,0x0,0x0,
+724,"ChamberofAspectsRed",2,285,0,"The Ruby Sanctum",,,,,,,,,,,,,,,,0xFF01FE,0,"",,,,,,,,,,,,,,,,0xFF01FC,"",,,,,,,,,,,,,,,,0xFF01FC,254,1.0,0,0.0,0.0,-1,0x2,0x0,0x0,

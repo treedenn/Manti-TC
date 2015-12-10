@@ -1,0 +1,11 @@
+long,flags,long,str,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,str,long,long,flags,flags
+1,0x0,1,PET,Warrior,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,WARRIOR,4,50,0x0,0x0
+2,0x0,0,PET,Paladin,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,PALADIN,10,58,0x0,0x0
+3,0x1,0,PET,Hunter,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,HUNTER,9,22,0x0,0x0
+4,0x1,3,PET,Rogue,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,ROGUE,8,2,0x0,0x0
+5,0x0,0,PET,Priest,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,PRIEST,6,2,0x0,0x0
+6,0x9,6,PET,Death Knight,,,,,,,,,,,,,,,,0xFF01FE,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,DEATHKNIGHT,15,122,0xA5,0x2
+7,0x1,0,PET,Shaman,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,SHAMAN,11,26,0x0,0x0
+8,0x0,0,PET,Mage,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,MAGE,3,2,0x0,0x0
+9,0x0,0,DEMON,Warlock,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,WARLOCK,5,6,0x0,0x0
+11,0x0,0,PET,Druid,,,,,,,,,,,,,,,,0xFF01FF,,,,,,,,,,,,,,,,,0xFF01EC,,,,,,,,,,,,,,,,,0xFF01EC,DRUID,7,10,0x0,0x0

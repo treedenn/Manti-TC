@@ -29,7 +29,6 @@ namespace Manti
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            tabControlCategory.SelectedTab = tabPageItem;
             tabControlCategory.Focus();
 
 
@@ -690,57 +689,52 @@ namespace Manti
             if (ConnectionOpen(connect))
             {
                 // Line 1 -> General Information : Line 2 -> Location : Line 3 ->  : Line 4 -> Stats : Line 5 -> Unknown.
-                string characterQuery = "SELECT guid, account, NAME, race, class, gender, LEVEL, money, xp, chosentitle, online, cinematic, is_logout_resting," +
-                    "map, instance_id, zone, orientation, position_x, position_y, position_z, " +
-                    "totalHonorPoints, arenaPoints, totalKills, " +
-                    "health, power1, power2, power3, power4, power5, power6, power7, " +
-                    "equipmentCache, knownTitles, exploredZones, taxi_path " +
-                    "FROM characters WHERE guid = '" + characterGUID + "';";
+                string characterQuery = "SELECT * FROM characters WHERE guid = '" + characterGUID + "';";
 
                 DataSet CharacterTable = DatabaseSearch(connect, characterQuery);
 
                 if (CharacterTable.Tables[0].Rows.Count != 0)
                 {
                     // General Information
-                    textBoxCharacterCharacterGUID.Text = CharacterTable.Tables[0].Rows[0][0].ToString();
-                    textBoxCharacterCharacterAccount.Text = CharacterTable.Tables[0].Rows[0][1].ToString();
-                    textBoxCharacterCharacterName.Text = CharacterTable.Tables[0].Rows[0][2].ToString();
-                    textBoxCharacterCharacterRace.Text = CharacterTable.Tables[0].Rows[0][3].ToString();
-                    textBoxCharacterCharacterClass.Text = CharacterTable.Tables[0].Rows[0][4].ToString();
-                    textBoxCharacterCharacterGender.Text = CharacterTable.Tables[0].Rows[0][5].ToString();
-                    textBoxCharacterCharacterLevel.Text = CharacterTable.Tables[0].Rows[0][6].ToString();
-                    textBoxCharacterCharacterMoney.Text = CharacterTable.Tables[0].Rows[0][7].ToString();
-                    textBoxCharacterCharacterXP.Text = CharacterTable.Tables[0].Rows[0][8].ToString();
-                    textBoxCharacterCharacterTitle.Text = CharacterTable.Tables[0].Rows[0][9].ToString();
-                    checkBoxCharacterCharacterOnline.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][10]);
-                    checkBoxCharacterCharacterCinematic.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][11]);
-                    checkBoxCharacterCharacterRest.Checked = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0][12]);
+                    textBoxCharacterCharacterGUID.Text              = CharacterTable.Tables[0].Rows[0]["guid"].ToString();
+                    textBoxCharacterCharacterAccount.Text           = CharacterTable.Tables[0].Rows[0]["account"].ToString();
+                    textBoxCharacterCharacterName.Text              = CharacterTable.Tables[0].Rows[0]["NAME"].ToString();
+                    textBoxCharacterCharacterRace.Text              = CharacterTable.Tables[0].Rows[0]["race"].ToString();
+                    textBoxCharacterCharacterClass.Text             = CharacterTable.Tables[0].Rows[0]["class"].ToString();
+                    textBoxCharacterCharacterGender.Text            = CharacterTable.Tables[0].Rows[0]["gender"].ToString();
+                    textBoxCharacterCharacterLevel.Text             = CharacterTable.Tables[0].Rows[0]["level"].ToString();
+                    textBoxCharacterCharacterMoney.Text             = CharacterTable.Tables[0].Rows[0]["money"].ToString();
+                    textBoxCharacterCharacterXP.Text                = CharacterTable.Tables[0].Rows[0]["xp"].ToString();
+                    textBoxCharacterCharacterTitle.Text             = CharacterTable.Tables[0].Rows[0]["chosentitle"].ToString();
+                    checkBoxCharacterCharacterOnline.Checked        = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0]["online"]);
+                    checkBoxCharacterCharacterCinematic.Checked     = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0]["cinematic"]);
+                    checkBoxCharacterCharacterRest.Checked          = Convert.ToBoolean(CharacterTable.Tables[0].Rows[0]["is_logout_resting"]);
                     // Location
-                    textBoxCharacterCharacterMapID.Text = CharacterTable.Tables[0].Rows[0][13].ToString();
-                    textBoxCharacterCharacterInstanceID.Text = CharacterTable.Tables[0].Rows[0][14].ToString();
-                    textBoxCharacterCharacterZoneID.Text = CharacterTable.Tables[0].Rows[0][15].ToString();
-                    textBoxCharacterCharacterCoordO.Text = CharacterTable.Tables[0].Rows[0][16].ToString();
-                    textBoxCharacterCharacterCoordX.Text = CharacterTable.Tables[0].Rows[0][17].ToString();
-                    textBoxCharacterCharacterCoordY.Text = CharacterTable.Tables[0].Rows[0][18].ToString();
-                    textBoxCharacterCharacterCoordZ.Text = CharacterTable.Tables[0].Rows[0][19].ToString();
+                    textBoxCharacterCharacterMapID.Text             = CharacterTable.Tables[0].Rows[0]["map"].ToString();
+                    textBoxCharacterCharacterInstanceID.Text        = CharacterTable.Tables[0].Rows[0]["instance_id"].ToString();
+                    textBoxCharacterCharacterZoneID.Text            = CharacterTable.Tables[0].Rows[0]["zone"].ToString();
+                    textBoxCharacterCharacterCoordO.Text            = CharacterTable.Tables[0].Rows[0]["orientation"].ToString();
+                    textBoxCharacterCharacterCoordX.Text            = CharacterTable.Tables[0].Rows[0]["position_x"].ToString();
+                    textBoxCharacterCharacterCoordY.Text            = CharacterTable.Tables[0].Rows[0]["position_y"].ToString();
+                    textBoxCharacterCharacterCoordZ.Text            = CharacterTable.Tables[0].Rows[0]["position_z"].ToString();
                     // Player vs Player
-                    textBoxCharacterCharacterHonorPoints.Text = CharacterTable.Tables[0].Rows[0][20].ToString();
-                    textBoxCharacterCharacterArenaPoints.Text = CharacterTable.Tables[0].Rows[0][21].ToString();
-                    textBoxCharacterCharacterTotalKills.Text = CharacterTable.Tables[0].Rows[0][22].ToString();
+                    textBoxCharacterCharacterHonorPoints.Text       = CharacterTable.Tables[0].Rows[0]["totalHonorPoints"].ToString();
+                    textBoxCharacterCharacterArenaPoints.Text       = CharacterTable.Tables[0].Rows[0]["arenaPoints"].ToString();
+                    textBoxCharacterCharacterTotalKills.Text        = CharacterTable.Tables[0].Rows[0]["totalKills"].ToString();
                     // Stats
-                    textBoxCharacterCharacterHealth.Text = CharacterTable.Tables[0].Rows[0][23].ToString();
-                    textBoxCharacterCharacterPower1.Text = CharacterTable.Tables[0].Rows[0][24].ToString();
-                    textBoxCharacterCharacterPower2.Text = CharacterTable.Tables[0].Rows[0][25].ToString();
-                    textBoxCharacterCharacterPower3.Text = CharacterTable.Tables[0].Rows[0][26].ToString();
-                    textBoxCharacterCharacterPower4.Text = CharacterTable.Tables[0].Rows[0][27].ToString();
-                    textBoxCharacterCharacterPower5.Text = CharacterTable.Tables[0].Rows[0][28].ToString();
-                    textBoxCharacterCharacterPower6.Text = CharacterTable.Tables[0].Rows[0][29].ToString();
-                    textBoxCharacterCharacterPower7.Text = CharacterTable.Tables[0].Rows[0][30].ToString();
+                    textBoxCharacterCharacterHealth.Text            = CharacterTable.Tables[0].Rows[0]["health"].ToString();
+                    textBoxCharacterCharacterPower1.Text            = CharacterTable.Tables[0].Rows[0]["power1"].ToString();
+                    textBoxCharacterCharacterPower2.Text            = CharacterTable.Tables[0].Rows[0]["power2"].ToString();
+                    textBoxCharacterCharacterPower3.Text            = CharacterTable.Tables[0].Rows[0]["power3"].ToString();
+                    textBoxCharacterCharacterPower4.Text            = CharacterTable.Tables[0].Rows[0]["power4"].ToString();
+                    textBoxCharacterCharacterPower5.Text            = CharacterTable.Tables[0].Rows[0]["power5"].ToString();
+                    textBoxCharacterCharacterPower6.Text            = CharacterTable.Tables[0].Rows[0]["power6"].ToString();
+                    textBoxCharacterCharacterPower7.Text            = CharacterTable.Tables[0].Rows[0]["power7"].ToString();
                     // Unknown
-                    textBoxCharacterCharacterEquipmentCache.Text = CharacterTable.Tables[0].Rows[0][31].ToString();
-                    textBoxCharacterCharacterKnownTitles.Text = CharacterTable.Tables[0].Rows[0][32].ToString();
-                    textBoxCharacterCharacterExploredZones.Text = CharacterTable.Tables[0].Rows[0][33].ToString();
-                    textBoxCharacterCharacterTaxiMask.Text = CharacterTable.Tables[0].Rows[0][34].ToString();
+                    textBoxCharacterCharacterEquipmentCache.Text    = CharacterTable.Tables[0].Rows[0]["equipmentCache"].ToString();
+                    textBoxCharacterCharacterKnownTitles.Text       = CharacterTable.Tables[0].Rows[0]["knownTitles"].ToString();
+                    textBoxCharacterCharacterExploredZones.Text     = CharacterTable.Tables[0].Rows[0]["exploredZones"].ToString();
+                    textBoxCharacterCharacterTaxiMask.Text          = CharacterTable.Tables[0].Rows[0]["taximask"].ToString();
                 }
 
                 ConnectionClose(connect);
@@ -801,6 +795,61 @@ namespace Manti
 
             return query;
         }
+        private string DatabaseCharacterCharacterGenerate()
+        {
+            var query = "REPLACE INTO `characters` (" +
+            "`guid`, `account`, `name`, `race`, `class`, `gender`, `level`, `money`, `xp`, `chosentitle`, `online`, `cinematic`, `is_logout_resting`, " +
+            "`map`, `instance_id`, `zone`, `orientation`, `position_x`, `position_y`, `position_z`, " +
+            "`totalHonorPoints`, `arenaPoints`, `totalKills`, " +
+            "`health`, `power1`, `power2`, `power3`, `power4`, `power5`, `power6`, `power7`, " +
+            "`equipmentCache`, `knownTitles`, `exploredZones`, `taximask`" +
+            ") VALUES (" +
+
+            textBoxCharacterCharacterGUID.Text + ", " +
+            textBoxCharacterCharacterAccount.Text + ", '" +
+            textBoxCharacterCharacterName.Text + "', " +
+            textBoxCharacterCharacterRace.Text + ", " +
+            textBoxCharacterCharacterClass.Text + ", " +
+            textBoxCharacterCharacterGender.Text + ", " +
+            textBoxCharacterCharacterLevel.Text + ", " +
+            textBoxCharacterCharacterMoney.Text + ", " +
+            textBoxCharacterCharacterXP.Text + ", " +
+            textBoxCharacterCharacterTitle.Text + ", " +
+            checkBoxCharacterCharacterOnline.Checked.ToString() + ", " +
+            checkBoxCharacterCharacterCinematic.Checked.ToString() + ", " +
+            checkBoxCharacterCharacterRest.Checked.ToString() + ", " +
+
+            textBoxCharacterCharacterMapID.Text + ", " +
+            textBoxCharacterCharacterInstanceID.Text + ", " +
+            textBoxCharacterCharacterZoneID.Text + ", " +
+            textBoxCharacterCharacterCoordO.Text + ", " +
+            textBoxCharacterCharacterCoordX.Text + ", " +
+            textBoxCharacterCharacterCoordY.Text + ", " +
+            textBoxCharacterCharacterCoordZ.Text + ", " +
+
+            textBoxCharacterCharacterHonorPoints.Text + ", " +
+            textBoxCharacterCharacterArenaPoints.Text + ", " +
+            textBoxCharacterCharacterTotalKills.Text + ", " +
+
+            textBoxCharacterCharacterHealth.Text + ", " +
+            textBoxCharacterCharacterPower1.Text + ", " +
+            textBoxCharacterCharacterPower2.Text + ", " +
+            textBoxCharacterCharacterPower3.Text + ", " +
+            textBoxCharacterCharacterPower4.Text + ", " +
+            textBoxCharacterCharacterPower5.Text + ", " +
+            textBoxCharacterCharacterPower6.Text + ", " +
+            textBoxCharacterCharacterPower7.Text + ", '" +
+
+            textBoxCharacterCharacterEquipmentCache.Text + "', '" +
+            textBoxCharacterCharacterKnownTitles.Text + "', '" +
+            textBoxCharacterCharacterExploredZones.Text + "', '" +
+            textBoxCharacterCharacterTaxiMask.Text + "'" +
+
+            ");";
+                
+            return query;
+        }
+
         #endregion       
         #region Creature
             // Searches the database for the creature's information.
@@ -948,6 +997,70 @@ namespace Manti
                 }
 
                 dataGridViewCreatureLoot.DataSource = newTable;
+
+                ConnectionClose(connect);
+            }
+        }
+            // Searches the database for the creature's pickpocket loot
+        private void DatabaseCreaturePickpocket(string pickpocketID)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                string query = "SELECT * FROM pickpocketing_loot_template WHERE Entry = '" + pickpocketID + "';";
+
+                // Creature Loot Template Table
+                var datatable = DatabaseSearch(connect, query);
+
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
+                {
+                    // Adds a new column 'name'
+                    newTable.Columns.Add("name", typeof(string));
+
+                    // loops every inventory item for name
+                    for (int i = 0; i < newTable.Rows.Count; i++)
+                    {
+                        // sets the column 'name' to the itemname
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
+                    }
+                }
+
+                dataGridViewCreaturePickpocketLoot.DataSource = newTable;
+
+                ConnectionClose(connect);
+            }
+        }
+            // Searches the database for the creature's skin loot
+        private void DatabaseCreatureSkin(string skinID)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                string query = "SELECT * FROM skinning_loot_template WHERE Entry = '" + skinID + "';";
+
+                // Creature Loot Template Table
+                var datatable = DatabaseSearch(connect, query);
+
+                var newTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (newTable.Rows.Count != 0)
+                {
+                    // Adds a new column 'name'
+                    newTable.Columns.Add("name", typeof(string));
+
+                    // loops every inventory item for name
+                    for (int i = 0; i < newTable.Rows.Count; i++)
+                    {
+                        // sets the column 'name' to the itemname
+                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
+                    }
+                }
+
+                dataGridViewCreatureSkinLoot.DataSource = newTable;
 
                 ConnectionClose(connect);
             }
@@ -1897,6 +2010,21 @@ namespace Manti
                 tabControlCategoryCharacter.SelectedTab = tabPageCharacterCharacter;
             }
         }
+        private void buttonCharacterScriptUpdate_Click(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelCharacterScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCharacterScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
+        }
+        private void buttonCharacterCharacterGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxCharacterScriptOutput.Text = DatabaseCharacterCharacterGenerate();
+        }
 
         private void buttonCharacterInventoryAdd_Click(object sender, EventArgs e)
         {
@@ -1982,7 +2110,9 @@ namespace Manti
             {
                 DatabaseCreatureSearch(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
                 DatabaseCreatureLocation(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
-                DatabaseCreatureLoot(dataGridViewCreatureSearch.SelectedCells[6].Value.ToString());
+                DatabaseCreatureLoot(textBoxCreatureTemplateLootID.Text.Trim());
+                DatabaseCreaturePickpocket(textBoxCreatureTemplatePickID.Text.Trim());
+                DatabaseCreatureSkin(textBoxCreatureTemplateSkinID.Text.Trim());
             }
 
             tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
@@ -1991,47 +2121,164 @@ namespace Manti
         {
             textBoxCreatureScriptOutput.Text = DatabaseCreatureTempGenerate();
         }
-
-        #region Loot
-        private void buttonCreatureLootAdd_Click(object sender, EventArgs e)
+        private void buttonCreatureScriptUpdate_Click(object sender, EventArgs e)
         {
-            var values = new object[] {
-                textBoxCreatureLootEntry.Text,
-                textBoxCreatureLootItemID.Text,
-                textBoxCreatureLootReference.Text,
-                textBoxCreatureLootChance.Text,
-                textBoxCreatureLootQR.Text,
-                textBoxCreatureLootLM.Text,
-                textBoxCreatureLootGID.Text,
-                textBoxCreatureLootMIC.Text,
-                textBoxCreatureLootMAC.Text
-            };
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
 
-            if (textBoxCreatureLootEntry.Text.Trim() != "")
+            if (ConnectionOpen(connect))
             {
-                var existingData = (DataTable)dataGridViewCreatureLoot.DataSource;
-                existingData.Rows.Add(values);
-                dataGridViewCreatureLoot.DataSource = existingData;
-                // Scroll ned, når der tilføjes en ny 'row'
+                toolStripStatusLabelCreatureScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCreatureScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
             }
         }
-        private void buttonCreatureLootRefresh_Click(object sender, EventArgs e)
+
+        private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DatabaseItemLoot((textBoxCreatureLootEntry.Text.Trim() != "") ? textBoxCreatureLootEntry.Text : textBoxCreatureTemplateEntry.Text);
+            var list = new List<Tuple<TextBox, string>>();
+
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSubname, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedWalk, "1"));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedRun, "1.4286"));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateAIName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateScriptName, ""));
+
+            DefaultValuesGenerate(tabPageCreatureTemplate);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
         }
-        private void buttonCreatureLootDelete_Click(object sender, EventArgs e)
+        private void deleteCreatureToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (dataGridViewCreatureLoot.SelectedRows.Count > 0)
+            GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
+        }
+
+        #region Loot
+            private void buttonCreatureLootAdd_Click(object sender, EventArgs e)
             {
-                foreach (DataGridViewRow row in dataGridViewCreatureLoot.SelectedRows)
+                var values = new object[] {
+                    textBoxCreatureLootEntry.Text,
+                    textBoxCreatureLootItemID.Text,
+                    textBoxCreatureLootReference.Text,
+                    textBoxCreatureLootChance.Text,
+                    textBoxCreatureLootQR.Text,
+                    textBoxCreatureLootLM.Text,
+                    textBoxCreatureLootGID.Text,
+                    textBoxCreatureLootMIC.Text,
+                    textBoxCreatureLootMAC.Text
+                };
+
+                if (textBoxCreatureLootEntry.Text.Trim() != "")
                 {
-                    dataGridViewCreatureLoot.Rows.RemoveAt(row.Index);
+                    var existingData = (DataTable)dataGridViewCreatureLoot.DataSource;
+                    existingData.Rows.Add(values);
+                    dataGridViewCreatureLoot.DataSource = existingData;
+                    dataGridViewCreatureLoot.FirstDisplayedScrollingRowIndex = dataGridViewCreatureLoot.Rows.Count - 1;
+                }
+            }
+            private void buttonCreatureLootRefresh_Click(object sender, EventArgs e)
+            {
+                DatabaseItemLoot((textBoxCreatureLootEntry.Text.Trim() != "") ? textBoxCreatureLootEntry.Text : textBoxCreatureTemplateEntry.Text);
+            }
+            private void buttonCreatureLootDelete_Click(object sender, EventArgs e)
+            {
+                if (dataGridViewCreatureLoot.SelectedRows.Count > 0)
+                {
+                    foreach (DataGridViewRow row in dataGridViewCreatureLoot.SelectedRows)
+                    {
+                        dataGridViewCreatureLoot.Rows.RemoveAt(row.Index);
+                    }
+                }
+            }
+            private void buttonCreatureLootGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
+        }
+        #endregion
+        #region Pickpocket
+        private void buttonCreaturePickpocketAdd_Click(object sender, EventArgs e)
+        {
+            var values = new object[] {
+                    textBoxCreaturePickpocketEntry.Text,
+                    textBoxCreaturePickpocketItemID.Text,
+                    textBoxCreaturePickpocketReference.Text,
+                    textBoxCreaturePickpocketChance.Text,
+                    textBoxCreaturePickpocketQR.Text,
+                    textBoxCreaturePickpocketLM.Text,
+                    textBoxCreaturePickpocketGID.Text,
+                    textBoxCreaturePickpocketMIC.Text,
+                    textBoxCreaturePickpocketMAC.Text
+                };
+
+            if (textBoxCreaturePickpocketEntry.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCreaturePickpocketLoot.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCreaturePickpocketLoot.DataSource = existingData;
+                dataGridViewCreaturePickpocketLoot.FirstDisplayedScrollingRowIndex = dataGridViewCreaturePickpocketLoot.Rows.Count - 1;
+            }
+        }
+        private void buttonCreaturePickpocketRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemLoot((textBoxCreaturePickpocketEntry.Text.Trim() != "") ? textBoxCreaturePickpocketEntry.Text : textBoxCreatureTemplateEntry.Text);
+        }
+        private void buttonCreaturePickpocketDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCreaturePickpocketLoot.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCreaturePickpocketLoot.SelectedRows)
+                {
+                    dataGridViewCreaturePickpocketLoot.Rows.RemoveAt(row.Index);
                 }
             }
         }
-        private void buttonCreatureLootGenerate_Click(object sender, EventArgs e)
+        private void buttonCreaturePickpocketGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
+            GenerateLoot("pickpocketing_loot_template", dataGridViewCreaturePickpocketLoot, textBoxCreatureScriptOutput);
+        }
+        #endregion
+        #region Skin
+        private void buttonCreatureSkinAdd_Click(object sender, EventArgs e)
+        {
+            var values = new object[] {
+                    textBoxCreatureSkinEntry.Text,
+                    textBoxCreatureSkinItemID.Text,
+                    textBoxCreatureSkinReference.Text,
+                    textBoxCreatureSkinChance.Text,
+                    textBoxCreatureSkinQR.Text,
+                    textBoxCreatureSkinLM.Text,
+                    textBoxCreatureSkinGID.Text,
+                    textBoxCreatureSkinMIC.Text,
+                    textBoxCreatureSkinMAC.Text
+                };
+
+            if (textBoxCreatureSkinEntry.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCreatureSkinLoot.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCreatureSkinLoot.DataSource = existingData;
+                dataGridViewCreatureSkinLoot.FirstDisplayedScrollingRowIndex = dataGridViewCreatureSkinLoot.Rows.Count - 1;
+            }
+        }
+        private void buttonCreatureSkinRefresh_Click(object sender, EventArgs e)
+        {
+            DatabaseItemLoot((textBoxCreatureSkinEntry.Text.Trim() != "") ? textBoxCreatureSkinEntry.Text : textBoxCreatureTemplateEntry.Text);
+        }
+        private void buttonCreatureSkinDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCreatureSkinLoot.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCreatureSkinLoot.SelectedRows)
+                {
+                    dataGridViewCreatureSkinLoot.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonCreatureSkinGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateLoot("skinning_loot_template", dataGridViewCreatureSkinLoot, textBoxCreatureScriptOutput);
         }
         #endregion
 
@@ -2105,6 +2352,42 @@ namespace Manti
         {
             textBoxQuestScriptOutput.Text = DatabaseQuestSectionGenerate();
         }
+        private void buttonQuestScriptUpdate_Click(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelQuestScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxQuestScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
+        }
+
+        private void newQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var list = new List<Tuple<TextBox, string>>();
+
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionTitle, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionLDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionQDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionAreaDescription, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionCompleted, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives1, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives2, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives3, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives4, ""));
+
+            DefaultValuesGenerate(tabPageQuestSection1);
+            DefaultValuesGenerate(tabPageQuestSection2);
+            DefaultValuesOverride(list);
+
+            tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
+        }
+        private void deleteQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
+        }
         #endregion
         #region GameObject
 
@@ -2153,6 +2436,17 @@ namespace Manti
                 DatabaseGameObjectSearch(dataGridViewGameObjectSearch.SelectedCells[0].Value.ToString());
 
                 tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
+            }
+        }
+        private void buttonGameObjectScriptUpdate_Click(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelGameObjectScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxGameObjectScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
             }
         }
         
@@ -2526,60 +2820,14 @@ namespace Manti
 
 
 
-        #endregion
+
 
         #endregion
 
         #endregion
 
-        private void newQuestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var list = new List<Tuple<TextBox, string>>();
+        #endregion
 
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionTitle, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionLDescription, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionQDescription, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionAreaDescription, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionCompleted, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives1, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives2, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives3, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives4, ""));
-
-            DefaultValuesGenerate(tabPageQuestSection1);
-            DefaultValuesGenerate(tabPageQuestSection2);
-            DefaultValuesOverride(list);
-
-            tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
-        }
-
-        private void deleteQuestToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
-        }
-
-        private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var list = new List<Tuple<TextBox, string>>();
-
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSubname, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedWalk, "1"));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedRun, "1.4286"));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateAIName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateScriptName, ""));
-
-            DefaultValuesGenerate(tabPageCreatureTemplate);
-            DefaultValuesOverride(list);
-
-            tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
-        }
-
-        private void deleteCreatureToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
-        }
     }
 
 
