@@ -1,7 +1,0 @@
-long,long,None,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,
-1,524291,,"General - %s",,,,,,,,,,,,,,,,0xFF01FE,"General",,,,,,,,,,,,,,,,0xFF01FE,
-2,59,,"Trade - %s",,,,,,,,,,,,,,,,0xFF01FE,"Trade",,,,,,,,,,,,,,,,0xFF01FE,
-22,65539,,"LocalDefense - %s",,,,,,,,,,,,,,,,0xFF01FE,"LocalDefense",,,,,,,,,,,,,,,,0xFF01FE,
-23,65540,,"WorldDefense",,,,,,,,,,,,,,,,0xFF01FE,"WorldDefense",,,,,,,,,,,,,,,,0xFF01FE,
-25,131122,,"GuildRecruitment - %s",,,,,,,,,,,,,,,,0xFF01FE,"GuildRecruitment",,,,,,,,,,,,,,,,0xFF01FE,
-26,262201,,"LookingForGroup",,,,,,,,,,,,,,,,0xFF01FE,"LookingForGroup",,,,,,,,,,,,,,,,0xFF01FE,

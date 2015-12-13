@@ -20,7 +20,7 @@ namespace Manti.FormPopup
         #region Functions
 
         private DataTable data = new DataTable();
-        private string id = "";
+        private string selectionValue = "";
 
         public DataTable setDataTable
         {
@@ -30,28 +30,29 @@ namespace Manti.FormPopup
         {
             set { this.Text = value; }
         }
-        public string getSelection
+        public string changeSelection
         {
-            get { return id; }
+            set { selectionValue = value; }
+            get { return selectionValue; }
         }
-        private void addItems()
+        private void addItems(TextBox search, int rowValue)
         {
             listViewPopupSelection.Items.Clear();
 
             foreach (DataRow row in data.Rows)
             {
-                if (textBoxPopupSearch.Text.Trim() != "")
+                if (search.Text.Trim() != "")
                 {
-                    if (row["value"].ToString().ToLower().Contains(textBoxPopupSearch.Text.ToLower()))
+                    if (row[rowValue].ToString().ToLower().Contains(search.Text.ToLower()))
                     {
-                        var item = new ListViewItem( row["id"].ToString() );
-                        item.SubItems.Add( row["name"].ToString() );
+                        var item = new ListViewItem( row[0].ToString() );
+                        item.SubItems.Add(row[1].ToString());
                         listViewPopupSelection.Items.Add(item);
                     }
                 } else
                 {
-                    var item = new ListViewItem(row["id"].ToString());
-                    item.SubItems.Add(row["name"].ToString());
+                    var item = new ListViewItem(row[0].ToString());
+                    item.SubItems.Add(row[1].ToString());
                     listViewPopupSelection.Items.Add(item);
                 }
             }
@@ -62,22 +63,38 @@ namespace Manti.FormPopup
             // FormLoad
         private void FormPopupSelection_Load(object sender, EventArgs e)
         {
-            addItems();
+            addItems(textBoxPopupSearchValue, 1);
+
+            foreach(ListViewItem item in listViewPopupSelection.Items)
+            {
+                if (item.SubItems[0].Text.ToString() == selectionValue)
+                {
+                    item.BackColor = Color.LightGreen;
+                    listViewPopupSelection.EnsureVisible(item.Index);
+                }
+            }
         }
-            // TextChanged
-        private void textBoxPopupSearch_TextChanged(object sender, EventArgs e)
+            // TextChanged for Value
+        private void textBoxPopupSearchValue_TextChanged(object sender, EventArgs e)
         {
-            addItems();
+            addItems(textBoxPopupSearchValue, 1);
+        }
+            // TextChanged for ID
+        private void textBoxPopupSearchID_TextChanged(object sender, EventArgs e)
+        {
+            addItems(textBoxPopupSearchID, 0);
         }
             // Button Click OK
         private void buttonPopupOK_Click(object sender, EventArgs e)
         {
             if (listViewPopupSelection.SelectedItems.Count > 0)
             {
-                id = listViewPopupSelection.SelectedItems[0].Text;
-
-                this.Close();
+                selectionValue = listViewPopupSelection.SelectedItems[0].Text;
             }
+
+            //selectionValue = (selectionValue == "") ? "0" : selectionValue;
+
+            this.Close();
         }
             // Button Click Close
         private void buttonPopupClose_Click(object sender, EventArgs e)

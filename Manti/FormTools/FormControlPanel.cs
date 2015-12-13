@@ -85,6 +85,21 @@ namespace Manti.FormTools
             return "";
         }
 
+        private bool CheckOnline(string path)
+        {
+            string fileName = Path.GetFileName(path);
+            fileName = fileName.Substring(0, fileName.Length - 4);
+
+            Process[] pName = Process.GetProcessesByName(fileName);
+
+            if (pName.Length > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void CloseProcess(string path)
         {
             string fileName = Path.GetFileName(path);
@@ -164,5 +179,33 @@ namespace Manti.FormTools
 
         #endregion
 
+        private void timerCheckProcess_Tick(object sender, EventArgs e)
+        {
+            WorldOnline = CheckOnline(Properties.Settings.Default.PathWorldserver);
+            AuthOnline = CheckOnline(Properties.Settings.Default.PathAuthserver);
+
+            labelWorldStatus.Text = (WorldOnline) ? "Status: ONLINE" : "Status: OFFLINE";
+            labelAuthStatus.Text = (AuthOnline) ? "Status: ONLINE" : "Status: OFFLINE";
+
+            buttonWorldServer.BackgroundImage = (WorldOnline) ? Manti.Properties.Resources.iconStopButton : Manti.Properties.Resources.iconPlayButton;
+            buttonAuthServer.BackgroundImage = (AuthOnline) ? Manti.Properties.Resources.iconStopButton : Manti.Properties.Resources.iconPlayButton;
+
+            if (checkBoxRestartWorld.Checked)
+            {
+                if (!WorldOnline)
+                {
+                    StartProcess(Properties.Settings.Default.PathWorldserver, checkBoxHideWorld.Checked);
+                }
+            }
+            if (checkBoxRestartAuth.Checked)
+            {
+                if (!AuthOnline)
+                {
+                    StartProcess(Properties.Settings.Default.PathAuthserver, checkBoxHideAuth.Checked);
+                }
+            }
+
+
+        }
     }
 }

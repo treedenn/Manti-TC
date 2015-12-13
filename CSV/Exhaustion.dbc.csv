@@ -1,7 +1,0 @@
-long,long,float,float,float,str,None,None,None,None,None,None,None,None,None,None,None,None,None,None,None,flags,float,
-1,10000,2.0,-1.0,8.0,"Rested",,,,,,,,,,,,,,,,0xFF01FE,12.0,
-2,13333,1.0,-1.0,6.0,"Normal",,,,,,,,,,,,,,,,0xFF01FE,0.0,
-3,20000,1.0,8.0,4.0,"XXXTired",,,,,,,,,,,,,,,,0xFF01FE,0.0,
-4,40000,0.5,4.0,2.0,"XXXTired",,,,,,,,,,,,,,,,0xFF01FE,0.0,
-5,-1,0.25,0.0,0.0,"XXXExhausted",,,,,,,,,,,,,,,,0xFF01FE,0.0,
-6,10000,2.0,-1.0,0.0,"Refer-A-Friend",,,,,,,,,,,,,,,,0xFF01FE,0.0,

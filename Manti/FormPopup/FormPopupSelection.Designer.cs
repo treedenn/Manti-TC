@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBoxPopupSearch = new System.Windows.Forms.TextBox();
+            this.textBoxPopupSearchValue = new System.Windows.Forms.TextBox();
             this.buttonPopupOK = new System.Windows.Forms.Button();
             this.buttonPopupClose = new System.Windows.Forms.Button();
             this.listViewPopupSelection = new System.Windows.Forms.ListView();
             this.columnHeaderTICID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderTICValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.textBoxPopupSearchID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBoxPopupSearch
+            // textBoxPopupSearchValue
             // 
-            this.textBoxPopupSearch.Location = new System.Drawing.Point(12, 12);
-            this.textBoxPopupSearch.Name = "textBoxPopupSearch";
-            this.textBoxPopupSearch.Size = new System.Drawing.Size(360, 20);
-            this.textBoxPopupSearch.TabIndex = 1;
-            this.textBoxPopupSearch.TextChanged += new System.EventHandler(this.textBoxPopupSearch_TextChanged);
+            this.textBoxPopupSearchValue.Location = new System.Drawing.Point(78, 12);
+            this.textBoxPopupSearchValue.Name = "textBoxPopupSearchValue";
+            this.textBoxPopupSearchValue.Size = new System.Drawing.Size(294, 20);
+            this.textBoxPopupSearchValue.TabIndex = 1;
+            this.textBoxPopupSearchValue.TextChanged += new System.EventHandler(this.textBoxPopupSearchValue_TextChanged);
             // 
             // buttonPopupOK
             // 
@@ -97,16 +98,25 @@
             this.columnHeaderTICValue.Text = "Value";
             this.columnHeaderTICValue.Width = 300;
             // 
+            // textBoxPopupSearchID
+            // 
+            this.textBoxPopupSearchID.Location = new System.Drawing.Point(12, 12);
+            this.textBoxPopupSearchID.Name = "textBoxPopupSearchID";
+            this.textBoxPopupSearchID.Size = new System.Drawing.Size(60, 20);
+            this.textBoxPopupSearchID.TabIndex = 4;
+            this.textBoxPopupSearchID.TextChanged += new System.EventHandler(this.textBoxPopupSearchID_TextChanged);
+            // 
             // FormPopupSelection
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 411);
             this.ControlBox = false;
+            this.Controls.Add(this.textBoxPopupSearchID);
             this.Controls.Add(this.listViewPopupSelection);
             this.Controls.Add(this.buttonPopupClose);
             this.Controls.Add(this.buttonPopupOK);
-            this.Controls.Add(this.textBoxPopupSearch);
+            this.Controls.Add(this.textBoxPopupSearchValue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormPopupSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -118,11 +128,12 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBoxPopupSearch;
+        private System.Windows.Forms.TextBox textBoxPopupSearchValue;
         private System.Windows.Forms.Button buttonPopupOK;
         private System.Windows.Forms.Button buttonPopupClose;
         private System.Windows.Forms.ListView listViewPopupSelection;
         private System.Windows.Forms.ColumnHeader columnHeaderTICID;
         private System.Windows.Forms.ColumnHeader columnHeaderTICValue;
+        private System.Windows.Forms.TextBox textBoxPopupSearchID;
     }
 }

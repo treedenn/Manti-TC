@@ -126,10 +126,10 @@ namespace Manti
                 isConnected = true;
                 connect.Close();
             }
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
                 isConnected = false;
-                MessageBox.Show(ex.Message, "MySQL Error: " + ex.Number, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw;
             }
 
             return isConnected;

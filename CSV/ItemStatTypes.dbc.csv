@@ -1,45 +1,45 @@
-id,stat type,,,,,,,,,,,stat type
-0,Mana,,,,,,,,,,,Mana
-1,Health,,,,,,,,,,,Health
-3,Agility,,,,,,,,,,,Agility
-4,Strength,,,,,,,,,,,Strength
-5,Intellect,,,,,,,,,,,Intellect
-6,Spirit,,,,,,,,,,,Spirit
-7,Stamina,,,,,,,,,,,Stamina
-12,Defense Skill Rating,,,,,,,,,,,Defense Skill Rating
-13,Dodge Rating,,,,,,,,,,,Dodge Rating
-14,Parry Rating,,,,,,,,,,,Parry Rating
-15,Block Rating,,,,,,,,,,,Block Rating
-16,Hit Rating (Melee),,,,,,,,,,,Melee Hit Rating
-17,Hit Rating (Ranged),,,,,,,,,,,Ranged Hit Rating
-18,Hit Rating (Spell),,,,,,,,,,,Spell Hit Rating
-19,Crit Rating (Melee),,,,,,,,,,,Melee Crit Rating
-20,Crit Rating (Ranged),,,,,,,,,,,Ranged Crit Rating
-21,Crit Rating (Spell),,,,,,,,,,,Spell Hit Rating
-22,Hit Taken Rating (Melee),,,,,,,,,,,Melee Hit Taken Rating
-23,Hit Taken Rating (Ranged),,,,,,,,,,,Ranged Hit Taken Rating
-24,Hit Taken Rating (Spell),,,,,,,,,,,Spell Hit Taken Rating
-25,Crit Taken Rating (Melee),,,,,,,,,,,Melee Crit Taken Rating
-26,Crit Taken Rating (Ranged),,,,,,,,,,,Ranged Crit Taken Rating
-27,Crit Taken Rating (Spell),,,,,,,,,,,Spell Crit Taken Rating
-28,Haste Rating (Melee),,,,,,,,,,,Melee Haste Rating
-29,Haste Rating (Ranged),,,,,,,,,,,Ranged Haste Rating
-30,Haste Rating (Spell),,,,,,,,,,,Spell Haste Rating
-31,Hit Rating,,,,,,,,,,,Hit Rating
-32,Crit Rating,,,,,,,,,,,Crit Rating
-33,Hit Taken Rating,,,,,,,,,,,Hit Taken Rating
-34,Crit Taken Rating,,,,,,,,,,,Crit Taken Rating
-35,Resilience Rating,,,,,,,,,,,Resilience Rating
-36,Haste Rating,,,,,,,,,,,Haste Rating
-37,Expertise Rating,,,,,,,,,,,Expertise Rating
-38,Attack Power,,,,,,,,,,,Attack Power
-39,Attack Power (Ranged),,,,,,,,,,,Ranged Attack Power
-40,Attack Power (Feral),,,,,,,,,,,Feral Attack Power
-41,Spell Done (Healing),,,,,,,,,,,Healing Spell Done
-42,Spell Done (Damage),,,,,,,,,,,Damage Spell Done
-43,Mana Regeneration,,,,,,,,,,,Mana Regeneration
-44,Armor Penetration,,,,,,,,,,,Armor Penetration
-45,Spell Power,,,,,,,,,,,Spell Power
-46,Health Regeneration,,,,,,,,,,,Health Regeneration
-47,Spell Penetration,,,,,,,,,,,Spell Penetration
-48,Block Value,,,,,,,,,,,Block Value
+id;stat type;;;;;;;;;;;stat type
+0;Mana;;;;;;;;;;;Mana
+1;Health;;;;;;;;;;;Health
+3;Agility;;;;;;;;;;;Agility
+4;Strength;;;;;;;;;;;Strength
+5;Intellect;;;;;;;;;;;Intellect
+6;Spirit;;;;;;;;;;;Spirit
+7;Stamina;;;;;;;;;;;Stamina
+12;Defense Skill Rating;;;;;;;;;;;Defense Skill Rating
+13;Dodge Rating;;;;;;;;;;;Dodge Rating
+14;Parry Rating;;;;;;;;;;;Parry Rating
+15;Block Rating;;;;;;;;;;;Block Rating
+16;Hit Rating (Melee);;;;;;;;;;;Melee Hit Rating
+17;Hit Rating (Ranged);;;;;;;;;;;Ranged Hit Rating
+18;Hit Rating (Spell);;;;;;;;;;;Spell Hit Rating
+19;Crit Rating (Melee);;;;;;;;;;;Melee Crit Rating
+20;Crit Rating (Ranged);;;;;;;;;;;Ranged Crit Rating
+21;Crit Rating (Spell);;;;;;;;;;;Spell Hit Rating
+22;Hit Taken Rating (Melee);;;;;;;;;;;Melee Hit Taken Rating
+23;Hit Taken Rating (Ranged);;;;;;;;;;;Ranged Hit Taken Rating
+24;Hit Taken Rating (Spell);;;;;;;;;;;Spell Hit Taken Rating
+25;Crit Taken Rating (Melee);;;;;;;;;;;Melee Crit Taken Rating
+26;Crit Taken Rating (Ranged);;;;;;;;;;;Ranged Crit Taken Rating
+27;Crit Taken Rating (Spell);;;;;;;;;;;Spell Crit Taken Rating
+28;Haste Rating (Melee);;;;;;;;;;;Melee Haste Rating
+29;Haste Rating (Ranged);;;;;;;;;;;Ranged Haste Rating
+30;Haste Rating (Spell);;;;;;;;;;;Spell Haste Rating
+31;Hit Rating;;;;;;;;;;;Hit Rating
+32;Crit Rating;;;;;;;;;;;Crit Rating
+33;Hit Taken Rating;;;;;;;;;;;Hit Taken Rating
+34;Crit Taken Rating;;;;;;;;;;;Crit Taken Rating
+35;Resilience Rating;;;;;;;;;;;Resilience Rating
+36;Haste Rating;;;;;;;;;;;Haste Rating
+37;Expertise Rating;;;;;;;;;;;Expertise Rating
+38;Attack Power;;;;;;;;;;;Attack Power
+39;Attack Power (Ranged);;;;;;;;;;;Ranged Attack Power
+40;Attack Power (Feral);;;;;;;;;;;Feral Attack Power
+41;Spell Done (Healing);;;;;;;;;;;Healing Spell Done
+42;Spell Done (Damage);;;;;;;;;;;Damage Spell Done
+43;Mana Regeneration;;;;;;;;;;;Mana Regeneration
+44;Armor Penetration;;;;;;;;;;;Armor Penetration
+45;Spell Power;;;;;;;;;;;Spell Power
+46;Health Regeneration;;;;;;;;;;;Health Regeneration
+47;Spell Penetration;;;;;;;;;;;Spell Penetration
+48;Block Value;;;;;;;;;;;Block Value

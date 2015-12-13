@@ -1,0 +1,10 @@
+id;value
+1;In use
+2;Locked
+3;Interact Cond
+4;Transport
+5;Not selectable
+6;Nodespawn
+7;Triggered
+10;Damaged
+11;Destroyed

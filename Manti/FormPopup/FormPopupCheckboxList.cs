@@ -48,7 +48,7 @@ namespace Manti.FormPopup
         {
             foreach (DataRow row in dtOptions.Rows)
             {
-                checkedListBoxPopupValues.Items.Add(row["name"]);
+                checkedListBoxPopupValues.Items.Add(row[1]);
             }
         }
         private int CalculateBitMask()
@@ -136,15 +136,12 @@ namespace Manti.FormPopup
         }
         private void buttonPopupOK_Click(object sender, EventArgs e)
         {
-            if (checkedListBoxPopupValues.CheckedItems.Count > 0)
+            if (BitMask == true)
             {
-                if (BitMask == true)
-                {
-                    CheckValue = CalculateBitMask();
-                }
-
-                this.Close();
+                CheckValue = CalculateBitMask();
             }
+
+            this.Close();
         }
         private void buttonPopupClose_Click(object sender, EventArgs e)
         {

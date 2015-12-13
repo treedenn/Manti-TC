@@ -118,7 +118,7 @@ namespace Manti
 
         #region GlobalFunctions
             // Reads a CSV file (ID and Name are columns in the CSV file, separated with a comma).
-        private DataTable ReadExcelCSV(string csvName, int ID, int name)
+        private DataTable ReadExcelCSV(string csvName, int ID, int value)
         {
             var reader = new System.IO.StreamReader(@".\CSV\" + csvName + ".dbc.csv");
             var forgetFirst = true;
@@ -127,18 +127,21 @@ namespace Manti
 
             if (reader != null)
             {
-                dataColumn.Columns.Add("id", typeof(int));
-                dataColumn.Columns.Add("name", typeof(string));
+                dataColumn.Columns.Add("id", typeof(string));
+                dataColumn.Columns.Add("value", typeof(string));
 
-                string line;
+                string line; string[] words;
 
                 while ((line = reader.ReadLine()) != null)
                 {
-                    string[] words = line.Split(',');
+                    words = line.Split(';');
 
                     if (forgetFirst == false)
                     {
-                        dataColumn.Rows.Add(Convert.ToInt16(words[ID].Trim('"')), words[name].Trim('"'));
+                        if (words.Length > value && words[value] != null)
+                        {
+                            dataColumn.Rows.Add(words[ID].Trim('"'), words[value].Trim('"'));
+                        }
                     }
 
                     forgetFirst = false;
@@ -147,7 +150,7 @@ namespace Manti
                 reader.Close();
             } else
             {
-                MessageBox.Show(csvName + " Could not been found in the CSV folder.", "File Directory : Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(csvName + " Could not been found in the CSV folder.\n It has to be same location as the program.", "File Directory : CSV ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return dataColumn;
@@ -210,12 +213,13 @@ namespace Manti
         {
             var popupDialog = new FormPopup.FormPopupSelection();
             popupDialog.setFormTitle = formTitle;
+            popupDialog.changeSelection = textbox.Text.Trim();
             popupDialog.setDataTable = data;
             popupDialog.Owner = this;
             popupDialog.ShowDialog();
 
             this.Activate();
-            textbox.Text = (popupDialog.getSelection == "") ? textbox.Text : popupDialog.getSelection;
+            textbox.Text = (popupDialog.changeSelection == "") ? textbox.Text : popupDialog.changeSelection;
         }
             // Create Popup : Checklist
         private void CreatePopupChecklist(string formTitle, DataTable data, Control textbox, bool bitMask = false)
@@ -323,12 +327,11 @@ namespace Manti
                 connect.Open();
                 return true;
             }
-            catch (MySqlException ex)
+            catch (MySqlException)
             {
-                MessageBox.Show(ex.Message, "MySQL Error: " + ex.Number, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+                throw;
             }
-
-            return false;
         }
             // Tries to close the connection between the program and database.
         private bool ConnectionClose(MySqlConnection connect)
@@ -2285,7 +2288,6 @@ namespace Manti
         #endregion
         #region Quest
 
-        // Quest Search
         private void buttonQuestSearchSearch_Click(object sender, EventArgs e)
         {
             bool totalSearch = CheckEmptyControls(tabPageQuestSearch); DialogResult dr;
@@ -2337,7 +2339,6 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
-            // Cell Doubleclick
         private void dataGridViewQuestSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViewQuestSearch.Rows.Count != 0)
@@ -2347,7 +2348,6 @@ namespace Manti
                 tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
             }
         }
-            // Generate
         private void buttonQuestSectionGenerate_Click(object sender, EventArgs e)
         {
             textBoxQuestScriptOutput.Text = DatabaseQuestSectionGenerate();
@@ -2388,6 +2388,26 @@ namespace Manti
         {
             GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
         }
+
+        private void buttonQuestSectionReqRace_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void buttonQuestSectionReqClass_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void buttonQuestSectionQSort_Click(object sender, EventArgs e)
+        {
+            if (radioButtonQuestSectionZID.Checked)
+            {
+                CreatePopupSelection("Zone ID Selection", ReadExcelCSV("AreaTable", 0, 11), textBoxQuestSectionQSort);
+            } else
+            {
+                CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionQSort);
+            }
+        }
+
         #endregion
         #region GameObject
 
@@ -2455,6 +2475,7 @@ namespace Manti
             var list = new List<Tuple<TextBox, string>>();
 
             list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempName, ""));
+            list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempSize, "1"));
             list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempAIName, ""));
             list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempScriptName, ""));
 
@@ -2467,6 +2488,17 @@ namespace Manti
         {
             GenerateDeleteSelectedRow(dataGridViewGameObjectSearch, "gameobject_template", "entry", textBoxGameObjectScriptOutput);
         }
+
+        #region POPUP
+        private void buttonGameObjectTempType_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Game Object Type Selection", ReadExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType);
+        }
+        private void buttonGameObjectTempFlags_Click(object sender, EventArgs e)
+        {
+            CreatePopupChecklist("Game Object Flags Selection", ReadExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags, true);
+        }
+        #endregion
 
         #endregion
         #region Item
@@ -2739,95 +2771,129 @@ namespace Manti
         #endregion
 
         #region POPUPS
-        private void buttonItemSearchClassPopup_Click(object sender, EventArgs e)
+        private void buttonItemSearchClass_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass);
         }
-        private void buttonItemSearchSubclassPopup_Click(object sender, EventArgs e)
+        private void buttonItemSearchSubclass_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass);
         }
-        private void buttonItemTempRacePopup_Click(object sender, EventArgs e)
+        private void buttonItemTempRace_Click(object sender, EventArgs e)
         {
             CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace, true);
         }
-        private void buttonItemTempClassPopup_Click(object sender, EventArgs e)
+        private void buttonItemTempClass_Click(object sender, EventArgs e)
         {
             CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass, true);
         }
-        private void buttonItemTempDmgType1Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempDmgType1_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Damage Type I Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1);
         }
-        private void buttonItemTempDmgType2Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempDmgType2_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Damage Type II Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2);
         }
-        private void buttonItemTempStatsType1Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType1_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection I", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1);
         }
-        private void buttonItemTempStatsType2Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType2_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection II", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2);
         }
-        private void buttonItemTempStatsType3Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType3_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection III", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3);
         }
-        private void buttonItemTempStatsType4Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType4_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection IV", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4);
         }
-        private void buttonItemTempStatsType5Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType5_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection V", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5);
         }
-        private void buttonItemTempStatsType6Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType6_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection VI", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6);
         }
-        private void buttonItemTempStatsType7Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType7_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection VII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7);
         }
-        private void buttonItemTempStatsType8Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType8_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection VIII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8);
         }
-        private void buttonItemTempStatsType9Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType9_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection IX", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9);
         }
-        private void buttonItemTempStatsType10Popup_Click(object sender, EventArgs e)
+        private void buttonItemTempStatsType10_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Stat Selection X", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10);
         }
-        private void buttonItemTempTypeClassPopup_Click(object sender, EventArgs e)
+        private void buttonItemTempTypeClass_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass);
         }
-        private void buttonItemTempSubclassPopup_Click(object sender, EventArgs e)
+        private void buttonItemTempSubclass_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass);
         }
-        private void buttonItemTempQualityPopup_Click(object sender, EventArgs e)
+        private void buttonItemTempQuality_Click(object sender, EventArgs e)
         {
             CreatePopupSelection("Quality Selection", ReadExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality);
+        }
+        private void buttonItemTempItemSet_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("ItemSet Selection", ReadExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet);
+        }
+        private void buttonItemTempBonding_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Bonding Selection", ReadExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding);
+        }
+        private void buttonItemTempSheath_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Sheath Selection", ReadExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath);
+        }
+        private void buttonItemTempColor1_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Color Selection I", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1);
+        }
+        private void buttonItemTempColor2_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Color Selection II", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2);
+        }
+        private void buttonItemTempColor3_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Color Selection III", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3);
+        }
+        private void buttonItemTempSocketBonus_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Socket Bonus Selection III", ReadExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus);
+        }
+        private void buttonItemTempGemProper_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Gem Property Selection", ReadExcelCSV("GemProperties", 0, 1), textBoxItemTempGemProper);
         }
 
 
 
 
 
-
-
         #endregion
 
         #endregion
 
         #endregion
 
+        private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID);
+        }
     }
 
 
