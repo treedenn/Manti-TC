@@ -238,20 +238,27 @@ namespace Manti
             textbox.Text = currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
         }
             // Generate SQL Loot
-        private void GenerateLoot(string lootTable, DataGridView dataGrid, TextBox output)
+        private void GenerateDataColumn(string lootTable, DataGridView dataGrid, TextBox output)
         {
-            string query = "DELETE FROM " + lootTable + " WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
+            string query = "DELETE FROM `" + lootTable + "` WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
 
             foreach (DataGridViewRow row in dataGrid.Rows)
             {
                 if (row.Cells[0].Value.ToString() != "")
                 {
-                    query += Environment.NewLine;
+                    query += Environment.NewLine + "INSERT INTO `" + lootTable + "` VALUES (";
 
-                    query += "INSERT INTO " + lootTable + " VALUES (" +
-                        row.Cells[0].Value.ToString() + ", " + row.Cells[1].Value.ToString() + ", " + row.Cells[2].Value.ToString() + ", " +
-                        row.Cells[3].Value.ToString() + ", " + row.Cells[4].Value.ToString() + ", " + row.Cells[5].Value.ToString() + ", " +
-                        row.Cells[6].Value.ToString() + ", " + row.Cells[7].Value.ToString() + ", " + row.Cells[8].Value.ToString() + ", \"\");";
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        if (cell.OwningColumn.DataPropertyName != "name")
+                        {
+                            query += cell.Value.ToString() + ", ";
+                        }
+                    }
+
+                    query += "0);";
+
+
                 }
             }
 
@@ -373,6 +380,49 @@ namespace Manti
             }
 
             return 0;
+        }
+            // Gets all rows from a search, searches for items names. if itemid is false, it tries for item identifier.
+        private DataTable DatabaseItemNameColumn(string table, string where, string id, int itemColumn, bool isItemID)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            var searchTable = new DataTable();
+
+            if (ConnectionOpen(connect))
+            {
+                // Create the query depending on the paramenters
+                string query = "SELECT * FROM " +table+ " WHERE " +where+ " = '" + id + "';";
+
+                // Searches in mySQL.
+                var datatable = DatabaseSearch(connect, query);
+
+                // Sets all the columns to string.
+                searchTable = ConvertColumnsToString(datatable.Tables[0]);
+
+                if (searchTable.Rows.Count != 0)
+                {
+                    // Adds a new column to the existing one, called 'name'.
+                    searchTable.Columns.Add("name", typeof(string));
+
+                    // Loops through all rows
+                    for (int i = 0; i < searchTable.Rows.Count; i++)
+                    {
+
+                        if (isItemID)
+                        {
+                            searchTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(searchTable.Rows[i][itemColumn]));
+                        } else
+                        {
+                            searchTable.Rows[i]["name"] = DatabaseItemGetName(DatabaseItemGetEntry(Convert.ToUInt32(searchTable.Rows[i][itemColumn])));
+                        }
+
+                    }
+                }
+
+                ConnectionClose(connect);
+            }
+
+            return searchTable;
         }
             // Gets the Item Entry with global item identifier.
         private uint DatabaseItemGetEntry(uint itemIdentifier)
@@ -972,102 +1022,6 @@ namespace Manti
                 ConnectionClose(connect);
             }
         }
-            // Searches the database for the creature's loot
-        private void DatabaseCreatureLoot(string lootID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect))
-            {
-                string query = "SELECT * FROM creature_loot_template WHERE Entry = '" + lootID + "';";
-
-                // Creature Loot Template Table
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every inventory item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewCreatureLoot.DataSource = newTable;
-
-                ConnectionClose(connect);
-            }
-        }
-            // Searches the database for the creature's pickpocket loot
-        private void DatabaseCreaturePickpocket(string pickpocketID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect))
-            {
-                string query = "SELECT * FROM pickpocketing_loot_template WHERE Entry = '" + pickpocketID + "';";
-
-                // Creature Loot Template Table
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every inventory item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewCreaturePickpocketLoot.DataSource = newTable;
-
-                ConnectionClose(connect);
-            }
-        }
-            // Searches the database for the creature's skin loot
-        private void DatabaseCreatureSkin(string skinID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect))
-            {
-                string query = "SELECT * FROM skinning_loot_template WHERE Entry = '" + skinID + "';";
-
-                // Creature Loot Template Table
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every inventory item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewCreatureSkinLoot.DataSource = newTable;
-
-                ConnectionClose(connect);
-            }
-        }
             // Template Generation
         private string DatabaseCreatureTempGenerate()
         {
@@ -1168,6 +1122,11 @@ namespace Manti
             ");";
 
             return query;
+        }
+
+        private void DatabaseCreatureVendor()
+        {
+
         }
         #endregion
         #region Quest
@@ -1762,126 +1721,6 @@ namespace Manti
 
             return query;
         }
-        private void DatabaseItemLoot(string itemEntryID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect) && itemEntryID != "")
-            {
-                string itemlootQuery = "SELECT * FROM item_loot_template WHERE entry = '" + itemEntryID + "';";
-
-                var datatable = DatabaseSearch(connect, itemlootQuery);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every inventory item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewItemLoot.DataSource = newTable;
-            }
-
-            ConnectionClose(connect);
-        }
-        private void DatabaseItemDisenchant(string DisenchantID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect) && DisenchantID != "")
-            {
-                string query = "SELECT * FROM disenchant_loot_template WHERE entry = '" + DisenchantID + "';";
-
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewItemDE.DataSource = newTable;
-            }
-
-            ConnectionClose(connect);
-        }
-        private void DatabaseItemMilling(string itemEntryID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect) && itemEntryID != "")
-            {
-                string query = "SELECT * FROM milling_loot_template WHERE entry = '" + itemEntryID + "';";
-
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewItemMill.DataSource = newTable;
-            }
-
-            ConnectionClose(connect);
-        }
-        private void DatabaseItemProspecting(string itemEntryID)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect) && itemEntryID != "")
-            {
-                string query = "SELECT * FROM prospecting_loot_template WHERE entry = '" + itemEntryID + "';";
-
-                var datatable = DatabaseSearch(connect, query);
-
-                var newTable = ConvertColumnsToString(datatable.Tables[0]);
-
-                if (newTable.Rows.Count != 0)
-                {
-                    // Adds a new column 'name'
-                    newTable.Columns.Add("name", typeof(string));
-
-                    // loops every item for name
-                    for (int i = 0; i < newTable.Rows.Count; i++)
-                    {
-                        // sets the column 'name' to the itemname
-                        newTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(newTable.Rows[i][1]));
-                    }
-                }
-
-                dataGridViewItemProspect.DataSource = newTable;
-            }
-
-            ConnectionClose(connect);
-        }
 
         #endregion
 
@@ -2113,9 +1952,11 @@ namespace Manti
             {
                 DatabaseCreatureSearch(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
                 DatabaseCreatureLocation(dataGridViewCreatureSearch.SelectedCells[0].Value.ToString());
-                DatabaseCreatureLoot(textBoxCreatureTemplateLootID.Text.Trim());
-                DatabaseCreaturePickpocket(textBoxCreatureTemplatePickID.Text.Trim());
-                DatabaseCreatureSkin(textBoxCreatureTemplateSkinID.Text.Trim());
+
+                dataGridViewCreatureVendor.DataSource = DatabaseItemNameColumn("npc_vendor", "entry", textBoxCreatureTemplateEntry.Text.Trim(), 2, true);
+                dataGridViewCreatureLoot.DataSource = DatabaseItemNameColumn("creature_loot_template", "Entry", textBoxCreatureTemplateLootID.Text.Trim(), 1, true);
+                dataGridViewCreaturePickpocketLoot.DataSource = DatabaseItemNameColumn("pickpocketing_loot_template", "Entry", textBoxCreatureTemplatePickID.Text.Trim(), 1, true);
+                dataGridViewCreatureSkinLoot.DataSource = DatabaseItemNameColumn("skinning_loot_template", "Entry", textBoxCreatureTemplateSkinID.Text.Trim(), 1, true);
             }
 
             tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
@@ -2183,7 +2024,7 @@ namespace Manti
             }
             private void buttonCreatureLootRefresh_Click(object sender, EventArgs e)
             {
-                DatabaseItemLoot((textBoxCreatureLootEntry.Text.Trim() != "") ? textBoxCreatureLootEntry.Text : textBoxCreatureTemplateEntry.Text);
+                dataGridViewItemLoot.DataSource = DatabaseItemNameColumn("item_loot_template", "entry", (textBoxCreatureLootEntry.Text.Trim() != "") ? textBoxCreatureLootEntry.Text : textBoxCreatureTemplateEntry.Text, 1, true);
             }
             private void buttonCreatureLootDelete_Click(object sender, EventArgs e)
             {
@@ -2197,7 +2038,7 @@ namespace Manti
             }
             private void buttonCreatureLootGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
+            GenerateDataColumn("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
         }
         #endregion
         #region Pickpocket
@@ -2225,7 +2066,7 @@ namespace Manti
         }
         private void buttonCreaturePickpocketRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemLoot((textBoxCreaturePickpocketEntry.Text.Trim() != "") ? textBoxCreaturePickpocketEntry.Text : textBoxCreatureTemplateEntry.Text);
+            dataGridViewCreaturePickpocketLoot.DataSource = DatabaseItemNameColumn("pickpocketing_loot_template", "Entry", (textBoxCreaturePickpocketEntry.Text.Trim() != "") ? textBoxCreaturePickpocketEntry.Text : textBoxCreatureTemplateEntry.Text, 1, true);
         }
         private void buttonCreaturePickpocketDelete_Click(object sender, EventArgs e)
         {
@@ -2239,7 +2080,7 @@ namespace Manti
         }
         private void buttonCreaturePickpocketGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("pickpocketing_loot_template", dataGridViewCreaturePickpocketLoot, textBoxCreatureScriptOutput);
+            GenerateDataColumn("pickpocketing_loot_template", dataGridViewCreaturePickpocketLoot, textBoxCreatureScriptOutput);
         }
         #endregion
         #region Skin
@@ -2267,7 +2108,7 @@ namespace Manti
         }
         private void buttonCreatureSkinRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemLoot((textBoxCreatureSkinEntry.Text.Trim() != "") ? textBoxCreatureSkinEntry.Text : textBoxCreatureTemplateEntry.Text);
+            dataGridViewCreatureSkinLoot.DataSource = DatabaseItemNameColumn("skinning_loot_template", "Entry", (textBoxCreatureSkinEntry.Text.Trim() != "") ? textBoxCreatureSkinEntry.Text : textBoxCreatureTemplateEntry.Text, 1, true);
         }
         private void buttonCreatureSkinDelete_Click(object sender, EventArgs e)
         {
@@ -2281,8 +2122,10 @@ namespace Manti
         }
         private void buttonCreatureSkinGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("skinning_loot_template", dataGridViewCreatureSkinLoot, textBoxCreatureScriptOutput);
+            GenerateDataColumn("skinning_loot_template", dataGridViewCreatureSkinLoot, textBoxCreatureScriptOutput);
         }
+        #endregion
+        #region Vendor
         #endregion
 
         #endregion
@@ -2406,6 +2249,10 @@ namespace Manti
             {
                 CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionQSort);
             }
+        }
+        private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID);
         }
 
         #endregion
@@ -2554,10 +2401,11 @@ namespace Manti
                 tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
 
                 DatabaseItemSearch(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
-                DatabaseItemLoot(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
-                DatabaseItemDisenchant(textBoxItemTempDisenchantID.Text.Trim());
-                DatabaseItemMilling(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
-                DatabaseItemProspecting(dataGridViewItemSearch.SelectedCells[0].Value.ToString());
+
+                dataGridViewItemLoot.DataSource = DatabaseItemNameColumn("item_loot_template", "entry", dataGridViewItemSearch.SelectedCells[0].Value.ToString(), 1, true);
+                dataGridViewItemDE.DataSource = DatabaseItemNameColumn("disenchant_loot_template", "entry", textBoxItemTempDisenchantID.Text.Trim(), 1, true);
+                dataGridViewItemMill.DataSource = DatabaseItemNameColumn("milling_loot_template", "entry", dataGridViewItemSearch.SelectedCells[0].Value.ToString(), 1, true);
+                dataGridViewItemProspect.DataSource = DatabaseItemNameColumn("prospecting_loot_template", "entry", dataGridViewItemSearch.SelectedCells[0].Value.ToString(), 1, true);
             }
         }
         private void buttonItemScriptUpdate_Click(object sender, EventArgs e)
@@ -2629,7 +2477,7 @@ namespace Manti
         }
         private void buttonItemLootRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemLoot((textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text : textBoxItemTempEntry.Text);
+            dataGridViewItemLoot.DataSource = DatabaseItemNameColumn("item_loot_template", "entry", (textBoxItemLootEntry.Text.Trim() != "") ? textBoxItemLootEntry.Text : textBoxItemTempEntry.Text, 1, true);
         }
         private void buttonItemLootDelete_Click(object sender, EventArgs e)
         {
@@ -2643,48 +2491,49 @@ namespace Manti
         }
         private void buttonItemLootGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
+            GenerateDataColumn("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
         }
         #endregion
-        #region Prospecting
-        private void buttonItemProspectAdd_Click(object sender, EventArgs e)
+        #region Disenchant
+        private void buttonItemDEAdd_Click(object sender, EventArgs e)
         {
             var values = new string[] {
-                textBoxItemProspectEntry.Text,
-                textBoxItemProspectItemID.Text,
-                textBoxItemProspectReference.Text,
-                textBoxItemProspectChance.Text,
-                textBoxItemProspectQR.Text,
-                textBoxItemProspectLM.Text,
-                textBoxItemProspectGID.Text,
-                textBoxItemProspectMIC.Text,
-                textBoxItemProspectMAC.Text
+                textBoxItemDEID.Text,
+                textBoxItemDEItemID.Text,
+                textBoxItemDEReference.Text,
+                textBoxItemDEChance.Text,
+                textBoxItemDEQR.Text,
+                textBoxItemDELM.Text,
+                textBoxItemDEGID.Text,
+                textBoxItemDEMIC.Text,
+                textBoxItemDEMAC.Text
             };
 
-            if (textBoxItemProspectEntry.Text.Trim() != "")
+            if (textBoxItemDEID.Text.Trim() != "")
             {
-                var existingData = (DataTable)dataGridViewItemProspect.DataSource;
+                var existingData = (DataTable)dataGridViewItemDE.DataSource;
                 existingData.Rows.Add(values);
-                dataGridViewItemProspect.DataSource = existingData;
+                dataGridViewItemDE.DataSource = existingData;
             }
         }
-        private void buttonItemProspectRefresh_Click(object sender, EventArgs e)
+        private void buttonItemDERefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemProspecting((textBoxItemProspectEntry.Text.Trim() != "") ? textBoxItemProspectEntry.Text.Trim() : textBoxItemTempEntry.Text);
+            
+            dataGridViewItemDE.DataSource = DatabaseItemNameColumn("disenchant_loot_template", "entry", (textBoxItemDEID.Text.Trim() != "") ? textBoxItemDEID.Text : textBoxItemTempDisenchantID.Text, 1, true);
         }
-        private void buttonItemProspectDelete_Click(object sender, EventArgs e)
+        private void buttonItemDEDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItemProspect.SelectedRows.Count > 0)
+            if (dataGridViewItemDE.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dataGridViewItemProspect.SelectedRows)
+                foreach (DataGridViewRow row in dataGridViewItemDE.SelectedRows)
                 {
-                    dataGridViewItemProspect.Rows.RemoveAt(row.Index);
+                    dataGridViewItemDE.Rows.RemoveAt(row.Index);
                 }
             }
         }
-        private void buttonItemProspectGenerate_Click(object sender, EventArgs e)
+        private void buttonItemDEGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("prospecting_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+            GenerateDataColumn("disenchant_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
         }
         #endregion
         #region Milling
@@ -2711,7 +2560,7 @@ namespace Manti
         }
         private void buttonItemMillRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemMilling((textBoxItemMillEntry.Text.Trim() != "") ? textBoxItemMillEntry.Text.Trim() : textBoxItemTempEntry.Text);
+            dataGridViewItemMill.DataSource = DatabaseItemNameColumn("milling_loot_template", "entry", (textBoxItemMillEntry.Text.Trim() != "") ? textBoxItemMillEntry.Text.Trim() : textBoxItemTempEntry.Text, 1, true);
         }
         private void buttonItemMillDelete_Click(object sender, EventArgs e)
         {
@@ -2725,48 +2574,48 @@ namespace Manti
         }
         private void buttonItemMillGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("milling_loot_template", dataGridViewItemMill, textBoxItemScriptOutput);
+            GenerateDataColumn("milling_loot_template", dataGridViewItemMill, textBoxItemScriptOutput);
         }
         #endregion
-        #region Disenchant
-        private void buttonItemDEAdd_Click(object sender, EventArgs e)
+        #region Prospecting
+        private void buttonItemProspectAdd_Click(object sender, EventArgs e)
         {
             var values = new string[] {
-                textBoxItemDEEntry.Text,
-                textBoxItemDEItemID.Text,
-                textBoxItemDEReference.Text,
-                textBoxItemDEChance.Text,
-                textBoxItemDEQR.Text,
-                textBoxItemDELM.Text,
-                textBoxItemDEGID.Text,
-                textBoxItemDEMIC.Text,
-                textBoxItemDEMAC.Text
+                textBoxItemProspectEntry.Text,
+                textBoxItemProspectItemID.Text,
+                textBoxItemProspectReference.Text,
+                textBoxItemProspectChance.Text,
+                textBoxItemProspectQR.Text,
+                textBoxItemProspectLM.Text,
+                textBoxItemProspectGID.Text,
+                textBoxItemProspectMIC.Text,
+                textBoxItemProspectMAC.Text
             };
 
-            if (textBoxItemDEEntry.Text.Trim() != "")
+            if (textBoxItemProspectEntry.Text.Trim() != "")
             {
-                var existingData = (DataTable)dataGridViewItemDE.DataSource;
+                var existingData = (DataTable)dataGridViewItemProspect.DataSource;
                 existingData.Rows.Add(values);
-                dataGridViewItemDE.DataSource = existingData;
+                dataGridViewItemProspect.DataSource = existingData;
             }
         }
-        private void buttonItemDERefresh_Click(object sender, EventArgs e)
+        private void buttonItemProspectRefresh_Click(object sender, EventArgs e)
         {
-            DatabaseItemDisenchant((textBoxItemDEEntry.Text.Trim() != "") ? textBoxItemDEEntry.Text.Trim() : textBoxItemTempDisenchantID.Text);
+            dataGridViewItemProspect.DataSource = DatabaseItemNameColumn("prospecting_loot_template", "entry", (textBoxItemProspectEntry.Text.Trim() != "") ? textBoxItemProspectEntry.Text.Trim() : textBoxItemTempEntry.Text, 1, true);
         }
-        private void buttonItemDEDelete_Click(object sender, EventArgs e)
+        private void buttonItemProspectDelete_Click(object sender, EventArgs e)
         {
-            if (dataGridViewItemDE.SelectedRows.Count > 0)
+            if (dataGridViewItemProspect.SelectedRows.Count > 0)
             {
-                foreach (DataGridViewRow row in dataGridViewItemDE.SelectedRows)
+                foreach (DataGridViewRow row in dataGridViewItemProspect.SelectedRows)
                 {
-                    dataGridViewItemDE.Rows.RemoveAt(row.Index);
+                    dataGridViewItemProspect.Rows.RemoveAt(row.Index);
                 }
             }
         }
-        private void buttonItemDEGenerate_Click(object sender, EventArgs e)
+        private void buttonItemProspectGenerate_Click(object sender, EventArgs e)
         {
-            GenerateLoot("disenchant_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+            GenerateDataColumn("prospecting_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
         }
         #endregion
 
@@ -2884,15 +2733,59 @@ namespace Manti
 
 
 
-        #endregion
+
 
         #endregion
 
         #endregion
 
-        private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
+        #endregion
+
+        private void buttonCreatureVendorAdd_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID);
+            var values = new object[] {
+                    textBoxCreatureVendorEntry.Text,
+                    textBoxCreatureVendorSlot.Text,
+                    textBoxCreatureVendorItemID.Text,
+                    textBoxCreatureVendorMAC.Text,
+                    textBoxCreatureVendorIncrtime.Text,
+                    textBoxCreatureVendorEC.Text
+                };
+
+            if (textBoxCreatureVendorEntry.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCreatureVendor.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCreatureVendor.DataSource = existingData;
+                dataGridViewCreatureVendor.FirstDisplayedScrollingRowIndex = dataGridViewCreatureVendor.Rows.Count - 1;
+            }
+        }
+
+        private void buttonCreatureVendorRefresh_Click(object sender, EventArgs e)
+        {
+            
+            dataGridViewCreatureVendor.DataSource = DatabaseItemNameColumn("npc_vendor", "entry", (textBoxCreatureVendorEntry.Text.Trim() != "") ? textBoxCreatureVendorEntry.Text.Trim() : textBoxCreatureTemplateEntry.Text.Trim(), 2, true);
+        }
+
+        private void buttonCreatureVendorDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCreatureVendor.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCreatureVendor.SelectedRows)
+                {
+                    dataGridViewCreatureVendor.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+
+        private void buttonCreatureVendorGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateDataColumn("npc_vendor", dataGridViewCreatureVendor, textBoxCreatureScriptOutput);
+        }
+
+        private void buttonCreatureVendorEC_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Extended Cost Selection", ReadExcelCSV("ItemExtendedCost", 0, 1), textBoxCreatureVendorEC);
         }
     }
 

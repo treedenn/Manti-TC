@@ -96,7 +96,7 @@
             // 
             this.columnHeaderTICValue.Tag = "";
             this.columnHeaderTICValue.Text = "Value";
-            this.columnHeaderTICValue.Width = 300;
+            this.columnHeaderTICValue.Width = 500;
             // 
             // textBoxPopupSearchID
             // 
