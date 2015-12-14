@@ -59,7 +59,7 @@ namespace Manti.FormTools
             }
         }
 
-        private string StartProcess(string path, bool hide)
+        private bool StartProcess(string path, bool hide)
         {
             if (File.Exists(path) && path.EndsWith(".exe", StringComparison.InvariantCultureIgnoreCase))
             {
@@ -76,13 +76,20 @@ namespace Manti.FormTools
                     process.StartInfo.CreateNoWindow = true;
                 }
 
-                process.Start();
+                try
+                {
+                    process.Start();
+                    return true;
+                } catch
+                {
+                    return false;
+                    throw;
+                }
             } else
             {
                 MessageBox.Show("The selected .exe can not been found.\n Do you mind selecting a new one?", "Error: Unknown Path", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
-
-            return "";
         }
 
         private bool CheckOnline(string path)
@@ -129,14 +136,18 @@ namespace Manti.FormTools
 
             if (WorldOnline == false)
             {
-                WorldOnline = true;
-                labelWorldStatus.Text = "Status: ONLINE";
-                StartProcess(pathWorld, checkBoxHideWorld.Checked);
-                buttonWorldServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
+                if (StartProcess(pathWorld, checkBoxHideWorld.Checked))
+                {
+                    WorldOnline = true;
+                    timerCheckProcess.Enabled = true;
+                    labelWorldStatus.Text = "Status: ONLINE";
+                    buttonWorldServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
+                }
             }
             else
             {
                 WorldOnline = false;
+                timerCheckProcess.Enabled = (AuthOnline) ? true : false;
                 labelWorldStatus.Text = "Status: OFFLINE";
                 CloseProcess(pathWorld);
                 buttonWorldServer.BackgroundImage = Manti.Properties.Resources.iconPlayButton;
@@ -152,13 +163,17 @@ namespace Manti.FormTools
 
             if (AuthOnline == false)
             {
-                AuthOnline = true;
-                labelAuthStatus.Text = "Status: ONLINE";
-                StartProcess(pathAuth, checkBoxHideAuth.Checked);
-                buttonAuthServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
+                if (StartProcess(pathAuth, checkBoxHideAuth.Checked))
+                {
+                    AuthOnline = true;
+                    timerCheckProcess.Enabled = true;
+                    labelAuthStatus.Text = "Status: ONLINE";
+                    buttonAuthServer.BackgroundImage = Manti.Properties.Resources.iconStopButton;
+                }
             } else
             {
                 AuthOnline = false;
+                timerCheckProcess.Enabled = (WorldOnline) ? true : false;
                 labelAuthStatus.Text = "Status: OFFLINE";
                 CloseProcess(pathAuth);
                 buttonAuthServer.BackgroundImage = Manti.Properties.Resources.iconPlayButton;
@@ -197,6 +212,7 @@ namespace Manti.FormTools
                     StartProcess(Properties.Settings.Default.PathWorldserver, checkBoxHideWorld.Checked);
                 }
             }
+
             if (checkBoxRestartAuth.Checked)
             {
                 if (!AuthOnline)
@@ -205,6 +221,13 @@ namespace Manti.FormTools
                 }
             }
 
+            if (!checkBoxRestartWorld.Checked && !checkBoxRestartAuth.Checked)
+            {
+                if (!WorldOnline && !AuthOnline)
+                {
+                    timerCheckProcess.Enabled = false;
+                }
+            }
 
         }
     }

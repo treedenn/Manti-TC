@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBoxWorldServer = new System.Windows.Forms.GroupBox();
+            this.checkBoxRestartWorld = new System.Windows.Forms.CheckBox();
             this.checkBoxHideWorld = new System.Windows.Forms.CheckBox();
             this.labelWorldStatus = new System.Windows.Forms.Label();
             this.buttonWorldPath = new System.Windows.Forms.Button();
             this.buttonWorldServer = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxRestartAuth = new System.Windows.Forms.CheckBox();
             this.checkBoxHideAuth = new System.Windows.Forms.CheckBox();
             this.labelAuthStatus = new System.Windows.Forms.Label();
             this.buttonAuthPath = new System.Windows.Forms.Button();
             this.buttonAuthServer = new System.Windows.Forms.Button();
             this.textBoxPathServer = new System.Windows.Forms.TextBox();
             this.buttonPathDialog = new System.Windows.Forms.Button();
-            this.checkBoxRestartWorld = new System.Windows.Forms.CheckBox();
-            this.checkBoxRestartAuth = new System.Windows.Forms.CheckBox();
             this.timerCheckProcess = new System.Windows.Forms.Timer(this.components);
             this.groupBoxWorldServer.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,6 +61,16 @@
             this.groupBoxWorldServer.TabIndex = 1;
             this.groupBoxWorldServer.TabStop = false;
             this.groupBoxWorldServer.Text = "World Server";
+            // 
+            // checkBoxRestartWorld
+            // 
+            this.checkBoxRestartWorld.AutoSize = true;
+            this.checkBoxRestartWorld.Location = new System.Drawing.Point(12, 95);
+            this.checkBoxRestartWorld.Name = "checkBoxRestartWorld";
+            this.checkBoxRestartWorld.Size = new System.Drawing.Size(60, 17);
+            this.checkBoxRestartWorld.TabIndex = 3;
+            this.checkBoxRestartWorld.Text = "Restart";
+            this.checkBoxRestartWorld.UseVisualStyleBackColor = true;
             // 
             // checkBoxHideWorld
             // 
@@ -116,6 +126,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auth Server";
+            // 
+            // checkBoxRestartAuth
+            // 
+            this.checkBoxRestartAuth.AutoSize = true;
+            this.checkBoxRestartAuth.Location = new System.Drawing.Point(12, 95);
+            this.checkBoxRestartAuth.Name = "checkBoxRestartAuth";
+            this.checkBoxRestartAuth.Size = new System.Drawing.Size(60, 17);
+            this.checkBoxRestartAuth.TabIndex = 3;
+            this.checkBoxRestartAuth.Text = "Restart";
+            this.checkBoxRestartAuth.UseVisualStyleBackColor = true;
             // 
             // checkBoxHideAuth
             // 
@@ -178,29 +198,8 @@
             this.buttonPathDialog.Visible = false;
             this.buttonPathDialog.Click += new System.EventHandler(this.buttonPathDialog_Click);
             // 
-            // checkBoxRestartWorld
-            // 
-            this.checkBoxRestartWorld.AutoSize = true;
-            this.checkBoxRestartWorld.Location = new System.Drawing.Point(12, 95);
-            this.checkBoxRestartWorld.Name = "checkBoxRestartWorld";
-            this.checkBoxRestartWorld.Size = new System.Drawing.Size(60, 17);
-            this.checkBoxRestartWorld.TabIndex = 3;
-            this.checkBoxRestartWorld.Text = "Restart";
-            this.checkBoxRestartWorld.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxRestartAuth
-            // 
-            this.checkBoxRestartAuth.AutoSize = true;
-            this.checkBoxRestartAuth.Location = new System.Drawing.Point(12, 95);
-            this.checkBoxRestartAuth.Name = "checkBoxRestartAuth";
-            this.checkBoxRestartAuth.Size = new System.Drawing.Size(60, 17);
-            this.checkBoxRestartAuth.TabIndex = 3;
-            this.checkBoxRestartAuth.Text = "Restart";
-            this.checkBoxRestartAuth.UseVisualStyleBackColor = true;
-            // 
             // timerCheckProcess
             // 
-            this.timerCheckProcess.Enabled = true;
             this.timerCheckProcess.Interval = 1000;
             this.timerCheckProcess.Tick += new System.EventHandler(this.timerCheckProcess_Tick);
             // 

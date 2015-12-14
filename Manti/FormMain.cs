@@ -19,11 +19,10 @@ namespace Manti
             InitializeComponent();   
         }
 
-        /* MUST READ
-            Hello viewer. This project contains a lot of code and functions.
-                For a better overview (Visual Studio) do the command: CTRL + M + O.
-                    I know, it's a great feature!
-        */
+        // MUST READ
+        //  Hello viewer. This project contains a lot of code and functions.
+        //      For a better overview (Visual Studio) do the command: CTRL + M + O.
+        //          I know, it's a great feature!
 
         #region GlobalEvents
 
@@ -106,10 +105,10 @@ namespace Manti
         }
         private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e)
         {
-            var CP = new FormTools.FormControlPanel();
-
+            Form CP = new FormTools.FormControlPanel();
+            
             CP.StartPosition = FormStartPosition.CenterScreen;
-            CP.Show(this);
+            CP.Show();
         }
         #endregion
 
@@ -1999,6 +1998,11 @@ namespace Manti
             GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
         }
 
+        private void buttonCreatureVendorEC_Click(object sender, EventArgs e)
+        {
+            CreatePopupSelection("Extended Cost Selection", ReadExcelCSV("ItemExtendedCost", 0, 1), textBoxCreatureVendorEC);
+        }
+
         #region Loot
             private void buttonCreatureLootAdd_Click(object sender, EventArgs e)
             {
@@ -2126,6 +2130,44 @@ namespace Manti
         }
         #endregion
         #region Vendor
+        private void buttonCreatureVendorAdd_Click(object sender, EventArgs e)
+        {
+            var values = new object[] {
+                    textBoxCreatureVendorEntry.Text,
+                    textBoxCreatureVendorSlot.Text,
+                    textBoxCreatureVendorItemID.Text,
+                    textBoxCreatureVendorMAC.Text,
+                    textBoxCreatureVendorIncrtime.Text,
+                    textBoxCreatureVendorEC.Text
+                };
+
+            if (textBoxCreatureVendorEntry.Text.Trim() != "")
+            {
+                var existingData = (DataTable)dataGridViewCreatureVendor.DataSource;
+                existingData.Rows.Add(values);
+                dataGridViewCreatureVendor.DataSource = existingData;
+                dataGridViewCreatureVendor.FirstDisplayedScrollingRowIndex = dataGridViewCreatureVendor.Rows.Count - 1;
+            }
+        }
+        private void buttonCreatureVendorRefresh_Click(object sender, EventArgs e)
+        {
+            
+            dataGridViewCreatureVendor.DataSource = DatabaseItemNameColumn("npc_vendor", "entry", (textBoxCreatureVendorEntry.Text.Trim() != "") ? textBoxCreatureVendorEntry.Text.Trim() : textBoxCreatureTemplateEntry.Text.Trim(), 2, true);
+        }
+        private void buttonCreatureVendorDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewCreatureVendor.SelectedRows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dataGridViewCreatureVendor.SelectedRows)
+                {
+                    dataGridViewCreatureVendor.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+        private void buttonCreatureVendorGenerate_Click(object sender, EventArgs e)
+        {
+            GenerateDataColumn("npc_vendor", dataGridViewCreatureVendor, textBoxCreatureScriptOutput);
+        }
         #endregion
 
         #endregion
@@ -2741,52 +2783,6 @@ namespace Manti
 
         #endregion
 
-        private void buttonCreatureVendorAdd_Click(object sender, EventArgs e)
-        {
-            var values = new object[] {
-                    textBoxCreatureVendorEntry.Text,
-                    textBoxCreatureVendorSlot.Text,
-                    textBoxCreatureVendorItemID.Text,
-                    textBoxCreatureVendorMAC.Text,
-                    textBoxCreatureVendorIncrtime.Text,
-                    textBoxCreatureVendorEC.Text
-                };
-
-            if (textBoxCreatureVendorEntry.Text.Trim() != "")
-            {
-                var existingData = (DataTable)dataGridViewCreatureVendor.DataSource;
-                existingData.Rows.Add(values);
-                dataGridViewCreatureVendor.DataSource = existingData;
-                dataGridViewCreatureVendor.FirstDisplayedScrollingRowIndex = dataGridViewCreatureVendor.Rows.Count - 1;
-            }
-        }
-
-        private void buttonCreatureVendorRefresh_Click(object sender, EventArgs e)
-        {
-            
-            dataGridViewCreatureVendor.DataSource = DatabaseItemNameColumn("npc_vendor", "entry", (textBoxCreatureVendorEntry.Text.Trim() != "") ? textBoxCreatureVendorEntry.Text.Trim() : textBoxCreatureTemplateEntry.Text.Trim(), 2, true);
-        }
-
-        private void buttonCreatureVendorDelete_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewCreatureVendor.SelectedRows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dataGridViewCreatureVendor.SelectedRows)
-                {
-                    dataGridViewCreatureVendor.Rows.RemoveAt(row.Index);
-                }
-            }
-        }
-
-        private void buttonCreatureVendorGenerate_Click(object sender, EventArgs e)
-        {
-            GenerateDataColumn("npc_vendor", dataGridViewCreatureVendor, textBoxCreatureScriptOutput);
-        }
-
-        private void buttonCreatureVendorEC_Click(object sender, EventArgs e)
-        {
-            CreatePopupSelection("Extended Cost Selection", ReadExcelCSV("ItemExtendedCost", 0, 1), textBoxCreatureVendorEC);
-        }
     }
 
 
