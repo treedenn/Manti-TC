@@ -183,7 +183,7 @@
             this.textBoxPathServer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxPathServer.Location = new System.Drawing.Point(12, 142);
             this.textBoxPathServer.Name = "textBoxPathServer";
-            this.textBoxPathServer.Size = new System.Drawing.Size(326, 20);
+            this.textBoxPathServer.Size = new System.Drawing.Size(301, 20);
             this.textBoxPathServer.TabIndex = 2;
             this.textBoxPathServer.Visible = false;
             // 

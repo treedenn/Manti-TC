@@ -23,6 +23,7 @@ namespace Manti
         //  Hello viewer. This project contains a lot of code and functions.
         //      For a better overview (Visual Studio) do the command: CTRL + M + O.
         //          I know, it's a great feature!
+        // Official SourceCode: https://github.com/Heitx/Manti-TC
 
         #region GlobalEvents
 
@@ -98,6 +99,11 @@ namespace Manti
         }
 
         #region ToolStrip
+        private void newConnectionToolStripMenuItemFile_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(Application.ExecutablePath);
+            Application.Exit();
+        }
         private void aboutToolStripMenuHelp_Click(object sender, EventArgs e)
         {
             var fa = new FormAbout();

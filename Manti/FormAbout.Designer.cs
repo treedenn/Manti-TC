@@ -57,7 +57,7 @@
             this.labelAboutVersion.Name = "labelAboutVersion";
             this.labelAboutVersion.Size = new System.Drawing.Size(92, 13);
             this.labelAboutVersion.TabIndex = 1;
-            this.labelAboutVersion.Text = "Version: 0.2-alpha";
+            this.labelAboutVersion.Text = "Version: 0.3-alpha";
             // 
             // labelAboutManti
             // 
@@ -65,9 +65,9 @@
             this.labelAboutManti.BackColor = System.Drawing.SystemColors.Control;
             this.labelAboutManti.Location = new System.Drawing.Point(9, 115);
             this.labelAboutManti.Name = "labelAboutManti";
-            this.labelAboutManti.Size = new System.Drawing.Size(285, 13);
+            this.labelAboutManti.Size = new System.Drawing.Size(318, 13);
             this.labelAboutManti.TabIndex = 2;
-            this.labelAboutManti.Text = "Manti (Manager) is a database editor, specifically for Trinity.\r\n";
+            this.labelAboutManti.Text = "Manti (Manager) is a database editor, specifically for Trinity 3.3.5a.\r\n";
             // 
             // linkLabelAboutSource
             // 
