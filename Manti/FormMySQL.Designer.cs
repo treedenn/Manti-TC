@@ -209,7 +209,7 @@
             this.groupBoxMySQLLogin.Size = new System.Drawing.Size(250, 129);
             this.groupBoxMySQLLogin.TabIndex = 6;
             this.groupBoxMySQLLogin.TabStop = false;
-            this.groupBoxMySQLLogin.Text = "Login Form";
+            this.groupBoxMySQLLogin.Text = "Details";
             // 
             // textBoxPort
             // 

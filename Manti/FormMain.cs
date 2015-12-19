@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
@@ -30,7 +31,6 @@ namespace Manti
         private void FormMain_Load(object sender, EventArgs e)
         {
             tabControlCategory.Focus();
-
 
             dataGridViewCharacterInventory.AutoGenerateColumns = false;
 
@@ -243,15 +243,15 @@ namespace Manti
             textbox.Text = currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
         }
             // Generate SQL Loot
-        private void GenerateDataColumn(string lootTable, DataGridView dataGrid, TextBox output)
+        private void GenerateDataColumn(string table, DataGridView dataGrid, TextBox output)
         {
-            string query = "DELETE FROM `" + lootTable + "` WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
+            string query = "DELETE FROM `" + table + "` WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
 
             foreach (DataGridViewRow row in dataGrid.Rows)
             {
                 if (row.Cells[0].Value.ToString() != "")
                 {
-                    query += Environment.NewLine + "INSERT INTO `" + lootTable + "` VALUES (";
+                    query += Environment.NewLine + "INSERT INTO `" + table + "` VALUES (";
 
                     foreach (DataGridViewCell cell in row.Cells)
                     {
@@ -268,6 +268,64 @@ namespace Manti
             }
 
             output.AppendText(query);
+        }
+            // Generates a sql file.
+        private void GenerateSQLFile(string startText, string fileName, TextBox tb)
+        {
+            // Save location / path
+            string path = @".\SQL\" + startText + fileName + ".SQL";
+
+            // Checks if the path file exists
+            if (File.Exists(path))
+            {
+                // Creates a messagebox with a warning
+                DialogResult dr = MessageBox.Show("File already exists.\n Replace it?", "Warning ...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                // If the feedback is no, stop the program from running
+                if (dr == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            // Checks if textbox is empty OR fileName is empty
+            if (tb.TextLength == 0 || fileName == string.Empty)
+            {
+                return;
+            }
+
+            // StreamWriter is used to write the SQL.
+            StreamWriter sw = new StreamWriter(path);
+
+            // Puts every line of the selected textbox in an array.
+            int lineCount = tb.GetLineFromCharIndex(tb.Text.Length) + 1;
+
+            for (var i = 0; i < lineCount; i++)
+            {
+                int startIndex = tb.GetFirstCharIndexFromLine(i);
+
+                int endIndex = (i < lineCount - 1) ?
+                    tb.GetFirstCharIndexFromLine(i + 1) : tb.Text.Length;
+
+               sw.WriteLine(tb.Text.Substring(startIndex, endIndex - startIndex));
+            }
+
+                /*
+            // Loops through each line and output it inside the file.
+            for (var i = 0; i < textContent.Length; i++)
+            {
+                if ((i % 100) == 0)
+                {
+                    sw.WriteLine(textContent[i]);
+                } else
+                {
+                    sw.Write(textContent[i]);
+                }
+            }*/
+
+            // Closes the StreamWriter.
+            sw.Close();
+
         }
             // Set All textboxes to ZERO.
         private void DefaultValuesGenerate(Control parent)
@@ -377,10 +435,9 @@ namespace Manti
             // Updates the database with a specific query and returns the row affected.
         private int DatabaseUpdate(MySqlConnection connect, string sqlQuery)
         {
-            if (connect.State == ConnectionState.Open)
+            if (connect.State == ConnectionState.Open && sqlQuery != "")
             {
                 var query = new MySqlCommand(sqlQuery, connect);
-
                 return query.ExecuteNonQuery();
             }
 
@@ -686,7 +743,7 @@ namespace Manti
                     "FROM account_muted WHERE guid='" + accountID + "';";
 
                 string accessQuery =
-                    "SELECT gmlevel, RealmID " +
+                    "SELECT id, gmlevel, RealmID " +
                     "FROM account_access WHERE id='" + accountID + "';";
 
                 string finalQuery = accountQuery + banQuery + muteQuery + accessQuery;
@@ -710,6 +767,11 @@ namespace Manti
                     // ban data
                 if (AccountTable.Tables[1].Rows.Count != 0)
                 {
+                    monthCalendarAccountAccountBanDate.AddMonthlyBoldedDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][0])));
+                    monthCalendarAccountAccountBanDate.SetDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][0])));
+                    monthCalendarAccountAccountUnbanDate.AddMonthlyBoldedDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][1])));
+                    monthCalendarAccountAccountUnbanDate.SetDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][1])));
+
                     textBoxAccountAccountBandate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][0])).ToString();
                     textBoxAccountAccountUnbandate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[1].Rows[0][1])).ToString();
                     textBoxAccountAccountBanreason.Text = AccountTable.Tables[1].Rows[0][2].ToString();
@@ -720,6 +782,11 @@ namespace Manti
                     // mute data
                 if (AccountTable.Tables[2].Rows.Count != 0)
                 {
+                    monthCalendarAccountAccountMuteDate.AddMonthlyBoldedDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])));
+                    monthCalendarAccountAccountMuteDate.SetDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])));
+                    monthCalendarAccountAccountUnmuteDate.AddMonthlyBoldedDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])).AddMinutes(Convert.ToDouble(AccountTable.Tables[2].Rows[0][1])));
+                    monthCalendarAccountAccountUnmuteDate.SetDate(UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])).AddMinutes(Convert.ToDouble(AccountTable.Tables[2].Rows[0][1])));
+
                     textBoxAccountAccountMutedate.Text = UnixStampToDateTime(Convert.ToDouble(AccountTable.Tables[2].Rows[0][0])).ToString();
                     textBoxAccountAccountMutetime.Text = AccountTable.Tables[2].Rows[0][1].ToString();
                     textBoxAccountAccountMutereason.Text = AccountTable.Tables[2].Rows[0][2].ToString();
@@ -734,6 +801,104 @@ namespace Manti
                 
                 ConnectionClose(connect);
             }
+        }
+        private string DatabaseAccountGenerate(string accountID)
+        {
+            string query = "";
+
+            #region Account Details
+            if (accountID != "")
+            {
+                var controls = new List<Tuple<string, string>>
+                {
+                    Tuple.Create(accountID, "id"),
+                    Tuple.Create(textBoxAccountAccountUsername.Text, "username"),
+                    Tuple.Create(textBoxAccountAccountEmail.Text, "email"),
+                    Tuple.Create(textBoxAccountAccountRegmail.Text, "reg_mail"),
+                    Tuple.Create(textBoxAccountAccountLastIP.Text, "last_ip"),
+                    Tuple.Create(checkBoxAccountAccountLocked.Checked ? "1" : "0", "locked"),
+                    Tuple.Create(checkBoxAccountAccountOnline.Checked ? "1" : "0", "online"),
+                    Tuple.Create(textBoxAccountAccountExpansion.Text, "expansion")
+                };
+
+                query += "UPDATE `account` SET ";
+
+                for (var i = 0; i < controls.Count; i++)
+                {
+                    query += (i != controls.Count - 1) ?
+                        "`" + controls[i].Item2 + "` = '" + controls[i].Item1 + "', " : 
+                        "`" + controls[i].Item2 + "` = '" + controls[i].Item1 + "'";
+                }
+
+                query += " WHERE `id` = '" + accountID + "';";
+            }
+            #endregion
+
+            #region Ban & Mute
+            if (textBoxAccountAccountBandate.Text.Trim() != "" && textBoxAccountAccountMutedate.Text.Trim() != "")
+            {
+                DateTimeToUnixStamp(Convert.ToDateTime(textBoxAccountAccountBandate.Text));
+                var banControls = new List<Tuple<string, string>>
+                {
+                    Tuple.Create(DateTimeToUnixStamp(Convert.ToDateTime(textBoxAccountAccountBandate.Text)).ToString(), "bandate"),
+                    Tuple.Create(DateTimeToUnixStamp(Convert.ToDateTime(textBoxAccountAccountUnbandate.Text)).ToString(), "unbandate"),
+                    Tuple.Create(textBoxAccountAccountBannedby.Text, "bannedby"),
+                    Tuple.Create(textBoxAccountAccountBanreason.Text, "banreason"),
+                    Tuple.Create(checkBoxAccountAccountBanActive.Checked ? "1" : "0", "active")
+                };
+
+                var muteControls = new List<Tuple<string, string>>
+                {
+                    Tuple.Create(DateTimeToUnixStamp(Convert.ToDateTime(textBoxAccountAccountMutedate.Text)).ToString(), "mutedate"),
+                    Tuple.Create(textBoxAccountAccountMutetime.Text, "mutetime"),
+                    Tuple.Create(textBoxAccountAccountMutedby.Text, "mutedby"),
+                    Tuple.Create(textBoxAccountAccountMutereason.Text, "mutereason")
+                };
+
+                query += Environment.NewLine + Environment.NewLine;
+                query += "UPDATE `account_banned` SET ";
+
+                for (var i = 0; i < banControls.Count; i++)
+                {
+                    query += (i != banControls.Count - 1) ?
+                        "`" + banControls[i].Item2 + "` = '" + banControls[i].Item1 + "', " : 
+                        "`" + banControls[i].Item2 + "` = '" + banControls[i].Item1 + "'";
+                }
+
+                query += " WHERE `id` = '" + accountID + "';";
+
+                // MUTE
+                query += Environment.NewLine;
+                query += "UPDATE `account_muted` SET ";
+
+                for (var i = 0; i < muteControls.Count; i++)
+                {
+                    query += (i != muteControls.Count - 1) ?
+                        "`" + muteControls[i].Item2 + "` = '" + muteControls[i].Item1 + "', " :
+                        "`" + muteControls[i].Item2 + "` = '" + muteControls[i].Item1 + "'";
+                }
+
+                query += " WHERE `guid` = '" + accountID + "';";
+
+
+            }
+            #endregion
+
+            #region Access
+            if (dataGridViewAccountAccess.Rows.Count > 0)
+            {
+                query += Environment.NewLine + Environment.NewLine;
+                query += "DELETE FROM `account_access` WHERE `id` = '" + accountID + "';";
+
+                foreach (DataGridViewRow row in dataGridViewAccountAccess.Rows)
+                {
+                    query += Environment.NewLine;
+                    query += "INSERT INTO `account_access` VALUES ('" + row.Cells[0].Value.ToString() + "', '" + row.Cells[1].Value.ToString() + "', '" + row.Cells[2].Value.ToString() + "');";
+                }
+            }
+            #endregion
+
+            return query;
         }
 
         #endregion
@@ -1569,7 +1734,7 @@ namespace Manti
         }
         private string DatabaseItemTempGenerate()
         {
-            string query = "REPLACE INTO `item_template` (" +
+            string query = "REPLACE INTO `item_template` (" + 
             "`entry`, `class`, `subclass`, `name`, `displayid`, `Quality`, `Flags`, `FlagsExtra`, `BuyCount`, `BuyPrice`, `SellPrice`, `InventoryType`, `maxcount`, `ContainerSlots`, " +
             "`AllowableClass`, `AllowableRace`, `ItemLevel`, `RequiredLevel`, `RequiredSkill`, `RequiredSkillRank`, `requiredspell`, `requiredhonorrank`, `RequiredCityRank`, `RequiredReputationFaction`, `RequiredReputationRank`, `RequiredDisenchantSkill`, " +
             "`StatsCount`, `stat_type1`, `stat_value1`, `stat_type2`, `stat_value2`, `stat_type3`, `stat_value3`, `stat_type4`, `stat_value4`, `stat_type5`, `stat_value5`, `stat_type6`, `stat_value6`, `stat_type7`, `stat_value7`, `stat_type8`, `stat_value8`, `stat_type9`, `stat_value9`, `stat_type10`, `stat_value10`, `ScalingStatDistribution`, `ScalingStatValue`, " +
@@ -1580,7 +1745,7 @@ namespace Manti
             "`socketColor_1`, `socketContent_1`, `socketColor_2`, `socketContent_2`, `socketColor_3`, `socketContent_3`, `socketBonus`, `GemProperties`, " +
             "`delay`, `ammo_type`, `RangedModRange`, `bonding`, `description`, `PageText`, `LanguageID`, `PageMaterial`, `startquest`, `lockid`, `Material`, `sheath`, " +
             "`RandomProperty`, `RandomSuffix`, `block`, `itemset`, `MaxDurability`, `area`, `Map`, `DisenchantID`, `ArmorDamageModifier`, `HolidayId`, `FoodType`, `flagsCustom`, `duration`, `ItemLimitCategory`, `minMoneyLoot`, `maxMoneyLoot`" +
-            ") VALUES (" +
+            ") VALUES (" + 
 
             textBoxItemTempEntry.Text.Trim() + ", " +
             textBoxItemTempTypeClass.Text.Trim() + ", " +
@@ -1772,38 +1937,77 @@ namespace Manti
         }
         private void dataGridViewAccountSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewAccountSearch.RowCount != 0)
+            if (dataGridViewAccountSearch.SelectedRows.Count > 0)
             {
                 DatabaseAccountSearch(dataGridViewAccountSearch.SelectedCells[0].Value.ToString());
 
                 tabControlCategoryAccount.SelectedTab = tabPageAccountAccount;
             }
         }
+        private void monthCalendarAccountAccountBanDate_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBoxAccountAccountBandate.Text = monthCalendarAccountAccountBanDate.SelectionStart.ToString();
+        }
+        private void monthCalendarAccountAccountUnbanDate_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBoxAccountAccountUnbandate.Text = monthCalendarAccountAccountUnbanDate.SelectionStart.ToString();
+        }
+        private void monthCalendarAccountAccountMuteDate_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            textBoxAccountAccountMutedate.Text = monthCalendarAccountAccountMuteDate.SelectionStart.ToString();
+        }
+        private void monthCalendarAccountAccountUnmuteDate_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (textBoxAccountAccountMutedate.Text.Trim() != "")
+            {
+                DateTime muteTime = monthCalendarAccountAccountUnmuteDate.SelectionStart;
+                DateTime muteDay = Convert.ToDateTime(textBoxAccountAccountMutedate.Text);
+
+                textBoxAccountAccountMutetime.Text = Convert.ToInt64((muteTime - muteDay).TotalMinutes).ToString();
+
+            }
+        }
         private void buttonAccountAccountGenerateScript_Click(object sender, EventArgs e)
         {
-            textBoxAccountScriptOutput.Clear();
-
-            textBoxAccountScriptOutput.Text += "UPDATE account " +
-                "SET id = " + textBoxAccountAccountID.Text.Trim() + ", username = '" + textBoxAccountAccountUsername.Text.Trim() + "', " +
-                "email = '" + textBoxAccountAccountEmail.Text.Trim() + "', reg_mail = '" + textBoxAccountAccountRegmail.Text.Trim() + "', " +
-                "last_ip = '" + textBoxAccountAccountLastIP.Text.Trim() + "', " +
-                "locked = " + checkBoxAccountAccountLocked.Checked + ", online = " + checkBoxAccountAccountOnline.Checked + ", " +
-                "expansion = " + textBoxAccountAccountExpansion.Text.Trim() + ", mutetime = '" + textBoxAccountAccountMutetime.Text.Trim() + "', " +
-                "mutereason = '" + textBoxAccountAccountMutereason.Text.Trim() + "', muteby = '" + textBoxAccountAccountMutedby.Text.Trim() + "' " +
-                "WHERE id = " + textBoxAccountAccountID.Text.Trim() + ";";
+            textBoxAccountScriptOutput.Text += DatabaseAccountGenerate(textBoxAccountAccountID.Text.ToString());
 
             tabControlCategoryAccount.SelectedTab = tabPageAccountScript;
         }
-        private void buttonAccountScriptUpdate_Click(object sender, EventArgs e)
+
+        private void buttonAccountAccountAccessAdd_Click(object sender, EventArgs e)
+        {
+            string[] acces = {
+                textBoxAccountAccountID.Text,
+                textBoxAccountAccountAccessGM.Text,
+                textBoxAccountAccountAccessRID.Text,
+                };
+
+            if (textBoxAccountAccountAccessGM.Text != string.Empty && textBoxAccountAccountAccessRID.Text != string.Empty)
+            {
+                dataGridViewAccountAccess.Rows.Add(acces);
+            }
+        }
+        private void buttonAccountAccountAccessDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewAccountAccess.SelectedRows.Count > 0)
+            {
+                foreach(DataGridViewRow row in dataGridViewAccountAccess.SelectedRows)
+                {
+                    dataGridViewAccountAccess.Rows.RemoveAt(row.Index);
+                }
+            }
+        }
+
+        private void toolStripSplitButtonAccountScriptUpdate_ButtonClick(object sender, EventArgs e)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
-            
+
             if (ConnectionOpen(connect))
             {
-                int rows = DatabaseUpdate(connect, textBoxAccountScriptOutput.Text.Trim());
-                toolStripStatusLabelAccountScriptResult.Text = "Row(s) affected: " + rows.ToString();
+                int rows = DatabaseUpdate(connect, textBoxAccountScriptOutput.Text);
+                toolStripStatusLabelAccountScriptRows.Text = "Row(s) affected: " + rows.ToString();
                 ConnectionClose(connect);
-            } 
+            }
         }
 
         #endregion
@@ -1857,7 +2061,12 @@ namespace Manti
                 tabControlCategoryCharacter.SelectedTab = tabPageCharacterCharacter;
             }
         }
-        private void buttonCharacterScriptUpdate_Click(object sender, EventArgs e)
+        private void buttonCharacterCharacterGenerate_Click(object sender, EventArgs e)
+        {
+            textBoxCharacterScriptOutput.Text = DatabaseCharacterCharacterGenerate();
+        }
+
+        private void toolStripSplitButtonCharacterScriptUpdate_ButtonClick(object sender, EventArgs e)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
 
@@ -1867,10 +2076,6 @@ namespace Manti
 
                 ConnectionClose(connect);
             }
-        }
-        private void buttonCharacterCharacterGenerate_Click(object sender, EventArgs e)
-        {
-            textBoxCharacterScriptOutput.Text = DatabaseCharacterCharacterGenerate();
         }
 
         private void buttonCharacterInventoryAdd_Click(object sender, EventArgs e)
@@ -1970,19 +2175,8 @@ namespace Manti
         {
             textBoxCreatureScriptOutput.Text = DatabaseCreatureTempGenerate();
         }
-        private void buttonCreatureScriptUpdate_Click(object sender, EventArgs e)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
 
-            if (ConnectionOpen(connect))
-            {
-                toolStripStatusLabelCreatureScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCreatureScriptOutput.Text).ToString();
-
-                ConnectionClose(connect);
-            }
-        }
-
-        private void newCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonCreatureNew_ButtonClick(object sender, EventArgs e)
         {
             var list = new List<Tuple<TextBox, string>>();
 
@@ -1999,9 +2193,25 @@ namespace Manti
 
             tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
         }
-        private void deleteCreatureToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonCreatureDelete_ButtonClick(object sender, EventArgs e)
         {
             GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
+        }
+
+        private void toolStripSplitButtonCreatureScriptSQLGenerate_ButtonClick(object sender, EventArgs e)
+        {
+            GenerateSQLFile("Creature_", textBoxCreatureTemplateEntry.Text + "-" + textBoxCreatureTemplateName.Text, textBoxCreatureScriptOutput);
+        }
+        private void toolStripSplitButtonCreatureScriptUpdate_ButtonClick(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelCreatureScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCreatureScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
         }
 
         private void buttonCreatureVendorEC_Click(object sender, EventArgs e)
@@ -2243,19 +2453,8 @@ namespace Manti
         {
             textBoxQuestScriptOutput.Text = DatabaseQuestSectionGenerate();
         }
-        private void buttonQuestScriptUpdate_Click(object sender, EventArgs e)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
 
-            if (ConnectionOpen(connect))
-            {
-                toolStripStatusLabelQuestScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxQuestScriptOutput.Text).ToString();
-
-                ConnectionClose(connect);
-            }
-        }
-
-        private void newQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonQuestNew_ButtonClick(object sender, EventArgs e)
         {
             var list = new List<Tuple<TextBox, string>>();
 
@@ -2275,11 +2474,28 @@ namespace Manti
 
             tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
         }
-        private void deleteQuestToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonQuestDelete_ButtonClick(object sender, EventArgs e)
         {
             GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
         }
 
+        private void toolStripSplitButtonQuestScriptSQLGenerate_ButtonClick(object sender, EventArgs e)
+        {
+            GenerateSQLFile("QUEST_", textBoxQuestSectionID.Text + "-" + textBoxQuestSearchTitle.Text, textBoxQuestScriptOutput);
+        }
+        private void toolStripSplitButtonQuestScriptUpdate_ButtonClick(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelQuestScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxQuestScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
+        }
+
+        #region POPUPS
         private void buttonQuestSectionReqRace_Click(object sender, EventArgs e)
         {
 
@@ -2302,6 +2518,7 @@ namespace Manti
         {
             CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID);
         }
+        #endregion
 
         #endregion
         #region GameObject
@@ -2353,19 +2570,8 @@ namespace Manti
                 tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
             }
         }
-        private void buttonGameObjectScriptUpdate_Click(object sender, EventArgs e)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
 
-            if (ConnectionOpen(connect))
-            {
-                toolStripStatusLabelGameObjectScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxGameObjectScriptOutput.Text).ToString();
-
-                ConnectionClose(connect);
-            }
-        }
-        
-        private void newGOToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonGONew_ButtonClick(object sender, EventArgs e)
         {
             var list = new List<Tuple<TextBox, string>>();
 
@@ -2379,9 +2585,25 @@ namespace Manti
 
             tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
         }
-        private void deleteGOToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonGODelete_ButtonClick(object sender, EventArgs e)
         {
             GenerateDeleteSelectedRow(dataGridViewGameObjectSearch, "gameobject_template", "entry", textBoxGameObjectScriptOutput);
+        }
+
+        private void toolStripSplitButtonGOScriptSQLGenerate_ButtonClick(object sender, EventArgs e)
+        {
+            GenerateSQLFile("GO_", textBoxCreatureTemplateEntry.Text + "-" + textBoxCreatureTemplateName.Text, textBoxCreatureScriptOutput);
+        }
+        private void toolStripSplitButtonGOScriptUpdate_ButtonClick(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelGameObjectScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxGameObjectScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
         }
 
         #region POPUP
@@ -2456,23 +2678,12 @@ namespace Manti
                 dataGridViewItemProspect.DataSource = DatabaseItemNameColumn("prospecting_loot_template", "entry", dataGridViewItemSearch.SelectedCells[0].Value.ToString(), 1, true);
             }
         }
-        private void buttonItemScriptUpdate_Click(object sender, EventArgs e)
-        {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-            if (ConnectionOpen(connect))
-            {
-                toolStripStatusLabelItemScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
-
-                ConnectionClose(connect);
-            }
-        }
         private void buttonItemTempGenerate_Click(object sender, EventArgs e)
         {
             textBoxItemScriptOutput.Text += DatabaseItemTempGenerate();
         }
 
-        private void newItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonItemNew_ButtonClick(object sender, EventArgs e)
         {
             var list = new List<Tuple<TextBox, string>>();
 
@@ -2496,9 +2707,25 @@ namespace Manti
 
             tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
         }
-        private void deleteItemToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripSplitButtonItemDelete_ButtonClick(object sender, EventArgs e)
         {
             GenerateDeleteSelectedRow(dataGridViewItemSearch, "item_template", "entry", textBoxItemScriptOutput);
+        }
+
+        private void toolStripSplitButtonItemScriptSQLGenerate_ButtonClick(object sender, EventArgs e)
+        {
+            GenerateSQLFile("ITEM_", textBoxItemTempEntry.Text.Trim() + "-" + textBoxItemTempName.Text.Trim(), textBoxItemScriptOutput);
+        }
+        private void toolStripSplitButtonItemScriptUpdate_ButtonClick(object sender, EventArgs e)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                toolStripStatusLabelItemScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
+
+                ConnectionClose(connect);
+            }
         }
 
         #region Loot
@@ -2783,13 +3010,26 @@ namespace Manti
 
 
 
-        #endregion
+
+
+
+
+
+
+
+
+
 
         #endregion
 
         #endregion
+
+        #endregion
+
+
 
     }
+
 
 
 }
