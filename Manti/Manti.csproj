@@ -25,7 +25,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationVersion>0.4.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -52,9 +52,9 @@
     <StartupObject>Manti.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Resources\iconManti.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -97,6 +97,12 @@
     <Compile Include="FormPopup\FormPopupCheckboxList.Designer.cs">
       <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPopup\FormPopupEntities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopup\FormPopupEntities.Designer.cs">
+      <DependentUpon>FormPopupEntities.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPopup\FormPopupSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPopup\FormPopupCheckboxList.resx">
       <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopup\FormPopupEntities.resx">
+      <DependentUpon>FormPopupEntities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPopup\FormPopupSelection.resx">
       <DependentUpon>FormPopupSelection.cs</DependentUpon>
@@ -180,12 +189,6 @@
     <None Include="Resources\iconSearch.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\iconGenerate2.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\iconGenerate-02.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\iconPlayButton.png" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="iconManti.ico" />
+    <None Include="Resources\iconManti.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

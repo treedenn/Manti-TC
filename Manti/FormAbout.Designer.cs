@@ -57,7 +57,7 @@
             this.labelAboutVersion.Name = "labelAboutVersion";
             this.labelAboutVersion.Size = new System.Drawing.Size(92, 13);
             this.labelAboutVersion.TabIndex = 1;
-            this.labelAboutVersion.Text = "Version: 0.3-alpha";
+            this.labelAboutVersion.Text = "Version: 0.4-alpha";
             // 
             // labelAboutManti
             // 

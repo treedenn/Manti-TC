@@ -32,6 +32,8 @@ namespace Manti
         {
             tabControlCategory.Focus();
 
+            this.Icon = Properties.Resources.iconManti;
+
             dataGridViewCharacterInventory.AutoGenerateColumns = false;
 
             dataGridViewItemLoot.AutoGenerateColumns = false;
@@ -214,22 +216,25 @@ namespace Manti
             return newTable;
         }
             // Create Popup : Selection
-        private void CreatePopupSelection(string formTitle, DataTable data, Control textbox)
+        private string CreatePopupSelection(string formTitle, DataTable data, string currentValue)
         {
             var popupDialog = new FormPopup.FormPopupSelection();
+
             popupDialog.setFormTitle = formTitle;
-            popupDialog.changeSelection = textbox.Text.Trim();
+            popupDialog.changeSelection = currentValue;
             popupDialog.setDataTable = data;
             popupDialog.Owner = this;
             popupDialog.ShowDialog();
 
+            currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
+            popupDialog.Close();
+
             this.Activate();
-            textbox.Text = (popupDialog.changeSelection == "") ? textbox.Text : popupDialog.changeSelection;
+            return currentValue;
         }
             // Create Popup : Checklist
-        private void CreatePopupChecklist(string formTitle, DataTable data, Control textbox, bool bitMask = false)
+        private string CreatePopupChecklist(string formTitle, DataTable data, string currentValue, bool bitMask = false)
         {
-            string currentValue = textbox.Text.Trim();
             var popupDialog = new FormPopup.FormPopupCheckboxList();
 
             popupDialog.setFormTitle = formTitle;
@@ -239,8 +244,43 @@ namespace Manti
             popupDialog.Owner = this;
             popupDialog.ShowDialog();
 
+            currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
+            popupDialog.Close();
+
             this.Activate();
-            textbox.Text = currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
+            return currentValue;
+        }
+            // Create Popup : Entities - disableEntity(item, creature, gameobject)
+        private string CreatePopupEntity(string currentValue, bool[] disableEntity)
+        {
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+
+            if (ConnectionOpen(connect))
+            {
+                string query = "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
+                query += "SELECT entry, modelid1, name FROM creature_template ORDER BY entry ASC;";
+                query += "SELECT entry, displayId, name FROM gameobject_template ORDER BY entry ASC;";
+
+                var entities = DatabaseSearch(connect, query);
+
+                ConnectionClose(connect);
+
+                var popupDialog = new FormPopup.FormPopupEntities();
+
+                popupDialog.setEntityTable = entities;
+                popupDialog.disableEntity = disableEntity;
+
+                popupDialog.changeSelection = (currentValue == "") ? "0" : currentValue;
+                popupDialog.Owner = this;
+                popupDialog.ShowDialog();
+
+                currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
+                entities = null;
+                popupDialog.Close();
+            }
+
+            this.Activate();
+            return currentValue;
         }
             // Generate SQL Loot
         private void GenerateDataColumn(string table, DataGridView dataGrid, TextBox output)
@@ -1310,221 +1350,314 @@ namespace Manti
                             "SELECT * FROM quest_template_addon WHERE ID = '" + questEntryID + "';";
 
                 var qtTable = DatabaseSearch(connect, query);
-                // ExclusiveGroup PrevQuestID NextQuestID MaxLevel RewardMailTemplateID
-                #region Section1
-                textBoxQuestSectionID.Text              = qtTable.Tables[0].Rows[0]["ID"].ToString();
-                textBoxQuestSectionExclusive.Text       = qtTable.Tables[1].Rows[0]["ExclusiveGroup"].ToString();
-                textBoxQuestSectionPrevQuest.Text       = qtTable.Tables[1].Rows[0]["PrevQuestID"].ToString();
-                textBoxQuestSectionNextQuest.Text       = qtTable.Tables[1].Rows[0]["NextQuestID"].ToString();
 
-                textBoxQuestSectionReqRace.Text         = qtTable.Tables[0].Rows[0]["AllowableRaces"].ToString();
-                textBoxQuestSectionReqClass.Text        = qtTable.Tables[1].Rows[0]["AllowableClasses"].ToString();
-                textBoxQuestSectionLevelMin.Text        = qtTable.Tables[0].Rows[0]["Minlevel"].ToString();
-                textBoxQuestSectionLevelMax.Text        = qtTable.Tables[1].Rows[0]["MaxLevel"].ToString();
-                textBoxQuestSectionSkillID.Text         = qtTable.Tables[1].Rows[0]["RequiredSkillID"].ToString();
-                textBoxQuestSectionSkillPoints.Text     = qtTable.Tables[1].Rows[0]["RequiredSkillPoints"].ToString();
-                textBoxQuestSectionFaction1.Text        = qtTable.Tables[1].Rows[0]["RequiredMinRepFaction"].ToString();
-                textBoxQuestSectionFaction2.Text        = qtTable.Tables[1].Rows[0]["RequiredMaxRepFaction"].ToString();
-                textBoxQuestSectionValue1.Text          = qtTable.Tables[1].Rows[0]["RequiredMinRepValue"].ToString();
-                textBoxQuestSectionValue2.Text          = qtTable.Tables[1].Rows[0]["RequiredMaxRepValue"].ToString();
-
-                textBoxQuestSectionType.Text            = qtTable.Tables[0].Rows[0]["Flags"].ToString();
-                textBoxQuestSectionType.Text            = qtTable.Tables[0].Rows[0]["Flags"].ToString();
-                textBoxQuestSectionTimeAllowed.Text     = qtTable.Tables[0].Rows[0]["TimeAllowed"].ToString();
-
-                textBoxQuestSectionTitle.Text           = qtTable.Tables[0].Rows[0]["LogTitle"].ToString();
-                textBoxQuestSectionLDescription.Text    = qtTable.Tables[0].Rows[0]["QuestDescription"].ToString();
-                textBoxQuestSectionQDescription.Text    = qtTable.Tables[0].Rows[0]["LogDescription"].ToString();
-                textBoxQuestSectionAreaDescription.Text = qtTable.Tables[0].Rows[0]["LogTitle"].ToString();
-
-                textBoxQuestSectionCompleted.Text       = qtTable.Tables[0].Rows[0]["QuestCompletionLog"].ToString();
-                textBoxQuestSectionObjectives1.Text     = qtTable.Tables[0].Rows[0]["ObjectiveText1"].ToString();
-                textBoxQuestSectionObjectives2.Text     = qtTable.Tables[0].Rows[0]["ObjectiveText2"].ToString();
-                textBoxQuestSectionObjectives3.Text     = qtTable.Tables[0].Rows[0]["ObjectiveText3"].ToString();
-                textBoxQuestSectionObjectives4.Text     = qtTable.Tables[0].Rows[0]["ObjectiveText4"].ToString();
-
-                // Other
-                textBoxQuestSectionQuestLevel.Text      = qtTable.Tables[0].Rows[0]["QuestLevel"].ToString();
-                textBoxQuestSectionOtherSP.Text         = qtTable.Tables[0].Rows[0]["SuggestedGroupNum"].ToString();
-                textBoxQuestSectionOtherSF.Text         = qtTable.Tables[1].Rows[0]["SpecialFlags"].ToString();
-                textBoxQuestSectionOtherPK.Text         = qtTable.Tables[0].Rows[0]["RequiredPlayerKills"].ToString();
-                textBoxQuestSectionQType.Text           = qtTable.Tables[0].Rows[0]["QuestType"].ToString();
-                textBoxQuestSectionQuestStartItem.Text  = qtTable.Tables[0].Rows[0]["StartItem"].ToString();
-
+                #region QuestTemplate
+                var questTemplate = new List<Tuple<TextBox, string>>
+                {
+                    Tuple.Create(textBoxQuestSectionID, "ID"),
+                    Tuple.Create(textBoxQuestSectionQuestType, "QuestType"),
+                    Tuple.Create(textBoxQuestSectionQuestLevel, "QuestLevel"),
+                    Tuple.Create(textBoxQuestSectionReqLevelMin, "MinLevel"),
+                    Tuple.Create(textBoxQuestSectionReqQSort, "QuestSortID"),
+                    Tuple.Create(textBoxQuestSectionQuestInfo, "QuestInfoID"),
+                    Tuple.Create(textBoxQuestSectionOtherSP, "SuggestedGroupNum"),
+                    Tuple.Create(textBoxQuestSectionReqFaction1, "RequiredFactionId1"),
+                    Tuple.Create(textBoxQuestSectionReqFaction2, "RequiredFactionId2"),
+                    Tuple.Create(textBoxQuestSectionReqValue1, "RequiredFactionValue1"),
+                    Tuple.Create(textBoxQuestSectionReqValue2, "RequiredFactionValue2"),
+                    Tuple.Create(textBoxQuestSectionRewOtherMoney, "RewardMoney"),
+                    Tuple.Create(textBoxQuestSectionRewOtherMoneyML, "RewardBonusMoney"),
+                    Tuple.Create(textBoxQuestSectionRewSpellDisplay, "RewardDisplaySpell"),
+                    Tuple.Create(textBoxQuestSectionRewSpell, "RewardSpell"),
+                    Tuple.Create(textBoxQuestSectionRewOtherHP, "RewardHonor"),
+                    Tuple.Create(textBoxQuestSectionSourceItemID, "StartItem"),
+                    Tuple.Create(textBoxQuestSectionQuestFlags, "Flags"),
+                    Tuple.Create(textBoxQuestSectionReqPK, "RequiredPlayerKills"),
+                    Tuple.Create(textBoxQuestSectionRewItemID1, "RewardItem1"),
+                    Tuple.Create(textBoxQuestSectionRewItemC1, "RewardAmount1"),
+                    Tuple.Create(textBoxQuestSectionRewItemID2, "RewardItem2"),
+                    Tuple.Create(textBoxQuestSectionRewItemC2, "RewardAmount2"),
+                    Tuple.Create(textBoxQuestSectionRewItemID3, "RewardItem3"),
+                    Tuple.Create(textBoxQuestSectionRewItemC3, "RewardAmount3"),
+                    Tuple.Create(textBoxQuestSectionRewItemID4, "RewardItem4"),
+                    Tuple.Create(textBoxQuestSectionRewItemC4, "RewardAmount4"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID1, "RewardChoiceItemID1"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC1, "RewardChoiceItemQuantity1"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID2, "RewardChoiceItemID2"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC2, "RewardChoiceItemQuantity2"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID3, "RewardChoiceItemID3"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC3, "RewardChoiceItemQuantity3"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID4, "RewardChoiceItemID4"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC4, "RewardChoiceItemQuantity4"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID5, "RewardChoiceItemID5"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC5, "RewardChoiceItemQuantity5"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceID6, "RewardChoiceItemID6"),
+                    Tuple.Create(textBoxQuestSectionRewChoiceC6, "RewardChoiceItemQuantity6"),
+                    Tuple.Create(textBoxQuestSectionRewOtherTitleID, "RewardTitle"),
+                    Tuple.Create(textBoxQuestSectionRewOtherTP, "RewardTalents"),
+                    Tuple.Create(textBoxQuestSectionRewOtherAP, "RewardArenaPoints"),
+                    Tuple.Create(textBoxQuestSectionRewFactionID1, "RewardFactionID1"),
+                    Tuple.Create(textBoxQuestSectionRewFactionV1, "RewardFactionValue1"),
+                    Tuple.Create(textBoxQuestSectionRewFactionOID1, "RewardFactionOverride1"),
+                    Tuple.Create(textBoxQuestSectionRewFactionID2, "RewardFactionID2"),
+                    Tuple.Create(textBoxQuestSectionRewFactionV2, "RewardFactionValue2"),
+                    Tuple.Create(textBoxQuestSectionRewFactionOID2, "RewardFactionOverride2"),
+                    Tuple.Create(textBoxQuestSectionRewFactionID3, "RewardFactionID3"),
+                    Tuple.Create(textBoxQuestSectionRewFactionV3, "RewardFactionValue3"),
+                    Tuple.Create(textBoxQuestSectionRewFactionOID3, "RewardFactionOverride3"),
+                    Tuple.Create(textBoxQuestSectionRewFactionID4, "RewardFactionID4"),
+                    Tuple.Create(textBoxQuestSectionRewFactionV4, "RewardFactionValue4"),
+                    Tuple.Create(textBoxQuestSectionRewFactionOID4, "RewardFactionOverride4"),
+                    Tuple.Create(textBoxQuestSectionRewFactionID5, "RewardFactionID5"),
+                    Tuple.Create(textBoxQuestSectionRewFactionV5, "RewardFactionValue5"),
+                    Tuple.Create(textBoxQuestSectionRewFactionOID5, "RewardFactionOverride5"),
+                    Tuple.Create(textBoxQuestSectionTimeAllowed, "TimeAllowed"),
+                    Tuple.Create(textBoxQuestSectionReqRace, "AllowableRaces"),
+                    Tuple.Create(textBoxQuestSectionTitle, "LogTitle"),
+                    Tuple.Create(textBoxQuestSectionLDescription, "LogDescription"),
+                    Tuple.Create(textBoxQuestSectionQDescription, "QuestDescription"),
+                    Tuple.Create(textBoxQuestSectionAreaDescription, "AreaDescription"),
+                    Tuple.Create(textBoxQuestSectionCompleted, "QuestCompletionLog"),
+                    Tuple.Create(textBoxQuestSectionReqNPCID1, "RequiredNpcOrGo1"),
+                    Tuple.Create(textBoxQuestSectionReqNPCID2, "RequiredNpcOrGo2"),
+                    Tuple.Create(textBoxQuestSectionReqNPCID3, "RequiredNpcOrGo3"),
+                    Tuple.Create(textBoxQuestSectionReqNPCID4, "RequiredNpcOrGo4"),
+                    Tuple.Create(textBoxQuestSectionReqNPCC1, "RequiredNpcOrGoCount1"),
+                    Tuple.Create(textBoxQuestSectionReqNPCC2, "RequiredNpcOrGoCount2"),
+                    Tuple.Create(textBoxQuestSectionReqNPCC3, "RequiredNpcOrGoCount3"),
+                    Tuple.Create(textBoxQuestSectionReqNPCC4, "RequiredNpcOrGoCount4"),
+                    Tuple.Create(textBoxQuestSectionReqItemID1, "RequiredItemId1"),
+                    Tuple.Create(textBoxQuestSectionReqItemID2, "RequiredItemId2"),
+                    Tuple.Create(textBoxQuestSectionReqItemID3, "RequiredItemId3"),
+                    Tuple.Create(textBoxQuestSectionReqItemID4, "RequiredItemId4"),
+                    Tuple.Create(textBoxQuestSectionReqItemID5, "RequiredItemId5"),
+                    Tuple.Create(textBoxQuestSectionReqItemID6, "RequiredItemId6"),
+                    Tuple.Create(textBoxQuestSectionReqItemC1, "RequiredItemCount1"),
+                    Tuple.Create(textBoxQuestSectionReqItemC2, "RequiredItemCount2"),
+                    Tuple.Create(textBoxQuestSectionReqItemC3, "RequiredItemCount3"),
+                    Tuple.Create(textBoxQuestSectionReqItemC4, "RequiredItemCount4"),
+                    Tuple.Create(textBoxQuestSectionReqItemC5, "RequiredItemCount5"),
+                    Tuple.Create(textBoxQuestSectionReqItemC6, "RequiredItemCount6"),
+                    Tuple.Create(textBoxQuestSectionObjectives1, "ObjectiveText1"),
+                    Tuple.Create(textBoxQuestSectionObjectives2, "ObjectiveText2"),
+                    Tuple.Create(textBoxQuestSectionObjectives3, "ObjectiveText3"),
+                    Tuple.Create(textBoxQuestSectionObjectives4, "ObjectiveText4")
+                };
                 #endregion
-                #region Section2
-                // Requirements
-                //RewardMailTemplateID RequiredSkillID RequiredSkillPoints
-                textBoxQuestSectionReqNPCID1.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo1"].ToString();
-                textBoxQuestSectionReqNPCC1.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount1"].ToString();
-                textBoxQuestSectionReqNPCID2.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo2"].ToString();
-                textBoxQuestSectionReqNPCC2.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount2"].ToString();
-                textBoxQuestSectionReqNPCID3.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo3"].ToString();
-                textBoxQuestSectionReqNPCC3.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount3"].ToString();
-                textBoxQuestSectionReqNPCID4.Text           = qtTable.Tables[0].Rows[0]["RequiredNpcOrGo4"].ToString();
-                textBoxQuestSectionReqNPCC4.Text            = qtTable.Tables[0].Rows[0]["RequiredNpcOrGoCount4"].ToString();
 
-                textBoxQuestSectionReqItemID1.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId1"].ToString();
-                textBoxQuestSectionReqItemC1.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount1"].ToString();
-                textBoxQuestSectionReqItemID2.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId2"].ToString();
-                textBoxQuestSectionReqItemC2.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount2"].ToString();
-                textBoxQuestSectionReqItemID3.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId3"].ToString();
-                textBoxQuestSectionReqItemC3.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount3"].ToString();
-                textBoxQuestSectionReqItemID4.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId4"].ToString();
-                textBoxQuestSectionReqItemC4.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount4"].ToString();
-                textBoxQuestSectionReqItemID5.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId5"].ToString();
-                textBoxQuestSectionReqItemC5.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount5"].ToString();
-                textBoxQuestSectionReqItemID6.Text          = qtTable.Tables[0].Rows[0]["RequiredItemId6"].ToString();
-                textBoxQuestSectionReqItemC6.Text           = qtTable.Tables[0].Rows[0]["RequiredItemCount6"].ToString();
+                foreach (var tuple in questTemplate)
+                {
+                    tuple.Item1.Text = qtTable.Tables[0].Rows[0][tuple.Item2.ToString()].ToString();
+                }
 
-                // Rewards
-                textBoxQuestSectionRewItemID1.Text          = qtTable.Tables[0].Rows[0]["RewardItem1"].ToString();
-                textBoxQuestSectionRewItemC1.Text           = qtTable.Tables[0].Rows[0]["RewardAmount1"].ToString();
-                textBoxQuestSectionRewItemID2.Text          = qtTable.Tables[0].Rows[0]["RewardItem2"].ToString();
-                textBoxQuestSectionRewItemC2.Text           = qtTable.Tables[0].Rows[0]["RewardAmount2"].ToString();
-                textBoxQuestSectionRewItemID3.Text          = qtTable.Tables[0].Rows[0]["RewardItem3"].ToString();
-                textBoxQuestSectionRewItemC3.Text           = qtTable.Tables[0].Rows[0]["RewardAmount3"].ToString();
-                textBoxQuestSectionRewItemID4.Text          = qtTable.Tables[0].Rows[0]["RewardItem4"].ToString();
-                textBoxQuestSectionRewItemC4.Text           = qtTable.Tables[0].Rows[0]["RewardAmount4"].ToString();
-
-                textBoxQuestSectionRewChoiceID1.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID1"].ToString();
-                textBoxQuestSectionRewChoiceC1.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity1"].ToString();
-                textBoxQuestSectionRewChoiceID2.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID2"].ToString();
-                textBoxQuestSectionRewChoiceC2.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity2"].ToString();
-                textBoxQuestSectionRewChoiceID3.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID3"].ToString();
-                textBoxQuestSectionRewChoiceC3.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity3"].ToString();
-                textBoxQuestSectionRewChoiceID4.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID4"].ToString();
-                textBoxQuestSectionRewChoiceC4.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity4"].ToString();
-                textBoxQuestSectionRewChoiceID5.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID5"].ToString();
-                textBoxQuestSectionRewChoiceC5.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity5"].ToString();
-                textBoxQuestSectionRewChoiceID6.Text        = qtTable.Tables[0].Rows[0]["RewardChoiceItemID6"].ToString();
-                textBoxQuestSectionRewChoiceC6.Text         = qtTable.Tables[0].Rows[0]["RewardChoiceItemQuantity6"].ToString();
-
-                textBoxQuestSectionRewOtherSpell.Text       = qtTable.Tables[0].Rows[0]["RewardDisplaySpell"].ToString();
-                textBoxQuestSectionRewOtherSpellCast.Text   = qtTable.Tables[0].Rows[0]["RewardSpell"].ToString();
-                textBoxQuestSectionRewOtherMoney.Text       = qtTable.Tables[0].Rows[0]["RewardMoney"].ToString();
-                textBoxQuestSectionRewOtherMoneyML.Text     = qtTable.Tables[0].Rows[0]["RewardBonusMoney"].ToString();
-                textBoxQuestSectionRewOtherMailID.Text      = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherTitleID.Text     = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherTP.Text          = qtTable.Tables[1].Rows[0]["RewardMailTemplateID"].ToString();
-                textBoxQuestSectionRewOtherHP.Text          = qtTable.Tables[0].Rows[0]["RewardHonor"].ToString();
-                textBoxQuestSectionRewOtherAP.Text          = qtTable.Tables[0].Rows[0]["RewardArenaPoints"].ToString();
-                textBoxQuestSectionRewOtherTP.Text          = qtTable.Tables[0].Rows[0]["RewardTalents"].ToString();
-
+                #region QuestTemplateAddon
+                questTemplate = new List<Tuple<TextBox, string>>
+                {
+                    Tuple.Create(textBoxQuestSectionID, "ID"),
+                    Tuple.Create(textBoxQuestSectionReqLevelMax, "MaxLevel"),
+                    Tuple.Create(textBoxQuestSectionReqClass, "AllowableClasses"),
+                    Tuple.Create(textBoxQuestSectionSourceSpellID, "SourceSpellId"),
+                    Tuple.Create(textBoxQuestSectionPrevQuest, "PrevQuestId"),
+                    Tuple.Create(textBoxQuestSectionNextQuest, "NextQuestId"),
+                    Tuple.Create(textBoxQuestSectionExclusive, "ExclusiveGroup"),
+                    Tuple.Create(textBoxQuestSectionRewOtherMailID, "RewardMailTemplateId"),
+                    Tuple.Create(textBoxQuestSectionRewOtherMailDelay, "RewardMailDelay"),
+                    Tuple.Create(textBoxQuestSectionReqSkillID, "RequiredSkillID"),
+                    Tuple.Create(textBoxQuestSectionReqSkillPoints, "RequiredSkillPoints"),
+                    Tuple.Create(textBoxQuestSectionReqMinRepF, "RequiredMinRepFaction"),
+                    Tuple.Create(textBoxQuestSectionReqMaxRepF, "RequiredMaxRepFaction"),
+                    Tuple.Create(textBoxQuestSectionReqMinRepV, "RequiredMinRepValue"),
+                    Tuple.Create(textBoxQuestSectionReqMaxRepV, "RequiredMaxRepValue"),
+                    Tuple.Create(textBoxQuestSectionSourceItemCount, "ProvidedItemCount"),
+                    Tuple.Create(textBoxQuestSectionOtherSF, "SpecialFlags")
+                };
                 #endregion
+
+                foreach (var tuple in questTemplate)
+                {
+                    tuple.Item1.Text = qtTable.Tables[1].Rows[0][tuple.Item2.ToString()].ToString();
+                }
+
+                questTemplate = null;
 
                 ConnectionClose(connect);
             }
         }
         private string DatabaseQuestSectionGenerate()
         {
-            string query = "REPLACE INTO `quest_template` (" +
-            "`ID`, `ExclusiveGroup`, `PrevQuestID`, `NextQuestID`, `AllowableRaces`, `AllowableClasses`, `Minlevel`, `MaxLevel`, `RequiredSkillID`, `RequiredSkillPoints`, `RequiredMinRepFaction`, `RequiredMaxRepFaction`, `RequiredMinRepValue`, `RequiredMaxRepValue`, " +
-            "`Flags`, `Flags`, `TimeAllowed`, `LogTitle`, `QuestDescription`, `LogDescription`, `LogTitle`, `QuestCompletionLog`, `ObjectiveText1`, `ObjectiveText2`, `ObjectiveText3`, `ObjectiveText4`, `QuestLevel`, `SuggestedGroupNum`, `SpecialFlags`, `RequiredPlayerKills`, `QuestType`, `StartItem, `" +
-            "`RequiredNpcOrGo1`, `RequiredNpcOrGoCount1`, `RequiredNpcOrGo2`, `RequiredNpcOrGoCount2`, `RequiredNpcOrGo3`, `RequiredNpcOrGoCount3`, `RequiredNpcOrGo4`, `RequiredNpcOrGoCount4`, " +
-            "`RequiredItemId1`, `RequiredItemCount1`, `RequiredItemId2`, `RequiredItemCount2`, `RequiredItemId3`, `RequiredItemCount3`, `RequiredItemId4`, `RequiredItemCount4`, `RequiredItemId5`, `RequiredItemCount5`, `RequiredItemId6`, `RequiredItemCount6`, " +
-            "`RewardItem1`, `RewardAmount1`, `RewardItem2`, `RewardAmount2`, `RewardItem3`, `RewardAmount3`, `RewardItem4`, `RewardAmount4`, " +
-            "`RewardChoiceItemID1`, `RewardChoiceItemQuantity1`, `RewardChoiceItemID2`, `RewardChoiceItemQuantity2`, `RewardChoiceItemID3`, `RewardChoiceItemQuantity3`, `RewardChoiceItemID4`, `RewardChoiceItemQuantity4`, `RewardChoiceItemID5`, `RewardChoiceItemQuantity5`, `RewardChoiceItemID6`, `RewardChoiceItemQuantity6`, " +
-            "`RewardDisplaySpell`, `RewardSpell`, `RewardMoney`, `RewardBonusMoney`, `RewardMailTemplateID`, `RewardMailTemplateID`, `RewardMailTemplateID`, `RewardHonor`, `RewardArenaPoints`, `RewardTalents`" +
-            ") VALUES (" +
+            string finalQuery = "";
+            string query = "REPLACE INTO `quest_template` (", values = "";
 
-            textBoxQuestSectionID.Text.Trim() + ", " +
-            textBoxQuestSectionExclusive.Text.Trim() + ", " +
-            textBoxQuestSectionPrevQuest.Text.Trim() + ", " +
-            textBoxQuestSectionNextQuest.Text.Trim() + ", " +
+            // Stores every column name and textbox for the quest_template table.
+            #region QuestTemplate
+            var questTemplate = new List<Tuple<TextBox, string>>
+            {
+                Tuple.Create(textBoxQuestSectionID, "ID"),
+                Tuple.Create(textBoxQuestSectionQuestType, "QuestType"),
+                Tuple.Create(textBoxQuestSectionQuestLevel, "QuestLevel"),
+                Tuple.Create(textBoxQuestSectionReqLevelMin, "MinLevel"),
+                Tuple.Create(textBoxQuestSectionReqQSort, "QuestSortID"),
+                Tuple.Create(textBoxQuestSectionQuestInfo, "QuestInfoID"),
+                Tuple.Create(textBoxQuestSectionOtherSP, "SuggestedGroupNum"),
+                Tuple.Create(textBoxQuestSectionReqFaction1, "RequiredFactionId1"),
+                Tuple.Create(textBoxQuestSectionReqFaction2, "RequiredFactionId2"),
+                Tuple.Create(textBoxQuestSectionReqValue1, "RequiredFactionValue1"),
+                Tuple.Create(textBoxQuestSectionReqValue2, "RequiredFactionValue2"),
+                Tuple.Create(textBoxQuestSectionRewOtherMoney, "RewardMoney"),
+                Tuple.Create(textBoxQuestSectionRewOtherMoneyML, "RewardBonusMoney"),
+                Tuple.Create(textBoxQuestSectionRewSpellDisplay, "RewardDisplaySpell"),
+                Tuple.Create(textBoxQuestSectionRewSpell, "RewardSpell"),
+                Tuple.Create(textBoxQuestSectionRewOtherHP, "RewardHonor"),
+                Tuple.Create(textBoxQuestSectionSourceItemID, "StartItem"),
+                Tuple.Create(textBoxQuestSectionQuestFlags, "Flags"),
+                Tuple.Create(textBoxQuestSectionReqPK, "RequiredPlayerKills"),
+                Tuple.Create(textBoxQuestSectionRewItemID1, "RewardItem1"),
+                Tuple.Create(textBoxQuestSectionRewItemC1, "RewardAmount1"),
+                Tuple.Create(textBoxQuestSectionRewItemID2, "RewardItem2"),
+                Tuple.Create(textBoxQuestSectionRewItemC2, "RewardAmount2"),
+                Tuple.Create(textBoxQuestSectionRewItemID3, "RewardItem3"),
+                Tuple.Create(textBoxQuestSectionRewItemC3, "RewardAmount3"),
+                Tuple.Create(textBoxQuestSectionRewItemID4, "RewardItem4"),
+                Tuple.Create(textBoxQuestSectionRewItemC4, "RewardAmount4"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID1, "RewardChoiceItemID1"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC1, "RewardChoiceItemQuantity1"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID2, "RewardChoiceItemID2"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC2, "RewardChoiceItemQuantity2"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID3, "RewardChoiceItemID3"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC3, "RewardChoiceItemQuantity3"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID4, "RewardChoiceItemID4"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC4, "RewardChoiceItemQuantity4"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID5, "RewardChoiceItemID5"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC5, "RewardChoiceItemQuantity5"),
+                Tuple.Create(textBoxQuestSectionRewChoiceID6, "RewardChoiceItemID6"),
+                Tuple.Create(textBoxQuestSectionRewChoiceC6, "RewardChoiceItemQuantity6"),
+                Tuple.Create(textBoxQuestSectionRewOtherTitleID, "RewardTitle"),
+                Tuple.Create(textBoxQuestSectionRewOtherTP, "RewardTalents"),
+                Tuple.Create(textBoxQuestSectionRewOtherAP, "RewardArenaPoints"),
+                Tuple.Create(textBoxQuestSectionRewFactionID1, "RewardFactionID1"),
+                Tuple.Create(textBoxQuestSectionRewFactionV1, "RewardFactionValue1"),
+                Tuple.Create(textBoxQuestSectionRewFactionOID1, "RewardFactionOverride1"),
+                Tuple.Create(textBoxQuestSectionRewFactionID2, "RewardFactionID2"),
+                Tuple.Create(textBoxQuestSectionRewFactionV2, "RewardFactionValue2"),
+                Tuple.Create(textBoxQuestSectionRewFactionOID2, "RewardFactionOverride2"),
+                Tuple.Create(textBoxQuestSectionRewFactionID3, "RewardFactionID3"),
+                Tuple.Create(textBoxQuestSectionRewFactionV3, "RewardFactionValue3"),
+                Tuple.Create(textBoxQuestSectionRewFactionOID3, "RewardFactionOverride3"),
+                Tuple.Create(textBoxQuestSectionRewFactionID4, "RewardFactionID4"),
+                Tuple.Create(textBoxQuestSectionRewFactionV4, "RewardFactionValue4"),
+                Tuple.Create(textBoxQuestSectionRewFactionOID4, "RewardFactionOverride4"),
+                Tuple.Create(textBoxQuestSectionRewFactionID5, "RewardFactionID5"),
+                Tuple.Create(textBoxQuestSectionRewFactionV5, "RewardFactionValue5"),
+                Tuple.Create(textBoxQuestSectionRewFactionOID5, "RewardFactionOverride5"),
+                Tuple.Create(textBoxQuestSectionTimeAllowed, "TimeAllowed"),
+                Tuple.Create(textBoxQuestSectionReqRace, "AllowableRaces"),
+                Tuple.Create(textBoxQuestSectionTitle, "LogTitle"),
+                Tuple.Create(textBoxQuestSectionLDescription, "LogDescription"),
+                Tuple.Create(textBoxQuestSectionQDescription, "QuestDescription"),
+                Tuple.Create(textBoxQuestSectionAreaDescription, "AreaDescription"),
+                Tuple.Create(textBoxQuestSectionCompleted, "QuestCompletionLog"),
+                Tuple.Create(textBoxQuestSectionReqNPCID1, "RequiredNpcOrGo1"),
+                Tuple.Create(textBoxQuestSectionReqNPCID2, "RequiredNpcOrGo2"),
+                Tuple.Create(textBoxQuestSectionReqNPCID3, "RequiredNpcOrGo3"),
+                Tuple.Create(textBoxQuestSectionReqNPCID4, "RequiredNpcOrGo4"),
+                Tuple.Create(textBoxQuestSectionReqNPCC1, "RequiredNpcOrGoCount1"),
+                Tuple.Create(textBoxQuestSectionReqNPCC2, "RequiredNpcOrGoCount2"),
+                Tuple.Create(textBoxQuestSectionReqNPCC3, "RequiredNpcOrGoCount3"),
+                Tuple.Create(textBoxQuestSectionReqNPCC4, "RequiredNpcOrGoCount4"),
+                Tuple.Create(textBoxQuestSectionReqItemID1, "RequiredItemId1"),
+                Tuple.Create(textBoxQuestSectionReqItemID2, "RequiredItemId2"),
+                Tuple.Create(textBoxQuestSectionReqItemID3, "RequiredItemId3"),
+                Tuple.Create(textBoxQuestSectionReqItemID4, "RequiredItemId4"),
+                Tuple.Create(textBoxQuestSectionReqItemID5, "RequiredItemId5"),
+                Tuple.Create(textBoxQuestSectionReqItemID6, "RequiredItemId6"),
+                Tuple.Create(textBoxQuestSectionReqItemC1, "RequiredItemCount1"),
+                Tuple.Create(textBoxQuestSectionReqItemC2, "RequiredItemCount2"),
+                Tuple.Create(textBoxQuestSectionReqItemC3, "RequiredItemCount3"),
+                Tuple.Create(textBoxQuestSectionReqItemC4, "RequiredItemCount4"),
+                Tuple.Create(textBoxQuestSectionReqItemC5, "RequiredItemCount5"),
+                Tuple.Create(textBoxQuestSectionReqItemC6, "RequiredItemCount6"),
+                Tuple.Create(textBoxQuestSectionObjectives1, "ObjectiveText1"),
+                Tuple.Create(textBoxQuestSectionObjectives2, "ObjectiveText2"),
+                Tuple.Create(textBoxQuestSectionObjectives3, "ObjectiveText3"),
+                Tuple.Create(textBoxQuestSectionObjectives4, "ObjectiveText4")
+            }; 
+            #endregion
 
-            textBoxQuestSectionReqRace.Text.Trim() + ", " +
-            textBoxQuestSectionReqClass.Text.Trim() + ", " +
-            textBoxQuestSectionLevelMin.Text.Trim() + ", " +
-            textBoxQuestSectionLevelMax.Text.Trim() + ", " +
-            textBoxQuestSectionSkillID.Text.Trim() + ", " +
-            textBoxQuestSectionSkillPoints.Text.Trim() + ", " +
-            textBoxQuestSectionFaction1.Text.Trim() + ", " +
-            textBoxQuestSectionFaction2.Text.Trim() + ", " +
-            textBoxQuestSectionValue1.Text.Trim() + ", " +
-            textBoxQuestSectionValue2.Text.Trim() + ", " +
+            // Variables used in foreach loop.
+            string quote; double deci; long integer;
+            var lastTuple = questTemplate.Last();
 
-            textBoxQuestSectionType.Text.Trim() + ", " +
-            textBoxQuestSectionType.Text.Trim() + ", " +
-            textBoxQuestSectionTimeAllowed.Text.Trim() + ", '" +
+            // Checks if value is a string/sentence or if it's a number (integer or decimal)
+            // Stores the information in query (column names) & 'values' from textboxes.
+            foreach (var temp in questTemplate)
+            {
+                quote = (double.TryParse(temp.Item1.Text, out deci) || long.TryParse(temp.Item1.Text, out integer)) ? "'" : "\"";
 
-            textBoxQuestSectionTitle.Text.Trim() + "', '" +
-            textBoxQuestSectionLDescription.Text.Trim() + "', '" +
-            textBoxQuestSectionQDescription.Text.Trim() + "', '" +
-            textBoxQuestSectionAreaDescription.Text.Trim() + "', '" +
+                if (temp.Equals(lastTuple))
+                {
+                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}";
+                    query += "`" + temp.Item2.ToString() + "`";
+                } else
+                {
+                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}, ";
+                    query += "`" + temp.Item2.ToString() + "`, ";
+                }
+            }
 
-            textBoxQuestSectionCompleted.Text.Trim() + "', '" +
-            textBoxQuestSectionObjectives1.Text.Trim() + "', '" +
-            textBoxQuestSectionObjectives2.Text.Trim() + "', '" +
-            textBoxQuestSectionObjectives3.Text.Trim() + "', '" +
-            textBoxQuestSectionObjectives4.Text.Trim() + "', " +
+            finalQuery += $"{query}) VALUES ({values});";
+            finalQuery += Environment.NewLine + Environment.NewLine;
 
-            // Other
-            textBoxQuestSectionQuestLevel.Text.Trim() + ", " +
-            textBoxQuestSectionOtherSP.Text.Trim() + ", " +
-            textBoxQuestSectionOtherSF.Text.Trim() + ", " +
-            textBoxQuestSectionOtherPK.Text.Trim() + ", " +
-            textBoxQuestSectionQType.Text.Trim() + ", " +
-            textBoxQuestSectionQuestStartItem.Text.Trim() + ", " +
+            questTemplate = null; query = null; values = null; lastTuple = null;
 
-            textBoxQuestSectionReqNPCID1.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCC1.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCID2.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCC2.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCID3.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCC3.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCID4.Text.Trim() + ", " +
-            textBoxQuestSectionReqNPCC4.Text.Trim() + ", " +
+            query = "REPLACE INTO `quest_template_addon` (";
 
-            textBoxQuestSectionReqItemID1.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC1.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemID2.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC2.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemID3.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC3.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemID4.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC4.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemID5.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC5.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemID6.Text.Trim() + ", " +
-            textBoxQuestSectionReqItemC6.Text.Trim() + ", " +
+            // Stores every column name and textbox for the quest_template_addon table.
+            #region QuestTemplateAddon
+            questTemplate = new List<Tuple<TextBox, string>>
+            {
+                Tuple.Create(textBoxQuestSectionID, "ID"),
+                Tuple.Create(textBoxQuestSectionReqLevelMax, "MaxLevel"),
+                Tuple.Create(textBoxQuestSectionReqClass, "AllowableClasses"),
+                Tuple.Create(textBoxQuestSectionSourceSpellID, "SourceSpellId"),
+                Tuple.Create(textBoxQuestSectionPrevQuest, "PrevQuestId"),
+                Tuple.Create(textBoxQuestSectionNextQuest, "NextQuestId"),
+                Tuple.Create(textBoxQuestSectionExclusive, "ExclusiveGroup"),
+                Tuple.Create(textBoxQuestSectionRewOtherMailID, "RewardMailTemplateId"),
+                Tuple.Create(textBoxQuestSectionRewOtherMailDelay, "RewardMailDelay"),
+                Tuple.Create(textBoxQuestSectionReqSkillID, "RequiredSkillID"),
+                Tuple.Create(textBoxQuestSectionReqSkillPoints, "RequiredSkillPoints"),
+                Tuple.Create(textBoxQuestSectionReqMinRepF, "RequiredMinRepFaction"),
+                Tuple.Create(textBoxQuestSectionReqMaxRepF, "RequiredMaxRepFaction"),
+                Tuple.Create(textBoxQuestSectionReqMinRepV, "RequiredMinRepValue"),
+                Tuple.Create(textBoxQuestSectionReqMaxRepV, "RequiredMaxRepValue"),
+                Tuple.Create(textBoxQuestSectionSourceItemCount, "ProvidedItemCount"),
+                Tuple.Create(textBoxQuestSectionOtherSF, "SpecialFlags")
+            }; 
+            #endregion
 
-            textBoxQuestSectionRewItemID1.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemC1.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemID2.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemC2.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemID3.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemC3.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemID4.Text.Trim() + ", " +
-            textBoxQuestSectionRewItemC4.Text.Trim() + ", " +
+            lastTuple = questTemplate.Last();
 
-            textBoxQuestSectionRewChoiceID1.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC1.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceID2.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC2.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceID3.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC3.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceID4.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC4.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceID5.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC5.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceID6.Text.Trim() + ", " +
-            textBoxQuestSectionRewChoiceC6.Text.Trim() + ", " +
+            foreach (var temp in questTemplate)
+            {
+                quote = (double.TryParse(temp.Item1.Text, out deci) || long.TryParse(temp.Item1.Text, out integer)) ? "'" : "\"";
 
-            textBoxQuestSectionRewOtherSpell.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherSpellCast.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherMoney.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherMoneyML.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherMailID.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherTitleID.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherTP.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherHP.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherAP.Text.Trim() + ", " +
-            textBoxQuestSectionRewOtherTP.Text.Trim() +
+                if (temp.Equals(lastTuple))
+                {
+                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}";
+                    query += "`" + temp.Item2.ToString() + "`";
+                }
+                else
+                {
+                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}, ";
+                    query += "`" + temp.Item2.ToString() + "`, ";
+                }
+            }
 
-            ");";
+            finalQuery += $"{query}) VALUES ({values});";
 
-            return query;
+            questTemplate = null; query = null; values = null;
+
+            return finalQuery;
         }
         #endregion
         #region GameObject
@@ -2113,6 +2246,17 @@ namespace Manti
             textBoxCharacterScriptOutput.Text = DatabaseCharacterInventoryGenerate();
         }
 
+        #region POPUPS
+        private void buttonCharacterCharacterRace_Click(object sender, EventArgs e)
+        {
+            textBoxCharacterCharacterRace.Text = CreatePopupSelection("Character Race", ReadExcelCSV("ChrRaces", 0, 14), textBoxCharacterCharacterRace.Text);
+        }
+        private void buttonCharacterCharacterClass_Click(object sender, EventArgs e)
+        {
+            textBoxCharacterCharacterClass.Text = CreatePopupSelection("Character Class", ReadExcelCSV("ChrClasses", 0, 4), textBoxCharacterCharacterClass.Text);
+        }
+        #endregion
+
         #endregion
         #region Creature
 
@@ -2216,7 +2360,7 @@ namespace Manti
 
         private void buttonCreatureVendorEC_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Extended Cost Selection", ReadExcelCSV("ItemExtendedCost", 0, 1), textBoxCreatureVendorEC);
+            textBoxCreatureVendorEC.Text = CreatePopupSelection("Extended Cost Selection", ReadExcelCSV("ItemExtendedCost", 0, 1), textBoxCreatureVendorEC.Text);
         }
 
         #region Loot
@@ -2496,6 +2640,12 @@ namespace Manti
         }
 
         #region POPUPS
+        private void buttonQuestSectionSourceItemID_Click(object sender, EventArgs e)
+        {
+            bool[] rButton = { true, false, false };
+
+            textBoxQuestSectionSourceItemID.Text = CreatePopupEntity(textBoxQuestSectionSourceItemID.Text, rButton);
+        }
         private void buttonQuestSectionReqRace_Click(object sender, EventArgs e)
         {
 
@@ -2508,15 +2658,15 @@ namespace Manti
         {
             if (radioButtonQuestSectionZID.Checked)
             {
-                CreatePopupSelection("Zone ID Selection", ReadExcelCSV("AreaTable", 0, 11), textBoxQuestSectionQSort);
+                textBoxQuestSectionReqQSort.Text = CreatePopupSelection("Zone ID Selection", ReadExcelCSV("AreaTable", 0, 11), textBoxQuestSectionReqQSort.Text);
             } else
             {
-                CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionQSort);
+                textBoxQuestSectionReqQSort.Text = "- " + CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
             }
         }
         private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID);
+            textBoxQuestSectionRewOtherTitleID.Text = CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
         }
         #endregion
 
@@ -2609,11 +2759,11 @@ namespace Manti
         #region POPUP
         private void buttonGameObjectTempType_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Game Object Type Selection", ReadExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType);
+            textBoxGameObjectTempType.Text = CreatePopupSelection("Game Object Type Selection", ReadExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType.Text);
         }
         private void buttonGameObjectTempFlags_Click(object sender, EventArgs e)
         {
-            CreatePopupChecklist("Game Object Flags Selection", ReadExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags, true);
+            textBoxGameObjectTempFlags.Text = CreatePopupChecklist("Game Object Flags Selection", ReadExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags.Text, true);
         }
         #endregion
 
@@ -2897,136 +3047,119 @@ namespace Manti
         #region POPUPS
         private void buttonItemSearchClass_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass);
+            textBoxItemSearchClass.Text = CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass.Text);
         }
         private void buttonItemSearchSubclass_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass);
+            textBoxItemSearchSubclass.Text = CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass.Text);
         }
         private void buttonItemTempRace_Click(object sender, EventArgs e)
         {
-            CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace, true);
+            textBoxItemTempReqRace.Text = CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace.Text, true);
         }
         private void buttonItemTempClass_Click(object sender, EventArgs e)
         {
-            CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass, true);
+            textBoxItemTempReqClass.Text = CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass.Text, true);
         }
         private void buttonItemTempDmgType1_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Damage Type I Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1);
+            textBoxItemTempDmgType1.Text = CreatePopupSelection("Damage Type I Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1.Text);
         }
         private void buttonItemTempDmgType2_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Damage Type II Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2);
+            textBoxItemTempDmgType2.Text = CreatePopupSelection("Damage Type II Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2.Text);
         }
         private void buttonItemTempStatsType1_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection I", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1);
+            textBoxItemTempStatsType1.Text = CreatePopupSelection("Stat Selection I", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1.Text);
         }
         private void buttonItemTempStatsType2_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection II", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2);
+            textBoxItemTempStatsType2.Text = CreatePopupSelection("Stat Selection II", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2.Text);
         }
         private void buttonItemTempStatsType3_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection III", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3);
+            CreatePopupSelection("Stat Selection III", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3.Text);
         }
         private void buttonItemTempStatsType4_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection IV", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4);
+            CreatePopupSelection("Stat Selection IV", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4.Text);
         }
         private void buttonItemTempStatsType5_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection V", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5);
+            textBoxItemTempStatsType5.Text = CreatePopupSelection("Stat Selection V", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5.Text);
         }
         private void buttonItemTempStatsType6_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection VI", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6);
+            textBoxItemTempStatsType6.Text = CreatePopupSelection("Stat Selection VI", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6.Text);
         }
         private void buttonItemTempStatsType7_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection VII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7);
+            textBoxItemTempStatsType7.Text = CreatePopupSelection("Stat Selection VII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7.Text);
         }
         private void buttonItemTempStatsType8_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection VIII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8);
+            textBoxItemTempStatsType8.Text = CreatePopupSelection("Stat Selection VIII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8.Text);
         }
         private void buttonItemTempStatsType9_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection IX", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9);
+            textBoxItemTempStatsType9.Text = CreatePopupSelection("Stat Selection IX", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9.Text);
         }
         private void buttonItemTempStatsType10_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Stat Selection X", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10);
+            textBoxItemTempStatsType10.Text = CreatePopupSelection("Stat Selection X", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10.Text);
         }
         private void buttonItemTempTypeClass_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass);
+            textBoxItemTempTypeClass.Text = CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass.Text);
         }
         private void buttonItemTempSubclass_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass);
+            textBoxItemTempSubclass.Text = CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass.Text);
         }
         private void buttonItemTempQuality_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Quality Selection", ReadExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality);
+            textBoxItemTempQuality.Text = CreatePopupSelection("Quality Selection", ReadExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality.Text);
         }
         private void buttonItemTempItemSet_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("ItemSet Selection", ReadExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet);
+            textBoxItemTempItemSet.Text = CreatePopupSelection("ItemSet Selection", ReadExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet.Text);
         }
         private void buttonItemTempBonding_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Bonding Selection", ReadExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding);
+            textBoxItemTempBonding.Text = CreatePopupSelection("Bonding Selection", ReadExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding.Text);
         }
         private void buttonItemTempSheath_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Sheath Selection", ReadExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath);
+            textBoxItemTempSheath.Text = CreatePopupSelection("Sheath Selection", ReadExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath.Text);
         }
         private void buttonItemTempColor1_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Color Selection I", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1);
+            textBoxItemTempColor1.Text = CreatePopupSelection("Color Selection I", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1.Text);
         }
         private void buttonItemTempColor2_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Color Selection II", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2);
+            textBoxItemTempColor2.Text = CreatePopupSelection("Color Selection II", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2.Text);
         }
         private void buttonItemTempColor3_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Color Selection III", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3);
+            textBoxItemTempColor3.Text = CreatePopupSelection("Color Selection III", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3.Text);
         }
         private void buttonItemTempSocketBonus_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Socket Bonus Selection III", ReadExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus);
+            textBoxItemTempSocketBonus.Text = CreatePopupSelection("Socket Bonus Selection III", ReadExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus.Text);
         }
         private void buttonItemTempGemProper_Click(object sender, EventArgs e)
         {
-            CreatePopupSelection("Gem Property Selection", ReadExcelCSV("GemProperties", 0, 1), textBoxItemTempGemProper);
+            textBoxItemTempGemProper.Text = CreatePopupSelection("Gem Property Selection", ReadExcelCSV("GemProperties", 0, 1), textBoxItemTempGemProper.Text);
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         #endregion
 
         #endregion
 
         #endregion
-
-
 
     }
 
