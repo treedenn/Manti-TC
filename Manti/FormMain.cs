@@ -20,11 +20,16 @@ namespace Manti
             InitializeComponent();   
         }
 
-        // MUST READ
-        //  Hello viewer. This project contains a lot of code and functions.
-        //      For a better overview (Visual Studio) do the command: CTRL + M + O.
-        //          I know, it's a great feature!
-        // Official SourceCode: https://github.com/Heitx/Manti-TC
+        // - - - - - - - - - - - MUST READ - - - - - - - - - - -
+        //   Hello Viewer and welcome to Manti-TC Source Code!
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // This project contains tons of code and functions.
+        // For a better overview (especially in Visual Studio 14),
+        // Do the command: CTRL + M + O, simultaneously.
+        // Great feature, I know.
+        // - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        // The newest sourcecode can be found at GITHUB:
+        // LINK: https://github.com/Heitx/Manti-TC
 
         #region GlobalEvents
 
@@ -41,9 +46,43 @@ namespace Manti
             dataGridViewItemMill.AutoGenerateColumns = false;
             dataGridViewItemDE.AutoGenerateColumns = false;
 
+            dataGridViewQuestGivers.AutoGenerateColumns = false;
+
             if (FormMySQL.Offline == true)
             {
-                tabControlCategory.Enabled = false;
+                // Disable buttons
+
+                // Search Buttons
+                Button[] dButtons = new Button[]
+                {
+                    buttonAccountSearchSearch,
+                    buttonCharacterSearchSearch,
+                    buttonCreatureSearchSearch,
+                    buttonQuestSearchSearch,
+                    buttonGameObjectSearchSearch,
+                    buttonItemSearchSearch
+                };
+
+                // Execute Buttons
+                ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
+                {
+                    toolStripSplitButtonAccountScriptUpdate,
+                    toolStripSplitButtonCharacterScriptUpdate,
+                    toolStripSplitButtonCreatureScriptUpdate,
+                    toolStripSplitButtonQuestScriptUpdate,
+                    toolStripSplitButtonGOScriptUpdate,
+                    toolStripSplitButtonItemScriptUpdate
+                };
+
+                foreach (Button btn in dButtons)
+                {
+                    btn.Enabled = false;
+                }
+
+                foreach (ToolStripSplitButton btn in dStripButton)
+                {
+                    btn.Enabled = false;
+                }
             }
 
             var textboxToolTip = new ToolTip();
@@ -121,21 +160,28 @@ namespace Manti
         #endregion
 
         #endregion
-        #region CustomFunctions
+        #region Functions
 
         #region GlobalFunctions
-            // Reads a CSV file (ID and Name are columns in the CSV file, separated with a comma).
-        private DataTable ReadExcelCSV(string csvName, int ID, int value)
+        /// <summary>
+        /// Function looks for a specific .CSV extension file and turns it into a DataTable (used for FormTools).
+        /// </summary>
+        /// <param name="csvName">The specific .CSV File</param>
+        /// <param name="ID">What column the ID is</param>
+        /// <param name="value">Where the value/name is in the CSV extension</param>
+        /// <returns>DataTable with all the rows from the ID and Value</returns>
+        private DataTable ReadExcelCSV(string csvName, int ID, int value, int value2 = 0)
         {
             var reader = new System.IO.StreamReader(@".\CSV\" + csvName + ".dbc.csv");
             var forgetFirst = true;
 
-            var dataColumn = new DataTable();
+            var newTable = new DataTable();
 
             if (reader != null)
             {
-                dataColumn.Columns.Add("id", typeof(string));
-                dataColumn.Columns.Add("value", typeof(string));
+                newTable.Columns.Add("id", typeof(string));
+                newTable.Columns.Add("value", typeof(string));
+                if (value2 != 0) { newTable.Columns.Add("value2", typeof(string)); }
 
                 string line; string[] words;
 
@@ -147,7 +193,14 @@ namespace Manti
                     {
                         if (words.Length > value && words[value] != null)
                         {
-                            dataColumn.Rows.Add(words[ID].Trim('"'), words[value].Trim('"'));
+                            DataRow newRow = newTable.NewRow();
+
+                            // adds the id and value to the row
+                            newRow["id"] = words[ID].Trim('"'); newRow["value"] = words[value].Trim('"');
+                            // if value2 is above 0, add another column value
+                            if (value2 != 0) { newRow["value2"] = words[value2].Trim('"'); }
+
+                            newTable.Rows.Add(newRow);
                         }
                     }
 
@@ -160,26 +213,36 @@ namespace Manti
                 MessageBox.Show(csvName + " Could not been found in the CSV folder.\n It has to be same location as the program.", "File Directory : CSV ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            return dataColumn;
+            return newTable;
         }
-            // It checks for the char '%' in frot or/and end of a string.
-        private string DatabaseQueryFilter(string value, string query)
+        /// <summary>
+        /// It filters, if the character '%' is in the beginning or end of the string (value).
+        /// If it is, it turns the SQL query to LIKE (a sort of containing method for MySQL).
+        /// </summary>
+        /// <param name="value">What the user is searching for</param>
+        /// <param name="columnName">Column name for the query</param>
+        /// <returns>Returns either LIKE or equal to the search</returns>
+        private string DatabaseQueryFilter(string value, string columnName)
         {
             if (value != "")
             {
                 if (value.Trim().StartsWith("%", StringComparison.InvariantCultureIgnoreCase) || value.Trim().EndsWith("%", StringComparison.InvariantCultureIgnoreCase))
                 {
-                    value = " AND " + query + " LIKE '" + value + "'";
+                    value = " AND " + columnName + " LIKE '" + value + "'";
                 }
                 else
                 {
-                    value = " AND " + query + " = '" + value + "'";
+                    value = " AND " + columnName + " = '" + value + "'";
                 }
             }
 
             return value;
         }
-            // Check if all textboxes are empty.
+        /// <summary>
+        /// Only used in search tabs. It checks if all the textboxes are empty.
+        /// </summary>
+        /// <param name="control">The selected control to check</param>
+        /// <returns>Returns a boolean. Textboxes empty = true</returns>
         private bool CheckEmptyControls(Control control)
         {
             foreach (Control ct in control.Controls)
@@ -195,7 +258,12 @@ namespace Manti
 
             return true;
         }
-            // Convert datatable columns to string columns
+        /// <summary>
+        /// Converts all the ColumnHeader to string header (holds strings).
+        /// Required to add new rows.
+        /// </summary>
+        /// <param name="datatable">The specific table to convert</param>
+        /// <returns>Returns the transformed DataTable with string headers</returns>
         private DataTable ConvertColumnsToString(DataTable datatable)
         {
             var newTable = datatable.Clone();
@@ -215,7 +283,13 @@ namespace Manti
 
             return newTable;
         }
-            // Create Popup : Selection
+        /// <summary>
+        /// Creates a popup, where the user can select only one row.
+        /// </summary>
+        /// <param name="formTitle">Changes the popup title</param>
+        /// <param name="data">This sends the data to the listview/datagrid used in the popup</param>
+        /// <param name="currentValue">Highlights the current value</param>
+        /// <returns>It returns the selected /= current value (the ID)</returns>
         private string CreatePopupSelection(string formTitle, DataTable data, string currentValue)
         {
             var popupDialog = new FormPopup.FormPopupSelection();
@@ -232,7 +306,14 @@ namespace Manti
             this.Activate();
             return currentValue;
         }
-            // Create Popup : Checklist
+        /// <summary>
+        /// Same as the Selection popup, except it has checkboxes (multiple selections).
+        /// </summary>
+        /// <param name="formTitle">Changes the popup title</param>
+        /// <param name="data">This sends the data to the listview/datagrid used in the popup</param>
+        /// <param name="currentValue">Highlights the current value</param>
+        /// <param name="bitMask">If the data is 2^n based (1, 2, 4, 8, 16 so on)</param>
+        /// <returns>It returns the selected /= current value (the ID)</returns>
         private string CreatePopupChecklist(string formTitle, DataTable data, string currentValue, bool bitMask = false)
         {
             var popupDialog = new FormPopup.FormPopupCheckboxList();
@@ -250,40 +331,61 @@ namespace Manti
             this.Activate();
             return currentValue;
         }
-            // Create Popup : Entities - disableEntity(item, creature, gameobject)
+        /// <summary>
+        /// Similar to selection and checklist popup, however, is it used for entities (items, creatures & gameobjects)
+        /// </summary>
+        /// <param name="currentValue">Highlights the current value</param>
+        /// <param name="disableEntity">Used to disable or enable radiobuttons {items, creatures, gameobjects} in that order</param>
+        /// <returns>It returns the selected /= current value (the ID)</returns>
         private string CreatePopupEntity(string currentValue, bool[] disableEntity)
         {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
+            var popupDialog = new FormPopup.FormPopupEntities();
+            DataSet entities = new DataSet();
 
-            if (ConnectionOpen(connect))
+            popupDialog.changeSelection = (currentValue == "") ? "0" : currentValue;
+            popupDialog.disableEntity = disableEntity;
+            popupDialog.Owner = this;
+
+            if (FormMySQL.Offline)
             {
-                string query = "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
-                query += "SELECT entry, modelid1, name FROM creature_template ORDER BY entry ASC;";
-                query += "SELECT entry, displayId, name FROM gameobject_template ORDER BY entry ASC;";
+                // Popup Entity follows order: 0: ID, 1: displayID, 2: Name
+                entities.Tables.Add(ReadExcelCSV("ItemTemplate", 0, 2, 1));
+                entities.Tables.Add(ReadExcelCSV("CreatureTemplate", 0, 1, 2));
+                entities.Tables.Add(ReadExcelCSV("GameObjectTemplate", 0, 1, 2));
+            } else
+            {
+                var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
 
-                var entities = DatabaseSearch(connect, query);
+                if (ConnectionOpen(connect))
+                {
+                    string query = "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
+                    query += "SELECT entry, modelid1, name FROM creature_template ORDER BY entry ASC;";
+                    query += "SELECT entry, displayId, name FROM gameobject_template ORDER BY entry ASC;";
 
-                ConnectionClose(connect);
+                    entities = DatabaseSearch(connect, query);
 
-                var popupDialog = new FormPopup.FormPopupEntities();
-
-                popupDialog.setEntityTable = entities;
-                popupDialog.disableEntity = disableEntity;
-
-                popupDialog.changeSelection = (currentValue == "") ? "0" : currentValue;
-                popupDialog.Owner = this;
-                popupDialog.ShowDialog();
-
-                currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
-                entities = null;
-                popupDialog.Close();
+                    ConnectionClose(connect);
+                }
             }
+
+            popupDialog.setEntityTable = entities;
+            popupDialog.ShowDialog();
+            entities = null;
+
+            currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
+            popupDialog.Close();
 
             this.Activate();
             return currentValue;
         }
-            // Generate SQL Loot
-        private void GenerateDataColumn(string table, DataGridView dataGrid, TextBox output)
+        /// <summary>
+        /// Generates SQL text used to execute. Is used in loot tables (see creature -> loot as a reference).
+        /// This might change to string return instead.
+        /// </summary>
+        /// <param name="table">What database it generates for</param>
+        /// <param name="dataGrid">The grid it has to loop through</param>
+        /// <param name="output">The textbox it has to 'add' to</param>
+        private void GenerateLootSQL(string table, DataGridView dataGrid, TextBox output)
         {
             string query = "DELETE FROM `" + table + "` WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
 
@@ -309,11 +411,16 @@ namespace Manti
 
             output.AppendText(query);
         }
-            // Generates a sql file.
-        private void GenerateSQLFile(string startText, string fileName, TextBox tb)
+        /// <summary>
+        /// Generates a SQL File and saves it in the SQL folder.
+        /// </summary>
+        /// <param name="fileStart">The beginning of the fileName</param>
+        /// <param name="fileName">FileName after fileStart (usually entry & name)</param>
+        /// <param name="tb">The textbox to create from (text)</param>
+        private void GenerateSQLFile(string fileStart, string fileName, TextBox tb)
         {
             // Save location / path
-            string path = @".\SQL\" + startText + fileName + ".SQL";
+            string path = @".\SQL\" + fileStart + fileName + ".SQL";
 
             // Checks if the path file exists
             if (File.Exists(path))
@@ -350,24 +457,15 @@ namespace Manti
                sw.WriteLine(tb.Text.Substring(startIndex, endIndex - startIndex));
             }
 
-                /*
-            // Loops through each line and output it inside the file.
-            for (var i = 0; i < textContent.Length; i++)
-            {
-                if ((i % 100) == 0)
-                {
-                    sw.WriteLine(textContent[i]);
-                } else
-                {
-                    sw.Write(textContent[i]);
-                }
-            }*/
-
             // Closes the StreamWriter.
             sw.Close();
 
         }
-            // Set All textboxes to ZERO.
+        /// <summary>
+        /// Sets all textboxes in a control to '0'.
+        /// Mostly/only used on 'new button' in most tabs.
+        /// </summary>
+        /// <param name="parent">The beginning (usually a tabpage)</param>
         private void DefaultValuesGenerate(Control parent)
         {
             foreach (Control child in parent.Controls)
@@ -381,7 +479,11 @@ namespace Manti
                 }
             }
         }
-            // Override textboxes by a list with textbox object and the replacement value.
+        /// <summary>
+        /// Overrides the selected database with a value, if textbox don't need a '0'.
+        /// An example could be item name, it needs to be empty.
+        /// </summary>
+        /// <param name="exclude">A tuple with two variables, the textbox to target and replacement string.</param>
         private void DefaultValuesOverride(List<Tuple<TextBox, string>> exclude)
         {
             foreach (var data in exclude)
@@ -389,7 +491,13 @@ namespace Manti
                 data.Item1.Text = data.Item2.ToString();
             }
         }
-            // Generate SQL to delete a specific 'type', specified by entry/guid and outputs it into a textbox.
+        /// <summary>
+        /// The function name says it all. Takes the selected/selections of a datagrid and creates a deleting SQL(s) to execute.
+        /// </summary>
+        /// <param name="gv">The tageting DataGridView</param>
+        /// <param name="sqlTable">What table is it targeting in the database</param>
+        /// <param name="uniqueIndex">The specific row to delete</param>
+        /// <param name="output">The textbox to output the SQL</param>
         private void GenerateDeleteSelectedRow(DataGridView gv, string sqlTable, string uniqueIndex, TextBox output)
         {
             if (gv.SelectedRows.Count > 0)
@@ -400,7 +508,11 @@ namespace Manti
                 }
             }
         }
-            // Convert to DateTime.
+        /// <summary>
+        /// Converts an unix stamp to a datatime used for calenders and readable.
+        /// </summary>
+        /// <param name="unixStamp">The unixstamp to convert</param>
+        /// <returns>Datatime based on unix stamp</returns>
         private DateTime UnixStampToDateTime(double unixStamp)
         {
             var DateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
@@ -408,7 +520,11 @@ namespace Manti
 
             return DateTime;
         }
-            // Reverse the DataTime process.
+        /// <summary>
+        /// A reverse of the UnixStampToDateTime function.
+        /// </summary>
+        /// <param name="dateTime">A datatime to convert</param>
+        /// <returns>Outputs an unixstamp based on the datatime</returns>
         private double DateTimeToUnixStamp(DateTime dateTime)
         {
             return (TimeZoneInfo.ConvertTimeToUtc(dateTime) - new DateTime(1970, 1, 1)).TotalSeconds;
@@ -483,7 +599,7 @@ namespace Manti
 
             return 0;
         }
-            // Gets all rows from a search, searches for items names. if itemid is false, it tries for item identifier.
+            // Get all rows from a search, searches for items names. if itemid is false, it tries for item identifier.
         private DataTable DatabaseItemNameColumn(string table, string where, string id, int itemColumn, bool isItemID)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
@@ -526,7 +642,7 @@ namespace Manti
 
             return searchTable;
         }
-            // Gets the Item Entry with global item identifier.
+            // Gets the item entry with global item identifier.
         private uint DatabaseItemGetEntry(uint itemIdentifier)
         {
             var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
@@ -545,7 +661,7 @@ namespace Manti
             ConnectionClose(connect);
             return 0;
         }
-            // Gets the item name from itemIdentifier.
+            // Gets the item name from item entry.
         private string DatabaseItemGetName(uint itemEntry)
         {
 
@@ -1346,8 +1462,12 @@ namespace Manti
 
             if (ConnectionOpen(connect))
             {
-                var query = "SELECT * FROM quest_template WHERE ID = '" + questEntryID + "';" +
-                            "SELECT * FROM quest_template_addon WHERE ID = '" + questEntryID + "';";
+                var query = $"SELECT * FROM quest_template WHERE ID = '{questEntryID}';" +
+                            $"SELECT * FROM quest_template_addon WHERE ID = '{questEntryID}';" +
+                            $"SELECT entry, name, subname FROM creature_template WHERE entry IN (SELECT id FROM creature_queststarter WHERE quest = '{questEntryID}');" +
+                            $"SELECT entry, name, subname FROM creature_template WHERE entry IN (SELECT id FROM creature_questender WHERE quest = '{questEntryID}');" +
+                            $"SELECT entry, name FROM gameobject_template WHERE entry IN (SELECT id FROM gameobject_queststarter WHERE quest = '{questEntryID}');" +
+                            $"SELECT entry, name FROM gameobject_template WHERE entry IN (SELECT id FROM gameobject_questender WHERE quest = '{questEntryID}');";
 
                 var qtTable = DatabaseSearch(connect, query);
 
@@ -1451,6 +1571,7 @@ namespace Manti
                 }
 
                 #region QuestTemplateAddon
+                questTemplate.Clear();
                 questTemplate = new List<Tuple<TextBox, string>>
                 {
                     Tuple.Create(textBoxQuestSectionID, "ID"),
@@ -1479,6 +1600,23 @@ namespace Manti
                 }
 
                 questTemplate = null;
+
+                // Givers & Takers
+                DataColumn cGiver = new DataColumn("entityType", typeof(string)); cGiver.DefaultValue = "creature";
+                DataColumn cTaker = new DataColumn("entityType", typeof(string)); cTaker.DefaultValue = "creature";
+                DataColumn gGiver = new DataColumn("entityType", typeof(string)); gGiver.DefaultValue = "game object";
+                DataColumn gTaker = new DataColumn("entityType", typeof(string)); gTaker.DefaultValue = "game object";
+
+                if (qtTable.Tables[2].Rows.Count > 0) { qtTable.Tables[2].Columns.Add(cGiver); } // Givers
+                if (qtTable.Tables[3].Rows.Count > 0) { qtTable.Tables[3].Columns.Add(cTaker); } // Takers
+                if (qtTable.Tables[4].Rows.Count > 0) { qtTable.Tables[4].Columns.Add(gGiver); } // Givers
+                if (qtTable.Tables[5].Rows.Count > 0) { qtTable.Tables[5].Columns.Add(gTaker); } // Takers
+
+                DataTable givers = new DataTable();
+                givers = qtTable.Tables[2].Copy();
+                givers.Merge(qtTable.Tables[4]);
+
+                dataGridViewQuestGivers.DataSource = givers;
 
                 ConnectionClose(connect);
             }
@@ -2402,7 +2540,7 @@ namespace Manti
             }
             private void buttonCreatureLootGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
+            GenerateLootSQL("creature_loot_template", dataGridViewCreatureLoot, textBoxCreatureScriptOutput);
         }
         #endregion
         #region Pickpocket
@@ -2444,7 +2582,7 @@ namespace Manti
         }
         private void buttonCreaturePickpocketGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("pickpocketing_loot_template", dataGridViewCreaturePickpocketLoot, textBoxCreatureScriptOutput);
+            GenerateLootSQL("pickpocketing_loot_template", dataGridViewCreaturePickpocketLoot, textBoxCreatureScriptOutput);
         }
         #endregion
         #region Skin
@@ -2486,7 +2624,7 @@ namespace Manti
         }
         private void buttonCreatureSkinGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("skinning_loot_template", dataGridViewCreatureSkinLoot, textBoxCreatureScriptOutput);
+            GenerateLootSQL("skinning_loot_template", dataGridViewCreatureSkinLoot, textBoxCreatureScriptOutput);
         }
         #endregion
         #region Vendor
@@ -2526,7 +2664,7 @@ namespace Manti
         }
         private void buttonCreatureVendorGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("npc_vendor", dataGridViewCreatureVendor, textBoxCreatureScriptOutput);
+            GenerateLootSQL("npc_vendor", dataGridViewCreatureVendor, textBoxCreatureScriptOutput);
         }
         #endregion
 
@@ -2538,8 +2676,10 @@ namespace Manti
             bool totalSearch = CheckEmptyControls(tabPageQuestSearch); DialogResult dr;
 
             string query = "SELECT ID, LogTitle, LogDescription FROM quest_template WHERE '1' = '1'";
-            string qsQuery = " AND ID IN (SELECT quest FROM creature_queststarter WHERE id = '"+ textBoxQuestSearchGiver.Text +"')"; // queststart query
+            string qsQuery = " AND ID IN (SELECT quest FROM creature_queststarter WHERE id = '"+ textBoxQuestSearchGiver.Text + "')"; // queststart query
             string qeQuery = " AND ID IN (SELECT quest FROM creature_questender WHERE id = '"+ textBoxQuestSearchTaker.Text + "')"; // questender query
+            string prevQuery = " AND ID IN (SELECT ID FROM quest_template_addon WHERE PrevQuestID = '" + textBoxQuestSearchPQID.Text + "')"; // quest template addon -> prevquestid
+            string nextQuery = " AND ID IN (SELECT ID FROM quest_template_addon WHERE NextQuestID = '" + textBoxQuestSearchNQID.Text + "')"; // quest template addon -> nextquestid
 
             if (totalSearch)
             {
@@ -2553,14 +2693,24 @@ namespace Manti
                     query += DatabaseQueryFilter(textBoxQuestSearchType.Text, "QuestType");
                 }
 
-                if (textBoxQuestSearchGiver.Text != "")
+                if (textBoxQuestSearchGiver.Text.Trim() != "")
                 {
                     query += qsQuery;
                 }
 
-                if (textBoxQuestSearchTaker.Text != "")
+                if (textBoxQuestSearchTaker.Text.Trim() != "")
                 {
                     query += qeQuery;
+                }
+
+                if (textBoxQuestSearchPQID.Text.Trim() != "")
+                {
+                    query += prevQuery;
+                }
+
+                if (textBoxQuestSearchNQID.Text.Trim() != "")
+                {
+                    query += nextQuery;
                 }
 
                 dr = DialogResult.OK;
@@ -2586,7 +2736,7 @@ namespace Manti
         }
         private void dataGridViewQuestSearch_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewQuestSearch.Rows.Count != 0)
+            if (dataGridViewQuestSearch.SelectedRows.Count > 0)
             {
                 DatabaseQuestSearch(dataGridViewQuestSearch.SelectedCells[0].Value.ToString());
 
@@ -2661,12 +2811,54 @@ namespace Manti
                 textBoxQuestSectionReqQSort.Text = CreatePopupSelection("Zone ID Selection", ReadExcelCSV("AreaTable", 0, 11), textBoxQuestSectionReqQSort.Text);
             } else
             {
-                textBoxQuestSectionReqQSort.Text = "- " + CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
+                string newValue = CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
+
+                textBoxQuestSectionReqQSort.Text = (textBoxQuestSectionReqQSort.Text == newValue || newValue == "0") ? textBoxQuestSectionReqQSort.Text : "-" + newValue;
             }
         }
         private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
         {
             textBoxQuestSectionRewOtherTitleID.Text = CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
+        }
+        private void buttonQuestSectionReqFaction1_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionReqFaction1.Text = CreatePopupSelection("Objective Faction ID I", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction1.Text);
+        }
+        private void buttonQuestSectionReqFaction2_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionReqFaction2.Text = CreatePopupSelection("Objective Faction ID II", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction2.Text);
+        }
+        private void buttonQuestSectionReqMinRepF_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionReqMinRepF.Text = CreatePopupSelection("Minimum Reputation Faction", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMinRepF.Text);
+        }
+        private void buttonQuestSectionReqMaxRepF_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionReqMaxRepF.Text = CreatePopupSelection("Maximum Reputation Faction", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMaxRepF.Text);
+        }
+        private void buttonQuestSectionReqSkillID_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionReqSkillID.Text = CreatePopupSelection("Required Skill ID", ReadExcelCSV("SkillLine", 0, 3), textBoxQuestSectionReqSkillID.Text);
+        }
+        private void buttonQuestSectionQuestType_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionQuestType.Text = CreatePopupSelection("Quest Type", ReadExcelCSV("QuestType", 0, 1), textBoxQuestSectionQuestType.Text);
+        }
+        private void buttonQuestSectionQuestFlags_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionQuestFlags.Text = CreatePopupChecklist("Quest : Flags", ReadExcelCSV("QuestFlags", 0, 1), textBoxQuestSectionQuestFlags.Text, true);
+        }
+        private void buttonQuestSectionOtherSF_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionOtherSF.Text = CreatePopupChecklist("Quest : Special Flags", ReadExcelCSV("QuestSpecialFlags", 0, 1), textBoxQuestSectionOtherSF.Text, true);
+        }
+        private void buttonQuestSectionQuestInfo_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionQuestInfo.Text = CreatePopupSelection("Quest Info", ReadExcelCSV("QuestInfo", 0, 1), textBoxQuestSectionQuestInfo.Text);
+        }
+        private void buttonQuestSectionSourceSpellID_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionSourceSpellID.Text = CreatePopupSelection("Spells", ReadExcelCSV("Spells", 0, 1), textBoxQuestSectionSourceSpellID.Text);
         }
         #endregion
 
@@ -2916,7 +3108,7 @@ namespace Manti
         }
         private void buttonItemLootGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
+            GenerateLootSQL("item_loot_template", dataGridViewItemLoot, textBoxItemScriptOutput);
         }
         #endregion
         #region Disenchant
@@ -2958,7 +3150,7 @@ namespace Manti
         }
         private void buttonItemDEGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("disenchant_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+            GenerateLootSQL("disenchant_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
         }
         #endregion
         #region Milling
@@ -2999,7 +3191,7 @@ namespace Manti
         }
         private void buttonItemMillGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("milling_loot_template", dataGridViewItemMill, textBoxItemScriptOutput);
+            GenerateLootSQL("milling_loot_template", dataGridViewItemMill, textBoxItemScriptOutput);
         }
         #endregion
         #region Prospecting
@@ -3040,7 +3232,7 @@ namespace Manti
         }
         private void buttonItemProspectGenerate_Click(object sender, EventArgs e)
         {
-            GenerateDataColumn("prospecting_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
+            GenerateLootSQL("prospecting_loot_template", dataGridViewItemProspect, textBoxItemScriptOutput);
         }
         #endregion
 
@@ -3154,7 +3346,6 @@ namespace Manti
             textBoxItemTempGemProper.Text = CreatePopupSelection("Gem Property Selection", ReadExcelCSV("GemProperties", 0, 1), textBoxItemTempGemProper.Text);
         }
 
-
         #endregion
 
         #endregion
@@ -3162,7 +3353,4 @@ namespace Manti
         #endregion
 
     }
-
-
-
 }

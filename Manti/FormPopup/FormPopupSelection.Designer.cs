@@ -78,6 +78,7 @@
             this.columnHeaderTICValue});
             this.listViewPopupSelection.FullRowSelect = true;
             this.listViewPopupSelection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewPopupSelection.HideSelection = false;
             this.listViewPopupSelection.Location = new System.Drawing.Point(12, 38);
             this.listViewPopupSelection.MultiSelect = false;
             this.listViewPopupSelection.Name = "listViewPopupSelection";

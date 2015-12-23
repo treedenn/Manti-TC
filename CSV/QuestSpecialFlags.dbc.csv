@@ -1,0 +1,7 @@
+id;value
+1;Makes the quest repeatable.
+2;Makes the quest only completable by some external event.
+3;Make quest auto-accept.
+4;Only used for Dungeon Finder quests.
+5;Makes the quest monthly.
+6;The quest requires RequiredOrNpcGo killcredit but NOT kill (a spell cast).

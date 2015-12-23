@@ -70,6 +70,7 @@ namespace Manti.FormPopup
                 if (item.SubItems[0].Text.ToString() == selectionValue)
                 {
                     item.BackColor = Color.LightGreen;
+                    item.Selected = true;
                     listViewPopupSelection.EnsureVisible(item.Index);
                 }
             }
@@ -90,6 +91,9 @@ namespace Manti.FormPopup
             if (listViewPopupSelection.SelectedItems.Count > 0)
             {
                 selectionValue = listViewPopupSelection.SelectedItems[0].Text;
+            } else
+            {
+                selectionValue = "0";
             }
 
             //selectionValue = (selectionValue == "") ? "0" : selectionValue;

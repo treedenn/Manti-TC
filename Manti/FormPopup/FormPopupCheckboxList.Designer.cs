@@ -60,6 +60,7 @@
             this.checkedListBoxPopupValues.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.checkedListBoxPopupValues.CheckOnClick = true;
             this.checkedListBoxPopupValues.FormattingEnabled = true;
+            this.checkedListBoxPopupValues.HorizontalScrollbar = true;
             this.checkedListBoxPopupValues.Location = new System.Drawing.Point(12, 12);
             this.checkedListBoxPopupValues.Name = "checkedListBoxPopupValues";
             this.checkedListBoxPopupValues.Size = new System.Drawing.Size(360, 345);
