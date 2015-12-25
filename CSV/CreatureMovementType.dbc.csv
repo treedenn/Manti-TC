@@ -1,0 +1,4 @@
+id;value
+0;Idle - Stay in one place
+1;Random movement inside the spawndist radius
+2;Waypoint movemnet

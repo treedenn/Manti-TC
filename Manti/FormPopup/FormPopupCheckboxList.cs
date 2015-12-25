@@ -17,75 +17,76 @@ namespace Manti.FormPopup
             InitializeComponent();
         }
 
-        private int CheckValue = 0;
-        private DataTable dtOptions;
-        private bool BitMask = false;
+        private string tbValue = "";
+        private bool bitmaskEnabled = false;
+        private bool isMinusOne = false;
+        private DataTable cblOptions;
 
         #region Functions
 
-        public int setValue
-        {
-            set { CheckValue = value; }
-        }
-        public DataTable setDataTable
-        {
-            set { dtOptions = value; }
-        }
-        public bool setBitMask
-        {
-            set { BitMask = value; }
-        }
         public string setFormTitle
         {
             set { this.Text = value; }
         }
-        public string getValue
+        public string usedValue
         {
-            get { return CheckValue.ToString(); }
+            set { tbValue = value; }
+            get { return tbValue; }
+        }
+        public bool setBitmask
+        {
+            set { bitmaskEnabled = value; }
+        }
+        public DataTable setDataTable
+        {
+            set { cblOptions = value; }
         }
 
+        /// <summary>
+        /// Adds the rows to the checklist from dataTable.
+        /// </summary>
         private void AddItems()
         {
-            foreach (DataRow row in dtOptions.Rows)
+            foreach (DataRow row in cblOptions.Rows)
             {
                 checkedListBoxPopupValues.Items.Add(row[1]);
             }
         }
-        private int CalculateBitMask()
+        /// <summary>
+        /// Calculates BitMask based on checked items and their ID.
+        /// </summary>
+        /// <returns></returns>
+        private ulong CalculateBitmask()
         {
-            double value = 0;
+            double bitmaskValue = 0;
 
-            if (checkedListBoxPopupValues.CheckedItems.Count != checkedListBoxPopupValues.Items.Count)
-            {
-                var SelectedItemsIndexes = new List<int>();
-                foreach (object o in checkedListBoxPopupValues.CheckedItems)
-                {
-                    SelectedItemsIndexes.Add(checkedListBoxPopupValues.Items.IndexOf(o));
-                }
+            var SelectedItems = new List<int>();
 
-                foreach (int i in SelectedItemsIndexes)
-                {
-                    value += Math.Pow(2, Convert.ToInt32(dtOptions.Rows[i][0]) - 1);
-                }
-            } else
+            // Loops through every checked items and add them to list.
+            foreach (object o in checkedListBoxPopupValues.CheckedItems)
             {
-                value = -1;
+                SelectedItems.Add(checkedListBoxPopupValues.Items.IndexOf(o));
             }
 
-            //MessageBox.Show(value.ToString(), "");
-
-            return Convert.ToInt32(value);
-        }
-        private List<int> ReverseBitMask(int value) 
-        {
-            var storeID = new List<int>();
-            var newValue = Convert.ToDouble(value);
-
-            if (newValue.ToString() != "-1")
+            // When all checked items have been found, go calculate the total bitmask based on ID.
+            foreach (int i in SelectedItems)
             {
+                bitmaskValue += Math.Pow(2, Convert.ToInt64(cblOptions.Rows[i][0]) - 1);
+            }
+
+            return Convert.ToUInt64(bitmaskValue);
+        }
+        private List<ulong> ReverseBitmask(string value) 
+        {
+            var storeID = new List<ulong>();
+
+            if (value != "-1")
+            {
+                Double newValue = Convert.ToDouble(value);
+
                 while (newValue > 0)
                 {
-                    for (int i = 0; Math.Pow(2, i) <= newValue; i++)
+                    for (ulong i = 0; Math.Pow(2, i) <= newValue; i++)
                     {
                         if (Math.Pow(2, i+1) > newValue)
                         {
@@ -94,30 +95,27 @@ namespace Manti.FormPopup
                         }
                     }
                 }
-            } else
-            {
-                storeID.Add(-1);
+            } else {
+                isMinusOne = true;
             }
 
             return storeID;
         }
-        private void CheckedListBoxes(List<int> ID)
+        private void CheckListBoxes(List<ulong> ID)
         {
-            foreach (int i in ID)
+            if (isMinusOne)
             {
-                if (i == -1)
+                for (var index = 0; index < checkedListBoxPopupValues.Items.Count; index++)
+                {
+                    checkedListBoxPopupValues.SetItemChecked(index, true);
+                }
+            } else
+            {
+                foreach (int i in ID)
                 {
                     for (var index = 0; index < checkedListBoxPopupValues.Items.Count; index++)
                     {
-                        checkedListBoxPopupValues.SetItemChecked(index, true);
-                    }
-
-                    break;
-                } else
-                {
-                    for (var index = 0; index < checkedListBoxPopupValues.Items.Count; index++)
-                    {
-                        if (dtOptions.Rows[index][0].ToString() == i.ToString())
+                        if (cblOptions.Rows[index][0].ToString() == i.ToString())
                         {
                             checkedListBoxPopupValues.SetItemChecked(index, true);
                         }
@@ -127,18 +125,18 @@ namespace Manti.FormPopup
         }
 
         #endregion
-
+        #region Events
         private void FormPopupCheckboxList_Load(object sender, EventArgs e)
         {
             AddItems();
 
-            if (BitMask == true) { CheckedListBoxes(ReverseBitMask(CheckValue)); }
+            if (bitmaskEnabled == true) { CheckListBoxes(ReverseBitmask(tbValue)); }
         }
         private void buttonPopupOK_Click(object sender, EventArgs e)
         {
-            if (BitMask == true)
+            if (bitmaskEnabled == true)
             {
-                CheckValue = CalculateBitMask();
+                tbValue = CalculateBitmask().ToString();
             }
 
             this.Close();
@@ -146,7 +144,8 @@ namespace Manti.FormPopup
         private void buttonPopupClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
+        } 
+        #endregion
 
     }
 }

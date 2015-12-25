@@ -224,7 +224,7 @@ namespace Manti
         /// <returns>Returns either LIKE or equal to the search</returns>
         private string DatabaseQueryFilter(string value, string columnName)
         {
-            if (value != "")
+            if (value != string.Empty)
             {
                 if (value.Trim().StartsWith("%", StringComparison.InvariantCultureIgnoreCase) || value.Trim().EndsWith("%", StringComparison.InvariantCultureIgnoreCase))
                 {
@@ -301,8 +301,9 @@ namespace Manti
             popupDialog.ShowDialog();
 
             currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
-            popupDialog.Close();
+            popupDialog = null;
 
+            GC.Collect();
             this.Activate();
             return currentValue;
         }
@@ -320,13 +321,15 @@ namespace Manti
 
             popupDialog.setFormTitle = formTitle;
             popupDialog.setDataTable = data;
-            popupDialog.setValue = Convert.ToInt32((currentValue == "") ? "0" : currentValue);
-            popupDialog.setBitMask = bitMask;
+            popupDialog.usedValue = (currentValue == string.Empty) ? "0" : currentValue;
+            popupDialog.setBitmask = bitMask;
             popupDialog.Owner = this;
             popupDialog.ShowDialog();
 
-            currentValue = (popupDialog.getValue == "") ? currentValue : popupDialog.getValue;
-            popupDialog.Close();
+            currentValue = (popupDialog.usedValue.ToString() == "") ? currentValue : popupDialog.usedValue.ToString();
+            popupDialog = null;
+
+            GC.Collect();
 
             this.Activate();
             return currentValue;
@@ -337,12 +340,13 @@ namespace Manti
         /// <param name="currentValue">Highlights the current value</param>
         /// <param name="disableEntity">Used to disable or enable radiobuttons {items, creatures, gameobjects} in that order</param>
         /// <returns>It returns the selected /= current value (the ID)</returns>
-        private string CreatePopupEntity(string currentValue, bool[] disableEntity)
+        private string CreatePopupEntity(string currentValue, bool[] disableEntity, bool output = true)
         {
             var popupDialog = new FormPopup.FormPopupEntities();
             DataSet entities = new DataSet();
 
             popupDialog.changeSelection = (currentValue == "") ? "0" : currentValue;
+            popupDialog.changeOutput = output;
             popupDialog.disableEntity = disableEntity;
             popupDialog.Owner = this;
 
@@ -358,7 +362,8 @@ namespace Manti
 
                 if (ConnectionOpen(connect))
                 {
-                    string query = "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
+                    string query = "";
+                    query += "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
                     query += "SELECT entry, modelid1, name FROM creature_template ORDER BY entry ASC;";
                     query += "SELECT entry, displayId, name FROM gameobject_template ORDER BY entry ASC;";
 
@@ -370,10 +375,13 @@ namespace Manti
 
             popupDialog.setEntityTable = entities;
             popupDialog.ShowDialog();
-            entities = null;
 
             currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
-            popupDialog.Close();
+
+            entities = null;
+            popupDialog = null;
+
+            GC.Collect();
 
             this.Activate();
             return currentValue;
@@ -430,6 +438,17 @@ namespace Manti
 
                 // If the feedback is no, stop the program from running
                 if (dr == DialogResult.No)
+                {
+                    return;
+                }
+            } else
+            {
+                DialogResult dr = MessageBox.Show("SQL folder does not exist. \nAutomatically create one for you?", "The folder 'SQL' could not been found.", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
+
+                if (dr == DialogResult.Yes)
+                {
+                    Directory.CreateDirectory(@".\SQL\");
+                } else
                 {
                     return;
                 }
@@ -1351,103 +1370,114 @@ namespace Manti
             // Template Generation
         private string DatabaseCreatureTempGenerate()
         {
-            var query = "REPLACE INTO `creature_template` (" +
-            "`entry`, `difficulty_entry_1`, `difficulty_entry_2`, `difficulty_entry_3`, `NAME`, `subname`, " +
-            "`modelid1`, `modelid2`, `modelid3`, `modelid4`, `minlevel`, `maxlevel`, `mingold`, `maxgold`, `KillCredit1`, `KillCredit2`, `rank`, `scale`, `faction`, `npcflag`, " +
-            "`HealthModifier`, `ManaModifier`, `ArmorModifier`, `DamageModifier`, `ExperienceModifier`, " +
-            "`BaseAttackTime`, `RangeAttackTime`, `BaseVariance`, `RangeVariance`, `dmgschool`, " +
-            "`AIName`, `MovementType`, `InhabitType`, `HoverHeight`, `gossip_menu_id`, `movementId`, `ScriptName`, `VehicleId`, " +
-            "`trainer_type`, `trainer_spell`, `trainer_class`, `trainer_race`, `lootid`, `pickpocketloot`, `skinloot`, " +
-            "`resistance1`, `resistance2`, `resistance3`, `resistance4`, `resistance5`, `resistance6`, " +
-            "`RegenHealth`, `mechanic_immune_mask`, `family`, `TYPE`, `type_flags`, `flags_extra`, `unit_class`, `unit_flags`, `unit_flags2`, `dynamicflags`, `speed_walk`, `speed_run`, " +
-            "`spell1`, `spell2`, `spell3`, `spell4`, `spell5`, `spell6`, `spell7`, `spell8`" +
-            ") VALUES (" +
+            // Create three strings: finalQuery, query & values.
+            string finalQuery = "", query = "REPLACE INTO `creature_template` (", values = "";
 
-            textBoxCreatureTemplateEntry.Text.Trim() + ", " +
-            textBoxCreatureTemplateDifEntry1.Text.Trim() + ", " +
-            textBoxCreatureTemplateDifEntry2.Text.Trim() + ", " +
-            textBoxCreatureTemplateDifEntry3.Text.Trim() + ", '" +
-            textBoxCreatureTemplateName.Text.Trim() + "', '" +
-            textBoxCreatureTemplateSubname.Text.Trim() + "', " +
+            #region CreatureTemplate
+            var creatureTemplate = new List<Tuple<TextBox, string>>
+            {
+                Tuple.Create(textBoxCreatureTemplateEntry, "entry"),
+                Tuple.Create(textBoxCreatureTemplateDifEntry1, "difficulty_entry_1"),
+                Tuple.Create(textBoxCreatureTemplateDifEntry2, "difficulty_entry_2"),
+                Tuple.Create(textBoxCreatureTemplateDifEntry3, "difficulty_entry_3"),
+                Tuple.Create(textBoxCreatureTemplateName, "name"),
+                Tuple.Create(textBoxCreatureTemplateSubname, "subname"),
+                Tuple.Create(textBoxCreatureTemplateModelID1, "modelid1"),
+                Tuple.Create(textBoxCreatureTemplateModelID2, "modelid2"),
+                Tuple.Create(textBoxCreatureTemplateModelID3, "modelid3"),
+                Tuple.Create(textBoxCreatureTemplateModelID4, "modelid4"),
+                Tuple.Create(textBoxCreatureTemplateLevelMin, "minlevel"),
+                Tuple.Create(textBoxCreatureTemplateLevelMax, "maxlevel"),
+                Tuple.Create(textBoxCreatureTemplateGoldMin, "mingold"),
+                Tuple.Create(textBoxCreatureTemplateGoldMax, "maxgold"),
+                Tuple.Create(textBoxCreatureTemplateKillCredit1, "KillCredit1"),
+                Tuple.Create(textBoxCreatureTemplateKillCredit2, "KillCredit2"),
+                Tuple.Create(textBoxCreatureTemplateRank, "rank"),
+                Tuple.Create(textBoxCreatureTemplateScale, "scale"),
+                Tuple.Create(textBoxCreatureTemplateFaction, "faction"),
+                Tuple.Create(textBoxCreatureTemplateNPCFlags, "npcflag"),
+                Tuple.Create(textBoxCreatureTemplateModHealth, "HealthModifier"),
+                Tuple.Create(textBoxCreatureTemplateModMana, "ManaModifier"),
+                Tuple.Create(textBoxCreatureTemplateModArmor, "ArmorModifier"),
+                Tuple.Create(textBoxCreatureTemplateModDamage, "DamageModifier"),
+                Tuple.Create(textBoxCreatureTemplateModExperience, "ExperienceModifier"),
+                Tuple.Create(textBoxCreatureTemplateBaseAttack, "BaseAttackTime"),
+                Tuple.Create(textBoxCreatureTemplateRangedAttack, "RangeAttackTime"),
+                Tuple.Create(textBoxCreatureTemplateBV, "BaseVariance"),
+                Tuple.Create(textBoxCreatureTemplateRV, "RangeVariance"),
+                Tuple.Create(textBoxCreatureTemplateDS, "dmgschool"),
+                Tuple.Create(textBoxCreatureTemplateAIName, "AIName"),
+                Tuple.Create(textBoxCreatureTemplateMType, "MovementType"),
+                Tuple.Create(textBoxCreatureTemplateInhabitType, "InhabitType"),
+                Tuple.Create(textBoxCreatureTemplateHH, "HoverHeight"),
+                Tuple.Create(textBoxCreatureTemplateGMID, "gossip_menu_id"),
+                Tuple.Create(textBoxCreatureTemplateMID, "movementId"),
+                Tuple.Create(textBoxCreatureTemplateScriptName, "ScriptName"),
+                Tuple.Create(textBoxCreatureTemplateVID, "VehicleId"),
+                Tuple.Create(textBoxCreatureTemplateTType, "trainer_type"),
+                Tuple.Create(textBoxCreatureTemplateTSpell, "trainer_spell"),
+                Tuple.Create(textBoxCreatureTemplateTRace, "trainer_class"),
+                Tuple.Create(textBoxCreatureTemplateTClass, "trainer_race"),
+                Tuple.Create(textBoxCreatureTemplateLootID, "lootid"),
+                Tuple.Create(textBoxCreatureTemplatePickID, "pickpocketloot"),
+                Tuple.Create(textBoxCreatureTemplateSkinID, "skinloot"),
+                Tuple.Create(textBoxCreatureTemplateResis1, "resistance1"),
+                Tuple.Create(textBoxCreatureTemplateResis2, "resistance2"),
+                Tuple.Create(textBoxCreatureTemplateResis3, "resistance3"),
+                Tuple.Create(textBoxCreatureTemplateResis4, "resistance4"),
+                Tuple.Create(textBoxCreatureTemplateResis5, "resistance5"),
+                Tuple.Create(textBoxCreatureTemplateResis6, "resistance6"),
+                Tuple.Create(textBoxCreatureTemplateMechanic, "mechanic_immune_mask"),
+                Tuple.Create(textBoxCreatureTemplateFamily, "family"),
+                Tuple.Create(textBoxCreatureTemplateType, "type"),
+                Tuple.Create(textBoxCreatureTemplateTypeFlags, "type_flags"),
+                Tuple.Create(textBoxCreatureTemplateFlagsExtra, "flags_extra"),
+                Tuple.Create(textBoxCreatureTemplateUnitClass, "unit_class"),
+                Tuple.Create(textBoxCreatureTemplateUnitflags, "unit_flags"),
+                Tuple.Create(textBoxCreatureTemplateUnitflags2, "unit_flags2"),
+                Tuple.Create(textBoxCreatureTemplateDynamic, "dynamicflags"),
+                Tuple.Create(textBoxCreatureTemplateSpeedWalk, "speed_walk"),
+                Tuple.Create(textBoxCreatureTemplateSpeedRun, "speed_run"),
+                Tuple.Create(textBoxCreatureTemplateSpell1, "spell1"),
+                Tuple.Create(textBoxCreatureTemplateSpell2, "spell2"),
+                Tuple.Create(textBoxCreatureTemplateSpell3, "spell3"),
+                Tuple.Create(textBoxCreatureTemplateSpell4, "spell4"),
+                Tuple.Create(textBoxCreatureTemplateSpell5, "spell5"),
+                Tuple.Create(textBoxCreatureTemplateSpell6, "spell6"),
+                Tuple.Create(textBoxCreatureTemplateSpell7, "spell7"),
+                Tuple.Create(textBoxCreatureTemplateSpell8, "spell8")
+            }; 
+            #endregion
 
-            textBoxCreatureTemplateModelID1.Text.Trim() + ", " +
-            textBoxCreatureTemplateModelID2.Text.Trim() + ", " +
-            textBoxCreatureTemplateModelID3.Text.Trim() + ", " +
-            textBoxCreatureTemplateModelID4.Text.Trim() + ", " +
-            textBoxCreatureTemplateLevelMin.Text.Trim() + ", " +
-            textBoxCreatureTemplateLevelMax.Text.Trim() + ", " +
-            textBoxCreatureTemplateGoldMin.Text.Trim() + ", " +
-            textBoxCreatureTemplateGoldMax.Text.Trim() + ", " +
-            textBoxCreatureTemplateKillCredit1.Text.Trim() + ", " +
-            textBoxCreatureTemplateKillCredit2.Text.Trim() + ", " +
-            textBoxCreatureTemplateRank.Text.Trim() + ", " +
-            textBoxCreatureTemplateScale.Text.Trim() + ", " +
-            textBoxCreatureTemplateFaction.Text.Trim() + ", " +
-            textBoxCreatureTemplateNPCFlags.Text.Trim() + ", " +
+            // Variables used in foreach loop.
+            string quote; double deci; long integer;
+            var lastTuple = creatureTemplate.Last();
 
-            textBoxCreatureTemplateModHealth.Text.Trim() + ", " +
-            textBoxCreatureTemplateModMana.Text.Trim() + ", " +
-            textBoxCreatureTemplateModArmor.Text.Trim() + ", " +
-            textBoxCreatureTemplateModDamage.Text.Trim() + ", " +
-            textBoxCreatureTemplateModExperience.Text.Trim() + ", " +
+            // Checks if value is a string/sentence or if it's a number (integer or decimal)
+            // Stores the information in query (column names) & 'values' from textboxes.
+            foreach (var temp in creatureTemplate)
+            {
+                quote = (double.TryParse(temp.Item1.Text, out deci) || long.TryParse(temp.Item1.Text, out integer)) ? "'" : "\"";
 
-            textBoxCreatureTemplateBaseAttack.Text.Trim() + ", " +
-            textBoxCreatureTemplateRangedAttack.Text.Trim() + ", " +
-            textBoxCreatureTemplateBV.Text.Trim() + ", " +
-            textBoxCreatureTemplateRV.Text.Trim() + ", " +
-            textBoxCreatureTemplateDS.Text.Trim() + ", '" +
+                if (temp.Equals(lastTuple))
+                {
+                    values += checkBoxCreatureTemplateHR.Checked.ToString() + ", ";
+                    query += "`RegenHealth`, ";
 
-            textBoxCreatureTemplateAIName.Text.Trim() + "', " +
-            textBoxCreatureTemplateMType.Text.Trim() + ", " +
-            textBoxCreatureTemplateInhabitType.Text.Trim() + ", " +
-            textBoxCreatureTemplateHH.Text.Trim() + ", " +
-            textBoxCreatureTemplateGMID.Text.Trim() + ", " +
-            textBoxCreatureTemplateMID.Text.Trim() + ", '" +
-            textBoxCreatureTemplateScriptName.Text.Trim() + "', " +
-            textBoxCreatureTemplateVID.Text.Trim() + ", " +
+                    values += $"{quote}{temp.Item1.Text.Trim()}{quote}";
+                    query += "`" + temp.Item2.ToString() + "`";
+                }
+                else
+                {
+                    values += $"{quote}{temp.Item1.Text.Trim()}{quote}, ";
+                    query += "`" + temp.Item2.ToString() + "`, ";
+                }
+            }
 
-            textBoxCreatureTemplateTType.Text.Trim() + ", " +
-            textBoxCreatureTemplateTSpell.Text.Trim() + ", " +
-            textBoxCreatureTemplateTRace.Text.Trim() + ", " +
-            textBoxCreatureTemplateTClass.Text.Trim() + ", " +
+            finalQuery += $"{query}) VALUES ({values});";
+            creatureTemplate = null; query = null; values = null;
 
-            textBoxCreatureTemplateLootID.Text.Trim() + ", " +
-            textBoxCreatureTemplatePickID.Text.Trim() + ", " +
-            textBoxCreatureTemplateSkinID.Text.Trim() + ", " +
-
-            textBoxCreatureTemplateResis1.Text.Trim() + ", " +
-            textBoxCreatureTemplateResis2.Text.Trim() + ", " +
-            textBoxCreatureTemplateResis3.Text.Trim() + ", " +
-            textBoxCreatureTemplateResis4.Text.Trim() + ", " +
-            textBoxCreatureTemplateResis5.Text.Trim() + ", " +
-            textBoxCreatureTemplateResis6.Text.Trim() + ", " +
-
-            checkBoxCreatureTemplateHR.Checked.ToString() + ", " +
-            textBoxCreatureTemplateMechanic.Text.Trim() + ", " +
-            textBoxCreatureTemplateFamily.Text.Trim() + ", " +
-            textBoxCreatureTemplateType.Text.Trim() + ", " +
-            textBoxCreatureTemplateTypeFlags.Text.Trim() + ", " +
-            textBoxCreatureTemplateFlagsExtra.Text.Trim() + ", " +
-            textBoxCreatureTemplateUnitClass.Text.Trim() + ", " +
-            textBoxCreatureTemplateUnitflags.Text.Trim() + ", " +
-            textBoxCreatureTemplateUnitflags2.Text.Trim() + ", " +
-            textBoxCreatureTemplateDynamic.Text.Trim() + ", " +
-
-            textBoxCreatureTemplateSpeedWalk.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpeedRun.Text.Trim() + ", " +
-
-            textBoxCreatureTemplateSpell1.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell2.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell3.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell4.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell5.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell6.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell7.Text.Trim() + ", " +
-            textBoxCreatureTemplateSpell8.Text.Trim() + 
-
-            ");";
-
-            return query;
+            return finalQuery;
         }
 
         private void DatabaseCreatureVendor()
@@ -1623,8 +1653,8 @@ namespace Manti
         }
         private string DatabaseQuestSectionGenerate()
         {
-            string finalQuery = "";
-            string query = "REPLACE INTO `quest_template` (", values = "";
+            // Create three strings: finalQuery, query & values.
+            string finalQuery = "", query = "REPLACE INTO `quest_template` (", values = "";
 
             // Stores every column name and textbox for the quest_template table.
             #region QuestTemplate
@@ -1733,11 +1763,11 @@ namespace Manti
 
                 if (temp.Equals(lastTuple))
                 {
-                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}";
+                    values += $"{quote}{temp.Item1.Text.Trim()}{quote}";
                     query += "`" + temp.Item2.ToString() + "`";
                 } else
                 {
-                    values += $"{quote}" + temp.Item1.Text.Trim() + $"{quote}, ";
+                    values += $"{quote}{temp.Item1.Text.Trim()}{quote}, ";
                     query += "`" + temp.Item2.ToString() + "`, ";
                 }
             }
@@ -2412,8 +2442,8 @@ namespace Manti
                 query += DatabaseQueryFilter(textBoxCreatureSearchEntry.Text, "entry");
                 query += DatabaseQueryFilter(textBoxCreatureSearchName.Text, "name");
                 query += DatabaseQueryFilter(textBoxCreatureSearchSubname.Text, "subname");
-                query += DatabaseQueryFilter(textBoxCreatureSearchLevelMin.Text, "minlevel");
-                query += DatabaseQueryFilter(textBoxCreatureSearchLevelMax.Text, "maxlevel");
+                query += (textBoxCreatureSearchLevelMin.Text != string.Empty) ? " AND minlevel >= '" + textBoxCreatureSearchLevelMin.Text + "'" : "";
+                query += (textBoxCreatureSearchLevelMax.Text != string.Empty) ? " AND maxlevel <= '" + textBoxCreatureSearchLevelMax.Text + "'" : "";
                 query += DatabaseQueryFilter(textBoxCreatureSearchRank.Text, "rank");
 
                 dr = DialogResult.OK;
@@ -2460,18 +2490,23 @@ namespace Manti
 
         private void toolStripSplitButtonCreatureNew_ButtonClick(object sender, EventArgs e)
         {
-            var list = new List<Tuple<TextBox, string>>();
+            var list = new List<Tuple<TextBox, string>>
+            {
+                Tuple.Create(textBoxCreatureTemplateName, ""),
 
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSubname, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedWalk, "1"));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateSpeedRun, "1.4286"));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateAIName, ""));
-            list.Add(new Tuple<TextBox, string>(textBoxCreatureTemplateScriptName, ""));
+                Tuple.Create(textBoxCreatureTemplateName, ""),
+                Tuple.Create(textBoxCreatureTemplateSubname, ""),
+                Tuple.Create(textBoxCreatureTemplateSpeedWalk, "1"),
+                Tuple.Create(textBoxCreatureTemplateSpeedRun, "1.4286"),
+                Tuple.Create(textBoxCreatureTemplateName, ""),
+                Tuple.Create(textBoxCreatureTemplateAIName, ""),
+                Tuple.Create(textBoxCreatureTemplateScriptName, "")
+            };
 
             DefaultValuesGenerate(tabPageCreatureTemplate);
             DefaultValuesOverride(list);
+
+            checkBoxCreatureTemplateHR.Checked = true;
 
             tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
         }
@@ -2486,7 +2521,7 @@ namespace Manti
         }
         private void toolStripSplitButtonCreatureScriptUpdate_ButtonClick(object sender, EventArgs e)
         {
-            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
+            var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
 
             if (ConnectionOpen(connect))
             {
@@ -2668,6 +2703,75 @@ namespace Manti
         }
         #endregion
 
+        #region POPUPS
+        private void buttonCreatureTemplateModelID1_Click(object sender, EventArgs e)
+        {
+            bool[] rButtons = { false, true, false };
+
+            textBoxCreatureTemplateModelID1.Text = CreatePopupEntity(textBoxCreatureTemplateModelID1.Text, rButtons, false);
+        }
+        private void buttonCreatureTemplateRank_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateRank.Text = CreatePopupSelection("Creature Rank", ReadExcelCSV("CreatureRanks", 0, 1), textBoxCreatureTemplateRank.Text);
+        }
+        private void buttonCreatureTemplateNPCFlags_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateNPCFlags.Text = CreatePopupChecklist("Creature NPC Flags", ReadExcelCSV("CreatureNPCFlags", 0, 1), textBoxCreatureTemplateNPCFlags.Text, true);
+        }
+        private void buttonCreatureTemplateSpell1_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateSpell1.Text = CreatePopupSelection("Spells I", ReadExcelCSV("Spells", 0, 1), textBoxCreatureTemplateSpell1.Text);
+        }
+        private void buttonCreatureTemplateDS_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateDS.Text = CreatePopupSelection("Damage School (Type)", ReadExcelCSV("CreatureDmgSchool", 0, 1), textBoxCreatureTemplateDS.Text);
+        }
+        private void buttonCreatureTemplateMType_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateMType.Text = CreatePopupSelection("Movement Type", ReadExcelCSV("CreatureMovementType", 0, 1), textBoxCreatureTemplateMType.Text);
+        }
+        private void buttonCreatureTemplateInhabitType_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateInhabitType.Text = CreatePopupChecklist("Inhabit Types", ReadExcelCSV("CreatureInhabitTypes", 0, 1), textBoxCreatureTemplateInhabitType.Text, true); ;
+        }
+        private void buttonCreatureTemplateMechanic_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateMechanic.Text = CreatePopupChecklist("Creature's Immunity", ReadExcelCSV("CreatureMechanic", 0, 1), textBoxCreatureTemplateMechanic.Text, true);
+        }
+        private void buttonCreatureTemplateFamily_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateFamily.Text = CreatePopupSelection("Creature's Family", ReadExcelCSV("CreatureFamily", 0, 1), textBoxCreatureTemplateFamily.Text);
+        }
+        private void buttonCreatureTemplateType_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateType.Text = CreatePopupSelection("Creature's Type", ReadExcelCSV("CreatureFamilyType", 0, 1), textBoxCreatureTemplateType.Text);
+        }
+        private void buttonCreatureTemplateTypeFlags_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateTypeFlags.Text = CreatePopupChecklist("Unit Flags I", ReadExcelCSV("CreatureTypeFlags", 0, 1), textBoxCreatureTemplateTypeFlags.Text, true);
+        }
+        private void buttonCreatureTemplateFlagsExtra_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateFlagsExtra.Text = CreatePopupChecklist("Extra Flags", ReadExcelCSV("CreatureFlagsExtra", 0, 1), textBoxCreatureTemplateFlagsExtra.Text, true);
+        }
+        private void buttonCreatureTemplateUnitClass_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateUnitClass.Text = CreatePopupSelection("Creature's Class", ReadExcelCSV("CreatureUnitClass", 0, 1), textBoxCreatureTemplateUnitClass.Text);
+        }
+        private void buttonCreatureTemplateUnitflags_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateUnitflags.Text = CreatePopupChecklist("Unit Flags I", ReadExcelCSV("CreatureUnitFlags", 0, 1), textBoxCreatureTemplateUnitflags.Text, true);
+        }
+        private void buttonCreatureTemplateUnitflags2_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateUnitflags2.Text = CreatePopupChecklist("Unit Flags II", ReadExcelCSV("CreatureUnitFlags2", 0, 1), textBoxCreatureTemplateUnitflags2.Text, true);
+        }
+        private void buttonCreatureTemplateDynamic_Click(object sender, EventArgs e)
+        {
+            textBoxCreatureTemplateDynamic.Text = CreatePopupChecklist("Dynamic Flags", ReadExcelCSV("CreatureDynamicFlags", 0, 1), textBoxCreatureTemplateDynamic.Text, true);
+        }
+        #endregion
+
         #endregion
         #region Quest
 
@@ -2790,6 +2894,7 @@ namespace Manti
         }
 
         #region POPUPS
+        // Section 1
         private void buttonQuestSectionSourceItemID_Click(object sender, EventArgs e)
         {
             bool[] rButton = { true, false, false };
@@ -2798,11 +2903,11 @@ namespace Manti
         }
         private void buttonQuestSectionReqRace_Click(object sender, EventArgs e)
         {
-
+            textBoxQuestSectionReqRace.Text = CreatePopupChecklist("Requirement: Races", ReadExcelCSV("ChrRaces", 0, 14), textBoxQuestSectionReqRace.Text, true);
         }
         private void buttonQuestSectionReqClass_Click(object sender, EventArgs e)
         {
-
+            textBoxQuestSectionReqClass.Text = CreatePopupChecklist("Requirement: Classes", ReadExcelCSV("ChrClasses", 0, 4), textBoxQuestSectionReqClass.Text, true);
         }
         private void buttonQuestSectionQSort_Click(object sender, EventArgs e)
         {
@@ -2815,10 +2920,6 @@ namespace Manti
 
                 textBoxQuestSectionReqQSort.Text = (textBoxQuestSectionReqQSort.Text == newValue || newValue == "0") ? textBoxQuestSectionReqQSort.Text : "-" + newValue;
             }
-        }
-        private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
-        {
-            textBoxQuestSectionRewOtherTitleID.Text = CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
         }
         private void buttonQuestSectionReqFaction1_Click(object sender, EventArgs e)
         {
@@ -2859,6 +2960,43 @@ namespace Manti
         private void buttonQuestSectionSourceSpellID_Click(object sender, EventArgs e)
         {
             textBoxQuestSectionSourceSpellID.Text = CreatePopupSelection("Spells", ReadExcelCSV("Spells", 0, 1), textBoxQuestSectionSourceSpellID.Text);
+        }
+        // Section 2
+        private void buttonQuestSectionReqNPCID1_Click(object sender, EventArgs e)
+        {
+            bool[] rButton = { false, true, false };
+
+            textBoxQuestSectionReqNPCID1.Text = CreatePopupEntity(textBoxQuestSectionReqNPCID1.Text, rButton);
+        }
+        private void buttonQuestSectionReqItemID1_Click(object sender, EventArgs e)
+        {
+            bool[] rButton = { true, false, false };
+
+            textBoxQuestSectionReqItemID1.Text = CreatePopupEntity(textBoxQuestSectionReqItemID1.Text, rButton);
+        }
+        private void buttonQuestSectionRewChoiceID1_Click(object sender, EventArgs e)
+        {
+            bool[] rButton = { true, false, false };
+
+            textBoxQuestSectionRewChoiceID1.Text = CreatePopupEntity(textBoxQuestSectionRewChoiceID1.Text, rButton);
+        }
+        private void buttonQuestSectionRewItemID1_Click(object sender, EventArgs e)
+        {
+            bool[] rButton = { true, false, false };
+
+            textBoxQuestSectionRewItemID1.Text = CreatePopupEntity(textBoxQuestSectionRewItemID1.Text, rButton);
+        }
+        private void buttonQuestSectionRewFactionID1_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionRewFactionID1.Text = CreatePopupSelection("Faction Selection", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionRewFactionID1.Text);
+        }
+        private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionRewOtherTitleID.Text = CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
+        }
+        private void buttonQuestSectionRewSpell_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSectionRewSpell.Text = CreatePopupSelection("Spell Selection", ReadExcelCSV("Spells", 0, 1), textBoxQuestSectionRewSpell.Text);
         }
         #endregion
 
@@ -3346,11 +3484,14 @@ namespace Manti
             textBoxItemTempGemProper.Text = CreatePopupSelection("Gem Property Selection", ReadExcelCSV("GemProperties", 0, 1), textBoxItemTempGemProper.Text);
         }
 
-        #endregion
+
+
 
         #endregion
 
         #endregion
 
+        #endregion
+       
     }
 }

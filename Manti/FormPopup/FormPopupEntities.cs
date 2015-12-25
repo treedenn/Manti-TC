@@ -160,6 +160,16 @@ namespace Manti.FormPopup
         }
         private void buttonPopupWowhead_Click(object sender, EventArgs e)
         {
+            if (dataGridViewPopupEntity.SelectedRows.Count > 0)
+            {
+                string URL = "";
+
+                URL = (radioButtonPopupEntityItem.Checked) ? "http://legion.wowhead.com/item=" : URL;
+                URL = (radioButtonPopupEntityCreature.Checked) ? "http://legion.wowhead.com/npc=" : URL;
+                URL = (radioButtonPopupEntityGameObject.Checked) ? "http://legion.wowhead.com/object=" : URL;
+
+                System.Diagnostics.Process.Start(URL + dataGridViewPopupEntity.SelectedRows[0].Cells[0].Value.ToString());
+            } 
 
         }
         private void buttonPopupClose_Click(object sender, EventArgs e)

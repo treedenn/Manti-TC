@@ -300,6 +300,7 @@
             this.tabPageCreature = new System.Windows.Forms.TabPage();
             this.tabControlCategoryCreature = new System.Windows.Forms.TabControl();
             this.tabPageCreatureSearch = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.labelCreatureSearchRank = new System.Windows.Forms.Label();
             this.textBoxCreatureSearchRank = new System.Windows.Forms.TextBox();
             this.textBoxCreatureSearchLevelMax = new System.Windows.Forms.TextBox();
@@ -329,6 +330,7 @@
             this.tabPageCreatureTemplate = new System.Windows.Forms.TabPage();
             this.buttonCreatureTempGenerate = new System.Windows.Forms.Button();
             this.groupBoxCreatureTemplateSpells = new System.Windows.Forms.GroupBox();
+            this.buttonCreatureTemplateSpell1 = new System.Windows.Forms.Button();
             this.textBoxCreatureTemplateSpell8 = new System.Windows.Forms.TextBox();
             this.textBoxCreatureTemplateSpell4 = new System.Windows.Forms.TextBox();
             this.textBoxCreatureTemplateSpell7 = new System.Windows.Forms.TextBox();
@@ -351,6 +353,15 @@
             this.textBoxCreatureTemplateResis2 = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateResis2 = new System.Windows.Forms.Label();
             this.groupBoxCreatureTemplateUnknown = new System.Windows.Forms.GroupBox();
+            this.buttonCreatureTemplateMechanic = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateDynamic = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateFlagsExtra = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateUnitflags = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateUnitflags2 = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateTypeFlags = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateType = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateFamily = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateUnitClass = new System.Windows.Forms.Button();
             this.textBoxCreatureTemplateMechanic = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateMechanic = new System.Windows.Forms.Label();
             this.textBoxCreatureTemplateFlagsExtra = new System.Windows.Forms.TextBox();
@@ -376,6 +387,8 @@
             this.textBoxCreatureTemplateSpeedWalk = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateSpeedWalk = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.buttonCreatureTemplateInhabitType = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateMType = new System.Windows.Forms.Button();
             this.textBoxCreatureTemplateVID = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateVID = new System.Windows.Forms.Label();
             this.textBoxCreatureTemplateScriptName = new System.Windows.Forms.TextBox();
@@ -409,6 +422,7 @@
             this.textBoxCreatureTemplateLootID = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateLootID = new System.Windows.Forms.Label();
             this.groupBoxCreatureTemplateDamage = new System.Windows.Forms.GroupBox();
+            this.buttonCreatureTemplateDS = new System.Windows.Forms.Button();
             this.textBoxCreatureTemplateRangedAttack = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateRangedAttack = new System.Windows.Forms.Label();
             this.textBoxCreatureTemplateBaseAttack = new System.Windows.Forms.TextBox();
@@ -431,6 +445,9 @@
             this.textBoxCreatureTemplateModHealth = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateModHealth = new System.Windows.Forms.Label();
             this.groupBoxCreatureTemplateGeneral = new System.Windows.Forms.GroupBox();
+            this.buttonCreatureTemplateRank = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateNPCFlags = new System.Windows.Forms.Button();
+            this.buttonCreatureTemplateModelID1 = new System.Windows.Forms.Button();
             this.labelCreatureTemplateGoldMax = new System.Windows.Forms.Label();
             this.textBoxCreatureTemplateNPCFlags = new System.Windows.Forms.TextBox();
             this.labelCreatureTemplateGoldMin = new System.Windows.Forms.Label();
@@ -649,6 +666,7 @@
             this.tabPageQuestSection1 = new System.Windows.Forms.TabPage();
             this.groupBoxQuestSectionQuestInformation = new System.Windows.Forms.GroupBox();
             this.labelQuestSectionOther = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionQuestInfo = new System.Windows.Forms.Button();
             this.textBoxQuestSectionTimeAllowed = new System.Windows.Forms.TextBox();
             this.labelQuestSectionQuestInfo = new System.Windows.Forms.Label();
             this.labelQuestSectionTimeAllowed = new System.Windows.Forms.Label();
@@ -675,6 +693,7 @@
             this.groupBoxQuestSectionLDescription = new System.Windows.Forms.GroupBox();
             this.textBoxQuestSectionLDescription = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionSource = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionSourceSpellID = new System.Windows.Forms.Button();
             this.buttonQuestSectionSourceItemID = new System.Windows.Forms.Button();
             this.textBoxQuestSectionSourceSpellID = new System.Windows.Forms.TextBox();
             this.labelQuestSectionSourceSpellID = new System.Windows.Forms.Label();
@@ -683,6 +702,8 @@
             this.textBoxQuestSectionSourceItemID = new System.Windows.Forms.TextBox();
             this.labelQuestSectionSourceItemID = new System.Windows.Forms.Label();
             this.groupBoxQuestSectionFlags = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionOtherSF = new System.Windows.Forms.Button();
+            this.buttonQuestSectionQuestFlags = new System.Windows.Forms.Button();
             this.buttonQuestSectionQuestType = new System.Windows.Forms.Button();
             this.textBoxQuestSectionQuestFlags = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionQuestType = new System.Windows.Forms.TextBox();
@@ -691,6 +712,11 @@
             this.textBoxQuestSectionOtherSF = new System.Windows.Forms.TextBox();
             this.labelQuestSectionSF = new System.Windows.Forms.Label();
             this.groupBoxQuestSectionQuestRequirements = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionReqFaction1 = new System.Windows.Forms.Button();
+            this.buttonQuestSectionReqFaction2 = new System.Windows.Forms.Button();
+            this.buttonQuestSectionReqMaxRepF = new System.Windows.Forms.Button();
+            this.buttonQuestSectionReqMinRepF = new System.Windows.Forms.Button();
+            this.buttonQuestSectionReqSkillID = new System.Windows.Forms.Button();
             this.textBoxQuestSectionReqMaxRepV = new System.Windows.Forms.TextBox();
             this.label95 = new System.Windows.Forms.Label();
             this.textBoxQuestSectionReqMaxRepF = new System.Windows.Forms.TextBox();
@@ -738,6 +764,7 @@
             this.buttonQuestSectionGenerate = new System.Windows.Forms.Button();
             this.groupBoxQuestSectionRequirements = new System.Windows.Forms.GroupBox();
             this.groupBoxQuestSectionReqItem = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionReqItemID1 = new System.Windows.Forms.Button();
             this.labelQuestSectionReqItemCount = new System.Windows.Forms.Label();
             this.textBoxQuestSectionReqItemID6 = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionReqItemID4 = new System.Windows.Forms.TextBox();
@@ -753,6 +780,7 @@
             this.textBoxQuestSectionReqItemC2 = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionReqItemC1 = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionReqNPC = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionReqNPCID1 = new System.Windows.Forms.Button();
             this.labelQuestSectionReqNPCCount = new System.Windows.Forms.Label();
             this.labelQuestSectionReqNPCID = new System.Windows.Forms.Label();
             this.textBoxQuestSectionReqNPCC4 = new System.Windows.Forms.TextBox();
@@ -765,6 +793,7 @@
             this.textBoxQuestSectionReqNPCID1 = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionRewards = new System.Windows.Forms.GroupBox();
             this.groupBoxQuestSectionRewOther = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionRewSpell = new System.Windows.Forms.Button();
             this.labelQuestSectionRewMailDelay = new System.Windows.Forms.Label();
             this.textBoxQuestSectionRewOtherMailDelay = new System.Windows.Forms.TextBox();
             this.buttonQuestSectionRewOtherTitleID = new System.Windows.Forms.Button();
@@ -789,6 +818,7 @@
             this.labelQuestSectionRewMoney = new System.Windows.Forms.Label();
             this.textBoxQuestSectionRewOtherMoney = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionRewItem = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionRewItemID1 = new System.Windows.Forms.Button();
             this.labelQuestSectionRewItemCount = new System.Windows.Forms.Label();
             this.textBoxQuestSectionRewItemID4 = new System.Windows.Forms.TextBox();
             this.labelQuestSectionRewItemID = new System.Windows.Forms.Label();
@@ -807,6 +837,7 @@
             this.textBoxQuestSectionRewFactionOID5 = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionRewFactionOID3 = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionRewFaction = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionRewFactionID1 = new System.Windows.Forms.Button();
             this.labelQuestSectionRewFactionV = new System.Windows.Forms.Label();
             this.textBoxQuestSectionRewFactionID4 = new System.Windows.Forms.TextBox();
             this.labelQuestSectionRewFactionID = new System.Windows.Forms.Label();
@@ -820,6 +851,7 @@
             this.textBoxQuestSectionRewFactionV2 = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionRewFactionV1 = new System.Windows.Forms.TextBox();
             this.groupBoxQuestSectionRewChoice = new System.Windows.Forms.GroupBox();
+            this.buttonQuestSectionRewChoiceID1 = new System.Windows.Forms.Button();
             this.labelQuestSectionRewChoiceC = new System.Windows.Forms.Label();
             this.textBoxQuestSectionRewChoiceID6 = new System.Windows.Forms.TextBox();
             this.textBoxQuestSectionRewChoiceID4 = new System.Windows.Forms.TextBox();
@@ -836,8 +868,16 @@
             this.textBoxQuestSectionRewChoiceC1 = new System.Windows.Forms.TextBox();
             this.tabPageQuestGivers = new System.Windows.Forms.TabPage();
             this.dataGridViewQuestGivers = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageQuestTakers = new System.Windows.Forms.TabPage();
             this.dataGridViewQuestTakers = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageQuestScript = new System.Windows.Forms.TabPage();
             this.statusStripQuestScript = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelQuestScriptRows = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1364,23 +1404,6 @@
             this.controlPanelToolStripMenuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonQuestSectionReqSkillID = new System.Windows.Forms.Button();
-            this.buttonQuestSectionReqMinRepF = new System.Windows.Forms.Button();
-            this.buttonQuestSectionReqMaxRepF = new System.Windows.Forms.Button();
-            this.buttonQuestSectionReqFaction2 = new System.Windows.Forms.Button();
-            this.buttonQuestSectionReqFaction1 = new System.Windows.Forms.Button();
-            this.buttonQuestSectionQuestFlags = new System.Windows.Forms.Button();
-            this.buttonQuestSectionOtherSF = new System.Windows.Forms.Button();
-            this.buttonQuestSectionSourceSpellID = new System.Windows.Forms.Button();
-            this.buttonQuestSectionQuestInfo = new System.Windows.Forms.Button();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
             this.tabControlCategoryAccount.SuspendLayout();
@@ -3740,6 +3763,7 @@
             // tabPageCreatureSearch
             // 
             this.tabPageCreatureSearch.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPageCreatureSearch.Controls.Add(this.button1);
             this.tabPageCreatureSearch.Controls.Add(this.labelCreatureSearchRank);
             this.tabPageCreatureSearch.Controls.Add(this.textBoxCreatureSearchRank);
             this.tabPageCreatureSearch.Controls.Add(this.textBoxCreatureSearchLevelMax);
@@ -3761,6 +3785,14 @@
             this.tabPageCreatureSearch.Size = new System.Drawing.Size(955, 533);
             this.tabPageCreatureSearch.TabIndex = 0;
             this.tabPageCreatureSearch.Text = "Search";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(550, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(18, 18);
+            this.button1.TabIndex = 40;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // labelCreatureSearchRank
             // 
@@ -3962,8 +3994,7 @@
             this.dataGridViewTextBoxColumnCSMIL.Name = "dataGridViewTextBoxColumnCSMIL";
             this.dataGridViewTextBoxColumnCSMIL.ReadOnly = true;
             this.dataGridViewTextBoxColumnCSMIL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSMIL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnCSMIL.Width = 51;
+            this.dataGridViewTextBoxColumnCSMIL.Width = 70;
             // 
             // dataGridViewTextBoxColumnCSMAL
             // 
@@ -3973,8 +4004,7 @@
             this.dataGridViewTextBoxColumnCSMAL.Name = "dataGridViewTextBoxColumnCSMAL";
             this.dataGridViewTextBoxColumnCSMAL.ReadOnly = true;
             this.dataGridViewTextBoxColumnCSMAL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumnCSMAL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumnCSMAL.Width = 54;
+            this.dataGridViewTextBoxColumnCSMAL.Width = 73;
             // 
             // dataGridViewTextBoxColumnCSR
             // 
@@ -4099,6 +4129,7 @@
             // 
             // groupBoxCreatureTemplateSpells
             // 
+            this.groupBoxCreatureTemplateSpells.Controls.Add(this.buttonCreatureTemplateSpell1);
             this.groupBoxCreatureTemplateSpells.Controls.Add(this.textBoxCreatureTemplateSpell8);
             this.groupBoxCreatureTemplateSpells.Controls.Add(this.textBoxCreatureTemplateSpell4);
             this.groupBoxCreatureTemplateSpells.Controls.Add(this.textBoxCreatureTemplateSpell7);
@@ -4112,7 +4143,16 @@
             this.groupBoxCreatureTemplateSpells.Size = new System.Drawing.Size(275, 72);
             this.groupBoxCreatureTemplateSpells.TabIndex = 10;
             this.groupBoxCreatureTemplateSpells.TabStop = false;
-            this.groupBoxCreatureTemplateSpells.Text = "Spells";
+            this.groupBoxCreatureTemplateSpells.Text = "Spells (horizontal) 1-8";
+            // 
+            // buttonCreatureTemplateSpell1
+            // 
+            this.buttonCreatureTemplateSpell1.Location = new System.Drawing.Point(50, 17);
+            this.buttonCreatureTemplateSpell1.Name = "buttonCreatureTemplateSpell1";
+            this.buttonCreatureTemplateSpell1.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateSpell1.TabIndex = 52;
+            this.buttonCreatureTemplateSpell1.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateSpell1.Click += new System.EventHandler(this.buttonCreatureTemplateSpell1_Click);
             // 
             // textBoxCreatureTemplateSpell8
             // 
@@ -4289,6 +4329,15 @@
             // 
             // groupBoxCreatureTemplateUnknown
             // 
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateMechanic);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateDynamic);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateFlagsExtra);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateUnitflags);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateUnitflags2);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateTypeFlags);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateType);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateFamily);
+            this.groupBoxCreatureTemplateUnknown.Controls.Add(this.buttonCreatureTemplateUnitClass);
             this.groupBoxCreatureTemplateUnknown.Controls.Add(this.textBoxCreatureTemplateMechanic);
             this.groupBoxCreatureTemplateUnknown.Controls.Add(this.labelCreatureTemplateMechanic);
             this.groupBoxCreatureTemplateUnknown.Controls.Add(this.textBoxCreatureTemplateFlagsExtra);
@@ -4314,6 +4363,87 @@
             this.groupBoxCreatureTemplateUnknown.TabIndex = 8;
             this.groupBoxCreatureTemplateUnknown.TabStop = false;
             this.groupBoxCreatureTemplateUnknown.Text = "Unknown";
+            // 
+            // buttonCreatureTemplateMechanic
+            // 
+            this.buttonCreatureTemplateMechanic.Location = new System.Drawing.Point(248, 33);
+            this.buttonCreatureTemplateMechanic.Name = "buttonCreatureTemplateMechanic";
+            this.buttonCreatureTemplateMechanic.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateMechanic.TabIndex = 90;
+            this.buttonCreatureTemplateMechanic.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateMechanic.Click += new System.EventHandler(this.buttonCreatureTemplateMechanic_Click);
+            // 
+            // buttonCreatureTemplateDynamic
+            // 
+            this.buttonCreatureTemplateDynamic.Location = new System.Drawing.Point(248, 111);
+            this.buttonCreatureTemplateDynamic.Name = "buttonCreatureTemplateDynamic";
+            this.buttonCreatureTemplateDynamic.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateDynamic.TabIndex = 89;
+            this.buttonCreatureTemplateDynamic.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateDynamic.Click += new System.EventHandler(this.buttonCreatureTemplateDynamic_Click);
+            // 
+            // buttonCreatureTemplateFlagsExtra
+            // 
+            this.buttonCreatureTemplateFlagsExtra.Location = new System.Drawing.Point(248, 70);
+            this.buttonCreatureTemplateFlagsExtra.Name = "buttonCreatureTemplateFlagsExtra";
+            this.buttonCreatureTemplateFlagsExtra.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateFlagsExtra.TabIndex = 88;
+            this.buttonCreatureTemplateFlagsExtra.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateFlagsExtra.Click += new System.EventHandler(this.buttonCreatureTemplateFlagsExtra_Click);
+            // 
+            // buttonCreatureTemplateUnitflags
+            // 
+            this.buttonCreatureTemplateUnitflags.Location = new System.Drawing.Point(116, 111);
+            this.buttonCreatureTemplateUnitflags.Name = "buttonCreatureTemplateUnitflags";
+            this.buttonCreatureTemplateUnitflags.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateUnitflags.TabIndex = 87;
+            this.buttonCreatureTemplateUnitflags.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateUnitflags.Click += new System.EventHandler(this.buttonCreatureTemplateUnitflags_Click);
+            // 
+            // buttonCreatureTemplateUnitflags2
+            // 
+            this.buttonCreatureTemplateUnitflags2.Location = new System.Drawing.Point(182, 111);
+            this.buttonCreatureTemplateUnitflags2.Name = "buttonCreatureTemplateUnitflags2";
+            this.buttonCreatureTemplateUnitflags2.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateUnitflags2.TabIndex = 86;
+            this.buttonCreatureTemplateUnitflags2.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateUnitflags2.Click += new System.EventHandler(this.buttonCreatureTemplateUnitflags2_Click);
+            // 
+            // buttonCreatureTemplateTypeFlags
+            // 
+            this.buttonCreatureTemplateTypeFlags.Location = new System.Drawing.Point(182, 70);
+            this.buttonCreatureTemplateTypeFlags.Name = "buttonCreatureTemplateTypeFlags";
+            this.buttonCreatureTemplateTypeFlags.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateTypeFlags.TabIndex = 85;
+            this.buttonCreatureTemplateTypeFlags.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateTypeFlags.Click += new System.EventHandler(this.buttonCreatureTemplateTypeFlags_Click);
+            // 
+            // buttonCreatureTemplateType
+            // 
+            this.buttonCreatureTemplateType.Location = new System.Drawing.Point(116, 70);
+            this.buttonCreatureTemplateType.Name = "buttonCreatureTemplateType";
+            this.buttonCreatureTemplateType.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateType.TabIndex = 84;
+            this.buttonCreatureTemplateType.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateType.Click += new System.EventHandler(this.buttonCreatureTemplateType_Click);
+            // 
+            // buttonCreatureTemplateFamily
+            // 
+            this.buttonCreatureTemplateFamily.Location = new System.Drawing.Point(50, 70);
+            this.buttonCreatureTemplateFamily.Name = "buttonCreatureTemplateFamily";
+            this.buttonCreatureTemplateFamily.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateFamily.TabIndex = 83;
+            this.buttonCreatureTemplateFamily.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateFamily.Click += new System.EventHandler(this.buttonCreatureTemplateFamily_Click);
+            // 
+            // buttonCreatureTemplateUnitClass
+            // 
+            this.buttonCreatureTemplateUnitClass.Location = new System.Drawing.Point(50, 111);
+            this.buttonCreatureTemplateUnitClass.Name = "buttonCreatureTemplateUnitClass";
+            this.buttonCreatureTemplateUnitClass.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateUnitClass.TabIndex = 82;
+            this.buttonCreatureTemplateUnitClass.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateUnitClass.Click += new System.EventHandler(this.buttonCreatureTemplateUnitClass_Click);
             // 
             // textBoxCreatureTemplateMechanic
             // 
@@ -4375,13 +4505,13 @@
             this.labelCreatureTemplateType.AutoSize = true;
             this.labelCreatureTemplateType.Location = new System.Drawing.Point(72, 53);
             this.labelCreatureTemplateType.Name = "labelCreatureTemplateType";
-            this.labelCreatureTemplateType.Size = new System.Drawing.Size(34, 13);
+            this.labelCreatureTemplateType.Size = new System.Drawing.Size(62, 13);
             this.labelCreatureTemplateType.TabIndex = 74;
-            this.labelCreatureTemplateType.Text = "Type:";
+            this.labelCreatureTemplateType.Text = "Family type:";
             // 
             // textBoxCreatureTemplateFamily
             // 
-            this.textBoxCreatureTemplateFamily.Location = new System.Drawing.Point(9, 71);
+            this.textBoxCreatureTemplateFamily.Location = new System.Drawing.Point(9, 69);
             this.textBoxCreatureTemplateFamily.Name = "textBoxCreatureTemplateFamily";
             this.textBoxCreatureTemplateFamily.Size = new System.Drawing.Size(60, 20);
             this.textBoxCreatureTemplateFamily.TabIndex = 73;
@@ -4389,7 +4519,7 @@
             // labelCreatureTemplateFamily
             // 
             this.labelCreatureTemplateFamily.AutoSize = true;
-            this.labelCreatureTemplateFamily.Location = new System.Drawing.Point(6, 55);
+            this.labelCreatureTemplateFamily.Location = new System.Drawing.Point(6, 53);
             this.labelCreatureTemplateFamily.Name = "labelCreatureTemplateFamily";
             this.labelCreatureTemplateFamily.Size = new System.Drawing.Size(39, 13);
             this.labelCreatureTemplateFamily.TabIndex = 72;
@@ -4407,9 +4537,9 @@
             this.labelCreatureTemplateDynamic.AutoSize = true;
             this.labelCreatureTemplateDynamic.Location = new System.Drawing.Point(204, 94);
             this.labelCreatureTemplateDynamic.Name = "labelCreatureTemplateDynamic";
-            this.labelCreatureTemplateDynamic.Size = new System.Drawing.Size(70, 13);
+            this.labelCreatureTemplateDynamic.Size = new System.Drawing.Size(71, 13);
             this.labelCreatureTemplateDynamic.TabIndex = 70;
-            this.labelCreatureTemplateDynamic.Text = "Dynami flags:";
+            this.labelCreatureTemplateDynamic.Text = "Dynamic flag:";
             // 
             // textBoxCreatureTemplateUnitflags2
             // 
@@ -4516,6 +4646,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.buttonCreatureTemplateInhabitType);
+            this.groupBox7.Controls.Add(this.buttonCreatureTemplateMType);
             this.groupBox7.Controls.Add(this.textBoxCreatureTemplateVID);
             this.groupBox7.Controls.Add(this.labelCreatureTemplateVID);
             this.groupBox7.Controls.Add(this.textBoxCreatureTemplateScriptName);
@@ -4538,6 +4670,24 @@
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Behaviour";
+            // 
+            // buttonCreatureTemplateInhabitType
+            // 
+            this.buttonCreatureTemplateInhabitType.Location = new System.Drawing.Point(302, 33);
+            this.buttonCreatureTemplateInhabitType.Name = "buttonCreatureTemplateInhabitType";
+            this.buttonCreatureTemplateInhabitType.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateInhabitType.TabIndex = 62;
+            this.buttonCreatureTemplateInhabitType.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateInhabitType.Click += new System.EventHandler(this.buttonCreatureTemplateInhabitType_Click);
+            // 
+            // buttonCreatureTemplateMType
+            // 
+            this.buttonCreatureTemplateMType.Location = new System.Drawing.Point(196, 33);
+            this.buttonCreatureTemplateMType.Name = "buttonCreatureTemplateMType";
+            this.buttonCreatureTemplateMType.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateMType.TabIndex = 60;
+            this.buttonCreatureTemplateMType.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateMType.Click += new System.EventHandler(this.buttonCreatureTemplateMType_Click);
             // 
             // textBoxCreatureTemplateVID
             // 
@@ -4813,6 +4963,7 @@
             // 
             // groupBoxCreatureTemplateDamage
             // 
+            this.groupBoxCreatureTemplateDamage.Controls.Add(this.buttonCreatureTemplateDS);
             this.groupBoxCreatureTemplateDamage.Controls.Add(this.textBoxCreatureTemplateRangedAttack);
             this.groupBoxCreatureTemplateDamage.Controls.Add(this.labelCreatureTemplateRangedAttack);
             this.groupBoxCreatureTemplateDamage.Controls.Add(this.textBoxCreatureTemplateBaseAttack);
@@ -4829,6 +4980,15 @@
             this.groupBoxCreatureTemplateDamage.TabIndex = 2;
             this.groupBoxCreatureTemplateDamage.TabStop = false;
             this.groupBoxCreatureTemplateDamage.Text = "Damage";
+            // 
+            // buttonCreatureTemplateDS
+            // 
+            this.buttonCreatureTemplateDS.Location = new System.Drawing.Point(391, 33);
+            this.buttonCreatureTemplateDS.Name = "buttonCreatureTemplateDS";
+            this.buttonCreatureTemplateDS.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateDS.TabIndex = 44;
+            this.buttonCreatureTemplateDS.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateDS.Click += new System.EventHandler(this.buttonCreatureTemplateDS_Click);
             // 
             // textBoxCreatureTemplateRangedAttack
             // 
@@ -5011,6 +5171,9 @@
             // 
             // groupBoxCreatureTemplateGeneral
             // 
+            this.groupBoxCreatureTemplateGeneral.Controls.Add(this.buttonCreatureTemplateRank);
+            this.groupBoxCreatureTemplateGeneral.Controls.Add(this.buttonCreatureTemplateNPCFlags);
+            this.groupBoxCreatureTemplateGeneral.Controls.Add(this.buttonCreatureTemplateModelID1);
             this.groupBoxCreatureTemplateGeneral.Controls.Add(this.labelCreatureTemplateGoldMax);
             this.groupBoxCreatureTemplateGeneral.Controls.Add(this.textBoxCreatureTemplateNPCFlags);
             this.groupBoxCreatureTemplateGeneral.Controls.Add(this.labelCreatureTemplateGoldMin);
@@ -5057,6 +5220,33 @@
             this.groupBoxCreatureTemplateGeneral.TabIndex = 0;
             this.groupBoxCreatureTemplateGeneral.TabStop = false;
             this.groupBoxCreatureTemplateGeneral.Text = "General";
+            // 
+            // buttonCreatureTemplateRank
+            // 
+            this.buttonCreatureTemplateRank.Location = new System.Drawing.Point(50, 267);
+            this.buttonCreatureTemplateRank.Name = "buttonCreatureTemplateRank";
+            this.buttonCreatureTemplateRank.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateRank.TabIndex = 44;
+            this.buttonCreatureTemplateRank.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateRank.Click += new System.EventHandler(this.buttonCreatureTemplateRank_Click);
+            // 
+            // buttonCreatureTemplateNPCFlags
+            // 
+            this.buttonCreatureTemplateNPCFlags.Location = new System.Drawing.Point(248, 267);
+            this.buttonCreatureTemplateNPCFlags.Name = "buttonCreatureTemplateNPCFlags";
+            this.buttonCreatureTemplateNPCFlags.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateNPCFlags.TabIndex = 43;
+            this.buttonCreatureTemplateNPCFlags.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateNPCFlags.Click += new System.EventHandler(this.buttonCreatureTemplateNPCFlags_Click);
+            // 
+            // buttonCreatureTemplateModelID1
+            // 
+            this.buttonCreatureTemplateModelID1.Location = new System.Drawing.Point(50, 150);
+            this.buttonCreatureTemplateModelID1.Name = "buttonCreatureTemplateModelID1";
+            this.buttonCreatureTemplateModelID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonCreatureTemplateModelID1.TabIndex = 41;
+            this.buttonCreatureTemplateModelID1.UseVisualStyleBackColor = true;
+            this.buttonCreatureTemplateModelID1.Click += new System.EventHandler(this.buttonCreatureTemplateModelID1_Click);
             // 
             // labelCreatureTemplateGoldMax
             // 
@@ -7579,6 +7769,15 @@
             this.labelQuestSectionOther.TabStop = false;
             this.labelQuestSectionOther.Text = "Other";
             // 
+            // buttonQuestSectionQuestInfo
+            // 
+            this.buttonQuestSectionQuestInfo.Location = new System.Drawing.Point(70, 72);
+            this.buttonQuestSectionQuestInfo.Name = "buttonQuestSectionQuestInfo";
+            this.buttonQuestSectionQuestInfo.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionQuestInfo.TabIndex = 50;
+            this.buttonQuestSectionQuestInfo.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionQuestInfo.Click += new System.EventHandler(this.buttonQuestSectionQuestInfo_Click);
+            // 
             // textBoxQuestSectionTimeAllowed
             // 
             this.textBoxQuestSectionTimeAllowed.Location = new System.Drawing.Point(95, 32);
@@ -7810,6 +8009,15 @@
             this.groupBoxQuestSectionSource.TabStop = false;
             this.groupBoxQuestSectionSource.Text = "Source (Start)";
             // 
+            // buttonQuestSectionSourceSpellID
+            // 
+            this.buttonQuestSectionSourceSpellID.Location = new System.Drawing.Point(70, 111);
+            this.buttonQuestSectionSourceSpellID.Name = "buttonQuestSectionSourceSpellID";
+            this.buttonQuestSectionSourceSpellID.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionSourceSpellID.TabIndex = 49;
+            this.buttonQuestSectionSourceSpellID.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionSourceSpellID.Click += new System.EventHandler(this.buttonQuestSectionSourceSpellID_Click);
+            // 
             // buttonQuestSectionSourceItemID
             // 
             this.buttonQuestSectionSourceItemID.Location = new System.Drawing.Point(70, 33);
@@ -7884,6 +8092,24 @@
             this.groupBoxQuestSectionFlags.TabIndex = 2;
             this.groupBoxQuestSectionFlags.TabStop = false;
             this.groupBoxQuestSectionFlags.Text = "Flags && Type";
+            // 
+            // buttonQuestSectionOtherSF
+            // 
+            this.buttonQuestSectionOtherSF.Location = new System.Drawing.Point(70, 111);
+            this.buttonQuestSectionOtherSF.Name = "buttonQuestSectionOtherSF";
+            this.buttonQuestSectionOtherSF.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionOtherSF.TabIndex = 50;
+            this.buttonQuestSectionOtherSF.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionOtherSF.Click += new System.EventHandler(this.buttonQuestSectionOtherSF_Click);
+            // 
+            // buttonQuestSectionQuestFlags
+            // 
+            this.buttonQuestSectionQuestFlags.Location = new System.Drawing.Point(70, 72);
+            this.buttonQuestSectionQuestFlags.Name = "buttonQuestSectionQuestFlags";
+            this.buttonQuestSectionQuestFlags.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionQuestFlags.TabIndex = 49;
+            this.buttonQuestSectionQuestFlags.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionQuestFlags.Click += new System.EventHandler(this.buttonQuestSectionQuestFlags_Click);
             // 
             // buttonQuestSectionQuestType
             // 
@@ -7989,6 +8215,51 @@
             this.groupBoxQuestSectionQuestRequirements.TabIndex = 1;
             this.groupBoxQuestSectionQuestRequirements.TabStop = false;
             this.groupBoxQuestSectionQuestRequirements.Text = "Requirements";
+            // 
+            // buttonQuestSectionReqFaction1
+            // 
+            this.buttonQuestSectionReqFaction1.Location = new System.Drawing.Point(50, 72);
+            this.buttonQuestSectionReqFaction1.Name = "buttonQuestSectionReqFaction1";
+            this.buttonQuestSectionReqFaction1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqFaction1.TabIndex = 51;
+            this.buttonQuestSectionReqFaction1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqFaction1.Click += new System.EventHandler(this.buttonQuestSectionReqFaction1_Click);
+            // 
+            // buttonQuestSectionReqFaction2
+            // 
+            this.buttonQuestSectionReqFaction2.Location = new System.Drawing.Point(116, 72);
+            this.buttonQuestSectionReqFaction2.Name = "buttonQuestSectionReqFaction2";
+            this.buttonQuestSectionReqFaction2.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqFaction2.TabIndex = 50;
+            this.buttonQuestSectionReqFaction2.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqFaction2.Click += new System.EventHandler(this.buttonQuestSectionReqFaction2_Click);
+            // 
+            // buttonQuestSectionReqMaxRepF
+            // 
+            this.buttonQuestSectionReqMaxRepF.Location = new System.Drawing.Point(247, 72);
+            this.buttonQuestSectionReqMaxRepF.Name = "buttonQuestSectionReqMaxRepF";
+            this.buttonQuestSectionReqMaxRepF.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqMaxRepF.TabIndex = 49;
+            this.buttonQuestSectionReqMaxRepF.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqMaxRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMaxRepF_Click);
+            // 
+            // buttonQuestSectionReqMinRepF
+            // 
+            this.buttonQuestSectionReqMinRepF.Location = new System.Drawing.Point(182, 72);
+            this.buttonQuestSectionReqMinRepF.Name = "buttonQuestSectionReqMinRepF";
+            this.buttonQuestSectionReqMinRepF.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqMinRepF.TabIndex = 48;
+            this.buttonQuestSectionReqMinRepF.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqMinRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMinRepF_Click);
+            // 
+            // buttonQuestSectionReqSkillID
+            // 
+            this.buttonQuestSectionReqSkillID.Location = new System.Drawing.Point(313, 111);
+            this.buttonQuestSectionReqSkillID.Name = "buttonQuestSectionReqSkillID";
+            this.buttonQuestSectionReqSkillID.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqSkillID.TabIndex = 47;
+            this.buttonQuestSectionReqSkillID.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqSkillID.Click += new System.EventHandler(this.buttonQuestSectionReqSkillID_Click);
             // 
             // textBoxQuestSectionReqMaxRepV
             // 
@@ -8388,6 +8659,7 @@
             // 
             // groupBoxQuestSectionReqItem
             // 
+            this.groupBoxQuestSectionReqItem.Controls.Add(this.buttonQuestSectionReqItemID1);
             this.groupBoxQuestSectionReqItem.Controls.Add(this.labelQuestSectionReqItemCount);
             this.groupBoxQuestSectionReqItem.Controls.Add(this.textBoxQuestSectionReqItemID6);
             this.groupBoxQuestSectionReqItem.Controls.Add(this.textBoxQuestSectionReqItemID4);
@@ -8408,6 +8680,15 @@
             this.groupBoxQuestSectionReqItem.TabIndex = 0;
             this.groupBoxQuestSectionReqItem.TabStop = false;
             this.groupBoxQuestSectionReqItem.Text = "Item 1-6";
+            // 
+            // buttonQuestSectionReqItemID1
+            // 
+            this.buttonQuestSectionReqItemID1.Location = new System.Drawing.Point(70, 33);
+            this.buttonQuestSectionReqItemID1.Name = "buttonQuestSectionReqItemID1";
+            this.buttonQuestSectionReqItemID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqItemID1.TabIndex = 39;
+            this.buttonQuestSectionReqItemID1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqItemID1.Click += new System.EventHandler(this.buttonQuestSectionReqItemID1_Click);
             // 
             // labelQuestSectionReqItemCount
             // 
@@ -8513,6 +8794,7 @@
             // 
             // groupBoxQuestSectionReqNPC
             // 
+            this.groupBoxQuestSectionReqNPC.Controls.Add(this.buttonQuestSectionReqNPCID1);
             this.groupBoxQuestSectionReqNPC.Controls.Add(this.labelQuestSectionReqNPCCount);
             this.groupBoxQuestSectionReqNPC.Controls.Add(this.labelQuestSectionReqNPCID);
             this.groupBoxQuestSectionReqNPC.Controls.Add(this.textBoxQuestSectionReqNPCC4);
@@ -8529,6 +8811,15 @@
             this.groupBoxQuestSectionReqNPC.TabIndex = 0;
             this.groupBoxQuestSectionReqNPC.TabStop = false;
             this.groupBoxQuestSectionReqNPC.Text = "NPC 1-4";
+            // 
+            // buttonQuestSectionReqNPCID1
+            // 
+            this.buttonQuestSectionReqNPCID1.Location = new System.Drawing.Point(70, 33);
+            this.buttonQuestSectionReqNPCID1.Name = "buttonQuestSectionReqNPCID1";
+            this.buttonQuestSectionReqNPCID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionReqNPCID1.TabIndex = 39;
+            this.buttonQuestSectionReqNPCID1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionReqNPCID1.Click += new System.EventHandler(this.buttonQuestSectionReqNPCID1_Click);
             // 
             // labelQuestSectionReqNPCCount
             // 
@@ -8620,6 +8911,7 @@
             // 
             // groupBoxQuestSectionRewOther
             // 
+            this.groupBoxQuestSectionRewOther.Controls.Add(this.buttonQuestSectionRewSpell);
             this.groupBoxQuestSectionRewOther.Controls.Add(this.labelQuestSectionRewMailDelay);
             this.groupBoxQuestSectionRewOther.Controls.Add(this.textBoxQuestSectionRewOtherMailDelay);
             this.groupBoxQuestSectionRewOther.Controls.Add(this.buttonQuestSectionRewOtherTitleID);
@@ -8649,6 +8941,15 @@
             this.groupBoxQuestSectionRewOther.TabIndex = 2;
             this.groupBoxQuestSectionRewOther.TabStop = false;
             this.groupBoxQuestSectionRewOther.Text = "Other Types of Rewards or Payment";
+            // 
+            // buttonQuestSectionRewSpell
+            // 
+            this.buttonQuestSectionRewSpell.Location = new System.Drawing.Point(500, 72);
+            this.buttonQuestSectionRewSpell.Name = "buttonQuestSectionRewSpell";
+            this.buttonQuestSectionRewSpell.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionRewSpell.TabIndex = 40;
+            this.buttonQuestSectionRewSpell.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionRewSpell.Click += new System.EventHandler(this.buttonQuestSectionRewSpell_Click);
             // 
             // labelQuestSectionRewMailDelay
             // 
@@ -8837,6 +9138,7 @@
             // 
             // groupBoxQuestSectionRewItem
             // 
+            this.groupBoxQuestSectionRewItem.Controls.Add(this.buttonQuestSectionRewItemID1);
             this.groupBoxQuestSectionRewItem.Controls.Add(this.labelQuestSectionRewItemCount);
             this.groupBoxQuestSectionRewItem.Controls.Add(this.textBoxQuestSectionRewItemID4);
             this.groupBoxQuestSectionRewItem.Controls.Add(this.labelQuestSectionRewItemID);
@@ -8853,6 +9155,15 @@
             this.groupBoxQuestSectionRewItem.TabIndex = 1;
             this.groupBoxQuestSectionRewItem.TabStop = false;
             this.groupBoxQuestSectionRewItem.Text = "Item 1-4";
+            // 
+            // buttonQuestSectionRewItemID1
+            // 
+            this.buttonQuestSectionRewItemID1.Location = new System.Drawing.Point(70, 33);
+            this.buttonQuestSectionRewItemID1.Name = "buttonQuestSectionRewItemID1";
+            this.buttonQuestSectionRewItemID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionRewItemID1.TabIndex = 39;
+            this.buttonQuestSectionRewItemID1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionRewItemID1.Click += new System.EventHandler(this.buttonQuestSectionRewItemID1_Click);
             // 
             // labelQuestSectionRewItemCount
             // 
@@ -8989,6 +9300,7 @@
             // 
             // groupBoxQuestSectionRewFaction
             // 
+            this.groupBoxQuestSectionRewFaction.Controls.Add(this.buttonQuestSectionRewFactionID1);
             this.groupBoxQuestSectionRewFaction.Controls.Add(this.labelQuestSectionRewFactionV);
             this.groupBoxQuestSectionRewFaction.Controls.Add(this.textBoxQuestSectionRewFactionID4);
             this.groupBoxQuestSectionRewFaction.Controls.Add(this.labelQuestSectionRewFactionID);
@@ -9007,6 +9319,15 @@
             this.groupBoxQuestSectionRewFaction.TabIndex = 1;
             this.groupBoxQuestSectionRewFaction.TabStop = false;
             this.groupBoxQuestSectionRewFaction.Text = "Faction 1-5";
+            // 
+            // buttonQuestSectionRewFactionID1
+            // 
+            this.buttonQuestSectionRewFactionID1.Location = new System.Drawing.Point(70, 33);
+            this.buttonQuestSectionRewFactionID1.Name = "buttonQuestSectionRewFactionID1";
+            this.buttonQuestSectionRewFactionID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionRewFactionID1.TabIndex = 39;
+            this.buttonQuestSectionRewFactionID1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionRewFactionID1.Click += new System.EventHandler(this.buttonQuestSectionRewFactionID1_Click);
             // 
             // labelQuestSectionRewFactionV
             // 
@@ -9098,6 +9419,7 @@
             // 
             // groupBoxQuestSectionRewChoice
             // 
+            this.groupBoxQuestSectionRewChoice.Controls.Add(this.buttonQuestSectionRewChoiceID1);
             this.groupBoxQuestSectionRewChoice.Controls.Add(this.labelQuestSectionRewChoiceC);
             this.groupBoxQuestSectionRewChoice.Controls.Add(this.textBoxQuestSectionRewChoiceID6);
             this.groupBoxQuestSectionRewChoice.Controls.Add(this.textBoxQuestSectionRewChoiceID4);
@@ -9118,6 +9440,15 @@
             this.groupBoxQuestSectionRewChoice.TabIndex = 1;
             this.groupBoxQuestSectionRewChoice.TabStop = false;
             this.groupBoxQuestSectionRewChoice.Text = "Choice Item 1-6";
+            // 
+            // buttonQuestSectionRewChoiceID1
+            // 
+            this.buttonQuestSectionRewChoiceID1.Location = new System.Drawing.Point(70, 33);
+            this.buttonQuestSectionRewChoiceID1.Name = "buttonQuestSectionRewChoiceID1";
+            this.buttonQuestSectionRewChoiceID1.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSectionRewChoiceID1.TabIndex = 39;
+            this.buttonQuestSectionRewChoiceID1.UseVisualStyleBackColor = true;
+            this.buttonQuestSectionRewChoiceID1.Click += new System.EventHandler(this.buttonQuestSectionRewChoiceID1_Click);
             // 
             // labelQuestSectionRewChoiceC
             // 
@@ -9298,8 +9629,50 @@
             this.dataGridViewQuestGivers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewQuestGivers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewQuestGivers.ShowEditingIcon = false;
-            this.dataGridViewQuestGivers.Size = new System.Drawing.Size(952, 441);
+            this.dataGridViewQuestGivers.Size = new System.Drawing.Size(952, 529);
             this.dataGridViewQuestGivers.TabIndex = 17;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DataPropertyName = "entityType";
+            this.Column2.HeaderText = "type";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Column2.Width = 33;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "entry";
+            this.dataGridViewTextBoxColumn16.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 36;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn17.HeaderText = "name";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
+            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "subname";
+            this.dataGridViewTextBoxColumn18.HeaderText = "subname";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
+            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabPageQuestTakers
             // 
@@ -9378,8 +9751,50 @@
             this.dataGridViewQuestTakers.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewQuestTakers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewQuestTakers.ShowEditingIcon = false;
-            this.dataGridViewQuestTakers.Size = new System.Drawing.Size(952, 441);
+            this.dataGridViewQuestTakers.Size = new System.Drawing.Size(952, 529);
             this.dataGridViewQuestTakers.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "entityType";
+            this.dataGridViewTextBoxColumn19.HeaderText = "type";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
+            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn19.Width = 33;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dataGridViewTextBoxColumn20.DataPropertyName = "entry";
+            this.dataGridViewTextBoxColumn20.HeaderText = "entry";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn20.Width = 36;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn21.DataPropertyName = "name";
+            this.dataGridViewTextBoxColumn21.HeaderText = "name";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
+            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "subname";
+            this.dataGridViewTextBoxColumn22.HeaderText = "subname";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
+            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tabPageQuestScript
             // 
@@ -14672,171 +15087,6 @@
             this.aboutToolStripMenuHelp.Text = "About";
             this.aboutToolStripMenuHelp.Click += new System.EventHandler(this.aboutToolStripMenuHelp_Click);
             // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DataPropertyName = "entityType";
-            this.Column2.HeaderText = "type";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column2.Width = 33;
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "entry";
-            this.dataGridViewTextBoxColumn16.HeaderText = "entry";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn16.Width = 36;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn17.HeaderText = "name";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "subname";
-            this.dataGridViewTextBoxColumn18.HeaderText = "subname";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "entityType";
-            this.dataGridViewTextBoxColumn19.HeaderText = "type";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn19.Width = 33;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "entry";
-            this.dataGridViewTextBoxColumn20.HeaderText = "entry";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn20.Width = 36;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "name";
-            this.dataGridViewTextBoxColumn21.HeaderText = "name";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "subname";
-            this.dataGridViewTextBoxColumn22.HeaderText = "subname";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // buttonQuestSectionReqSkillID
-            // 
-            this.buttonQuestSectionReqSkillID.Location = new System.Drawing.Point(313, 111);
-            this.buttonQuestSectionReqSkillID.Name = "buttonQuestSectionReqSkillID";
-            this.buttonQuestSectionReqSkillID.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionReqSkillID.TabIndex = 47;
-            this.buttonQuestSectionReqSkillID.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionReqSkillID.Click += new System.EventHandler(this.buttonQuestSectionReqSkillID_Click);
-            // 
-            // buttonQuestSectionReqMinRepF
-            // 
-            this.buttonQuestSectionReqMinRepF.Location = new System.Drawing.Point(182, 72);
-            this.buttonQuestSectionReqMinRepF.Name = "buttonQuestSectionReqMinRepF";
-            this.buttonQuestSectionReqMinRepF.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionReqMinRepF.TabIndex = 48;
-            this.buttonQuestSectionReqMinRepF.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionReqMinRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMinRepF_Click);
-            // 
-            // buttonQuestSectionReqMaxRepF
-            // 
-            this.buttonQuestSectionReqMaxRepF.Location = new System.Drawing.Point(247, 72);
-            this.buttonQuestSectionReqMaxRepF.Name = "buttonQuestSectionReqMaxRepF";
-            this.buttonQuestSectionReqMaxRepF.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionReqMaxRepF.TabIndex = 49;
-            this.buttonQuestSectionReqMaxRepF.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionReqMaxRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMaxRepF_Click);
-            // 
-            // buttonQuestSectionReqFaction2
-            // 
-            this.buttonQuestSectionReqFaction2.Location = new System.Drawing.Point(116, 72);
-            this.buttonQuestSectionReqFaction2.Name = "buttonQuestSectionReqFaction2";
-            this.buttonQuestSectionReqFaction2.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionReqFaction2.TabIndex = 50;
-            this.buttonQuestSectionReqFaction2.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionReqFaction2.Click += new System.EventHandler(this.buttonQuestSectionReqFaction2_Click);
-            // 
-            // buttonQuestSectionReqFaction1
-            // 
-            this.buttonQuestSectionReqFaction1.Location = new System.Drawing.Point(50, 72);
-            this.buttonQuestSectionReqFaction1.Name = "buttonQuestSectionReqFaction1";
-            this.buttonQuestSectionReqFaction1.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionReqFaction1.TabIndex = 51;
-            this.buttonQuestSectionReqFaction1.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionReqFaction1.Click += new System.EventHandler(this.buttonQuestSectionReqFaction1_Click);
-            // 
-            // buttonQuestSectionQuestFlags
-            // 
-            this.buttonQuestSectionQuestFlags.Location = new System.Drawing.Point(70, 72);
-            this.buttonQuestSectionQuestFlags.Name = "buttonQuestSectionQuestFlags";
-            this.buttonQuestSectionQuestFlags.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionQuestFlags.TabIndex = 49;
-            this.buttonQuestSectionQuestFlags.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionQuestFlags.Click += new System.EventHandler(this.buttonQuestSectionQuestFlags_Click);
-            // 
-            // buttonQuestSectionOtherSF
-            // 
-            this.buttonQuestSectionOtherSF.Location = new System.Drawing.Point(70, 111);
-            this.buttonQuestSectionOtherSF.Name = "buttonQuestSectionOtherSF";
-            this.buttonQuestSectionOtherSF.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionOtherSF.TabIndex = 50;
-            this.buttonQuestSectionOtherSF.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionOtherSF.Click += new System.EventHandler(this.buttonQuestSectionOtherSF_Click);
-            // 
-            // buttonQuestSectionSourceSpellID
-            // 
-            this.buttonQuestSectionSourceSpellID.Location = new System.Drawing.Point(70, 111);
-            this.buttonQuestSectionSourceSpellID.Name = "buttonQuestSectionSourceSpellID";
-            this.buttonQuestSectionSourceSpellID.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionSourceSpellID.TabIndex = 49;
-            this.buttonQuestSectionSourceSpellID.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionSourceSpellID.Click += new System.EventHandler(this.buttonQuestSectionSourceSpellID_Click);
-            // 
-            // buttonQuestSectionQuestInfo
-            // 
-            this.buttonQuestSectionQuestInfo.Location = new System.Drawing.Point(70, 72);
-            this.buttonQuestSectionQuestInfo.Name = "buttonQuestSectionQuestInfo";
-            this.buttonQuestSectionQuestInfo.Size = new System.Drawing.Size(18, 18);
-            this.buttonQuestSectionQuestInfo.TabIndex = 50;
-            this.buttonQuestSectionQuestInfo.UseVisualStyleBackColor = true;
-            this.buttonQuestSectionQuestInfo.Click += new System.EventHandler(this.buttonQuestSectionQuestInfo_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -16281,13 +16531,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchRace;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchClass;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCharacterSearchLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSMIL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSMAL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSR;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSLID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -16340,5 +16583,35 @@
         private System.Windows.Forms.Button buttonQuestSectionOtherSF;
         private System.Windows.Forms.Button buttonQuestSectionQuestFlags;
         private System.Windows.Forms.Button buttonQuestSectionQuestInfo;
+        private System.Windows.Forms.Button buttonQuestSectionReqItemID1;
+        private System.Windows.Forms.Button buttonQuestSectionReqNPCID1;
+        private System.Windows.Forms.Button buttonQuestSectionRewItemID1;
+        private System.Windows.Forms.Button buttonQuestSectionRewFactionID1;
+        private System.Windows.Forms.Button buttonQuestSectionRewChoiceID1;
+        private System.Windows.Forms.Button buttonQuestSectionRewSpell;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSMIL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSMAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSLID;
+        private System.Windows.Forms.Button buttonCreatureTemplateSpell1;
+        private System.Windows.Forms.Button buttonCreatureTemplateRank;
+        private System.Windows.Forms.Button buttonCreatureTemplateNPCFlags;
+        private System.Windows.Forms.Button buttonCreatureTemplateModelID1;
+        private System.Windows.Forms.Button buttonCreatureTemplateFamily;
+        private System.Windows.Forms.Button buttonCreatureTemplateUnitClass;
+        private System.Windows.Forms.Button buttonCreatureTemplateMType;
+        private System.Windows.Forms.Button buttonCreatureTemplateDS;
+        private System.Windows.Forms.Button buttonCreatureTemplateFlagsExtra;
+        private System.Windows.Forms.Button buttonCreatureTemplateUnitflags;
+        private System.Windows.Forms.Button buttonCreatureTemplateUnitflags2;
+        private System.Windows.Forms.Button buttonCreatureTemplateTypeFlags;
+        private System.Windows.Forms.Button buttonCreatureTemplateType;
+        private System.Windows.Forms.Button buttonCreatureTemplateMechanic;
+        private System.Windows.Forms.Button buttonCreatureTemplateDynamic;
+        private System.Windows.Forms.Button buttonCreatureTemplateInhabitType;
     }
 }

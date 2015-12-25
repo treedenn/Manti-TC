@@ -17,10 +17,10 @@ namespace Manti.FormPopup
             InitializeComponent();
         }
 
-        #region Functions
-
         private DataTable data = new DataTable();
         private string selectionValue = "";
+
+        #region Functions
 
         public DataTable setDataTable
         {
@@ -95,8 +95,6 @@ namespace Manti.FormPopup
             {
                 selectionValue = "0";
             }
-
-            //selectionValue = (selectionValue == "") ? "0" : selectionValue;
 
             this.Close();
         }
