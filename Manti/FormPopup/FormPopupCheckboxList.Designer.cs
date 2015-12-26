@@ -75,7 +75,7 @@
             this.Controls.Add(this.checkedListBoxPopupValues);
             this.Controls.Add(this.buttonPopupClose);
             this.Controls.Add(this.buttonPopupOK);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPopupCheckboxList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkbox List";

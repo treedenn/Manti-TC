@@ -2496,9 +2496,12 @@ namespace Manti
 
                 Tuple.Create(textBoxCreatureTemplateName, ""),
                 Tuple.Create(textBoxCreatureTemplateSubname, ""),
+                Tuple.Create(textBoxCreatureTemplateBaseAttack, "2000"),
+                Tuple.Create(textBoxCreatureTemplateRangedAttack, "2000"),
+                Tuple.Create(textBoxCreatureTemplateBV, "1"),
+                Tuple.Create(textBoxCreatureTemplateRV, "1"),
                 Tuple.Create(textBoxCreatureTemplateSpeedWalk, "1"),
                 Tuple.Create(textBoxCreatureTemplateSpeedRun, "1.4286"),
-                Tuple.Create(textBoxCreatureTemplateName, ""),
                 Tuple.Create(textBoxCreatureTemplateAIName, ""),
                 Tuple.Create(textBoxCreatureTemplateScriptName, "")
             };
@@ -2790,11 +2793,11 @@ namespace Manti
                 dr = MessageBox.Show("You sure, you want to load them all?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             } else
             {
-                if (textBoxQuestSearchID.Text != "" || textBoxQuestSearchTitle.Text != "" || textBoxQuestSearchType.Text != "")
+                if (textBoxQuestSearchID.Text != "" || textBoxQuestSearchTitle.Text != "" || textBoxQuestSearchInfo.Text != "")
                 {
                     query += DatabaseQueryFilter(textBoxQuestSearchID.Text, "ID");
                     query += DatabaseQueryFilter(textBoxQuestSearchTitle.Text, "logTitle");
-                    query += DatabaseQueryFilter(textBoxQuestSearchType.Text, "QuestType");
+                    query += DatabaseQueryFilter(textBoxQuestSearchInfo.Text, "QuestInfoID");
                 }
 
                 if (textBoxQuestSearchGiver.Text.Trim() != "")
@@ -2894,6 +2897,10 @@ namespace Manti
         }
 
         #region POPUPS
+        private void buttonQuestSearchInfo_Click(object sender, EventArgs e)
+        {
+            textBoxQuestSearchInfo.Text = CreatePopupSelection("Quest Info", ReadExcelCSV("QuestInfo", 0, 1), textBoxQuestSearchInfo.Text);
+        }
         // Section 1
         private void buttonQuestSectionSourceItemID_Click(object sender, EventArgs e)
         {
@@ -3492,6 +3499,6 @@ namespace Manti
         #endregion
 
         #endregion
-       
+
     }
 }

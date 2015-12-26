@@ -275,7 +275,7 @@
             this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.groupBoxMySQL);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMySQL";

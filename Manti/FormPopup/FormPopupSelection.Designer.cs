@@ -118,7 +118,7 @@
             this.Controls.Add(this.buttonPopupClose);
             this.Controls.Add(this.buttonPopupOK);
             this.Controls.Add(this.textBoxPopupSearchValue);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPopupSelection";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Selection Mode";

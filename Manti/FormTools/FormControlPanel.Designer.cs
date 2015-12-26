@@ -211,8 +211,9 @@
             this.Controls.Add(this.textBoxPathServer);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBoxWorldServer);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormControlPanel";
+            this.ShowIcon = false;
             this.Text = "Control Panel (ALPHA)";
             this.Load += new System.EventHandler(this.FormControlPanel_Load);
             this.groupBoxWorldServer.ResumeLayout(false);

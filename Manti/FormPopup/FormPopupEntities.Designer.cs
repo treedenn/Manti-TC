@@ -282,7 +282,7 @@
             this.Controls.Add(this.textBoxPopupSearchID);
             this.Controls.Add(this.textBoxPopupSearchValue);
             this.Controls.Add(this.groupBoxPopupEntity);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormPopupEntities";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Entity Selection";

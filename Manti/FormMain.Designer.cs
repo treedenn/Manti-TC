@@ -639,8 +639,8 @@
             this.tabPageQuest = new System.Windows.Forms.TabPage();
             this.tabControlCategoryQuest = new System.Windows.Forms.TabControl();
             this.tabPageQuestSearch = new System.Windows.Forms.TabPage();
-            this.textBoxQuestSearchType = new System.Windows.Forms.TextBox();
-            this.labelQuestSearchType = new System.Windows.Forms.Label();
+            this.textBoxQuestSearchInfo = new System.Windows.Forms.TextBox();
+            this.labelQuestSearchInfo = new System.Windows.Forms.Label();
             this.buttonQuestSearchSearch = new System.Windows.Forms.Button();
             this.textBoxQuestSearchNQID = new System.Windows.Forms.TextBox();
             this.labelQuestSearchNQID = new System.Windows.Forms.Label();
@@ -1404,6 +1404,7 @@
             this.controlPanelToolStripMenuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonQuestSearchInfo = new System.Windows.Forms.Button();
             this.tabControlCategory.SuspendLayout();
             this.tabPageAccount.SuspendLayout();
             this.tabControlCategoryAccount.SuspendLayout();
@@ -7416,8 +7417,9 @@
             // tabPageQuestSearch
             // 
             this.tabPageQuestSearch.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchType);
-            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchType);
+            this.tabPageQuestSearch.Controls.Add(this.buttonQuestSearchInfo);
+            this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchInfo);
+            this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchInfo);
             this.tabPageQuestSearch.Controls.Add(this.buttonQuestSearchSearch);
             this.tabPageQuestSearch.Controls.Add(this.textBoxQuestSearchNQID);
             this.tabPageQuestSearch.Controls.Add(this.labelQuestSearchNQID);
@@ -7440,21 +7442,21 @@
             this.tabPageQuestSearch.TabIndex = 0;
             this.tabPageQuestSearch.Text = "Search";
             // 
-            // textBoxQuestSearchType
+            // textBoxQuestSearchInfo
             // 
-            this.textBoxQuestSearchType.Location = new System.Drawing.Point(437, 65);
-            this.textBoxQuestSearchType.Name = "textBoxQuestSearchType";
-            this.textBoxQuestSearchType.Size = new System.Drawing.Size(60, 20);
-            this.textBoxQuestSearchType.TabIndex = 31;
+            this.textBoxQuestSearchInfo.Location = new System.Drawing.Point(437, 65);
+            this.textBoxQuestSearchInfo.Name = "textBoxQuestSearchInfo";
+            this.textBoxQuestSearchInfo.Size = new System.Drawing.Size(60, 20);
+            this.textBoxQuestSearchInfo.TabIndex = 31;
             // 
-            // labelQuestSearchType
+            // labelQuestSearchInfo
             // 
-            this.labelQuestSearchType.AutoSize = true;
-            this.labelQuestSearchType.Location = new System.Drawing.Point(434, 49);
-            this.labelQuestSearchType.Name = "labelQuestSearchType";
-            this.labelQuestSearchType.Size = new System.Drawing.Size(34, 13);
-            this.labelQuestSearchType.TabIndex = 30;
-            this.labelQuestSearchType.Text = "Type:";
+            this.labelQuestSearchInfo.AutoSize = true;
+            this.labelQuestSearchInfo.Location = new System.Drawing.Point(434, 49);
+            this.labelQuestSearchInfo.Name = "labelQuestSearchInfo";
+            this.labelQuestSearchInfo.Size = new System.Drawing.Size(28, 13);
+            this.labelQuestSearchInfo.TabIndex = 30;
+            this.labelQuestSearchInfo.Text = "Info:";
             // 
             // buttonQuestSearchSearch
             // 
@@ -15062,7 +15064,7 @@
             this.toolsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlPanelToolStripMenuTools});
             this.toolsToolStripMenuItem1.Name = "toolsToolStripMenuItem1";
-            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(48, 20);
+            this.toolsToolStripMenuItem1.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem1.Text = "Tools";
             // 
             // controlPanelToolStripMenuTools
@@ -15086,6 +15088,15 @@
             this.aboutToolStripMenuHelp.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuHelp.Text = "About";
             this.aboutToolStripMenuHelp.Click += new System.EventHandler(this.aboutToolStripMenuHelp_Click);
+            // 
+            // buttonQuestSearchInfo
+            // 
+            this.buttonQuestSearchInfo.Location = new System.Drawing.Point(478, 66);
+            this.buttonQuestSearchInfo.Name = "buttonQuestSearchInfo";
+            this.buttonQuestSearchInfo.Size = new System.Drawing.Size(18, 18);
+            this.buttonQuestSearchInfo.TabIndex = 51;
+            this.buttonQuestSearchInfo.UseVisualStyleBackColor = true;
+            this.buttonQuestSearchInfo.Click += new System.EventHandler(this.buttonQuestSearchInfo_Click);
             // 
             // FormMain
             // 
@@ -15478,8 +15489,8 @@
         private System.Windows.Forms.Label labelQuestSearchTitle;
         private System.Windows.Forms.TextBox textBoxQuestSearchID;
         private System.Windows.Forms.Label labelQuestSearchID;
-        private System.Windows.Forms.TextBox textBoxQuestSearchType;
-        private System.Windows.Forms.Label labelQuestSearchType;
+        private System.Windows.Forms.TextBox textBoxQuestSearchInfo;
+        private System.Windows.Forms.Label labelQuestSearchInfo;
         private System.Windows.Forms.Button buttonGameObjectSearchSearch;
         private System.Windows.Forms.Label labelGameObjectSearchName;
         private System.Windows.Forms.TextBox textBoxGameObjectSearchName;
@@ -16613,5 +16624,6 @@
         private System.Windows.Forms.Button buttonCreatureTemplateMechanic;
         private System.Windows.Forms.Button buttonCreatureTemplateDynamic;
         private System.Windows.Forms.Button buttonCreatureTemplateInhabitType;
+        private System.Windows.Forms.Button buttonQuestSearchInfo;
     }
 }
