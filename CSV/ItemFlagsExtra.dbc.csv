@@ -1,0 +1,11 @@
+id;value
+1;Horde Only
+2;Alliance Only
+3;When item uses ExtendedCost in npc_vendor, gold is also required
+9;Makes need roll for this item disabled
+10;NEED_ROLL_DISABLED
+15;HAS_NORMAL_PRICE
+18;BNET_ACCOUNT_BOUND
+22;CANNOT_BE_TRANSMOG
+23;CANNOT_TRANSMOG
+24;CAN_TRANSMOG

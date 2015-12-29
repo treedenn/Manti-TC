@@ -1,0 +1,33 @@
+id;value
+1;UNK1
+2;Conjured item
+3;Openable (right-click)
+4;"Makes green ""Heroic"" text appear on item"
+5;Deprecated item
+6;Item can not be destroyed, except by using spell
+7;UNK2
+8;No default 30 seconds cooldown when equipped
+9;UNK3
+10;Wrapper : item can wrap other items
+11;UNK4
+12;Item is party loot and can be looted by all
+13;Item is refundable
+14;Charter (Arena or Guild)
+15;UNK5 (Only readable items have this (but not all))
+16;UNK6
+17;UNK7
+18;UNK8
+19;Item can be prospected
+20;Unique equipped (one equipped at the same time)
+21;UNK9
+22;Item can be used during arena match
+23;Throwable (for tooltip ingame)
+24;Item can be used in shapeshift forms
+25;UNK10
+26;Profession recipes: can only be looted, if requirements are met and don't already know it
+27;Item cannot be used in arena
+28;Bind to Account (Quality = 7 required)
+29;Spell is cast with triggered flag
+30;Millable
+31;UNK11
+32;Bind on Pickup (tradable)

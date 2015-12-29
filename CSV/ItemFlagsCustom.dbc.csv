@@ -1,0 +1,4 @@
+id;value
+1;Duration in realtime (item duration will tick even if player is offline)
+2;Ignore quest status (No quest status will be checked when this item drops)
+3;Follow loot rules (Item will always group/master/need before greed)
