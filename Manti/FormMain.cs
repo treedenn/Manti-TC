@@ -34,6 +34,42 @@ namespace Manti
         #region Global
 
         #region Functions
+        private void SetOfflineMode(bool enable)
+        {
+            FormMySQL.Offline = enable;
+
+            // Search Buttons
+            Button[] dButtons = new Button[]
+            {
+                    buttonAccountSearchSearch,
+                    buttonCharacterSearchSearch,
+                    buttonCreatureSearchSearch,
+                    buttonQuestSearchSearch,
+                    buttonGameObjectSearchSearch,
+                    buttonItemSearchSearch
+            };
+
+            // Execute Buttons
+            ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
+            {
+                    toolStripSplitButtonAccountScriptUpdate,
+                    toolStripSplitButtonCharacterScriptUpdate,
+                    toolStripSplitButtonCreatureScriptUpdate,
+                    toolStripSplitButtonQuestScriptUpdate,
+                    toolStripSplitButtonGOScriptUpdate,
+                    toolStripSplitButtonItemScriptUpdate
+            };
+
+            foreach (Button btn in dButtons)
+            {
+                btn.Enabled = !enable;
+            }
+
+            foreach (ToolStripSplitButton btn in dStripButton)
+            {
+                btn.Enabled = !enable;
+            }
+        }
         #region GlobalFunctions
         /// <summary>
         /// Function looks for a specific .CSV extension file and turns it into a DataTable (used for FormTools).
@@ -790,43 +826,8 @@ namespace Manti
             dataGridViewItemDE.AutoGenerateColumns = false;
 
             dataGridViewQuestGivers.AutoGenerateColumns = false;
-
-            if (FormMySQL.Offline == true)
-            {
-                // Disable buttons
-
-                // Search Buttons
-                Button[] dButtons = new Button[]
-                {
-                    buttonAccountSearchSearch,
-                    buttonCharacterSearchSearch,
-                    buttonCreatureSearchSearch,
-                    buttonQuestSearchSearch,
-                    buttonGameObjectSearchSearch,
-                    buttonItemSearchSearch
-                };
-
-                // Execute Buttons
-                ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
-                {
-                    toolStripSplitButtonAccountScriptUpdate,
-                    toolStripSplitButtonCharacterScriptUpdate,
-                    toolStripSplitButtonCreatureScriptUpdate,
-                    toolStripSplitButtonQuestScriptUpdate,
-                    toolStripSplitButtonGOScriptUpdate,
-                    toolStripSplitButtonItemScriptUpdate
-                };
-
-                foreach (Button btn in dButtons)
-                {
-                    btn.Enabled = false;
-                }
-
-                foreach (ToolStripSplitButton btn in dStripButton)
-                {
-                    btn.Enabled = false;
-                }
-            }
+            
+            SetOfflineMode(FormMySQL.Offline);
 
             var textboxToolTip = new ToolTip();
 
@@ -892,10 +893,16 @@ namespace Manti
             System.Diagnostics.Process.Start(Application.ExecutablePath);
             Application.Exit();
         }
-        private void aboutToolStripMenuHelp_Click(object sender, EventArgs e)
+        private void offlineToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var fa = new FormAbout();
-            fa.ShowDialog();
+            if (FormMySQL.Offline)
+            {
+                SetOfflineMode(false);
+            }
+            else
+            {
+                SetOfflineMode(true);
+            }
         }
         private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e)
         {
@@ -903,6 +910,11 @@ namespace Manti
 
             CP.StartPosition = FormStartPosition.CenterScreen;
             CP.Show();
+        }
+        private void aboutToolStripMenuHelp_Click(object sender, EventArgs e)
+        {
+            var fa = new FormAbout();
+            fa.ShowDialog();
         }
         #endregion
         #endregion
@@ -3688,6 +3700,7 @@ namespace Manti
         {
             textBoxItemTempTotemCategory.Text = CreatePopupSelection("Totem Category", ReadExcelCSV("ItemTotemCategory", 0, 1), textBoxItemTempTotemCategory.Text);
         }
+
 
 
 
