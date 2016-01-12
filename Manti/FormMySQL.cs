@@ -15,7 +15,7 @@ namespace Manti
     public partial class FormMySQL : Form
     {
         public static bool Offline = false;
-        public static string Andress;
+        public static string Address;
         public static UInt16 Port;
         public static string Username;
         public static string Password;
@@ -99,7 +99,7 @@ namespace Manti
             {
                 SaveSettings();
 
-                Andress = textBoxAddress.Text;
+                Address = textBoxAddress.Text;
                 Port = Convert.ToUInt16(textBoxPort.Text);
                 Username = textBoxUsername.Text;
                 Password = textBoxPassword.Text;

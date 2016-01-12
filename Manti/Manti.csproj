@@ -74,6 +74,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\MySqlDatabase.cs" />
+    <Compile Include="Database\DatabaseAuth.cs" />
+    <Compile Include="Database\DatabaseCharacters.cs" />
+    <Compile Include="Database\DatabaseWorld.cs" />
     <Compile Include="FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -17,7 +17,7 @@ namespace Manti
     {
         public FormMain()
         {
-            InitializeComponent();   
+            InitializeComponent();
         }
 
         // - - - - - - - - - - - MUST READ - - - - - - - - - - -
@@ -469,7 +469,7 @@ namespace Manti
         {
             var builder = new MySqlConnectionStringBuilder();
 
-            builder.Server = FormMySQL.Andress;
+            builder.Server = FormMySQL.Address;
             builder.UserID = FormMySQL.Username;
             builder.Password = FormMySQL.Password;
             builder.Port = FormMySQL.Port;
