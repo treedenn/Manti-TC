@@ -15,6 +15,10 @@ namespace Manti.Classes.Database {
 
 		}
 
+		public int uploadSql(string sql) {
+			return executeNonQuery(sql);
+		}
+
 		public DataTable searchForAccounts(string name, bool isExact) {
 			var query = "SELECT id, username, email, expansion FROM account WHERE username ";
 			query += (isExact ? "= '?user'" : "LIKE '%?user%'") + " ORDER BY id;";

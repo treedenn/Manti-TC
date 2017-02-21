@@ -14,6 +14,10 @@ namespace Manti.Classes.Database {
 			: base(address, username, password, port, dbName) {
 		}
 
+		public int uploadSql(string sql) {
+			return executeNonQuery(sql);
+		}
+
 		public DataTable searchForCharacters(string name, bool isExact) {
 			var query = "SELECT guid, account, name, race, class, level FROM characters WHERE LOWER(name) ";
 			query += (isExact ? "= '?value'" : "LIKE '%?value%'") + " ORDER BY guid;";

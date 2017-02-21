@@ -30,12 +30,12 @@
 			this.labelAboutCopy = new System.Windows.Forms.Label();
 			this.labelAboutCreator = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			(( System.ComponentModel.ISupportInitialize )(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// buttonAboutOK
 			// 
-			this.buttonAboutOK.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonAboutOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonAboutOK.Location = new System.Drawing.Point(295, 236);
 			this.buttonAboutOK.Name = "buttonAboutOK";
 			this.buttonAboutOK.Size = new System.Drawing.Size(75, 25);
@@ -52,7 +52,7 @@
 			this.labelAboutVersion.Name = "labelAboutVersion";
 			this.labelAboutVersion.Size = new System.Drawing.Size(92, 13);
 			this.labelAboutVersion.TabIndex = 1;
-			this.labelAboutVersion.Text = "Version: 0.4-alpha";
+			this.labelAboutVersion.Text = "Version: 0.5-alpha";
 			// 
 			// labelAboutManti
 			// 
@@ -83,11 +83,11 @@
 			this.labelAboutCopy.BackColor = System.Drawing.SystemColors.Control;
 			this.labelAboutCopy.Location = new System.Drawing.Point(9, 147);
 			this.labelAboutCopy.Name = "labelAboutCopy";
-			this.labelAboutCopy.Size = new System.Drawing.Size(371, 52);
+			this.labelAboutCopy.Size = new System.Drawing.Size(358, 52);
 			this.labelAboutCopy.TabIndex = 1;
-			this.labelAboutCopy.Text = "© 2015 All rights reserved.\r\n\r\nThe contributors are not responsible for any error" +
-	"s or corruption in your server.\r\nThis program is used at own risk and the creato" +
-	"r takes no responsibility.";
+			this.labelAboutCopy.Text = "© 2017 All rights reserved.\r\n\r\nThe contributor is not responsible for any errors " +
+    "or corruption in your server.\r\nThis program is used at own risk and the creator " +
+    "takes no responsibility.";
 			// 
 			// labelAboutCreator
 			// 
@@ -130,7 +130,7 @@
 			this.ShowInTaskbar = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "About";
-			(( System.ComponentModel.ISupportInitialize )(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

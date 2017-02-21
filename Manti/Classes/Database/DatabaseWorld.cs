@@ -16,6 +16,10 @@ namespace Manti.Classes.Database {
 		public DatabaseWorld(string address, string username, string password, uint port, string dbName)
 			: base(address, username, password, port, dbName) { }
 
+		public int uploadSql(string sql) {
+			return executeNonQuery(sql);
+		}
+
 		#region Creature
 
 		public DataTable searchForAllCreatures() {

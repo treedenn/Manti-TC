@@ -1306,7 +1306,7 @@ namespace Manti.Views {
 			dataGridViewItemDE.AutoGenerateColumns = false;
 			dataGridViewQuestGivers.AutoGenerateColumns = false;
 
-			SetOfflineMode(FormMySQL.Offline);
+			setOfflineMode(FormMySQL.Offline);
 		}
 		private void tabControlCategory_KeyDown(object sender, KeyEventArgs e) {
 			if(e.KeyCode == Keys.Enter) {
@@ -1728,58 +1728,45 @@ namespace Manti.Views {
 
 		#region Update
 
-		private void toolStripSplitButtonAccountScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseAuth));
+		private void toolStripSplitButtonUploadScriptTab(object sender, EventArgs e) {
+			ToolStripSplitButton btn = (ToolStripSplitButton) sender;
 
-			if(ConnectionOpen(connect)) {
-				int rows = DatabaseUpdate(connect, textBoxAccountScriptOutput.Text);
-				toolStripStatusLabelAccountScriptRows.Text = "Row(s) affected: " + rows.ToString();
-				ConnectionClose(connect);
+			int rows = 0;
+			ToolStripStatusLabel label = null;
+
+			if(btn == toolStripSplitButtonAccountScriptUpdate) {
+				DatabaseAuth da = Settings.getAuthDB();
+
+				rows = da.uploadSql(textBoxAccountScriptOutput.Text);
+				label = toolStripStatusLabelAccountScriptRows;
+			} else if(btn == toolStripSplitButtonCharacterScriptUpdate) {
+				DatabaseCharacters dw = Settings.getCharsDB();
+
+				rows = dw.uploadSql(textBoxAccountScriptOutput.Text);
+				label = toolStripStatusLabelAccountScriptRows;
+			} else {
+				DatabaseWorld dw = Settings.getWorldDB();
+
+				if(btn == toolStripSplitButtonCreatureScriptUpdate) {
+					rows = dw.uploadSql(textBoxCreatureScriptOutput.Text);
+					label = toolStripStatusLabelCreatureScriptRows;
+
+				} else if(btn == toolStripSplitButtonQuestScriptUpdate) {
+					rows = dw.uploadSql(textBoxQuestScriptOutput.Text);
+					label = toolStripStatusLabelQuestScriptRows;
+
+				} else if(btn == toolStripSplitButtonGOScriptUpdate) {
+					rows = dw.uploadSql(textBoxGameObjectScriptOutput.Text);
+					label = toolStripStatusLabelGameObjectScriptRows;
+
+				} else if(btn == toolStripSplitButtonItemScriptUpdate) {
+					rows = dw.uploadSql(textBoxItemScriptOutput.Text);
+					label = toolStripStatusLabelItemScriptRows;
+				}
 			}
-		}
-		private void toolStripSplitButtonCharacterScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
 
-			if(ConnectionOpen(connect)) {
-				toolStripStatusLabelCharacterScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCharacterScriptOutput.Text).ToString();
-
-				ConnectionClose(connect);
-			}
-		}
-		private void toolStripSplitButtonCreatureScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			if(ConnectionOpen(connect)) {
-				toolStripStatusLabelCreatureScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxCreatureScriptOutput.Text).ToString();
-
-				ConnectionClose(connect);
-			}
-		}
-		private void toolStripSplitButtonQuestScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			if(ConnectionOpen(connect)) {
-				toolStripStatusLabelQuestScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxQuestScriptOutput.Text).ToString();
-
-				ConnectionClose(connect);
-			}
-		}
-		private void toolStripSplitButtonGOScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			if(ConnectionOpen(connect)) {
-				toolStripStatusLabelGameObjectScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxGameObjectScriptOutput.Text).ToString();
-
-				ConnectionClose(connect);
-			}
-		}
-		private void toolStripSplitButtonItemScriptUpdate_ButtonClick(object sender, EventArgs e) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			if(ConnectionOpen(connect)) {
-				toolStripStatusLabelItemScriptRows.Text = "Row(s) Affected: " + DatabaseUpdate(connect, textBoxItemScriptOutput.Text).ToString();
-
-				ConnectionClose(connect);
+			if(label != null) {
+				label.Text = "Row(s) affected: " + rows.ToString();
 			}
 		}
 
@@ -1787,7 +1774,24 @@ namespace Manti.Views {
 
 		#endregion
 
-		#region Secondary Events
+		#region Secondary
+
+		#region ToolStrip
+		private void newConnectionToolStripMenuItemFile_Click(object sender, EventArgs e) {
+			System.Diagnostics.Process.Start(Application.ExecutablePath);
+			Application.Exit();
+		}
+		private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e) {
+			Form CP = new Views.FormControlPanel();
+
+			CP.StartPosition = FormStartPosition.CenterScreen;
+			CP.Show();
+		}
+		private void aboutToolStripMenuHelp_Click(object sender, EventArgs e) {
+			var fa = new FormAbout();
+			fa.ShowDialog();
+		}
+		#endregion
 
 		#region Account
 
@@ -2313,7 +2317,7 @@ namespace Manti.Views {
 		// The things below is still a WIP.
 
 		#region GLOBAL Functions
-		private void SetOfflineMode(bool enable) {
+		private void setOfflineMode(bool enable) {
 			FormMySQL.Offline = enable;
 
 			// Search Buttons
@@ -3005,29 +3009,6 @@ namespace Manti.Views {
 			return iSubclass;
 		}
 		#endregion
-		#endregion
-		#region ToolStrip Events
-		private void newConnectionToolStripMenuItemFile_Click(object sender, EventArgs e) {
-			System.Diagnostics.Process.Start(Application.ExecutablePath);
-			Application.Exit();
-		}
-		private void offlineToolStripMenuItem_Click(object sender, EventArgs e) {
-			if(FormMySQL.Offline) {
-				SetOfflineMode(false);
-			} else {
-				SetOfflineMode(true);
-			}
-		}
-		private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e) {
-			Form CP = new Views.FormControlPanel();
-
-			CP.StartPosition = FormStartPosition.CenterScreen;
-			CP.Show();
-		}
-		private void aboutToolStripMenuHelp_Click(object sender, EventArgs e) {
-			var fa = new FormAbout();
-			fa.ShowDialog();
-		}
 		#endregion
 
 		#region POPUPS

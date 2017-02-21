@@ -36,7 +36,9 @@ namespace Manti.Classes.Database {
 			connectionString = builder.ToString();
 		}
 
-		protected void executeNonQuery(string query, params MySqlParameter[] paras) {
+		protected int executeNonQuery(string query, params MySqlParameter[] paras) {
+			int rows;
+
 			using(var connect = new MySqlConnection(connectionString)) {
 				connect.Open();
 
@@ -45,11 +47,13 @@ namespace Manti.Classes.Database {
 						cmd.CommandText = cmd.CommandText.Replace(para.ParameterName, para.Value.ToString());
 					}
 
-					cmd.ExecuteNonQuery();
+					rows = cmd.ExecuteNonQuery();
 				}
 
 				connect.Close();
 			}
+
+			return rows;
 		}
 
 		protected DataTable executeQuery(string query, params MySqlParameter[] paras) {
