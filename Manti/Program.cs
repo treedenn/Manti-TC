@@ -16,7 +16,7 @@ namespace Manti
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMySQL());
+            Application.Run(new Views.FormMySQL());
         }
     }
 }

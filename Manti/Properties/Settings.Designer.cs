@@ -110,21 +110,9 @@ namespace Manti.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool SaveInformation {
+        public string SavePassword {
             get {
-                return ((bool)(this["SaveInformation"]));
-            }
-            set {
-                this["SaveInformation"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool SavePassword {
-            get {
-                return ((bool)(this["SavePassword"]));
+                return ((string)(this["SavePassword"]));
             }
             set {
                 this["SavePassword"] = value;

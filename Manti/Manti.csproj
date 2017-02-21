@@ -74,82 +74,110 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\MySqlDatabase.cs" />
-    <Compile Include="Database\DatabaseAuth.cs" />
-    <Compile Include="Database\DatabaseCharacters.cs" />
-    <Compile Include="Database\DatabaseWorld.cs" />
-    <Compile Include="FormAbout.cs">
+    <Compile Include="Classes\AccountTab\Account.cs" />
+    <Compile Include="Classes\AccountTab\AccountAccess.cs" />
+    <Compile Include="Classes\AccountTab\AccountBanned.cs" />
+    <Compile Include="Classes\AccountTab\AccountMuted.cs" />
+    <Compile Include="Classes\CharacterTab\Character.cs" />
+    <Compile Include="Classes\CharacterTab\CharacterInventory.cs" />
+    <Compile Include="Classes\CreatureTab\Creature.cs" />
+    <Compile Include="Classes\CreatureTab\CreatureLocation.cs" />
+    <Compile Include="Classes\CreatureTab\CreatureLPS.cs" />
+    <Compile Include="Classes\CreatureTab\CreatureVendor.cs" />
+    <Compile Include="Classes\Database\MySqlDatabase.cs" />
+    <Compile Include="Classes\Database\DatabaseAuth.cs" />
+    <Compile Include="Classes\Database\DatabaseCharacters.cs" />
+    <Compile Include="Classes\Database\DatabaseWorld.cs" />
+    <Compile Include="Classes\Database\MySqlAssist.cs" />
+    <Compile Include="Classes\GameObjectTab\GameObject.cs" />
+    <Compile Include="Classes\Generate\GenerateAuth.cs" />
+    <Compile Include="Classes\Generate\GenerateCharacters.cs" />
+    <Compile Include="Classes\Generate\GenerateWorld.cs" />
+    <Compile Include="Classes\Generate\SqlGenerate.cs" />
+    <Compile Include="Classes\ItemTab\Item.cs" />
+    <Compile Include="Classes\ItemTab\ItemLPMD.cs" />
+    <Compile Include="Classes\QuestTab\Quest.cs" />
+    <Compile Include="Classes\QuestTab\QuestGT.cs" />
+    <Compile Include="Classes\Settings\Settings.cs" />
+    <Compile Include="Classes\UtilityHelper.cs" />
+    <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\CharacterModel.cs" />
+    <Compile Include="Models\CreatureModel.cs" />
+    <Compile Include="Models\GameObjectModel.cs" />
+    <Compile Include="Models\ItemModel.cs" />
+    <Compile Include="Models\QuestModel.cs" />
+    <Compile Include="View\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAbout.Designer.cs">
+    <Compile Include="View\FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="View\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="View\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMySQL.cs">
+    <Compile Include="View\FormMySQL.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMySQL.Designer.cs">
+    <Compile Include="View\FormMySQL.Designer.cs">
       <DependentUpon>FormMySQL.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPopup\FormPopupCheckboxList.cs">
+    <Compile Include="View\FormPopup\FormPopupCheckboxList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPopup\FormPopupCheckboxList.Designer.cs">
+    <Compile Include="View\FormPopup\FormPopupCheckboxList.Designer.cs">
       <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPopup\FormPopupEntities.cs">
+    <Compile Include="View\FormPopup\FormPopupEntities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPopup\FormPopupEntities.Designer.cs">
+    <Compile Include="View\FormPopup\FormPopupEntities.Designer.cs">
       <DependentUpon>FormPopupEntities.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPopup\FormPopupSelection.cs">
+    <Compile Include="View\FormPopup\FormPopupSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPopup\FormPopupSelection.Designer.cs">
+    <Compile Include="View\FormPopup\FormPopupSelection.Designer.cs">
       <DependentUpon>FormPopupSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSettings.cs">
+    <Compile Include="View\FormSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSettings.Designer.cs">
+    <Compile Include="View\FormSettings.Designer.cs">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTools\FormControlPanel.cs">
+    <Compile Include="View\FormControlPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTools\FormControlPanel.Designer.cs">
+    <Compile Include="View\FormControlPanel.Designer.cs">
       <DependentUpon>FormControlPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAbout.resx">
+    <EmbeddedResource Include="View\FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="View\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMySQL.resx">
+    <EmbeddedResource Include="View\FormMySQL.resx">
       <DependentUpon>FormMySQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPopup\FormPopupCheckboxList.resx">
+    <EmbeddedResource Include="View\FormPopup\FormPopupCheckboxList.resx">
       <DependentUpon>FormPopupCheckboxList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPopup\FormPopupEntities.resx">
+    <EmbeddedResource Include="View\FormPopup\FormPopupEntities.resx">
       <DependentUpon>FormPopupEntities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPopup\FormPopupSelection.resx">
+    <EmbeddedResource Include="View\FormPopup\FormPopupSelection.resx">
       <DependentUpon>FormPopupSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSettings.resx">
+    <EmbeddedResource Include="View\FormSettings.resx">
       <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTools\FormControlPanel.resx">
+    <EmbeddedResource Include="View\FormControlPanel.resx">
       <DependentUpon>FormControlPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -215,6 +243,7 @@
     <Content Include="iconManti.ico" />
     <None Include="Resources\iconManti.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

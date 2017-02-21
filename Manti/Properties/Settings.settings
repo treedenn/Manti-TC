@@ -23,10 +23,7 @@
     <Setting Name="DatabaseWorld" Type="System.String" Scope="User">
       <Value Profile="(Default)">world</Value>
     </Setting>
-    <Setting Name="SaveInformation" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="SavePassword" Type="System.Boolean" Scope="User">
+    <Setting Name="SavePassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="PathWorldserver" Type="System.String" Scope="User">
