@@ -50,7 +50,7 @@
 			this.groupBoxWorldServer.Controls.Add(this.labelWorldStatus);
 			this.groupBoxWorldServer.Controls.Add(this.buttonWorldPath);
 			this.groupBoxWorldServer.Controls.Add(this.buttonWorldServer);
-			this.groupBoxWorldServer.Location = new System.Drawing.Point(12, 12);
+			this.groupBoxWorldServer.Location = new System.Drawing.Point(179, 12);
 			this.groupBoxWorldServer.Name = "groupBoxWorldServer";
 			this.groupBoxWorldServer.Size = new System.Drawing.Size(160, 120);
 			this.groupBoxWorldServer.TabIndex = 1;
@@ -94,7 +94,7 @@
 			this.buttonWorldPath.TabIndex = 0;
 			this.buttonWorldPath.Text = "Path";
 			this.buttonWorldPath.UseVisualStyleBackColor = true;
-			this.buttonWorldPath.Click += new System.EventHandler(this.buttonWorldPath_Click);
+			this.buttonWorldPath.Click += new System.EventHandler(this.buttonPath_Click);
 			// 
 			// buttonWorldServer
 			// 
@@ -106,7 +106,7 @@
 			this.buttonWorldServer.Size = new System.Drawing.Size(51, 51);
 			this.buttonWorldServer.TabIndex = 0;
 			this.buttonWorldServer.UseVisualStyleBackColor = true;
-			this.buttonWorldServer.Click += new System.EventHandler(this.buttonWorldServer_Click);
+			this.buttonWorldServer.Click += new System.EventHandler(this.buttonServer_Click);
 			// 
 			// groupBox1
 			// 
@@ -115,7 +115,7 @@
 			this.groupBox1.Controls.Add(this.labelAuthStatus);
 			this.groupBox1.Controls.Add(this.buttonAuthPath);
 			this.groupBox1.Controls.Add(this.buttonAuthServer);
-			this.groupBox1.Location = new System.Drawing.Point(178, 12);
+			this.groupBox1.Location = new System.Drawing.Point(12, 12);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(160, 120);
 			this.groupBox1.TabIndex = 1;
@@ -131,6 +131,7 @@
 			this.checkBoxRestartAuth.TabIndex = 3;
 			this.checkBoxRestartAuth.Text = "Restart";
 			this.checkBoxRestartAuth.UseVisualStyleBackColor = true;
+			this.checkBoxRestartAuth.CheckedChanged += new System.EventHandler(this.checkBoxRestartAuth_CheckedChanged);
 			// 
 			// checkBoxHideAuth
 			// 
@@ -159,7 +160,7 @@
 			this.buttonAuthPath.TabIndex = 0;
 			this.buttonAuthPath.Text = "Path";
 			this.buttonAuthPath.UseVisualStyleBackColor = true;
-			this.buttonAuthPath.Click += new System.EventHandler(this.buttonAuthPath_Click);
+			this.buttonAuthPath.Click += new System.EventHandler(this.buttonPath_Click);
 			// 
 			// buttonAuthServer
 			// 
@@ -171,7 +172,7 @@
 			this.buttonAuthServer.Size = new System.Drawing.Size(51, 51);
 			this.buttonAuthServer.TabIndex = 0;
 			this.buttonAuthServer.UseVisualStyleBackColor = true;
-			this.buttonAuthServer.Click += new System.EventHandler(this.buttonAuthServer_Click);
+			this.buttonAuthServer.Click += new System.EventHandler(this.buttonServer_Click);
 			// 
 			// textBoxPathServer
 			// 

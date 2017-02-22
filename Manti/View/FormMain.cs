@@ -68,21 +68,21 @@ namespace Manti.Views {
 
 		private void fillAccountTemplate(Account account) {
 			if(account != null) {
-				textBoxAccountAccountID.Text = account.id.ToString();
-				textBoxAccountAccountUsername.Text = account.username;
-				textBoxAccountAccountEmail.Text = account.email;
-				textBoxAccountAccountRegmail.Text = account.reqemail;
-				textBoxAccountAccountJoindate.Text = account.reqemail;
-				textBoxAccountAccountLastIP.Text = account.lastIP;
+				textBoxAccountAccountID.Text         = account.id.ToString();
+				textBoxAccountAccountUsername.Text   = account.username;
+				textBoxAccountAccountEmail.Text      = account.email;
+				textBoxAccountAccountRegmail.Text    = account.reqemail;
+				textBoxAccountAccountJoindate.Text   = account.reqemail;
+				textBoxAccountAccountLastIP.Text     = account.lastIP;
 				checkBoxAccountAccountLocked.Checked = account.locked;
 				checkBoxAccountAccountOnline.Checked = account.online;
-				textBoxAccountAccountExpansion.Text = account.expansion.ToString();
+				textBoxAccountAccountExpansion.Text  = account.expansion.ToString();
 
 				if(account.banned != null) {
-					textBoxAccountAccountBandate.Text = account.banned.banDate.ToString();
-					textBoxAccountAccountUnbandate.Text = account.banned.unbanDate.ToString();
-					textBoxAccountAccountBanreason.Text = account.banned.reason;
-					textBoxAccountAccountBannedby.Text = account.banned.by;
+					textBoxAccountAccountBandate.Text       = account.banned.banDate.ToString();
+					textBoxAccountAccountUnbandate.Text     = account.banned.unbanDate.ToString();
+					textBoxAccountAccountBanreason.Text     = account.banned.reason;
+					textBoxAccountAccountBannedby.Text      = account.banned.by;
 					checkBoxAccountAccountBanActive.Checked = account.banned.isActive;
 
 					monthCalendarAccountAccountBanDate.AddMonthlyBoldedDate(account.banned.banDate);
@@ -92,10 +92,10 @@ namespace Manti.Views {
 				}
 
 				if(account.muted != null) {
-					textBoxAccountAccountMutedate.Text = account.muted.muteDate.ToString();
-					textBoxAccountAccountMutetime.Text = account.muted.duration.ToString();
+					textBoxAccountAccountMutedate.Text   = account.muted.muteDate.ToString();
+					textBoxAccountAccountMutetime.Text   = account.muted.duration.ToString();
 					textBoxAccountAccountMutereason.Text = account.muted.reason;
-					textBoxAccountAccountMutedby.Text = account.muted.by;
+					textBoxAccountAccountMutedby.Text    = account.muted.by;
 
 					monthCalendarAccountAccountMuteDate.AddMonthlyBoldedDate(account.muted.muteDate);
 					monthCalendarAccountAccountMuteDate.SetDate(account.muted.muteDate);
@@ -119,31 +119,31 @@ namespace Manti.Views {
 
 		private void fillCharacterTemplate(Character character) {
 			if(character != null) {
-				textBoxCharacterCharacterGUID.Text = character.guid.ToString();
-				textBoxCharacterCharacterAccount.Text = character.accountID.ToString();
-				textBoxCharacterCharacterName.Text = character.name.ToString();
-				textBoxCharacterCharacterRace.Text = character.charRace.ToString();
-				textBoxCharacterCharacterClass.Text = character.charClass.ToString();
-				textBoxCharacterCharacterGender.Text = character.sex.ToString();
-				textBoxCharacterCharacterLevel.Text = character.level.ToString();
-				textBoxCharacterCharacterMoney.Text = character.money.ToString();
-				textBoxCharacterCharacterXP.Text = character.xp.ToString();
-				textBoxCharacterCharacterTitle.Text = character.chosenTitle.ToString();
-				checkBoxCharacterCharacterOnline.Checked = character.isOnline;
+				textBoxCharacterCharacterGUID.Text          = character.guid.ToString();
+				textBoxCharacterCharacterAccount.Text       = character.accountID.ToString();
+				textBoxCharacterCharacterName.Text          = character.name.ToString();
+				textBoxCharacterCharacterRace.Text          = character.charRace.ToString();
+				textBoxCharacterCharacterClass.Text         = character.charClass.ToString();
+				textBoxCharacterCharacterGender.Text        = character.sex.ToString();
+				textBoxCharacterCharacterLevel.Text         = character.level.ToString();
+				textBoxCharacterCharacterMoney.Text         = character.money.ToString();
+				textBoxCharacterCharacterXP.Text            = character.xp.ToString();
+				textBoxCharacterCharacterTitle.Text         = character.chosenTitle.ToString();
+				checkBoxCharacterCharacterOnline.Checked    = character.isOnline;
 				checkBoxCharacterCharacterCinematic.Checked = character.isCinematic;
-				checkBoxCharacterCharacterRest.Checked = character.isResting;
+				checkBoxCharacterCharacterRest.Checked      = character.isResting;
 				// Location
-				textBoxCharacterCharacterMapID.Text = character.mapID.ToString();
+				textBoxCharacterCharacterMapID.Text      = character.mapID.ToString();
 				textBoxCharacterCharacterInstanceID.Text = character.instanceID.ToString();
-				textBoxCharacterCharacterZoneID.Text = character.zoneID.ToString();
-				textBoxCharacterCharacterCoordO.Text = character.orientation.ToString();
-				textBoxCharacterCharacterCoordX.Text = character.xPosition.ToString();
-				textBoxCharacterCharacterCoordY.Text = character.yPosition.ToString();
-				textBoxCharacterCharacterCoordZ.Text = character.zPosition.ToString();
+				textBoxCharacterCharacterZoneID.Text     = character.zoneID.ToString();
+				textBoxCharacterCharacterCoordO.Text     = character.orientation.ToString();
+				textBoxCharacterCharacterCoordX.Text     = character.xPosition.ToString();
+				textBoxCharacterCharacterCoordY.Text     = character.yPosition.ToString();
+				textBoxCharacterCharacterCoordZ.Text     = character.zPosition.ToString();
 				// Player vs Player
 				textBoxCharacterCharacterHonorPoints.Text = character.honorPoints.ToString();
 				textBoxCharacterCharacterArenaPoints.Text = character.arenaPoints.ToString();
-				textBoxCharacterCharacterTotalKills.Text = character.totalKills.ToString();
+				textBoxCharacterCharacterTotalKills.Text  = character.totalKills.ToString();
 				// Stats
 				textBoxCharacterCharacterHealth.Text = character.health.ToString();
 				textBoxCharacterCharacterPower1.Text = character.power1.ToString();
@@ -172,77 +172,77 @@ namespace Manti.Views {
 
 		private void fillCreatureTemplate(Creature creature) {
 			if(creature != null) {
-				textBoxCreatureTemplateEntry.Text = creature.entry.ToString();
-				textBoxCreatureTemplateDifEntry1.Text = creature.diffEntry1.ToString();
-				textBoxCreatureTemplateDifEntry2.Text = creature.diffEntry2.ToString();
-				textBoxCreatureTemplateDifEntry3.Text = creature.diffEntry3.ToString();
-				textBoxCreatureTemplateName.Text = creature.name;
-				textBoxCreatureTemplateSubname.Text = creature.subname;
-				textBoxCreatureTemplateModelID1.Text = creature.modelId1.ToString();
-				textBoxCreatureTemplateModelID2.Text = creature.modelId2.ToString();
-				textBoxCreatureTemplateModelID3.Text = creature.modelId3.ToString();
-				textBoxCreatureTemplateModelID4.Text = creature.modelId4.ToString();
-				textBoxCreatureTemplateLevelMin.Text = creature.minlevel.ToString();
-				textBoxCreatureTemplateLevelMax.Text = creature.maxlevel.ToString();
-				textBoxCreatureTemplateGoldMin.Text = creature.mingold.ToString();
-				textBoxCreatureTemplateGoldMax.Text = creature.maxgold.ToString();
-				textBoxCreatureTemplateKillCredit1.Text = creature.killCredit1.ToString();
-				textBoxCreatureTemplateKillCredit2.Text = creature.killCredit2.ToString();
-				textBoxCreatureTemplateRank.Text = creature.rank.ToString();
-				textBoxCreatureTemplateScale.Text = creature.scale.ToString();
-				textBoxCreatureTemplateFaction.Text = creature.faction.ToString();
-				textBoxCreatureTemplateNPCFlags.Text = creature.npcFlags.ToString();
-				textBoxCreatureTemplateSpell1.Text = creature.spell1.ToString();
-				textBoxCreatureTemplateSpell2.Text = creature.spell2.ToString();
-				textBoxCreatureTemplateSpell3.Text = creature.spell3.ToString();
-				textBoxCreatureTemplateSpell4.Text = creature.spell4.ToString();
-				textBoxCreatureTemplateSpell5.Text = creature.spell5.ToString();
-				textBoxCreatureTemplateSpell6.Text = creature.spell6.ToString();
-				textBoxCreatureTemplateSpell7.Text = creature.spell7.ToString();
-				textBoxCreatureTemplateSpell8.Text = creature.spell8.ToString();
-				textBoxCreatureTemplateModHealth.Text = creature.modHealth.ToString();
-				textBoxCreatureTemplateModMana.Text = creature.modMana.ToString();
-				textBoxCreatureTemplateModArmor.Text = creature.modArmor.ToString();
-				textBoxCreatureTemplateModDamage.Text = creature.modDamage.ToString();
+				textBoxCreatureTemplateEntry.Text         = creature.entry.ToString();
+				textBoxCreatureTemplateDifEntry1.Text     = creature.diffEntry1.ToString();
+				textBoxCreatureTemplateDifEntry2.Text     = creature.diffEntry2.ToString();
+				textBoxCreatureTemplateDifEntry3.Text     = creature.diffEntry3.ToString();
+				textBoxCreatureTemplateName.Text          = creature.name;
+				textBoxCreatureTemplateSubname.Text       = creature.subname;
+				textBoxCreatureTemplateModelID1.Text      = creature.modelId1.ToString();
+				textBoxCreatureTemplateModelID2.Text      = creature.modelId2.ToString();
+				textBoxCreatureTemplateModelID3.Text      = creature.modelId3.ToString();
+				textBoxCreatureTemplateModelID4.Text      = creature.modelId4.ToString();
+				textBoxCreatureTemplateLevelMin.Text      = creature.minlevel.ToString();
+				textBoxCreatureTemplateLevelMax.Text      = creature.maxlevel.ToString();
+				textBoxCreatureTemplateGoldMin.Text       = creature.mingold.ToString();
+				textBoxCreatureTemplateGoldMax.Text       = creature.maxgold.ToString();
+				textBoxCreatureTemplateKillCredit1.Text   = creature.killCredit1.ToString();
+				textBoxCreatureTemplateKillCredit2.Text   = creature.killCredit2.ToString();
+				textBoxCreatureTemplateRank.Text          = creature.rank.ToString();
+				textBoxCreatureTemplateScale.Text         = creature.scale.ToString();
+				textBoxCreatureTemplateFaction.Text       = creature.faction.ToString();
+				textBoxCreatureTemplateNPCFlags.Text      = creature.npcFlags.ToString();
+				textBoxCreatureTemplateSpell1.Text        = creature.spell1.ToString();
+				textBoxCreatureTemplateSpell2.Text        = creature.spell2.ToString();
+				textBoxCreatureTemplateSpell3.Text        = creature.spell3.ToString();
+				textBoxCreatureTemplateSpell4.Text        = creature.spell4.ToString();
+				textBoxCreatureTemplateSpell5.Text        = creature.spell5.ToString();
+				textBoxCreatureTemplateSpell6.Text        = creature.spell6.ToString();
+				textBoxCreatureTemplateSpell7.Text        = creature.spell7.ToString();
+				textBoxCreatureTemplateSpell8.Text        = creature.spell8.ToString();
+				textBoxCreatureTemplateModHealth.Text     = creature.modHealth.ToString();
+				textBoxCreatureTemplateModMana.Text       = creature.modMana.ToString();
+				textBoxCreatureTemplateModArmor.Text      = creature.modArmor.ToString();
+				textBoxCreatureTemplateModDamage.Text     = creature.modDamage.ToString();
 				textBoxCreatureTemplateModExperience.Text = creature.modExp.ToString();
-				textBoxCreatureTemplateSpeedWalk.Text = creature.speedWalk.ToString();
-				textBoxCreatureTemplateSpeedRun.Text = creature.speedRun.ToString();
-				textBoxCreatureTemplateBaseAttack.Text = creature.baseAttackTime.ToString();
-				textBoxCreatureTemplateRangedAttack.Text = creature.rangedAttackTime.ToString();
-				textBoxCreatureTemplateBV.Text = creature.bVariance.ToString();
-				textBoxCreatureTemplateRV.Text = creature.rVariance.ToString();
-				textBoxCreatureTemplateDS.Text = creature.dSchool.ToString();
-				textBoxCreatureTemplateAIName.Text = creature.aiName.ToString();
-				textBoxCreatureTemplateMType.Text = creature.movementType.ToString();
-				textBoxCreatureTemplateInhabitType.Text = creature.inhabitType.ToString();
-				textBoxCreatureTemplateHH.Text = creature.hoverHeight.ToString();
-				textBoxCreatureTemplateGMID.Text = creature.gossipMenuId.ToString();
-				textBoxCreatureTemplateMID.Text = creature.movementId.ToString();
-				textBoxCreatureTemplateScriptName.Text = creature.scriptName.ToString();
-				textBoxCreatureTemplateVID.Text = creature.vehicleId.ToString();
-				textBoxCreatureTemplateMechanic.Text = creature.mechanicImmuneMask.ToString();
-				textBoxCreatureTemplateFamily.Text = creature.family.ToString();
-				textBoxCreatureTemplateType.Text = creature.familyType.ToString();
-				textBoxCreatureTemplateTypeFlags.Text = creature.typeFlags.ToString();
-				textBoxCreatureTemplateFlagsExtra.Text = creature.extraFlags.ToString();
-				textBoxCreatureTemplateUnitClass.Text = creature.unitClass.ToString();
-				textBoxCreatureTemplateUnitflags.Text = creature.unitFlags1.ToString();
-				textBoxCreatureTemplateUnitflags2.Text = creature.unitFlags2.ToString();
-				textBoxCreatureTemplateDynamic.Text = creature.dynamicFlags.ToString();
-				checkBoxCreatureTemplateHR.Checked = creature.isRegenHealth;
-				textBoxCreatureTemplateResis1.Text = creature.resistHoly.ToString();
-				textBoxCreatureTemplateResis2.Text = creature.resistFire.ToString();
-				textBoxCreatureTemplateResis3.Text = creature.resistNature.ToString();
-				textBoxCreatureTemplateResis4.Text = creature.resistFrost.ToString();
-				textBoxCreatureTemplateResis5.Text = creature.resistShadow.ToString();
-				textBoxCreatureTemplateResis6.Text = creature.resistArcane.ToString();
-				textBoxCreatureTemplateTType.Text = creature.trainerType.ToString();
-				textBoxCreatureTemplateTSpell.Text = creature.trainerSpell.ToString();
-				textBoxCreatureTemplateTRace.Text = creature.trainerClass.ToString();
-				textBoxCreatureTemplateTClass.Text = creature.trainerRace.ToString();
-				textBoxCreatureTemplateLootID.Text = creature.lootId.ToString();
-				textBoxCreatureTemplatePickID.Text = creature.pickpocketId.ToString();
-				textBoxCreatureTemplateSkinID.Text = creature.skinId.ToString();
+				textBoxCreatureTemplateSpeedWalk.Text     = creature.speedWalk.ToString();
+				textBoxCreatureTemplateSpeedRun.Text      = creature.speedRun.ToString();
+				textBoxCreatureTemplateBaseAttack.Text    = creature.baseAttackTime.ToString();
+				textBoxCreatureTemplateRangedAttack.Text  = creature.rangedAttackTime.ToString();
+				textBoxCreatureTemplateBV.Text            = creature.bVariance.ToString();
+				textBoxCreatureTemplateRV.Text            = creature.rVariance.ToString();
+				textBoxCreatureTemplateDS.Text            = creature.dSchool.ToString();
+				textBoxCreatureTemplateAIName.Text        = creature.aiName.ToString();
+				textBoxCreatureTemplateMType.Text         = creature.movementType.ToString();
+				textBoxCreatureTemplateInhabitType.Text   = creature.inhabitType.ToString();
+				textBoxCreatureTemplateHH.Text            = creature.hoverHeight.ToString();
+				textBoxCreatureTemplateGMID.Text          = creature.gossipMenuId.ToString();
+				textBoxCreatureTemplateMID.Text           = creature.movementId.ToString();
+				textBoxCreatureTemplateScriptName.Text    = creature.scriptName.ToString();
+				textBoxCreatureTemplateVID.Text           = creature.vehicleId.ToString();
+				textBoxCreatureTemplateMechanic.Text      = creature.mechanicImmuneMask.ToString();
+				textBoxCreatureTemplateFamily.Text        = creature.family.ToString();
+				textBoxCreatureTemplateType.Text          = creature.familyType.ToString();
+				textBoxCreatureTemplateTypeFlags.Text     = creature.typeFlags.ToString();
+				textBoxCreatureTemplateFlagsExtra.Text    = creature.extraFlags.ToString();
+				textBoxCreatureTemplateUnitClass.Text     = creature.unitClass.ToString();
+				textBoxCreatureTemplateUnitflags.Text     = creature.unitFlags1.ToString();
+				textBoxCreatureTemplateUnitflags2.Text    = creature.unitFlags2.ToString();
+				textBoxCreatureTemplateDynamic.Text       = creature.dynamicFlags.ToString();
+				checkBoxCreatureTemplateHR.Checked        = creature.isRegenHealth;
+				textBoxCreatureTemplateResis1.Text        = creature.resistHoly.ToString();
+				textBoxCreatureTemplateResis2.Text        = creature.resistFire.ToString();
+				textBoxCreatureTemplateResis3.Text        = creature.resistNature.ToString();
+				textBoxCreatureTemplateResis4.Text        = creature.resistFrost.ToString();
+				textBoxCreatureTemplateResis5.Text        = creature.resistShadow.ToString();
+				textBoxCreatureTemplateResis6.Text        = creature.resistArcane.ToString();
+				textBoxCreatureTemplateTType.Text         = creature.trainerType.ToString();
+				textBoxCreatureTemplateTSpell.Text        = creature.trainerSpell.ToString();
+				textBoxCreatureTemplateTRace.Text         = creature.trainerClass.ToString();
+				textBoxCreatureTemplateTClass.Text        = creature.trainerRace.ToString();
+				textBoxCreatureTemplateLootID.Text        = creature.lootId.ToString();
+				textBoxCreatureTemplatePickID.Text        = creature.pickpocketId.ToString();
+				textBoxCreatureTemplateSkinID.Text        = creature.skinId.ToString();
 
 				tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
 			}
@@ -1288,23 +1288,21 @@ namespace Manti.Views {
 
 		private void FormMain_Load(object sender, EventArgs e) {
 			this.Icon = Properties.Resources.iconManti;
-			//bsAA = new BindingSource();
-			//bsCI = new BindingSource();
 
 			tabControlCategory.Focus();
 			tabControlCategory.SelectedTab = tabPageItem;
 
-			dataGridViewAccountSearch.AutoGenerateColumns = false;
-			dataGridViewCreatureSearch.AutoGenerateColumns = false;
-			dataGridViewQuestSearch.AutoGenerateColumns = false;
-			dataGridViewGameObjectSearch.AutoGenerateColumns = false;
-			dataGridViewItemSearch.AutoGenerateColumns = false;
+			dataGridViewAccountSearch.AutoGenerateColumns      = false;
+			dataGridViewCreatureSearch.AutoGenerateColumns     = false;
+			dataGridViewQuestSearch.AutoGenerateColumns        = false;
+			dataGridViewGameObjectSearch.AutoGenerateColumns   = false;
+			dataGridViewItemSearch.AutoGenerateColumns         = false;
 			dataGridViewCharacterInventory.AutoGenerateColumns = false;
-			dataGridViewItemLoot.AutoGenerateColumns = false;
-			dataGridViewItemProspect.AutoGenerateColumns = false;
-			dataGridViewItemMill.AutoGenerateColumns = false;
-			dataGridViewItemDE.AutoGenerateColumns = false;
-			dataGridViewQuestGivers.AutoGenerateColumns = false;
+			dataGridViewItemLoot.AutoGenerateColumns           = false;
+			dataGridViewItemProspect.AutoGenerateColumns       = false;
+			dataGridViewItemMill.AutoGenerateColumns           = false;
+			dataGridViewItemDE.AutoGenerateColumns             = false;
+			dataGridViewQuestGivers.AutoGenerateColumns        = false;
 
 			setOfflineMode(FormMySQL.Offline);
 		}

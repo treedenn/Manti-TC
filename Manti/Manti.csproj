@@ -106,6 +106,7 @@
     <Compile Include="Models\GameObjectModel.cs" />
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\QuestModel.cs" />
+    <Compile Include="Models\ServerModel.cs" />
     <Compile Include="View\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
