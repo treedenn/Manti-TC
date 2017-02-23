@@ -91,17 +91,45 @@ namespace Manti.Classes.Database {
 		}
 
 		public Creature getCreature(uint entry) {
-			string query = "SELECT entry, difficulty_entry_1, difficulty_entry_2, difficulty_entry_3, name, subname, modelid1, modelid2, modelid3, modelid4, minlevel, maxlevel, mingold, maxgold,";
-			query += "KillCredit1, KillCredit2, rank, scale, faction, npcflag, HealthModifier, ManaModifier, ArmorModifier, DamageModifier, ExperienceModifier, BaseAttackTime, ";
-			query += "RangeAttackTime, BaseVariance, RangeVariance, dmgschool, AIName, MovementType, InhabitType, HoverHeight, gossip_menu_id, movementId, ScriptName, VehicleId, ";
-			query += "trainer_type, trainer_spell, trainer_class, trainer_race, lootid, pickpocketloot, skinloot, resistance1, resistance2, resistance3, resistance4, resistance5, resistance6, ";
-			query += "RegenHealth, mechanic_immune_mask, family, type, type_flags, flags_extra, unit_class, unit_flags, unit_flags2, dynamicflags, speed_walk, speed_run, ";
-			query += "spell1, spell2, spell3, spell4, spell5, spell6, spell7, spell8 ";
-			query += "FROM creature_template WHERE entry = '?entry' ORDER BY entry;";
+			string[] columns = { "entry", "difficulty_entry_1", "difficulty_entry_2", "difficulty_entry_3", "name", "subname", "modelid1", "modelid2", "modelid3", "modelid4",
+				"minlevel", "maxlevel", "mingold", "maxgold", "KillCredit1", "KillCredit2", "rank", "scale", "faction", "npcflag", "spell1", "spell2", "spell3", "spell4", "spell5", "spell6", "spell7", "spell8",
+				"HealthModifier", "ManaModifier", "ArmorModifier", "DamageModifier", "ExperienceModifier", "speed_walk", "speed_run", "BaseAttackTime", "RangeAttackTime", "BaseVariance", "RangeVariance", "dmgschool",
+				"AIName", "MovementType", "InhabitType", "HoverHeight", "gossip_menu_id", "movementId", "ScriptName", "VehicleId", "mechanic_immune_mask", "family", "type", "type_flags", "flags_extra", "unit_class",
+				"unit_flags", "unit_flags2", "dynamicflags", "RegenHealth", "resistance1", "resistance2", "resistance3", "resistance4", "resistance5", "resistance6", "trainer_type", "trainer_spell", "trainer_class",
+				"trainer_race", "lootid", "pickpocketloot", "skinloot" };
 
-			DataTable dt = executeQuery(query, new MySqlParameter("?entry", entry));
+			string colCombined = "";
+
+			for(var i = 0; i < columns.Length; i++) {
+				colCombined += columns[i];
+				colCombined += (i == columns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dt = executeQuery($"SELECT {colCombined} FROM creature_template WHERE entry = '?entry' ORDER BY entry;", new MySqlParameter("?entry", entry));
 
 			return buildCreature(dt);
+		}
+
+		public Creature getCreatureDefaultValues() {
+			string[] columns = { "entry", "difficulty_entry_1", "difficulty_entry_2", "difficulty_entry_3", "name", "subname", "modelid1", "modelid2", "modelid3", "modelid4",
+				"minlevel", "maxlevel", "mingold", "maxgold", "KillCredit1", "KillCredit2", "rank", "scale", "faction", "npcflag", "spell1", "spell2", "spell3", "spell4", "spell5", "spell6", "spell7", "spell8",
+				"HealthModifier", "ManaModifier", "ArmorModifier", "DamageModifier", "ExperienceModifier", "speed_walk", "speed_run", "BaseAttackTime", "RangeAttackTime", "BaseVariance", "RangeVariance", "dmgschool",
+				"AIName", "MovementType", "InhabitType", "HoverHeight", "gossip_menu_id", "movementId", "ScriptName", "VehicleId", "mechanic_immune_mask", "family", "type", "type_flags", "flags_extra", "unit_class",
+				"unit_flags", "unit_flags2", "dynamicflags", "RegenHealth", "resistance1", "resistance2", "resistance3", "resistance4", "resistance5", "resistance6", "trainer_type", "trainer_spell", "trainer_class",
+				"trainer_race", "lootid", "pickpocketloot", "skinloot" };
+
+			string colCombined = "";
+
+			for(var i = 0; i < columns.Length; i++) {
+				colCombined += $"DEFAULT({columns[i]})";
+				colCombined += (i == columns.Length - 1 ? "" : ", ");
+			}
+
+			Console.WriteLine($"SELECT {colCombined} FROM creature_template LIMIT 1");
+
+			DataTable dt = executeQuery($"SELECT {colCombined} FROM creature_template LIMIT 1;");
+
+			return buildCreatureDefaultValues(dt);
 		}
 
 		public CreatureLocation[] getCreatureLocation(uint entry) {
@@ -218,6 +246,84 @@ namespace Manti.Classes.Database {
 			return c;
 		}
 
+		public Creature buildCreatureDefaultValues(DataTable dt) {
+			Creature c = new Creature();
+
+			c.entry              = Convert.ToUInt32(dt.Rows[0]["DEFAULT(entry)"]);
+			c.diffEntry1         = Convert.ToUInt32(dt.Rows[0]["DEFAULT(difficulty_entry_1)"]);
+			c.diffEntry2         = Convert.ToUInt32(dt.Rows[0]["DEFAULT(difficulty_entry_2)"]);
+			c.diffEntry3         = Convert.ToUInt32(dt.Rows[0]["DEFAULT(difficulty_entry_3)"]);
+			c.name               = dt.Rows[0]["DEFAULT(name)"].ToString();
+			c.subname            = dt.Rows[0]["DEFAULT(subname)"].ToString();
+			c.modelId1           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(modelid1)"]);
+			c.modelId2           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(modelid2)"]);
+			c.modelId3           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(modelid3)"]);
+			c.modelId4           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(modelid4)"]);
+			c.minlevel           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(minlevel)"]);
+			c.maxlevel           = Convert.ToUInt32(dt.Rows[0]["DEFAULT(maxlevel)"]);
+			c.mingold            = Convert.ToUInt32(dt.Rows[0]["DEFAULT(mingold)"]);
+			c.maxgold            = Convert.ToUInt32(dt.Rows[0]["DEFAULT(maxgold)"]);
+			c.killCredit1        = Convert.ToInt32(dt.Rows[0]["DEFAULT(KillCredit1)"]);
+			c.killCredit2        = Convert.ToInt32(dt.Rows[0]["DEFAULT(KillCredit2)"]);
+			c.rank               = Convert.ToUInt32(dt.Rows[0]["DEFAULT(rank)"]);
+			c.scale              = Convert.ToSingle(dt.Rows[0]["DEFAULT(scale)"]);
+			c.faction            = Convert.ToInt32(dt.Rows[0]["DEFAULT(faction)"]);
+			c.npcFlags           = Convert.ToInt32(dt.Rows[0]["DEFAULT(npcflag)"]);
+			c.spell1             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell1)"]);
+			c.spell2             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell2)"]);
+			c.spell3             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell3)"]);
+			c.spell4             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell4)"]);
+			c.spell5             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell5)"]);
+			c.spell6             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell6)"]);
+			c.spell7             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell7)"]);
+			c.spell8             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spell8)"]);
+			c.modHealth          = Convert.ToSingle(dt.Rows[0]["DEFAULT(HealthModifier)"]);
+			c.modMana            = Convert.ToSingle(dt.Rows[0]["DEFAULT(ManaModifier)"]);
+			c.modArmor           = Convert.ToSingle(dt.Rows[0]["DEFAULT(ArmorModifier)"]);
+			c.modDamage          = Convert.ToSingle(dt.Rows[0]["DEFAULT(DamageModifier)"]);
+			c.modExp             = Convert.ToSingle(dt.Rows[0]["DEFAULT(ExperienceModifier)"]);
+			c.speedWalk          = Convert.ToSingle(dt.Rows[0]["DEFAULT(speed_walk)"]);
+			c.speedRun           = Convert.ToSingle(dt.Rows[0]["DEFAULT(speed_run)"]);
+			c.baseAttackTime     = Convert.ToSingle(dt.Rows[0]["DEFAULT(BaseAttackTime)"]);
+			c.rangedAttackTime   = Convert.ToSingle(dt.Rows[0]["DEFAULT(RangeAttackTime)"]);
+			c.bVariance          = Convert.ToSingle(dt.Rows[0]["DEFAULT(BaseVariance)"]);
+			c.rVariance          = Convert.ToSingle(dt.Rows[0]["DEFAULT(RangeVariance)"]);
+			c.dSchool            = Convert.ToByte(dt.Rows[0]["DEFAULT(dmgschool)"]);
+			c.aiName             = dt.Rows[0]["DEFAULT(AIName)"].ToString();
+			c.movementType       = Convert.ToInt32(dt.Rows[0]["DEFAULT(MovementType)"]);
+			c.inhabitType        = Convert.ToInt32(dt.Rows[0]["DEFAULT(InhabitType)"]);
+			c.hoverHeight        = Convert.ToUInt32(dt.Rows[0]["DEFAULT(HoverHeight)"]);
+			c.gossipMenuId       = Convert.ToUInt32(dt.Rows[0]["DEFAULT(gossip_menu_id)"]);
+			c.movementId         = Convert.ToUInt32(dt.Rows[0]["DEFAULT(movementId)"]);
+			c.scriptName         = dt.Rows[0]["DEFAULT(ScriptName)"].ToString();
+			c.vehicleId          = Convert.ToUInt32(dt.Rows[0]["DEFAULT(VehicleId)"]);
+			c.mechanicImmuneMask = Convert.ToInt32(dt.Rows[0]["DEFAULT(mechanic_immune_mask)"]);
+			c.family             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(family)"]);
+			c.familyType         = Convert.ToUInt32(dt.Rows[0]["DEFAULT(type)"]);
+			c.typeFlags          = Convert.ToInt32(dt.Rows[0]["DEFAULT(type_flags)"]);
+			c.extraFlags         = Convert.ToInt32(dt.Rows[0]["DEFAULT(flags_extra)"]);
+			c.unitClass          = Convert.ToUInt32(dt.Rows[0]["DEFAULT(unit_class)"]);
+			c.unitFlags1         = Convert.ToInt32(dt.Rows[0]["DEFAULT(unit_flags)"]);
+			c.unitFlags2         = Convert.ToInt32(dt.Rows[0]["DEFAULT(unit_flags2)"]);
+			c.dynamicFlags       = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dynamicflags)"]);
+			c.isRegenHealth      = Convert.ToBoolean(dt.Rows[0]["DEFAULT(RegenHealth)"]);
+			c.resistHoly         = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance1)"]);
+			c.resistFire         = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance2)"]);
+			c.resistNature       = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance3)"]);
+			c.resistFrost        = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance4)"]);
+			c.resistShadow       = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance5)"]);
+			c.resistArcane       = Convert.ToInt32(dt.Rows[0]["DEFAULT(resistance6)"]);
+			c.trainerType        = Convert.ToInt32(dt.Rows[0]["DEFAULT(trainer_type)"]);
+			c.trainerSpell       = Convert.ToInt32(dt.Rows[0]["DEFAULT(trainer_spell)"]);
+			c.trainerClass       = Convert.ToInt32(dt.Rows[0]["DEFAULT(trainer_class)"]);
+			c.trainerRace        = Convert.ToInt32(dt.Rows[0]["DEFAULT(trainer_race)"]);
+			c.lootId             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(lootid)"]);
+			c.pickpocketId       = Convert.ToUInt32(dt.Rows[0]["DEFAULT(pickpocketloot)"]);
+			c.skinId             = Convert.ToUInt32(dt.Rows[0]["DEFAULT(skinloot)"]);
+
+			return c;
+		}
+
 		public CreatureLocation[] buildCreatureLocation(DataTable dt) {
 			if(dt != null) {
 				CreatureLocation[] cl = new CreatureLocation[dt.Rows.Count];
@@ -329,13 +435,61 @@ namespace Manti.Classes.Database {
 		}
 
 		public Quest getQuest(uint id) {
-			Quest quest = new Quest();
+			string[] questColumns = { "id", "logtitle", "logdescription", "questdescription", "areadescription", "questcompletionlog", "objectivetext1", "objectivetext2", "objectivetext3", "objectivetext4", "requiredplayerkills", "timeallowed", "questinfoid", "questlevel",
+				"suggestedgroupnum", "allowableraces", "minlevel", "requiredfactionid1", "requiredfactionid2", "requiredfactionvalue1", "requiredfactionvalue2", "questsortid", "questtype", "flags", "startitem", "requirednpcorgo1", "requirednpcorgo2", "requirednpcorgo3", "requirednpcorgo4",
+				"requirednpcorgocount1", "requirednpcorgocount2", "requirednpcorgocount3", "requirednpcorgocount4", "requireditemid1", "requireditemid2", "requireditemid3", "requireditemid4", "requireditemid5", "requireditemid6",
+				"requireditemcount1", "requireditemcount2", "requireditemcount3", "requireditemcount4", "requireditemcount5", "requireditemcount6", "rewardchoiceitemid1", "rewardchoiceitemid2", "rewardchoiceitemid3", "rewardchoiceitemid4", "rewardchoiceitemid5", "rewardchoiceitemid6",
+				"rewardchoiceitemquantity1", "rewardchoiceitemquantity2", "rewardchoiceitemquantity3", "rewardchoiceitemquantity4", "rewardchoiceitemquantity5", "rewardchoiceitemquantity6", "rewarditem1", "rewarditem2", "rewarditem3", "rewarditem4", "rewardamount1", "rewardamount2", "rewardamount3", "rewardamount4",
+				"rewardfactionid1", "rewardfactionid2", "rewardfactionid3", "rewardfactionid4", "rewardfactionid5", "rewardfactionvalue1", "rewardfactionvalue2", "rewardfactionvalue3", "rewardfactionvalue4", "rewardfactionvalue5",
+				"rewardmoney", "rewardbonusmoney", "rewardarenapoints", "rewardHonor", "rewardkillhonor", "rewardtitle", "rewardtalents", "rewardspell" };
 
-			DataTable dtQuest = executeQuery("SELECT * FROM quest_template WHERE id = '?value' ORDER BY id;", new MySqlParameter("?value", id));
-			DataTable dtQuestAddon = executeQuery("SELECT exclusivegroup, rewardmailtemplateid, rewardmaildelay, prevquestid, nextquestid, allowableclasses, maxlevel, requiredminrepfaction, requiredmaxrepfaction, requiredminrepvalue, requiredmaxrepvalue, " +
-				"requiredskillid, requiredskillpoints, specialflags, provideditemcount, sourcespellid FROM quest_template_addon WHERE id = '?value' ORDER BY id;", new MySqlParameter("?value", id));
+			string[] addonColumns = { "exclusivegroup", "prevquestid", "nextquestid", "allowableclasses", "maxlevel", "requiredminrepfaction", "requiredmaxrepfaction", "requiredminrepvalue", "requiredmaxrepvalue", "requiredskillid", "requiredskillpoints", "specialflags", "provideditemcount", "sourcespellid", "rewardmailtemplateid", "rewardmaildelay" };
+
+			string questCombined = "", addonCombined = "";
+
+			for(var i = 0; i < questColumns.Length; i++) {
+				questCombined += questColumns[i];
+				questCombined += (i == questColumns.Length - 1 ? "" : ", ");
+			}
+
+			for(var i = 0; i < addonColumns.Length; i++) {
+				addonCombined += addonColumns[i];
+				addonCombined += (i == addonColumns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dtQuest = executeQuery($"SELECT {questCombined} FROM quest_template WHERE id = '?value' ORDER BY id;", new MySqlParameter("?value", id));
+			DataTable dtQuestAddon = executeQuery($"SELECT {addonCombined} FROM quest_template_addon WHERE id = '?value' ORDER BY id;", new MySqlParameter("?value", id));
 
 			return buildQuest(dtQuest, dtQuestAddon);
+		}
+
+		public Quest getQuestDefaultValues() {
+			string[] tempColumns = { "id", "logtitle", "logdescription", "questdescription", "areadescription", "questcompletionlog", "objectivetext1", "objectivetext2", "objectivetext3", "objectivetext4", "requiredplayerkills", "timeallowed", "questinfoid", "questlevel",
+				"suggestedgroupnum", "allowableraces", "minlevel", "requiredfactionid1", "requiredfactionid2", "requiredfactionvalue1", "requiredfactionvalue2", "questsortid", "questtype", "flags", "startitem", "requirednpcorgo1", "requirednpcorgo2", "requirednpcorgo3", "requirednpcorgo4",
+				"requirednpcorgocount1", "requirednpcorgocount2", "requirednpcorgocount3", "requirednpcorgocount4", "requireditemid1", "requireditemid2", "requireditemid3", "requireditemid4", "requireditemid5", "requireditemid6",
+				"requireditemcount1", "requireditemcount2", "requireditemcount3", "requireditemcount4", "requireditemcount5", "requireditemcount6", "rewardchoiceitemid1", "rewardchoiceitemid2", "rewardchoiceitemid3", "rewardchoiceitemid4", "rewardchoiceitemid5", "rewardchoiceitemid6",
+				"rewardchoiceitemquantity1", "rewardchoiceitemquantity2", "rewardchoiceitemquantity3", "rewardchoiceitemquantity4", "rewardchoiceitemquantity5", "rewardchoiceitemquantity6", "rewarditem1", "rewarditem2", "rewarditem3", "rewarditem4", "rewardamount1", "rewardamount2", "rewardamount3", "rewardamount4",
+				"rewardfactionid1", "rewardfactionid2", "rewardfactionid3", "rewardfactionid4", "rewardfactionid5", "rewardfactionvalue1", "rewardfactionvalue2", "rewardfactionvalue3", "rewardfactionvalue4", "rewardfactionvalue5",
+				"rewardmoney", "rewardbonusmoney", "rewardarenapoints", "rewardHonor", "rewardkillhonor", "rewardtitle", "rewardtalents", "rewardspell" };
+
+			string[] addonColumns = { "exclusivegroup", "prevquestid", "nextquestid", "allowableclasses", "maxlevel", "requiredminrepfaction", "requiredmaxrepfaction", "requiredminrepvalue", "requiredmaxrepvalue", "requiredskillid", "requiredskillpoints", "specialflags", "provideditemcount", "sourcespellid", "rewardmailtemplateid", "rewardmaildelay" };
+
+			string tempCombined = "", addonCombined = "";
+
+			for(var i = 0; i < tempColumns.Length; i++) {
+				tempCombined += $"DEFAULT({tempColumns[i]})";
+				tempCombined += (i == tempColumns.Length - 1 ? "" : ", ");
+			}
+
+			for(var i = 0; i < addonColumns.Length; i++) {
+				addonCombined += $"DEFAULT({addonColumns[i]})";
+				addonCombined += (i == addonColumns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dtQuest = executeQuery($"SELECT {tempCombined} FROM quest_template LIMIT 1;");
+			DataTable dtQuestAddon = executeQuery($"SELECT {addonCombined} FROM quest_template_addon LIMIT 1;");
+
+			return buildQuestDefaultValues(dtQuest, dtQuestAddon);
 		}
 
 		public QuestGT[] getQuestGT(uint id, bool isGiver) {
@@ -368,30 +522,16 @@ namespace Manti.Classes.Database {
 			q.questInfo                       = Convert.ToInt32(dtQuest.Rows[0]["questinfoid"]);
 			q.questLevel                      = Convert.ToInt32(dtQuest.Rows[0]["questlevel"]);
 			q.suggestedPlayers                = Convert.ToInt32(dtQuest.Rows[0]["suggestedgroupnum"]);
-			q.exclusiveGroup                  = Convert.ToInt32(dtQuestAddon.Rows[0]["exclusivegroup"]);
-			q.prevQuest                       = Convert.ToInt32(dtQuestAddon.Rows[0]["prevquestid"]);
-			q.nextQuest                       = Convert.ToInt32(dtQuestAddon.Rows[0]["nextquestid"]);
 			q.races                           = Convert.ToInt32(dtQuest.Rows[0]["allowableraces"]);
-			q.classes                         = Convert.ToInt32(dtQuestAddon.Rows[0]["allowableclasses"]);
 			q.minLevel                        = Convert.ToInt32(dtQuest.Rows[0]["minlevel"]);
-			q.maxLevel                        = Convert.ToInt32(dtQuestAddon.Rows[0]["maxlevel"]);
 			q.reqFaction1                     = Convert.ToInt32(dtQuest.Rows[0]["requiredfactionid1"]);
 			q.reqFaction2                     = Convert.ToInt32(dtQuest.Rows[0]["requiredfactionid2"]);
 			q.reqValue1                       = Convert.ToInt32(dtQuest.Rows[0]["requiredfactionvalue1"]);
 			q.reqValue2                       = Convert.ToInt32(dtQuest.Rows[0]["requiredfactionvalue2"]);
-			q.minRepFaction                   = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredminrepfaction"]);
-			q.maxRepFaction                   = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredmaxrepfaction"]);
-			q.minRepValue                     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredminrepvalue"]);
-			q.maxRepValue                     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredmaxrepvalue"]);
 			q.zoneIdOrQuestSort               = Convert.ToInt32(dtQuest.Rows[0]["questsortid"]);
-			q.skillId                         = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredskillid"]);
-			q.skillPoints                     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredskillpoints"]);
 			q.type                            = Convert.ToInt32(dtQuest.Rows[0]["questtype"]);
 			q.flags                           = Convert.ToInt32(dtQuest.Rows[0]["flags"]);
-			q.specialFlags                    = Convert.ToInt32(dtQuestAddon.Rows[0]["specialflags"]);
 			q.sourceItemId                    = Convert.ToInt32(dtQuest.Rows[0]["startitem"]);
-			q.sourceItemCount                 = Convert.ToInt32(dtQuestAddon.Rows[0]["provideditemcount"]);
-			q.sourceSpellId                   = Convert.ToInt32(dtQuestAddon.Rows[0]["sourcespellid"]);
 			q.requiredNpcOrGoId1              = Convert.ToUInt32(dtQuest.Rows[0]["requirednpcorgo1"]);
 			q.requiredNpcOrGoId2              = Convert.ToUInt32(dtQuest.Rows[0]["requirednpcorgo2"]);
 			q.requiredNpcOrGoId3              = Convert.ToUInt32(dtQuest.Rows[0]["requirednpcorgo3"]);
@@ -449,9 +589,133 @@ namespace Manti.Classes.Database {
 			q.rewardOrRequiredHonorMultiplier = Convert.ToInt32(dtQuest.Rows[0]["rewardkillhonor"]);
 			q.rewardTitleId                   = Convert.ToUInt32(dtQuest.Rows[0]["rewardtitle"]);
 			q.rewardTalent                    = Convert.ToUInt32(dtQuest.Rows[0]["rewardtalents"]);
-			q.mailTemplateId                  = Convert.ToUInt32(dtQuestAddon.Rows[0]["rewardmailtemplateid"]);
-			q.mailDelay                       = Convert.ToUInt32(dtQuestAddon.Rows[0]["rewardmaildelay"]);
 			q.rewardSpell                     = Convert.ToUInt32(dtQuest.Rows[0]["rewardspell"]);
+
+			if(dtQuestAddon != null) {
+				q.exclusiveGroup  = Convert.ToInt32(dtQuestAddon.Rows[0]["exclusivegroup"]);
+				q.prevQuest       = Convert.ToInt32(dtQuestAddon.Rows[0]["prevquestid"]);
+				q.nextQuest       = Convert.ToInt32(dtQuestAddon.Rows[0]["nextquestid"]);
+				q.maxLevel        = Convert.ToInt32(dtQuestAddon.Rows[0]["maxlevel"]);
+				q.classes         = Convert.ToInt32(dtQuestAddon.Rows[0]["allowableclasses"]);
+				q.minRepFaction   = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredminrepfaction"]);
+				q.maxRepFaction   = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredmaxrepfaction"]);
+				q.minRepValue     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredminrepvalue"]);
+				q.maxRepValue     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredmaxrepvalue"]);
+				q.skillId         = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredskillid"]);
+				q.skillPoints     = Convert.ToInt32(dtQuestAddon.Rows[0]["requiredskillpoints"]);
+				q.specialFlags    = Convert.ToInt32(dtQuestAddon.Rows[0]["specialflags"]);
+				q.sourceItemCount = Convert.ToInt32(dtQuestAddon.Rows[0]["provideditemcount"]);
+				q.sourceSpellId   = Convert.ToInt32(dtQuestAddon.Rows[0]["sourcespellid"]);
+				q.mailTemplateId  = Convert.ToUInt32(dtQuestAddon.Rows[0]["rewardmailtemplateid"]);
+				q.mailDelay       = Convert.ToUInt32(dtQuestAddon.Rows[0]["rewardmaildelay"]);
+			}
+
+			return q;
+		}
+
+		public Quest buildQuestDefaultValues(DataTable dtQuest, DataTable dtQuestAddon) {
+			Quest q = new Quest();
+
+			q.id                              = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(id)"]);
+			q.title                           = dtQuest.Rows[0]["DEFAULT(logtitle)"].ToString();
+			q.logDescription                  = dtQuest.Rows[0]["DEFAULT(logdescription)"].ToString();
+			q.questDescription                = dtQuest.Rows[0]["DEFAULT(questdescription)"].ToString();
+			q.area                            = dtQuest.Rows[0]["DEFAULT(areadescription)"].ToString();
+			q.completed                       = dtQuest.Rows[0]["DEFAULT(questcompletionlog)"].ToString();
+			q.objective1                      = dtQuest.Rows[0]["DEFAULT(objectivetext1)"].ToString();
+			q.objective2                      = dtQuest.Rows[0]["DEFAULT(objectivetext2)"].ToString();
+			q.objective3                      = dtQuest.Rows[0]["DEFAULT(objectivetext3)"].ToString();
+			q.objective4                      = dtQuest.Rows[0]["DEFAULT(objectivetext4)"].ToString();
+			q.requirePlayerKills              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requiredplayerkills)"]);
+			q.timeAllowed                     = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(timeallowed)"]);
+			q.questInfo                       = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(questinfoid)"]);
+			q.questLevel                      = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(questlevel)"]);
+			q.suggestedPlayers                = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(suggestedgroupnum)"]);
+			q.races                           = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(allowableraces)"]);
+			q.minLevel                        = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(minlevel)"]);
+			q.reqFaction1                     = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requiredfactionid1)"]);
+			q.reqFaction2                     = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requiredfactionid2)"]);
+			q.reqValue1                       = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requiredfactionvalue1)"]);
+			q.reqValue2                       = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requiredfactionvalue2)"]);
+			q.zoneIdOrQuestSort               = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(questsortid)"]);
+			q.type                            = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(questtype)"]);
+			q.flags                           = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(flags)"]);
+			q.sourceItemId                    = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(startitem)"]);
+			q.requiredNpcOrGoId1              = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgo1)"]);
+			q.requiredNpcOrGoId2              = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgo2)"]);
+			q.requiredNpcOrGoId3              = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgo3)"]);
+			q.requiredNpcOrGoId4              = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgo4)"]);
+			q.requiredNpcCount1               = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgocount1)"]);
+			q.requiredNpcCount2               = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgocount2)"]);
+			q.requiredNpcCount3               = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgocount3)"]);
+			q.requiredNpcCount4               = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requirednpcorgocount4)"]);
+			q.requiredItemId1                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid1)"]);
+			q.requiredItemId2                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid2)"]);
+			q.requiredItemId3                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid3)"]);
+			q.requiredItemId4                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid4)"]);
+			q.requiredItemId5                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid5)"]);
+			q.requiredItemId6                 = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(requireditemid6)"]);
+			q.requiredItemCount1              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount1)"]);
+			q.requiredItemCount2              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount2)"]);
+			q.requiredItemCount3              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount3)"]);
+			q.requiredItemCount4              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount4)"]);
+			q.requiredItemCount5              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount5)"]);
+			q.requiredItemCount6              = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(requireditemcount6)"]);
+			q.rewardChoiceItemId1             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid1)"]);
+			q.rewardChoiceItemId2             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid2)"]);
+			q.rewardChoiceItemId3             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid3)"]);
+			q.rewardChoiceItemId4             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid4)"]);
+			q.rewardChoiceItemId5             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid5)"]);
+			q.rewardChoiceItemId6             = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemid6)"]);
+			q.rewardChoiceItemCount1          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity1)"]);
+			q.rewardChoiceItemCount2          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity2)"]);
+			q.rewardChoiceItemCount3          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity3)"]);
+			q.rewardChoiceItemCount4          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity4)"]);
+			q.rewardChoiceItemCount5          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity5)"]);
+			q.rewardChoiceItemCount6          = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardchoiceitemquantity6)"]);
+			q.rewardItemId1                   = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewarditem1)"]);
+			q.rewardItemId2                   = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewarditem2)"]);
+			q.rewardItemId3                   = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewarditem3)"]);
+			q.rewardItemId4                   = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewarditem4)"]);
+			q.rewardItemCount1                = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardamount1)"]);
+			q.rewardItemCount2                = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardamount2)"]);
+			q.rewardItemCount3                = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardamount3)"]);
+			q.rewardItemCount4                = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardamount4)"]);
+			q.rewardFactionId1                = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionid1)"]);
+			q.rewardFactionId2                = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionid2)"]);
+			q.rewardFactionId3                = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionid3)"]);
+			q.rewardFactionId4                = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionid4)"]);
+			q.rewardFactionId5                = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionid5)"]);
+			q.rewardFactionValue1             = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionvalue1)"]);
+			q.rewardFactionValue2             = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionvalue2)"]);
+			q.rewardFactionValue3             = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionvalue3)"]);
+			q.rewardFactionValue4             = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionvalue4)"]);
+			q.rewardFactionValue5             = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardfactionvalue5)"]);
+			q.rewardOrRequiredMoney           = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardmoney)"]);
+			q.rewardOrRequiredMoneyML         = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardbonusmoney)"]);
+			q.rewardOrRequiredArenaPoints     = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardarenapoints)"]);
+			q.rewardOrRequiredHonorPoints     = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardHonor)"]);
+			q.rewardOrRequiredHonorMultiplier = Convert.ToInt32(dtQuest.Rows[0]["DEFAULT(rewardkillhonor)"]);
+			q.rewardTitleId                   = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardtitle)"]);
+			q.rewardTalent                    = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardtalents)"]);
+			q.rewardSpell                     = Convert.ToUInt32(dtQuest.Rows[0]["DEFAULT(rewardspell)"]);
+
+			q.exclusiveGroup                  = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(exclusivegroup)"]);
+			q.prevQuest                       = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(prevquestid)"]);
+			q.nextQuest                       = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(nextquestid)"]);
+			q.maxLevel                        = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(maxlevel)"]);
+			q.classes                         = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(allowableclasses)"]);
+			q.minRepFaction                   = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredminrepfaction)"]);
+			q.maxRepFaction                   = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredmaxrepfaction)"]);
+			q.minRepValue                     = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredminrepvalue)"]);
+			q.maxRepValue                     = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredmaxrepvalue)"]);
+			q.skillId                         = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredskillid)"]);
+			q.skillPoints                     = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(requiredskillpoints)"]);
+			q.specialFlags                    = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(specialflags)"]);
+			q.sourceItemCount                 = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(provideditemcount)"]);
+			q.sourceSpellId                   = Convert.ToInt32(dtQuestAddon.Rows[0]["DEFAULT(sourcespellid)"]);
+			q.mailTemplateId                  = Convert.ToUInt32(dtQuestAddon.Rows[0]["DEFAULT(rewardmailtemplateid)"]);
+			q.mailDelay                       = Convert.ToUInt32(dtQuestAddon.Rows[0]["DEFAULT(rewardmaildelay)"]);
 
 			return q;
 		}
@@ -491,13 +755,51 @@ namespace Manti.Classes.Database {
 		}
 
 		public GameObject getGameObject(uint entry) {
-			DataTable dtTemp = executeQuery("SELECT entry, type, displayid, name, size, ainame, scriptname, " +
-				"data0, data1, data2, data3, data4, data5, data6, data7, data8, data9, data10, data11, data12, data13, data14, data15, data16, data17, data18, data19, data20, data21, data22, data23 " +
-				"FROM gameobject_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
+			string[] GoColumns = { "entry", "type", "displayid", "name", "size", "ainame", "scriptname", "data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10",
+				"data11", "data12", "data13", "data14", "data15", "data16", "data17", "data18", "data19", "data20", "data21", "data22", "data23" };
 
-			DataTable dtAddon = executeQuery("SELECT faction, flags FROM gameobject_template_addon WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
+			string[] addonColumns = { "faction", "flags" };
+
+			string goCombined = "", addonCombined = "";
+
+			for(var i = 0; i < GoColumns.Length; i++) {
+				goCombined += GoColumns[i];
+				goCombined += (i == GoColumns.Length - 1 ? "" : ", ");
+			}
+
+			for(var i = 0; i < addonColumns.Length; i++) {
+				addonCombined += addonColumns[i];
+				addonCombined += (i == addonColumns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dtTemp = executeQuery($"SELECT {goCombined} FROM gameobject_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
+			DataTable dtAddon = executeQuery($"SELECT {addonCombined} FROM gameobject_template_addon WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
 
 			return buildGameObject(dtTemp, dtAddon);
+		}
+
+		public GameObject getGameObjectDefaultValues() {
+			string[] GoColumns = { "entry", "type", "displayid", "name", "size", "ainame", "scriptname", "data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10",
+				"data11", "data12", "data13", "data14", "data15", "data16", "data17", "data18", "data19", "data20", "data21", "data22", "data23" };
+
+			string[] addonColumns = { "faction", "flags" };
+
+			string goCombined = "", addonCombined = "";
+
+			for(var i = 0; i < GoColumns.Length; i++) {
+				goCombined += $"DEFAULT({GoColumns[i]})";
+				goCombined += (i == GoColumns.Length - 1 ? "" : ", ");
+			}
+
+			for(var i = 0; i < addonColumns.Length; i++) {
+				addonCombined += $"DEFAULT({addonColumns[i]})";
+				addonCombined += (i == addonColumns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dtTemp = executeQuery($"SELECT {goCombined} FROM gameobject_template LIMIT 1;");
+			DataTable dtAddon = executeQuery($"SELECT {addonCombined} FROM gameobject_template_addon LIMIT 1;");
+
+			return buildGameObjectDefaultValues(dtTemp, dtAddon);
 		}
 
 		public GameObject buildGameObject(DataTable dt, DataTable dtAddon) {
@@ -507,6 +809,8 @@ namespace Manti.Classes.Database {
 			go.type       = Convert.ToUInt32(dt.Rows[0]["type"]);
 			go.displayId  = Convert.ToUInt32(dt.Rows[0]["displayid"]);
 			go.name       = dt.Rows[0]["name"].ToString();
+			go.faction    = Convert.ToUInt32(dtAddon.Rows[0]["faction"]);
+			go.flags      = Convert.ToInt32(dtAddon.Rows[0]["flags"]);
 			go.size       = Convert.ToSingle(dt.Rows[0]["size"]);
 			go.aiName     = dt.Rows[0]["ainame"].ToString();
 			go.scriptName = dt.Rows[0]["scriptname"].ToString();
@@ -534,6 +838,46 @@ namespace Manti.Classes.Database {
 			go.data21     = Convert.ToInt32(dt.Rows[0]["data21"]);
 			go.data22     = Convert.ToInt32(dt.Rows[0]["data22"]);
 			go.data23     = Convert.ToInt32(dt.Rows[0]["data23"]);
+
+			return go;
+		}
+
+		public GameObject buildGameObjectDefaultValues(DataTable dt, DataTable dtAddon) {
+			GameObject go = new GameObject();
+
+			go.entry      = Convert.ToUInt32(dt.Rows[0]["DEFAULT(entry)"]);
+			go.type       = Convert.ToUInt32(dt.Rows[0]["DEFAULT(type)"]);
+			go.displayId  = Convert.ToUInt32(dt.Rows[0]["DEFAULT(displayid)"]);
+			go.name       = dt.Rows[0]["DEFAULT(name)"].ToString();
+			go.faction    = Convert.ToUInt32(dtAddon.Rows[0]["DEFAULT(faction)"]);
+			go.flags      = Convert.ToInt32(dtAddon.Rows[0]["DEFAULT(flags)"]);
+			go.size       = Convert.ToSingle(dt.Rows[0]["DEFAULT(size)"]);
+			go.aiName     = dt.Rows[0]["DEFAULT(ainame)"].ToString();
+			go.scriptName = dt.Rows[0]["DEFAULT(scriptname)"].ToString();
+			go.data0      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data0)"]);
+			go.data1      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data1)"]);
+			go.data2      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data2)"]);
+			go.data3      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data3)"]);
+			go.data4      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data4)"]);
+			go.data5      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data5)"]);
+			go.data6      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data6)"]);
+			go.data7      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data7)"]);
+			go.data8      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data8)"]);
+			go.data9      = Convert.ToInt32(dt.Rows[0]["DEFAULT(data9)"]);
+			go.data10     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data10)"]);
+			go.data11     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data11)"]);
+			go.data12     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data12)"]);
+			go.data13     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data13)"]);
+			go.data14     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data14)"]);
+			go.data15     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data15)"]);
+			go.data16     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data16)"]);
+			go.data17     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data17)"]);
+			go.data18     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data18)"]);
+			go.data19     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data19)"]);
+			go.data20     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data20)"]);
+			go.data21     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data21)"]);
+			go.data22     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data22)"]);
+			go.data23     = Convert.ToInt32(dt.Rows[0]["DEFAULT(data23)"]);
 
 			return go;
 		}
@@ -580,6 +924,28 @@ namespace Manti.Classes.Database {
 			DataTable dt = executeQuery("SELECT * FROM item_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
 
 			return buildItem(dt);
+		}
+
+		public Item getItemDefaultValues() {
+			string[] columns = { "entry", "class", "subclass", "name", "description", "displayid", "Quality", "BuyCount", "InventoryType", "Flags", "FlagsExtra", "maxcount", "ContainerSlots", "BuyPrice", "SellPrice",
+					"dmg_type1", "dmg_type2", "dmg_min1", "dmg_min2", "dmg_max1", "dmg_max2", "delay", "ammo_type", "RangedModRange", "itemset", "bonding", "block", "MaxDurability", "sheath", "holy_res", "frost_res", "fire_res", "shadow_res", "nature_res", "arcane_res",
+					"socketColor_1", "socketColor_2", "socketColor_3", "socketContent_1", "socketContent_2", "socketContent_3", "socketBonus", "GemProperties", "spellid_1", "spellid_2", "spellid_3", "spellid_4", "spellid_5", "spelltrigger_1", "spelltrigger_2", "spelltrigger_3", "spelltrigger_4", "spelltrigger_5",
+					"spellcharges_1", "spellcharges_2", "spellcharges_3", "spellcharges_4", "spellcharges_5", "spellppmRate_1", "spellppmRate_2", "spellppmRate_3", "spellppmRate_4", "spellppmRate_5", "spellcooldown_1", "spellcooldown_2", "spellcooldown_3", "spellcooldown_4", "spellcooldown_5",
+					"spellcategory_1", "spellcategory_2", "spellcategory_3", "spellcategory_4", "spellcategory_5", "spellcategorycooldown_1", "spellcategorycooldown_2", "spellcategorycooldown_3", "spellcategorycooldown_4", "spellcategorycooldown_5", "startquest", "material", "randomproperty", "randomsuffix", "area", "map",
+					"disenchantid", "pagetext", "languageid", "pagematerial", "foodtype", "lockid", "holidayid", "BagFamily", "ArmorDamageModifier", "duration", "ItemLimitCategory", "minMoneyLoot", "maxMoneyLoot", "flagscustom", "TotemCategory", "AllowableRace", "AllowableClass", "ItemLevel",
+					"RequiredLevel", "RequiredSkill", "RequiredSkillRank", "requiredspell", "requiredhonorrank", "RequiredCityRank", "RequiredReputationFaction", "RequiredReputationRank", "RequiredDisenchantSkill", "StatsCount", "stat_type1", "stat_type2", "stat_type3", "stat_type4", "stat_type5",
+					"stat_type6", "stat_type7", "stat_type8", "stat_type9", "stat_type10", "stat_value1", "stat_value2", "stat_value3", "stat_value4", "stat_value5", "stat_value6", "stat_value7", "stat_value8", "stat_value9", "stat_value10", "ScalingStatDistribution", "ScalingStatValue" };
+
+			string colCombined = "";
+
+			for(var i = 0; i < columns.Length; i++) {
+				colCombined += $"DEFAULT({columns[i]})";
+				colCombined += (i == columns.Length - 1 ? "" : ", ");
+			}
+
+			DataTable dt = executeQuery($"SELECT {colCombined} FROM item_template LIMIT 1;");
+
+			return buildItemDefaultValues(dt);
 		}
 
 		public ItemLPMD[] getItemLPMD(uint entry, LPMD type) {
@@ -746,6 +1112,151 @@ namespace Manti.Classes.Database {
 				item.statsValue10           = Convert.ToInt32(dt.Rows[0]["stat_value10"]);
 				item.scalingStatDist        = Convert.ToInt32(dt.Rows[0]["ScalingStatDistribution"]);
 				item.scalingStatValue       = Convert.ToInt32(dt.Rows[0]["ScalingStatValue"]);
+
+				return item;
+			}
+
+			return null;
+		}
+
+		public Item buildItemDefaultValues(DataTable dt) {
+			if(dt != null) {
+				Item item = new Item();
+
+				item.entry = Convert.ToUInt32(dt.Rows[0]["DEFAULT(entry)"]);
+				item.iClass = Convert.ToUInt32(dt.Rows[0]["DEFAULT(class)"]);
+				item.iSub = Convert.ToUInt32(dt.Rows[0]["DEFAULT(subclass)"]);
+				item.name = dt.Rows[0]["DEFAULT(name)"].ToString();
+				item.description = dt.Rows[0]["DEFAULT(description)"].ToString();
+				item.displayId = Convert.ToUInt32(dt.Rows[0]["DEFAULT(displayid)"]);
+				item.quality = Convert.ToUInt32(dt.Rows[0]["DEFAULT(Quality)"]);
+				item.buycount = Convert.ToInt32(dt.Rows[0]["DEFAULT(BuyCount)"]);
+				item.inventory = Convert.ToUInt32(dt.Rows[0]["DEFAULT(InventoryType)"]);
+				item.flags = Convert.ToInt32(dt.Rows[0]["DEFAULT(Flags)"]);
+				item.extraFlags = Convert.ToInt32(dt.Rows[0]["DEFAULT(FlagsExtra)"]);
+				item.maxCount = Convert.ToInt32(dt.Rows[0]["DEFAULT(maxcount)"]);
+				item.containerSlot = Convert.ToUInt32(dt.Rows[0]["DEFAULT(ContainerSlots)"]);
+				item.buyPrice = Convert.ToUInt32(dt.Rows[0]["DEFAULT(BuyPrice)"]);
+				item.sellPrice = Convert.ToUInt32(dt.Rows[0]["DEFAULT(SellPrice)"]);
+				item.damageType1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_type1)"]);
+				item.damageType2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_type2)"]);
+				item.damageMin1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_min1)"]);
+				item.damageMin2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_min2)"]);
+				item.damageMax1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_max1)"]);
+				item.damageMax2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(dmg_max2)"]);
+				item.delay = Convert.ToUInt32(dt.Rows[0]["DEFAULT(delay)"]);
+				item.ammoType = Convert.ToUInt32(dt.Rows[0]["DEFAULT(ammo_type)"]);
+				item.rangedMod = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RangedModRange)"]);
+				item.itemSet = Convert.ToUInt32(dt.Rows[0]["DEFAULT(itemset)"]);
+				item.bonding = Convert.ToUInt32(dt.Rows[0]["DEFAULT(bonding)"]);
+				item.block = Convert.ToInt32(dt.Rows[0]["DEFAULT(block)"]);
+				item.durability = Convert.ToInt32(dt.Rows[0]["DEFAULT(MaxDurability)"]);
+				item.sheath = Convert.ToUInt32(dt.Rows[0]["DEFAULT(sheath)"]);
+				item.reistanceHoly = Convert.ToUInt32(dt.Rows[0]["DEFAULT(holy_res)"]);
+				item.reistanceFrost = Convert.ToUInt32(dt.Rows[0]["DEFAULT(frost_res)"]);
+				item.reistanceFire = Convert.ToUInt32(dt.Rows[0]["DEFAULT(fire_res)"]);
+				item.reistanceShadow = Convert.ToUInt32(dt.Rows[0]["DEFAULT(shadow_res)"]);
+				item.reistanceNature = Convert.ToUInt32(dt.Rows[0]["DEFAULT(nature_res)"]);
+				item.reistanceArcane = Convert.ToUInt32(dt.Rows[0]["DEFAULT(arcane_res)"]);
+				item.socketColor1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketColor_1)"].ToString());
+				item.socketColor2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketColor_2)"].ToString());
+				item.socketColor3 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketColor_3)"].ToString());
+				item.socketContent1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketContent_1)"].ToString());
+				item.socketContent2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketContent_2)"].ToString());
+				item.socketContent3 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketContent_3)"].ToString());
+				item.socketBonus = Convert.ToUInt32(dt.Rows[0]["DEFAULT(socketBonus)"].ToString());
+				item.socketGemProperty = Convert.ToUInt32(dt.Rows[0]["DEFAULT(GemProperties)"].ToString());
+				item.spellEntry1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spellid_1)"]);
+				item.spellEntry2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spellid_2)"]);
+				item.spellEntry3 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spellid_3)"]);
+				item.spellEntry4 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spellid_4)"]);
+				item.spellEntry5 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(spellid_5)"]);
+				item.spellTrigger1 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spelltrigger_1)"]);
+				item.spellTrigger2 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spelltrigger_2)"]);
+				item.spellTrigger3 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spelltrigger_3)"]);
+				item.spellTrigger4 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spelltrigger_4)"]);
+				item.spellTrigger5 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spelltrigger_5)"]);
+				item.spellCharges1 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcharges_1)"]);
+				item.spellCharges2 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcharges_2)"]);
+				item.spellCharges3 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcharges_3)"]);
+				item.spellCharges4 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcharges_4)"]);
+				item.spellCharges5 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcharges_5)"]);
+				item.spellPPMRate1 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellppmRate_1)"]);
+				item.spellPPMRate2 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellppmRate_2)"]);
+				item.spellPPMRate3 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellppmRate_3)"]);
+				item.spellPPMRate4 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellppmRate_4)"]);
+				item.spellPPMRate5 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellppmRate_5)"]);
+				item.spellCooldown1 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcooldown_1)"]);
+				item.spellCooldown2 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcooldown_2)"]);
+				item.spellCooldown3 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcooldown_3)"]);
+				item.spellCooldown4 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcooldown_4)"]);
+				item.spellCooldown5 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcooldown_5)"]);
+				item.spellCategory1 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcategory_1)"]);
+				item.spellCategory2 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcategory_2)"]);
+				item.spellCategory3 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcategory_3)"]);
+				item.spellCategory4 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcategory_4)"]);
+				item.spellCategory5 = Convert.ToInt32(dt.Rows[0]["DEFAULT(spellcategory_5)"]);
+				item.spellCategoryCooldown1 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcategorycooldown_1)"]);
+				item.spellCategoryCooldown2 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcategorycooldown_2)"]);
+				item.spellCategoryCooldown3 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcategorycooldown_3)"]);
+				item.spellCategoryCooldown4 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcategorycooldown_4)"]);
+				item.spellCategoryCooldown5 = Convert.ToSingle(dt.Rows[0]["DEFAULT(spellcategorycooldown_5)"]);
+				item.startQuest = Convert.ToUInt32(dt.Rows[0]["DEFAULT(startquest)"]);
+				item.material = Convert.ToInt32(dt.Rows[0]["DEFAULT(material)"]);
+				item.property = Convert.ToUInt32(dt.Rows[0]["DEFAULT(randomproperty)"]);
+				item.suffix = Convert.ToUInt32(dt.Rows[0]["DEFAULT(randomsuffix)"]);
+				item.area = Convert.ToUInt32(dt.Rows[0]["DEFAULT(area)"]);
+				item.map = Convert.ToUInt32(dt.Rows[0]["DEFAULT(map)"]);
+				item.disenchantId = Convert.ToUInt32(dt.Rows[0]["DEFAULT(disenchantid)"]);
+				item.pageText = Convert.ToUInt32(dt.Rows[0]["DEFAULT(pagetext)"]);
+				item.languageId = Convert.ToUInt32(dt.Rows[0]["DEFAULT(languageid)"]);
+				item.pageMaterial = Convert.ToUInt32(dt.Rows[0]["DEFAULT(pagematerial)"]);
+				item.foodType = Convert.ToUInt32(dt.Rows[0]["DEFAULT(foodtype)"]);
+				item.lockId = Convert.ToUInt32(dt.Rows[0]["DEFAULT(lockid)"]);
+				item.holidayId = Convert.ToUInt32(dt.Rows[0]["DEFAULT(holidayid)"]);
+				item.bagFamily = Convert.ToUInt32(dt.Rows[0]["DEFAULT(BagFamily)"]);
+				item.modifier = Convert.ToUInt32(dt.Rows[0]["DEFAULT(ArmorDamageModifier)"]);
+				item.duration = Convert.ToUInt32(dt.Rows[0]["DEFAULT(duration)"]);
+				item.limitCategory = Convert.ToUInt32(dt.Rows[0]["DEFAULT(ItemLimitCategory)"]);
+				item.minMoney = Convert.ToUInt32(dt.Rows[0]["DEFAULT(minMoneyLoot)"]);
+				item.maxMoney = Convert.ToUInt32(dt.Rows[0]["DEFAULT(maxMoneyLoot)"]);
+				item.flagsCustom = Convert.ToUInt32(dt.Rows[0]["DEFAULT(flagscustom)"]);
+				item.totemCategory = Convert.ToUInt32(dt.Rows[0]["DEFAULT(TotemCategory)"]);
+				item.reqRace = Convert.ToInt32(dt.Rows[0]["DEFAULT(AllowableRace)"]);
+				item.reqClass = Convert.ToInt32(dt.Rows[0]["DEFAULT(AllowableClass)"]);
+				item.reqLevel = Convert.ToUInt32(dt.Rows[0]["DEFAULT(ItemLevel)"]);
+				item.reqSkill = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredLevel)"]);
+				item.reqSkillRank = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredSkill)"]);
+				item.reqHonorRank = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredSkillRank)"]);
+				item.reqRepFaction = Convert.ToUInt32(dt.Rows[0]["DEFAULT(requiredspell)"]);
+				item.reqRepRank = Convert.ToUInt32(dt.Rows[0]["DEFAULT(requiredhonorrank)"]);
+				item.reqDisenchant = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredCityRank)"]);
+				item.reqSpell = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredReputationFaction)"]);
+				item.reqCityRank = Convert.ToUInt32(dt.Rows[0]["DEFAULT(RequiredReputationRank)"]);
+				item.reqItemLevel = Convert.ToInt32(dt.Rows[0]["DEFAULT(RequiredDisenchantSkill)"]);
+				item.statsCount = Convert.ToUInt32(dt.Rows[0]["DEFAULT(StatsCount)"]);
+				item.statsType1 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type1)"]);
+				item.statsType2 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type2)"]);
+				item.statsType3 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type3)"]);
+				item.statsType4 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type4)"]);
+				item.statsType5 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type5)"]);
+				item.statsType6 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type6)"]);
+				item.statsType7 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type7)"]);
+				item.statsType8 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type8)"]);
+				item.statsType9 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type9)"]);
+				item.statsType10 = Convert.ToUInt32(dt.Rows[0]["DEFAULT(stat_type10)"]);
+				item.statsValue1 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value1)"]);
+				item.statsValue2 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value2)"]);
+				item.statsValue3 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value3)"]);
+				item.statsValue4 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value4)"]);
+				item.statsValue5 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value5)"]);
+				item.statsValue6 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value6)"]);
+				item.statsValue7 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value7)"]);
+				item.statsValue8 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value8)"]);
+				item.statsValue9 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value9)"]);
+				item.statsValue10 = Convert.ToInt32(dt.Rows[0]["DEFAULT(stat_value10)"]);
+				item.scalingStatDist = Convert.ToInt32(dt.Rows[0]["DEFAULT(ScalingStatDistribution)"]);
+				item.scalingStatValue = Convert.ToInt32(dt.Rows[0]["DEFAULT(ScalingStatValue)"]);
 
 				return item;
 			}

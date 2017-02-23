@@ -96,13 +96,17 @@ namespace Manti.Classes.Generate {
 
 		public string gameObjectToSql(GameObject go) {
 			if(go != null) {
-				string[] columns = { "entry", "type", "displayid", "name", "size", "ainame", "scriptname", "data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10",
+				string[] tempColumns = { "entry", "type", "displayid", "name", "size", "ainame", "scriptname", "data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10",
 					"data11", "data12", "data13", "data14", "data15", "data16", "data17", "data18", "data19", "data20", "data21", "data22", "data23" };
 
-				object[] values = { go.entry, go.type, go.displayId, go.name, go.size, go.aiName, go.scriptName, go.data0, go.data1, go.data2, go.data3, go.data4, go.data5, go.data6, go.data7, go.data8, go.data9, go.data10,
+				object[] tempValues = { go.entry, go.type, go.displayId, go.name, go.size, go.aiName, go.scriptName, go.data0, go.data1, go.data2, go.data3, go.data4, go.data5, go.data6, go.data7, go.data8, go.data9, go.data10,
 					go.data11, go.data12, go.data13, go.data14, go.data15, go.data16, go.data17, go.data18, go.data19, go.data20, go.data21, go.data22, go.data23};
 
-				return insertOrUpdateToDatabase("gameobject_template", columns, values);
+				string[] addonColumns = { "faction", "flags" };
+
+				object[] addonValues = { go.faction, go.flags };
+
+				return insertOrUpdateToDatabase("gameobject_template", tempColumns, tempValues) + insertOrUpdateToDatabase("gameobject_template_addon", addonColumns, addonValues);
 			}
 
 			return null;
@@ -172,6 +176,24 @@ namespace Manti.Classes.Generate {
 			}
 
 			return null;
+		}
+
+		// delete
+
+		public string deleteCreature(uint entry) {
+			return $"DELETE FROM creature_template WHERE entry = '{entry}';";
+		}
+
+		public string deleteQuest(uint id) {
+			return $"DELETE FROM quest_template WHERE id = '{id}';";
+		}
+
+		public string deleteGameObject(uint entry) {
+			return $"DELETE FROM gameobject_template WHERE entry = '{entry}';";
+		}
+
+		public string deleteItem(uint entry) {
+			return $"DELETE FROM item_template WHERE entry = '{entry}';";
 		}
 	}
 }

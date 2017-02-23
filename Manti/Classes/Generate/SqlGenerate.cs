@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 using Manti.Classes.AccountTab;
+using System.IO;
 
 namespace Manti.Classes.Generate {
 	public abstract class SqlGenerate {
@@ -70,6 +72,32 @@ namespace Manti.Classes.Generate {
 			}
 
 			return null;
+		}
+
+		public static bool generateSqlFile(string fileName, string sql) {
+			if(!string.IsNullOrEmpty(sql)) {
+				var sfd = new SaveFileDialog();
+
+				sfd.Title = "Manti - Save Output Sql";
+				sfd.FileName = fileName;
+				sfd.Filter = "Structured Query Language (*.sql)|*.sql";
+
+				string path;
+
+				if(sfd.ShowDialog() == DialogResult.OK) {
+					path = sfd.FileName;
+				} else { return false; }
+
+				StreamWriter sw = new StreamWriter(path);
+
+				sw.WriteLine(sql);
+
+				sw.Close();
+
+				return true;
+			}
+
+			return false;
 		}
 	}
 }

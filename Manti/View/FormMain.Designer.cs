@@ -287,7 +287,7 @@
 			this.tabPageCreature = new System.Windows.Forms.TabPage();
 			this.tabControlCategoryCreature = new System.Windows.Forms.TabControl();
 			this.tabPageCreatureSearch = new System.Windows.Forms.TabPage();
-			this.button1 = new System.Windows.Forms.Button();
+			this.buttonCreatureSearchRank = new System.Windows.Forms.Button();
 			this.labelCreatureSearchRank = new System.Windows.Forms.Label();
 			this.textBoxCreatureSearchRank = new System.Windows.Forms.TextBox();
 			this.textBoxCreatureSearchLevelMax = new System.Windows.Forms.TextBox();
@@ -949,7 +949,7 @@
 			this.tabControlCategoryItem = new System.Windows.Forms.TabControl();
 			this.tabPageItemSearch = new System.Windows.Forms.TabPage();
 			this.comboBoxItemSearchQuality = new System.Windows.Forms.ComboBox();
-			this.buttonItemSearchToolSubclass = new System.Windows.Forms.Button();
+			this.buttonItemSearchSubclass = new System.Windows.Forms.Button();
 			this.buttonItemSearchClass = new System.Windows.Forms.Button();
 			this.textBoxItemSearchReqLevel = new System.Windows.Forms.TextBox();
 			this.textBoxItemSearchDescription = new System.Windows.Forms.TextBox();
@@ -2399,7 +2399,7 @@
 			// toolStripStatusLabelAccountScriptSpring
 			// 
 			this.toolStripStatusLabelAccountScriptSpring.Name = "toolStripStatusLabelAccountScriptSpring";
-			this.toolStripStatusLabelAccountScriptSpring.Size = new System.Drawing.Size(701, 17);
+			this.toolStripStatusLabelAccountScriptSpring.Size = new System.Drawing.Size(732, 17);
 			this.toolStripStatusLabelAccountScriptSpring.Spring = true;
 			// 
 			// toolStripSplitButtonAccountScriptUpdate
@@ -3122,7 +3122,7 @@
 			this.buttonCharacterCharacterClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonCharacterCharacterClass.TabIndex = 38;
 			this.buttonCharacterCharacterClass.UseVisualStyleBackColor = true;
-			this.buttonCharacterCharacterClass.Click += new System.EventHandler(this.buttonCharacterCharacterClass_Click);
+			this.buttonCharacterCharacterClass.Click += new System.EventHandler(this.buttonCharacterPopup_Click);
 			// 
 			// buttonCharacterCharacterRace
 			// 
@@ -3131,7 +3131,7 @@
 			this.buttonCharacterCharacterRace.Size = new System.Drawing.Size(18, 18);
 			this.buttonCharacterCharacterRace.TabIndex = 37;
 			this.buttonCharacterCharacterRace.UseVisualStyleBackColor = true;
-			this.buttonCharacterCharacterRace.Click += new System.EventHandler(this.buttonCharacterCharacterRace_Click);
+			this.buttonCharacterCharacterRace.Click += new System.EventHandler(this.buttonCharacterPopup_Click);
 			// 
 			// checkBoxCharacterCharacterRest
 			// 
@@ -3677,7 +3677,7 @@
 			// tabPageCreatureSearch
 			// 
 			this.tabPageCreatureSearch.BackColor = System.Drawing.SystemColors.Control;
-			this.tabPageCreatureSearch.Controls.Add(this.button1);
+			this.tabPageCreatureSearch.Controls.Add(this.buttonCreatureSearchRank);
 			this.tabPageCreatureSearch.Controls.Add(this.labelCreatureSearchRank);
 			this.tabPageCreatureSearch.Controls.Add(this.textBoxCreatureSearchRank);
 			this.tabPageCreatureSearch.Controls.Add(this.textBoxCreatureSearchLevelMax);
@@ -3700,13 +3700,14 @@
 			this.tabPageCreatureSearch.TabIndex = 0;
 			this.tabPageCreatureSearch.Text = "Search";
 			// 
-			// button1
+			// buttonCreatureSearchRank
 			// 
-			this.button1.Location = new System.Drawing.Point(550, 28);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(18, 18);
-			this.button1.TabIndex = 40;
-			this.button1.UseVisualStyleBackColor = true;
+			this.buttonCreatureSearchRank.Location = new System.Drawing.Point(550, 28);
+			this.buttonCreatureSearchRank.Name = "buttonCreatureSearchRank";
+			this.buttonCreatureSearchRank.Size = new System.Drawing.Size(18, 18);
+			this.buttonCreatureSearchRank.TabIndex = 40;
+			this.buttonCreatureSearchRank.UseVisualStyleBackColor = true;
+			this.buttonCreatureSearchRank.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// labelCreatureSearchRank
 			// 
@@ -4066,7 +4067,7 @@
 			this.buttonCreatureTemplateSpell1.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateSpell1.TabIndex = 52;
 			this.buttonCreatureTemplateSpell1.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateSpell1.Click += new System.EventHandler(this.buttonCreatureTemplateSpell1_Click);
+			this.buttonCreatureTemplateSpell1.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// textBoxCreatureTemplateSpell8
 			// 
@@ -4285,7 +4286,7 @@
 			this.buttonCreatureTemplateMechanic.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateMechanic.TabIndex = 90;
 			this.buttonCreatureTemplateMechanic.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateMechanic.Click += new System.EventHandler(this.buttonCreatureTemplateMechanic_Click);
+			this.buttonCreatureTemplateMechanic.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateDynamic
 			// 
@@ -4294,7 +4295,7 @@
 			this.buttonCreatureTemplateDynamic.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateDynamic.TabIndex = 89;
 			this.buttonCreatureTemplateDynamic.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateDynamic.Click += new System.EventHandler(this.buttonCreatureTemplateDynamic_Click);
+			this.buttonCreatureTemplateDynamic.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateFlagsExtra
 			// 
@@ -4303,7 +4304,7 @@
 			this.buttonCreatureTemplateFlagsExtra.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateFlagsExtra.TabIndex = 88;
 			this.buttonCreatureTemplateFlagsExtra.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateFlagsExtra.Click += new System.EventHandler(this.buttonCreatureTemplateFlagsExtra_Click);
+			this.buttonCreatureTemplateFlagsExtra.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateUnitflags
 			// 
@@ -4312,7 +4313,7 @@
 			this.buttonCreatureTemplateUnitflags.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateUnitflags.TabIndex = 87;
 			this.buttonCreatureTemplateUnitflags.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateUnitflags.Click += new System.EventHandler(this.buttonCreatureTemplateUnitflags_Click);
+			this.buttonCreatureTemplateUnitflags.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateUnitflags2
 			// 
@@ -4321,7 +4322,7 @@
 			this.buttonCreatureTemplateUnitflags2.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateUnitflags2.TabIndex = 86;
 			this.buttonCreatureTemplateUnitflags2.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateUnitflags2.Click += new System.EventHandler(this.buttonCreatureTemplateUnitflags2_Click);
+			this.buttonCreatureTemplateUnitflags2.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateTypeFlags
 			// 
@@ -4330,7 +4331,7 @@
 			this.buttonCreatureTemplateTypeFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateTypeFlags.TabIndex = 85;
 			this.buttonCreatureTemplateTypeFlags.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateTypeFlags.Click += new System.EventHandler(this.buttonCreatureTemplateTypeFlags_Click);
+			this.buttonCreatureTemplateTypeFlags.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateType
 			// 
@@ -4339,7 +4340,7 @@
 			this.buttonCreatureTemplateType.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateType.TabIndex = 84;
 			this.buttonCreatureTemplateType.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateType.Click += new System.EventHandler(this.buttonCreatureTemplateType_Click);
+			this.buttonCreatureTemplateType.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateFamily
 			// 
@@ -4348,7 +4349,7 @@
 			this.buttonCreatureTemplateFamily.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateFamily.TabIndex = 83;
 			this.buttonCreatureTemplateFamily.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateFamily.Click += new System.EventHandler(this.buttonCreatureTemplateFamily_Click);
+			this.buttonCreatureTemplateFamily.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateUnitClass
 			// 
@@ -4357,7 +4358,7 @@
 			this.buttonCreatureTemplateUnitClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateUnitClass.TabIndex = 82;
 			this.buttonCreatureTemplateUnitClass.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateUnitClass.Click += new System.EventHandler(this.buttonCreatureTemplateUnitClass_Click);
+			this.buttonCreatureTemplateUnitClass.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// textBoxCreatureTemplateMechanic
 			// 
@@ -4592,7 +4593,7 @@
 			this.buttonCreatureTemplateInhabitType.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateInhabitType.TabIndex = 62;
 			this.buttonCreatureTemplateInhabitType.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateInhabitType.Click += new System.EventHandler(this.buttonCreatureTemplateInhabitType_Click);
+			this.buttonCreatureTemplateInhabitType.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateMType
 			// 
@@ -4601,7 +4602,7 @@
 			this.buttonCreatureTemplateMType.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateMType.TabIndex = 60;
 			this.buttonCreatureTemplateMType.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateMType.Click += new System.EventHandler(this.buttonCreatureTemplateMType_Click);
+			this.buttonCreatureTemplateMType.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// textBoxCreatureTemplateVID
 			// 
@@ -4902,7 +4903,7 @@
 			this.buttonCreatureTemplateDS.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateDS.TabIndex = 44;
 			this.buttonCreatureTemplateDS.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateDS.Click += new System.EventHandler(this.buttonCreatureTemplateDS_Click);
+			this.buttonCreatureTemplateDS.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// textBoxCreatureTemplateRangedAttack
 			// 
@@ -5142,7 +5143,7 @@
 			this.buttonCreatureTemplateRank.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateRank.TabIndex = 44;
 			this.buttonCreatureTemplateRank.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateRank.Click += new System.EventHandler(this.buttonCreatureTemplateRank_Click);
+			this.buttonCreatureTemplateRank.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateNPCFlags
 			// 
@@ -5151,7 +5152,7 @@
 			this.buttonCreatureTemplateNPCFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateNPCFlags.TabIndex = 43;
 			this.buttonCreatureTemplateNPCFlags.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateNPCFlags.Click += new System.EventHandler(this.buttonCreatureTemplateNPCFlags_Click);
+			this.buttonCreatureTemplateNPCFlags.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// buttonCreatureTemplateModelID1
 			// 
@@ -5160,7 +5161,7 @@
 			this.buttonCreatureTemplateModelID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureTemplateModelID1.TabIndex = 41;
 			this.buttonCreatureTemplateModelID1.UseVisualStyleBackColor = true;
-			this.buttonCreatureTemplateModelID1.Click += new System.EventHandler(this.buttonCreatureTemplateModelID1_Click);
+			this.buttonCreatureTemplateModelID1.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// labelCreatureTemplateGoldMax
 			// 
@@ -5712,6 +5713,7 @@
 			this.buttonCreatureVendorEC.Size = new System.Drawing.Size(18, 18);
 			this.buttonCreatureVendorEC.TabIndex = 67;
 			this.buttonCreatureVendorEC.UseVisualStyleBackColor = true;
+			this.buttonCreatureVendorEC.Click += new System.EventHandler(this.buttonCreaturePopup_Click);
 			// 
 			// textBoxCreatureVendorEC
 			// 
@@ -7272,7 +7274,7 @@
 			this.toolStripSplitButtonCreatureScriptSQLGenerate.Name = "toolStripSplitButtonCreatureScriptSQLGenerate";
 			this.toolStripSplitButtonCreatureScriptSQLGenerate.Size = new System.Drawing.Size(120, 20);
 			this.toolStripSplitButtonCreatureScriptSQLGenerate.Text = "Generate SQL File";
-			this.toolStripSplitButtonCreatureScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonCreatureScriptSQLGenerate_ButtonClick);
+			this.toolStripSplitButtonCreatureScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonSqlGenerate);
 			// 
 			// toolStripSplitButtonCreatureScriptUpdate
 			// 
@@ -7362,7 +7364,7 @@
 			this.buttonQuestSearchInfo.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSearchInfo.TabIndex = 51;
 			this.buttonQuestSearchInfo.UseVisualStyleBackColor = true;
-			this.buttonQuestSearchInfo.Click += new System.EventHandler(this.buttonQuestSearchInfo_Click);
+			this.buttonQuestSearchInfo.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// textBoxQuestSearchInfo
 			// 
@@ -7700,7 +7702,7 @@
 			this.buttonQuestSectionQuestInfo.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionQuestInfo.TabIndex = 50;
 			this.buttonQuestSectionQuestInfo.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionQuestInfo.Click += new System.EventHandler(this.buttonQuestSectionQuestInfo_Click);
+			this.buttonQuestSectionQuestInfo.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// textBoxQuestSectionTimeAllowed
 			// 
@@ -7940,7 +7942,7 @@
 			this.buttonQuestSectionSourceSpellID.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionSourceSpellID.TabIndex = 49;
 			this.buttonQuestSectionSourceSpellID.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionSourceSpellID.Click += new System.EventHandler(this.buttonQuestSectionSourceSpellID_Click);
+			this.buttonQuestSectionSourceSpellID.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionSourceItemID
 			// 
@@ -7949,7 +7951,7 @@
 			this.buttonQuestSectionSourceItemID.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionSourceItemID.TabIndex = 42;
 			this.buttonQuestSectionSourceItemID.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionSourceItemID.Click += new System.EventHandler(this.buttonQuestSectionSourceItemID_Click);
+			this.buttonQuestSectionSourceItemID.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// textBoxQuestSectionSourceSpellID
 			// 
@@ -8024,7 +8026,7 @@
 			this.buttonQuestSectionOtherSF.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionOtherSF.TabIndex = 50;
 			this.buttonQuestSectionOtherSF.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionOtherSF.Click += new System.EventHandler(this.buttonQuestSectionOtherSF_Click);
+			this.buttonQuestSectionOtherSF.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionQuestFlags
 			// 
@@ -8033,7 +8035,7 @@
 			this.buttonQuestSectionQuestFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionQuestFlags.TabIndex = 49;
 			this.buttonQuestSectionQuestFlags.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionQuestFlags.Click += new System.EventHandler(this.buttonQuestSectionQuestFlags_Click);
+			this.buttonQuestSectionQuestFlags.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionQuestType
 			// 
@@ -8042,7 +8044,7 @@
 			this.buttonQuestSectionQuestType.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionQuestType.TabIndex = 47;
 			this.buttonQuestSectionQuestType.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionQuestType.Click += new System.EventHandler(this.buttonQuestSectionQuestType_Click);
+			this.buttonQuestSectionQuestType.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// textBoxQuestSectionQuestFlags
 			// 
@@ -8147,7 +8149,7 @@
 			this.buttonQuestSectionReqFaction1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqFaction1.TabIndex = 51;
 			this.buttonQuestSectionReqFaction1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqFaction1.Click += new System.EventHandler(this.buttonQuestSectionReqFaction1_Click);
+			this.buttonQuestSectionReqFaction1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqFaction2
 			// 
@@ -8156,7 +8158,7 @@
 			this.buttonQuestSectionReqFaction2.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqFaction2.TabIndex = 50;
 			this.buttonQuestSectionReqFaction2.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqFaction2.Click += new System.EventHandler(this.buttonQuestSectionReqFaction2_Click);
+			this.buttonQuestSectionReqFaction2.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqMaxRepF
 			// 
@@ -8165,7 +8167,7 @@
 			this.buttonQuestSectionReqMaxRepF.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqMaxRepF.TabIndex = 49;
 			this.buttonQuestSectionReqMaxRepF.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqMaxRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMaxRepF_Click);
+			this.buttonQuestSectionReqMaxRepF.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqMinRepF
 			// 
@@ -8174,7 +8176,7 @@
 			this.buttonQuestSectionReqMinRepF.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqMinRepF.TabIndex = 48;
 			this.buttonQuestSectionReqMinRepF.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqMinRepF.Click += new System.EventHandler(this.buttonQuestSectionReqMinRepF_Click);
+			this.buttonQuestSectionReqMinRepF.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqSkillID
 			// 
@@ -8183,7 +8185,7 @@
 			this.buttonQuestSectionReqSkillID.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqSkillID.TabIndex = 47;
 			this.buttonQuestSectionReqSkillID.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqSkillID.Click += new System.EventHandler(this.buttonQuestSectionReqSkillID_Click);
+			this.buttonQuestSectionReqSkillID.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// textBoxQuestSectionReqMaxRepV
 			// 
@@ -8256,7 +8258,7 @@
 			this.buttonQuestSectionQSort.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionQSort.TabIndex = 38;
 			this.buttonQuestSectionQSort.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionQSort.Click += new System.EventHandler(this.buttonQuestSectionQSort_Click);
+			this.buttonQuestSectionQSort.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqClass
 			// 
@@ -8265,7 +8267,7 @@
 			this.buttonQuestSectionReqClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqClass.TabIndex = 37;
 			this.buttonQuestSectionReqClass.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqClass.Click += new System.EventHandler(this.buttonQuestSectionReqClass_Click);
+			this.buttonQuestSectionReqClass.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// buttonQuestSectionReqRace
 			// 
@@ -8274,7 +8276,7 @@
 			this.buttonQuestSectionReqRace.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqRace.TabIndex = 36;
 			this.buttonQuestSectionReqRace.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqRace.Click += new System.EventHandler(this.buttonQuestSectionReqRace_Click);
+			this.buttonQuestSectionReqRace.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// radioButtonQuestSectionQSort
 			// 
@@ -8612,7 +8614,7 @@
 			this.buttonQuestSectionReqItemID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqItemID1.TabIndex = 39;
 			this.buttonQuestSectionReqItemID1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqItemID1.Click += new System.EventHandler(this.buttonQuestSectionReqItemID1_Click);
+			this.buttonQuestSectionReqItemID1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionReqItemCount
 			// 
@@ -8743,7 +8745,7 @@
 			this.buttonQuestSectionReqNPCID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionReqNPCID1.TabIndex = 39;
 			this.buttonQuestSectionReqNPCID1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionReqNPCID1.Click += new System.EventHandler(this.buttonQuestSectionReqNPCID1_Click);
+			this.buttonQuestSectionReqNPCID1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionReqNPCCount
 			// 
@@ -8873,7 +8875,7 @@
 			this.buttonQuestSectionRewSpell.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionRewSpell.TabIndex = 40;
 			this.buttonQuestSectionRewSpell.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionRewSpell.Click += new System.EventHandler(this.buttonQuestSectionRewSpell_Click);
+			this.buttonQuestSectionRewSpell.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionRewMailDelay
 			// 
@@ -8898,7 +8900,7 @@
 			this.buttonQuestSectionRewOtherTitleID.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionRewOtherTitleID.TabIndex = 38;
 			this.buttonQuestSectionRewOtherTitleID.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionRewOtherTitleID.Click += new System.EventHandler(this.buttonQuestSectionRewOtherTitleID_Click);
+			this.buttonQuestSectionRewOtherTitleID.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionRewHM
 			// 
@@ -9087,7 +9089,7 @@
 			this.buttonQuestSectionRewItemID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionRewItemID1.TabIndex = 39;
 			this.buttonQuestSectionRewItemID1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionRewItemID1.Click += new System.EventHandler(this.buttonQuestSectionRewItemID1_Click);
+			this.buttonQuestSectionRewItemID1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionRewItemCount
 			// 
@@ -9171,6 +9173,7 @@
 			this.groupBoxQuestSectionRewFactionO.Controls.Add(this.textBoxQuestSectionRewFactionOID2);
 			this.groupBoxQuestSectionRewFactionO.Controls.Add(this.textBoxQuestSectionRewFactionOID5);
 			this.groupBoxQuestSectionRewFactionO.Controls.Add(this.textBoxQuestSectionRewFactionOID3);
+			this.groupBoxQuestSectionRewFactionO.Enabled = false;
 			this.groupBoxQuestSectionRewFactionO.Location = new System.Drawing.Point(573, 19);
 			this.groupBoxQuestSectionRewFactionO.Name = "groupBoxQuestSectionRewFactionO";
 			this.groupBoxQuestSectionRewFactionO.Size = new System.Drawing.Size(133, 163);
@@ -9251,7 +9254,7 @@
 			this.buttonQuestSectionRewFactionID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionRewFactionID1.TabIndex = 39;
 			this.buttonQuestSectionRewFactionID1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionRewFactionID1.Click += new System.EventHandler(this.buttonQuestSectionRewFactionID1_Click);
+			this.buttonQuestSectionRewFactionID1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionRewFactionV
 			// 
@@ -9372,7 +9375,7 @@
 			this.buttonQuestSectionRewChoiceID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonQuestSectionRewChoiceID1.TabIndex = 39;
 			this.buttonQuestSectionRewChoiceID1.UseVisualStyleBackColor = true;
-			this.buttonQuestSectionRewChoiceID1.Click += new System.EventHandler(this.buttonQuestSectionRewChoiceID1_Click);
+			this.buttonQuestSectionRewChoiceID1.Click += new System.EventHandler(this.buttonQuestPopup_Click);
 			// 
 			// labelQuestSectionRewChoiceC
 			// 
@@ -9742,7 +9745,7 @@
 			this.toolStripSplitButtonQuestScriptSQLGenerate.Name = "toolStripSplitButtonQuestScriptSQLGenerate";
 			this.toolStripSplitButtonQuestScriptSQLGenerate.Size = new System.Drawing.Size(120, 20);
 			this.toolStripSplitButtonQuestScriptSQLGenerate.Text = "Generate SQL File";
-			this.toolStripSplitButtonQuestScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonQuestScriptSQLGenerate_ButtonClick);
+			this.toolStripSplitButtonQuestScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonSqlGenerate);
 			// 
 			// toolStripSplitButtonQuestScriptUpdate
 			// 
@@ -10284,7 +10287,7 @@
 			this.buttonGameObjectTempFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonGameObjectTempFlags.TabIndex = 36;
 			this.buttonGameObjectTempFlags.UseVisualStyleBackColor = true;
-			this.buttonGameObjectTempFlags.Click += new System.EventHandler(this.buttonGameObjectTempFlags_Click);
+			this.buttonGameObjectTempFlags.Click += new System.EventHandler(this.buttonGameObjectPopup_Click);
 			// 
 			// buttonGameObjectTempType
 			// 
@@ -10293,7 +10296,7 @@
 			this.buttonGameObjectTempType.Size = new System.Drawing.Size(18, 18);
 			this.buttonGameObjectTempType.TabIndex = 35;
 			this.buttonGameObjectTempType.UseVisualStyleBackColor = true;
-			this.buttonGameObjectTempType.Click += new System.EventHandler(this.buttonGameObjectTempType_Click);
+			this.buttonGameObjectTempType.Click += new System.EventHandler(this.buttonGameObjectPopup_Click);
 			// 
 			// label88
 			// 
@@ -10485,7 +10488,7 @@
 			this.toolStripSplitButtonGOScriptSQLGenerate.Name = "toolStripSplitButtonGOScriptSQLGenerate";
 			this.toolStripSplitButtonGOScriptSQLGenerate.Size = new System.Drawing.Size(120, 20);
 			this.toolStripSplitButtonGOScriptSQLGenerate.Text = "Generate SQL File";
-			this.toolStripSplitButtonGOScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonGOScriptSQLGenerate_ButtonClick);
+			this.toolStripSplitButtonGOScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonSqlGenerate);
 			// 
 			// toolStripSplitButtonGOScriptUpdate
 			// 
@@ -10545,7 +10548,7 @@
 			// 
 			this.tabPageItemSearch.BackColor = System.Drawing.SystemColors.Control;
 			this.tabPageItemSearch.Controls.Add(this.comboBoxItemSearchQuality);
-			this.tabPageItemSearch.Controls.Add(this.buttonItemSearchToolSubclass);
+			this.tabPageItemSearch.Controls.Add(this.buttonItemSearchSubclass);
 			this.tabPageItemSearch.Controls.Add(this.buttonItemSearchClass);
 			this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchReqLevel);
 			this.tabPageItemSearch.Controls.Add(this.textBoxItemSearchDescription);
@@ -10586,14 +10589,14 @@
 			this.comboBoxItemSearchQuality.Size = new System.Drawing.Size(90, 21);
 			this.comboBoxItemSearchQuality.TabIndex = 35;
 			// 
-			// buttonItemSearchToolSubclass
+			// buttonItemSearchSubclass
 			// 
-			this.buttonItemSearchToolSubclass.Location = new System.Drawing.Point(338, 28);
-			this.buttonItemSearchToolSubclass.Name = "buttonItemSearchToolSubclass";
-			this.buttonItemSearchToolSubclass.Size = new System.Drawing.Size(18, 18);
-			this.buttonItemSearchToolSubclass.TabIndex = 34;
-			this.buttonItemSearchToolSubclass.UseVisualStyleBackColor = true;
-			this.buttonItemSearchToolSubclass.Click += new System.EventHandler(this.buttonItemSearchSubclass_Click);
+			this.buttonItemSearchSubclass.Location = new System.Drawing.Point(338, 28);
+			this.buttonItemSearchSubclass.Name = "buttonItemSearchSubclass";
+			this.buttonItemSearchSubclass.Size = new System.Drawing.Size(18, 18);
+			this.buttonItemSearchSubclass.TabIndex = 34;
+			this.buttonItemSearchSubclass.UseVisualStyleBackColor = true;
+			this.buttonItemSearchSubclass.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemSearchClass
 			// 
@@ -10602,7 +10605,7 @@
 			this.buttonItemSearchClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemSearchClass.TabIndex = 34;
 			this.buttonItemSearchClass.UseVisualStyleBackColor = true;
-			this.buttonItemSearchClass.Click += new System.EventHandler(this.buttonItemSearchClass_Click);
+			this.buttonItemSearchClass.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemSearchReqLevel
 			// 
@@ -11001,7 +11004,7 @@
 			this.buttonItemTempSpellID1.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempSpellID1.TabIndex = 55;
 			this.buttonItemTempSpellID1.UseVisualStyleBackColor = true;
-			this.buttonItemTempSpellID1.Click += new System.EventHandler(this.buttonItemTempSpellID1_Click);
+			this.buttonItemTempSpellID1.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempTrigger1
 			// 
@@ -11010,7 +11013,7 @@
 			this.buttonItemTempTrigger1.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempTrigger1.TabIndex = 54;
 			this.buttonItemTempTrigger1.UseVisualStyleBackColor = true;
-			this.buttonItemTempTrigger1.Click += new System.EventHandler(this.buttonItemTempTrigger1_Click);
+			this.buttonItemTempTrigger1.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// labelItemTempCategoryCD
 			// 
@@ -11383,7 +11386,7 @@
 			this.buttonItemTempMaterial.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempMaterial.TabIndex = 58;
 			this.buttonItemTempMaterial.UseVisualStyleBackColor = true;
-			this.buttonItemTempMaterial.Click += new System.EventHandler(this.buttonItemTempMaterial_Click);
+			this.buttonItemTempMaterial.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempTotemCategory
 			// 
@@ -11392,7 +11395,7 @@
 			this.buttonItemTempTotemCategory.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempTotemCategory.TabIndex = 57;
 			this.buttonItemTempTotemCategory.UseVisualStyleBackColor = true;
-			this.buttonItemTempTotemCategory.Click += new System.EventHandler(this.buttonItemTempTotemCategory_Click);
+			this.buttonItemTempTotemCategory.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempBagFamily
 			// 
@@ -11401,7 +11404,7 @@
 			this.buttonItemTempBagFamily.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempBagFamily.TabIndex = 56;
 			this.buttonItemTempBagFamily.UseVisualStyleBackColor = true;
-			this.buttonItemTempBagFamily.Click += new System.EventHandler(this.buttonItemTempBagFamily_Click);
+			this.buttonItemTempBagFamily.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempTotemCategory
 			// 
@@ -11442,7 +11445,7 @@
 			this.buttonItemTempFoodType.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempFoodType.TabIndex = 51;
 			this.buttonItemTempFoodType.UseVisualStyleBackColor = true;
-			this.buttonItemTempFoodType.Click += new System.EventHandler(this.buttonItemTempFoodType_Click);
+			this.buttonItemTempFoodType.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempFlagsC
 			// 
@@ -11451,7 +11454,7 @@
 			this.buttonItemTempFlagsC.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempFlagsC.TabIndex = 50;
 			this.buttonItemTempFlagsC.UseVisualStyleBackColor = true;
-			this.buttonItemTempFlagsC.Click += new System.EventHandler(this.buttonItemTempFlagsC_Click);
+			this.buttonItemTempFlagsC.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempFlagsC
 			// 
@@ -11793,7 +11796,7 @@
 			this.buttonItemTempAmmoType.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempAmmoType.TabIndex = 62;
 			this.buttonItemTempAmmoType.UseVisualStyleBackColor = true;
-			this.buttonItemTempAmmoType.Click += new System.EventHandler(this.buttonItemTempAmmoType_Click);
+			this.buttonItemTempAmmoType.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempSheath
 			// 
@@ -11802,7 +11805,7 @@
 			this.buttonItemTempSheath.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempSheath.TabIndex = 61;
 			this.buttonItemTempSheath.UseVisualStyleBackColor = true;
-			this.buttonItemTempSheath.Click += new System.EventHandler(this.buttonItemTempSheath_Click);
+			this.buttonItemTempSheath.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempBonding
 			// 
@@ -11811,7 +11814,7 @@
 			this.buttonItemTempBonding.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempBonding.TabIndex = 60;
 			this.buttonItemTempBonding.UseVisualStyleBackColor = true;
-			this.buttonItemTempBonding.Click += new System.EventHandler(this.buttonItemTempBonding_Click);
+			this.buttonItemTempBonding.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempItemSet
 			// 
@@ -11820,7 +11823,7 @@
 			this.buttonItemTempItemSet.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempItemSet.TabIndex = 41;
 			this.buttonItemTempItemSet.UseVisualStyleBackColor = true;
-			this.buttonItemTempItemSet.Click += new System.EventHandler(this.buttonItemTempItemSet_Click);
+			this.buttonItemTempItemSet.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempItemSet
 			// 
@@ -11982,7 +11985,7 @@
 			this.buttonItemTempSocketBonus.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempSocketBonus.TabIndex = 65;
 			this.buttonItemTempSocketBonus.UseVisualStyleBackColor = true;
-			this.buttonItemTempSocketBonus.Click += new System.EventHandler(this.buttonItemTempSocketBonus_Click);
+			this.buttonItemTempSocketBonus.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempColor3
 			// 
@@ -11991,7 +11994,7 @@
 			this.buttonItemTempColor3.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempColor3.TabIndex = 64;
 			this.buttonItemTempColor3.UseVisualStyleBackColor = true;
-			this.buttonItemTempColor3.Click += new System.EventHandler(this.buttonItemTempColor3_Click);
+			this.buttonItemTempColor3.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempColor2
 			// 
@@ -12000,7 +12003,7 @@
 			this.buttonItemTempColor2.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempColor2.TabIndex = 63;
 			this.buttonItemTempColor2.UseVisualStyleBackColor = true;
-			this.buttonItemTempColor2.Click += new System.EventHandler(this.buttonItemTempColor2_Click);
+			this.buttonItemTempColor2.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempColor1
 			// 
@@ -12009,7 +12012,7 @@
 			this.buttonItemTempColor1.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempColor1.TabIndex = 62;
 			this.buttonItemTempColor1.UseVisualStyleBackColor = true;
-			this.buttonItemTempColor1.Click += new System.EventHandler(this.buttonItemTempColor1_Click);
+			this.buttonItemTempColor1.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempGemProper
 			// 
@@ -12250,7 +12253,7 @@
 			this.buttonItemTempDmgType2.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempDmgType2.TabIndex = 46;
 			this.buttonItemTempDmgType2.UseVisualStyleBackColor = true;
-			this.buttonItemTempDmgType2.Click += new System.EventHandler(this.buttonItemTempDmgType2_Click);
+			this.buttonItemTempDmgType2.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempDmgType1
 			// 
@@ -12259,7 +12262,7 @@
 			this.buttonItemTempDmgType1.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempDmgType1.TabIndex = 46;
 			this.buttonItemTempDmgType1.UseVisualStyleBackColor = true;
-			this.buttonItemTempDmgType1.Click += new System.EventHandler(this.buttonItemTempDmgType1_Click);
+			this.buttonItemTempDmgType1.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempDmgMax2
 			// 
@@ -12409,7 +12412,7 @@
 			this.buttonItemTempStatsType10.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType10.TabIndex = 46;
 			this.buttonItemTempStatsType10.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType10.Click += new System.EventHandler(this.buttonItemTempStatsType10_Click);
+			this.buttonItemTempStatsType10.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType9
 			// 
@@ -12418,7 +12421,7 @@
 			this.buttonItemTempStatsType9.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType9.TabIndex = 45;
 			this.buttonItemTempStatsType9.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType9.Click += new System.EventHandler(this.buttonItemTempStatsType9_Click);
+			this.buttonItemTempStatsType9.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType8
 			// 
@@ -12427,7 +12430,7 @@
 			this.buttonItemTempStatsType8.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType8.TabIndex = 44;
 			this.buttonItemTempStatsType8.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType8.Click += new System.EventHandler(this.buttonItemTempStatsType8_Click);
+			this.buttonItemTempStatsType8.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType7
 			// 
@@ -12436,7 +12439,7 @@
 			this.buttonItemTempStatsType7.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType7.TabIndex = 43;
 			this.buttonItemTempStatsType7.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType7.Click += new System.EventHandler(this.buttonItemTempStatsType7_Click);
+			this.buttonItemTempStatsType7.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType6
 			// 
@@ -12445,7 +12448,7 @@
 			this.buttonItemTempStatsType6.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType6.TabIndex = 42;
 			this.buttonItemTempStatsType6.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType6.Click += new System.EventHandler(this.buttonItemTempStatsType6_Click);
+			this.buttonItemTempStatsType6.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType5
 			// 
@@ -12454,7 +12457,7 @@
 			this.buttonItemTempStatsType5.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType5.TabIndex = 41;
 			this.buttonItemTempStatsType5.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType5.Click += new System.EventHandler(this.buttonItemTempStatsType5_Click);
+			this.buttonItemTempStatsType5.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType4
 			// 
@@ -12463,7 +12466,7 @@
 			this.buttonItemTempStatsType4.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType4.TabIndex = 40;
 			this.buttonItemTempStatsType4.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType4.Click += new System.EventHandler(this.buttonItemTempStatsType4_Click);
+			this.buttonItemTempStatsType4.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType3
 			// 
@@ -12472,7 +12475,7 @@
 			this.buttonItemTempStatsType3.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType3.TabIndex = 39;
 			this.buttonItemTempStatsType3.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType3.Click += new System.EventHandler(this.buttonItemTempStatsType3_Click);
+			this.buttonItemTempStatsType3.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType2
 			// 
@@ -12481,7 +12484,7 @@
 			this.buttonItemTempStatsType2.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType2.TabIndex = 38;
 			this.buttonItemTempStatsType2.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType2.Click += new System.EventHandler(this.buttonItemTempStatsType2_Click);
+			this.buttonItemTempStatsType2.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempStatsType1
 			// 
@@ -12490,7 +12493,7 @@
 			this.buttonItemTempStatsType1.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempStatsType1.TabIndex = 37;
 			this.buttonItemTempStatsType1.UseVisualStyleBackColor = true;
-			this.buttonItemTempStatsType1.Click += new System.EventHandler(this.buttonItemTempStatsType1_Click);
+			this.buttonItemTempStatsType1.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempStatsScaleValue
 			// 
@@ -12728,7 +12731,7 @@
 			this.buttonItemTempReqRepRank.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqRepRank.TabIndex = 40;
 			this.buttonItemTempReqRepRank.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqRepRank.Click += new System.EventHandler(this.buttonItemTempReqRepRank_Click);
+			this.buttonItemTempReqRepRank.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempReqRepFaction
 			// 
@@ -12737,7 +12740,7 @@
 			this.buttonItemTempReqRepFaction.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqRepFaction.TabIndex = 39;
 			this.buttonItemTempReqRepFaction.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqRepFaction.Click += new System.EventHandler(this.buttonItemTempReqRepFaction_Click);
+			this.buttonItemTempReqRepFaction.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempReqSkill
 			// 
@@ -12746,7 +12749,7 @@
 			this.buttonItemTempReqSkill.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqSkill.TabIndex = 38;
 			this.buttonItemTempReqSkill.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqSkill.Click += new System.EventHandler(this.buttonItemTempReqSkill_Click);
+			this.buttonItemTempReqSkill.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempReqSpell
 			// 
@@ -12755,7 +12758,7 @@
 			this.buttonItemTempReqSpell.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqSpell.TabIndex = 37;
 			this.buttonItemTempReqSpell.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqSpell.Click += new System.EventHandler(this.buttonItemTempReqSpell_Click);
+			this.buttonItemTempReqSpell.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempReqClass
 			// 
@@ -12764,7 +12767,7 @@
 			this.buttonItemTempReqClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqClass.TabIndex = 36;
 			this.buttonItemTempReqClass.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqClass.Click += new System.EventHandler(this.buttonItemTempReqClass_Click);
+			this.buttonItemTempReqClass.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempReqRace
 			// 
@@ -12773,7 +12776,7 @@
 			this.buttonItemTempReqRace.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempReqRace.TabIndex = 35;
 			this.buttonItemTempReqRace.UseVisualStyleBackColor = true;
-			this.buttonItemTempReqRace.Click += new System.EventHandler(this.buttonItemTempReqRace_Click);
+			this.buttonItemTempReqRace.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempReqItemLevel
 			// 
@@ -13021,7 +13024,7 @@
 			this.buttonItemTempDisplayID.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempDisplayID.TabIndex = 43;
 			this.buttonItemTempDisplayID.UseVisualStyleBackColor = true;
-			this.buttonItemTempDisplayID.Click += new System.EventHandler(this.buttonItemTempDisplayID_Click);
+			this.buttonItemTempDisplayID.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempEFlags
 			// 
@@ -13030,7 +13033,7 @@
 			this.buttonItemTempEFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempEFlags.TabIndex = 42;
 			this.buttonItemTempEFlags.UseVisualStyleBackColor = true;
-			this.buttonItemTempEFlags.Click += new System.EventHandler(this.buttonItemTempEFlags_Click);
+			this.buttonItemTempEFlags.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempFlags
 			// 
@@ -13039,7 +13042,7 @@
 			this.buttonItemTempFlags.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempFlags.TabIndex = 41;
 			this.buttonItemTempFlags.UseVisualStyleBackColor = true;
-			this.buttonItemTempFlags.Click += new System.EventHandler(this.buttonItemTempFlags_Click);
+			this.buttonItemTempFlags.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempQuality
 			// 
@@ -13048,7 +13051,7 @@
 			this.buttonItemTempQuality.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempQuality.TabIndex = 40;
 			this.buttonItemTempQuality.UseVisualStyleBackColor = true;
-			this.buttonItemTempQuality.Click += new System.EventHandler(this.buttonItemTempQuality_Click);
+			this.buttonItemTempQuality.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempSubclass
 			// 
@@ -13057,7 +13060,7 @@
 			this.buttonItemTempSubclass.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempSubclass.TabIndex = 39;
 			this.buttonItemTempSubclass.UseVisualStyleBackColor = true;
-			this.buttonItemTempSubclass.Click += new System.EventHandler(this.buttonItemTempSubclass_Click);
+			this.buttonItemTempSubclass.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// buttonItemTempTypeClass
 			// 
@@ -13066,7 +13069,7 @@
 			this.buttonItemTempTypeClass.Size = new System.Drawing.Size(18, 18);
 			this.buttonItemTempTypeClass.TabIndex = 38;
 			this.buttonItemTempTypeClass.UseVisualStyleBackColor = true;
-			this.buttonItemTempTypeClass.Click += new System.EventHandler(this.buttonItemTempTypeClass_Click);
+			this.buttonItemTempTypeClass.Click += new System.EventHandler(this.buttonItemPopup_Click);
 			// 
 			// textBoxItemTempStatsC
 			// 
@@ -14990,7 +14993,7 @@
 			this.toolStripSplitButtonItemScriptSQLGenerate.Name = "toolStripSplitButtonItemScriptSQLGenerate";
 			this.toolStripSplitButtonItemScriptSQLGenerate.Size = new System.Drawing.Size(120, 20);
 			this.toolStripSplitButtonItemScriptSQLGenerate.Text = "Generate SQL File";
-			this.toolStripSplitButtonItemScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonItemScriptSQLGenerate_ButtonClick);
+			this.toolStripSplitButtonItemScriptSQLGenerate.ButtonClick += new System.EventHandler(this.toolStripSplitButtonSqlGenerate);
 			// 
 			// toolStripSplitButtonItemScriptUpdate
 			// 
@@ -15735,7 +15738,7 @@
 		private System.Windows.Forms.TabControl tabControlCategoryItem;
 		private System.Windows.Forms.TabPage tabPageItemSearch;
 		private System.Windows.Forms.ComboBox comboBoxItemSearchQuality;
-		private System.Windows.Forms.Button buttonItemSearchToolSubclass;
+		private System.Windows.Forms.Button buttonItemSearchSubclass;
 		private System.Windows.Forms.Button buttonItemSearchClass;
 		private System.Windows.Forms.TextBox textBoxItemSearchReqLevel;
 		private System.Windows.Forms.TextBox textBoxItemSearchDescription;
@@ -16584,7 +16587,7 @@
 		private System.Windows.Forms.Button buttonQuestSectionRewFactionID1;
 		private System.Windows.Forms.Button buttonQuestSectionRewChoiceID1;
 		private System.Windows.Forms.Button buttonQuestSectionRewSpell;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button buttonCreatureSearchRank;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSE;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSN;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnCSS;

@@ -96,6 +96,7 @@
     <Compile Include="Classes\Generate\SqlGenerate.cs" />
     <Compile Include="Classes\ItemTab\Item.cs" />
     <Compile Include="Classes\ItemTab\ItemLPMD.cs" />
+    <Compile Include="Classes\PopupHelper.cs" />
     <Compile Include="Classes\QuestTab\Quest.cs" />
     <Compile Include="Classes\QuestTab\QuestGT.cs" />
     <Compile Include="Classes\Settings\Settings.cs" />

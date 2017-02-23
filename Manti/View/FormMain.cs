@@ -43,21 +43,38 @@ namespace Manti.Views {
 		// https://github.com/Heitx/Manti-TC
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-		private DateTime getDateTimeFromString(string date) {
-			DateTime expetedDate;
-			if(DateTime.TryParseExact(date, new string[] { "dd/MM/yyyy H:m:s", "MM/dd/yyyy H:m:s" }, null, DateTimeStyles.None, out expetedDate)) {
-				return expetedDate;
+		private void setOfflineMode(bool enable) {
+			FormMySQL.Offline = enable;
+
+			// Search Buttons
+			Button[] dButtons = new Button[]
+			{
+					buttonAccountSearchSearch,
+					buttonCharacterSearchSearch,
+					buttonCreatureSearchSearch,
+					buttonQuestSearchSearch,
+					buttonGameObjectSearchSearch,
+					buttonItemSearchSearch
+			};
+
+			// Execute Buttons
+			ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
+			{
+					toolStripSplitButtonAccountScriptUpdate,
+					toolStripSplitButtonCharacterScriptUpdate,
+					toolStripSplitButtonCreatureScriptUpdate,
+					toolStripSplitButtonQuestScriptUpdate,
+					toolStripSplitButtonGOScriptUpdate,
+					toolStripSplitButtonItemScriptUpdate
+			};
+
+			foreach(Button btn in dButtons) {
+				btn.Enabled = !enable;
 			}
 
-			return new DateTime();
-		}
-
-		private string setDefaultValue(Control control, string defaultValue) {
-			if(string.IsNullOrEmpty(control.Text)) {
-				return defaultValue;
+			foreach(ToolStripSplitButton btn in dStripButton) {
+				btn.Enabled = !enable;
 			}
-
-			return control.Text;
 		}
 
 		#region Functions
@@ -424,37 +441,37 @@ namespace Manti.Views {
 
 		private void fillGameObjectTemplate(GameObject go) {
 			if(go != null) {
-				textBoxGameObjectTempEntry.Text = go.entry.ToString();
-				textBoxGameObjectTempType.Text = go.type.ToString();
-				textBoxGameObjectTempDID.Text = go.displayId.ToString();
-				textBoxGameObjectTempName.Text = go.name;
+				textBoxGameObjectTempEntry.Text   = go.entry.ToString();
+				textBoxGameObjectTempType.Text    = go.type.ToString();
+				textBoxGameObjectTempDID.Text     = go.displayId.ToString();
+				textBoxGameObjectTempName.Text    = go.name;
 				textBoxGameObjectTempFaction.Text = go.faction.ToString();
-				textBoxGameObjectTempFlags.Text = go.flags.ToString();
-				textBoxGameObjectTempSize.Text = go.size.ToString();
-				textBoxGameObjectTempD0.Text = go.data0.ToString();
-				textBoxGameObjectTempD1.Text = go.data1.ToString();
-				textBoxGameObjectTempD2.Text = go.data2.ToString();
-				textBoxGameObjectTempD3.Text = go.data3.ToString();
-				textBoxGameObjectTempD4.Text = go.data4.ToString();
-				textBoxGameObjectTempD5.Text = go.data5.ToString();
-				textBoxGameObjectTempD6.Text = go.data6.ToString();
-				textBoxGameObjectTempD7.Text = go.data7.ToString();
-				textBoxGameObjectTempD8.Text = go.data8.ToString();
-				textBoxGameObjectTempD9.Text = go.data9.ToString();
-				textBoxGameObjectTempD10.Text = go.data10.ToString();
-				textBoxGameObjectTempD11.Text = go.data11.ToString();
-				textBoxGameObjectTempD12.Text = go.data12.ToString();
-				textBoxGameObjectTempD13.Text = go.data13.ToString();
-				textBoxGameObjectTempD14.Text = go.data14.ToString();
-				textBoxGameObjectTempD15.Text = go.data15.ToString();
-				textBoxGameObjectTempD16.Text = go.data16.ToString();
-				textBoxGameObjectTempD17.Text = go.data17.ToString();
-				textBoxGameObjectTempD18.Text = go.data18.ToString();
-				textBoxGameObjectTempD19.Text = go.data19.ToString();
-				textBoxGameObjectTempD20.Text = go.data20.ToString();
-				textBoxGameObjectTempD21.Text = go.data21.ToString();
-				textBoxGameObjectTempD22.Text = go.data22.ToString();
-				textBoxGameObjectTempD23.Text = go.data23.ToString();
+				textBoxGameObjectTempFlags.Text   = go.flags.ToString();
+				textBoxGameObjectTempSize.Text    = go.size.ToString();
+				textBoxGameObjectTempD0.Text      = go.data0.ToString();
+				textBoxGameObjectTempD1.Text      = go.data1.ToString();
+				textBoxGameObjectTempD2.Text      = go.data2.ToString();
+				textBoxGameObjectTempD3.Text      = go.data3.ToString();
+				textBoxGameObjectTempD4.Text      = go.data4.ToString();
+				textBoxGameObjectTempD5.Text      = go.data5.ToString();
+				textBoxGameObjectTempD6.Text      = go.data6.ToString();
+				textBoxGameObjectTempD7.Text      = go.data7.ToString();
+				textBoxGameObjectTempD8.Text      = go.data8.ToString();
+				textBoxGameObjectTempD9.Text      = go.data9.ToString();
+				textBoxGameObjectTempD10.Text     = go.data10.ToString();
+				textBoxGameObjectTempD11.Text     = go.data11.ToString();
+				textBoxGameObjectTempD12.Text     = go.data12.ToString();
+				textBoxGameObjectTempD13.Text     = go.data13.ToString();
+				textBoxGameObjectTempD14.Text     = go.data14.ToString();
+				textBoxGameObjectTempD15.Text     = go.data15.ToString();
+				textBoxGameObjectTempD16.Text     = go.data16.ToString();
+				textBoxGameObjectTempD17.Text     = go.data17.ToString();
+				textBoxGameObjectTempD18.Text     = go.data18.ToString();
+				textBoxGameObjectTempD19.Text     = go.data19.ToString();
+				textBoxGameObjectTempD20.Text     = go.data20.ToString();
+				textBoxGameObjectTempD21.Text     = go.data21.ToString();
+				textBoxGameObjectTempD22.Text     = go.data22.ToString();
+				textBoxGameObjectTempD23.Text     = go.data23.ToString();
 
 				tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
 			}
@@ -647,34 +664,34 @@ namespace Manti.Views {
 			Account account = new Account();
 
 			if(!string.IsNullOrEmpty(textBoxAccountAccountID.Text)) {
-				account.id = Convert.ToUInt32(textBoxAccountAccountID.Text);
-				account.username = textBoxAccountAccountUsername.Text;
-				account.email = textBoxAccountAccountEmail.Text;
-				account.reqemail = textBoxAccountAccountRegmail.Text;
-				account.reqemail = textBoxAccountAccountJoindate.Text;
-				account.lastIP = textBoxAccountAccountLastIP.Text;
-				account.locked = checkBoxAccountAccountLocked.Checked;
-				account.online = checkBoxAccountAccountOnline.Checked;
+				account.id        = Convert.ToUInt32(textBoxAccountAccountID.Text);
+				account.username  = textBoxAccountAccountUsername.Text;
+				account.email     = textBoxAccountAccountEmail.Text;
+				account.reqemail  = textBoxAccountAccountRegmail.Text;
+				account.reqemail  = textBoxAccountAccountJoindate.Text;
+				account.lastIP    = textBoxAccountAccountLastIP.Text;
+				account.locked    = checkBoxAccountAccountLocked.Checked;
+				account.online    = checkBoxAccountAccountOnline.Checked;
 				account.expansion = Convert.ToByte(textBoxAccountAccountExpansion.Text);
 			}
 
 			if(!string.IsNullOrEmpty(textBoxAccountAccountBandate.Text)) {
 				account.banned = new Classes.AccountTab.AccountBanned();
 
-				account.banned.banDate = getDateTimeFromString(textBoxAccountAccountBandate.Text);
-				account.banned.unbanDate = getDateTimeFromString(textBoxAccountAccountUnbandate.Text);
-				account.banned.reason = textBoxAccountAccountBanreason.Text;
-				account.banned.by = textBoxAccountAccountBannedby.Text;
-				account.banned.isActive = checkBoxAccountAccountBanActive.Checked;
+				account.banned.banDate   = Classes.UtilityHelper.getDateTimeFromString(textBoxAccountAccountBandate.Text);
+				account.banned.unbanDate = Classes.UtilityHelper.getDateTimeFromString(textBoxAccountAccountUnbandate.Text);
+				account.banned.reason    = textBoxAccountAccountBanreason.Text;
+				account.banned.by        = textBoxAccountAccountBannedby.Text;
+				account.banned.isActive  = checkBoxAccountAccountBanActive.Checked;
 			}
 
 			if(!string.IsNullOrEmpty(textBoxAccountAccountMutedate.Text)) {
 				account.muted = new Classes.AccountTab.AccountMuted();
 
-				account.muted.muteDate = getDateTimeFromString(textBoxAccountAccountMutedate.Text);
+				account.muted.muteDate = Classes.UtilityHelper.getDateTimeFromString(textBoxAccountAccountMutedate.Text);
 				account.muted.duration = Convert.ToDouble(textBoxAccountAccountMutetime.Text);
-				account.muted.reason = textBoxAccountAccountMutereason.Text;
-				account.muted.by = textBoxAccountAccountMutedby.Text;
+				account.muted.reason   = textBoxAccountAccountMutereason.Text;
+				account.muted.by       = textBoxAccountAccountMutedby.Text;
 			}
 
 			if(dataGridViewAccountAccess.Rows.Count > 0) {
@@ -683,7 +700,7 @@ namespace Manti.Views {
 				for(var i = 0; i < dataGridViewAccountAccess.Rows.Count; i++) {
 					access[i] = new AccountAccess();
 
-					access[i].id = Convert.ToUInt32(dataGridViewAccountAccess.Rows[i].Cells[0].Value); // id
+					access[i].id      = Convert.ToUInt32(dataGridViewAccountAccess.Rows[i].Cells[0].Value); // id
 					access[i].gmLevel = Convert.ToInt32(dataGridViewAccountAccess.Rows[i].Cells[1].Value); // gmlevel
 					access[i].realmID = Convert.ToInt32(dataGridViewAccountAccess.Rows[i].Cells[2].Value); // realmid
 				}
@@ -697,31 +714,31 @@ namespace Manti.Views {
 		private Character updateCharacter() { // Model.CharacterTab.Character
 			Character character = new Character();
 
-			character.guid = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
-			character.accountID = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
-			character.name = textBoxCharacterCharacterName.Text;
-			character.charRace = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
-			character.charClass = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
-			character.sex = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
-			character.level = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
-			character.money = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
-			character.xp = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
+			character.guid        = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
+			character.accountID   = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
+			character.name        = textBoxCharacterCharacterName.Text;
+			character.charRace    = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
+			character.charClass   = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
+			character.sex         = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
+			character.level       = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
+			character.money       = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
+			character.xp          = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
 			character.chosenTitle = Convert.ToUInt32(textBoxCharacterCharacterTitle.Text);
-			character.isOnline = checkBoxCharacterCharacterOnline.Checked;
+			character.isOnline    = checkBoxCharacterCharacterOnline.Checked;
 			character.isCinematic = checkBoxCharacterCharacterCinematic.Checked;
-			character.isResting = checkBoxCharacterCharacterRest.Checked;
+			character.isResting   = checkBoxCharacterCharacterRest.Checked;
 			// Location
-			character.mapID = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
-			character.instanceID = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
-			character.zoneID = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
+			character.mapID       = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
+			character.instanceID  = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
+			character.zoneID      = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
 			character.orientation = Convert.ToDouble(textBoxCharacterCharacterCoordO.Text);
-			character.xPosition = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
-			character.yPosition = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
-			character.zPosition = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
+			character.xPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
+			character.yPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
+			character.zPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
 			// Player vs Player
 			character.honorPoints = Convert.ToInt32(textBoxCharacterCharacterHonorPoints.Text);
 			character.arenaPoints = Convert.ToInt32(textBoxCharacterCharacterArenaPoints.Text);
-			character.totalKills = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
+			character.totalKills  = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
 			// Stats
 			character.health = Convert.ToUInt64(textBoxCharacterCharacterHealth.Text);
 			character.power1 = Convert.ToUInt64(textBoxCharacterCharacterPower1.Text);
@@ -741,7 +758,7 @@ namespace Manti.Views {
 				ci[i] = new CharacterInventory();
 
 				ci[i].guid = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[0].Value);
-				ci[i].bag = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[1].Value);
+				ci[i].bag  = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[1].Value);
 				ci[i].slot = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[2].Value);
 				ci[i].item = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[3].Value);
 			}
@@ -1056,140 +1073,140 @@ namespace Manti.Views {
 		private Item updateItem() {
 			Item item = new Item();
 
-			item.entry = Convert.ToUInt32(textBoxItemTempEntry.Text);
-			item.iClass = Convert.ToUInt32(textBoxItemTempTypeClass.Text);
-			item.iSub = Convert.ToUInt32(textBoxItemTempSubclass.Text);
-			item.name = textBoxItemTempName.Text;
-			item.description = textBoxItemTempDescription.Text;
-			item.displayId = Convert.ToUInt32(textBoxItemTempDisplayID.Text);
-			item.quality = Convert.ToUInt32(textBoxItemTempQuality.Text);
-			item.buycount = Convert.ToInt32(textBoxItemTempBuyC.Text);
-			item.inventory = Convert.ToUInt32(textBoxItemTempInventory.Text);
-			item.flags = Convert.ToInt32(textBoxItemTempFlags.Text);
-			item.extraFlags = Convert.ToInt32(textBoxItemTempEFlags.Text);
-			item.maxCount = Convert.ToInt32(textBoxItemTempMaxC.Text);
-			item.containerSlot = Convert.ToUInt32(textBoxItemTempContainer.Text);
-			item.buyPrice = Convert.ToUInt32(textBoxItemTempBuyP.Text);
-			item.sellPrice = Convert.ToUInt32(textBoxItemTempSellP.Text);
-			item.damageType1 = Convert.ToUInt32(textBoxItemTempDmgType1.Text);
-			item.damageType2 = Convert.ToUInt32(textBoxItemTempDmgType2.Text);
-			item.damageMin1 = Convert.ToUInt32(textBoxItemTempDmgMin1.Text);
-			item.damageMin2 = Convert.ToUInt32(textBoxItemTempDmgMin2.Text);
-			item.damageMax1 = Convert.ToUInt32(textBoxItemTempDmgMax1.Text);
-			item.damageMax2 = Convert.ToUInt32(textBoxItemTempDmgMax2.Text);
-			item.delay = Convert.ToUInt32(textBoxItemTempDelay.Text);
-			item.ammoType = Convert.ToUInt32(textBoxItemTempAmmoType.Text);
-			item.rangedMod = Convert.ToUInt32(textBoxItemTempRangedMod.Text);
-			item.itemSet = Convert.ToUInt32(textBoxItemTempItemSet.Text);
-			item.bonding = Convert.ToUInt32(textBoxItemTempBonding.Text);
-			item.block = Convert.ToInt32(textBoxItemTempBlock.Text);
-			item.durability = Convert.ToInt32(textBoxItemTempDurability.Text);
-			item.sheath = Convert.ToUInt32(textBoxItemTempSheath.Text);
-			item.reistanceHoly = Convert.ToUInt32(textBoxItemTempResisHoly.Text);
-			item.reistanceFrost = Convert.ToUInt32(textBoxItemTempResisFrost.Text);
-			item.reistanceFire = Convert.ToUInt32(textBoxItemTempResisFire.Text);
-			item.reistanceShadow = Convert.ToUInt32(textBoxItemTempResisShadow.Text);
-			item.reistanceNature = Convert.ToUInt32(textBoxItemTempResisNature.Text);
-			item.reistanceArcane = Convert.ToUInt32(textBoxItemTempResisArcane.Text);
-			item.socketColor1 = Convert.ToUInt32(textBoxItemTempColor1.Text);
-			item.socketColor2 = Convert.ToUInt32(textBoxItemTempColor2.Text);
-			item.socketColor3 = Convert.ToUInt32(textBoxItemTempColor3.Text);
-			item.socketContent1 = Convert.ToUInt32(textBoxItemTempContent1.Text);
-			item.socketContent2 = Convert.ToUInt32(textBoxItemTempContent2.Text);
-			item.socketContent3 = Convert.ToUInt32(textBoxItemTempContent3.Text);
-			item.socketBonus = Convert.ToUInt32(textBoxItemTempSocketBonus.Text);
-			item.socketGemProperty = Convert.ToUInt32(textBoxItemTempGemProper.Text);
-			item.spellEntry1 = Convert.ToUInt32(textBoxItemTempSpellID1.Text);
-			item.spellEntry2 = Convert.ToUInt32(textBoxItemTempSpellID2.Text);
-			item.spellEntry3 = Convert.ToUInt32(textBoxItemTempSpellID3.Text);
-			item.spellEntry4 = Convert.ToUInt32(textBoxItemTempSpellID4.Text);
-			item.spellEntry5 = Convert.ToUInt32(textBoxItemTempSpellID5.Text);
-			item.spellTrigger1 = Convert.ToInt32(textBoxItemTempTrigger1.Text);
-			item.spellTrigger2 = Convert.ToInt32(textBoxItemTempTrigger2.Text);
-			item.spellTrigger3 = Convert.ToInt32(textBoxItemTempTrigger3.Text);
-			item.spellTrigger4 = Convert.ToInt32(textBoxItemTempTrigger4.Text);
-			item.spellTrigger5 = Convert.ToInt32(textBoxItemTempTrigger5.Text);
-			item.spellCharges1 = Convert.ToInt32(textBoxItemTempCharges1.Text);
-			item.spellCharges2 = Convert.ToInt32(textBoxItemTempCharges2.Text);
-			item.spellCharges3 = Convert.ToInt32(textBoxItemTempCharges3.Text);
-			item.spellCharges4 = Convert.ToInt32(textBoxItemTempCharges4.Text);
-			item.spellCharges5 = Convert.ToInt32(textBoxItemTempCharges5.Text);
-			item.spellPPMRate1 = Convert.ToInt32(textBoxItemTempRate1.Text);
-			item.spellPPMRate2 = Convert.ToInt32(textBoxItemTempRate2.Text);
-			item.spellPPMRate3 = Convert.ToInt32(textBoxItemTempRate3.Text);
-			item.spellPPMRate4 = Convert.ToInt32(textBoxItemTempRate4.Text);
-			item.spellPPMRate5 = Convert.ToInt32(textBoxItemTempRate5.Text);
-			item.spellCooldown1 = Convert.ToSingle(textBoxItemTempCD1.Text);
-			item.spellCooldown2 = Convert.ToSingle(textBoxItemTempCD2.Text);
-			item.spellCooldown3 = Convert.ToSingle(textBoxItemTempCD3.Text);
-			item.spellCooldown4 = Convert.ToSingle(textBoxItemTempCD4.Text);
-			item.spellCooldown5 = Convert.ToSingle(textBoxItemTempCD5.Text);
-			item.spellCategory1 = Convert.ToInt32(textBoxItemTempCategory1.Text);
-			item.spellCategory2 = Convert.ToInt32(textBoxItemTempCategory2.Text);
-			item.spellCategory3 = Convert.ToInt32(textBoxItemTempCategory3.Text);
-			item.spellCategory4 = Convert.ToInt32(textBoxItemTempCategory4.Text);
-			item.spellCategory5 = Convert.ToInt32(textBoxItemTempCategory5.Text);
+			item.entry                  = Convert.ToUInt32(textBoxItemTempEntry.Text);
+			item.iClass                 = Convert.ToUInt32(textBoxItemTempTypeClass.Text);
+			item.iSub                   = Convert.ToUInt32(textBoxItemTempSubclass.Text);
+			item.name                   = textBoxItemTempName.Text;
+			item.description            = textBoxItemTempDescription.Text;
+			item.displayId              = Convert.ToUInt32(textBoxItemTempDisplayID.Text);
+			item.quality                = Convert.ToUInt32(textBoxItemTempQuality.Text);
+			item.buycount               = Convert.ToInt32(textBoxItemTempBuyC.Text);
+			item.inventory              = Convert.ToUInt32(textBoxItemTempInventory.Text);
+			item.flags                  = Convert.ToInt32(textBoxItemTempFlags.Text);
+			item.extraFlags             = Convert.ToInt32(textBoxItemTempEFlags.Text);
+			item.maxCount               = Convert.ToInt32(textBoxItemTempMaxC.Text);
+			item.containerSlot          = Convert.ToUInt32(textBoxItemTempContainer.Text);
+			item.buyPrice               = Convert.ToUInt32(textBoxItemTempBuyP.Text);
+			item.sellPrice              = Convert.ToUInt32(textBoxItemTempSellP.Text);
+			item.damageType1            = Convert.ToUInt32(textBoxItemTempDmgType1.Text);
+			item.damageType2            = Convert.ToUInt32(textBoxItemTempDmgType2.Text);
+			item.damageMin1             = Convert.ToUInt32(textBoxItemTempDmgMin1.Text);
+			item.damageMin2             = Convert.ToUInt32(textBoxItemTempDmgMin2.Text);
+			item.damageMax1             = Convert.ToUInt32(textBoxItemTempDmgMax1.Text);
+			item.damageMax2             = Convert.ToUInt32(textBoxItemTempDmgMax2.Text);
+			item.delay                  = Convert.ToUInt32(textBoxItemTempDelay.Text);
+			item.ammoType               = Convert.ToUInt32(textBoxItemTempAmmoType.Text);
+			item.rangedMod              = Convert.ToUInt32(textBoxItemTempRangedMod.Text);
+			item.itemSet                = Convert.ToUInt32(textBoxItemTempItemSet.Text);
+			item.bonding                = Convert.ToUInt32(textBoxItemTempBonding.Text);
+			item.block                  = Convert.ToInt32(textBoxItemTempBlock.Text);
+			item.durability             = Convert.ToInt32(textBoxItemTempDurability.Text);
+			item.sheath                 = Convert.ToUInt32(textBoxItemTempSheath.Text);
+			item.reistanceHoly          = Convert.ToUInt32(textBoxItemTempResisHoly.Text);
+			item.reistanceFrost         = Convert.ToUInt32(textBoxItemTempResisFrost.Text);
+			item.reistanceFire          = Convert.ToUInt32(textBoxItemTempResisFire.Text);
+			item.reistanceShadow        = Convert.ToUInt32(textBoxItemTempResisShadow.Text);
+			item.reistanceNature        = Convert.ToUInt32(textBoxItemTempResisNature.Text);
+			item.reistanceArcane        = Convert.ToUInt32(textBoxItemTempResisArcane.Text);
+			item.socketColor1           = Convert.ToUInt32(textBoxItemTempColor1.Text);
+			item.socketColor2           = Convert.ToUInt32(textBoxItemTempColor2.Text);
+			item.socketColor3           = Convert.ToUInt32(textBoxItemTempColor3.Text);
+			item.socketContent1         = Convert.ToUInt32(textBoxItemTempContent1.Text);
+			item.socketContent2         = Convert.ToUInt32(textBoxItemTempContent2.Text);
+			item.socketContent3         = Convert.ToUInt32(textBoxItemTempContent3.Text);
+			item.socketBonus            = Convert.ToUInt32(textBoxItemTempSocketBonus.Text);
+			item.socketGemProperty      = Convert.ToUInt32(textBoxItemTempGemProper.Text);
+			item.spellEntry1            = Convert.ToUInt32(textBoxItemTempSpellID1.Text);
+			item.spellEntry2            = Convert.ToUInt32(textBoxItemTempSpellID2.Text);
+			item.spellEntry3            = Convert.ToUInt32(textBoxItemTempSpellID3.Text);
+			item.spellEntry4            = Convert.ToUInt32(textBoxItemTempSpellID4.Text);
+			item.spellEntry5            = Convert.ToUInt32(textBoxItemTempSpellID5.Text);
+			item.spellTrigger1          = Convert.ToInt32(textBoxItemTempTrigger1.Text);
+			item.spellTrigger2          = Convert.ToInt32(textBoxItemTempTrigger2.Text);
+			item.spellTrigger3          = Convert.ToInt32(textBoxItemTempTrigger3.Text);
+			item.spellTrigger4          = Convert.ToInt32(textBoxItemTempTrigger4.Text);
+			item.spellTrigger5          = Convert.ToInt32(textBoxItemTempTrigger5.Text);
+			item.spellCharges1          = Convert.ToInt32(textBoxItemTempCharges1.Text);
+			item.spellCharges2          = Convert.ToInt32(textBoxItemTempCharges2.Text);
+			item.spellCharges3          = Convert.ToInt32(textBoxItemTempCharges3.Text);
+			item.spellCharges4          = Convert.ToInt32(textBoxItemTempCharges4.Text);
+			item.spellCharges5          = Convert.ToInt32(textBoxItemTempCharges5.Text);
+			item.spellPPMRate1          = Convert.ToInt32(textBoxItemTempRate1.Text);
+			item.spellPPMRate2          = Convert.ToInt32(textBoxItemTempRate2.Text);
+			item.spellPPMRate3          = Convert.ToInt32(textBoxItemTempRate3.Text);
+			item.spellPPMRate4          = Convert.ToInt32(textBoxItemTempRate4.Text);
+			item.spellPPMRate5          = Convert.ToInt32(textBoxItemTempRate5.Text);
+			item.spellCooldown1         = Convert.ToSingle(textBoxItemTempCD1.Text);
+			item.spellCooldown2         = Convert.ToSingle(textBoxItemTempCD2.Text);
+			item.spellCooldown3         = Convert.ToSingle(textBoxItemTempCD3.Text);
+			item.spellCooldown4         = Convert.ToSingle(textBoxItemTempCD4.Text);
+			item.spellCooldown5         = Convert.ToSingle(textBoxItemTempCD5.Text);
+			item.spellCategory1         = Convert.ToInt32(textBoxItemTempCategory1.Text);
+			item.spellCategory2         = Convert.ToInt32(textBoxItemTempCategory2.Text);
+			item.spellCategory3         = Convert.ToInt32(textBoxItemTempCategory3.Text);
+			item.spellCategory4         = Convert.ToInt32(textBoxItemTempCategory4.Text);
+			item.spellCategory5         = Convert.ToInt32(textBoxItemTempCategory5.Text);
 			item.spellCategoryCooldown1 = Convert.ToSingle(textBoxItemTempCategoryCD1.Text);
 			item.spellCategoryCooldown2 = Convert.ToSingle(textBoxItemTempCategoryCD2.Text);
 			item.spellCategoryCooldown3 = Convert.ToSingle(textBoxItemTempCategoryCD3.Text);
 			item.spellCategoryCooldown4 = Convert.ToSingle(textBoxItemTempCategoryCD4.Text);
 			item.spellCategoryCooldown5 = Convert.ToSingle(textBoxItemTempCategoryCD5.Text);
-			item.startQuest = Convert.ToUInt32(textBoxItemTempStartQuest.Text);
-			item.material = Convert.ToInt32(textBoxItemTempMaterial.Text);
-			item.property = Convert.ToUInt32(textBoxItemTempProperty.Text);
-			item.suffix = Convert.ToUInt32(textBoxItemTempSuffix.Text);
-			item.area = Convert.ToUInt32(textBoxItemTempArea.Text);
-			item.map = Convert.ToUInt32(textBoxItemTempMap.Text);
-			item.disenchantId = Convert.ToUInt32(textBoxItemTempDisenchantID.Text);
-			item.pageText = Convert.ToUInt32(textBoxItemTempPageText.Text);
-			item.languageId = Convert.ToUInt32(textBoxItemTempLanguage.Text);
-			item.pageMaterial = Convert.ToUInt32(textBoxItemTempPageMaterial.Text);
-			item.foodType = Convert.ToUInt32(textBoxItemTempFoodType.Text);
-			item.lockId = Convert.ToUInt32(textBoxItemTempLockID.Text);
-			item.holidayId = Convert.ToUInt32(textBoxItemTempHolidayID.Text);
-			item.bagFamily = Convert.ToUInt32(textBoxItemTempBagFamily.Text);
-			item.modifier = Convert.ToUInt32(textBoxItemTempModifier.Text);
-			item.duration = Convert.ToUInt32(textBoxItemTempDuration.Text);
-			item.limitCategory = Convert.ToUInt32(textBoxItemTempLimitCate.Text);
-			item.minMoney = Convert.ToUInt32(textBoxItemTempMoneyMin.Text);
-			item.maxMoney = Convert.ToUInt32(textBoxItemTempMoneyMax.Text);
-			item.flagsCustom = Convert.ToUInt32(textBoxItemTempFlagsC.Text);
-			item.totemCategory = Convert.ToUInt32(textBoxItemTempTotemCategory.Text);
-			item.reqRace = Convert.ToInt32(textBoxItemTempReqRace.Text);
-			item.reqClass = Convert.ToInt32(textBoxItemTempReqClass.Text);
-			item.reqLevel = Convert.ToUInt32(textBoxItemTempReqLevel.Text);
-			item.reqSkill = Convert.ToUInt32(textBoxItemTempReqSkill.Text);
-			item.reqSkillRank = Convert.ToUInt32(textBoxItemTempReqSkillRank.Text);
-			item.reqHonorRank = Convert.ToUInt32(textBoxItemTempReqHonorRank.Text);
-			item.reqRepFaction = Convert.ToUInt32(textBoxItemTempReqRepFaction.Text);
-			item.reqRepRank = Convert.ToUInt32(textBoxItemTempReqRepRank.Text);
-			item.reqDisenchant = Convert.ToUInt32(textBoxItemTempReqDisenchant.Text);
-			item.reqSpell = Convert.ToUInt32(textBoxItemTempReqSpell.Text);
-			item.reqCityRank = Convert.ToUInt32(textBoxItemTempReqCityRank.Text);
-			item.reqItemLevel = Convert.ToInt32(textBoxItemTempReqItemLevel.Text);
-			item.statsCount = Convert.ToUInt32(textBoxItemTempStatsC.Text);
-			item.statsType1 = Convert.ToUInt32(textBoxItemTempStatsType1.Text);
-			item.statsType2 = Convert.ToUInt32(textBoxItemTempStatsType2.Text);
-			item.statsType3 = Convert.ToUInt32(textBoxItemTempStatsType3.Text);
-			item.statsType4 = Convert.ToUInt32(textBoxItemTempStatsType4.Text);
-			item.statsType5 = Convert.ToUInt32(textBoxItemTempStatsType5.Text);
-			item.statsType6 = Convert.ToUInt32(textBoxItemTempStatsType6.Text);
-			item.statsType7 = Convert.ToUInt32(textBoxItemTempStatsType7.Text);
-			item.statsType8 = Convert.ToUInt32(textBoxItemTempStatsType8.Text);
-			item.statsType9 = Convert.ToUInt32(textBoxItemTempStatsType9.Text);
-			item.statsType10 = Convert.ToUInt32(textBoxItemTempStatsType10.Text);
-			item.statsValue1 = Convert.ToInt32(textBoxItemTempStatsValue1.Text);
-			item.statsValue2 = Convert.ToInt32(textBoxItemTempStatsValue2.Text);
-			item.statsValue3 = Convert.ToInt32(textBoxItemTempStatsValue3.Text);
-			item.statsValue4 = Convert.ToInt32(textBoxItemTempStatsValue4.Text);
-			item.statsValue5 = Convert.ToInt32(textBoxItemTempStatsValue5.Text);
-			item.statsValue6 = Convert.ToInt32(textBoxItemTempStatsValue6.Text);
-			item.statsValue7 = Convert.ToInt32(textBoxItemTempStatsValue7.Text);
-			item.statsValue8 = Convert.ToInt32(textBoxItemTempStatsValue8.Text);
-			item.statsValue9 = Convert.ToInt32(textBoxItemTempStatsValue9.Text);
-			item.statsValue10 = Convert.ToInt32(textBoxItemTempStatsValue10.Text);
-			item.scalingStatDist = Convert.ToInt32(textBoxItemTempStatsScaleDist.Text);
-			item.scalingStatValue = Convert.ToInt32(textBoxItemTempStatsScaleValue.Text);
+			item.startQuest             = Convert.ToUInt32(textBoxItemTempStartQuest.Text);
+			item.material               = Convert.ToInt32(textBoxItemTempMaterial.Text);
+			item.property               = Convert.ToUInt32(textBoxItemTempProperty.Text);
+			item.suffix                 = Convert.ToUInt32(textBoxItemTempSuffix.Text);
+			item.area                   = Convert.ToUInt32(textBoxItemTempArea.Text);
+			item.map                    = Convert.ToUInt32(textBoxItemTempMap.Text);
+			item.disenchantId           = Convert.ToUInt32(textBoxItemTempDisenchantID.Text);
+			item.pageText               = Convert.ToUInt32(textBoxItemTempPageText.Text);
+			item.languageId             = Convert.ToUInt32(textBoxItemTempLanguage.Text);
+			item.pageMaterial           = Convert.ToUInt32(textBoxItemTempPageMaterial.Text);
+			item.foodType               = Convert.ToUInt32(textBoxItemTempFoodType.Text);
+			item.lockId                 = Convert.ToUInt32(textBoxItemTempLockID.Text);
+			item.holidayId              = Convert.ToUInt32(textBoxItemTempHolidayID.Text);
+			item.bagFamily              = Convert.ToUInt32(textBoxItemTempBagFamily.Text);
+			item.modifier               = Convert.ToUInt32(textBoxItemTempModifier.Text);
+			item.duration               = Convert.ToUInt32(textBoxItemTempDuration.Text);
+			item.limitCategory          = Convert.ToUInt32(textBoxItemTempLimitCate.Text);
+			item.minMoney               = Convert.ToUInt32(textBoxItemTempMoneyMin.Text);
+			item.maxMoney               = Convert.ToUInt32(textBoxItemTempMoneyMax.Text);
+			item.flagsCustom            = Convert.ToUInt32(textBoxItemTempFlagsC.Text);
+			item.totemCategory          = Convert.ToUInt32(textBoxItemTempTotemCategory.Text);
+			item.reqRace                = Convert.ToInt32(textBoxItemTempReqRace.Text);
+			item.reqClass               = Convert.ToInt32(textBoxItemTempReqClass.Text);
+			item.reqLevel               = Convert.ToUInt32(textBoxItemTempReqLevel.Text);
+			item.reqSkill               = Convert.ToUInt32(textBoxItemTempReqSkill.Text);
+			item.reqSkillRank           = Convert.ToUInt32(textBoxItemTempReqSkillRank.Text);
+			item.reqHonorRank           = Convert.ToUInt32(textBoxItemTempReqHonorRank.Text);
+			item.reqRepFaction          = Convert.ToUInt32(textBoxItemTempReqRepFaction.Text);
+			item.reqRepRank             = Convert.ToUInt32(textBoxItemTempReqRepRank.Text);
+			item.reqDisenchant          = Convert.ToUInt32(textBoxItemTempReqDisenchant.Text);
+			item.reqSpell               = Convert.ToUInt32(textBoxItemTempReqSpell.Text);
+			item.reqCityRank            = Convert.ToUInt32(textBoxItemTempReqCityRank.Text);
+			item.reqItemLevel           = Convert.ToInt32(textBoxItemTempReqItemLevel.Text);
+			item.statsCount             = Convert.ToUInt32(textBoxItemTempStatsC.Text);
+			item.statsType1             = Convert.ToUInt32(textBoxItemTempStatsType1.Text);
+			item.statsType2             = Convert.ToUInt32(textBoxItemTempStatsType2.Text);
+			item.statsType3             = Convert.ToUInt32(textBoxItemTempStatsType3.Text);
+			item.statsType4             = Convert.ToUInt32(textBoxItemTempStatsType4.Text);
+			item.statsType5             = Convert.ToUInt32(textBoxItemTempStatsType5.Text);
+			item.statsType6             = Convert.ToUInt32(textBoxItemTempStatsType6.Text);
+			item.statsType7             = Convert.ToUInt32(textBoxItemTempStatsType7.Text);
+			item.statsType8             = Convert.ToUInt32(textBoxItemTempStatsType8.Text);
+			item.statsType9             = Convert.ToUInt32(textBoxItemTempStatsType9.Text);
+			item.statsType10            = Convert.ToUInt32(textBoxItemTempStatsType10.Text);
+			item.statsValue1            = Convert.ToInt32(textBoxItemTempStatsValue1.Text);
+			item.statsValue2            = Convert.ToInt32(textBoxItemTempStatsValue2.Text);
+			item.statsValue3            = Convert.ToInt32(textBoxItemTempStatsValue3.Text);
+			item.statsValue4            = Convert.ToInt32(textBoxItemTempStatsValue4.Text);
+			item.statsValue5            = Convert.ToInt32(textBoxItemTempStatsValue5.Text);
+			item.statsValue6            = Convert.ToInt32(textBoxItemTempStatsValue6.Text);
+			item.statsValue7            = Convert.ToInt32(textBoxItemTempStatsValue7.Text);
+			item.statsValue8            = Convert.ToInt32(textBoxItemTempStatsValue8.Text);
+			item.statsValue9            = Convert.ToInt32(textBoxItemTempStatsValue9.Text);
+			item.statsValue10           = Convert.ToInt32(textBoxItemTempStatsValue10.Text);
+			item.scalingStatDist        = Convert.ToInt32(textBoxItemTempStatsScaleDist.Text);
+			item.scalingStatValue       = Convert.ToInt32(textBoxItemTempStatsScaleValue.Text);
 
 			return item;
 		}
@@ -1343,7 +1360,7 @@ namespace Manti.Views {
 		#region Search
 
 		private void buttonAccountSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageAccountSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageAccountSearch);
 
 			var dbAuth = Settings.getAuthDB();
 			var user   = textBoxAccountSearchUsername.Text;
@@ -1378,7 +1395,7 @@ namespace Manti.Views {
 			toolStripStatusLabelAccountSearchRows.Text = "Account(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCharacterSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageCharacterSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageCharacterSearch);
 
 			var dbChar  = Settings.getCharsDB();
 			var user    = textBoxCharacterSearchUsername.Text;
@@ -1418,7 +1435,7 @@ namespace Manti.Views {
 			toolStripStatusLabelCharacterSearchRows.Text = "Character(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCreatureSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageCreatureSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageCreatureSearch);
 
 			var dbWorld  = Settings.getWorldDB();
 			var entry    = textBoxCreatureSearchEntry.Text;
@@ -1453,7 +1470,7 @@ namespace Manti.Views {
 			toolStripStatusLabelCreatureSearchRows.Text = "Creature(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonQuestSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageQuestSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageQuestSearch);
 
 			var dbWorld = Settings.getWorldDB();
 			var id = textBoxQuestSearchID.Text;
@@ -1499,7 +1516,7 @@ namespace Manti.Views {
 			toolStripStatusLabelQuestSearchRows.Text = "Quest(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonGameObjectSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageGameObjectSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageGameObjectSearch);
 
 			var dbWorld = Settings.getWorldDB();
 			var entry   = textBoxGameObjectSearchEntry.Text;
@@ -1530,7 +1547,7 @@ namespace Manti.Views {
 			toolStripStatusLabelGameObjectSearchRows.Text = "Game Object(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonItemSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = CheckEmptyControls(tabPageItemSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageItemSearch);
 
 			var dbWorld  = Settings.getWorldDB();
 			var entry    = textBoxItemSearchEntry.Text;
@@ -1707,72 +1724,9 @@ namespace Manti.Views {
 
 		#endregion
 
-		#region GenerateSqlFile
+		#endregion - - - - - - 
 
-		private void toolStripSplitButtonCreatureScriptSQLGenerate_ButtonClick(object sender, EventArgs e) {
-			GenerateSQLFile("Creature_", textBoxCreatureTemplateEntry.Text + "-" + textBoxCreatureTemplateName.Text, textBoxCreatureScriptOutput);
-		}
-		private void toolStripSplitButtonQuestScriptSQLGenerate_ButtonClick(object sender, EventArgs e) {
-			GenerateSQLFile("QUEST_", textBoxQuestSectionID.Text + "-" + textBoxQuestSearchTitle.Text, textBoxQuestScriptOutput);
-		}
-		private void toolStripSplitButtonGOScriptSQLGenerate_ButtonClick(object sender, EventArgs e) {
-			GenerateSQLFile("GO_", textBoxCreatureTemplateEntry.Text + "-" + textBoxCreatureTemplateName.Text, textBoxCreatureScriptOutput);
-		}
-		private void toolStripSplitButtonItemScriptSQLGenerate_ButtonClick(object sender, EventArgs e) {
-			GenerateSQLFile("ITEM_", textBoxItemTempEntry.Text.Trim() + "-" + textBoxItemTempName.Text.Trim(), textBoxItemScriptOutput);
-		}
-
-		#endregion
-
-		#region Update
-
-		private void toolStripSplitButtonUploadScriptTab(object sender, EventArgs e) {
-			ToolStripSplitButton btn = (ToolStripSplitButton) sender;
-
-			int rows = 0;
-			ToolStripStatusLabel label = null;
-
-			if(btn == toolStripSplitButtonAccountScriptUpdate) {
-				DatabaseAuth da = Settings.getAuthDB();
-
-				rows = da.uploadSql(textBoxAccountScriptOutput.Text);
-				label = toolStripStatusLabelAccountScriptRows;
-			} else if(btn == toolStripSplitButtonCharacterScriptUpdate) {
-				DatabaseCharacters dw = Settings.getCharsDB();
-
-				rows = dw.uploadSql(textBoxAccountScriptOutput.Text);
-				label = toolStripStatusLabelAccountScriptRows;
-			} else {
-				DatabaseWorld dw = Settings.getWorldDB();
-
-				if(btn == toolStripSplitButtonCreatureScriptUpdate) {
-					rows = dw.uploadSql(textBoxCreatureScriptOutput.Text);
-					label = toolStripStatusLabelCreatureScriptRows;
-
-				} else if(btn == toolStripSplitButtonQuestScriptUpdate) {
-					rows = dw.uploadSql(textBoxQuestScriptOutput.Text);
-					label = toolStripStatusLabelQuestScriptRows;
-
-				} else if(btn == toolStripSplitButtonGOScriptUpdate) {
-					rows = dw.uploadSql(textBoxGameObjectScriptOutput.Text);
-					label = toolStripStatusLabelGameObjectScriptRows;
-
-				} else if(btn == toolStripSplitButtonItemScriptUpdate) {
-					rows = dw.uploadSql(textBoxItemScriptOutput.Text);
-					label = toolStripStatusLabelItemScriptRows;
-				}
-			}
-
-			if(label != null) {
-				label.Text = "Row(s) affected: " + rows.ToString();
-			}
-		}
-
-		#endregion
-
-		#endregion
-
-		#region Secondary
+		#region Secondary Events
 
 		#region ToolStrip
 		private void newConnectionToolStripMenuItemFile_Click(object sender, EventArgs e) {
@@ -1899,31 +1853,21 @@ namespace Manti.Views {
 
 		// search tab
 		private void toolStripSplitButtonCreatureNew_ButtonClick(object sender, EventArgs e) {
-			var list = new List<Tuple<TextBox, string>>
-			{
-				Tuple.Create(textBoxCreatureTemplateName, ""),
+			var dw = Settings.getWorldDB();
 
-				Tuple.Create(textBoxCreatureTemplateName, ""),
-				Tuple.Create(textBoxCreatureTemplateSubname, ""),
-				Tuple.Create(textBoxCreatureTemplateBaseAttack, "2000"),
-				Tuple.Create(textBoxCreatureTemplateRangedAttack, "2000"),
-				Tuple.Create(textBoxCreatureTemplateBV, "1"),
-				Tuple.Create(textBoxCreatureTemplateRV, "1"),
-				Tuple.Create(textBoxCreatureTemplateSpeedWalk, "1"),
-				Tuple.Create(textBoxCreatureTemplateSpeedRun, "1.4286"),
-				Tuple.Create(textBoxCreatureTemplateAIName, ""),
-				Tuple.Create(textBoxCreatureTemplateScriptName, "")
-			};
+			var model      = Models.CreatureModel.getInstance();
+			model.creature = dw.getCreatureDefaultValues();
 
-			DefaultValuesGenerate(tabPageCreatureTemplate);
-			DefaultValuesOverride(list);
-
-			checkBoxCreatureTemplateHR.Checked = true;
+			fillCreatureTemplate(model.creature);
 
 			tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
 		}
 		private void toolStripSplitButtonCreatureDelete_ButtonClick(object sender, EventArgs e) {
-			GenerateDeleteSelectedRow(dataGridViewCreatureSearch, "creature_template", "entry", textBoxCreatureScriptOutput);
+			var gw = new GenerateWorld();
+
+			foreach(DataGridViewRow row in dataGridViewCreatureSearch.SelectedRows) {
+				textBoxCreatureScriptOutput.AppendText(gw.deleteCreature(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+			}
 		}
 
 		// vendor, loot, pickpocket and skin tab
@@ -2084,26 +2028,21 @@ namespace Manti.Views {
 
 		// search tab
 		private void toolStripSplitButtonQuestNew_ButtonClick(object sender, EventArgs e) {
-			var list = new List<Tuple<TextBox, string>>();
+			var dw = Settings.getWorldDB();
 
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionTitle, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionLDescription, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionQDescription, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionAreaDescription, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionCompleted, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives1, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives2, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives3, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxQuestSectionObjectives4, ""));
+			var model   = Models.QuestModel.getInstance();
+			model.quest = dw.getQuestDefaultValues();
 
-			DefaultValuesGenerate(tabPageQuestSection1);
-			DefaultValuesGenerate(tabPageQuestSection2);
-			DefaultValuesOverride(list);
+			fillQuestSections(model.quest);
 
 			tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
 		}
 		private void toolStripSplitButtonQuestDelete_ButtonClick(object sender, EventArgs e) {
-			GenerateDeleteSelectedRow(dataGridViewQuestSearch, "quest_template", "ID", textBoxQuestScriptOutput);
+			var gw = new GenerateWorld();
+
+			foreach(DataGridViewRow row in dataGridViewQuestSearch.SelectedRows) {
+				textBoxQuestScriptOutput.AppendText(gw.deleteQuest(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+			}
 		}
 
 		#endregion
@@ -2112,20 +2051,21 @@ namespace Manti.Views {
 
 		// search tab
 		private void toolStripSplitButtonGONew_ButtonClick(object sender, EventArgs e) {
-			var list = new List<Tuple<TextBox, string>>();
+			var dw = Settings.getWorldDB();
 
-			list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempName, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempSize, "1"));
-			list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempAIName, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxGameObjectTempScriptName, ""));
+			var model        = Models.GameObjectModel.getInstance();
+			model.gameObject = dw.getGameObjectDefaultValues();
 
-			DefaultValuesGenerate(tabPageGameObjectTemplate);
-			DefaultValuesOverride(list);
+			fillGameObjectTemplate(model.gameObject);
 
 			tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
 		}
 		private void toolStripSplitButtonGODelete_ButtonClick(object sender, EventArgs e) {
-			GenerateDeleteSelectedRow(dataGridViewGameObjectSearch, "gameobject_template", "entry", textBoxGameObjectScriptOutput);
+			var gw = new GenerateWorld();
+
+			foreach(DataGridViewRow row in dataGridViewGameObjectSearch.SelectedRows) {
+				textBoxGameObjectScriptOutput.AppendText(gw.deleteGameObject(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+			}
 		}
 
 		#endregion
@@ -2134,30 +2074,21 @@ namespace Manti.Views {
 
 		// search tab
 		private void toolStripSplitButtonItemNew_ButtonClick(object sender, EventArgs e) {
-			var list = new List<Tuple<TextBox, string>>();
+			var dw = Settings.getWorldDB();
 
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempName, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempDescription, ""));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempReqRace, "1791"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempReqClass, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCD1, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD1, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCD2, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD2, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCD3, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD3, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCD4, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD4, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCD5, "-1"));
-			list.Add(new Tuple<TextBox, string>(textBoxItemTempCategoryCD5, "-1"));
+			var model = Models.ItemModel.getInstance();
+			model.item = dw.getItemDefaultValues();
 
-			DefaultValuesGenerate(tabPageItemTemplate);
-			DefaultValuesOverride(list);
+			fillItemTemplate(model.item);
 
 			tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
 		}
 		private void toolStripSplitButtonItemDelete_ButtonClick(object sender, EventArgs e) {
-			GenerateDeleteSelectedRow(dataGridViewItemSearch, "item_template", "entry", textBoxItemScriptOutput);
+			var gw = new GenerateWorld();
+
+			foreach(DataGridViewRow row in dataGridViewItemSearch.SelectedRows) {
+				textBoxItemScriptOutput.AppendText(gw.deleteItem(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+			}
 		}
 
 		private void buttonItemDataGridAdd_Click(object sender, EventArgs e) {
@@ -2310,515 +2241,297 @@ namespace Manti.Views {
 
 		#endregion
 
-		#endregion
+		#region Popups
 
-		// The things below is still a WIP.
+		private void buttonCharacterPopup_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
 
-		#region GLOBAL Functions
-		private void setOfflineMode(bool enable) {
-			FormMySQL.Offline = enable;
-
-			// Search Buttons
-			Button[] dButtons = new Button[]
-			{
-					buttonAccountSearchSearch,
-					buttonCharacterSearchSearch,
-					buttonCreatureSearchSearch,
-					buttonQuestSearchSearch,
-					buttonGameObjectSearchSearch,
-					buttonItemSearchSearch
-			};
-
-			// Execute Buttons
-			ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
-			{
-					toolStripSplitButtonAccountScriptUpdate,
-					toolStripSplitButtonCharacterScriptUpdate,
-					toolStripSplitButtonCreatureScriptUpdate,
-					toolStripSplitButtonQuestScriptUpdate,
-					toolStripSplitButtonGOScriptUpdate,
-					toolStripSplitButtonItemScriptUpdate
-			};
-
-			foreach(Button btn in dButtons) {
-				btn.Enabled = !enable;
-			}
-
-			foreach(ToolStripSplitButton btn in dStripButton) {
-				btn.Enabled = !enable;
+			if(btn == buttonCharacterCharacterRace) {
+				textBoxCharacterCharacterRace.Text = Classes.PopupHelper.createPopupSelection("Character Race", Classes.UtilityHelper.readExcelCSV("ChrRaces", 0, 14), textBoxCharacterCharacterRace.Text);
+			} else if(btn == buttonCharacterCharacterClass) {
+				textBoxCharacterCharacterClass.Text = Classes.PopupHelper.createPopupSelection("Character Class", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxCharacterCharacterClass.Text);
 			}
 		}
-		#region GlobalFunctions
-		/// <summary>
-		/// Function looks for a specific .CSV extension file and turns it into a DataTable (used for FormTools).
-		/// </summary>
-		/// <param name="csvName">The specific .CSV File</param>
-		/// <param name="ID">What column the ID is</param>
-		/// <param name="value">Where the value/name is in the CSV extension</param>
-		/// <returns>DataTable with all the rows from the ID and Value</returns>
-		private DataTable ReadExcelCSV(string csvName, int ID, int value, int value2 = 0) {
-			var reader = new System.IO.StreamReader(@".\CSV\" + csvName + ".dbc.csv");
-			var forgetFirst = true;
+		public void buttonCreaturePopup_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
 
-			var newTable = new DataTable();
-
-			if(reader != null) {
-				newTable.Columns.Add("id", typeof(string));
-				newTable.Columns.Add("value", typeof(string));
-				if(value2 != 0) { newTable.Columns.Add("value2", typeof(string)); }
-
-				string line; string[] words;
-
-				while((line = reader.ReadLine()) != null) {
-					words = line.Split(';');
-
-					if(forgetFirst == false) {
-						if(words.Length > value && words[value] != null) {
-							DataRow newRow = newTable.NewRow();
-
-							// adds the id and value to the row
-							newRow["id"] = words[ID].Trim('"'); newRow["value"] = words[value].Trim('"');
-							// if value2 is above 0, add another column value
-							if(value2 != 0) { newRow["value2"] = words[value2].Trim('"'); }
-
-							newTable.Rows.Add(newRow);
-						}
-					}
-
-					forgetFirst = false;
-				}
-
-				reader.Close();
-			} else {
-				MessageBox.Show(csvName + " Could not been found in the CSV folder.\n It has to be same location as the program.", "File Directory : CSV ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			if(btn == buttonCreatureTemplateModelID1) {
+				textBoxCreatureTemplateModelID1.Text = Classes.PopupHelper.createPopupEntity(textBoxCreatureTemplateModelID1.Text, new bool[] { false, true, false }, false);
+			} else if(btn == buttonCreatureTemplateRank) {
+				textBoxCreatureTemplateRank.Text = Classes.PopupHelper.createPopupSelection("Creature Rank", Classes.UtilityHelper.readExcelCSV("CreatureRanks", 0, 1), textBoxCreatureTemplateRank.Text);
+			} else if(btn == buttonCreatureTemplateNPCFlags) {
+				textBoxCreatureTemplateNPCFlags.Text = Classes.PopupHelper.createPopupChecklist("Creature NPC Flags", Classes.UtilityHelper.readExcelCSV("CreatureNPCFlags", 0, 1), textBoxCreatureTemplateNPCFlags.Text, true);
+			} else if(btn == buttonCreatureTemplateSpell1) {
+				textBoxCreatureTemplateSpell1.Text = Classes.PopupHelper.createPopupSelection("Spells I", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxCreatureTemplateSpell1.Text);
+			} else if(btn == buttonCreatureTemplateDS) {
+				textBoxCreatureTemplateDS.Text = Classes.PopupHelper.createPopupSelection("Damage School (Type)", Classes.UtilityHelper.readExcelCSV("CreatureDmgSchool", 0, 1), textBoxCreatureTemplateDS.Text);
+			} else if(btn == buttonCreatureTemplateMType) {
+				textBoxCreatureTemplateMType.Text = Classes.PopupHelper.createPopupSelection("Movement Type", Classes.UtilityHelper.readExcelCSV("CreatureMovementType", 0, 1), textBoxCreatureTemplateMType.Text);
+			} else if(btn == buttonCreatureTemplateInhabitType) {
+				textBoxCreatureTemplateInhabitType.Text = Classes.PopupHelper.createPopupChecklist("Inhabit Types", Classes.UtilityHelper.readExcelCSV("CreatureInhabitTypes", 0, 1), textBoxCreatureTemplateInhabitType.Text, true); ;
+			} else if(btn == buttonCreatureTemplateMechanic) {
+				textBoxCreatureTemplateMechanic.Text = Classes.PopupHelper.createPopupChecklist("Creature's Immunity", Classes.UtilityHelper.readExcelCSV("CreatureMechanic", 0, 1), textBoxCreatureTemplateMechanic.Text, true);
+			} else if(btn == buttonCreatureTemplateFamily) {
+				textBoxCreatureTemplateFamily.Text = Classes.PopupHelper.createPopupSelection("Creature's Family", Classes.UtilityHelper.readExcelCSV("CreatureFamily", 0, 1), textBoxCreatureTemplateFamily.Text);
+			} else if(btn == buttonCreatureTemplateType) {
+				textBoxCreatureTemplateType.Text = Classes.PopupHelper.createPopupSelection("Creature's Type", Classes.UtilityHelper.readExcelCSV("CreatureFamilyType", 0, 1), textBoxCreatureTemplateType.Text);
+			} else if(btn == buttonCreatureTemplateTypeFlags) {
+				textBoxCreatureTemplateTypeFlags.Text = Classes.PopupHelper.createPopupChecklist("Unit Flags I", Classes.UtilityHelper.readExcelCSV("CreatureTypeFlags", 0, 1), textBoxCreatureTemplateTypeFlags.Text, true);
+			} else if(btn == buttonCreatureTemplateFlagsExtra) {
+				textBoxCreatureTemplateFlagsExtra.Text = Classes.PopupHelper.createPopupChecklist("Extra Flags", Classes.UtilityHelper.readExcelCSV("CreatureFlagsExtra", 0, 1), textBoxCreatureTemplateFlagsExtra.Text, true);
+			} else if(btn == buttonCreatureTemplateUnitClass) {
+				textBoxCreatureTemplateUnitClass.Text = Classes.PopupHelper.createPopupSelection("Creature's Class", Classes.UtilityHelper.readExcelCSV("CreatureUnitClass", 0, 1), textBoxCreatureTemplateUnitClass.Text);
+			} else if(btn == buttonCreatureTemplateUnitflags) {
+				textBoxCreatureTemplateUnitflags.Text = Classes.PopupHelper.createPopupChecklist("Unit Flags I", Classes.UtilityHelper.readExcelCSV("CreatureUnitFlags", 0, 1), textBoxCreatureTemplateUnitflags.Text, true);
+			} else if(btn == buttonCreatureTemplateUnitflags2) {
+				textBoxCreatureTemplateUnitflags2.Text = Classes.PopupHelper.createPopupChecklist("Unit Flags II", Classes.UtilityHelper.readExcelCSV("CreatureUnitFlags2", 0, 1), textBoxCreatureTemplateUnitflags2.Text, true);
+			} else if(btn == buttonCreatureTemplateDynamic) {
+				textBoxCreatureTemplateDynamic.Text = Classes.PopupHelper.createPopupChecklist("Dynamic Flags", Classes.UtilityHelper.readExcelCSV("CreatureDynamicFlags", 0, 1), textBoxCreatureTemplateDynamic.Text, true);
 			}
-
-			return newTable;
 		}
-		/// <summary>
-		/// It filters, if the character '%' is in the beginning or end of the string (value).
-		/// If it is, it turns the SQL query to LIKE (a sort of containing method for MySQL).
-		/// </summary>
-		/// <param name="value">What the user is searching for</param>
-		/// <param name="columnName">Column name for the query</param>
-		/// <returns>Returns either LIKE or equal to the search</returns>
-		private string DatabaseQueryFilter(string value, string columnName) {
-			if(value != string.Empty) {
-				if(value.Trim().StartsWith("%", StringComparison.InvariantCultureIgnoreCase) || value.Trim().EndsWith("%", StringComparison.InvariantCultureIgnoreCase)) {
-					value = " AND " + columnName + " LIKE '" + value + "'";
+		public void buttonQuestPopup_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
+
+			if(btn == buttonQuestSearchInfo) {
+				textBoxQuestSearchInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", Classes.UtilityHelper.readExcelCSV("QuestInfo", 0, 1), textBoxQuestSearchInfo.Text);
+			} else if(btn == buttonQuestSectionSourceItemID) {
+				textBoxQuestSectionSourceItemID.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionSourceItemID.Text, new bool[] { true, false, false });
+			} else if(btn == buttonQuestSectionReqRace) {
+				textBoxQuestSectionReqRace.Text = Classes.PopupHelper.createPopupChecklist("Requirement: Races", Classes.UtilityHelper.readExcelCSV("ChrRaces", 0, 14), textBoxQuestSectionReqRace.Text, true);
+			} else if(btn == buttonQuestSectionReqClass) {
+				textBoxQuestSectionReqClass.Text = Classes.PopupHelper.createPopupChecklist("Requirement: Classes", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxQuestSectionReqClass.Text, true);
+			} else if(btn == buttonQuestSectionQSort) {
+				if(radioButtonQuestSectionZID.Checked) {
+					textBoxQuestSectionReqQSort.Text = Classes.PopupHelper.createPopupSelection("Zone ID Selection", Classes.UtilityHelper.readExcelCSV("AreaTable", 0, 11), textBoxQuestSectionReqQSort.Text);
 				} else {
-					value = " AND " + columnName + " = '" + value + "'";
+					string newValue = Classes.PopupHelper.createPopupSelection("Quest Sort Selection", Classes.UtilityHelper.readExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
+
+					textBoxQuestSectionReqQSort.Text = (textBoxQuestSectionReqQSort.Text == newValue || newValue == "0") ? textBoxQuestSectionReqQSort.Text : "-" + newValue;
 				}
-			}
-
-			return value;
-		}
-		/// <summary>
-		/// Only used in search tabs. It checks if all the textboxes are empty.
-		/// </summary>
-		/// <param name="control">The selected control to check</param>
-		/// <returns>Returns a boolean. Textboxes empty = true</returns>
-		private bool CheckEmptyControls(Control control) {
-			foreach(Control ct in control.Controls) {
-				if(ct is TextBox || ct is ComboBox) {
-					if(ct.Text != "") {
-						return false;
-					}
-				}
-			}
-
-			return true;
-		}
-		/// <summary>
-		/// Converts all the ColumnHeader to string header (holds strings).
-		/// Required to add new rows.
-		/// </summary>
-		/// <param name="datatable">The specific table to convert</param>
-		/// <returns>Returns the transformed DataTable with string headers</returns>
-		private DataTable ConvertColumnsToString(DataTable datatable) {
-			var newTable = datatable.Clone();
-
-			for(var i = 0; i < newTable.Columns.Count; i++) {
-				if(newTable.Columns[i].DataType != typeof(string)) {
-					newTable.Columns[i].DataType = typeof(string);
-				}
-			}
-
-			foreach(DataRow row in datatable.Rows) {
-				newTable.ImportRow(row);
-			}
-
-			return newTable;
-		}
-		/// <summary>
-		/// Creates a popup, where the user can select only one row.
-		/// </summary>
-		/// <param name="formTitle">Changes the popup title</param>
-		/// <param name="data">This sends the data to the listview/datagrid used in the popup</param>
-		/// <param name="currentValue">Highlights the current value</param>
-		/// <returns>It returns the selected /= current value (the ID)</returns>
-		private string CreatePopupSelection(string formTitle, DataTable data, string currentValue) {
-			var popupDialog = new FormPopup.FormPopupSelection();
-
-			popupDialog.setFormTitle = formTitle;
-			popupDialog.changeSelection = currentValue;
-			popupDialog.setDataTable = data;
-			popupDialog.Owner = this;
-			popupDialog.ShowDialog();
-
-			currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
-			popupDialog.Dispose();
-
-			GC.Collect();
-			this.Activate();
-			return currentValue;
-		}
-		/// <summary>
-		/// Same as the Selection popup, except it has checkboxes (multiple selections).
-		/// </summary>
-		/// <param name="formTitle">Changes the popup title</param>
-		/// <param name="data">This sends the data to the listview/datagrid used in the popup</param>
-		/// <param name="currentValue">Highlights the current value</param>
-		/// <param name="bitMask">If the data is 2^n based (1, 2, 4, 8, 16 so on)</param>
-		/// <returns>It returns the selected /= current value (the ID)</returns>
-		private string CreatePopupChecklist(string formTitle, DataTable data, string currentValue, bool bitMask = false) {
-			var popupDialog = new FormPopup.FormPopupCheckboxList();
-
-			popupDialog.setFormTitle = formTitle;
-			popupDialog.setDataTable = data;
-			popupDialog.usedValue = (currentValue == string.Empty) ? "0" : currentValue;
-			popupDialog.setBitmask = bitMask;
-			popupDialog.Owner = this;
-			popupDialog.ShowDialog();
-
-			currentValue = (popupDialog.usedValue.ToString() == "") ? currentValue : popupDialog.usedValue.ToString();
-			popupDialog.Dispose();
-
-			GC.Collect();
-
-			this.Activate();
-			return currentValue;
-		}
-		/// <summary>
-		/// Similar to selection and checklist popup, however, is it used for entities (items, creatures & gameobjects)
-		/// </summary>
-		/// <param name="currentValue">Highlights the current value</param>
-		/// <param name="disableEntity">Used to disable or enable radiobuttons {items, creatures, gameobjects} in that order</param>
-		/// <returns>It returns the selected /= current value (the ID)</returns>
-		private string CreatePopupEntity(string currentValue, bool[] disableEntity, bool outputID = true) {
-			var popupDialog = new FormPopup.FormPopupEntities();
-			DataSet entities = new DataSet();
-
-			popupDialog.changeSelection = (currentValue == "") ? "0" : currentValue;
-			popupDialog.changeOutput = outputID;
-			popupDialog.disableEntity = disableEntity;
-			popupDialog.Owner = this;
-
-			if(FormMySQL.Offline) {
-				// Popup Entity follows order: 0: ID, 1: displayID, 2: Name
-				entities.Tables.Add(ReadExcelCSV("ItemTemplate", 0, 2, 1));
-				entities.Tables.Add(ReadExcelCSV("CreatureTemplate", 0, 1, 2));
-				entities.Tables.Add(ReadExcelCSV("GameObjectTemplate", 0, 1, 2));
-			} else {
-				var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-				if(ConnectionOpen(connect)) {
-					string query = "";
-					query += "SELECT entry, displayid, name FROM item_template ORDER BY entry ASC;";
-					query += "SELECT entry, modelid1, name FROM creature_template ORDER BY entry ASC;";
-					query += "SELECT entry, displayId, name FROM gameobject_template ORDER BY entry ASC;";
-
-					entities = DatabaseSearch(connect, query);
-
-					ConnectionClose(connect);
-				}
-			}
-
-			popupDialog.setEntityTable = entities;
-			popupDialog.ShowDialog();
-
-			currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;
-
-			entities.Dispose();
-			popupDialog.Dispose();
-
-			GC.Collect();
-
-			this.Activate();
-			return currentValue;
-		}
-		/// <summary>
-		/// Generates SQL text used to execute. Is used in loot tables (see creature -> loot as a reference).
-		/// This might change to string return instead.
-		/// </summary>
-		/// <param name="table">What database it generates for</param>
-		/// <param name="dataGrid">The grid it has to loop through</param>
-		/// <param name="output">The textbox it has to 'add' to</param>
-		private void GenerateLootSQL(string table, DataGridView dataGrid, TextBox output) {
-			string query = "DELETE FROM `" + table + "` WHERE entry = '" + dataGrid.Rows[0].Cells[0].Value.ToString() + "';";
-
-			foreach(DataGridViewRow row in dataGrid.Rows) {
-				if(row.Cells[0].Value.ToString() != "") {
-					query += Environment.NewLine + "INSERT INTO `" + table + "` VALUES (";
-
-					foreach(DataGridViewCell cell in row.Cells) {
-						if(cell.OwningColumn.DataPropertyName != "name") {
-							query += cell.Value.ToString() + ", ";
-						}
-					}
-
-					query += "0);";
-
-
-				}
-			}
-
-			output.AppendText(query);
-		}
-		/// <summary>
-		/// Generates a SQL File and saves it in the SQL folder.
-		/// </summary>
-		/// <param name="fileStart">The beginning of the fileName</param>
-		/// <param name="fileName">FileName after fileStart (usually entry & name)</param>
-		/// <param name="tb">The textbox to create from (text)</param>
-		private void GenerateSQLFile(string fileStart, string fileName, TextBox tb) {
-			// Save location / path
-			string path = @".\SQL\" + fileStart + fileName + ".SQL";
-
-			// Checks if the path file exists
-			if(File.Exists(path)) {
-				// Creates a messagebox with a warning
-				DialogResult dr = MessageBox.Show("File already exists.\n Replace it?", "Warning ...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-				// If the feedback is no, stop the program from running
-				if(dr == DialogResult.No) {
-					return;
-				}
-			} else {
-				DialogResult dr = MessageBox.Show("SQL folder does not exist. \nAutomatically create one for you?", "The folder 'SQL' could not been found.", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
-
-				if(dr == DialogResult.Yes) {
-					Directory.CreateDirectory(@".\SQL\");
-				} else {
-					return;
-				}
-			}
-
-			// Checks if textbox is empty OR fileName is empty
-			if(tb.TextLength == 0 || fileName == string.Empty) {
-				return;
-			}
-
-			// StreamWriter is used to write the SQL.
-			StreamWriter sw = new StreamWriter(path);
-
-			// Puts every line of the selected textbox in an array.
-			int lineCount = tb.GetLineFromCharIndex(tb.Text.Length) + 1;
-
-			for(var i = 0; i < lineCount; i++) {
-				int startIndex = tb.GetFirstCharIndexFromLine(i);
-
-				int endIndex = (i < lineCount - 1) ?
-					tb.GetFirstCharIndexFromLine(i + 1) : tb.Text.Length;
-
-				sw.WriteLine(tb.Text.Substring(startIndex, endIndex - startIndex));
-			}
-
-			// Closes the StreamWriter.
-			sw.Close();
-
-		}
-		/// <summary>
-		/// Sets all textboxes in a control to '0'.
-		/// Mostly/only used on 'new button' in most tabs.
-		/// </summary>
-		/// <param name="parent">The beginning (usually a tabpage)</param>
-		private void DefaultValuesGenerate(Control parent) {
-			foreach(Control child in parent.Controls) {
-				if(child is TextBox) {
-					child.Text = "0";
-				} else {
-					DefaultValuesGenerate(child);
-				}
+			} else if(btn == buttonQuestSectionReqFaction1) {
+				textBoxQuestSectionReqFaction1.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID I", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction1.Text);
+			} else if(btn == buttonQuestSectionReqFaction2) {
+				textBoxQuestSectionReqFaction2.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID II", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction2.Text);
+			} else if(btn == buttonQuestSectionReqMinRepF) {
+				textBoxQuestSectionReqMinRepF.Text = Classes.PopupHelper.createPopupSelection("Minimum Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMinRepF.Text);
+			} else if(btn == buttonQuestSectionReqMaxRepF) {
+				textBoxQuestSectionReqMaxRepF.Text = Classes.PopupHelper.createPopupSelection("Maximum Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMaxRepF.Text);
+			} else if(btn == buttonQuestSectionReqSkillID) {
+				textBoxQuestSectionReqSkillID.Text = Classes.PopupHelper.createPopupSelection("Required Skill ID", Classes.UtilityHelper.readExcelCSV("SkillLine", 0, 3), textBoxQuestSectionReqSkillID.Text);
+			} else if(btn == buttonQuestSectionQuestType) {
+				textBoxQuestSectionQuestType.Text = Classes.PopupHelper.createPopupSelection("Quest Type", Classes.UtilityHelper.readExcelCSV("QuestType", 0, 1), textBoxQuestSectionQuestType.Text);
+			} else if(btn == buttonQuestSectionQuestFlags) {
+				textBoxQuestSectionQuestFlags.Text = Classes.PopupHelper.createPopupChecklist("Quest : Flags", Classes.UtilityHelper.readExcelCSV("QuestFlags", 0, 1), textBoxQuestSectionQuestFlags.Text, true);
+			} else if(btn == buttonQuestSectionOtherSF) {
+				textBoxQuestSectionOtherSF.Text = Classes.PopupHelper.createPopupChecklist("Quest : Special Flags", Classes.UtilityHelper.readExcelCSV("QuestSpecialFlags", 0, 1), textBoxQuestSectionOtherSF.Text, true);
+			} else if(btn == buttonQuestSectionQuestInfo) {
+				textBoxQuestSectionQuestInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", Classes.UtilityHelper.readExcelCSV("QuestInfo", 0, 1), textBoxQuestSectionQuestInfo.Text);
+			} else if(btn == buttonQuestSectionSourceSpellID) {
+				textBoxQuestSectionSourceSpellID.Text = Classes.PopupHelper.createPopupSelection("Spells", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxQuestSectionSourceSpellID.Text);
+			} else if(btn == buttonQuestSectionReqNPCID1) {
+				textBoxQuestSectionReqNPCID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionReqNPCID1.Text, new bool[] { false, true, false });
+			} else if(btn == buttonQuestSectionReqItemID1) {
+				textBoxQuestSectionReqItemID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionReqItemID1.Text, new bool[] { true, false, false });
+			} else if(btn == buttonQuestSectionRewChoiceID1) {
+				textBoxQuestSectionRewChoiceID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionRewChoiceID1.Text, new bool[] { true, false, false });
+			} else if(btn == buttonQuestSectionRewItemID1) {
+				textBoxQuestSectionRewItemID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionRewItemID1.Text, new bool[] { true, false, false });
+			} else if(btn == buttonQuestSectionRewFactionID1) {
+				textBoxQuestSectionRewFactionID1.Text = Classes.PopupHelper.createPopupSelection("Faction Selection", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionRewFactionID1.Text);
+			} else if(btn == buttonQuestSectionRewOtherTitleID) {
+				textBoxQuestSectionRewOtherTitleID.Text = Classes.PopupHelper.createPopupSelection("Title Selection", Classes.UtilityHelper.readExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
+			} else if(btn == buttonQuestSectionRewSpell) {
+				textBoxQuestSectionRewSpell.Text = Classes.PopupHelper.createPopupSelection("Spell Selection", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxQuestSectionRewSpell.Text);
 			}
 		}
-		/// <summary>
-		/// Overrides the selected database with a value, if textbox don't need a '0'.
-		/// An example could be item name, it needs to be empty.
-		/// </summary>
-		/// <param name="exclude">A tuple with two variables, the textbox to target and replacement string.</param>
-		private void DefaultValuesOverride(List<Tuple<TextBox, string>> exclude) {
-			foreach(var data in exclude) {
-				data.Item1.Text = data.Item2.ToString();
+		public void buttonGameObjectPopup_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
+
+			if(btn == buttonGameObjectTempType) {
+				textBoxGameObjectTempType.Text = Classes.PopupHelper.createPopupSelection("Game Object Type Selection", Classes.UtilityHelper.readExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType.Text);
+			} else if(btn == buttonGameObjectTempFlags) {
+				textBoxGameObjectTempFlags.Text = Classes.PopupHelper.createPopupChecklist("Game Object Flags Selection", Classes.UtilityHelper.readExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags.Text, true);
 			}
 		}
-		/// <summary>
-		/// The function name says it all. Takes the selected/selections of a datagrid and creates a deleting SQL(s) to execute.
-		/// </summary>
-		/// <param name="gv">The tageting DataGridView</param>
-		/// <param name="sqlTable">What table is it targeting in the database</param>
-		/// <param name="uniqueIndex">The specific row to delete</param>
-		/// <param name="output">The textbox to output the SQL</param>
-		private void GenerateDeleteSelectedRow(DataGridView gv, string sqlTable, string uniqueIndex, TextBox output) {
-			if(gv.SelectedRows.Count > 0) {
-				foreach(DataGridViewRow gvR in gv.SelectedRows) {
-					output.AppendText("DELETE FROM `" + sqlTable + "` WHERE `" + uniqueIndex + "` = '" + gvR.Cells[0].Value.ToString() + "';");
-				}
+		public void buttonItemPopup_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
+
+			if(btn == buttonItemSearchClass) {
+				textBoxItemSearchClass.Text = Classes.PopupHelper.createPopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass.Text);
+			} else if(btn == buttonItemSearchSubclass) {
+				textBoxItemSearchSubclass.Text = Classes.PopupHelper.createPopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass.Text);
+			} else if(btn == buttonItemTempTypeClass) {
+				textBoxItemTempTypeClass.Text = Classes.PopupHelper.createPopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass.Text);
+			} else if(btn == buttonItemTempSubclass) {
+				textBoxItemTempSubclass.Text = Classes.PopupHelper.createPopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass.Text);
+			} else if(btn == buttonItemTempDisplayID) {
+				textBoxItemTempDisplayID.Text = Classes.PopupHelper.createPopupEntity(textBoxItemTempDisplayID.Text, new bool[] { true, false, false }, false);
+			} else if(btn == buttonItemTempQuality) {
+				textBoxItemTempQuality.Text = Classes.PopupHelper.createPopupSelection("Quality Selection", Classes.UtilityHelper.readExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality.Text);
+			} else if(btn == buttonItemTempFlags) {
+				textBoxItemTempFlags.Text = Classes.PopupHelper.createPopupChecklist("Flags", Classes.UtilityHelper.readExcelCSV("ItemFlags", 0, 1), textBoxItemTempFlags.Text, true);
+			} else if(btn == buttonItemTempEFlags) {
+				textBoxItemTempEFlags.Text = Classes.PopupHelper.createPopupChecklist("Extra Flags", Classes.UtilityHelper.readExcelCSV("ItemFlagsExtra", 0, 1), textBoxItemTempEFlags.Text, true);
+			} else if(btn == buttonItemTempDmgType1) {
+				textBoxItemTempDmgType1.Text = Classes.PopupHelper.createPopupSelection("Damage Type I Selection", Classes.UtilityHelper.readExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1.Text);
+			} else if(btn == buttonItemTempDmgType2) {
+				textBoxItemTempDmgType2.Text = Classes.PopupHelper.createPopupSelection("Damage Type II Selection", Classes.UtilityHelper.readExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2.Text);
+			} else if(btn == buttonItemTempAmmoType) {
+				textBoxItemTempAmmoType.Text = Classes.PopupHelper.createPopupSelection("Ammo Types", Classes.UtilityHelper.readExcelCSV("ItemAmmoType", 0, 1), textBoxItemTempAmmoType.Text);
+			} else if(btn == buttonItemTempItemSet) {
+				textBoxItemTempItemSet.Text = Classes.PopupHelper.createPopupSelection("ItemSet Selection", Classes.UtilityHelper.readExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet.Text);
+			} else if(btn == buttonItemTempBonding) {
+				textBoxItemTempBonding.Text = Classes.PopupHelper.createPopupSelection("Bonding Selection", Classes.UtilityHelper.readExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding.Text);
+			} else if(btn == buttonItemTempSheath) {
+				textBoxItemTempSheath.Text = Classes.PopupHelper.createPopupSelection("Sheath Selection", Classes.UtilityHelper.readExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath.Text);
+			} else if(btn == buttonItemTempColor1) {
+				textBoxItemTempColor1.Text = Classes.PopupHelper.createPopupSelection("Color Selection I", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1.Text);
+			} else if(btn == buttonItemTempColor2) {
+				textBoxItemTempColor2.Text = Classes.PopupHelper.createPopupSelection("Color Selection II", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2.Text);
+			} else if(btn == buttonItemTempColor3) {
+				textBoxItemTempColor3.Text = Classes.PopupHelper.createPopupSelection("Color Selection III", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3.Text);
+			} else if(btn == buttonItemTempSocketBonus) {
+				textBoxItemTempSocketBonus.Text = Classes.PopupHelper.createPopupSelection("Socket Bonus Selection III", Classes.UtilityHelper.readExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus.Text);
+			} else if(btn == buttonItemTempStatsType1) {
+				textBoxItemTempStatsType1.Text = Classes.PopupHelper.createPopupSelection("Stat Selection I", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1.Text);
+			} else if(btn == buttonItemTempStatsType2) {
+				textBoxItemTempStatsType2.Text = Classes.PopupHelper.createPopupSelection("Stat Selection II", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2.Text);
+			} else if(btn == buttonItemTempStatsType3) {
+				Classes.PopupHelper.createPopupSelection("Stat Selection III", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3.Text);
+			} else if(btn == buttonItemTempStatsType4) {
+				Classes.PopupHelper.createPopupSelection("Stat Selection IV", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4.Text);
+			} else if(btn == buttonItemTempStatsType5) {
+				textBoxItemTempStatsType5.Text = Classes.PopupHelper.createPopupSelection("Stat Selection V", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5.Text);
+			} else if(btn == buttonItemTempStatsType6) {
+				textBoxItemTempStatsType6.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VI", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6.Text);
+			} else if(btn == buttonItemTempStatsType7) {
+				textBoxItemTempStatsType7.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VII", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7.Text);
+			} else if(btn == buttonItemTempStatsType8) {
+				textBoxItemTempStatsType8.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VIII", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8.Text);
+			} else if(btn == buttonItemTempStatsType9) {
+				textBoxItemTempStatsType9.Text = Classes.PopupHelper.createPopupSelection("Stat Selection IX", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9.Text);
+			} else if(btn == buttonItemTempStatsType10) {
+				textBoxItemTempStatsType10.Text = Classes.PopupHelper.createPopupSelection("Stat Selection X", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10.Text);
+			} else if(btn == buttonItemTempSpellID1) {
+				textBoxItemTempSpellID1.Text = Classes.PopupHelper.createPopupSelection("Required Spell", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxItemTempSpellID1.Text);
+			} else if(btn == buttonItemTempTrigger1) {
+				textBoxItemTempTrigger1.Text = Classes.PopupHelper.createPopupSelection("Spell Trigger", Classes.UtilityHelper.readExcelCSV("ItemSpellTrigger", 0, 1), textBoxItemTempTrigger1.Text);
+			} else if(btn == buttonItemTempReqRace) {
+				textBoxItemTempReqRace.Text = Classes.PopupHelper.createPopupChecklist("Race Requirement", Classes.UtilityHelper.readExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace.Text, true);
+			} else if(btn == buttonItemTempReqClass) {
+				textBoxItemTempReqClass.Text = Classes.PopupHelper.createPopupChecklist("Class Requirement", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass.Text, true);
+			} else if(btn == buttonItemTempReqSkill) {
+				textBoxItemTempReqSkill.Text = Classes.PopupHelper.createPopupSelection("Required Skill", Classes.UtilityHelper.readExcelCSV("SkillLine", 0, 3), textBoxItemTempReqSkill.Text);
+			} else if(btn == buttonItemTempReqRepFaction) {
+				textBoxItemTempReqRepFaction.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxItemTempReqRepFaction.Text);
+			} else if(btn == buttonItemTempReqRepRank) {
+				textBoxItemTempReqRepRank.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Rank", Classes.UtilityHelper.readExcelCSV("ItemReqReputationRank", 0, 1), textBoxItemTempReqRepRank.Text);
+			} else if(btn == buttonItemTempReqSpell) {
+				textBoxItemTempReqSpell.Text = Classes.PopupHelper.createPopupSelection("Required Spell", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxItemTempReqSpell.Text);
+			} else if(btn == buttonItemTempMaterial) {
+				textBoxItemTempMaterial.Text = Classes.PopupHelper.createPopupSelection("Materials", Classes.UtilityHelper.readExcelCSV("ItemMaterial", 0, 1), textBoxItemTempMaterial.Text);
+			} else if(btn == buttonItemTempFoodType) {
+				textBoxItemTempFoodType.Text = Classes.PopupHelper.createPopupSelection("Food Type", Classes.UtilityHelper.readExcelCSV("ItemFoodType", 0, 1), textBoxItemTempFoodType.Text);
+			} else if(btn == buttonItemTempBagFamily) {
+				textBoxItemTempBagFamily.Text = Classes.PopupHelper.createPopupSelection("Bag Family", Classes.UtilityHelper.readExcelCSV("ItemBagFamily", 0, 1), textBoxItemTempBagFamily.Text);
+			} else if(btn == buttonItemTempFlagsC) {
+				textBoxItemTempFlagsC.Text = Classes.PopupHelper.createPopupSelection("Custom Flags", Classes.UtilityHelper.readExcelCSV("ItemFlagsCustom", 0, 1), textBoxItemTempFlagsC.Text);
+			} else if(btn == buttonItemTempTotemCategory) {
+				textBoxItemTempTotemCategory.Text = Classes.PopupHelper.createPopupSelection("Totem Category", Classes.UtilityHelper.readExcelCSV("ItemTotemCategory", 0, 1), textBoxItemTempTotemCategory.Text);
 			}
-		}
-		/// <summary>
-		/// Converts an unix stamp to a datatime used for calenders and readable.
-		/// </summary>
-		/// <param name="unixStamp">The unixstamp to convert</param>
-		/// <returns>Datatime based on unix stamp</returns>
-		private DateTime UnixStampToDateTime(double unixStamp) {
-			var DateTime = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-			DateTime = DateTime.AddSeconds(unixStamp).ToLocalTime();
-
-			return DateTime;
-		}
-		/// <summary>
-		/// A reverse of the UnixStampToDateTime function.
-		/// </summary>
-		/// <param name="dateTime">A datatime to convert</param>
-		/// <returns>Outputs an unixstamp based on the datatime</returns>
-		private double DateTimeToUnixStamp(DateTime dateTime) {
-			return (TimeZoneInfo.ConvertTimeToUtc(dateTime) - new DateTime(1970, 1, 1)).TotalSeconds;
-		}
-		#endregion
-		#region DatabaseFunctions
-
-		// Generates the string required to create a connection
-		private static string DatabaseString(string database) {
-			var builder = new MySqlConnectionStringBuilder();
-
-			builder.Server = FormMySQL.Address;
-			builder.UserID = FormMySQL.Username;
-			builder.Password = FormMySQL.Password;
-			builder.Port = FormMySQL.Port;
-			builder.Database = database;
-
-			return builder.ToString();
-		}
-		// Tries to open the connection between the program and database.
-		private bool ConnectionOpen(MySqlConnection connect) {
-			try {
-				connect.Open();
-				return true;
-			} catch(MySqlException) {
-				return false;
-				throw;
-			}
-		}
-		// Tries to close the connection between the program and database.
-		private bool ConnectionClose(MySqlConnection connect) {
-			try {
-				connect.Close();
-				return true;
-			} catch(MySqlException ex) {
-				MessageBox.Show(ex.Message, "MySQL Error: " + ex.Number, MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-
-			return false;
-		}
-		// Searching the database with a specific query, then saves in a DataSet.
-		private DataSet DatabaseSearch(MySqlConnection connect, string sqlQuery) {
-			var ds = new DataSet();
-
-			if(connect.State == ConnectionState.Open) {
-				var da = new MySqlDataAdapter(sqlQuery, connect);
-
-				da.Fill(ds);
-			}
-
-			return ds;
-		}
-		// Updates the database with a specific query and returns the row affected.
-		private int DatabaseUpdate(MySqlConnection connect, string sqlQuery) {
-			if(connect.State == ConnectionState.Open && sqlQuery != "") {
-				var query = new MySqlCommand(sqlQuery, connect);
-				return query.ExecuteNonQuery();
-			}
-
-			return 0;
-		}
-		// Get all rows from a search, searches for items names. if itemid is false, it tries for item identifier.
-		private DataTable DatabaseItemNameColumn(string table, string where, string id, int itemColumn, bool isItemID) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			var searchTable = new DataTable();
-
-			if(ConnectionOpen(connect)) {
-				// Create the query depending on the paramenters
-				string query = "SELECT * FROM " + table + " WHERE " + where + " = '" + id + "';";
-
-				// Searches in mySQL.
-				var datatable = DatabaseSearch(connect, query);
-
-				// Sets all the columns to string.
-				searchTable = ConvertColumnsToString(datatable.Tables[0]);
-
-				if(searchTable.Rows.Count != 0) {
-					// Adds a new column to the existing one, called 'name'.
-					searchTable.Columns.Add("name", typeof(string));
-
-					// Loops through all rows
-					for(int i = 0; i < searchTable.Rows.Count; i++) {
-
-						if(isItemID) {
-							searchTable.Rows[i]["name"] = DatabaseItemGetName(Convert.ToUInt32(searchTable.Rows[i][itemColumn]));
-						} else {
-							searchTable.Rows[i]["name"] = DatabaseItemGetName(DatabaseItemGetEntry(Convert.ToUInt32(searchTable.Rows[i][itemColumn])));
-						}
-
-					}
-				}
-
-				ConnectionClose(connect);
-			}
-
-			return searchTable;
-		}
-		// Gets the item entry with global item identifier.
-		private uint DatabaseItemGetEntry(uint itemIdentifier) {
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseCharacters));
-
-			if(ConnectionOpen(connect)) {
-				// Get the ItemID
-				string instanceQuery = "SELECT itemEntry FROM item_instance WHERE guid = '" + itemIdentifier + "';";
-
-				// Item_instance Table
-				DataSet iiTable = DatabaseSearch(connect, instanceQuery);
-
-				if(iiTable.Tables[0].Rows.Count != 0) { return Convert.ToUInt32(iiTable.Tables[0].Rows[0][0]); }
-			}
-
-			ConnectionClose(connect);
-			return 0;
-		}
-		// Gets the item name from item entry.
-		private string DatabaseItemGetName(uint itemEntry) {
-
-			var connect = new MySqlConnection(DatabaseString(FormMySQL.DatabaseWorld));
-
-			if(ConnectionOpen(connect)) {
-
-				// Get the ItemID
-				string nameQuery = "SELECT name FROM item_template WHERE entry = '" + itemEntry + "';";
-
-				// item_template
-				DataSet itTable = DatabaseSearch(connect, nameQuery);
-
-				return (itTable.Tables[0].Rows.Count > 0) ? itTable.Tables[0].Rows[0][0].ToString() : "";
-			}
-
-			ConnectionClose(connect);
-
-			return "";
 		}
 
 		#endregion
-		#region DataTables
+
+		#region Upload/SqlGenerate
+
+		private void toolStripSplitButtonUploadScriptTab(object sender, EventArgs e) {
+			ToolStripSplitButton btn = (ToolStripSplitButton) sender;
+
+			int rows = 0;
+			ToolStripStatusLabel label = null;
+
+			if(btn == toolStripSplitButtonAccountScriptUpdate) {
+				DatabaseAuth da = Settings.getAuthDB();
+
+				rows = da.uploadSql(textBoxAccountScriptOutput.Text);
+				label = toolStripStatusLabelAccountScriptRows;
+			} else if(btn == toolStripSplitButtonCharacterScriptUpdate) {
+				DatabaseCharacters dw = Settings.getCharsDB();
+
+				rows = dw.uploadSql(textBoxAccountScriptOutput.Text);
+				label = toolStripStatusLabelAccountScriptRows;
+			} else {
+				DatabaseWorld dw = Settings.getWorldDB();
+
+				if(btn == toolStripSplitButtonCreatureScriptUpdate) {
+					rows = dw.uploadSql(textBoxCreatureScriptOutput.Text);
+					label = toolStripStatusLabelCreatureScriptRows;
+
+				} else if(btn == toolStripSplitButtonQuestScriptUpdate) {
+					rows = dw.uploadSql(textBoxQuestScriptOutput.Text);
+					label = toolStripStatusLabelQuestScriptRows;
+
+				} else if(btn == toolStripSplitButtonGOScriptUpdate) {
+					rows = dw.uploadSql(textBoxGameObjectScriptOutput.Text);
+					label = toolStripStatusLabelGameObjectScriptRows;
+
+				} else if(btn == toolStripSplitButtonItemScriptUpdate) {
+					rows = dw.uploadSql(textBoxItemScriptOutput.Text);
+					label = toolStripStatusLabelItemScriptRows;
+				}
+			}
+
+			if(label != null) {
+				label.Text = "Row(s) affected: " + rows.ToString();
+			}
+		}
+		private void toolStripSplitButtonSqlGenerate(object sender, EventArgs e) {
+			ToolStripSplitButton btn = (ToolStripSplitButton) sender;
+
+			string title = "", name = "", entry = "", sql = "";
+
+			if(btn == toolStripSplitButtonCreatureScriptSQLGenerate) {
+				title = "creature";
+				name = textBoxCreatureTemplateName.Text;
+				entry = textBoxCreatureTemplateEntry.Text;
+				sql = textBoxCreatureScriptOutput.Text;
+			} else if(btn == toolStripSplitButtonQuestScriptSQLGenerate) {
+				title = "quest";
+				name = textBoxQuestSectionID.Text;
+				entry = textBoxQuestSectionLDescription.Text;
+				sql = textBoxQuestScriptOutput.Text;
+			} else if(btn == toolStripSplitButtonGOScriptSQLGenerate) {
+				title = "gameobject";
+				name = textBoxGameObjectTempName.Text;
+				entry = textBoxGameObjectTempEntry.Text;
+				sql = textBoxGameObjectScriptOutput.Text;
+			} else if(btn == toolStripSplitButtonItemScriptSQLGenerate) {
+				title = "item";
+				name = textBoxItemTempName.Text;
+				entry = textBoxItemTempEntry.Text;
+				sql = textBoxItemScriptOutput.Text;
+			}
+
+			string combined = title + "_" + (!string.IsNullOrEmpty(name) ? name + "_" : "") + entry;
+
+			bool fileGenerated = Classes.Generate.SqlGenerate.generateSqlFile(combined, sql);
+
+			if(fileGenerated) {
+				btn.Text = "Generate SQL File - Successful!";
+			} else {
+				btn.Text = "Generate SQL File - Failed!";
+			}
+		}
+
+		#endregion
+
+		#endregion - - - - - - 
+
+		#region Selfmade CSV
+		// I have to create own csv for each category, then check which csv to read...
+		// Whenever I feel like I want to do that, I will do it.
+
 		private DataTable DataItemClass() {
 			var iClass = new DataTable();
 			iClass.Columns.Add("id", typeof(string));
@@ -3007,299 +2720,6 @@ namespace Manti.Views {
 			return iSubclass;
 		}
 		#endregion
-		#endregion
 
-		#region POPUPS
-		private void buttonCharacterCharacterRace_Click(object sender, EventArgs e) {
-			textBoxCharacterCharacterRace.Text = CreatePopupSelection("Character Race", ReadExcelCSV("ChrRaces", 0, 14), textBoxCharacterCharacterRace.Text);
-		}
-		private void buttonCharacterCharacterClass_Click(object sender, EventArgs e) {
-			textBoxCharacterCharacterClass.Text = CreatePopupSelection("Character Class", ReadExcelCSV("ChrClasses", 0, 4), textBoxCharacterCharacterClass.Text);
-		}
-		#endregion
-
-		#region POPUPS
-		private void buttonCreatureTemplateModelID1_Click(object sender, EventArgs e) {
-			bool[] rButtons = { false, true, false };
-
-			textBoxCreatureTemplateModelID1.Text = CreatePopupEntity(textBoxCreatureTemplateModelID1.Text, rButtons, false);
-		}
-		private void buttonCreatureTemplateRank_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateRank.Text = CreatePopupSelection("Creature Rank", ReadExcelCSV("CreatureRanks", 0, 1), textBoxCreatureTemplateRank.Text);
-		}
-		private void buttonCreatureTemplateNPCFlags_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateNPCFlags.Text = CreatePopupChecklist("Creature NPC Flags", ReadExcelCSV("CreatureNPCFlags", 0, 1), textBoxCreatureTemplateNPCFlags.Text, true);
-		}
-		private void buttonCreatureTemplateSpell1_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateSpell1.Text = CreatePopupSelection("Spells I", ReadExcelCSV("Spells", 0, 1), textBoxCreatureTemplateSpell1.Text);
-		}
-		private void buttonCreatureTemplateDS_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateDS.Text = CreatePopupSelection("Damage School (Type)", ReadExcelCSV("CreatureDmgSchool", 0, 1), textBoxCreatureTemplateDS.Text);
-		}
-		private void buttonCreatureTemplateMType_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateMType.Text = CreatePopupSelection("Movement Type", ReadExcelCSV("CreatureMovementType", 0, 1), textBoxCreatureTemplateMType.Text);
-		}
-		private void buttonCreatureTemplateInhabitType_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateInhabitType.Text = CreatePopupChecklist("Inhabit Types", ReadExcelCSV("CreatureInhabitTypes", 0, 1), textBoxCreatureTemplateInhabitType.Text, true); ;
-		}
-		private void buttonCreatureTemplateMechanic_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateMechanic.Text = CreatePopupChecklist("Creature's Immunity", ReadExcelCSV("CreatureMechanic", 0, 1), textBoxCreatureTemplateMechanic.Text, true);
-		}
-		private void buttonCreatureTemplateFamily_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateFamily.Text = CreatePopupSelection("Creature's Family", ReadExcelCSV("CreatureFamily", 0, 1), textBoxCreatureTemplateFamily.Text);
-		}
-		private void buttonCreatureTemplateType_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateType.Text = CreatePopupSelection("Creature's Type", ReadExcelCSV("CreatureFamilyType", 0, 1), textBoxCreatureTemplateType.Text);
-		}
-		private void buttonCreatureTemplateTypeFlags_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateTypeFlags.Text = CreatePopupChecklist("Unit Flags I", ReadExcelCSV("CreatureTypeFlags", 0, 1), textBoxCreatureTemplateTypeFlags.Text, true);
-		}
-		private void buttonCreatureTemplateFlagsExtra_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateFlagsExtra.Text = CreatePopupChecklist("Extra Flags", ReadExcelCSV("CreatureFlagsExtra", 0, 1), textBoxCreatureTemplateFlagsExtra.Text, true);
-		}
-		private void buttonCreatureTemplateUnitClass_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateUnitClass.Text = CreatePopupSelection("Creature's Class", ReadExcelCSV("CreatureUnitClass", 0, 1), textBoxCreatureTemplateUnitClass.Text);
-		}
-		private void buttonCreatureTemplateUnitflags_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateUnitflags.Text = CreatePopupChecklist("Unit Flags I", ReadExcelCSV("CreatureUnitFlags", 0, 1), textBoxCreatureTemplateUnitflags.Text, true);
-		}
-		private void buttonCreatureTemplateUnitflags2_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateUnitflags2.Text = CreatePopupChecklist("Unit Flags II", ReadExcelCSV("CreatureUnitFlags2", 0, 1), textBoxCreatureTemplateUnitflags2.Text, true);
-		}
-		private void buttonCreatureTemplateDynamic_Click(object sender, EventArgs e) {
-			textBoxCreatureTemplateDynamic.Text = CreatePopupChecklist("Dynamic Flags", ReadExcelCSV("CreatureDynamicFlags", 0, 1), textBoxCreatureTemplateDynamic.Text, true);
-		}
-		#endregion
-
-		#region POPUPS
-		private void buttonQuestSearchInfo_Click(object sender, EventArgs e) {
-			textBoxQuestSearchInfo.Text = CreatePopupSelection("Quest Info", ReadExcelCSV("QuestInfo", 0, 1), textBoxQuestSearchInfo.Text);
-		}
-		// Section 1
-		private void buttonQuestSectionSourceItemID_Click(object sender, EventArgs e) {
-			bool[] rButton = { true, false, false };
-
-			textBoxQuestSectionSourceItemID.Text = CreatePopupEntity(textBoxQuestSectionSourceItemID.Text, rButton);
-		}
-		private void buttonQuestSectionReqRace_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqRace.Text = CreatePopupChecklist("Requirement: Races", ReadExcelCSV("ChrRaces", 0, 14), textBoxQuestSectionReqRace.Text, true);
-		}
-		private void buttonQuestSectionReqClass_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqClass.Text = CreatePopupChecklist("Requirement: Classes", ReadExcelCSV("ChrClasses", 0, 4), textBoxQuestSectionReqClass.Text, true);
-		}
-		private void buttonQuestSectionQSort_Click(object sender, EventArgs e) {
-			if(radioButtonQuestSectionZID.Checked) {
-				textBoxQuestSectionReqQSort.Text = CreatePopupSelection("Zone ID Selection", ReadExcelCSV("AreaTable", 0, 11), textBoxQuestSectionReqQSort.Text);
-			} else {
-				string newValue = CreatePopupSelection("Quest Sort Selection", ReadExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
-
-				textBoxQuestSectionReqQSort.Text = (textBoxQuestSectionReqQSort.Text == newValue || newValue == "0") ? textBoxQuestSectionReqQSort.Text : "-" + newValue;
-			}
-		}
-		private void buttonQuestSectionReqFaction1_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqFaction1.Text = CreatePopupSelection("Objective Faction ID I", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction1.Text);
-		}
-		private void buttonQuestSectionReqFaction2_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqFaction2.Text = CreatePopupSelection("Objective Faction ID II", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction2.Text);
-		}
-		private void buttonQuestSectionReqMinRepF_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqMinRepF.Text = CreatePopupSelection("Minimum Reputation Faction", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMinRepF.Text);
-		}
-		private void buttonQuestSectionReqMaxRepF_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqMaxRepF.Text = CreatePopupSelection("Maximum Reputation Faction", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMaxRepF.Text);
-		}
-		private void buttonQuestSectionReqSkillID_Click(object sender, EventArgs e) {
-			textBoxQuestSectionReqSkillID.Text = CreatePopupSelection("Required Skill ID", ReadExcelCSV("SkillLine", 0, 3), textBoxQuestSectionReqSkillID.Text);
-		}
-		private void buttonQuestSectionQuestType_Click(object sender, EventArgs e) {
-			textBoxQuestSectionQuestType.Text = CreatePopupSelection("Quest Type", ReadExcelCSV("QuestType", 0, 1), textBoxQuestSectionQuestType.Text);
-		}
-		private void buttonQuestSectionQuestFlags_Click(object sender, EventArgs e) {
-			textBoxQuestSectionQuestFlags.Text = CreatePopupChecklist("Quest : Flags", ReadExcelCSV("QuestFlags", 0, 1), textBoxQuestSectionQuestFlags.Text, true);
-		}
-		private void buttonQuestSectionOtherSF_Click(object sender, EventArgs e) {
-			textBoxQuestSectionOtherSF.Text = CreatePopupChecklist("Quest : Special Flags", ReadExcelCSV("QuestSpecialFlags", 0, 1), textBoxQuestSectionOtherSF.Text, true);
-		}
-		private void buttonQuestSectionQuestInfo_Click(object sender, EventArgs e) {
-			textBoxQuestSectionQuestInfo.Text = CreatePopupSelection("Quest Info", ReadExcelCSV("QuestInfo", 0, 1), textBoxQuestSectionQuestInfo.Text);
-		}
-		private void buttonQuestSectionSourceSpellID_Click(object sender, EventArgs e) {
-			textBoxQuestSectionSourceSpellID.Text = CreatePopupSelection("Spells", ReadExcelCSV("Spells", 0, 1), textBoxQuestSectionSourceSpellID.Text);
-		}
-		// Section 2
-		private void buttonQuestSectionReqNPCID1_Click(object sender, EventArgs e) {
-			bool[] rButton = { false, true, false };
-
-			textBoxQuestSectionReqNPCID1.Text = CreatePopupEntity(textBoxQuestSectionReqNPCID1.Text, rButton);
-		}
-		private void buttonQuestSectionReqItemID1_Click(object sender, EventArgs e) {
-			bool[] rButton = { true, false, false };
-
-			textBoxQuestSectionReqItemID1.Text = CreatePopupEntity(textBoxQuestSectionReqItemID1.Text, rButton);
-		}
-		private void buttonQuestSectionRewChoiceID1_Click(object sender, EventArgs e) {
-			bool[] rButton = { true, false, false };
-
-			textBoxQuestSectionRewChoiceID1.Text = CreatePopupEntity(textBoxQuestSectionRewChoiceID1.Text, rButton);
-		}
-		private void buttonQuestSectionRewItemID1_Click(object sender, EventArgs e) {
-			bool[] rButton = { true, false, false };
-
-			textBoxQuestSectionRewItemID1.Text = CreatePopupEntity(textBoxQuestSectionRewItemID1.Text, rButton);
-		}
-		private void buttonQuestSectionRewFactionID1_Click(object sender, EventArgs e) {
-			textBoxQuestSectionRewFactionID1.Text = CreatePopupSelection("Faction Selection", ReadExcelCSV("Faction", 0, 23), textBoxQuestSectionRewFactionID1.Text);
-		}
-		private void buttonQuestSectionRewOtherTitleID_Click(object sender, EventArgs e) {
-			textBoxQuestSectionRewOtherTitleID.Text = CreatePopupSelection("Title Selection", ReadExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
-		}
-		private void buttonQuestSectionRewSpell_Click(object sender, EventArgs e) {
-			textBoxQuestSectionRewSpell.Text = CreatePopupSelection("Spell Selection", ReadExcelCSV("Spells", 0, 1), textBoxQuestSectionRewSpell.Text);
-		}
-		#endregion
-
-		#region POPUPS
-		private void buttonGameObjectTempType_Click(object sender, EventArgs e) {
-			textBoxGameObjectTempType.Text = CreatePopupSelection("Game Object Type Selection", ReadExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType.Text);
-		}
-		private void buttonGameObjectTempFlags_Click(object sender, EventArgs e) {
-			textBoxGameObjectTempFlags.Text = CreatePopupChecklist("Game Object Flags Selection", ReadExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags.Text, true);
-		}
-		#endregion
-
-		#region POPUPS
-		// Search
-		private void buttonItemSearchClass_Click(object sender, EventArgs e) {
-			textBoxItemSearchClass.Text = CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass.Text);
-		}
-		private void buttonItemSearchSubclass_Click(object sender, EventArgs e) {
-			textBoxItemSearchSubclass.Text = CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass.Text);
-		}
-		// Template
-		private void buttonItemTempTypeClass_Click(object sender, EventArgs e) {
-			textBoxItemTempTypeClass.Text = CreatePopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass.Text);
-		}
-		private void buttonItemTempSubclass_Click(object sender, EventArgs e) {
-			textBoxItemTempSubclass.Text = CreatePopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass.Text);
-		}
-		private void buttonItemTempDisplayID_Click(object sender, EventArgs e) {
-			bool[] rButtons = { true, false, false };
-
-			textBoxItemTempDisplayID.Text = CreatePopupEntity(textBoxItemTempDisplayID.Text, rButtons, false);
-		}
-		private void buttonItemTempQuality_Click(object sender, EventArgs e) {
-			textBoxItemTempQuality.Text = CreatePopupSelection("Quality Selection", ReadExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality.Text);
-		}
-		private void buttonItemTempFlags_Click(object sender, EventArgs e) {
-			textBoxItemTempFlags.Text = CreatePopupChecklist("Flags", ReadExcelCSV("ItemFlags", 0, 1), textBoxItemTempFlags.Text, true);
-		}
-		private void buttonItemTempEFlags_Click(object sender, EventArgs e) {
-			textBoxItemTempEFlags.Text = CreatePopupChecklist("Extra Flags", ReadExcelCSV("ItemFlagsExtra", 0, 1), textBoxItemTempEFlags.Text, true);
-		}
-		private void buttonItemTempDmgType1_Click(object sender, EventArgs e) {
-			textBoxItemTempDmgType1.Text = CreatePopupSelection("Damage Type I Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1.Text);
-		}
-		private void buttonItemTempDmgType2_Click(object sender, EventArgs e) {
-			textBoxItemTempDmgType2.Text = CreatePopupSelection("Damage Type II Selection", ReadExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2.Text);
-		}
-		private void buttonItemTempAmmoType_Click(object sender, EventArgs e) {
-			textBoxItemTempAmmoType.Text = CreatePopupSelection("Ammo Types", ReadExcelCSV("ItemAmmoType", 0, 1), textBoxItemTempAmmoType.Text);
-		}
-		private void buttonItemTempItemSet_Click(object sender, EventArgs e) {
-			textBoxItemTempItemSet.Text = CreatePopupSelection("ItemSet Selection", ReadExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet.Text);
-		}
-		private void buttonItemTempBonding_Click(object sender, EventArgs e) {
-			textBoxItemTempBonding.Text = CreatePopupSelection("Bonding Selection", ReadExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding.Text);
-		}
-		private void buttonItemTempSheath_Click(object sender, EventArgs e) {
-			textBoxItemTempSheath.Text = CreatePopupSelection("Sheath Selection", ReadExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath.Text);
-		}
-		private void buttonItemTempColor1_Click(object sender, EventArgs e) {
-			textBoxItemTempColor1.Text = CreatePopupSelection("Color Selection I", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1.Text);
-		}
-		private void buttonItemTempColor2_Click(object sender, EventArgs e) {
-			textBoxItemTempColor2.Text = CreatePopupSelection("Color Selection II", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2.Text);
-		}
-		private void buttonItemTempColor3_Click(object sender, EventArgs e) {
-			textBoxItemTempColor3.Text = CreatePopupSelection("Color Selection III", ReadExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3.Text);
-		}
-		private void buttonItemTempSocketBonus_Click(object sender, EventArgs e) {
-			textBoxItemTempSocketBonus.Text = CreatePopupSelection("Socket Bonus Selection III", ReadExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus.Text);
-		}
-		private void buttonItemTempStatsType1_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType1.Text = CreatePopupSelection("Stat Selection I", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1.Text);
-		}
-		private void buttonItemTempStatsType2_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType2.Text = CreatePopupSelection("Stat Selection II", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2.Text);
-		}
-		private void buttonItemTempStatsType3_Click(object sender, EventArgs e) {
-			CreatePopupSelection("Stat Selection III", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3.Text);
-		}
-		private void buttonItemTempStatsType4_Click(object sender, EventArgs e) {
-			CreatePopupSelection("Stat Selection IV", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4.Text);
-		}
-		private void buttonItemTempStatsType5_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType5.Text = CreatePopupSelection("Stat Selection V", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5.Text);
-		}
-		private void buttonItemTempStatsType6_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType6.Text = CreatePopupSelection("Stat Selection VI", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6.Text);
-		}
-		private void buttonItemTempStatsType7_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType7.Text = CreatePopupSelection("Stat Selection VII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7.Text);
-		}
-		private void buttonItemTempStatsType8_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType8.Text = CreatePopupSelection("Stat Selection VIII", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8.Text);
-		}
-		private void buttonItemTempStatsType9_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType9.Text = CreatePopupSelection("Stat Selection IX", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9.Text);
-		}
-		private void buttonItemTempStatsType10_Click(object sender, EventArgs e) {
-			textBoxItemTempStatsType10.Text = CreatePopupSelection("Stat Selection X", ReadExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10.Text);
-		}
-		private void buttonItemTempSpellID1_Click(object sender, EventArgs e) {
-			textBoxItemTempSpellID1.Text = CreatePopupSelection("Required Spell", ReadExcelCSV("Spells", 0, 1), textBoxItemTempSpellID1.Text);
-		}
-		private void buttonItemTempTrigger1_Click(object sender, EventArgs e) {
-			textBoxItemTempTrigger1.Text = CreatePopupSelection("Spell Trigger", ReadExcelCSV("ItemSpellTrigger", 0, 1), textBoxItemTempTrigger1.Text);
-		}
-		private void buttonItemTempReqRace_Click(object sender, EventArgs e) {
-			textBoxItemTempReqRace.Text = CreatePopupChecklist("Race Requirement", ReadExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace.Text, true);
-		}
-		private void buttonItemTempReqClass_Click(object sender, EventArgs e) {
-			textBoxItemTempReqClass.Text = CreatePopupChecklist("Class Requirement", ReadExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass.Text, true);
-		}
-		private void buttonItemTempReqSkill_Click(object sender, EventArgs e) {
-			textBoxItemTempReqSkill.Text = CreatePopupSelection("Required Skill", ReadExcelCSV("SkillLine", 0, 3), textBoxItemTempReqSkill.Text);
-		}
-		private void buttonItemTempReqRepFaction_Click(object sender, EventArgs e) {
-			textBoxItemTempReqRepFaction.Text = CreatePopupSelection("Required Reputation Faction", ReadExcelCSV("Faction", 0, 23), textBoxItemTempReqRepFaction.Text);
-		}
-		private void buttonItemTempReqRepRank_Click(object sender, EventArgs e) {
-			textBoxItemTempReqRepRank.Text = CreatePopupSelection("Required Reputation Rank", ReadExcelCSV("ItemReqReputationRank", 0, 1), textBoxItemTempReqRepRank.Text);
-		}
-		private void buttonItemTempReqSpell_Click(object sender, EventArgs e) {
-			textBoxItemTempReqSpell.Text = CreatePopupSelection("Required Spell", ReadExcelCSV("Spells", 0, 1), textBoxItemTempReqSpell.Text);
-		}
-		private void buttonItemTempMaterial_Click(object sender, EventArgs e) {
-			textBoxItemTempMaterial.Text = CreatePopupSelection("Materials", ReadExcelCSV("ItemMaterial", 0, 1), textBoxItemTempMaterial.Text);
-		}
-		private void buttonItemTempFoodType_Click(object sender, EventArgs e) {
-			textBoxItemTempFoodType.Text = CreatePopupSelection("Food Type", ReadExcelCSV("ItemFoodType", 0, 1), textBoxItemTempFoodType.Text);
-		}
-		private void buttonItemTempBagFamily_Click(object sender, EventArgs e) {
-			textBoxItemTempBagFamily.Text = CreatePopupSelection("Bag Family", ReadExcelCSV("ItemBagFamily", 0, 1), textBoxItemTempBagFamily.Text);
-		}
-		private void buttonItemTempFlagsC_Click(object sender, EventArgs e) {
-			textBoxItemTempFlagsC.Text = CreatePopupSelection("Custom Flags", ReadExcelCSV("ItemFlagsCustom", 0, 1), textBoxItemTempFlagsC.Text);
-		}
-		private void buttonItemTempTotemCategory_Click(object sender, EventArgs e) {
-			textBoxItemTempTotemCategory.Text = CreatePopupSelection("Totem Category", ReadExcelCSV("ItemTotemCategory", 0, 1), textBoxItemTempTotemCategory.Text);
-		}
-
-
-
-
-
-		#endregion
 	}
 }
