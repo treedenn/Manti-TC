@@ -172,23 +172,30 @@ namespace Manti.Views {
 			var model = Models.ServerModel.getInstance();
 			bool isRunning;
 
-			isRunning = isProcessRunning(Settings.getSetting(Setting.PathAuthserver));	
-			toggleServerState(isRunning, labelAuthStatus, buttonAuthServer);
-			model.isAuthOnline = isRunning;
+			string aPath = Settings.getSetting(Setting.PathAuthserver);
+			string wPath = Settings.getSetting(Setting.PathWorldserver);
 
-			isRunning = isProcessRunning(Settings.getSetting(Setting.PathWorldserver));
-			toggleServerState(isRunning, labelWorldStatus, buttonWorldServer);
-			model.isWorldOnline = isRunning;
+			if(!string.IsNullOrEmpty(aPath)) {
+				isRunning = isProcessRunning(aPath);
+				toggleServerState(isRunning, labelAuthStatus, buttonAuthServer);
+				model.isAuthOnline = isRunning;
 
-			if(checkBoxRestartAuth.Checked) {
-				if(!model.isAuthOnline) {
-					startProcess(Properties.Settings.Default.PathAuthserver, checkBoxHideAuth.Checked);
+				if(checkBoxRestartAuth.Checked) {
+					if(!model.isAuthOnline) {
+						startProcess(aPath, checkBoxHideAuth.Checked);
+					}
 				}
 			}
 
-			if(checkBoxRestartWorld.Checked) {
-				if(!model.isWorldOnline) {
-					startProcess(Properties.Settings.Default.PathWorldserver, checkBoxHideWorld.Checked);
+			if(!string.IsNullOrEmpty(wPath)) {
+				isRunning = isProcessRunning(wPath);
+				toggleServerState(isRunning, labelWorldStatus, buttonWorldServer);
+				model.isWorldOnline = isRunning;
+
+				if(checkBoxRestartWorld.Checked) {
+					if(!model.isWorldOnline) {
+						startProcess(wPath, checkBoxHideWorld.Checked);
+					}
 				}
 			}
 		}
