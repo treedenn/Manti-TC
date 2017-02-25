@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Manti.Classes.QuestTab {
+﻿namespace Manti.Classes.QuestTab {
 	public class Quest {
 		// Section 1
 		public uint id { get; set; }

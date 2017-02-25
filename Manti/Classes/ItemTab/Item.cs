@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Manti.Classes.ItemTab {
+﻿namespace Manti.Classes.ItemTab {
 	public class Item {
 		public uint entry { get; set; }
 		public uint iClass { get; set; }

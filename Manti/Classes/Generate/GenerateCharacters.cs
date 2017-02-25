@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Manti.Classes.Generate {
+﻿namespace Manti.Classes.Generate {
 	public class GenerateCharacters : SqlGenerate {
 		public string CharacterToSql(CharacterTab.Character c) {
 			if(c != null) {

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
-using MySql.Data.Types;
 
 namespace Manti.Classes.Database {
 	public abstract class MySqlDatabase {

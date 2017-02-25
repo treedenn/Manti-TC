@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Manti.Classes.Settings;
+﻿using Manti.Classes.Settings;
 using Manti.Classes.CreatureTab;
 
 namespace Manti.Models {

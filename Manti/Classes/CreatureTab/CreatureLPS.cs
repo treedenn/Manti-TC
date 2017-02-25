@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Manti.Classes.CreatureTab {
+﻿namespace Manti.Classes.CreatureTab {
 	public class CreatureLPS { // Loot, Pickpocket & Skinning - same template
 		public uint entry { get; set; }
 		public uint item { get; set; }

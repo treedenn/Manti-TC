@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Manti.Classes.GameObjectTab {
+﻿namespace Manti.Classes.GameObjectTab {
 	public class GameObject {
 		public uint entry { get; set; }
 		public uint type { get; set; }
