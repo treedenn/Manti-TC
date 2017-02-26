@@ -219,7 +219,7 @@
 			// buttonConnect
 			// 
 			this.buttonConnect.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-			this.buttonConnect.Location = new System.Drawing.Point(18, 172);
+			this.buttonConnect.Location = new System.Drawing.Point(373, 172);
 			this.buttonConnect.Name = "buttonConnect";
 			this.buttonConnect.Size = new System.Drawing.Size(158, 25);
 			this.buttonConnect.TabIndex = 6;
@@ -230,7 +230,7 @@
 			// buttonClear
 			// 
 			this.buttonClear.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-			this.buttonClear.Location = new System.Drawing.Point(366, 172);
+			this.buttonClear.Location = new System.Drawing.Point(12, 172);
 			this.buttonClear.Name = "buttonClear";
 			this.buttonClear.Size = new System.Drawing.Size(158, 25);
 			this.buttonClear.TabIndex = 7;

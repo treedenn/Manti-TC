@@ -34,7 +34,7 @@ namespace Manti.Views {
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 		private void setOfflineMode(bool enable) {
-			FormMySQL.Offline = enable;
+			MySqlDatabase.isRunningOffline = enable;
 
 			// Search Buttons
 			Button[] dButtons = new Button[]
@@ -1296,8 +1296,8 @@ namespace Manti.Views {
 		private void FormMain_Load(object sender, EventArgs e) {
 			this.Icon = Properties.Resources.iconManti;
 
-			tabControlCategory.Focus();
-			tabControlCategory.SelectedTab = tabPageItem;
+			tabControlAccountManager.Focus();
+			//tabControlCategory.SelectedTab = tabPageItem;
 
 			dataGridViewAccountSearch.AutoGenerateColumns      = false;
 			dataGridViewCreatureSearch.AutoGenerateColumns     = false;
@@ -1311,35 +1311,37 @@ namespace Manti.Views {
 			dataGridViewItemDE.AutoGenerateColumns             = false;
 			dataGridViewQuestGivers.AutoGenerateColumns        = false;
 
-			setOfflineMode(FormMySQL.Offline);
+			setOfflineMode(MySqlDatabase.isRunningOffline);
 		}
 		private void tabControlCategory_KeyDown(object sender, KeyEventArgs e) {
 			if(e.KeyCode == Keys.Enter) {
 				e.SuppressKeyPress = true;
 
-				if(tabControlCategory.SelectedTab == tabPageAccount) { // Account Tab
-					if(tabControlCategoryAccount.SelectedTab == tabPageAccountSearch) {
-						buttonAccountSearchSearch_Click(this, new EventArgs());
-					}
-				} else if(tabControlCategory.SelectedTab == tabPageCharacter) { // Character Tab
-					if(tabControlCategoryCharacter.SelectedTab == tabPageCharacterSearch) {
-						buttonCharacterSearchSearch_Click(this, new EventArgs());
-					}
-				} else if(tabControlCategory.SelectedTab == tabPageCreature) { // Creature Tab
-					if(tabControlCategoryCreature.SelectedTab == tabPageCreatureSearch) {
-						buttonCreatureSearchSearch_Click(this, new EventArgs());
-					}
-				} else if(tabControlCategory.SelectedTab == tabPageQuest) { // Quest Tab
-					if(tabControlCategoryQuest.SelectedTab == tabPageQuestSearch) {
-						buttonQuestSearchSearch_Click(this, new EventArgs());
-					}
-				} else if(tabControlCategory.SelectedTab == tabPageGameObject) { // Game Object Tab
-					if(tabControlCategoryGameObject.SelectedTab == tabPageGameObjectSearch) {
-						buttonGameObjectSearchSearch_Click(this, new EventArgs());
-					}
-				} else if(tabControlCategory.SelectedTab == tabPageItem) { // Item Tab
-					if(tabControlCategoryItem.SelectedTab == tabPageItemSearch) {
-						buttonItemSearchSearch_Click(this, new EventArgs());
+				if(!MySqlDatabase.isRunningOffline) {
+					if(tabControlAccountManager.SelectedTab == tabPageAccount) { // Account Tab
+						if(tabControlCategoryAccount.SelectedTab == tabPageAccountSearch) {
+							buttonAccountSearchSearch_Click(this, new EventArgs());
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageCharacter) { // Character Tab
+						if(tabControlCategoryCharacter.SelectedTab == tabPageCharacterSearch) {
+							buttonCharacterSearchSearch_Click(this, new EventArgs());
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageCreature) { // Creature Tab
+						if(tabControlCategoryCreature.SelectedTab == tabPageCreatureSearch) {
+							buttonCreatureSearchSearch_Click(this, new EventArgs());
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageQuest) { // Quest Tab
+						if(tabControlCategoryQuest.SelectedTab == tabPageQuestSearch) {
+							buttonQuestSearchSearch_Click(this, new EventArgs());
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageGameObject) { // Game Object Tab
+						if(tabControlCategoryGameObject.SelectedTab == tabPageGameObjectSearch) {
+							buttonGameObjectSearchSearch_Click(this, new EventArgs());
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageItem) { // Item Tab
+						if(tabControlCategoryItem.SelectedTab == tabPageItemSearch) {
+							buttonItemSearchSearch_Click(this, new EventArgs());
+						}
 					}
 				}
 			}
@@ -1382,6 +1384,8 @@ namespace Manti.Views {
 				}
 			}
 
+			GC.Collect();
+
 			toolStripStatusLabelAccountSearchRows.Text = "Account(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCharacterSearchSearch_Click(object sender, EventArgs e) {
@@ -1422,6 +1426,8 @@ namespace Manti.Views {
 				}
 			}
 
+			GC.Collect();
+
 			toolStripStatusLabelCharacterSearchRows.Text = "Character(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCreatureSearchSearch_Click(object sender, EventArgs e) {
@@ -1456,6 +1462,8 @@ namespace Manti.Views {
 				}
 
 			}
+
+			GC.Collect();
 
 			toolStripStatusLabelCreatureSearchRows.Text = "Creature(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
@@ -1503,6 +1511,8 @@ namespace Manti.Views {
 				dataGridViewQuestSearch.DataSource = dt;
 			}
 
+			GC.Collect();
+
 			toolStripStatusLabelQuestSearchRows.Text = "Quest(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonGameObjectSearchSearch_Click(object sender, EventArgs e) {
@@ -1533,6 +1543,8 @@ namespace Manti.Views {
 					dataGridViewGameObjectSearch.DataSource = dt;
 				}
 			}
+
+			GC.Collect();
 
 			toolStripStatusLabelGameObjectSearchRows.Text = "Game Object(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
@@ -1573,6 +1585,8 @@ namespace Manti.Views {
 					dataGridViewItemSearch.DataSource = dt;
 				}
 			}
+
+			GC.Collect();
 
 			toolStripStatusLabelItemSearchRows.Text = "Item(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
@@ -2711,5 +2725,8 @@ namespace Manti.Views {
 		}
 		#endregion
 
+		private void dataGridViewCharacterInventory_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+
+		}
 	}
 }

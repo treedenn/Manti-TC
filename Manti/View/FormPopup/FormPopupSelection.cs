@@ -12,8 +12,6 @@ namespace Manti.Views.FormPopup {
 		private DataTable data = new DataTable();
 		private string selectionValue = "";
 
-		#region Functions
-
 		public DataTable setDataTable {
 			set { data = value; }
 		}
@@ -42,8 +40,6 @@ namespace Manti.Views.FormPopup {
 			}
 		}
 
-		#endregion
-		#region Events
 		// FormLoad
 		private void FormPopupSelection_Load(object sender, EventArgs e) {
 			addItems(textBoxPopupSearchValue, 1);
@@ -82,8 +78,6 @@ namespace Manti.Views.FormPopup {
 		private void listViewPopupSelection_DoubleClick(object sender, EventArgs e) {
 			buttonPopupOK_Click(sender, e);
 		}
-
-		#endregion
 
 	}
 }

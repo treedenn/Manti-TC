@@ -15,8 +15,6 @@ namespace Manti.Views.FormPopup {
 		private bool selectionOutput = true;
 		private bool[] entities; // order: (item, creature, gameobject)
 
-		#region Functions
-
 		// Contain tables with all the entities;
 		public DataSet setEntityTable {
 			set { tableEntity = value; }
@@ -25,7 +23,6 @@ namespace Manti.Views.FormPopup {
 		public bool[] disableEntity {
 			set { entities = value; }
 		}
-
 		// The selection value
 		public string changeSelection {
 			set { selectionValue = value; }
@@ -92,8 +89,6 @@ namespace Manti.Views.FormPopup {
 
 		}
 
-		#endregion
-		#region Events
 		private void FormPopupEntities_Load(object sender, EventArgs e) {
 			dataGridViewPopupEntity.AutoGenerateColumns = false;
 
@@ -140,7 +135,6 @@ namespace Manti.Views.FormPopup {
 		private void buttonPopupClose_Click(object sender, EventArgs e) {
 			this.Close();
 		}
-		#endregion
 
 	}
 }

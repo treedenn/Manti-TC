@@ -14,8 +14,6 @@ namespace Manti.Views.FormPopup {
 		private bool isMinusOne = false;
 		private DataTable cblOptions;
 
-		#region Functions
-
 		public string setFormTitle {
 			set { this.Text = value; }
 		}
@@ -33,7 +31,7 @@ namespace Manti.Views.FormPopup {
 		/// <summary>
 		/// Adds the rows to the checklist from dataTable.
 		/// </summary>
-		private void AddItems() {
+		private void addItems() {
 			foreach(DataRow row in cblOptions.Rows) {
 				checkedListBoxPopupValues.Items.Add(row[1]);
 			}
@@ -42,7 +40,7 @@ namespace Manti.Views.FormPopup {
 		/// Calculates BitMask based on checked items and their ID.
 		/// </summary>
 		/// <returns></returns>
-		private ulong CalculateBitmask() {
+		private ulong calculateBitmask() {
 			double bitmaskValue = 0;
 
 			var SelectedItems = new List<int>();
@@ -59,7 +57,7 @@ namespace Manti.Views.FormPopup {
 
 			return Convert.ToUInt64(bitmaskValue);
 		}
-		private List<ulong> ReverseBitmask(string value) {
+		private List<ulong> reverseBitmask(string value) {
 			var storeID = new List<ulong>();
 
 			if(value != "-1") {
@@ -79,7 +77,7 @@ namespace Manti.Views.FormPopup {
 
 			return storeID;
 		}
-		private void CheckListBoxes(List<ulong> ID) {
+		private void checkListBoxes(List<ulong> ID) {
 			if(isMinusOne) {
 				for(var index = 0; index < checkedListBoxPopupValues.Items.Count; index++) {
 					checkedListBoxPopupValues.SetItemChecked(index, true);
@@ -95,16 +93,14 @@ namespace Manti.Views.FormPopup {
 			}
 		}
 
-		#endregion
-		#region Events
 		private void FormPopupCheckboxList_Load(object sender, EventArgs e) {
-			AddItems();
+			addItems();
 
-			if(bitmaskEnabled == true) { CheckListBoxes(ReverseBitmask(tbValue)); }
+			if(bitmaskEnabled == true) { checkListBoxes(reverseBitmask(tbValue)); }
 		}
 		private void buttonPopupOK_Click(object sender, EventArgs e) {
 			if(bitmaskEnabled == true) {
-				tbValue = CalculateBitmask().ToString();
+				tbValue = calculateBitmask().ToString();
 			}
 
 			this.Close();
@@ -112,7 +108,6 @@ namespace Manti.Views.FormPopup {
 		private void buttonPopupClose_Click(object sender, EventArgs e) {
 			this.Close();
 		}
-		#endregion
 
 	}
 }

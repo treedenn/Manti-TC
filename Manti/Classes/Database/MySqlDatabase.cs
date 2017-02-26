@@ -3,7 +3,7 @@ using MySql.Data.MySqlClient;
 
 namespace Manti.Classes.Database {
 	public abstract class MySqlDatabase {
-		public static bool runOffline = false;
+		public static bool isRunningOffline = false;
 
 		private string address { get; set; }
 		private string username { get; set; }

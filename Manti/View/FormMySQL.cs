@@ -10,7 +10,6 @@ namespace Manti.Views {
 			InitializeComponent();
 		}
 
-		public static bool Offline = false;
 		public static string dbPassword;
 
 		// TODO: Remove the static variables when polishing is complete
@@ -86,7 +85,7 @@ namespace Manti.Views {
 		}
 
 		private void buttonOffline_Click(object sender, EventArgs e) {
-			MySqlDatabase.runOffline = true;
+			MySqlDatabase.isRunningOffline = true;
 
 			this.Hide();
 			var mf = new Views.FormMain();
