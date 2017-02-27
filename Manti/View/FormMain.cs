@@ -50,12 +50,9 @@ namespace Manti.Views {
 			// Execute Buttons
 			ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
 			{
-					toolStripSplitButtonAccountScriptUpdate,
-					toolStripSplitButtonCharacterScriptUpdate,
-					toolStripSplitButtonCreatureScriptUpdate,
-					toolStripSplitButtonQuestScriptUpdate,
-					toolStripSplitButtonGOScriptUpdate,
-					toolStripSplitButtonItemScriptUpdate
+					toolStripSplitButtonAMScriptUpdate,
+					toolStripSplitButtonCMScriptUpdate,
+					toolStripSplitButtonWMScriptUpdate
 			};
 
 			foreach(Button btn in dButtons) {
@@ -650,7 +647,7 @@ namespace Manti.Views {
 
 		#region Update
 
-		private Account updateAccount() {
+		private void updateAccount() {
 			Account account = new Account();
 
 			if(!string.IsNullOrEmpty(textBoxAccountAccountID.Text)) {
@@ -698,37 +695,37 @@ namespace Manti.Views {
 				account.access = access;
 			}
 
-			return account;
+			Models.AccountModel.getInstance().account = account;
 		}
 
-		private Character updateCharacter() { // Model.CharacterTab.Character
+		private void updateCharacter() { // Model.CharacterTab.Character
 			Character character = new Character();
 
-			character.guid        = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
-			character.accountID   = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
-			character.name        = textBoxCharacterCharacterName.Text;
-			character.charRace    = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
-			character.charClass   = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
-			character.sex         = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
-			character.level       = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
-			character.money       = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
-			character.xp          = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
+			character.guid = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
+			character.accountID = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
+			character.name = textBoxCharacterCharacterName.Text;
+			character.charRace = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
+			character.charClass = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
+			character.sex = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
+			character.level = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
+			character.money = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
+			character.xp = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
 			character.chosenTitle = Convert.ToUInt32(textBoxCharacterCharacterTitle.Text);
-			character.isOnline    = checkBoxCharacterCharacterOnline.Checked;
+			character.isOnline = checkBoxCharacterCharacterOnline.Checked;
 			character.isCinematic = checkBoxCharacterCharacterCinematic.Checked;
-			character.isResting   = checkBoxCharacterCharacterRest.Checked;
+			character.isResting = checkBoxCharacterCharacterRest.Checked;
 			// Location
-			character.mapID       = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
-			character.instanceID  = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
-			character.zoneID      = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
+			character.mapID = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
+			character.instanceID = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
+			character.zoneID = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
 			character.orientation = Convert.ToDouble(textBoxCharacterCharacterCoordO.Text);
-			character.xPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
-			character.yPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
-			character.zPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
+			character.xPosition = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
+			character.yPosition = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
+			character.zPosition = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
 			// Player vs Player
 			character.honorPoints = Convert.ToInt32(textBoxCharacterCharacterHonorPoints.Text);
 			character.arenaPoints = Convert.ToInt32(textBoxCharacterCharacterArenaPoints.Text);
-			character.totalKills  = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
+			character.totalKills = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
 			// Stats
 			character.health = Convert.ToUInt64(textBoxCharacterCharacterHealth.Text);
 			character.power1 = Convert.ToUInt64(textBoxCharacterCharacterPower1.Text);
@@ -739,9 +736,9 @@ namespace Manti.Views {
 			character.power6 = Convert.ToUInt64(textBoxCharacterCharacterPower6.Text);
 			character.power7 = Convert.ToUInt64(textBoxCharacterCharacterPower7.Text);
 
-			return character;
+			Models.CharacterModel.getInstance().character = character;
 		}
-		private CharacterInventory[] updateCharacterInventory() {
+		private void updateCharacterInventory() {
 			var ci = new CharacterInventory[dataGridViewCharacterInventory.Rows.Count];
 
 			for(var i = 0; i < dataGridViewCharacterInventory.Rows.Count; i++) {
@@ -753,7 +750,7 @@ namespace Manti.Views {
 				ci[i].item = Convert.ToUInt32(dataGridViewCharacterInventory.Rows[0].Cells[3].Value);
 			}
 
-			return ci;
+			Models.CharacterModel.getInstance().inventory = ci;
 		}
 
 		private void updateCreature() {
@@ -915,7 +912,7 @@ namespace Manti.Views {
 			Models.CreatureModel.getInstance().skin = lps;
 		}
 
-		private Quest updateQuest() {
+		private void updateQuest() {
 			Quest quest = new Quest();
 
 			quest.id                              = Convert.ToUInt32(textBoxQuestSectionID.Text);
@@ -1019,10 +1016,10 @@ namespace Manti.Views {
 			quest.rewardDisplaySpell              = Convert.ToUInt32(textBoxQuestSectionRewSpellDisplay.Text);
 			quest.rewardSpell                     = Convert.ToUInt32(textBoxQuestSectionRewSpell.Text);
 
-			return quest;
+			Models.QuestModel.getInstance().quest = quest;
 		}
 
-		private GameObject updateGameObject() {
+		private void updateGameObject() {
 			GameObject go = new GameObject();
 
 			go.entry      = Convert.ToUInt32(textBoxGameObjectTempEntry.Text);
@@ -1057,10 +1054,10 @@ namespace Manti.Views {
 			go.data22     = Convert.ToInt32(textBoxGameObjectTempD22.Text);
 			go.data23     = Convert.ToInt32(textBoxGameObjectTempD23.Text);
 
-			return go;
+			Models.GameObjectModel.getInstance().gameObject = go;
 		}
 
-		private Item updateItem() {
+		private void updateItem() {
 			Item item = new Item();
 
 			item.entry                  = Convert.ToUInt32(textBoxItemTempEntry.Text);
@@ -1198,9 +1195,9 @@ namespace Manti.Views {
 			item.scalingStatDist        = Convert.ToInt32(textBoxItemTempStatsScaleDist.Text);
 			item.scalingStatValue       = Convert.ToInt32(textBoxItemTempStatsScaleValue.Text);
 
-			return item;
+			Models.ItemModel.getInstance().item = item;
 		}
-		private ItemLPMD[] updateItemLoot() {
+		private void updateItemLoot() {
 			var dg = dataGridViewItemLoot.Rows[0];
 
 			var lpmd = new ItemLPMD[dataGridViewItemLoot.Rows.Count];
@@ -1219,9 +1216,9 @@ namespace Manti.Views {
 				lpmd[i].maxCount      = Convert.ToUInt16(dg.Cells[8].Value);
 			}
 
-			return lpmd;
+			Models.ItemModel.getInstance().loot = lpmd;
 		}
-		private ItemLPMD[] updateItemProspect() {
+		private void updateItemProspect() {
 			var dg = dataGridViewItemProspect.Rows[0];
 
 			var lpmd = new ItemLPMD[dataGridViewItemProspect.Rows.Count];
@@ -1240,9 +1237,9 @@ namespace Manti.Views {
 				lpmd[i].maxCount      = Convert.ToUInt16(dg.Cells[8].Value);
 			}
 
-			return lpmd;
+			Models.ItemModel.getInstance().prospect = lpmd;
 		}
-		private ItemLPMD[] updateItemMilling() {
+		private void updateItemMilling() {
 			var dg = dataGridViewItemMill.Rows[0];
 
 			var lpmd = new ItemLPMD[dataGridViewItemMill.Rows.Count];
@@ -1261,9 +1258,9 @@ namespace Manti.Views {
 				lpmd[i].maxCount      = Convert.ToUInt16(dg.Cells[8].Value);
 			}
 
-			return lpmd;
+			Models.ItemModel.getInstance().mill = lpmd;
 		}
-		private ItemLPMD[] updateItemDisenchant() {
+		private void updateItemDisenchant() {
 			var dg = dataGridViewItemDE.Rows[0];
 
 			var lpmd = new ItemLPMD[dataGridViewItemDE.Rows.Count];
@@ -1282,7 +1279,7 @@ namespace Manti.Views {
 				lpmd[i].maxCount      = Convert.ToUInt16(dg.Cells[8].Value);
 			}
 
-			return lpmd;
+			Models.ItemModel.getInstance().disenchant = lpmd;
 		}
 
 		#endregion
@@ -1668,61 +1665,64 @@ namespace Manti.Views {
 		#region GenerateSql
 
 		private void buttonAccountAccountGenerateScript_Click(object sender, EventArgs e) {
-			if(!string.IsNullOrEmpty(textBoxAccountAccountID.Text)) {
-				var account = updateAccount();
-				var ga      = new GenerateAuth();
+			try {
+				updateAccount();
 
-				textBoxAccountScriptOutput.AppendText(ga.accountFullToSQL(account));
-				tabControlCategoryAccount.SelectedTab = tabPageAccountScript;
+				Account account = Models.AccountModel.getInstance().account;
+				var ga = new GenerateAuth();
+
+				textBoxAMScriptOutput.AppendText(ga.accountFullToSQL(account));
+				tabControlAccountManager.SelectedTab = tabPageAMScript;
+			} catch(Exception ex) when(ex is FormatException || ex is NullReferenceException) {
+				MessageBox.Show("In most scenarios all textboxes have not be filled.\nPlease check that textboxes that require a number, has a number and not letters.\nIf it require a string/text, empty is mostly accepted.", "Format or Null Exception occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 		private void buttonCharacterCharacterGenerate_Click(object sender, EventArgs e) {
-			var c = updateCharacter();
+			try {
+				updateCharacter();
 
-			if(c.accountID != 0) {
+				Character c = Models.CharacterModel.getInstance().character;
+
 				var gc = new GenerateCharacters();
 
-				textBoxCharacterScriptOutput.AppendText(gc.CharacterToSql(c));
+				textBoxCMScriptOutput.AppendText(gc.characterToSql(c));
 
-				tabControlCategoryCharacter.SelectedTab = tabPageCharacterScript;
+				tabControlCharacterManager.SelectedTab = tabPageCMScript;
+			} catch(Exception ex) when (ex is FormatException || ex is NullReferenceException) {
+				MessageBox.Show("In most scenarios all textboxes have not be filled.\nPlease check that textboxes that require a number, has a number and not letters.\nIf it require a string/text, empty is mostly accepted.", "Format or Null Exception occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
-		private void buttonCreatureTempGenerate_Click(object sender, EventArgs e) {
-			if(!string.IsNullOrEmpty(textBoxCreatureTemplateEntry.Text)) {
-				updateCreature();
+		private void buttonWorldManagerGenerate_Click(object sender, EventArgs e) {
+			Button btn = (Button) sender;
 
-				var model = Models.CreatureModel.getInstance();
-				var gw = new GenerateWorld();
+			var worldModel = Models.WorldManagerModel.getInstance();
+			var gw = new GenerateWorld();
 
-				textBoxCreatureScriptOutput.AppendText(gw.creatureToSql(model.creature));
-				tabControlCategoryCreature.SelectedTab = tabPageCreatureScript;
-			}
-		}
-		private void buttonQuestSectionGenerate_Click(object sender, EventArgs e) {
-			if(!string.IsNullOrEmpty(textBoxQuestSectionID.Text)) {
-				var quest = updateQuest();
-				var gw = new GenerateWorld();
+			string sql = "";
 
-				textBoxQuestScriptOutput.AppendText(gw.questToSql(quest));
-				tabControlCategoryQuest.SelectedTab = tabPageQuestScript;
-			}
-		}
-		private void buttonGameObjectTempGenerate_Click(object sender, EventArgs e) {
-			if(!string.IsNullOrEmpty(textBoxGameObjectTempEntry.Text)) {
-				var go = updateGameObject();
-				var gw = new GenerateWorld();
+			try {
+				if(btn == buttonCreatureTempGenerate) {
+					updateCreature();
+					worldModel.lastGeneratedWorldObject = Models.WorldManagerModel.worldObject.CREATURE;
+					sql = gw.creatureToSql(Models.CreatureModel.getInstance().creature);
+				} else if(btn == buttonItemTempGenerate) {
+					updateItem();
+					worldModel.lastGeneratedWorldObject = Models.WorldManagerModel.worldObject.ITEM;
+					sql = gw.itemToSql(Models.ItemModel.getInstance().item);
+				} else if(btn == buttonQuestSectionGenerate) {
+					updateQuest();
+					worldModel.lastGeneratedWorldObject = Models.WorldManagerModel.worldObject.QUEST;
+					sql = gw.questToSql(Models.QuestModel.getInstance().quest);
+				} else if(btn == buttonGameObjectTempGenerate) {
+					updateGameObject();
+					worldModel.lastGeneratedWorldObject = Models.WorldManagerModel.worldObject.GAMEOBJECT;
+					sql = gw.gameObjectToSql(Models.GameObjectModel.getInstance().gameObject);
+				}
 
-				textBoxGameObjectScriptOutput.AppendText(gw.gameObjectToSql(go));
-				tabControlCategoryGameObject.SelectedTab = tabPageGameObjectScript;
-			}
-		}
-		private void buttonItemTempGenerate_Click(object sender, EventArgs e) {
-			if(!string.IsNullOrEmpty(textBoxItemTempEntry.Text)) {
-				var item = updateItem();
-				var gw = new GenerateWorld();
-
-				textBoxItemScriptOutput.AppendText(gw.itemToSql(item));
-				tabControlCategoryItem.SelectedTab = tabPageItemScript;
+				textBoxWMScriptOutput.AppendText(sql);
+				tabControlWorldManager.SelectedTab = tabPageWMScript;
+			} catch(Exception ex) when(ex is FormatException || ex is NullReferenceException) {
+				MessageBox.Show("In most scenarios all textboxes have not be filled.\nPlease check that textboxes that require a number, has a number and not letters.\nIf it require a string/text, empty is mostly accepted.", "Format or Null Exception occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 			}
 		}
 
@@ -1749,7 +1749,7 @@ namespace Manti.Views {
 		}
 		#endregion
 
-		#region Account
+		#region Account Manager
 
 		// account tab
 		private void monthCalendarAccountAccountBanDate_DateChanged(object sender, DateRangeEventArgs e) {
@@ -1802,13 +1802,13 @@ namespace Manti.Views {
 
 		#endregion
 
-		#region Character
+		#region Character Manager
 
-		// inventory tab
+		// character - inventory tab
 		private void buttonCharacterInventoryAdd_Click(object sender, EventArgs e) {
-			var guid   = textBoxCharacterInventoryGUID.Text;
-			var bag    = textBoxCharacterInventoryBag.Text;
-			var slot   = textBoxCharacterInventorySlot.Text;
+			var guid = textBoxCharacterInventoryGUID.Text;
+			var bag = textBoxCharacterInventoryBag.Text;
+			var slot = textBoxCharacterInventorySlot.Text;
 			var itemId = textBoxCharacterInventoryItemID.Text;
 
 			int iNoNeed;
@@ -1825,9 +1825,7 @@ namespace Manti.Views {
 			uint entry;
 
 			// checks the inventory textbox first, then templates, if both empty, return/stop
-			if(!string.IsNullOrEmpty(iGuid)) { uint.TryParse(iGuid, out entry); }
-			else if (!string.IsNullOrEmpty(tGuid)) { uint.TryParse(tGuid, out entry); }
-			else { return; }
+			if(!string.IsNullOrEmpty(iGuid)) { uint.TryParse(iGuid, out entry); } else if(!string.IsNullOrEmpty(tGuid)) { uint.TryParse(tGuid, out entry); } else { return; }
 
 			if(entry > 0) {
 				var model = Models.CharacterModel.getInstance();
@@ -1844,22 +1842,35 @@ namespace Manti.Views {
 			}
 		}
 		private void buttonCharacterInventoryGenerate_Click(object sender, EventArgs e) {
-			var ci = updateCharacterInventory();
+			updateCharacterInventory();
+
+			var ci = Models.CharacterModel.getInstance().inventory;
 
 			if(ci.Length > 0) {
-				textBoxCharacterScriptOutput.Text = new GenerateCharacters().CharacterInventoryToSql(ci[0].guid, ci);
+				textBoxCMScriptOutput.Text = new GenerateCharacters().characterInventoryToSql(ci[0].guid, ci);
 			}
+		}
+
+		// send mail
+		private void buttonCharacterManagerMailAdd_Click(object sender, EventArgs e) {
+			
+		}
+		private void buttonCharacterManagerMailDelete_Click(object sender, EventArgs e) {
+			
+		}
+		private void buttonCharacterManagerMailRefresh_Click(object sender, EventArgs e) {
+			
 		}
 
 		#endregion
 
-		#region Creature
+		#region World Manager
 
-		// search tab
+		// creature - search tab
 		private void toolStripSplitButtonCreatureNew_ButtonClick(object sender, EventArgs e) {
 			var dw = Settings.getWorldDB();
 
-			var model      = Models.CreatureModel.getInstance();
+			var model = Models.CreatureModel.getInstance();
 			model.creature = dw.getCreatureDefaultValues();
 
 			fillCreatureTemplate(model.creature);
@@ -1870,11 +1881,11 @@ namespace Manti.Views {
 			var gw = new GenerateWorld();
 
 			foreach(DataGridViewRow row in dataGridViewCreatureSearch.SelectedRows) {
-				textBoxCreatureScriptOutput.AppendText(gw.deleteCreature(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+				textBoxCMScriptOutput.AppendText(gw.deleteCreature(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
 			}
 		}
 
-		// vendor, loot, pickpocket and skin tab
+		// creature - vendor, loot, pickpocket and skin tab
 		private void buttonCreatureDataGridAdd_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
@@ -1939,7 +1950,7 @@ namespace Manti.Views {
 
 				dgv = dataGridViewCreatureSkinLoot;
 			}
-			
+
 			if(dgv != null && values.Length > 0) {
 				dgv.Rows.Add(values.ToString());
 			}
@@ -2001,40 +2012,34 @@ namespace Manti.Views {
 
 			var model = Models.CreatureModel.getInstance();
 
+			string sql = "";
+
 			if(btn == buttonCreatureVendorGenerate) {
 				updateCreatureVendor();
-				var sql = new GenerateWorld().creatureVendorToSql(model.vendor);
-
-				textBoxCreatureScriptOutput.AppendText(sql);
+				sql = new GenerateWorld().creatureVendorToSql(model.vendor);
 			} else if(btn == buttonCreatureLootGenerate) {
 				updateCreatureLoot();
-				var sql = new GenerateWorld().creatureLPSToSql("creature_loot_template", model.loot);
-
-				textBoxCreatureScriptOutput.AppendText(sql);
+				sql = new GenerateWorld().creatureLPSToSql("creature_loot_template", model.loot);
 			} else if(btn == buttonCreaturePickpocketGenerate) {
 				updateCreaturePickpocket();
-				var sql = new GenerateWorld().creatureLPSToSql("pickpocketing_loot_template", model.pickpocket);
-
-				textBoxCreatureScriptOutput.AppendText(sql);
+				sql = new GenerateWorld().creatureLPSToSql("pickpocketing_loot_template", model.pickpocket);
 			} else if(btn == buttonCreatureSkinGenerate) {
 				updateCreatureSkin();
-				var sql = new GenerateWorld().creatureLPSToSql("skinning_loot_template", model.skin);
-
-				textBoxCreatureScriptOutput.AppendText(sql);
+				sql = new GenerateWorld().creatureLPSToSql("skinning_loot_template", model.skin);
 			}
 
-			tabControlCategoryCreature.SelectedTab = tabPageCreatureScript;
+			if(!string.IsNullOrEmpty(sql)) {
+				textBoxCMScriptOutput.AppendText(sql);
+			}
+
+			tabControlCharacterManager.SelectedTab = tabPageCMScript;
 		}
 
-		#endregion
-
-		#region Quest
-
-		// search tab
+		// quest - search tab
 		private void toolStripSplitButtonQuestNew_ButtonClick(object sender, EventArgs e) {
 			var dw = Settings.getWorldDB();
 
-			var model   = Models.QuestModel.getInstance();
+			var model = Models.QuestModel.getInstance();
 			model.quest = dw.getQuestDefaultValues();
 
 			fillQuestSections(model.quest);
@@ -2045,19 +2050,15 @@ namespace Manti.Views {
 			var gw = new GenerateWorld();
 
 			foreach(DataGridViewRow row in dataGridViewQuestSearch.SelectedRows) {
-				textBoxQuestScriptOutput.AppendText(gw.deleteQuest(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+				textBoxWMScriptOutput.AppendText(gw.deleteQuest(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
 			}
 		}
 
-		#endregion
-
-		#region Game Object
-
-		// search tab
+		// gameobject - search tab
 		private void toolStripSplitButtonGONew_ButtonClick(object sender, EventArgs e) {
 			var dw = Settings.getWorldDB();
 
-			var model        = Models.GameObjectModel.getInstance();
+			var model = Models.GameObjectModel.getInstance();
 			model.gameObject = dw.getGameObjectDefaultValues();
 
 			fillGameObjectTemplate(model.gameObject);
@@ -2068,15 +2069,11 @@ namespace Manti.Views {
 			var gw = new GenerateWorld();
 
 			foreach(DataGridViewRow row in dataGridViewGameObjectSearch.SelectedRows) {
-				textBoxGameObjectScriptOutput.AppendText(gw.deleteGameObject(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+				textBoxWMScriptOutput.AppendText(gw.deleteGameObject(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
 			}
 		}
 
-		#endregion
-
-		#region Item
-
-		// search tab
+		// item - search tab
 		private void toolStripSplitButtonItemNew_ButtonClick(object sender, EventArgs e) {
 			var dw = Settings.getWorldDB();
 
@@ -2091,10 +2088,11 @@ namespace Manti.Views {
 			var gw = new GenerateWorld();
 
 			foreach(DataGridViewRow row in dataGridViewItemSearch.SelectedRows) {
-				textBoxItemScriptOutput.AppendText(gw.deleteItem(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
+				textBoxWMScriptOutput.AppendText(gw.deleteItem(Convert.ToUInt32(row.Cells[0].Value)) + Environment.NewLine);
 			}
 		}
 
+		// item - loot, prospect, milling and disenchant
 		private void buttonItemDataGridAdd_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
@@ -2115,7 +2113,7 @@ namespace Manti.Views {
 				};
 
 				dgv = dataGridViewItemLoot;
-			} else if (btn == buttonItemProspectAdd) {
+			} else if(btn == buttonItemProspectAdd) {
 				values = new object[] {
 					textBoxItemProspectEntry.Text,
 					textBoxItemProspectItemID.Text,
@@ -2224,22 +2222,22 @@ namespace Manti.Views {
 				updateItemLoot();
 				var sql = new GenerateWorld().itemLPMDToSql("item_loot_template", model.loot);
 
-				textBoxItemScriptOutput.AppendText(sql);
+				textBoxWMScriptOutput.AppendText(sql);
 			} else if(btn == buttonItemProspectGenerate) {
 				updateItemProspect();
 				var sql = new GenerateWorld().itemLPMDToSql("prospecting_loot_template", model.prospect);
 
-				textBoxItemScriptOutput.AppendText(sql);
+				textBoxWMScriptOutput.AppendText(sql);
 			} else if(btn == buttonItemMillGenerate) {
 				updateItemMilling();
 				var sql = new GenerateWorld().itemLPMDToSql("milling_loot_template", model.mill);
 
-				textBoxItemScriptOutput.AppendText(sql);
+				textBoxWMScriptOutput.AppendText(sql);
 			} else if(btn == buttonItemDEGenerate) {
 				updateItemDisenchant();
 				var sql = new GenerateWorld().itemLPMDToSql("disenchant_loot_template", model.disenchant);
 
-				textBoxItemScriptOutput.AppendText(sql);
+				textBoxWMScriptOutput.AppendText(sql);
 			}
 		}
 
@@ -2455,35 +2453,21 @@ namespace Manti.Views {
 			int rows = 0;
 			ToolStripStatusLabel label = null;
 
-			if(btn == toolStripSplitButtonAccountScriptUpdate) {
+			if(btn == toolStripSplitButtonAMScriptUpdate) {
 				DatabaseAuth da = Settings.getAuthDB();
 
-				rows = da.uploadSql(textBoxAccountScriptOutput.Text);
-				label = toolStripStatusLabelAccountScriptRows;
-			} else if(btn == toolStripSplitButtonCharacterScriptUpdate) {
+				rows = da.executeSql(textBoxAMScriptOutput.Text);
+				label = toolStripStatusLabelAMScriptRows;
+			} else if(btn == toolStripSplitButtonCMScriptUpdate) {
 				DatabaseCharacters dw = Settings.getCharsDB();
 
-				rows = dw.uploadSql(textBoxAccountScriptOutput.Text);
-				label = toolStripStatusLabelAccountScriptRows;
+				rows = dw.executeSql(textBoxAMScriptOutput.Text);
+				label = toolStripStatusLabelAMScriptRows;
 			} else {
 				DatabaseWorld dw = Settings.getWorldDB();
 
-				if(btn == toolStripSplitButtonCreatureScriptUpdate) {
-					rows = dw.uploadSql(textBoxCreatureScriptOutput.Text);
-					label = toolStripStatusLabelCreatureScriptRows;
-
-				} else if(btn == toolStripSplitButtonQuestScriptUpdate) {
-					rows = dw.uploadSql(textBoxQuestScriptOutput.Text);
-					label = toolStripStatusLabelQuestScriptRows;
-
-				} else if(btn == toolStripSplitButtonGOScriptUpdate) {
-					rows = dw.uploadSql(textBoxGameObjectScriptOutput.Text);
-					label = toolStripStatusLabelGameObjectScriptRows;
-
-				} else if(btn == toolStripSplitButtonItemScriptUpdate) {
-					rows = dw.uploadSql(textBoxItemScriptOutput.Text);
-					label = toolStripStatusLabelItemScriptRows;
-				}
+				label = toolStripStatusLabelWMScriptRows;
+				rows = dw.executeSql(textBoxWMScriptOutput.Text);
 			}
 
 			if(label != null) {
@@ -2493,28 +2477,31 @@ namespace Manti.Views {
 		private void toolStripSplitButtonSqlGenerate(object sender, EventArgs e) {
 			ToolStripSplitButton btn = (ToolStripSplitButton) sender;
 
-			string title = "", name = "", entry = "", sql = "";
+			var model = Models.WorldManagerModel.getInstance();
 
-			if(btn == toolStripSplitButtonCreatureScriptSQLGenerate) {
-				title = "creature";
-				name = textBoxCreatureTemplateName.Text;
-				entry = textBoxCreatureTemplateEntry.Text;
-				sql = textBoxCreatureScriptOutput.Text;
-			} else if(btn == toolStripSplitButtonQuestScriptSQLGenerate) {
-				title = "quest";
-				name = textBoxQuestSectionID.Text;
-				entry = textBoxQuestSectionLDescription.Text;
-				sql = textBoxQuestScriptOutput.Text;
-			} else if(btn == toolStripSplitButtonGOScriptSQLGenerate) {
-				title = "gameobject";
-				name = textBoxGameObjectTempName.Text;
-				entry = textBoxGameObjectTempEntry.Text;
-				sql = textBoxGameObjectScriptOutput.Text;
-			} else if(btn == toolStripSplitButtonItemScriptSQLGenerate) {
-				title = "item";
-				name = textBoxItemTempName.Text;
-				entry = textBoxItemTempEntry.Text;
-				sql = textBoxItemScriptOutput.Text;
+			string title = "world_", name = "", entry = "", sql = textBoxWMScriptOutput.Text;
+
+			switch(model.lastGeneratedWorldObject) {
+				case Models.WorldManagerModel.worldObject.ITEM:
+					title += "creature";
+					name = textBoxCreatureTemplateName.Text;
+					entry = textBoxCreatureTemplateEntry.Text;
+					break;
+				case Models.WorldManagerModel.worldObject.CREATURE:
+					title += "quest";
+					name = textBoxQuestSectionID.Text;
+					entry = textBoxQuestSectionLDescription.Text;
+					break;
+				case Models.WorldManagerModel.worldObject.QUEST:
+					title += "gameobject";
+					name = textBoxGameObjectTempName.Text;
+					entry = textBoxGameObjectTempEntry.Text;
+					break;
+				case Models.WorldManagerModel.worldObject.GAMEOBJECT:
+					title += "item";
+					name = textBoxItemTempName.Text;
+					entry = textBoxItemTempEntry.Text;
+					break;
 			}
 
 			string combined = title + "_" + (!string.IsNullOrEmpty(name) ? name + "_" : "") + entry;
@@ -2725,7 +2712,7 @@ namespace Manti.Views {
 		}
 		#endregion
 
-		private void dataGridViewCharacterInventory_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+		private void buttonCMMailSqlGenerate_Click(object sender, EventArgs e) {
 
 		}
 	}

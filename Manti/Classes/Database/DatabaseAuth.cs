@@ -11,7 +11,7 @@ namespace Manti.Classes.Database {
 
 		}
 
-		public int uploadSql(string sql) {
+		public int executeSql(string sql) {
 			return executeNonQuery(sql);
 		}
 

@@ -12,7 +12,7 @@ namespace Manti.Classes.Database {
 		public DatabaseWorld(string address, string username, string password, uint port, string dbName)
 			: base(address, username, password, port, dbName) { }
 
-		public int uploadSql(string sql) {
+		public int executeSql(string sql) {
 			return executeNonQuery(sql);
 		}
 
@@ -947,7 +947,7 @@ namespace Manti.Classes.Database {
 		public ItemLPMD[] getItemLPMD(uint entry, LPMD type) {
 			DataTable dt = null;
 			DataTable dtNames = null;
-			// 
+			
 			switch(type) {
 				case LPMD.LOOT:
 					dt = executeQuery("SELECT entry, item, reference, chance, questrequired, lootmode, groupid, mincount, maxcount FROM item_loot_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
@@ -1283,6 +1283,17 @@ namespace Manti.Classes.Database {
 			}
 
 			return null;
+		}
+
+		public DataTable getItemNames(uint[] entry) {
+			string entryString = "";
+
+			for(var i = 0; i < entry.Length; i++) {
+				entryString += entry[i];
+				entryString += (i == entry.Length - 1 ? "" : ", ");
+			}
+
+			return executeQuery($"SELECT name FROM item_template WHERE entry IN ({entryString});");
 		}
 
 		public enum LPMD {

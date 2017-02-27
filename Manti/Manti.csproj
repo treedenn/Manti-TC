@@ -59,20 +59,14 @@
     <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
@@ -111,6 +105,7 @@
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\QuestModel.cs" />
     <Compile Include="Models\ServerModel.cs" />
+    <Compile Include="Models\WorldManagerModel.cs" />
     <Compile Include="View\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +190,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

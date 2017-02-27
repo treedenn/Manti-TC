@@ -1,6 +1,10 @@
-﻿namespace Manti.Classes.Generate {
+﻿using System.Data;
+
+using Manti.Classes.Settings;
+
+namespace Manti.Classes.Generate {
 	public class GenerateCharacters : SqlGenerate {
-		public string CharacterToSql(CharacterTab.Character c) {
+		public string characterToSql(CharacterTab.Character c) {
 			if(c != null) {
 				string[] columns = {"guid", "account", "name", "race", "class", "gender", "level", "money", "xp", "chosentitle", "online", "cinematic",
 					"is_logout_resting", "map", "instance_id", "zone", "orientation", "position_x", "position_y", "position_z", "totalHonorPoints", "arenaPoints",
@@ -16,7 +20,7 @@
 			return null;
 		}
 
-		public string CharacterInventoryToSql(uint id, CharacterTab.CharacterInventory[] inv) {
+		public string characterInventoryToSql(uint id, CharacterTab.CharacterInventory[] inv) {
 			if(inv != null) {
 				string[] columns = {"guid", "bag", "slot", "item"};
 				object[] values;

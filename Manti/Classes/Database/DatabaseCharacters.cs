@@ -10,7 +10,7 @@ namespace Manti.Classes.Database {
 			: base(address, username, password, port, dbName) {
 		}
 
-		public int uploadSql(string sql) {
+		public int executeSql(string sql) {
 			return executeNonQuery(sql);
 		}
 
@@ -116,5 +116,27 @@ namespace Manti.Classes.Database {
 			return ci;
 		}
 
+		public DataTable getCharacterNames(uint[] id) {
+			string idString = "";
+
+			for(var i = 0; i < id.Length; i++) {
+				idString += id[i];
+				idString += (i == id.Length - 1 ? "" : ", ");
+			}
+
+			return executeQuery($"SELECT name FROM characters WHERE guid IN ({idString});");
+		}
+
+		public DataTable getMailMaxId() {
+			return executeQuery("SELECT max(id) FROM mail LIMIT 1;");
+		}
+
+		public DataTable getItemInstanceMaxId() {
+			return executeQuery("SELECT max(guid) FROM item_instance LIMIT 1;");
+		}
+
+		public uint getItemDurability(uint entry) {
+			return Convert.ToUInt32(executeQuery("SELECT durability FROM item_template WHERE entry = '?value';", new MySqlParameter("?value", entry)).Rows[0]["durability"]);
+		}
 	}
 }
