@@ -23,92 +23,92 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle86 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle87 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle88 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle89 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle90 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle91 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle92 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle93 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle94 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle95 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle96 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle97 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle98 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle99 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle100 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle101 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle102 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle103 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle104 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle105 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle106 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle107 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle108 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle109 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle110 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle111 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle112 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle113 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle114 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle115 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle116 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle117 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle118 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle119 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle120 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle121 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle122 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle123 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle124 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle125 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle126 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle127 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle128 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle129 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle130 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle131 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle132 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle134 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle135 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.tabControlAccountManager = new System.Windows.Forms.TabControl();
 			this.tabPageAccount = new System.Windows.Forms.TabPage();
 			this.tabControlCategoryAccount = new System.Windows.Forms.TabControl();
@@ -1443,6 +1443,7 @@
 			this.tabPageWorldManager = new System.Windows.Forms.TabPage();
 			this.tabControlWorldManager = new System.Windows.Forms.TabControl();
 			this.tabPageWMScript = new System.Windows.Forms.TabPage();
+			this.tabPageAMCreateAccount = new System.Windows.Forms.TabPage();
 			this.tabControlAccountManager.SuspendLayout();
 			this.tabPageAccount.SuspendLayout();
 			this.tabControlCategoryAccount.SuspendLayout();
@@ -1577,6 +1578,7 @@
 			// 
 			// tabControlAccountManager
 			// 
+			this.tabControlAccountManager.Controls.Add(this.tabPageAMCreateAccount);
 			this.tabControlAccountManager.Controls.Add(this.tabPageAccount);
 			this.tabControlAccountManager.Controls.Add(this.tabPageAMScript);
 			this.tabControlAccountManager.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1635,12 +1637,12 @@
 			this.dataGridViewAccountSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewAccountSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewAccountSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle86.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle86.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle86.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle86.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle86;
 			this.dataGridViewAccountSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1648,12 +1650,12 @@
 			this.dataGridViewAccountSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewAccountSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewAccountSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle87.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle87.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle87.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle87.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle87;
 			this.dataGridViewAccountSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewAccountSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnAccountSearchID,
@@ -1667,20 +1669,20 @@
 			this.dataGridViewAccountSearch.Name = "dataGridViewAccountSearch";
 			this.dataGridViewAccountSearch.ReadOnly = true;
 			this.dataGridViewAccountSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle88.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle88.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle88.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle88.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle88;
 			this.dataGridViewAccountSearch.RowHeadersVisible = false;
 			this.dataGridViewAccountSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle89.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle89.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle89.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle89.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountSearch.RowsDefaultCellStyle = dataGridViewCellStyle89;
 			this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewAccountSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -1818,7 +1820,7 @@
 			// buttonAccountAccountGenerateScript
 			// 
 			this.buttonAccountAccountGenerateScript.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonAccountAccountGenerateScript.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
+			this.buttonAccountAccountGenerateScript.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonAccountAccountGenerateScript.BackgroundImage")));
 			this.buttonAccountAccountGenerateScript.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonAccountAccountGenerateScript.FlatAppearance.BorderColor = System.Drawing.SystemColors.AppWorkspace;
 			this.buttonAccountAccountGenerateScript.FlatAppearance.BorderSize = 0;
@@ -2127,7 +2129,6 @@
 			// buttonAccountAccountAccessDelete
 			// 
 			this.buttonAccountAccountAccessDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonAccountAccountAccessDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonAccountAccountAccessDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonAccountAccountAccessDelete.Location = new System.Drawing.Point(263, 500);
 			this.buttonAccountAccountAccessDelete.Name = "buttonAccountAccountAccessDelete";
@@ -2139,7 +2140,6 @@
 			// buttonAccountAccountAccessAdd
 			// 
 			this.buttonAccountAccountAccessAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonAccountAccountAccessAdd.BackgroundImage = global::Manti.Properties.Resources.iconAdd;
 			this.buttonAccountAccountAccessAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonAccountAccountAccessAdd.Location = new System.Drawing.Point(228, 500);
 			this.buttonAccountAccountAccessAdd.Name = "buttonAccountAccountAccessAdd";
@@ -2154,12 +2154,12 @@
 			this.dataGridViewAccountAccess.AllowUserToDeleteRows = false;
 			this.dataGridViewAccountAccess.AllowUserToResizeColumns = false;
 			this.dataGridViewAccountAccess.AllowUserToResizeRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountAccess.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle90.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle90.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle90.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle90.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountAccess.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle90;
 			this.dataGridViewAccountAccess.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.dataGridViewAccountAccess.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -2169,12 +2169,12 @@
 			this.dataGridViewAccountAccess.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewAccountAccess.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewAccountAccess.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle91.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle91.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle91.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle91.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountAccess.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle91;
 			this.dataGridViewAccountAccess.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewAccountAccess.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -2187,20 +2187,20 @@
 			this.dataGridViewAccountAccess.Name = "dataGridViewAccountAccess";
 			this.dataGridViewAccountAccess.ReadOnly = true;
 			this.dataGridViewAccountAccess.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle92.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle92.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle92.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle92.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountAccess.RowHeadersDefaultCellStyle = dataGridViewCellStyle92;
 			this.dataGridViewAccountAccess.RowHeadersVisible = false;
 			this.dataGridViewAccountAccess.RowHeadersWidth = 99;
-			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle93.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle93.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle93.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle93.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewAccountAccess.RowsDefaultCellStyle = dataGridViewCellStyle93;
 			this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewAccountAccess.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -2507,12 +2507,12 @@
 			this.dataGridViewCharacterSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewCharacterSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewCharacterSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle94.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle94.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle94.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle94.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle94;
 			this.dataGridViewCharacterSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -2520,12 +2520,12 @@
 			this.dataGridViewCharacterSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCharacterSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCharacterSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle95.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle95.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle95.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle95.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle95;
 			this.dataGridViewCharacterSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCharacterSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCharacterSearchGUID,
@@ -2534,14 +2534,14 @@
             this.ColumnCharacterSearchRace,
             this.ColumnCharacterSearchClass,
             this.ColumnCharacterSearchLevel});
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dataGridViewCharacterSearch.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle96.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle96.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle96.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle96.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle96.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle96.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridViewCharacterSearch.DefaultCellStyle = dataGridViewCellStyle96;
 			this.dataGridViewCharacterSearch.GridColor = System.Drawing.SystemColors.HotTrack;
 			this.dataGridViewCharacterSearch.Location = new System.Drawing.Point(1, 51);
 			this.dataGridViewCharacterSearch.Margin = new System.Windows.Forms.Padding(0);
@@ -2549,20 +2549,20 @@
 			this.dataGridViewCharacterSearch.Name = "dataGridViewCharacterSearch";
 			this.dataGridViewCharacterSearch.ReadOnly = true;
 			this.dataGridViewCharacterSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle97.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle97.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle97.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle97.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle97;
 			this.dataGridViewCharacterSearch.RowHeadersVisible = false;
 			this.dataGridViewCharacterSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle13;
+			dataGridViewCellStyle98.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle98.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle98.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle98.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterSearch.RowsDefaultCellStyle = dataGridViewCellStyle98;
 			this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCharacterSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -2738,7 +2738,7 @@
 			// buttonCharacterCharacterGenerate
 			// 
 			this.buttonCharacterCharacterGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCharacterCharacterGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
+			this.buttonCharacterCharacterGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCharacterCharacterGenerate.BackgroundImage")));
 			this.buttonCharacterCharacterGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCharacterCharacterGenerate.Location = new System.Drawing.Point(911, 501);
 			this.buttonCharacterCharacterGenerate.Name = "buttonCharacterCharacterGenerate";
@@ -3446,7 +3446,7 @@
 			// buttonCharacterInventoryGenerate
 			// 
 			this.buttonCharacterInventoryGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCharacterInventoryGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCharacterInventoryGenerate.BackgroundImage")));
+			this.buttonCharacterInventoryGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCharacterInventoryGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCharacterInventoryGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCharacterInventoryGenerate.Name = "buttonCharacterInventoryGenerate";
@@ -3458,9 +3458,9 @@
 			// buttonCharacterInventoryDelete
 			// 
 			this.buttonCharacterInventoryDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCharacterInventoryDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
+			this.buttonCharacterInventoryDelete.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonCharacterInventoryDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCharacterInventoryDelete.Location = new System.Drawing.Point(887, 512);
+			this.buttonCharacterInventoryDelete.Location = new System.Drawing.Point(420, 512);
 			this.buttonCharacterInventoryDelete.Name = "buttonCharacterInventoryDelete";
 			this.buttonCharacterInventoryDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonCharacterInventoryDelete.TabIndex = 48;
@@ -3470,9 +3470,9 @@
 			// buttonCharacterInventoryRefresh
 			// 
 			this.buttonCharacterInventoryRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCharacterInventoryRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
+			this.buttonCharacterInventoryRefresh.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonCharacterInventoryRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCharacterInventoryRefresh.Location = new System.Drawing.Point(852, 512);
+			this.buttonCharacterInventoryRefresh.Location = new System.Drawing.Point(385, 512);
 			this.buttonCharacterInventoryRefresh.Name = "buttonCharacterInventoryRefresh";
 			this.buttonCharacterInventoryRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonCharacterInventoryRefresh.TabIndex = 47;
@@ -3484,7 +3484,7 @@
 			this.buttonCharacterInventoryAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonCharacterInventoryAdd.BackgroundImage = global::Manti.Properties.Resources.iconAdd;
 			this.buttonCharacterInventoryAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCharacterInventoryAdd.Location = new System.Drawing.Point(817, 512);
+			this.buttonCharacterInventoryAdd.Location = new System.Drawing.Point(350, 512);
 			this.buttonCharacterInventoryAdd.Name = "buttonCharacterInventoryAdd";
 			this.buttonCharacterInventoryAdd.Size = new System.Drawing.Size(29, 29);
 			this.buttonCharacterInventoryAdd.TabIndex = 46;
@@ -3496,12 +3496,12 @@
 			this.dataGridViewCharacterInventory.AllowUserToAddRows = false;
 			this.dataGridViewCharacterInventory.AllowUserToDeleteRows = false;
 			this.dataGridViewCharacterInventory.AllowUserToResizeRows = false;
-			dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+			dataGridViewCellStyle99.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle99.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle99.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle99.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterInventory.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle99;
 			this.dataGridViewCharacterInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -3512,12 +3512,12 @@
 			this.dataGridViewCharacterInventory.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCharacterInventory.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCharacterInventory.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+			dataGridViewCellStyle100.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle100.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle100.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle100.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterInventory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle100;
 			this.dataGridViewCharacterInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCharacterInventory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnCharacterInventoryGUID,
@@ -3532,20 +3532,20 @@
 			this.dataGridViewCharacterInventory.Name = "dataGridViewCharacterInventory";
 			this.dataGridViewCharacterInventory.ReadOnly = true;
 			this.dataGridViewCharacterInventory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+			dataGridViewCellStyle101.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle101.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle101.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle101.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle101;
 			this.dataGridViewCharacterInventory.RowHeadersVisible = false;
 			this.dataGridViewCharacterInventory.RowHeadersWidth = 100;
-			dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle17;
+			dataGridViewCellStyle102.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle102.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle102.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle102.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCharacterInventory.RowsDefaultCellStyle = dataGridViewCellStyle102;
 			this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCharacterInventory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -3822,12 +3822,12 @@
 			this.dataGridViewCreatureSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewCreatureSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewCreatureSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+			dataGridViewCellStyle103.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle103.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle103.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle103.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle103;
 			this.dataGridViewCreatureSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -3836,12 +3836,12 @@
 			this.dataGridViewCreatureSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreatureSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreatureSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+			dataGridViewCellStyle104.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle104.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle104.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle104.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle104.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle104;
 			this.dataGridViewCreatureSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreatureSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCSE,
@@ -3858,20 +3858,20 @@
 			this.dataGridViewCreatureSearch.Name = "dataGridViewCreatureSearch";
 			this.dataGridViewCreatureSearch.ReadOnly = true;
 			this.dataGridViewCreatureSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+			dataGridViewCellStyle105.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle105.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle105.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle105.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle105;
 			this.dataGridViewCreatureSearch.RowHeadersVisible = false;
 			this.dataGridViewCreatureSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSearch.RowsDefaultCellStyle = dataGridViewCellStyle21;
+			dataGridViewCellStyle106.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle106.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle106.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle106.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle106.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSearch.RowsDefaultCellStyle = dataGridViewCellStyle106;
 			this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreatureSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -4049,7 +4049,7 @@
 			// buttonCreatureTempGenerate
 			// 
 			this.buttonCreatureTempGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCreatureTempGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCreatureTempGenerate.BackgroundImage")));
+			this.buttonCreatureTempGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCreatureTempGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCreatureTempGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCreatureTempGenerate.Name = "buttonCreatureTempGenerate";
@@ -5537,12 +5537,12 @@
 			this.dataGridViewCreatureLocation.AllowUserToDeleteRows = false;
 			this.dataGridViewCreatureLocation.AllowUserToResizeColumns = false;
 			this.dataGridViewCreatureLocation.AllowUserToResizeRows = false;
-			dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLocation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+			dataGridViewCellStyle107.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle107.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle107.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle107.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLocation.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle107;
 			this.dataGridViewCreatureLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -5553,12 +5553,12 @@
 			this.dataGridViewCreatureLocation.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreatureLocation.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreatureLocation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLocation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+			dataGridViewCellStyle108.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle108.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle108.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle108.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLocation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle108;
 			this.dataGridViewCreatureLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreatureLocation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCLID,
@@ -5579,20 +5579,20 @@
 			this.dataGridViewCreatureLocation.Name = "dataGridViewCreatureLocation";
 			this.dataGridViewCreatureLocation.ReadOnly = true;
 			this.dataGridViewCreatureLocation.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLocation.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+			dataGridViewCellStyle109.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle109.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle109.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle109.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle109.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLocation.RowHeadersDefaultCellStyle = dataGridViewCellStyle109;
 			this.dataGridViewCreatureLocation.RowHeadersVisible = false;
 			this.dataGridViewCreatureLocation.RowHeadersWidth = 99;
-			dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLocation.RowsDefaultCellStyle = dataGridViewCellStyle25;
+			dataGridViewCellStyle110.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle110.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle110.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle110.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLocation.RowsDefaultCellStyle = dataGridViewCellStyle110;
 			this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreatureLocation.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -5853,7 +5853,7 @@
 			// buttonCreatureVendorGenerate
 			// 
 			this.buttonCreatureVendorGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCreatureVendorGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCreatureVendorGenerate.BackgroundImage")));
+			this.buttonCreatureVendorGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCreatureVendorGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCreatureVendorGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCreatureVendorGenerate.Name = "buttonCreatureVendorGenerate";
@@ -5867,7 +5867,7 @@
 			this.buttonCreatureVendorDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureVendorDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonCreatureVendorDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureVendorDelete.Location = new System.Drawing.Point(592, 512);
+			this.buttonCreatureVendorDelete.Location = new System.Drawing.Point(557, 512);
 			this.buttonCreatureVendorDelete.Name = "buttonCreatureVendorDelete";
 			this.buttonCreatureVendorDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureVendorDelete.TabIndex = 48;
@@ -5879,7 +5879,7 @@
 			this.buttonCreatureVendorRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureVendorRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonCreatureVendorRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureVendorRefresh.Location = new System.Drawing.Point(557, 512);
+			this.buttonCreatureVendorRefresh.Location = new System.Drawing.Point(592, 512);
 			this.buttonCreatureVendorRefresh.Name = "buttonCreatureVendorRefresh";
 			this.buttonCreatureVendorRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureVendorRefresh.TabIndex = 47;
@@ -5904,12 +5904,12 @@
 			this.dataGridViewCreatureVendor.AllowUserToDeleteRows = false;
 			this.dataGridViewCreatureVendor.AllowUserToResizeColumns = false;
 			this.dataGridViewCreatureVendor.AllowUserToResizeRows = false;
-			dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+			dataGridViewCellStyle111.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle111.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle111.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle111.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureVendor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle111;
 			this.dataGridViewCreatureVendor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -5919,12 +5919,12 @@
 			this.dataGridViewCreatureVendor.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreatureVendor.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreatureVendor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+			dataGridViewCellStyle112.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle112.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle112.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle112.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle112.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureVendor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle112;
 			this.dataGridViewCreatureVendor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreatureVendor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCVE,
@@ -5941,20 +5941,20 @@
 			this.dataGridViewCreatureVendor.Name = "dataGridViewCreatureVendor";
 			this.dataGridViewCreatureVendor.ReadOnly = true;
 			this.dataGridViewCreatureVendor.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle28;
+			dataGridViewCellStyle113.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle113.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle113.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle113.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle113.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureVendor.RowHeadersDefaultCellStyle = dataGridViewCellStyle113;
 			this.dataGridViewCreatureVendor.RowHeadersVisible = false;
 			this.dataGridViewCreatureVendor.RowHeadersWidth = 99;
-			dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureVendor.RowsDefaultCellStyle = dataGridViewCellStyle29;
+			dataGridViewCellStyle114.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle114.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle114.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle114.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle114.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureVendor.RowsDefaultCellStyle = dataGridViewCellStyle114;
 			this.dataGridViewCreatureVendor.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreatureVendor.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreatureVendor.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -6244,7 +6244,7 @@
 			// buttonCreatureLootGenerate
 			// 
 			this.buttonCreatureLootGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCreatureLootGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCreatureLootGenerate.BackgroundImage")));
+			this.buttonCreatureLootGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCreatureLootGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCreatureLootGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCreatureLootGenerate.Name = "buttonCreatureLootGenerate";
@@ -6258,7 +6258,7 @@
 			this.buttonCreatureLootDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureLootDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonCreatureLootDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureLootDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonCreatureLootDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonCreatureLootDelete.Name = "buttonCreatureLootDelete";
 			this.buttonCreatureLootDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureLootDelete.TabIndex = 48;
@@ -6270,7 +6270,7 @@
 			this.buttonCreatureLootRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureLootRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonCreatureLootRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureLootRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonCreatureLootRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonCreatureLootRefresh.Name = "buttonCreatureLootRefresh";
 			this.buttonCreatureLootRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureLootRefresh.TabIndex = 47;
@@ -6295,12 +6295,12 @@
 			this.dataGridViewCreatureLoot.AllowUserToDeleteRows = false;
 			this.dataGridViewCreatureLoot.AllowUserToResizeColumns = false;
 			this.dataGridViewCreatureLoot.AllowUserToResizeRows = false;
-			dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle30;
+			dataGridViewCellStyle115.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle115.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle115.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle115.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle115.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle115;
 			this.dataGridViewCreatureLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -6310,12 +6310,12 @@
 			this.dataGridViewCreatureLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreatureLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreatureLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+			dataGridViewCellStyle116.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle116.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle116.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle116.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle116.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle116;
 			this.dataGridViewCreatureLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreatureLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCLE,
@@ -6335,20 +6335,20 @@
 			this.dataGridViewCreatureLoot.Name = "dataGridViewCreatureLoot";
 			this.dataGridViewCreatureLoot.ReadOnly = true;
 			this.dataGridViewCreatureLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+			dataGridViewCellStyle117.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle117.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle117.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle117.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle117.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle117;
 			this.dataGridViewCreatureLoot.RowHeadersVisible = false;
 			this.dataGridViewCreatureLoot.RowHeadersWidth = 99;
-			dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureLoot.RowsDefaultCellStyle = dataGridViewCellStyle33;
+			dataGridViewCellStyle118.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle118.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle118.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle118.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle118.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureLoot.RowsDefaultCellStyle = dataGridViewCellStyle118;
 			this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreatureLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -6673,7 +6673,7 @@
 			// buttonCreaturePickpocketGenerate
 			// 
 			this.buttonCreaturePickpocketGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCreaturePickpocketGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCreaturePickpocketGenerate.BackgroundImage")));
+			this.buttonCreaturePickpocketGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCreaturePickpocketGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCreaturePickpocketGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCreaturePickpocketGenerate.Name = "buttonCreaturePickpocketGenerate";
@@ -6685,9 +6685,9 @@
 			// buttonCreaturePickpocketDelete
 			// 
 			this.buttonCreaturePickpocketDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.buttonCreaturePickpocketDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
+			this.buttonCreaturePickpocketDelete.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonCreaturePickpocketDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreaturePickpocketDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonCreaturePickpocketDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonCreaturePickpocketDelete.Name = "buttonCreaturePickpocketDelete";
 			this.buttonCreaturePickpocketDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreaturePickpocketDelete.TabIndex = 48;
@@ -6697,9 +6697,9 @@
 			// buttonCreaturePickpocketRefresh
 			// 
 			this.buttonCreaturePickpocketRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.buttonCreaturePickpocketRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
+			this.buttonCreaturePickpocketRefresh.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonCreaturePickpocketRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreaturePickpocketRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonCreaturePickpocketRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonCreaturePickpocketRefresh.Name = "buttonCreaturePickpocketRefresh";
 			this.buttonCreaturePickpocketRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreaturePickpocketRefresh.TabIndex = 47;
@@ -6724,12 +6724,12 @@
 			this.dataGridViewCreaturePickpocketLoot.AllowUserToDeleteRows = false;
 			this.dataGridViewCreaturePickpocketLoot.AllowUserToResizeColumns = false;
 			this.dataGridViewCreaturePickpocketLoot.AllowUserToResizeRows = false;
-			dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreaturePickpocketLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
+			dataGridViewCellStyle119.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle119.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle119.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle119.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle119.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreaturePickpocketLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle119;
 			this.dataGridViewCreaturePickpocketLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -6739,12 +6739,12 @@
 			this.dataGridViewCreaturePickpocketLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreaturePickpocketLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreaturePickpocketLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreaturePickpocketLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+			dataGridViewCellStyle120.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle120.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle120.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle120.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle120.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreaturePickpocketLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle120;
 			this.dataGridViewCreaturePickpocketLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreaturePickpocketLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCPLE,
@@ -6764,20 +6764,20 @@
 			this.dataGridViewCreaturePickpocketLoot.Name = "dataGridViewCreaturePickpocketLoot";
 			this.dataGridViewCreaturePickpocketLoot.ReadOnly = true;
 			this.dataGridViewCreaturePickpocketLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreaturePickpocketLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle36;
+			dataGridViewCellStyle121.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle121.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle121.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle121.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle121.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreaturePickpocketLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle121;
 			this.dataGridViewCreaturePickpocketLoot.RowHeadersVisible = false;
 			this.dataGridViewCreaturePickpocketLoot.RowHeadersWidth = 99;
-			dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreaturePickpocketLoot.RowsDefaultCellStyle = dataGridViewCellStyle37;
+			dataGridViewCellStyle122.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle122.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle122.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle122.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle122.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreaturePickpocketLoot.RowsDefaultCellStyle = dataGridViewCellStyle122;
 			this.dataGridViewCreaturePickpocketLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreaturePickpocketLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreaturePickpocketLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -7102,7 +7102,7 @@
 			// buttonCreatureSkinGenerate
 			// 
 			this.buttonCreatureSkinGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCreatureSkinGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCreatureSkinGenerate.BackgroundImage")));
+			this.buttonCreatureSkinGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonCreatureSkinGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonCreatureSkinGenerate.Location = new System.Drawing.Point(922, 512);
 			this.buttonCreatureSkinGenerate.Name = "buttonCreatureSkinGenerate";
@@ -7116,7 +7116,7 @@
 			this.buttonCreatureSkinDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureSkinDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonCreatureSkinDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureSkinDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonCreatureSkinDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonCreatureSkinDelete.Name = "buttonCreatureSkinDelete";
 			this.buttonCreatureSkinDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureSkinDelete.TabIndex = 48;
@@ -7128,7 +7128,7 @@
 			this.buttonCreatureSkinRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonCreatureSkinRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonCreatureSkinRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonCreatureSkinRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonCreatureSkinRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonCreatureSkinRefresh.Name = "buttonCreatureSkinRefresh";
 			this.buttonCreatureSkinRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonCreatureSkinRefresh.TabIndex = 47;
@@ -7153,12 +7153,12 @@
 			this.dataGridViewCreatureSkinLoot.AllowUserToDeleteRows = false;
 			this.dataGridViewCreatureSkinLoot.AllowUserToResizeColumns = false;
 			this.dataGridViewCreatureSkinLoot.AllowUserToResizeRows = false;
-			dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSkinLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle38;
+			dataGridViewCellStyle123.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle123.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle123.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle123.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle123.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSkinLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle123;
 			this.dataGridViewCreatureSkinLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -7168,12 +7168,12 @@
 			this.dataGridViewCreatureSkinLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCreatureSkinLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCreatureSkinLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSkinLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
+			dataGridViewCellStyle124.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle124.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle124.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle124.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle124.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSkinLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle124;
 			this.dataGridViewCreatureSkinLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCreatureSkinLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnCSLE,
@@ -7193,20 +7193,20 @@
 			this.dataGridViewCreatureSkinLoot.Name = "dataGridViewCreatureSkinLoot";
 			this.dataGridViewCreatureSkinLoot.ReadOnly = true;
 			this.dataGridViewCreatureSkinLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSkinLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle40;
+			dataGridViewCellStyle125.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle125.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle125.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle125.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle125.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSkinLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle125;
 			this.dataGridViewCreatureSkinLoot.RowHeadersVisible = false;
 			this.dataGridViewCreatureSkinLoot.RowHeadersWidth = 99;
-			dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCreatureSkinLoot.RowsDefaultCellStyle = dataGridViewCellStyle41;
+			dataGridViewCellStyle126.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle126.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle126.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle126.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle126.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCreatureSkinLoot.RowsDefaultCellStyle = dataGridViewCellStyle126;
 			this.dataGridViewCreatureSkinLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCreatureSkinLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCreatureSkinLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -7526,12 +7526,12 @@
 			this.dataGridViewQuestSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewQuestSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewQuestSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle42;
+			dataGridViewCellStyle127.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle127.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle127.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle127.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle127.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle127;
 			this.dataGridViewQuestSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -7539,12 +7539,12 @@
 			this.dataGridViewQuestSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewQuestSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewQuestSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle43.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle43;
+			dataGridViewCellStyle128.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle128.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle128.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle128.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle128;
 			this.dataGridViewQuestSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewQuestSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn8,
@@ -7557,20 +7557,20 @@
 			this.dataGridViewQuestSearch.Name = "dataGridViewQuestSearch";
 			this.dataGridViewQuestSearch.ReadOnly = true;
 			this.dataGridViewQuestSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle44.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+			dataGridViewCellStyle129.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle129.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle129.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle129.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle129.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle129;
 			this.dataGridViewQuestSearch.RowHeadersVisible = false;
 			this.dataGridViewQuestSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle45.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle45.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestSearch.RowsDefaultCellStyle = dataGridViewCellStyle45;
+			dataGridViewCellStyle130.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle130.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle130.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle130.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle130.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestSearch.RowsDefaultCellStyle = dataGridViewCellStyle130;
 			this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewQuestSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -8593,7 +8593,7 @@
 			// buttonQuestSectionGenerate
 			// 
 			this.buttonQuestSectionGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonQuestSectionGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonQuestSectionGenerate.BackgroundImage")));
+			this.buttonQuestSectionGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonQuestSectionGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonQuestSectionGenerate.Location = new System.Drawing.Point(904, 494);
 			this.buttonQuestSectionGenerate.Name = "buttonQuestSectionGenerate";
@@ -9526,12 +9526,12 @@
 			this.dataGridViewQuestGivers.AllowUserToDeleteRows = false;
 			this.dataGridViewQuestGivers.AllowUserToResizeColumns = false;
 			this.dataGridViewQuestGivers.AllowUserToResizeRows = false;
-			dataGridViewCellStyle46.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestGivers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle46;
+			dataGridViewCellStyle131.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle131.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle131.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle131.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle131.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestGivers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle131;
 			this.dataGridViewQuestGivers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -9541,12 +9541,12 @@
 			this.dataGridViewQuestGivers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewQuestGivers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewQuestGivers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle47.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle47.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestGivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle47;
+			dataGridViewCellStyle132.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle132.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle132.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle132.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle132.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestGivers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle132;
 			this.dataGridViewQuestGivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewQuestGivers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn16,
@@ -9559,20 +9559,20 @@
 			this.dataGridViewQuestGivers.Name = "dataGridViewQuestGivers";
 			this.dataGridViewQuestGivers.ReadOnly = true;
 			this.dataGridViewQuestGivers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle48.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle48.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle48.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle48.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestGivers.RowHeadersDefaultCellStyle = dataGridViewCellStyle48;
+			dataGridViewCellStyle133.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle133.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle133.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle133.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle133.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestGivers.RowHeadersDefaultCellStyle = dataGridViewCellStyle133;
 			this.dataGridViewQuestGivers.RowHeadersVisible = false;
 			this.dataGridViewQuestGivers.RowHeadersWidth = 99;
-			dataGridViewCellStyle49.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle49.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestGivers.RowsDefaultCellStyle = dataGridViewCellStyle49;
+			dataGridViewCellStyle134.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle134.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle134.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle134.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle134.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestGivers.RowsDefaultCellStyle = dataGridViewCellStyle134;
 			this.dataGridViewQuestGivers.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewQuestGivers.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewQuestGivers.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -9635,12 +9635,12 @@
 			this.dataGridViewQuestTakers.AllowUserToDeleteRows = false;
 			this.dataGridViewQuestTakers.AllowUserToResizeColumns = false;
 			this.dataGridViewQuestTakers.AllowUserToResizeRows = false;
-			dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestTakers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle50;
+			dataGridViewCellStyle135.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle135.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle135.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle135.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle135.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestTakers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle135;
 			this.dataGridViewQuestTakers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -9650,12 +9650,12 @@
 			this.dataGridViewQuestTakers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewQuestTakers.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewQuestTakers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle51.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle51.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestTakers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle51;
+			dataGridViewCellStyle136.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle136.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle136.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle136.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle136.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestTakers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle136;
 			this.dataGridViewQuestTakers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewQuestTakers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn20,
@@ -9668,20 +9668,20 @@
 			this.dataGridViewQuestTakers.Name = "dataGridViewQuestTakers";
 			this.dataGridViewQuestTakers.ReadOnly = true;
 			this.dataGridViewQuestTakers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle52.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle52.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle52.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle52.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestTakers.RowHeadersDefaultCellStyle = dataGridViewCellStyle52;
+			dataGridViewCellStyle137.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle137.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle137.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle137.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestTakers.RowHeadersDefaultCellStyle = dataGridViewCellStyle137;
 			this.dataGridViewQuestTakers.RowHeadersVisible = false;
 			this.dataGridViewQuestTakers.RowHeadersWidth = 99;
-			dataGridViewCellStyle53.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle53.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle53.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle53.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewQuestTakers.RowsDefaultCellStyle = dataGridViewCellStyle53;
+			dataGridViewCellStyle138.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle138.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle138.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle138.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewQuestTakers.RowsDefaultCellStyle = dataGridViewCellStyle138;
 			this.dataGridViewQuestTakers.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewQuestTakers.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewQuestTakers.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -9817,12 +9817,12 @@
 			this.dataGridViewGameObjectSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewGameObjectSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewGameObjectSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle54.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle54.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle54.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle54.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewGameObjectSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle54;
+			dataGridViewCellStyle139.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle139.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle139.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle139.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewGameObjectSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle139;
 			this.dataGridViewGameObjectSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -9831,12 +9831,12 @@
 			this.dataGridViewGameObjectSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewGameObjectSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewGameObjectSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle55.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle55.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle55.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle55.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewGameObjectSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle55;
+			dataGridViewCellStyle140.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle140.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle140.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle140.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle140.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewGameObjectSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle140;
 			this.dataGridViewGameObjectSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewGameObjectSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnGOE,
@@ -9848,20 +9848,20 @@
 			this.dataGridViewGameObjectSearch.Name = "dataGridViewGameObjectSearch";
 			this.dataGridViewGameObjectSearch.ReadOnly = true;
 			this.dataGridViewGameObjectSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle56.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle56.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewGameObjectSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle56;
+			dataGridViewCellStyle141.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle141.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle141.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle141.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewGameObjectSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle141;
 			this.dataGridViewGameObjectSearch.RowHeadersVisible = false;
 			this.dataGridViewGameObjectSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle57.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle57.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle57.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle57.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewGameObjectSearch.RowsDefaultCellStyle = dataGridViewCellStyle57;
+			dataGridViewCellStyle142.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle142.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle142.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle142.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle142.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewGameObjectSearch.RowsDefaultCellStyle = dataGridViewCellStyle142;
 			this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewGameObjectSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -9967,7 +9967,7 @@
 			// 
 			// buttonGameObjectTempGenerate
 			// 
-			this.buttonGameObjectTempGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonGameObjectTempGenerate.BackgroundImage")));
+			this.buttonGameObjectTempGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
 			this.buttonGameObjectTempGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.buttonGameObjectTempGenerate.Location = new System.Drawing.Point(432, 247);
 			this.buttonGameObjectTempGenerate.Name = "buttonGameObjectTempGenerate";
@@ -10608,12 +10608,12 @@
 			this.dataGridViewItemSearch.AllowUserToDeleteRows = false;
 			this.dataGridViewItemSearch.AllowUserToResizeColumns = false;
 			this.dataGridViewItemSearch.AllowUserToResizeRows = false;
-			dataGridViewCellStyle58.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle58.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle58.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle58.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle58;
+			dataGridViewCellStyle143.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle143.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle143.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle143.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle143.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle143;
 			this.dataGridViewItemSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -10622,12 +10622,12 @@
 			this.dataGridViewItemSearch.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewItemSearch.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewItemSearch.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle59.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle59.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle59.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle59.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle59;
+			dataGridViewCellStyle144.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle144.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle144.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle144.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle144.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemSearch.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle144;
 			this.dataGridViewItemSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewItemSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnISE,
@@ -10644,20 +10644,20 @@
 			this.dataGridViewItemSearch.Name = "dataGridViewItemSearch";
 			this.dataGridViewItemSearch.ReadOnly = true;
 			this.dataGridViewItemSearch.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle60.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle60.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle60.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle60.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle60;
+			dataGridViewCellStyle145.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle145.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle145.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle145.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle145.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemSearch.RowHeadersDefaultCellStyle = dataGridViewCellStyle145;
 			this.dataGridViewItemSearch.RowHeadersVisible = false;
 			this.dataGridViewItemSearch.RowHeadersWidth = 99;
-			dataGridViewCellStyle61.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle61.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle61.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle61.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemSearch.RowsDefaultCellStyle = dataGridViewCellStyle61;
+			dataGridViewCellStyle146.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle146.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle146.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle146.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemSearch.RowsDefaultCellStyle = dataGridViewCellStyle146;
 			this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewItemSearch.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -10816,9 +10816,9 @@
 			this.buttonItemTempGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonItemTempGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonItemTempGenerate.BackgroundImage")));
 			this.buttonItemTempGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemTempGenerate.Location = new System.Drawing.Point(922, 512);
+			this.buttonItemTempGenerate.Location = new System.Drawing.Point(909, 501);
 			this.buttonItemTempGenerate.Name = "buttonItemTempGenerate";
-			this.buttonItemTempGenerate.Size = new System.Drawing.Size(29, 29);
+			this.buttonItemTempGenerate.Size = new System.Drawing.Size(40, 40);
 			this.buttonItemTempGenerate.TabIndex = 23;
 			this.buttonItemTempGenerate.UseVisualStyleBackColor = true;
 			this.buttonItemTempGenerate.Click += new System.EventHandler(this.buttonWorldManagerGenerate_Click);
@@ -13406,12 +13406,12 @@
 			this.dataGridViewItemLoot.AllowUserToAddRows = false;
 			this.dataGridViewItemLoot.AllowUserToDeleteRows = false;
 			this.dataGridViewItemLoot.AllowUserToResizeRows = false;
-			dataGridViewCellStyle62.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle62.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle62;
+			dataGridViewCellStyle147.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle147.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle147.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle147.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle147.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemLoot.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle147;
 			this.dataGridViewItemLoot.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -13421,12 +13421,12 @@
 			this.dataGridViewItemLoot.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewItemLoot.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewItemLoot.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle63.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle63;
+			dataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle148.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle148.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle148.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemLoot.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle148;
 			this.dataGridViewItemLoot.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewItemLoot.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -13446,20 +13446,20 @@
 			this.dataGridViewItemLoot.Name = "dataGridViewItemLoot";
 			this.dataGridViewItemLoot.ReadOnly = true;
 			this.dataGridViewItemLoot.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle64.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle64.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
+			dataGridViewCellStyle149.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle149.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle149.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle149.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemLoot.RowHeadersDefaultCellStyle = dataGridViewCellStyle149;
 			this.dataGridViewItemLoot.RowHeadersVisible = false;
 			this.dataGridViewItemLoot.RowHeadersWidth = 99;
-			dataGridViewCellStyle65.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle65.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle65.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle65.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemLoot.RowsDefaultCellStyle = dataGridViewCellStyle65;
+			dataGridViewCellStyle150.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle150.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle150.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle150.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle150.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemLoot.RowsDefaultCellStyle = dataGridViewCellStyle150;
 			this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewItemLoot.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -13600,7 +13600,7 @@
 			this.buttonItemLootDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemLootDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonItemLootDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemLootDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonItemLootDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonItemLootDelete.Name = "buttonItemLootDelete";
 			this.buttonItemLootDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemLootDelete.TabIndex = 21;
@@ -13612,7 +13612,7 @@
 			this.buttonItemLootRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemLootRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonItemLootRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemLootRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonItemLootRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonItemLootRefresh.Name = "buttonItemLootRefresh";
 			this.buttonItemLootRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemLootRefresh.TabIndex = 20;
@@ -13843,7 +13843,7 @@
 			this.buttonItemProspectDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemProspectDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonItemProspectDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemProspectDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonItemProspectDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonItemProspectDelete.Name = "buttonItemProspectDelete";
 			this.buttonItemProspectDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemProspectDelete.TabIndex = 26;
@@ -13855,7 +13855,7 @@
 			this.buttonItemProspectRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemProspectRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonItemProspectRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemProspectRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonItemProspectRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonItemProspectRefresh.Name = "buttonItemProspectRefresh";
 			this.buttonItemProspectRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemProspectRefresh.TabIndex = 25;
@@ -13879,12 +13879,12 @@
 			this.dataGridViewItemProspect.AllowUserToAddRows = false;
 			this.dataGridViewItemProspect.AllowUserToDeleteRows = false;
 			this.dataGridViewItemProspect.AllowUserToResizeRows = false;
-			dataGridViewCellStyle66.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle66.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle66.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle66.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemProspect.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle66;
+			dataGridViewCellStyle151.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle151.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle151.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle151.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle151.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemProspect.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle151;
 			this.dataGridViewItemProspect.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -13894,12 +13894,12 @@
 			this.dataGridViewItemProspect.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewItemProspect.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewItemProspect.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle67.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle67.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle67.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle67.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemProspect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle67;
+			dataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle152.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle152.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemProspect.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle152;
 			this.dataGridViewItemProspect.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewItemProspect.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn24,
@@ -13919,20 +13919,20 @@
 			this.dataGridViewItemProspect.Name = "dataGridViewItemProspect";
 			this.dataGridViewItemProspect.ReadOnly = true;
 			this.dataGridViewItemProspect.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle68.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle68.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle68.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle68.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemProspect.RowHeadersDefaultCellStyle = dataGridViewCellStyle68;
+			dataGridViewCellStyle153.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle153.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle153.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle153.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle153.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemProspect.RowHeadersDefaultCellStyle = dataGridViewCellStyle153;
 			this.dataGridViewItemProspect.RowHeadersVisible = false;
 			this.dataGridViewItemProspect.RowHeadersWidth = 99;
-			dataGridViewCellStyle69.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle69.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle69.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle69.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemProspect.RowsDefaultCellStyle = dataGridViewCellStyle69;
+			dataGridViewCellStyle154.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle154.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle154.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle154.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle154.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemProspect.RowsDefaultCellStyle = dataGridViewCellStyle154;
 			this.dataGridViewItemProspect.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewItemProspect.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewItemProspect.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -14268,7 +14268,7 @@
 			this.buttonItemMillDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemMillDelete.BackgroundImage = global::Manti.Properties.Resources.iconDelete;
 			this.buttonItemMillDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemMillDelete.Location = new System.Drawing.Point(850, 512);
+			this.buttonItemMillDelete.Location = new System.Drawing.Point(815, 512);
 			this.buttonItemMillDelete.Name = "buttonItemMillDelete";
 			this.buttonItemMillDelete.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemMillDelete.TabIndex = 26;
@@ -14280,7 +14280,7 @@
 			this.buttonItemMillRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.buttonItemMillRefresh.BackgroundImage = global::Manti.Properties.Resources.iconRefresh;
 			this.buttonItemMillRefresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonItemMillRefresh.Location = new System.Drawing.Point(815, 512);
+			this.buttonItemMillRefresh.Location = new System.Drawing.Point(850, 512);
 			this.buttonItemMillRefresh.Name = "buttonItemMillRefresh";
 			this.buttonItemMillRefresh.Size = new System.Drawing.Size(29, 29);
 			this.buttonItemMillRefresh.TabIndex = 25;
@@ -14304,12 +14304,12 @@
 			this.dataGridViewItemMill.AllowUserToAddRows = false;
 			this.dataGridViewItemMill.AllowUserToDeleteRows = false;
 			this.dataGridViewItemMill.AllowUserToResizeRows = false;
-			dataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle70.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle70.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle70.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemMill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle70;
+			dataGridViewCellStyle155.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle155.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle155.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle155.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle155.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemMill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle155;
 			this.dataGridViewItemMill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -14319,12 +14319,12 @@
 			this.dataGridViewItemMill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewItemMill.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewItemMill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle71.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle71.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle71.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle71.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemMill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle71;
+			dataGridViewCellStyle156.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle156.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle156.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle156.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle156.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemMill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle156;
 			this.dataGridViewItemMill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewItemMill.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn34,
@@ -14344,20 +14344,20 @@
 			this.dataGridViewItemMill.Name = "dataGridViewItemMill";
 			this.dataGridViewItemMill.ReadOnly = true;
 			this.dataGridViewItemMill.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle72.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle72.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle72.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemMill.RowHeadersDefaultCellStyle = dataGridViewCellStyle72;
+			dataGridViewCellStyle157.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle157.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle157.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle157.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle157.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemMill.RowHeadersDefaultCellStyle = dataGridViewCellStyle157;
 			this.dataGridViewItemMill.RowHeadersVisible = false;
 			this.dataGridViewItemMill.RowHeadersWidth = 99;
-			dataGridViewCellStyle73.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle73.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle73.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle73.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemMill.RowsDefaultCellStyle = dataGridViewCellStyle73;
+			dataGridViewCellStyle158.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle158.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle158.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle158.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle158.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemMill.RowsDefaultCellStyle = dataGridViewCellStyle158;
 			this.dataGridViewItemMill.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewItemMill.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewItemMill.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -14729,12 +14729,12 @@
 			this.dataGridViewItemDE.AllowUserToAddRows = false;
 			this.dataGridViewItemDE.AllowUserToDeleteRows = false;
 			this.dataGridViewItemDE.AllowUserToResizeRows = false;
-			dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle74.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemDE.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle74;
+			dataGridViewCellStyle159.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle159.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle159.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle159.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle159.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemDE.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle159;
 			this.dataGridViewItemDE.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -14744,12 +14744,12 @@
 			this.dataGridViewItemDE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewItemDE.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewItemDE.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle75.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle75.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle75.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle75.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemDE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle75;
+			dataGridViewCellStyle160.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle160.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle160.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle160.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle160.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemDE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle160;
 			this.dataGridViewItemDE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewItemDE.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn44,
@@ -14769,20 +14769,20 @@
 			this.dataGridViewItemDE.Name = "dataGridViewItemDE";
 			this.dataGridViewItemDE.ReadOnly = true;
 			this.dataGridViewItemDE.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle76.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle76.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle76.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemDE.RowHeadersDefaultCellStyle = dataGridViewCellStyle76;
+			dataGridViewCellStyle161.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle161.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle161.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle161.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle161.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemDE.RowHeadersDefaultCellStyle = dataGridViewCellStyle161;
 			this.dataGridViewItemDE.RowHeadersVisible = false;
 			this.dataGridViewItemDE.RowHeadersWidth = 99;
-			dataGridViewCellStyle77.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle77.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle77.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle77.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewItemDE.RowsDefaultCellStyle = dataGridViewCellStyle77;
+			dataGridViewCellStyle162.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle162.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle162.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle162.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle162.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewItemDE.RowsDefaultCellStyle = dataGridViewCellStyle162;
 			this.dataGridViewItemDE.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewItemDE.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewItemDE.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -14935,7 +14935,7 @@
 			// toolStripSplitButtonWMScriptSQLGenerate
 			// 
 			this.toolStripSplitButtonWMScriptSQLGenerate.DropDownButtonWidth = 0;
-			this.toolStripSplitButtonWMScriptSQLGenerate.Image = global::Manti.Properties.Resources.iconGenerate;
+			this.toolStripSplitButtonWMScriptSQLGenerate.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButtonWMScriptSQLGenerate.Image")));
 			this.toolStripSplitButtonWMScriptSQLGenerate.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripSplitButtonWMScriptSQLGenerate.Name = "toolStripSplitButtonWMScriptSQLGenerate";
 			this.toolStripSplitButtonWMScriptSQLGenerate.Size = new System.Drawing.Size(120, 20);
@@ -15164,8 +15164,9 @@
 			// buttonCMMailSqlGenerate
 			// 
 			this.buttonCMMailSqlGenerate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonCMMailSqlGenerate.BackgroundImage = global::Manti.Properties.Resources.iconGenerate;
+			this.buttonCMMailSqlGenerate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCMMailSqlGenerate.BackgroundImage")));
 			this.buttonCMMailSqlGenerate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonCMMailSqlGenerate.Enabled = false;
 			this.buttonCMMailSqlGenerate.Location = new System.Drawing.Point(935, 6);
 			this.buttonCMMailSqlGenerate.Name = "buttonCMMailSqlGenerate";
 			this.buttonCMMailSqlGenerate.Size = new System.Drawing.Size(30, 30);
@@ -15221,12 +15222,12 @@
 			this.dataGridViewCMMailItemList.AllowUserToAddRows = false;
 			this.dataGridViewCMMailItemList.AllowUserToDeleteRows = false;
 			this.dataGridViewCMMailItemList.AllowUserToResizeRows = false;
-			dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle78.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailItemList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle78;
+			dataGridViewCellStyle163.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle163.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle163.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle163.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle163.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailItemList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle163;
 			this.dataGridViewCMMailItemList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.dataGridViewCMMailItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -15236,12 +15237,12 @@
 			this.dataGridViewCMMailItemList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCMMailItemList.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCMMailItemList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle79.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle79.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle79.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle79;
+			dataGridViewCellStyle164.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle164.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle164.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle164.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle164.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailItemList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle164;
 			this.dataGridViewCMMailItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCMMailItemList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnMailItemId,
@@ -15255,20 +15256,20 @@
 			this.dataGridViewCMMailItemList.Name = "dataGridViewCMMailItemList";
 			this.dataGridViewCMMailItemList.ReadOnly = true;
 			this.dataGridViewCMMailItemList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle80.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailItemList.RowHeadersDefaultCellStyle = dataGridViewCellStyle80;
+			dataGridViewCellStyle165.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle165.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle165.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle165.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle165.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailItemList.RowHeadersDefaultCellStyle = dataGridViewCellStyle165;
 			this.dataGridViewCMMailItemList.RowHeadersVisible = false;
 			this.dataGridViewCMMailItemList.RowHeadersWidth = 99;
-			dataGridViewCellStyle81.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle81.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle81.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle81.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailItemList.RowsDefaultCellStyle = dataGridViewCellStyle81;
+			dataGridViewCellStyle166.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle166.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle166.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle166.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle166.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailItemList.RowsDefaultCellStyle = dataGridViewCellStyle166;
 			this.dataGridViewCMMailItemList.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCMMailItemList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCMMailItemList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -15589,12 +15590,12 @@
 			this.dataGridViewCMMailCharacterList.AllowUserToAddRows = false;
 			this.dataGridViewCMMailCharacterList.AllowUserToDeleteRows = false;
 			this.dataGridViewCMMailCharacterList.AllowUserToResizeRows = false;
-			dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle82.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailCharacterList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle82;
+			dataGridViewCellStyle167.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle167.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle167.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle167.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle167.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailCharacterList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle167;
 			this.dataGridViewCMMailCharacterList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
 			this.dataGridViewCMMailCharacterList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -15604,12 +15605,12 @@
 			this.dataGridViewCMMailCharacterList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewCMMailCharacterList.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewCMMailCharacterList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle83.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle83.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle83.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailCharacterList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle83;
+			dataGridViewCellStyle168.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle168.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle168.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle168.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle168.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailCharacterList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle168;
 			this.dataGridViewCMMailCharacterList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewCMMailCharacterList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumnMailCharId,
@@ -15621,20 +15622,20 @@
 			this.dataGridViewCMMailCharacterList.Name = "dataGridViewCMMailCharacterList";
 			this.dataGridViewCMMailCharacterList.ReadOnly = true;
 			this.dataGridViewCMMailCharacterList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle84.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailCharacterList.RowHeadersDefaultCellStyle = dataGridViewCellStyle84;
+			dataGridViewCellStyle169.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle169.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle169.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle169.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle169.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailCharacterList.RowHeadersDefaultCellStyle = dataGridViewCellStyle169;
 			this.dataGridViewCMMailCharacterList.RowHeadersVisible = false;
 			this.dataGridViewCMMailCharacterList.RowHeadersWidth = 99;
-			dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle85.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewCMMailCharacterList.RowsDefaultCellStyle = dataGridViewCellStyle85;
+			dataGridViewCellStyle170.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle170.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle170.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle170.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle170.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewCMMailCharacterList.RowsDefaultCellStyle = dataGridViewCellStyle170;
 			this.dataGridViewCMMailCharacterList.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewCMMailCharacterList.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewCMMailCharacterList.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
@@ -15745,6 +15746,16 @@
 			this.tabPageWMScript.Size = new System.Drawing.Size(971, 579);
 			this.tabPageWMScript.TabIndex = 6;
 			this.tabPageWMScript.Text = "Script";
+			// 
+			// tabPageAMCreateAccount
+			// 
+			this.tabPageAMCreateAccount.BackColor = System.Drawing.SystemColors.Control;
+			this.tabPageAMCreateAccount.Location = new System.Drawing.Point(4, 22);
+			this.tabPageAMCreateAccount.Name = "tabPageAMCreateAccount";
+			this.tabPageAMCreateAccount.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPageAMCreateAccount.Size = new System.Drawing.Size(971, 579);
+			this.tabPageAMCreateAccount.TabIndex = 2;
+			this.tabPageAMCreateAccount.Text = "Create Account";
 			// 
 			// FormMain
 			// 
@@ -17307,5 +17318,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnMailItemQuantity;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnMailItemFlags;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumnMailItemName;
+		private System.Windows.Forms.TabPage tabPageAMCreateAccount;
 	}
 }
