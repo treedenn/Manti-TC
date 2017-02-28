@@ -13,7 +13,11 @@ namespace Manti.Classes.Database {
 			: base(address, username, password, port, dbName) { }
 
 		public int executeSql(string sql) {
-			return executeNonQuery(sql);
+			if(!string.IsNullOrEmpty(sql)) {
+				return executeNonQuery(sql);
+			}
+
+			return 0;
 		}
 
 		#region Creature

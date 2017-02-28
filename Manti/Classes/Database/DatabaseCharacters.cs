@@ -11,7 +11,11 @@ namespace Manti.Classes.Database {
 		}
 
 		public int executeSql(string sql) {
-			return executeNonQuery(sql);
+			if(!string.IsNullOrEmpty(sql)) {
+				return executeNonQuery(sql);
+			}
+
+			return 0;
 		}
 
 		public DataTable searchForCharacters(string name, bool isExact) {

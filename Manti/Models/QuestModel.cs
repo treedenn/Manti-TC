@@ -3,7 +3,7 @@ using Manti.Classes.QuestTab;
 
 namespace Manti.Models {
 	public class QuestModel {
-		private QuestModel() { }
+		private QuestModel() { quest = new Quest(); }
 
 		private static QuestModel model;
 

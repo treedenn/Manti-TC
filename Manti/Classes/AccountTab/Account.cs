@@ -2,6 +2,7 @@
 	public class Account {
 		public uint id { get; set; }
 		public string username { get; set; }
+		public string password { get; set; }
 		public string email { get; set; }
 		public string reqemail { get; set; }
 		public string joindate { get; set; }

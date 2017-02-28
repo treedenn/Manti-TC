@@ -27,6 +27,8 @@ namespace Manti.Views {
 		// For a better overview in Visual Studio 14,
 		// Do the command: CTRL + M + O, simultaneously.
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - -
+		// Remember to add the CSV Folder to the debug folder.
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 		// The forum thread can be found at Emudevs:
 		// http://emudevs.com/showthread.php/5261-Trinity-Manti-Manager
 		// The newest Source Code can be found at Github:
@@ -648,20 +650,22 @@ namespace Manti.Views {
 		#region Update
 
 		private void updateAccount() {
-			Account account = new Account();
+			Account account = Models.AccountModel.getInstance().account;
 
 			if(!string.IsNullOrEmpty(textBoxAccountAccountID.Text)) {
-				account.id        = Convert.ToUInt32(textBoxAccountAccountID.Text);
-				account.username  = textBoxAccountAccountUsername.Text;
-				account.email     = textBoxAccountAccountEmail.Text;
-				account.reqemail  = textBoxAccountAccountRegmail.Text;
-				account.reqemail  = textBoxAccountAccountJoindate.Text;
-				account.lastIP    = textBoxAccountAccountLastIP.Text;
-				account.locked    = checkBoxAccountAccountLocked.Checked;
-				account.online    = checkBoxAccountAccountOnline.Checked;
-				account.expansion = Convert.ToByte(textBoxAccountAccountExpansion.Text);
+				account.id = Convert.ToUInt32(textBoxAccountAccountID.Text);
 			}
 
+			account.username  = textBoxAccountAccountUsername.Text;
+			account.password  = (string.IsNullOrEmpty(textBoxAccountAccountPassword.Text) ? account.password : textBoxAccountAccountPassword.Text);
+			account.email     = textBoxAccountAccountEmail.Text;
+			account.reqemail  = textBoxAccountAccountRegmail.Text;
+			account.reqemail  = textBoxAccountAccountJoindate.Text;
+			account.lastIP    = textBoxAccountAccountLastIP.Text;
+			account.locked    = checkBoxAccountAccountLocked.Checked;
+			account.online    = checkBoxAccountAccountOnline.Checked;
+			account.expansion = Convert.ToByte(textBoxAccountAccountExpansion.Text);
+			
 			if(!string.IsNullOrEmpty(textBoxAccountAccountBandate.Text)) {
 				account.banned = new Classes.AccountTab.AccountBanned();
 
@@ -699,42 +703,42 @@ namespace Manti.Views {
 		}
 
 		private void updateCharacter() { // Model.CharacterTab.Character
-			Character character = new Character();
+			Character character = Models.CharacterModel.getInstance().character;
 
-			character.guid = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
-			character.accountID = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
-			character.name = textBoxCharacterCharacterName.Text;
-			character.charRace = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
-			character.charClass = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
-			character.sex = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
-			character.level = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
-			character.money = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
-			character.xp = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
+			character.guid        = Convert.ToUInt32(textBoxCharacterCharacterGUID.Text);
+			character.accountID   = Convert.ToUInt32(textBoxCharacterCharacterAccount.Text);
+			character.name        = textBoxCharacterCharacterName.Text;
+			character.charRace    = Convert.ToUInt32(textBoxCharacterCharacterRace.Text);
+			character.charClass   = Convert.ToUInt32(textBoxCharacterCharacterClass.Text);
+			character.sex         = Convert.ToUInt32(textBoxCharacterCharacterGender.Text);
+			character.level       = Convert.ToUInt32(textBoxCharacterCharacterLevel.Text);
+			character.money       = Convert.ToUInt32(textBoxCharacterCharacterMoney.Text);
+			character.xp          = Convert.ToUInt32(textBoxCharacterCharacterXP.Text);
 			character.chosenTitle = Convert.ToUInt32(textBoxCharacterCharacterTitle.Text);
-			character.isOnline = checkBoxCharacterCharacterOnline.Checked;
+			character.isOnline    = checkBoxCharacterCharacterOnline.Checked;
 			character.isCinematic = checkBoxCharacterCharacterCinematic.Checked;
-			character.isResting = checkBoxCharacterCharacterRest.Checked;
+			character.isResting   = checkBoxCharacterCharacterRest.Checked;
 			// Location
-			character.mapID = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
-			character.instanceID = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
-			character.zoneID = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
+			character.mapID       = Convert.ToInt32(textBoxCharacterCharacterMapID.Text);
+			character.instanceID  = Convert.ToInt32(textBoxCharacterCharacterInstanceID.Text);
+			character.zoneID      = Convert.ToInt32(textBoxCharacterCharacterZoneID.Text);
 			character.orientation = Convert.ToDouble(textBoxCharacterCharacterCoordO.Text);
-			character.xPosition = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
-			character.yPosition = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
-			character.zPosition = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
+			character.xPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordX.Text);
+			character.yPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordY.Text);
+			character.zPosition   = Convert.ToDouble(textBoxCharacterCharacterCoordZ.Text);
 			// Player vs Player
 			character.honorPoints = Convert.ToInt32(textBoxCharacterCharacterHonorPoints.Text);
 			character.arenaPoints = Convert.ToInt32(textBoxCharacterCharacterArenaPoints.Text);
-			character.totalKills = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
+			character.totalKills  = Convert.ToInt32(textBoxCharacterCharacterTotalKills.Text);
 			// Stats
-			character.health = Convert.ToUInt64(textBoxCharacterCharacterHealth.Text);
-			character.power1 = Convert.ToUInt64(textBoxCharacterCharacterPower1.Text);
-			character.power2 = Convert.ToUInt64(textBoxCharacterCharacterPower2.Text);
-			character.power3 = Convert.ToUInt64(textBoxCharacterCharacterPower3.Text);
-			character.power4 = Convert.ToUInt64(textBoxCharacterCharacterPower4.Text);
-			character.power5 = Convert.ToUInt64(textBoxCharacterCharacterPower5.Text);
-			character.power6 = Convert.ToUInt64(textBoxCharacterCharacterPower6.Text);
-			character.power7 = Convert.ToUInt64(textBoxCharacterCharacterPower7.Text);
+			character.health      = Convert.ToUInt64(textBoxCharacterCharacterHealth.Text);
+			character.power1      = Convert.ToUInt64(textBoxCharacterCharacterPower1.Text);
+			character.power2      = Convert.ToUInt64(textBoxCharacterCharacterPower2.Text);
+			character.power3      = Convert.ToUInt64(textBoxCharacterCharacterPower3.Text);
+			character.power4      = Convert.ToUInt64(textBoxCharacterCharacterPower4.Text);
+			character.power5      = Convert.ToUInt64(textBoxCharacterCharacterPower5.Text);
+			character.power6      = Convert.ToUInt64(textBoxCharacterCharacterPower6.Text);
+			character.power7      = Convert.ToUInt64(textBoxCharacterCharacterPower7.Text);
 
 			Models.CharacterModel.getInstance().character = character;
 		}
@@ -754,7 +758,7 @@ namespace Manti.Views {
 		}
 
 		private void updateCreature() {
-			Creature c = new Creature();
+			Creature c = Models.CreatureModel.getInstance().creature;
 
 			c.entry              = Convert.ToUInt32(textBoxCreatureTemplateEntry.Text);
 			c.diffEntry1         = Convert.ToUInt32(textBoxCreatureTemplateDifEntry1.Text);
@@ -913,7 +917,7 @@ namespace Manti.Views {
 		}
 
 		private void updateQuest() {
-			Quest quest = new Quest();
+			Quest quest = Models.QuestModel.getInstance().quest;
 
 			quest.id                              = Convert.ToUInt32(textBoxQuestSectionID.Text);
 			quest.title                           = textBoxQuestSectionTitle.Text;
@@ -1020,7 +1024,7 @@ namespace Manti.Views {
 		}
 
 		private void updateGameObject() {
-			GameObject go = new GameObject();
+			GameObject go = Models.GameObjectModel.getInstance().gameObject;
 
 			go.entry      = Convert.ToUInt32(textBoxGameObjectTempEntry.Text);
 			go.type       = Convert.ToUInt32(textBoxGameObjectTempType.Text);
@@ -1058,7 +1062,7 @@ namespace Manti.Views {
 		}
 
 		private void updateItem() {
-			Item item = new Item();
+			Item item = Models.ItemModel.getInstance().item;
 
 			item.entry                  = Convert.ToUInt32(textBoxItemTempEntry.Text);
 			item.iClass                 = Convert.ToUInt32(textBoxItemTempTypeClass.Text);
@@ -1293,7 +1297,6 @@ namespace Manti.Views {
 		private void FormMain_Load(object sender, EventArgs e) {
 			this.Icon = Properties.Resources.iconManti;
 
-			tabControlAccountManager.Focus();
 			//tabControlCategory.SelectedTab = tabPageItem;
 
 			dataGridViewAccountSearch.AutoGenerateColumns      = false;
@@ -1310,36 +1313,120 @@ namespace Manti.Views {
 
 			setOfflineMode(MySqlDatabase.isRunningOffline);
 		}
-		private void tabControlCategory_KeyDown(object sender, KeyEventArgs e) {
-			if(e.KeyCode == Keys.Enter) {
-				e.SuppressKeyPress = true;
+		private void tabControlManager_KeyDown(object sender, KeyEventArgs e) {
+			/* WIP - Number press for tabControl
+			if(e.KeyValue >= 49 && e.KeyValue <= 57) { // digits
+				int value = e.KeyValue - 48;
 
-				if(!MySqlDatabase.isRunningOffline) {
-					if(tabControlAccountManager.SelectedTab == tabPageAccount) { // Account Tab
-						if(tabControlAMAccount.SelectedTab == tabPageAMAccountSearch) {
-							buttonAccountSearchSearch_Click(this, new EventArgs());
-						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageCharacter) { // Character Tab
-						if(tabControlCMCharacter.SelectedTab == tabPageCMCharacterSearch) {
-							buttonCharacterSearchSearch_Click(this, new EventArgs());
-						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageWMCreature) { // Creature Tab
-						if(tabControlWMCreature.SelectedTab == tabPageWMCreatureSearch) {
-							buttonCreatureSearchSearch_Click(this, new EventArgs());
-						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageQuest) { // Quest Tab
-						if(tabControlWMQuest.SelectedTab == tabPageWMQuestSearch) {
-							buttonQuestSearchSearch_Click(this, new EventArgs());
-						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageGameObject) { // Game Object Tab
-						if(tabControlWMGameObject.SelectedTab == tabPageWMGameObjectSearch) {
-							buttonGameObjectSearchSearch_Click(this, new EventArgs());
-						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageWMItem) { // Item Tab
-						if(tabControlWMItem.SelectedTab == tabPageWMItemSearch) {
-							buttonItemSearchSearch_Click(this, new EventArgs());
-						}
+				if(tabControlManager.SelectedTab == tabPageAccountManager) {
+					// 2nd tabControl
+					if(tabControlAccountManager.TabCount >= value) {
+						tabControlAccountManager.SelectedIndex = value - 1;
 					}
+				} else if(tabControlManager.SelectedTab == tabPageCharacterManager) {
+					// 2nd tabControl
+					if(tabControlCharacterManager.TabCount >= value) {
+						tabControlCharacterManager.SelectedIndex = value - 1;
+					}
+				} else if(tabControlManager.SelectedTab == tabPageWorldManager) {
+					// 2nd tabControl
+					if(tabControlWorldManager.TabCount >= value) {
+						tabControlWorldManager.SelectedIndex = value - 1;
+					}
+				}
+			} else
+			*/
+			if(e.KeyCode == Keys.Enter) {
+
+				Button btn = null;
+				ToolStripSplitButton tsBtn = null;
+
+				// 1st tabControl
+				if(tabControlManager.SelectedTab == tabPageAccountManager) {
+					// 2nd tabControl
+					if(tabControlAccountManager.SelectedTab == tabPageAMAccount) {
+						// 3rd tabControl
+						if(tabControlAMAccount.SelectedTab == tabPageAMAccountSearch) {
+							btn = buttonAccountSearchSearch;
+						} else if(tabControlAMAccount.SelectedTab == tabPageAMAccountAccount) {
+							btn = buttonAccountAccountGenerateScript;
+						}
+					} else if(tabControlAccountManager.SelectedTab == tabPageAMScript) {
+						tsBtn = toolStripSplitButtonAMScriptUpdate;
+					}
+				} else if(tabControlManager.SelectedTab == tabPageCharacterManager) {
+					// 2nd tabControl
+					if(tabControlCharacterManager.SelectedTab == tabPageCMCharacter) {
+						// 3rd tabControl
+						if(tabControlCMCharacter.SelectedTab == tabPageCMCharacterSearch) {
+							btn = buttonCharacterSearchSearch;
+						} else if(tabControlCMCharacter.SelectedTab == tabPageCMCharacterCharacter) {
+							btn = buttonCharacterCharacterGenerate;
+						} else if(tabControlCMCharacter.SelectedTab == tabPageCMCharacterInventory) {
+							btn = buttonCharacterInventoryGenerate;
+						}
+					} else if(tabControlCharacterManager.SelectedTab == tabPageCMMail) {
+						// WIP
+					} else if(tabControlCharacterManager.SelectedTab == tabPageCMScript) {
+						tsBtn = toolStripSplitButtonCMScriptUpdate;
+					}
+				} else if(tabControlManager.SelectedTab == tabPageWorldManager) {
+					// 2nd tabControl
+					if(tabControlWorldManager.SelectedTab == tabPageWMItem) {
+						// 3rd tabControl
+						if(tabControlWMItem.SelectedTab == tabPageWMItemSearch) {
+							btn = buttonItemSearchSearch;
+						} else if(tabControlWMItem.SelectedTab == tabPageWMItemTemplate) {
+							btn = buttonItemTempGenerate;
+						} else if(tabControlWMItem.SelectedTab == tabPageWMItemLoot) {
+							btn = buttonItemLootGenerate;
+						} else if(tabControlWMItem.SelectedTab == tabPageWMItemProspecting) {
+							btn = buttonItemProspectGenerate;
+						} else if(tabControlWMItem.SelectedTab == tabPageWMItemMilling) {
+							btn = buttonItemMillGenerate;
+						} else if(tabControlWMItem.SelectedTab == tabPageWMItemDisenchant) {
+							btn = buttonItemDEGenerate;
+						}
+					} else if(tabControlWorldManager.SelectedTab == tabPageWMCreature) {
+						// 3rd tabControl
+						if(tabControlWMCreature.SelectedTab == tabPageWMCreatureSearch) {
+							btn = buttonCreatureSearchSearch;
+						} else if(tabControlWMCreature.SelectedTab == tabPageWMCreatureTemplate) {
+							btn = buttonCreatureTempGenerate;
+						} else if(tabControlWMCreature.SelectedTab == tabPageWMCreatureVendor) {
+							btn = buttonCreatureVendorGenerate;
+						} else if(tabControlWMCreature.SelectedTab == tabPageWMCreatureLoot) {
+							btn = buttonCreatureLootGenerate;
+						}  else if(tabControlWMCreature.SelectedTab == tabPageWMCreaturePickpocket) {
+							btn = buttonCreaturePickpocketGenerate;
+						} else if(tabControlWMCreature.SelectedTab == tabPageWMCreatureSkin) {
+							btn = buttonCreatureSkinGenerate;
+						}
+					} else if(tabControlWorldManager.SelectedTab == tabPageWMQuest) {
+						// 3rd tabControl
+						if(tabControlWMQuest.SelectedTab == tabPageWMQuestSearch) {
+							btn = buttonQuestSearchSearch;
+						} else if(tabControlWMQuest.SelectedTab == tabPageWMQuestSection2) {
+							btn = buttonQuestSectionGenerate;
+						}
+					} else if(tabControlWorldManager.SelectedTab == tabPageWMGameObject) {
+						// 3rd tabControl
+						if(tabControlWMGameObject.SelectedTab == tabPageWMGameObjectSearch) {
+							btn = buttonGameObjectSearchSearch;
+						} else if(tabControlWMGameObject.SelectedTab == tabPageWMGameObjectTemplate) {
+							btn = buttonGameObjectTempGenerate;
+						}
+					} else if(tabControlWorldManager.SelectedTab == tabPageWMScript) {
+						tsBtn = toolStripSplitButtonWMScriptUpdate;
+					}
+				}
+
+				if(btn != null) {
+					btn.PerformClick();
+				}
+
+				if(tsBtn != null) {
+					tsBtn.PerformClick();
 				}
 			}
 		}
@@ -1668,10 +1755,19 @@ namespace Manti.Views {
 			try {
 				updateAccount();
 
-				Account account = Models.AccountModel.getInstance().account;
+				var model = Models.AccountModel.getInstance();
 				var ga = new GenerateAuth();
 
-				textBoxAMScriptOutput.AppendText(ga.accountFullToSQL(account));
+				Account account = model.account;
+
+				if(string.IsNullOrEmpty(textBoxAccountAccountID.Text)) {
+					account.password = model.generateShaHashPass(account.username, account.password);
+					textBoxAMScriptOutput.AppendText(ga.createAccount(account));
+				} else {
+					textBoxAMScriptOutput.AppendText(ga.accountFullToSQL(account));
+				}
+
+				
 				tabControlAccountManager.SelectedTab = tabPageAMScript;
 			} catch(Exception ex) when(ex is FormatException || ex is NullReferenceException) {
 				MessageBox.Show("In most scenarios all textboxes have not be filled.\nPlease check that textboxes that require a number, has a number and not letters.\nIf it require a string/text, empty is mostly accepted.", "Format or Null Exception occured!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -1750,6 +1846,19 @@ namespace Manti.Views {
 		#endregion
 
 		#region Account Manager
+
+		// account search
+		private void toolStripSplitButtonAccountClear_ButtonClick(object sender, EventArgs e) {
+			foreach(Control c in tabPageAMAccountAccount.Controls) {
+				if(c is GroupBox) {
+					foreach(Control gc in c.Controls) {
+						if(gc is TextBox) {
+							gc.Text = string.Empty;
+						}
+					}
+				}
+			}
+		}
 
 		// account tab
 		private void monthCalendarAccountAccountBanDate_DateChanged(object sender, DateRangeEventArgs e) {
@@ -2471,7 +2580,7 @@ namespace Manti.Views {
 			}
 
 			if(label != null) {
-				label.Text = "Row(s) affected: " + rows.ToString();
+				label.Text = "Row(s) Affected: " + rows.ToString();
 			}
 		}
 		private void toolStripSplitButtonSqlGenerate(object sender, EventArgs e) {

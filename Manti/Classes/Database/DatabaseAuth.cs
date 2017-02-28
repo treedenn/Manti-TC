@@ -12,7 +12,11 @@ namespace Manti.Classes.Database {
 		}
 
 		public int executeSql(string sql) {
-			return executeNonQuery(sql);
+			if(!string.IsNullOrEmpty(sql)) {
+				return executeNonQuery(sql);
+			}
+
+			return 0;
 		}
 
 		public DataTable searchForAccounts(string name, bool isExact) {
@@ -45,10 +49,10 @@ namespace Manti.Classes.Database {
 			DataTable dtAccess = executeQuery("SELECT * FROM account_access WHERE id = '?id';", new MySqlParameter("?id", accID));
 
 			if(dtAcc != null) {
-				account = buildAccount(dtAcc.Rows[0]);
-				account.banned = buildAccountBanned(dtBan.Rows[0]);
-				account.muted = buildAccountMuted(dtMute.Rows[0]);
-				account.access = buildAccountAccess(dtAccess);
+				account        = buildAccount(dtAcc.Rows[0]);
+				account.banned = (dtBan == null ? null : buildAccountBanned(dtBan.Rows[0]));
+				account.muted  = (dtMute == null ? null : buildAccountMuted(dtMute.Rows[0]));
+				account.access = (dtAccess == null ? null : buildAccountAccess(dtAccess));
 			}
 
 			return account;
@@ -56,8 +60,8 @@ namespace Manti.Classes.Database {
 
 		public Account buildFullAccount(DataRow accRow, DataRow accBan, DataRow accMute) {
 			Account account = buildAccount(accRow);
-			account.banned = buildAccountBanned(accBan);
-			account.muted = buildAccountMuted(accMute);
+			account.banned  = buildAccountBanned(accBan);
+			account.muted   = buildAccountMuted(accMute);
 
 			return account;
 		}
@@ -67,6 +71,7 @@ namespace Manti.Classes.Database {
 
 			account.id         = Convert.ToUInt32(accRow["id"]);
 			account.username   = accRow["username"].ToString();
+			account.password   = accRow["sha_pass_hash"].ToString();
 			account.email      = accRow["email"].ToString();
 			account.reqemail   = accRow["reg_mail"].ToString();
 			account.joindate   = accRow["joindate"].ToString();

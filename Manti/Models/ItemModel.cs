@@ -3,7 +3,7 @@ using Manti.Classes.ItemTab;
 
 namespace Manti.Models {
 	public class ItemModel {
-		private ItemModel() { }
+		private ItemModel() { item = new Item(); }
 
 		private static ItemModel model;
 

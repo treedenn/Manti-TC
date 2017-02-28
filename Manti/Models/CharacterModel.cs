@@ -3,7 +3,7 @@ using Manti.Classes.CharacterTab;
 
 namespace Manti.Models {
 	public class CharacterModel {
-		private CharacterModel() { }
+		private CharacterModel() { character = new Character(); }
 
 		private static CharacterModel model;
 

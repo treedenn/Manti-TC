@@ -3,7 +3,7 @@ using Manti.Classes.GameObjectTab;
 
 namespace Manti.Models {
 	public class GameObjectModel {
-		private GameObjectModel() { }
+		private GameObjectModel() { gameObject = new GameObject(); }
 
 		private static GameObjectModel model;
 

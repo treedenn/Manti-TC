@@ -4,6 +4,13 @@ using Manti.Classes.AccountTab;
 
 namespace Manti.Classes.Generate {
 	public class GenerateAuth : SqlGenerate {
+		public string createAccount(Account acc) {
+			string[] columns = { "username", "sha_pass_hash", "email", "reg_mail", "expansion" };
+			object[] values = { acc.username.ToUpper(), acc.password, acc.email, acc.reqemail, acc.expansion };
+
+			return insertToDatabase("account", columns, values);
+		}
+
 		public string accountFullToSQL(Account acc) {
 			if(acc != null) {
 				string query = accountToSQL(acc);
@@ -19,11 +26,10 @@ namespace Manti.Classes.Generate {
 
 		public string accountToSQL(Account acc) {
 			if(acc.id != 0) {
-				string[] columns = {"username", "email", "reg_mail", "expansion", "locked"};
-				object[] values = {acc.username, acc.email, acc.reqemail, acc.expansion, Convert.ToSByte(acc.locked)};
-				string query = updateToDatabase("account", columns, values, "id", acc.id.ToString());
+				string[] columns = {"username", "sha_pass_hash", "email", "reg_mail", "expansion", "locked"};
+				object[] values = {acc.username.ToUpper(), acc.password, acc.email, acc.reqemail, acc.expansion, Convert.ToSByte(acc.locked)};
 
-				return query;
+				return updateToDatabase("account", columns, values, "id", acc.id.ToString());
 			}
 
 			return null;
@@ -35,10 +41,7 @@ namespace Manti.Classes.Generate {
 				object[] values = {id, UtilityHelper.DateTimeToUnixStamp(ba.banDate), UtilityHelper.DateTimeToUnixStamp(ba.unbanDate),
 				ba.by, ba.reason, Convert.ToSByte(ba.isActive)};
 
-				string query = deleteFromDatabase("account_banned", "id", id.ToString());
-				query += insertToDatabase("account_banned", columns, values);
-
-				return query;
+				return deleteFromDatabase("account_banned", "id", id.ToString()) + insertToDatabase("account_banned", columns, values);
 			}
 
 			return null;
@@ -49,10 +52,7 @@ namespace Manti.Classes.Generate {
 				string[] columns = {"guid", "mutedate", "mutetime", "mutedby", "mutereason"};
 				object[] values = {id, UtilityHelper.DateTimeToUnixStamp(am.muteDate), am.duration, am.by, am.reason};
 
-				string query = deleteFromDatabase("account_muted", "guid", id.ToString());
-				query += insertToDatabase("account_muted", columns, values);
-
-				return query;
+				return deleteFromDatabase("account_muted", "guid", id.ToString()) + insertToDatabase("account_muted", columns, values);
 			}
 
 			return null;
@@ -75,5 +75,7 @@ namespace Manti.Classes.Generate {
 
 			return null;
 		}
+
+
 	}
 }
