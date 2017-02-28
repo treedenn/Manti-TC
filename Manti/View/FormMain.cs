@@ -115,7 +115,7 @@ namespace Manti.Views {
 					}
 				}
 
-				tabControlCategoryAccount.SelectedTab = tabPageAccountAccount;
+				tabControlAMAccount.SelectedTab = tabPageAMAccountAccount;
 			}
 		}
 
@@ -158,7 +158,7 @@ namespace Manti.Views {
 				textBoxCharacterCharacterPower6.Text = character.power6.ToString();
 				textBoxCharacterCharacterPower7.Text = character.power7.ToString();
 
-				tabControlCategoryCharacter.SelectedTab = tabPageCharacterCharacter;
+				tabControlCMCharacter.SelectedTab = tabPageCMCharacterCharacter;
 			}
 		}
 		private void addCharacterInventory(CharacterInventory[] inventory) {
@@ -248,7 +248,7 @@ namespace Manti.Views {
 				textBoxCreatureTemplatePickID.Text        = creature.pickpocketId.ToString();
 				textBoxCreatureTemplateSkinID.Text        = creature.skinId.ToString();
 
-				tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
+				tabControlWMCreature.SelectedTab = tabPageWMCreatureTemplate;
 			}
 		}
 		private void addCreatureLocationRows(CreatureLocation[] location) {
@@ -402,7 +402,7 @@ namespace Manti.Views {
 				textBoxQuestSectionRewSpellDisplay.Text   = quest.rewardDisplaySpell.ToString();
 				textBoxQuestSectionRewSpell.Text          = quest.rewardSpell.ToString();
 
-				tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
+				tabControlWMQuest.SelectedTab = tabPageWMQuestSection1;
 			}
 		}
 		private void addQuestGiverRows(QuestGT[] gt) {
@@ -460,7 +460,7 @@ namespace Manti.Views {
 				textBoxGameObjectTempD22.Text     = go.data22.ToString();
 				textBoxGameObjectTempD23.Text     = go.data23.ToString();
 
-				tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
+				tabControlWMGameObject.SelectedTab = tabPageWMGameObjectTemplate;
 			}
 		}
 
@@ -603,7 +603,7 @@ namespace Manti.Views {
 				textBoxItemTempStatsScaleDist.Text  = item.scalingStatDist.ToString();
 				textBoxItemTempStatsScaleValue.Text = item.scalingStatValue.ToString();
 
-				tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
+				tabControlWMItem.SelectedTab = tabPageWMItemTemplate;
 			}
 		}
 		private void addItemLootRows(ItemLPMD[] loot) {
@@ -1316,27 +1316,27 @@ namespace Manti.Views {
 
 				if(!MySqlDatabase.isRunningOffline) {
 					if(tabControlAccountManager.SelectedTab == tabPageAccount) { // Account Tab
-						if(tabControlCategoryAccount.SelectedTab == tabPageAccountSearch) {
+						if(tabControlAMAccount.SelectedTab == tabPageAMAccountSearch) {
 							buttonAccountSearchSearch_Click(this, new EventArgs());
 						}
 					} else if(tabControlAccountManager.SelectedTab == tabPageCharacter) { // Character Tab
-						if(tabControlCategoryCharacter.SelectedTab == tabPageCharacterSearch) {
+						if(tabControlCMCharacter.SelectedTab == tabPageCMCharacterSearch) {
 							buttonCharacterSearchSearch_Click(this, new EventArgs());
 						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageCreature) { // Creature Tab
-						if(tabControlCategoryCreature.SelectedTab == tabPageCreatureSearch) {
+					} else if(tabControlAccountManager.SelectedTab == tabPageWMCreature) { // Creature Tab
+						if(tabControlWMCreature.SelectedTab == tabPageWMCreatureSearch) {
 							buttonCreatureSearchSearch_Click(this, new EventArgs());
 						}
 					} else if(tabControlAccountManager.SelectedTab == tabPageQuest) { // Quest Tab
-						if(tabControlCategoryQuest.SelectedTab == tabPageQuestSearch) {
+						if(tabControlWMQuest.SelectedTab == tabPageWMQuestSearch) {
 							buttonQuestSearchSearch_Click(this, new EventArgs());
 						}
 					} else if(tabControlAccountManager.SelectedTab == tabPageGameObject) { // Game Object Tab
-						if(tabControlCategoryGameObject.SelectedTab == tabPageGameObjectSearch) {
+						if(tabControlWMGameObject.SelectedTab == tabPageWMGameObjectSearch) {
 							buttonGameObjectSearchSearch_Click(this, new EventArgs());
 						}
-					} else if(tabControlAccountManager.SelectedTab == tabPageItem) { // Item Tab
-						if(tabControlCategoryItem.SelectedTab == tabPageItemSearch) {
+					} else if(tabControlAccountManager.SelectedTab == tabPageWMItem) { // Item Tab
+						if(tabControlWMItem.SelectedTab == tabPageWMItemSearch) {
 							buttonItemSearchSearch_Click(this, new EventArgs());
 						}
 					}
@@ -1349,7 +1349,7 @@ namespace Manti.Views {
 		#region Search
 
 		private void buttonAccountSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageAccountSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageAMAccountSearch);
 
 			var dbAuth = Settings.getAuthDB();
 			var user   = textBoxAccountSearchUsername.Text;
@@ -1386,7 +1386,7 @@ namespace Manti.Views {
 			toolStripStatusLabelAccountSearchRows.Text = "Account(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCharacterSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageCharacterSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageCMCharacterSearch);
 
 			var dbChar  = Settings.getCharsDB();
 			var user    = textBoxCharacterSearchUsername.Text;
@@ -1428,7 +1428,7 @@ namespace Manti.Views {
 			toolStripStatusLabelCharacterSearchRows.Text = "Character(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonCreatureSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageCreatureSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageWMCreatureSearch);
 
 			var dbWorld  = Settings.getWorldDB();
 			var entry    = textBoxCreatureSearchEntry.Text;
@@ -1465,7 +1465,7 @@ namespace Manti.Views {
 			toolStripStatusLabelCreatureSearchRows.Text = "Creature(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonQuestSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageQuestSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageWMQuestSearch);
 
 			var dbWorld = Settings.getWorldDB();
 			var id = textBoxQuestSearchID.Text;
@@ -1513,7 +1513,7 @@ namespace Manti.Views {
 			toolStripStatusLabelQuestSearchRows.Text = "Quest(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonGameObjectSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageGameObjectSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageWMGameObjectSearch);
 
 			var dbWorld = Settings.getWorldDB();
 			var entry   = textBoxGameObjectSearchEntry.Text;
@@ -1546,7 +1546,7 @@ namespace Manti.Views {
 			toolStripStatusLabelGameObjectSearchRows.Text = "Game Object(s) found: " + (dt != null ? dt.Rows.Count.ToString() : "0");
 		}
 		private void buttonItemSearchSearch_Click(object sender, EventArgs e) {
-			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageItemSearch);
+			bool emptyControls = Classes.UtilityHelper.checkEmptyControls(tabPageWMItemSearch);
 
 			var dbWorld  = Settings.getWorldDB();
 			var entry    = textBoxItemSearchEntry.Text;
@@ -1875,7 +1875,7 @@ namespace Manti.Views {
 
 			fillCreatureTemplate(model.creature);
 
-			tabControlCategoryCreature.SelectedTab = tabPageCreatureTemplate;
+			tabControlWMCreature.SelectedTab = tabPageWMCreatureTemplate;
 		}
 		private void toolStripSplitButtonCreatureDelete_ButtonClick(object sender, EventArgs e) {
 			var gw = new GenerateWorld();
@@ -2044,7 +2044,7 @@ namespace Manti.Views {
 
 			fillQuestSections(model.quest);
 
-			tabControlCategoryQuest.SelectedTab = tabPageQuestSection1;
+			tabControlWMQuest.SelectedTab = tabPageWMQuestSection1;
 		}
 		private void toolStripSplitButtonQuestDelete_ButtonClick(object sender, EventArgs e) {
 			var gw = new GenerateWorld();
@@ -2063,7 +2063,7 @@ namespace Manti.Views {
 
 			fillGameObjectTemplate(model.gameObject);
 
-			tabControlCategoryGameObject.SelectedTab = tabPageGameObjectTemplate;
+			tabControlWMGameObject.SelectedTab = tabPageWMGameObjectTemplate;
 		}
 		private void toolStripSplitButtonGODelete_ButtonClick(object sender, EventArgs e) {
 			var gw = new GenerateWorld();
@@ -2082,7 +2082,7 @@ namespace Manti.Views {
 
 			fillItemTemplate(model.item);
 
-			tabControlCategoryItem.SelectedTab = tabPageItemTemplate;
+			tabControlWMItem.SelectedTab = tabPageWMItemTemplate;
 		}
 		private void toolStripSplitButtonItemDelete_ButtonClick(object sender, EventArgs e) {
 			var gw = new GenerateWorld();
@@ -2711,9 +2711,5 @@ namespace Manti.Views {
 			return iSubclass;
 		}
 		#endregion
-
-		private void buttonCMMailSqlGenerate_Click(object sender, EventArgs e) {
-
-		}
 	}
 }

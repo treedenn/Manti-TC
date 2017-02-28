@@ -53,8 +53,9 @@ namespace Manti.Views {
 			var process = new System.Diagnostics.Process();
 
 			process.StartInfo.FileName         = path;
-			process.StartInfo.UseShellExecute  = false;
+			process.StartInfo.UseShellExecute  = true;
 			process.StartInfo.WorkingDirectory = Path.GetDirectoryName(path);
+			process.StartInfo.WindowStyle      = System.Diagnostics.ProcessWindowStyle.Minimized;
 
 			if(hideProcess) {
 				process.StartInfo.WindowStyle    = System.Diagnostics.ProcessWindowStyle.Hidden;
@@ -106,6 +107,8 @@ namespace Manti.Views {
 						model.isWorldOnline = isStarted;
 						toggleServerState(isStarted, labelWorldStatus, btn);
 					}
+
+					this.Select(false, true);
 				} else {
 					MessageBox.Show("The path has not be found or the selected file is not a .exe file.\nDo you mind selecting a new one?", "Error: Unknown Path or File", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
