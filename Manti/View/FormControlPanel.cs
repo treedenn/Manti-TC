@@ -18,9 +18,11 @@ namespace Manti.Views {
 
 			string path = Settings.getSetting(Setting.PathServer);
 
-			model.findServerPaths(path);
-			model.findConfigPaths(path);
-			textBoxPathServer.Text = path;
+			if(!string.IsNullOrEmpty(path)) {
+				model.findServerPaths(path);
+				model.findConfigPaths(path);
+				textBoxPathServer.Text = path;
+			}
 
 			buttonWorldServer.FlatAppearance.BorderSize  = 0;
 			buttonAuthServer.FlatAppearance.BorderSize   = 0;

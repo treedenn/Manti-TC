@@ -27,5 +27,8 @@ however, it does have some additional features.
   - Or press Offline mode to disable the direct connection.
 2. Main screen will appear. Here you can edit, create or update.
 
+Whenever you search for strings (characters), you can either search by exact or containing.
+By using the sign # in front of a word, you search for an exact match. Containing is on by default.
+
 ## Download
 To download the program, go to the 'Releases' section and select the newest version for the most functionality.
