@@ -1,6 +1,10 @@
 # Manti-TC
 Manti Manager is a database editor for TrinityCore Emulator. It allows the user to create, update or delete within a database easily.
 
+This project can be found:
+- Emudevs: http://emudevs.com/showthread.php/5261-Trinity-Manti-Manager
+- Ac-Web: http://www.ac-web.org/forums/showthread.php?216217-TrinityCore-Manti-Manager
+
 ## Features
 1. **Account Manager**
   - Create Accounts
