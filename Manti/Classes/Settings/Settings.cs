@@ -45,7 +45,6 @@ namespace Manti.Classes.Settings {
 		DatabaseCharacters,
 		DatabaseWorld,
 		SavePassword,
-		PathWorldserver,
-		PathAuthserver
+		PathServer
 	}
 }

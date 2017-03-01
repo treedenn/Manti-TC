@@ -26,10 +26,7 @@
     <Setting Name="SavePassword" Type="System.String" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="PathWorldserver" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="PathAuthserver" Type="System.String" Scope="User">
+    <Setting Name="PathServer" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

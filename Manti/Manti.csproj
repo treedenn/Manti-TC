@@ -104,7 +104,7 @@
     <Compile Include="Models\GameObjectModel.cs" />
     <Compile Include="Models\ItemModel.cs" />
     <Compile Include="Models\QuestModel.cs" />
-    <Compile Include="Models\ServerModel.cs" />
+    <Compile Include="Models\ControlPanelModel.cs" />
     <Compile Include="Models\WorldManagerModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -237,11 +237,15 @@
     <None Include="Resources\titleManti.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\iconConfiguration.png" />
     <Content Include="Resources\iconGenerate.png" />
     <None Include="Resources\iconManti.ico" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Logging\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

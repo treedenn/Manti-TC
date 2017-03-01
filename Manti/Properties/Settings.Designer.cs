@@ -122,24 +122,12 @@ namespace Manti.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PathWorldserver {
+        public string PathServer {
             get {
-                return ((string)(this["PathWorldserver"]));
+                return ((string)(this["PathServer"]));
             }
             set {
-                this["PathWorldserver"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string PathAuthserver {
-            get {
-                return ((string)(this["PathAuthserver"]));
-            }
-            set {
-                this["PathAuthserver"] = value;
+                this["PathServer"] = value;
             }
         }
     }

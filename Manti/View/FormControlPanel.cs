@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 using Manti.Classes.Settings;
@@ -12,192 +11,157 @@ namespace Manti.Views {
 			InitializeComponent();
 		}
 
+		private Models.ControlPanelModel model;
+
 		private void FormControlPanel_Load(object sender, EventArgs e) {
+			model = Models.ControlPanelModel.getInstance();
+
+			string path = Settings.getSetting(Setting.PathServer);
+
+			model.findServerPaths(path);
+			model.findConfigPaths(path);
+			textBoxPathServer.Text = path;
+
 			buttonWorldServer.FlatAppearance.BorderSize  = 0;
 			buttonAuthServer.FlatAppearance.BorderSize   = 0;
 			buttonWorldServer.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
 			buttonAuthServer.FlatAppearance.BorderColor  = Color.FromArgb(0, 255, 255, 255);
-
+			buttonWorldConfig.FlatAppearance.BorderSize  = 0;
+			buttonAuthConfig.FlatAppearance.BorderSize   = 0;
+			buttonWorldConfig.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255);
+			buttonAuthConfig.FlatAppearance.BorderColor  = Color.FromArgb(0, 255, 255, 255);
+			
 			timerCheckProcess.Start();
 		}
 
-		private bool togglePathComponents() {
-			textBoxPathServer.Visible = !textBoxPathServer.Visible;
-			buttonPathDialog.Visible  = !buttonPathDialog.Visible;
-
-			return textBoxPathServer.Visible;
-		}
-
-		private void toggleServerState(bool isRunning, Label label, Button btn) {
+		private void toggleServerState(bool isRunning, Button btn, PictureBox pb) {
 			if(isRunning) {
-				label.Text = "Status: ONLINE";
 				btn.BackgroundImage = Manti.Properties.Resources.iconStopButton;
+				pb.BackgroundImage  = Manti.Properties.Resources.iconAdd;
 			} else {
-				label.Text = "Status: OFFLINE";
 				btn.BackgroundImage = Manti.Properties.Resources.iconPlayButton;
+				pb.BackgroundImage  = Manti.Properties.Resources.iconDelete;
 			} 
-		}
-
-		private bool isProcessRunning(string path) {
-			string fileName = Path.GetFileName(path);
-			fileName = fileName.Substring(0, fileName.Length - 4);
-
-			Process[] pName = Process.GetProcessesByName(fileName);
-
-			if(pName.Length > 0) { return true; }
-
-			return false;
-		}
-
-		private bool startProcess(string path, bool hideProcess) {
-			var process = new System.Diagnostics.Process();
-
-			process.StartInfo.FileName         = path;
-			process.StartInfo.UseShellExecute  = true;
-			process.StartInfo.WorkingDirectory = Path.GetDirectoryName(path);
-			process.StartInfo.WindowStyle      = System.Diagnostics.ProcessWindowStyle.Minimized;
-
-			if(hideProcess) {
-				process.StartInfo.WindowStyle    = System.Diagnostics.ProcessWindowStyle.Hidden;
-				process.StartInfo.CreateNoWindow = true;
-			}
-
-			try {
-				process.Start();
-				return true;
-			} catch { return false; }
-		}
-
-		private void closeProcess(string path) {
-			string fileName = Path.GetFileName(path);
-			fileName = fileName.Substring(0, fileName.Length - 4);
-
-			foreach(var process in Process.GetProcessesByName(fileName)) {
-				process.Kill();
-			}
 		}
 
 		private void buttonServer_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
-			string path = "";
+			string path      = "";
 			bool hideProcess = false;
-			bool isRunning = false;
+			bool isRunning   = false;
 
-			var model = Models.ServerModel.getInstance();
+			var model = Models.ControlPanelModel.getInstance();
 
 			if(btn == buttonAuthServer) {
-				path = Settings.getSetting(Setting.PathAuthserver);
+				path = model.pathAuthServer;
 				hideProcess = checkBoxHideAuth.Checked;
-				isRunning = model.isAuthOnline;
+				isRunning   = model.isAuthOnline;
 			} else if(btn == buttonWorldServer) {
-				path = Settings.getSetting(Setting.PathWorldserver);
+				path = model.pathWorldServer;
 				hideProcess = checkBoxHideWorld.Checked;
-				isRunning = model.isWorldOnline;
+				isRunning   = model.isWorldOnline;
 			}
 
 			if(!isRunning) {
-				if(File.Exists(path) && path.EndsWith(".exe", StringComparison.InvariantCultureIgnoreCase)) {
-					bool isStarted = startProcess(path, hideProcess);
-
-					if(btn == buttonAuthServer) {
-						model.isAuthOnline = isStarted;
-						toggleServerState(isStarted, labelAuthStatus, btn);
-					} else if(btn == buttonWorldServer) {
-						model.isWorldOnline = isStarted;
-						toggleServerState(isStarted, labelWorldStatus, btn);
-					}
-
-					this.Select(false, true);
-				} else {
-					MessageBox.Show("The path has not be found or the selected file is not a .exe file.\nDo you mind selecting a new one?", "Error: Unknown Path or File", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				}
-			} else {
-				closeProcess(path);
+				bool isStarted;
 
 				if(btn == buttonAuthServer) {
-					model.isAuthOnline = false;
-					toggleServerState(false, labelAuthStatus, btn);
+					if(File.Exists(path)) {
+						isStarted = model.startProcess(path, hideProcess);
+
+						model.isAuthOnline = isStarted;
+						toggleServerState(isStarted, btn, pictureBoxAuth);
+					} else {
+						MessageBox.Show("The path has not be found or the selected file is not a .exe file.\nDo you mind selecting a new one?", "Error: Unknown Path or File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
 				} else if(btn == buttonWorldServer) {
-					model.isWorldOnline = false;
-					toggleServerState(false, labelWorldStatus, btn);
+					if(File.Exists(path)) {
+						isStarted = model.startProcess(path, hideProcess);
+
+						model.isWorldOnline = isStarted;
+						toggleServerState(isStarted, btn, pictureBoxWorld);
+					} else {
+						MessageBox.Show("The path has not be found or the selected file is not a .exe file.\nDo you mind selecting a new one?", "Error: Unknown Path or File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+					}
+				}
+			} else {
+				var isClosed = model.closeProcess(path);
+
+				if(btn == buttonAuthServer) {
+					model.isAuthOnline = !isClosed;
+					toggleServerState(false, btn, pictureBoxAuth);
+				} else if(btn == buttonWorldServer) {
+					model.isWorldOnline = !isClosed;
+					toggleServerState(false, btn, pictureBoxWorld);
 				}
 			}
 
+			/* Perhaps useful for later..
 			if(!model.isAuthOnline && !model.isWorldOnline) {
 				timerCheckProcess.Stop();
 			} else {
 				timerCheckProcess.Start();
 			}
+			*/
 		}
-
-		private void buttonPath_Click(object sender, EventArgs e) {
+		private void buttonConfig_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
-			if(togglePathComponents()) {
-				string path = "";
-
-				if(btn == buttonAuthPath) {
-					path = Settings.getSetting(Setting.PathAuthserver);
-				} else if(btn == buttonWorldPath) {
-					path = Settings.getSetting(Setting.PathWorldserver);
+			if(btn == buttonAuthConfig) {
+				if(File.Exists(model.pathAuthConfig)) {
+					model.startProcess(model.pathAuthConfig, false);
 				}
-
-				textBoxPathServer.Text = path;
-			} else {
-				if(!string.IsNullOrEmpty(textBoxPathServer.Text)) {
-					if(btn == buttonAuthPath) {
-						Settings.setSetting(Setting.PathAuthserver, textBoxPathServer.Text);
-					} else if(btn == buttonWorldPath) {
-						Settings.setSetting(Setting.PathWorldserver, textBoxPathServer.Text);
-					}
-
-					Settings.saveSettings();
+			} else if(btn == buttonWorldConfig) {
+				if(File.Exists(model.pathWorldConfig)) {
+					model.startProcess(model.pathWorldConfig, false);
 				}
 			}
 		}
 
 		private void buttonPathDialog_Click(object sender, EventArgs e) {
-			var ofd = new OpenFileDialog();
+			var ofd = new FolderBrowserDialog();
+			ofd.Description = "Select the TrinityCore Folder containing the .exe and .conf files!";
+			ofd.SelectedPath = Settings.getSetting(Setting.PathServer);
 
 			if(ofd.ShowDialog() == DialogResult.OK) {
-				textBoxPathServer.Text = ofd.FileName;
+				Settings.setSetting(Setting.PathServer, ofd.SelectedPath);
+				Settings.saveSettings();
+
+				model.findServerPaths(ofd.SelectedPath);
+				model.findConfigPaths(ofd.SelectedPath);
 			}
 		}
 
 		private void timerCheckProcess_Tick(object sender, EventArgs e) {
-			var model = Models.ServerModel.getInstance();
 			bool isRunning;
 
-			string aPath = Settings.getSetting(Setting.PathAuthserver);
-			string wPath = Settings.getSetting(Setting.PathWorldserver);
+			string aPath = model.pathAuthServer;
+			string wPath = model.pathWorldServer;
 
 			if(!string.IsNullOrEmpty(aPath)) {
-				isRunning = isProcessRunning(aPath);
-				toggleServerState(isRunning, labelAuthStatus, buttonAuthServer);
+				isRunning = model.isProcessRunning(aPath);
+				toggleServerState(isRunning, buttonAuthServer, pictureBoxAuth);
 				model.isAuthOnline = isRunning;
 
 				if(checkBoxRestartAuth.Checked) {
 					if(!model.isAuthOnline) {
-						startProcess(aPath, checkBoxHideAuth.Checked);
+						model.startProcess(aPath, checkBoxHideAuth.Checked);
 					}
 				}
 			}
 
 			if(!string.IsNullOrEmpty(wPath)) {
-				isRunning = isProcessRunning(wPath);
-				toggleServerState(isRunning, labelWorldStatus, buttonWorldServer);
+				isRunning = model.isProcessRunning(wPath);
+				toggleServerState(isRunning, buttonWorldServer, pictureBoxWorld);
 				model.isWorldOnline = isRunning;
 
 				if(checkBoxRestartWorld.Checked) {
 					if(!model.isWorldOnline) {
-						startProcess(wPath, checkBoxHideWorld.Checked);
+						model.startProcess(wPath, checkBoxHideWorld.Checked);
 					}
 				}
 			}
-		}
-
-		private void checkBoxRestartAuth_CheckedChanged(object sender, EventArgs e) {
 
 		}
 	}
