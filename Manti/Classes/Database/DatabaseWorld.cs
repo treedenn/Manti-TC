@@ -27,7 +27,6 @@ namespace Manti.Classes.Database {
 
 			return dt;
 		}
-
 		public DataTable searchForCreatures(string name, string subname, string minlevel, string maxlevel, string rank) {
 			string query = "SELECT entry, name, subname, minlevel, maxlevel, rank, lootid FROM creature_template WHERE ";
 
@@ -83,7 +82,6 @@ namespace Manti.Classes.Database {
 
 			return dt;
 		}
-
 		public DataTable searchForCreatureByID(uint id) {
 			DataTable dt = executeQuery("SELECT entry, name, subname, minlevel, maxlevel, rank, lootid FROM creature_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", id));
 
@@ -109,7 +107,6 @@ namespace Manti.Classes.Database {
 
 			return buildCreature(dt);
 		}
-
 		public Creature getCreatureDefaultValues() {
 			string[] columns = { "entry", "difficulty_entry_1", "difficulty_entry_2", "difficulty_entry_3", "name", "subname", "modelid1", "modelid2", "modelid3", "modelid4",
 				"minlevel", "maxlevel", "mingold", "maxgold", "KillCredit1", "KillCredit2", "rank", "scale", "faction", "npcflag", "spell1", "spell2", "spell3", "spell4", "spell5", "spell6", "spell7", "spell8",
@@ -131,38 +128,32 @@ namespace Manti.Classes.Database {
 
 			return buildCreatureDefaultValues(dt);
 		}
-
 		public CreatureLocation[] getCreatureLocation(uint entry) {
 			DataTable dt = executeQuery("SELECT id, guid, map, zoneId, areaId, position_x, position_y, position_z, orientation, spawntimesecs, spawndist FROM creature WHERE id = '?entry';", new MySqlParameter("?entry", entry));
 
 			return buildCreatureLocation(dt);
 		}
-
 		public CreatureVendor[] getCreatureVendor(uint entry) {
 			DataTable dt = executeQuery("SELECT entry, slot, item, maxcount, incrtime, extendedcost FROM npc_vendor WHERE entry = '?entry' ORDER BY entry", new MySqlParameter("?entry", entry));
 
 			return buildCreatureVendor(dt, getItemNames("npc_vendor", entry));
 		}
-
 		public CreatureLPS[] getCreatureLoot(uint entry) {
 			DataTable dt = executeQuery("SELECT entry, item, reference, chance, questrequired, lootmode, groupid, mincount, maxcount FROM creature_loot_template WHERE entry = '?entry'", 
 				new MySqlParameter("?entry", entry));
 
 			return buildCreatureLPS(dt, getItemNames("creature_loot_template", entry));
 		}
-
 		public CreatureLPS[] getCreaturePickpocket(uint entry) {
 			DataTable dt = executeQuery("SELECT entry, item, reference, chance, questrequired, lootmode, groupid, mincount, maxcount FROM pickpocketing_loot_template WHERE entry = '?entry'", new MySqlParameter("?entry", entry));
 
 			return buildCreatureLPS(dt, getItemNames("pickpocketing_loot_template", entry));
 		}
-
 		public CreatureLPS[] getCreatureSkin(uint entry) {
 			DataTable dt = executeQuery("SELECT entry, item, reference, chance, questrequired, lootmode, groupid, mincount, maxcount FROM skinning_loot_template WHERE entry = '?entry'", new MySqlParameter("?entry", entry));
 
 			return buildCreatureLPS(dt, getItemNames("skinning_loot_template", entry));
 		}
-
 		public DataTable getItemNames(string table, uint entry) {
 			return executeQuery("SELECT name FROM item_template WHERE entry IN (SELECT item FROM ?table WHERE entry = '?entry' ORDER BY entry);", 
 				new MySqlParameter("?entry", entry), new MySqlParameter("?table", table));
@@ -245,7 +236,6 @@ namespace Manti.Classes.Database {
 
 			return c;
 		}
-
 		public Creature buildCreatureDefaultValues(DataTable dt) {
 			Creature c = new Creature();
 
@@ -323,7 +313,6 @@ namespace Manti.Classes.Database {
 
 			return c;
 		}
-
 		public CreatureLocation[] buildCreatureLocation(DataTable dt) {
 			if(dt != null) {
 				CreatureLocation[] cl = new CreatureLocation[dt.Rows.Count];
@@ -349,7 +338,6 @@ namespace Manti.Classes.Database {
 
 			return null;
 		}
-
 		public CreatureVendor[] buildCreatureVendor(DataTable dt, DataTable dtNames) {
 			if(dt != null) {
 				CreatureVendor[] cv = new CreatureVendor[dt.Rows.Count];
@@ -371,7 +359,6 @@ namespace Manti.Classes.Database {
 
 			return null;
 		}
-
 		public CreatureLPS[] buildCreatureLPS(DataTable dt, DataTable dtNames) {
 			if(dt != null) {
 				CreatureLPS[] clps = new CreatureLPS[dt.Rows.Count];
@@ -404,32 +391,25 @@ namespace Manti.Classes.Database {
 		public DataTable searchForAllQuests() {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template ORDER BY id;");
 		}
-
 		public DataTable searchForQuestsById(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE id = '?value' ORDER BY id;", new MySqlParameter("?value", id));
 		}
-
 		public DataTable searchForQuestsByTitle(string title, bool isExact) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE lower(logtitle) " + 
 				(isExact ? "= '?value'" : "LIKE '%?value%'") + " ORDER BY id;", new MySqlParameter("?value", title));
 		}
-
 		public DataTable searchForQuestsByGiver(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE id IN (SELECT quest FROM creature_queststarter WHERE id = '?value') ORDER BY id;", new MySqlParameter("?value", id));
 		}
-
 		public DataTable searchForQuestsByTaker(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE id IN (SELECT quest FROM creature_questender WHERE id = '?value') ORDER BY id;", new MySqlParameter("?value", id));
 		}
-
 		public DataTable searchForQuestsByPrevId(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE id IN (SELECT ID FROM quest_template_addon WHERE PrevQuestID = '?value') ORDER BY id;", new MySqlParameter("?value", id));
 		}
-
 		public DataTable searchForQuestsByNextId(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE id IN (SELECT ID FROM quest_template_addon WHERE NextQuestID = '?value') ORDER BY id;", new MySqlParameter("?value", id));
 		}
-
 		public DataTable searchForQuestsByInfoId(uint id) {
 			return executeQuery("SELECT id, logtitle, logdescription FROM quest_template WHERE questinfoid = '?value' ORDER BY id;", new MySqlParameter("?value", id));
 		}
@@ -462,7 +442,6 @@ namespace Manti.Classes.Database {
 
 			return buildQuest(dtQuest, dtQuestAddon);
 		}
-
 		public Quest getQuestDefaultValues() {
 			string[] tempColumns = { "id", "logtitle", "logdescription", "questdescription", "areadescription", "questcompletionlog", "objectivetext1", "objectivetext2", "objectivetext3", "objectivetext4", "requiredplayerkills", "timeallowed", "questinfoid", "questlevel",
 				"suggestedgroupnum", "allowableraces", "minlevel", "requiredfactionid1", "requiredfactionid2", "requiredfactionvalue1", "requiredfactionvalue2", "questsortid", "questtype", "flags", "startitem", "requirednpcorgo1", "requirednpcorgo2", "requirednpcorgo3", "requirednpcorgo4",
@@ -491,7 +470,6 @@ namespace Manti.Classes.Database {
 
 			return buildQuestDefaultValues(dtQuest, dtQuestAddon);
 		}
-
 		public QuestGT[] getQuestGT(uint id, bool isGiver) {
 			DataTable dt;
 
@@ -612,7 +590,6 @@ namespace Manti.Classes.Database {
 
 			return q;
 		}
-
 		public Quest buildQuestDefaultValues(DataTable dtQuest, DataTable dtQuestAddon) {
 			Quest q = new Quest();
 
@@ -719,7 +696,6 @@ namespace Manti.Classes.Database {
 
 			return q;
 		}
-
 		public QuestGT[] buildQuestGT(DataTable dt) {
 			var qgt = new QuestGT[dt.Rows.Count];
 
@@ -741,11 +717,9 @@ namespace Manti.Classes.Database {
 		public DataTable searchForAllGameObjects() {
 			return executeQuery("SELECT entry, name FROM gameobject_template ORDER BY entry;");
 		}
-
 		public DataTable searchForAllGameObjectsByEntry(uint entry) {
 			return executeQuery("SELECT entry, name FROM gameobject_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
 		}
-
 		public DataTable searchForAllGameObjectsByName(string name, bool isExact) {
 			if(isExact) {
 				return executeQuery("SELECT entry, name FROM gameobject_template WHERE name = '?value' ORDER BY entry;", new MySqlParameter("?value", name));
@@ -777,7 +751,6 @@ namespace Manti.Classes.Database {
 
 			return buildGameObject(dtTemp, dtAddon);
 		}
-
 		public GameObject getGameObjectDefaultValues() {
 			string[] GoColumns = { "entry", "type", "displayid", "name", "size", "ainame", "scriptname", "data0", "data1", "data2", "data3", "data4", "data5", "data6", "data7", "data8", "data9", "data10",
 				"data11", "data12", "data13", "data14", "data15", "data16", "data17", "data18", "data19", "data20", "data21", "data22", "data23" };
@@ -841,7 +814,6 @@ namespace Manti.Classes.Database {
 
 			return go;
 		}
-
 		public GameObject buildGameObjectDefaultValues(DataTable dt, DataTable dtAddon) {
 			GameObject go = new GameObject();
 
@@ -889,11 +861,9 @@ namespace Manti.Classes.Database {
 		public DataTable searchForAllItems() {
 			return executeQuery("SELECT entry, name, description, class, subclass, quality, requiredlevel FROM item_template ORDER BY entry;");
 		}
-
 		public DataTable searchForItemByEntry(uint entry) {
 			return executeQuery("SELECT entry, name, description, class, subclass, quality, requiredlevel FROM item_template WHERE entry = '?value' ORDER BY entry;", new MySqlParameter("?value", entry));
 		}
-
 		public DataTable searchForItems(string name, string desc, int iClass, int iSub, int quality, int reqlvl) {
 			string query = "SELECT entry, name, description, class, subclass, quality, requiredlevel FROM item_template WHERE 1 = 1 ";
 
@@ -915,7 +885,6 @@ namespace Manti.Classes.Database {
 			return executeQuery(query, new MySqlParameter("?name", name), new MySqlParameter("?desc", desc), new MySqlParameter("?class", iClass), 
 				new MySqlParameter("?sub", iSub), new MySqlParameter("?quality", quality), new MySqlParameter("?reqlvl", reqlvl));
 		}
-
 		public DataTable searchForItemsByQuality(int quality) {
 			return executeQuery("SELECT entry, name, description, class, subclass, quality, requiredlevel FROM item_template WHERE quality = '?value' ORDER BY entry;", new MySqlParameter("?value", quality));
 		}
@@ -925,7 +894,6 @@ namespace Manti.Classes.Database {
 
 			return buildItem(dt);
 		}
-
 		public Item getItemDefaultValues() {
 			string[] columns = { "entry", "class", "subclass", "name", "description", "displayid", "Quality", "BuyCount", "InventoryType", "Flags", "FlagsExtra", "maxcount", "ContainerSlots", "BuyPrice", "SellPrice",
 					"dmg_type1", "dmg_type2", "dmg_min1", "dmg_min2", "dmg_max1", "dmg_max2", "delay", "ammo_type", "RangedModRange", "itemset", "bonding", "block", "MaxDurability", "sheath", "holy_res", "frost_res", "fire_res", "shadow_res", "nature_res", "arcane_res",
@@ -947,7 +915,6 @@ namespace Manti.Classes.Database {
 
 			return buildItemDefaultValues(dt);
 		}
-
 		public ItemLPMD[] getItemLPMD(uint entry, LPMD type) {
 			DataTable dt = null;
 			DataTable dtNames = null;
@@ -973,7 +940,6 @@ namespace Manti.Classes.Database {
 
 			return buildItemLPMD(dt, dtNames);
 		}
-
 		public Item buildItem(DataTable dt) {
 			if(dt != null) {
 				Item item = new Item();
@@ -1118,7 +1084,6 @@ namespace Manti.Classes.Database {
 
 			return null;
 		}
-
 		public Item buildItemDefaultValues(DataTable dt) {
 			if(dt != null) {
 				Item item = new Item();
@@ -1263,6 +1228,16 @@ namespace Manti.Classes.Database {
 
 			return null;
 		}
+		public DataTable getItemNames(uint[] entry) {
+			string entryString = "";
+
+			for(var i = 0; i < entry.Length; i++) {
+				entryString += entry[i];
+				entryString += (i == entry.Length - 1 ? "" : ", ");
+			}
+
+			return executeQuery($"SELECT name FROM item_template WHERE entry IN ({entryString});");
+		}
 
 		public ItemLPMD[] buildItemLPMD(DataTable dt, DataTable names) {
 			if(dt != null) {
@@ -1289,17 +1264,6 @@ namespace Manti.Classes.Database {
 			return null;
 		}
 
-		public DataTable getItemNames(uint[] entry) {
-			string entryString = "";
-
-			for(var i = 0; i < entry.Length; i++) {
-				entryString += entry[i];
-				entryString += (i == entry.Length - 1 ? "" : ", ");
-			}
-
-			return executeQuery($"SELECT name FROM item_template WHERE entry IN ({entryString});");
-		}
-
 		public enum LPMD {
 			LOOT,
 			PROSPECTING,
@@ -1309,5 +1273,31 @@ namespace Manti.Classes.Database {
 
 		#endregion
 
+		#region Popup
+
+		public DataTable popupSearchForItems(uint entry, uint displayId, string name) {
+			string sEntry = (entry > 0 ? $" AND entry = {entry}" : "");
+			string sDisplay = (displayId > 0 ? $" AND entry = {displayId}" : "");
+			string sName = (!string.IsNullOrEmpty(name) ? $" AND name LIKE '%{name}%'" : "");
+
+			return executeQuery($"SELECT entry, displayid, name FROM item_template WHERE 1 = 1 {sEntry + sDisplay + sName} ORDER BY entry;"); ;
+		}
+		public DataTable popupSearchForCreatures(uint entry, uint modelId, string name) {
+			string sEntry = (entry > 0 ? $" AND entry = {entry}" : "");
+			string sModel = (modelId > 0 ? $" AND entry = {modelId}" : "");
+			string sName = (!string.IsNullOrEmpty(name) ? $" AND name LIKE '%{name}%'" : "");
+
+			return executeQuery($"SELECT entry, modelid1, name FROM creature_template WHERE 1 = 1 {sEntry + sModel + sName} ORDER BY entry;");
+		}
+		public DataTable popupSearchForGameObjects(uint entry, uint displayId, string name) {
+			string sEntry = (entry > 0 ? $" AND entry = {entry}" : "");
+			string sDisplay = (displayId > 0 ? $" AND entry = {displayId}" : "");
+			string sName = (!string.IsNullOrEmpty(name) ? $" AND name LIKE '%{name}%'" : "");
+
+			return executeQuery($"SELECT entry, displayid, name FROM gameobject_template WHERE 1 = 1 {sEntry + sDisplay + sName} ORDER BY entry;"); ;
+		}
+
+
+		#endregion
 	}
 }

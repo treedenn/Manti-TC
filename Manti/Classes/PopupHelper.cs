@@ -87,7 +87,6 @@ namespace Manti.Classes {
 			}
 			*/
 
-			popupDialog.setEntityTable = entities;
 			popupDialog.ShowDialog();
 
 			currentValue = (popupDialog.changeSelection == "") ? currentValue : popupDialog.changeSelection;

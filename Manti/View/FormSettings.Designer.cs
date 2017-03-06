@@ -24,7 +24,6 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.treeViewSettings = new System.Windows.Forms.TreeView();
-			this.panelSettings = new System.Windows.Forms.Panel();
 			this.groupBoxMysqlDatabase = new System.Windows.Forms.GroupBox();
 			this.textBoxMysqlWorld = new System.Windows.Forms.TextBox();
 			this.textBoxMysqlCharacters = new System.Windows.Forms.TextBox();
@@ -41,10 +40,18 @@
 			this.labelMysqlAddress = new System.Windows.Forms.Label();
 			this.labelMysqlPassword = new System.Windows.Forms.Label();
 			this.labelMysqlUsername = new System.Windows.Forms.Label();
-			this.splitterMenu = new System.Windows.Forms.Splitter();
-			this.panelSettings.SuspendLayout();
+			this.tabControlSettings = new System.Windows.Forms.TabControl();
+			this.tabPageMySql = new System.Windows.Forms.TabPage();
+			this.tabPageGeneral = new System.Windows.Forms.TabPage();
+			this.buttonOk = new System.Windows.Forms.Button();
+			this.buttonCancel = new System.Windows.Forms.Button();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.buttonApply = new System.Windows.Forms.Button();
 			this.groupBoxMysqlDatabase.SuspendLayout();
 			this.groupBoxMysqlDetails.SuspendLayout();
+			this.tabControlSettings.SuspendLayout();
+			this.tabPageMySql.SuspendLayout();
+			this.panel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// treeViewSettings
@@ -55,66 +62,56 @@
 			this.treeViewSettings.FullRowSelect = true;
 			this.treeViewSettings.Location = new System.Drawing.Point(0, 0);
 			this.treeViewSettings.Name = "treeViewSettings";
-			this.treeViewSettings.Size = new System.Drawing.Size(121, 361);
+			this.treeViewSettings.Size = new System.Drawing.Size(134, 383);
 			this.treeViewSettings.TabIndex = 0;
 			this.treeViewSettings.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewSettings_AfterSelect);
 			// 
-			// panelSettings
-			// 
-			this.panelSettings.BackColor = System.Drawing.SystemColors.Control;
-			this.panelSettings.Controls.Add(this.groupBoxMysqlDatabase);
-			this.panelSettings.Controls.Add(this.groupBoxMysqlDetails);
-			this.panelSettings.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panelSettings.Location = new System.Drawing.Point(121, 0);
-			this.panelSettings.Name = "panelSettings";
-			this.panelSettings.Size = new System.Drawing.Size(463, 361);
-			this.panelSettings.TabIndex = 1;
-			// 
 			// groupBoxMysqlDatabase
 			// 
-			this.groupBoxMysqlDatabase.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBoxMysqlDatabase.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBoxMysqlDatabase.Controls.Add(this.textBoxMysqlWorld);
 			this.groupBoxMysqlDatabase.Controls.Add(this.textBoxMysqlCharacters);
 			this.groupBoxMysqlDatabase.Controls.Add(this.textBoxMysqlAuth);
 			this.groupBoxMysqlDatabase.Controls.Add(this.labelMysqlWorld);
 			this.groupBoxMysqlDatabase.Controls.Add(this.labelMysqlCharacters);
 			this.groupBoxMysqlDatabase.Controls.Add(this.labelMysqlAuth);
-			this.groupBoxMysqlDatabase.Location = new System.Drawing.Point(6, 198);
+			this.groupBoxMysqlDatabase.Location = new System.Drawing.Point(6, 141);
 			this.groupBoxMysqlDatabase.Name = "groupBoxMysqlDatabase";
-			this.groupBoxMysqlDatabase.Size = new System.Drawing.Size(445, 99);
+			this.groupBoxMysqlDatabase.Size = new System.Drawing.Size(499, 106);
 			this.groupBoxMysqlDatabase.TabIndex = 9;
 			this.groupBoxMysqlDatabase.TabStop = false;
 			this.groupBoxMysqlDatabase.Text = "Databases";
 			// 
 			// textBoxMysqlWorld
 			// 
-			this.textBoxMysqlWorld.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxMysqlWorld.Location = new System.Drawing.Point(98, 73);
+			this.textBoxMysqlWorld.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlWorld.Location = new System.Drawing.Point(98, 76);
 			this.textBoxMysqlWorld.Name = "textBoxMysqlWorld";
-			this.textBoxMysqlWorld.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlWorld.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlWorld.TabIndex = 10;
 			// 
 			// textBoxMysqlCharacters
 			// 
-			this.textBoxMysqlCharacters.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxMysqlCharacters.Location = new System.Drawing.Point(98, 45);
+			this.textBoxMysqlCharacters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlCharacters.Location = new System.Drawing.Point(98, 48);
 			this.textBoxMysqlCharacters.Name = "textBoxMysqlCharacters";
-			this.textBoxMysqlCharacters.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlCharacters.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlCharacters.TabIndex = 9;
 			// 
 			// textBoxMysqlAuth
 			// 
-			this.textBoxMysqlAuth.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBoxMysqlAuth.Location = new System.Drawing.Point(98, 17);
+			this.textBoxMysqlAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlAuth.Location = new System.Drawing.Point(98, 20);
 			this.textBoxMysqlAuth.Name = "textBoxMysqlAuth";
-			this.textBoxMysqlAuth.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlAuth.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlAuth.TabIndex = 8;
 			// 
 			// labelMysqlWorld
 			// 
-			this.labelMysqlWorld.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlWorld.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlWorld.AutoSize = true;
-			this.labelMysqlWorld.Location = new System.Drawing.Point(6, 76);
+			this.labelMysqlWorld.Location = new System.Drawing.Point(6, 79);
 			this.labelMysqlWorld.Name = "labelMysqlWorld";
 			this.labelMysqlWorld.Size = new System.Drawing.Size(38, 13);
 			this.labelMysqlWorld.TabIndex = 7;
@@ -122,9 +119,9 @@
 			// 
 			// labelMysqlCharacters
 			// 
-			this.labelMysqlCharacters.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlCharacters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlCharacters.AutoSize = true;
-			this.labelMysqlCharacters.Location = new System.Drawing.Point(6, 48);
+			this.labelMysqlCharacters.Location = new System.Drawing.Point(6, 51);
 			this.labelMysqlCharacters.Name = "labelMysqlCharacters";
 			this.labelMysqlCharacters.Size = new System.Drawing.Size(61, 13);
 			this.labelMysqlCharacters.TabIndex = 6;
@@ -132,9 +129,9 @@
 			// 
 			// labelMysqlAuth
 			// 
-			this.labelMysqlAuth.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlAuth.AutoSize = true;
-			this.labelMysqlAuth.Location = new System.Drawing.Point(6, 20);
+			this.labelMysqlAuth.Location = new System.Drawing.Point(6, 23);
 			this.labelMysqlAuth.Name = "labelMysqlAuth";
 			this.labelMysqlAuth.Size = new System.Drawing.Size(32, 13);
 			this.labelMysqlAuth.TabIndex = 5;
@@ -142,7 +139,8 @@
 			// 
 			// groupBoxMysqlDetails
 			// 
-			this.groupBoxMysqlDetails.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBoxMysqlDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBoxMysqlDetails.Controls.Add(this.textBoxMysqlPort);
 			this.groupBoxMysqlDetails.Controls.Add(this.textBoxMysqlPassword);
 			this.groupBoxMysqlDetails.Controls.Add(this.textBoxMysqlUsername);
@@ -151,49 +149,49 @@
 			this.groupBoxMysqlDetails.Controls.Add(this.labelMysqlAddress);
 			this.groupBoxMysqlDetails.Controls.Add(this.labelMysqlPassword);
 			this.groupBoxMysqlDetails.Controls.Add(this.labelMysqlUsername);
-			this.groupBoxMysqlDetails.Location = new System.Drawing.Point(6, 63);
+			this.groupBoxMysqlDetails.Location = new System.Drawing.Point(6, 6);
 			this.groupBoxMysqlDetails.Name = "groupBoxMysqlDetails";
-			this.groupBoxMysqlDetails.Size = new System.Drawing.Size(445, 129);
+			this.groupBoxMysqlDetails.Size = new System.Drawing.Size(499, 129);
 			this.groupBoxMysqlDetails.TabIndex = 8;
 			this.groupBoxMysqlDetails.TabStop = false;
 			this.groupBoxMysqlDetails.Text = "Details";
 			// 
 			// textBoxMysqlPort
 			// 
-			this.textBoxMysqlPort.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBoxMysqlPort.Location = new System.Drawing.Point(98, 101);
 			this.textBoxMysqlPort.Name = "textBoxMysqlPort";
-			this.textBoxMysqlPort.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlPort.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlPort.TabIndex = 7;
 			// 
 			// textBoxMysqlPassword
 			// 
-			this.textBoxMysqlPassword.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBoxMysqlPassword.Location = new System.Drawing.Point(98, 73);
 			this.textBoxMysqlPassword.Name = "textBoxMysqlPassword";
 			this.textBoxMysqlPassword.PasswordChar = '✱';
-			this.textBoxMysqlPassword.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlPassword.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlPassword.TabIndex = 6;
 			// 
 			// textBoxMysqlUsername
 			// 
-			this.textBoxMysqlUsername.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBoxMysqlUsername.Location = new System.Drawing.Point(98, 45);
 			this.textBoxMysqlUsername.Name = "textBoxMysqlUsername";
-			this.textBoxMysqlUsername.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlUsername.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlUsername.TabIndex = 5;
 			// 
 			// textBoxMysqlAddress
 			// 
-			this.textBoxMysqlAddress.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMysqlAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBoxMysqlAddress.Location = new System.Drawing.Point(98, 17);
 			this.textBoxMysqlAddress.Name = "textBoxMysqlAddress";
-			this.textBoxMysqlAddress.Size = new System.Drawing.Size(341, 20);
+			this.textBoxMysqlAddress.Size = new System.Drawing.Size(395, 20);
 			this.textBoxMysqlAddress.TabIndex = 1;
 			// 
 			// labelMysqlPort
 			// 
-			this.labelMysqlPort.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlPort.AutoSize = true;
 			this.labelMysqlPort.Location = new System.Drawing.Point(6, 104);
 			this.labelMysqlPort.Name = "labelMysqlPort";
@@ -203,7 +201,7 @@
 			// 
 			// labelMysqlAddress
 			// 
-			this.labelMysqlAddress.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlAddress.AutoSize = true;
 			this.labelMysqlAddress.Location = new System.Drawing.Point(6, 20);
 			this.labelMysqlAddress.Name = "labelMysqlAddress";
@@ -213,7 +211,7 @@
 			// 
 			// labelMysqlPassword
 			// 
-			this.labelMysqlPassword.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlPassword.AutoSize = true;
 			this.labelMysqlPassword.Location = new System.Drawing.Point(6, 76);
 			this.labelMysqlPassword.Name = "labelMysqlPassword";
@@ -223,7 +221,7 @@
 			// 
 			// labelMysqlUsername
 			// 
-			this.labelMysqlUsername.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+			this.labelMysqlUsername.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
 			this.labelMysqlUsername.AutoSize = true;
 			this.labelMysqlUsername.Location = new System.Drawing.Point(6, 48);
 			this.labelMysqlUsername.Name = "labelMysqlUsername";
@@ -231,22 +229,95 @@
 			this.labelMysqlUsername.TabIndex = 2;
 			this.labelMysqlUsername.Text = "Username:";
 			// 
-			// splitterMenu
+			// tabControlSettings
 			// 
-			this.splitterMenu.BackColor = System.Drawing.SystemColors.ControlDark;
-			this.splitterMenu.Location = new System.Drawing.Point(121, 0);
-			this.splitterMenu.Name = "splitterMenu";
-			this.splitterMenu.Size = new System.Drawing.Size(3, 361);
-			this.splitterMenu.TabIndex = 2;
-			this.splitterMenu.TabStop = false;
+			this.tabControlSettings.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+			this.tabControlSettings.Controls.Add(this.tabPageGeneral);
+			this.tabControlSettings.Controls.Add(this.tabPageMySql);
+			this.tabControlSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tabControlSettings.ItemSize = new System.Drawing.Size(50, 10);
+			this.tabControlSettings.Location = new System.Drawing.Point(134, 0);
+			this.tabControlSettings.Name = "tabControlSettings";
+			this.tabControlSettings.SelectedIndex = 0;
+			this.tabControlSettings.Size = new System.Drawing.Size(519, 383);
+			this.tabControlSettings.TabIndex = 11;
+			// 
+			// tabPageMySql
+			// 
+			this.tabPageMySql.Controls.Add(this.groupBoxMysqlDetails);
+			this.tabPageMySql.Controls.Add(this.groupBoxMysqlDatabase);
+			this.tabPageMySql.Location = new System.Drawing.Point(4, 14);
+			this.tabPageMySql.Name = "tabPageMySql";
+			this.tabPageMySql.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPageMySql.Size = new System.Drawing.Size(511, 365);
+			this.tabPageMySql.TabIndex = 0;
+			this.tabPageMySql.Text = "MySql";
+			this.tabPageMySql.UseVisualStyleBackColor = true;
+			// 
+			// tabPageGeneral
+			// 
+			this.tabPageGeneral.Location = new System.Drawing.Point(4, 14);
+			this.tabPageGeneral.Name = "tabPageGeneral";
+			this.tabPageGeneral.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPageGeneral.Size = new System.Drawing.Size(735, 544);
+			this.tabPageGeneral.TabIndex = 1;
+			this.tabPageGeneral.Text = "General";
+			this.tabPageGeneral.UseVisualStyleBackColor = true;
+			// 
+			// buttonOk
+			// 
+			this.buttonOk.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.buttonOk.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+			this.buttonOk.Location = new System.Drawing.Point(441, 3);
+			this.buttonOk.Name = "buttonOk";
+			this.buttonOk.Size = new System.Drawing.Size(75, 23);
+			this.buttonOk.TabIndex = 12;
+			this.buttonOk.Text = "OK";
+			this.buttonOk.UseVisualStyleBackColor = true;
+			this.buttonOk.Click += new System.EventHandler(this.buttonActions_Click);
+			// 
+			// buttonCancel
+			// 
+			this.buttonCancel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+			this.buttonCancel.Location = new System.Drawing.Point(10, 2);
+			this.buttonCancel.Name = "buttonCancel";
+			this.buttonCancel.Size = new System.Drawing.Size(75, 23);
+			this.buttonCancel.TabIndex = 13;
+			this.buttonCancel.Text = "Cancel";
+			this.buttonCancel.UseVisualStyleBackColor = true;
+			this.buttonCancel.Click += new System.EventHandler(this.buttonActions_Click);
+			// 
+			// panel1
+			// 
+			this.panel1.Controls.Add(this.buttonApply);
+			this.panel1.Controls.Add(this.buttonCancel);
+			this.panel1.Controls.Add(this.buttonOk);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.panel1.Location = new System.Drawing.Point(134, 354);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(519, 29);
+			this.panel1.TabIndex = 14;
+			// 
+			// buttonApply
+			// 
+			this.buttonApply.Anchor = System.Windows.Forms.AnchorStyles.Right;
+			this.buttonApply.Location = new System.Drawing.Point(360, 3);
+			this.buttonApply.Name = "buttonApply";
+			this.buttonApply.Size = new System.Drawing.Size(75, 23);
+			this.buttonApply.TabIndex = 14;
+			this.buttonApply.Text = "Apply";
+			this.buttonApply.UseVisualStyleBackColor = true;
+			this.buttonApply.Click += new System.EventHandler(this.buttonActions_Click);
 			// 
 			// FormSettings
 			// 
+			this.AcceptButton = this.buttonApply;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(584, 361);
-			this.Controls.Add(this.splitterMenu);
-			this.Controls.Add(this.panelSettings);
+			this.CancelButton = this.buttonOk;
+			this.ClientSize = new System.Drawing.Size(653, 383);
+			this.Controls.Add(this.panel1);
+			this.Controls.Add(this.tabControlSettings);
 			this.Controls.Add(this.treeViewSettings);
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.MaximizeBox = false;
@@ -255,11 +326,13 @@
 			this.ShowIcon = false;
 			this.Text = "FormSettings";
 			this.Load += new System.EventHandler(this.FormSettings_Load);
-			this.panelSettings.ResumeLayout(false);
 			this.groupBoxMysqlDatabase.ResumeLayout(false);
 			this.groupBoxMysqlDatabase.PerformLayout();
 			this.groupBoxMysqlDetails.ResumeLayout(false);
 			this.groupBoxMysqlDetails.PerformLayout();
+			this.tabControlSettings.ResumeLayout(false);
+			this.tabPageMySql.ResumeLayout(false);
+			this.panel1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -267,7 +340,6 @@
 		#endregion
 
 		private System.Windows.Forms.TreeView treeViewSettings;
-		private System.Windows.Forms.Panel panelSettings;
 		private System.Windows.Forms.GroupBox groupBoxMysqlDatabase;
 		private System.Windows.Forms.TextBox textBoxMysqlWorld;
 		private System.Windows.Forms.TextBox textBoxMysqlCharacters;
@@ -284,6 +356,12 @@
 		private System.Windows.Forms.Label labelMysqlAddress;
 		private System.Windows.Forms.Label labelMysqlPassword;
 		private System.Windows.Forms.Label labelMysqlUsername;
-		private System.Windows.Forms.Splitter splitterMenu;
+		private System.Windows.Forms.TabControl tabControlSettings;
+		private System.Windows.Forms.TabPage tabPageMySql;
+		private System.Windows.Forms.TabPage tabPageGeneral;
+		private System.Windows.Forms.Button buttonOk;
+		private System.Windows.Forms.Button buttonCancel;
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button buttonApply;
 	}
 }

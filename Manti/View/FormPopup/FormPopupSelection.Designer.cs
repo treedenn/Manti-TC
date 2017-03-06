@@ -27,8 +27,8 @@
 			this.buttonPopupOK = new System.Windows.Forms.Button();
 			this.buttonPopupClose = new System.Windows.Forms.Button();
 			this.listViewPopupSelection = new System.Windows.Forms.ListView();
-			this.columnHeaderTICID = (( System.Windows.Forms.ColumnHeader )(new System.Windows.Forms.ColumnHeader()));
-			this.columnHeaderTICValue = (( System.Windows.Forms.ColumnHeader )(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderTICID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.columnHeaderTICValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.textBoxPopupSearchID = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
@@ -42,7 +42,7 @@
 			// 
 			// buttonPopupOK
 			// 
-			this.buttonPopupOK.Location = new System.Drawing.Point(12, 376);
+			this.buttonPopupOK.Location = new System.Drawing.Point(193, 376);
 			this.buttonPopupOK.Name = "buttonPopupOK";
 			this.buttonPopupOK.Size = new System.Drawing.Size(179, 23);
 			this.buttonPopupOK.TabIndex = 2;
@@ -52,8 +52,8 @@
 			// 
 			// buttonPopupClose
 			// 
-			this.buttonPopupClose.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonPopupClose.Location = new System.Drawing.Point(193, 376);
+			this.buttonPopupClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonPopupClose.Location = new System.Drawing.Point(12, 376);
 			this.buttonPopupClose.Name = "buttonPopupClose";
 			this.buttonPopupClose.Size = new System.Drawing.Size(179, 23);
 			this.buttonPopupClose.TabIndex = 2;
@@ -63,14 +63,14 @@
 			// 
 			// listViewPopupSelection
 			// 
-			this.listViewPopupSelection.Anchor = (( System.Windows.Forms.AnchorStyles )((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.listViewPopupSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.listViewPopupSelection.BackColor = System.Drawing.SystemColors.Control;
 			this.listViewPopupSelection.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.listViewPopupSelection.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-			this.columnHeaderTICID,
-			this.columnHeaderTICValue});
+            this.columnHeaderTICID,
+            this.columnHeaderTICValue});
 			this.listViewPopupSelection.FullRowSelect = true;
 			this.listViewPopupSelection.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
 			this.listViewPopupSelection.HideSelection = false;

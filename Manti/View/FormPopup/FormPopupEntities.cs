@@ -3,20 +3,22 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
+using Manti.Classes.Settings;
+
 namespace Manti.Views.FormPopup {
 	public partial class FormPopupEntities : Form {
 		public FormPopupEntities() {
 			InitializeComponent();
 		}
 
-		private DataSet tableEntity = new DataSet(); // containing items, creatures & game objects;
+		private DataTable tableEntity = new DataTable(); // containing items, creatures & game objects;
 
 		private string selectionValue = "";
 		private bool selectionOutput = true;
 		private bool[] entities; // order: (item, creature, gameobject)
 
 		// Contain tables with all the entities;
-		public DataSet setEntityTable {
+		public DataTable setEntityTable {
 			set { tableEntity = value; }
 		}
 		// Disables the radiobuttons
@@ -32,7 +34,7 @@ namespace Manti.Views.FormPopup {
 		public bool changeOutput {
 			set { selectionOutput = value; }
 		}
-
+		/*
 		public void addItems(DataTable table) {
 			dataGridViewPopupEntity.DataSource = null;
 			bool isExact;
@@ -88,29 +90,58 @@ namespace Manti.Views.FormPopup {
 
 
 		}
-
+		*/
 		private void FormPopupEntities_Load(object sender, EventArgs e) {
 			dataGridViewPopupEntity.AutoGenerateColumns = false;
 
-			radioButtonPopupEntityItem.Checked = entities[0];
-			radioButtonPopupEntityItem.Visible = entities[0];
-			radioButtonPopupEntityCreature.Checked = entities[1];
-			radioButtonPopupEntityCreature.Visible = entities[1];
+			radioButtonPopupEntityItem.Checked       = entities[0];
+			radioButtonPopupEntityItem.Enabled       = entities[0];
+			radioButtonPopupEntityCreature.Checked   = entities[1];
+			radioButtonPopupEntityCreature.Enabled   = entities[1];
 			radioButtonPopupEntityGameObject.Checked = entities[2];
-			radioButtonPopupEntityGameObject.Visible = entities[2];
+			radioButtonPopupEntityGameObject.Enabled = entities[2];
+
+			if(radioButtonPopupEntityCreature.Checked) {
+				ColumnPopupEntityDisplayID.DataPropertyName = "modelid1";
+			}
 		}
 		private void buttonPopupEntitySearch_Click(object sender, EventArgs e) {
+			var dw = Settings.getWorldDB();
+			uint id, displayId;
+
+			uint.TryParse(textBoxPopupSearchID.Text, out id);
+			uint.TryParse(textBoxPopupSearchDisplayID.Text, out displayId);
+			string value = textBoxPopupSearchValue.Text;
+
+
 			if(radioButtonPopupEntityItem.Checked) {
-				addItems(tableEntity.Tables[0]);
+				if(Classes.Database.MySqlDatabase.isRunningOffline) {
+					Classes.UtilityHelper.readExcelCSV("ItemTemplate", 0, 2, 1);
+				} else {
+					tableEntity = dw.popupSearchForItems(id, displayId, value);
+				}
 			} else if(radioButtonPopupEntityCreature.Checked) {
-				addItems(tableEntity.Tables[1]);
+				if(Classes.Database.MySqlDatabase.isRunningOffline) {
+					Classes.UtilityHelper.readExcelCSV("CreatureTemplate", 0, 1, 2);
+				} else {
+					tableEntity = dw.popupSearchForCreatures(id, displayId, value);
+				}
 			} else {
-				addItems(tableEntity.Tables[2]);
+				if(Classes.Database.MySqlDatabase.isRunningOffline) {
+					Classes.UtilityHelper.readExcelCSV("GameObjectTemplate", 0, 1, 2);
+				} else {
+					tableEntity = dw.popupSearchForGameObjects(id, displayId, value);
+				}
 			}
+
+			dataGridViewPopupEntity.DataSource = tableEntity;
+
+			GC.Collect();
 		}
 		private void dataGridViewPopupEntity_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e) {
 			buttonPopupOK_Click(sender, e);
 		}
+
 		private void buttonPopupOK_Click(object sender, EventArgs e) {
 			if(dataGridViewPopupEntity.SelectedRows.Count > 0) {
 				selectionValue = (selectionOutput) ?
@@ -124,9 +155,9 @@ namespace Manti.Views.FormPopup {
 			if(dataGridViewPopupEntity.SelectedRows.Count > 0) {
 				string URL = "";
 
-				URL = (radioButtonPopupEntityItem.Checked) ? "http://legion.wowhead.com/item=" : URL;
-				URL = (radioButtonPopupEntityCreature.Checked) ? "http://legion.wowhead.com/npc=" : URL;
-				URL = (radioButtonPopupEntityGameObject.Checked) ? "http://legion.wowhead.com/object=" : URL;
+				URL = (radioButtonPopupEntityItem.Enabled ? "http://legion.wowhead.com/item=" : URL);
+				URL = (radioButtonPopupEntityCreature.Enabled ? "http://legion.wowhead.com/npc=" : URL);
+				URL = (radioButtonPopupEntityGameObject.Enabled ? "http://legion.wowhead.com/object=" : URL);
 
 				System.Diagnostics.Process.Start(URL + dataGridViewPopupEntity.SelectedRows[0].Cells[0].Value.ToString());
 			}

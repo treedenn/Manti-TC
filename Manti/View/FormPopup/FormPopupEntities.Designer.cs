@@ -24,10 +24,10 @@
 		/// </summary>
 		private void InitializeComponent() {
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPopupEntities));
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.groupBoxPopupEntity = new System.Windows.Forms.GroupBox();
 			this.radioButtonPopupEntityGameObject = new System.Windows.Forms.RadioButton();
 			this.radioButtonPopupEntityCreature = new System.Windows.Forms.RadioButton();
@@ -44,7 +44,7 @@
 			this.ColumnPopupEntityDisplayID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ColumnPopupEntityValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.groupBoxPopupEntity.SuspendLayout();
-			(( System.ComponentModel.ISupportInitialize )(this.dataGridViewPopupEntity)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewPopupEntity)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBoxPopupEntity
@@ -111,7 +111,7 @@
 			// buttonPopupClose
 			// 
 			this.buttonPopupClose.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-			this.buttonPopupClose.Location = new System.Drawing.Point(262, 426);
+			this.buttonPopupClose.Location = new System.Drawing.Point(12, 426);
 			this.buttonPopupClose.Name = "buttonPopupClose";
 			this.buttonPopupClose.Size = new System.Drawing.Size(110, 23);
 			this.buttonPopupClose.TabIndex = 8;
@@ -122,7 +122,7 @@
 			// buttonPopupOK
 			// 
 			this.buttonPopupOK.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-			this.buttonPopupOK.Location = new System.Drawing.Point(12, 426);
+			this.buttonPopupOK.Location = new System.Drawing.Point(262, 426);
 			this.buttonPopupOK.Name = "buttonPopupOK";
 			this.buttonPopupOK.Size = new System.Drawing.Size(110, 23);
 			this.buttonPopupOK.TabIndex = 9;
@@ -150,10 +150,10 @@
 			// 
 			// buttonPopupEntitySearch
 			// 
-			this.buttonPopupEntitySearch.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonPopupEntitySearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.buttonPopupEntitySearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
 			this.buttonPopupEntitySearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.buttonPopupEntitySearch.Image = (( System.Drawing.Image )(resources.GetObject("buttonPopupEntitySearch.Image")));
+			this.buttonPopupEntitySearch.Image = ((System.Drawing.Image)(resources.GetObject("buttonPopupEntitySearch.Image")));
 			this.buttonPopupEntitySearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.buttonPopupEntitySearch.Location = new System.Drawing.Point(324, 12);
 			this.buttonPopupEntitySearch.Name = "buttonPopupEntitySearch";
@@ -167,31 +167,31 @@
 			this.dataGridViewPopupEntity.AllowUserToAddRows = false;
 			this.dataGridViewPopupEntity.AllowUserToDeleteRows = false;
 			this.dataGridViewPopupEntity.AllowUserToResizeRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (( byte )(0)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewPopupEntity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-			this.dataGridViewPopupEntity.Anchor = (( System.Windows.Forms.AnchorStyles )((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-			| System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewPopupEntity.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			this.dataGridViewPopupEntity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.dataGridViewPopupEntity.BackgroundColor = System.Drawing.SystemColors.Control;
 			this.dataGridViewPopupEntity.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.dataGridViewPopupEntity.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.dataGridViewPopupEntity.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
 			this.dataGridViewPopupEntity.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (( byte )(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewPopupEntity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewPopupEntity.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
 			this.dataGridViewPopupEntity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridViewPopupEntity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-			this.ColumnPopupEntityID,
-			this.ColumnPopupEntityDisplayID,
-			this.ColumnPopupEntityValue});
+            this.ColumnPopupEntityID,
+            this.ColumnPopupEntityDisplayID,
+            this.ColumnPopupEntityValue});
 			this.dataGridViewPopupEntity.GridColor = System.Drawing.SystemColors.HotTrack;
 			this.dataGridViewPopupEntity.Location = new System.Drawing.Point(12, 89);
 			this.dataGridViewPopupEntity.Margin = new System.Windows.Forms.Padding(0);
@@ -199,22 +199,22 @@
 			this.dataGridViewPopupEntity.Name = "dataGridViewPopupEntity";
 			this.dataGridViewPopupEntity.ReadOnly = true;
 			this.dataGridViewPopupEntity.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (( byte )(0)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewPopupEntity.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewPopupEntity.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this.dataGridViewPopupEntity.RowHeadersVisible = false;
 			this.dataGridViewPopupEntity.RowHeadersWidth = 99;
-			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (( byte )(0)));
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-			this.dataGridViewPopupEntity.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+			this.dataGridViewPopupEntity.RowsDefaultCellStyle = dataGridViewCellStyle8;
 			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.SystemColors.Control;
-			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (( byte )(0)));
+			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
 			this.dataGridViewPopupEntity.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.WindowText;
@@ -231,32 +231,30 @@
 			// ColumnPopupEntityID
 			// 
 			this.ColumnPopupEntityID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-			this.ColumnPopupEntityID.DataPropertyName = "id";
-			this.ColumnPopupEntityID.Frozen = true;
-			this.ColumnPopupEntityID.HeaderText = "ID";
+			this.ColumnPopupEntityID.DataPropertyName = "entry";
+			this.ColumnPopupEntityID.HeaderText = "entry";
 			this.ColumnPopupEntityID.Name = "ColumnPopupEntityID";
 			this.ColumnPopupEntityID.ReadOnly = true;
 			this.ColumnPopupEntityID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.ColumnPopupEntityID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-			this.ColumnPopupEntityID.Width = 24;
+			this.ColumnPopupEntityID.Width = 36;
 			// 
 			// ColumnPopupEntityDisplayID
 			// 
 			this.ColumnPopupEntityDisplayID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
 			this.ColumnPopupEntityDisplayID.DataPropertyName = "displayid";
-			this.ColumnPopupEntityDisplayID.Frozen = true;
-			this.ColumnPopupEntityDisplayID.HeaderText = "DisplayID";
+			this.ColumnPopupEntityDisplayID.HeaderText = "displayid";
 			this.ColumnPopupEntityDisplayID.Name = "ColumnPopupEntityDisplayID";
 			this.ColumnPopupEntityDisplayID.ReadOnly = true;
 			this.ColumnPopupEntityDisplayID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
 			this.ColumnPopupEntityDisplayID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-			this.ColumnPopupEntityDisplayID.Width = 58;
+			this.ColumnPopupEntityDisplayID.Width = 53;
 			// 
 			// ColumnPopupEntityValue
 			// 
 			this.ColumnPopupEntityValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.ColumnPopupEntityValue.DataPropertyName = "value";
-			this.ColumnPopupEntityValue.HeaderText = "Value";
+			this.ColumnPopupEntityValue.DataPropertyName = "name";
+			this.ColumnPopupEntityValue.HeaderText = "name";
 			this.ColumnPopupEntityValue.Name = "ColumnPopupEntityValue";
 			this.ColumnPopupEntityValue.ReadOnly = true;
 			this.ColumnPopupEntityValue.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -264,8 +262,10 @@
 			// 
 			// FormPopupEntities
 			// 
+			this.AcceptButton = this.buttonPopupEntitySearch;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.buttonPopupClose;
 			this.ClientSize = new System.Drawing.Size(384, 461);
 			this.ControlBox = false;
 			this.Controls.Add(this.dataGridViewPopupEntity);
@@ -284,7 +284,7 @@
 			this.Load += new System.EventHandler(this.FormPopupEntities_Load);
 			this.groupBoxPopupEntity.ResumeLayout(false);
 			this.groupBoxPopupEntity.PerformLayout();
-			(( System.ComponentModel.ISupportInitialize )(this.dataGridViewPopupEntity)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridViewPopupEntity)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

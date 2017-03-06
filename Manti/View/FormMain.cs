@@ -52,9 +52,9 @@ namespace Manti.Views {
 			// Execute Buttons
 			ToolStripSplitButton[] dStripButton = new ToolStripSplitButton[]
 			{
-					toolStripSplitButtonAMScriptUpdate,
-					toolStripSplitButtonCMScriptUpdate,
-					toolStripSplitButtonWMScriptUpdate
+				toolStripSplitButtonAMScriptUpdate,
+				toolStripSplitButtonCMScriptUpdate,
+				toolStripSplitButtonWMScriptUpdate
 			};
 
 			foreach(Button btn in dButtons) {
@@ -1833,11 +1833,18 @@ namespace Manti.Views {
 			System.Diagnostics.Process.Start(Application.ExecutablePath);
 			Application.Exit();
 		}
-		private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e) {
-			Form CP = new Views.FormControlPanel();
+		private void toolStripMenuItemSettings_Click(object sender, EventArgs e) {
+			var mf = new Views.FormSettings();
+			mf.Show();
 
-			CP.StartPosition = FormStartPosition.CenterScreen;
-			CP.Show();
+			this.Enabled = false;
+			mf.FormClosed += (s, args) => this.Enabled = true;
+		}
+		private void controlPanelToolStripMenuTools_Click(object sender, EventArgs e) {
+			Form cp = new Views.FormControlPanel();
+
+			cp.StartPosition = FormStartPosition.CenterScreen;
+			cp.Show();
 		}
 		private void aboutToolStripMenuHelp_Click(object sender, EventArgs e) {
 			var fa = new FormAbout();

@@ -59,7 +59,16 @@ namespace Manti.Views {
 		#endregion
 
 		private void buttonConnect_Click(object sender, EventArgs e) {
-			if(MySqlAssist.TestConnection(new DatabaseAuth(textBoxAddress.Text, textBoxUsername.Text, textBoxPassword.Text, Convert.ToUInt16(textBoxPort.Text), textBoxAuth.Text))) {
+			var address = textBoxAddress.Text;
+			var user    = textBoxUsername.Text;
+			var pass    = textBoxPassword.Text;
+			var port    = Convert.ToUInt16(textBoxPort.Text);
+
+			var da = new DatabaseAuth(address, user, pass, port, textBoxAuth.Text);
+			var dc = new DatabaseCharacters(address, user, pass, port, textBoxCharacters.Text);
+			var dw = new DatabaseWorld(address, user, pass, port, textBoxWorld.Text);
+
+			if(MySqlAssist.TestConnection(da) && MySqlAssist.TestConnection(dc) && MySqlAssist.TestConnection(dw)) {
 				SaveSettings();
 
 				dbPassword = textBoxPassword.Text;

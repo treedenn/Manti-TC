@@ -30,8 +30,8 @@
 			// 
 			// buttonPopupClose
 			// 
-			this.buttonPopupClose.Anchor = (( System.Windows.Forms.AnchorStyles )((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.buttonPopupClose.Location = new System.Drawing.Point(193, 376);
+			this.buttonPopupClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonPopupClose.Location = new System.Drawing.Point(12, 376);
 			this.buttonPopupClose.Name = "buttonPopupClose";
 			this.buttonPopupClose.Size = new System.Drawing.Size(179, 23);
 			this.buttonPopupClose.TabIndex = 3;
@@ -41,7 +41,7 @@
 			// 
 			// buttonPopupOK
 			// 
-			this.buttonPopupOK.Location = new System.Drawing.Point(12, 376);
+			this.buttonPopupOK.Location = new System.Drawing.Point(197, 376);
 			this.buttonPopupOK.Name = "buttonPopupOK";
 			this.buttonPopupOK.Size = new System.Drawing.Size(179, 23);
 			this.buttonPopupOK.TabIndex = 4;
