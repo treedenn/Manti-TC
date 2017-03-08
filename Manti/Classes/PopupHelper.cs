@@ -12,12 +12,15 @@ namespace Manti.Classes {
 		/// <param name="data">This sends the data to the listview/datagrid used in the popup</param>
 		/// <param name="currentValue">Highlights the current value</param>
 		/// <returns>It returns the selected /= current value (the ID)</returns>
-		public static string createPopupSelection(string formTitle, DataTable data, string currentValue) {
+		public static string createPopupSelection(string formTitle, string csvName, int csvId, int csvValue, string currentValue, bool loadImmediately) {
 			var popupDialog = new FormPopupSelection();
 
-			popupDialog.setFormTitle    = formTitle;
-			popupDialog.changeSelection = currentValue;
-			popupDialog.setDataTable    = data;
+			popupDialog.setFormTitle       = formTitle;
+			popupDialog.changeSelection    = currentValue;
+			popupDialog.setCsvName         = csvName;
+			popupDialog.setCsvId           = csvId;
+			popupDialog.setCsvValue        = csvValue;
+			popupDialog.setLoad            = loadImmediately;
 			popupDialog.ShowDialog();
 
 			currentValue = (string.IsNullOrEmpty(popupDialog.changeSelection)) ? currentValue : popupDialog.changeSelection;

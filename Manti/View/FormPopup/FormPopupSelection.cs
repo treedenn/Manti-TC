@@ -9,11 +9,28 @@ namespace Manti.Views.FormPopup {
 			InitializeComponent();
 		}
 
-		private DataTable data = new DataTable();
+		private string csvName;
+		private int csvId;
+		private int csvValue;
+		private bool loadImmediately;
+
+		private DataTable data;
 		private string selectionValue = "";
 
 		public DataTable setDataTable {
 			set { data = value; }
+		}
+		public string setCsvName {
+			set { csvName = value; }
+		}
+		public int setCsvId {
+			set { csvId = value; }
+		}
+		public int setCsvValue {
+			set { csvValue = value; }
+		}
+		public bool setLoad {
+			set { loadImmediately = value; }
 		}
 		public string setFormTitle {
 			set { this.Text = value; }
@@ -22,45 +39,73 @@ namespace Manti.Views.FormPopup {
 			set { selectionValue = value; }
 			get { return selectionValue; }
 		}
-		private void addItems(TextBox search, int rowValue) {
-			listViewPopupSelection.Items.Clear();
 
+		private void addAllRows() {
 			foreach(DataRow row in data.Rows) {
-				if(search.Text.Trim() != "") {
-					if(row[rowValue].ToString().ToLower().Contains(search.Text.ToLower())) {
-						var item = new ListViewItem( row[0].ToString() );
+				var item = new ListViewItem(row[0].ToString());
+				item.SubItems.Add(row[1].ToString());
+				listViewPopupSelection.Items.Add(item);
+			}
+		}
+		private void searchRows(string searchValue, bool byId) {
+			foreach(DataRow row in data.Rows) {
+				if(!string.IsNullOrEmpty(searchValue)) {
+					if(row[(byId ? 0 : 1)].ToString().ToLower().Contains(searchValue.ToLower())) {
+						var item = new ListViewItem(row[0].ToString());
 						item.SubItems.Add(row[1].ToString());
 						listViewPopupSelection.Items.Add(item);
 					}
-				} else {
-					var item = new ListViewItem(row[0].ToString());
-					item.SubItems.Add(row[1].ToString());
-					listViewPopupSelection.Items.Add(item);
 				}
 			}
 		}
 
-		// FormLoad
-		private void FormPopupSelection_Load(object sender, EventArgs e) {
-			addItems(textBoxPopupSearchValue, 1);
-
+		private void loadCsvFile() {
+			data = Classes.UtilityHelper.readExcelCSV(csvName, csvId, csvValue);
+		}
+		private void loadSelectedValue() {
 			foreach(ListViewItem item in listViewPopupSelection.Items) {
 				if(item.SubItems[0].Text.ToString() == selectionValue) {
 					item.BackColor = Color.LightGreen;
-					item.Selected = true;
+					//item.Selected = true;
 					listViewPopupSelection.EnsureVisible(item.Index);
+
+					return;
 				}
 			}
 		}
-		// TextChanged for Value
-		private void textBoxPopupSearchValue_TextChanged(object sender, EventArgs e) {
-			addItems(textBoxPopupSearchValue, 1);
+
+		private void FormPopupSelection_Load(object sender, EventArgs e) {
+			if(loadImmediately) {
+				loadCsvFile();
+				addAllRows();
+				loadSelectedValue();
+			}
 		}
-		// TextChanged for ID
-		private void textBoxPopupSearchID_TextChanged(object sender, EventArgs e) {
-			addItems(textBoxPopupSearchID, 0);
+
+		private void buttonSearch_Click(object sender, EventArgs e) {
+			listViewPopupSelection.Items.Clear();
+
+			if(data == null) { loadCsvFile(); }
+
+			string sId = textBoxPopupSearchID.Text;
+			string sVal = textBoxPopupSearchValue.Text;
+
+			if(!string.IsNullOrEmpty(sId)) {
+				searchRows(sId, true);
+			} else if(!string.IsNullOrEmpty(sVal)) {
+				searchRows(sVal, false);
+			} else {
+				if(!loadImmediately) {
+					DialogResult dr = MessageBox.Show("You sure you want to load them all?", "Warning - This may take a while...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+					if(dr == DialogResult.No) { return; }
+				}
+
+				addAllRows();
+			}
+
+			loadSelectedValue();
 		}
-		// Button Click OK
 		private void buttonPopupOK_Click(object sender, EventArgs e) {
 			if(listViewPopupSelection.SelectedItems.Count > 0) {
 				selectionValue = listViewPopupSelection.SelectedItems[0].Text;
@@ -70,14 +115,14 @@ namespace Manti.Views.FormPopup {
 
 			this.Close();
 		}
-		// Button Click Close
 		private void buttonPopupClose_Click(object sender, EventArgs e) {
 			this.Close();
 		}
-		// Double Click Grid
+
 		private void listViewPopupSelection_DoubleClick(object sender, EventArgs e) {
 			buttonPopupOK_Click(sender, e);
 		}
 
+		
 	}
 }

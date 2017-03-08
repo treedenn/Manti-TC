@@ -11,6 +11,7 @@ using Manti.Classes.ItemTab;
 using Manti.Classes.Database;
 using Manti.Classes.Settings;
 using Manti.Classes.Generate;
+using Manti.Classes;
 
 namespace Manti.Views {
 	public partial class FormMain : Form {
@@ -2365,9 +2366,9 @@ namespace Manti.Views {
 			Button btn = (Button) sender;
 
 			if(btn == buttonCharacterCharacterRace) {
-				textBoxCharacterCharacterRace.Text = Classes.PopupHelper.createPopupSelection("Character Race", Classes.UtilityHelper.readExcelCSV("ChrRaces", 0, 14), textBoxCharacterCharacterRace.Text);
+				textBoxCharacterCharacterRace.Text = Classes.PopupHelper.createPopupSelection("Character Race", "ChrRaces", 0, 14, textBoxCharacterCharacterRace.Text, true);
 			} else if(btn == buttonCharacterCharacterClass) {
-				textBoxCharacterCharacterClass.Text = Classes.PopupHelper.createPopupSelection("Character Class", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxCharacterCharacterClass.Text);
+				textBoxCharacterCharacterClass.Text = Classes.PopupHelper.createPopupSelection("Character Class", "ChrClasses", 0, 4, textBoxCharacterCharacterClass.Text, true);
 			}
 		}
 		public void buttonCreaturePopup_Click(object sender, EventArgs e) {
@@ -2376,29 +2377,29 @@ namespace Manti.Views {
 			if(btn == buttonCreatureTemplateModelID1) {
 				textBoxCreatureTemplateModelID1.Text = Classes.PopupHelper.createPopupEntity(textBoxCreatureTemplateModelID1.Text, new bool[] { false, true, false }, false);
 			} else if(btn == buttonCreatureTemplateRank) {
-				textBoxCreatureTemplateRank.Text = Classes.PopupHelper.createPopupSelection("Creature Rank", Classes.UtilityHelper.readExcelCSV("CreatureRanks", 0, 1), textBoxCreatureTemplateRank.Text);
+				textBoxCreatureTemplateRank.Text = Classes.PopupHelper.createPopupSelection("Creature Rank", "CreatureRanks", 0, 1, textBoxCreatureTemplateRank.Text, true);
 			} else if(btn == buttonCreatureTemplateNPCFlags) {
 				textBoxCreatureTemplateNPCFlags.Text = Classes.PopupHelper.createPopupChecklist("Creature NPC Flags", Classes.UtilityHelper.readExcelCSV("CreatureNPCFlags", 0, 1), textBoxCreatureTemplateNPCFlags.Text, true);
 			} else if(btn == buttonCreatureTemplateSpell1) {
-				textBoxCreatureTemplateSpell1.Text = Classes.PopupHelper.createPopupSelection("Spells I", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxCreatureTemplateSpell1.Text);
+				textBoxCreatureTemplateSpell1.Text = Classes.PopupHelper.createPopupSelection("Spells I", "Spells", 0, 1, textBoxCreatureTemplateSpell1.Text, false);
 			} else if(btn == buttonCreatureTemplateDS) {
-				textBoxCreatureTemplateDS.Text = Classes.PopupHelper.createPopupSelection("Damage School (Type)", Classes.UtilityHelper.readExcelCSV("CreatureDmgSchool", 0, 1), textBoxCreatureTemplateDS.Text);
+				textBoxCreatureTemplateDS.Text = Classes.PopupHelper.createPopupSelection("Damage School (Type)", "CreatureDmgSchool", 0, 1, textBoxCreatureTemplateDS.Text, true);
 			} else if(btn == buttonCreatureTemplateMType) {
-				textBoxCreatureTemplateMType.Text = Classes.PopupHelper.createPopupSelection("Movement Type", Classes.UtilityHelper.readExcelCSV("CreatureMovementType", 0, 1), textBoxCreatureTemplateMType.Text);
+				textBoxCreatureTemplateMType.Text = Classes.PopupHelper.createPopupSelection("Movement Type", "CreatureMovementType", 0, 1, textBoxCreatureTemplateMType.Text, true);
 			} else if(btn == buttonCreatureTemplateInhabitType) {
 				textBoxCreatureTemplateInhabitType.Text = Classes.PopupHelper.createPopupChecklist("Inhabit Types", Classes.UtilityHelper.readExcelCSV("CreatureInhabitTypes", 0, 1), textBoxCreatureTemplateInhabitType.Text, true); ;
 			} else if(btn == buttonCreatureTemplateMechanic) {
 				textBoxCreatureTemplateMechanic.Text = Classes.PopupHelper.createPopupChecklist("Creature's Immunity", Classes.UtilityHelper.readExcelCSV("CreatureMechanic", 0, 1), textBoxCreatureTemplateMechanic.Text, true);
 			} else if(btn == buttonCreatureTemplateFamily) {
-				textBoxCreatureTemplateFamily.Text = Classes.PopupHelper.createPopupSelection("Creature's Family", Classes.UtilityHelper.readExcelCSV("CreatureFamily", 0, 1), textBoxCreatureTemplateFamily.Text);
+				textBoxCreatureTemplateFamily.Text = Classes.PopupHelper.createPopupSelection("Creature's Family", "CreatureFamily", 0, 1, textBoxCreatureTemplateFamily.Text, true);
 			} else if(btn == buttonCreatureTemplateType) {
-				textBoxCreatureTemplateType.Text = Classes.PopupHelper.createPopupSelection("Creature's Type", Classes.UtilityHelper.readExcelCSV("CreatureFamilyType", 0, 1), textBoxCreatureTemplateType.Text);
+				textBoxCreatureTemplateType.Text = Classes.PopupHelper.createPopupSelection("Creature's Type", "CreatureFamilyType", 0, 1, textBoxCreatureTemplateType.Text, true);
 			} else if(btn == buttonCreatureTemplateTypeFlags) {
 				textBoxCreatureTemplateTypeFlags.Text = Classes.PopupHelper.createPopupChecklist("Unit Flags I", Classes.UtilityHelper.readExcelCSV("CreatureTypeFlags", 0, 1), textBoxCreatureTemplateTypeFlags.Text, true);
 			} else if(btn == buttonCreatureTemplateFlagsExtra) {
 				textBoxCreatureTemplateFlagsExtra.Text = Classes.PopupHelper.createPopupChecklist("Extra Flags", Classes.UtilityHelper.readExcelCSV("CreatureFlagsExtra", 0, 1), textBoxCreatureTemplateFlagsExtra.Text, true);
 			} else if(btn == buttonCreatureTemplateUnitClass) {
-				textBoxCreatureTemplateUnitClass.Text = Classes.PopupHelper.createPopupSelection("Creature's Class", Classes.UtilityHelper.readExcelCSV("CreatureUnitClass", 0, 1), textBoxCreatureTemplateUnitClass.Text);
+				textBoxCreatureTemplateUnitClass.Text = Classes.PopupHelper.createPopupSelection("Creature's Class", "CreatureUnitClass", 0, 1, textBoxCreatureTemplateUnitClass.Text, true);
 			} else if(btn == buttonCreatureTemplateUnitflags) {
 				textBoxCreatureTemplateUnitflags.Text = Classes.PopupHelper.createPopupChecklist("Unit Flags I", Classes.UtilityHelper.readExcelCSV("CreatureUnitFlags", 0, 1), textBoxCreatureTemplateUnitflags.Text, true);
 			} else if(btn == buttonCreatureTemplateUnitflags2) {
@@ -2411,7 +2412,7 @@ namespace Manti.Views {
 			Button btn = (Button) sender;
 
 			if(btn == buttonQuestSearchInfo) {
-				textBoxQuestSearchInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", Classes.UtilityHelper.readExcelCSV("QuestInfo", 0, 1), textBoxQuestSearchInfo.Text);
+				textBoxQuestSearchInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", "QuestInfo", 0, 1, textBoxQuestSearchInfo.Text, true);
 			} else if(btn == buttonQuestSectionSourceItemID) {
 				textBoxQuestSectionSourceItemID.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionSourceItemID.Text, new bool[] { true, false, false });
 			} else if(btn == buttonQuestSectionReqRace) {
@@ -2420,32 +2421,32 @@ namespace Manti.Views {
 				textBoxQuestSectionReqClass.Text = Classes.PopupHelper.createPopupChecklist("Requirement: Classes", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxQuestSectionReqClass.Text, true);
 			} else if(btn == buttonQuestSectionQSort) {
 				if(radioButtonQuestSectionZID.Checked) {
-					textBoxQuestSectionReqQSort.Text = Classes.PopupHelper.createPopupSelection("Zone ID Selection", Classes.UtilityHelper.readExcelCSV("AreaTable", 0, 11), textBoxQuestSectionReqQSort.Text);
+					textBoxQuestSectionReqQSort.Text = Classes.PopupHelper.createPopupSelection("Zone ID Selection", "AreaTable", 0, 11, textBoxQuestSectionReqQSort.Text, true);
 				} else {
-					string newValue = Classes.PopupHelper.createPopupSelection("Quest Sort Selection", Classes.UtilityHelper.readExcelCSV("QuestSort", 0, 1), textBoxQuestSectionReqQSort.Text.Trim('-'));
+					string newValue = Classes.PopupHelper.createPopupSelection("Quest Sort Selection", "QuestSort", 0, 1, textBoxQuestSectionReqQSort.Text.Trim('-'), true);
 
 					textBoxQuestSectionReqQSort.Text = (textBoxQuestSectionReqQSort.Text == newValue || newValue == "0") ? textBoxQuestSectionReqQSort.Text : "-" + newValue;
 				}
 			} else if(btn == buttonQuestSectionReqFaction1) {
-				textBoxQuestSectionReqFaction1.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID I", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction1.Text);
+				textBoxQuestSectionReqFaction1.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID I", "Faction", 0, 23, textBoxQuestSectionReqFaction1.Text, true);
 			} else if(btn == buttonQuestSectionReqFaction2) {
-				textBoxQuestSectionReqFaction2.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID II", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqFaction2.Text);
+				textBoxQuestSectionReqFaction2.Text = Classes.PopupHelper.createPopupSelection("Objective Faction ID II", "Faction", 0, 23, textBoxQuestSectionReqFaction2.Text, true);
 			} else if(btn == buttonQuestSectionReqMinRepF) {
-				textBoxQuestSectionReqMinRepF.Text = Classes.PopupHelper.createPopupSelection("Minimum Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMinRepF.Text);
+				textBoxQuestSectionReqMinRepF.Text = Classes.PopupHelper.createPopupSelection("Minimum Reputation Faction", "Faction", 0, 23, textBoxQuestSectionReqMinRepF.Text, true);
 			} else if(btn == buttonQuestSectionReqMaxRepF) {
-				textBoxQuestSectionReqMaxRepF.Text = Classes.PopupHelper.createPopupSelection("Maximum Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionReqMaxRepF.Text);
+				textBoxQuestSectionReqMaxRepF.Text = Classes.PopupHelper.createPopupSelection("Maximum Reputation Faction", "Faction", 0, 23, textBoxQuestSectionReqMaxRepF.Text, true);
 			} else if(btn == buttonQuestSectionReqSkillID) {
-				textBoxQuestSectionReqSkillID.Text = Classes.PopupHelper.createPopupSelection("Required Skill ID", Classes.UtilityHelper.readExcelCSV("SkillLine", 0, 3), textBoxQuestSectionReqSkillID.Text);
+				textBoxQuestSectionReqSkillID.Text = Classes.PopupHelper.createPopupSelection("Required Skill ID", "SkillLine", 0, 3, textBoxQuestSectionReqSkillID.Text, true);
 			} else if(btn == buttonQuestSectionQuestType) {
-				textBoxQuestSectionQuestType.Text = Classes.PopupHelper.createPopupSelection("Quest Type", Classes.UtilityHelper.readExcelCSV("QuestType", 0, 1), textBoxQuestSectionQuestType.Text);
+				textBoxQuestSectionQuestType.Text = Classes.PopupHelper.createPopupSelection("Quest Type", "QuestType", 0, 1, textBoxQuestSectionQuestType.Text, true);
 			} else if(btn == buttonQuestSectionQuestFlags) {
 				textBoxQuestSectionQuestFlags.Text = Classes.PopupHelper.createPopupChecklist("Quest : Flags", Classes.UtilityHelper.readExcelCSV("QuestFlags", 0, 1), textBoxQuestSectionQuestFlags.Text, true);
 			} else if(btn == buttonQuestSectionOtherSF) {
 				textBoxQuestSectionOtherSF.Text = Classes.PopupHelper.createPopupChecklist("Quest : Special Flags", Classes.UtilityHelper.readExcelCSV("QuestSpecialFlags", 0, 1), textBoxQuestSectionOtherSF.Text, true);
 			} else if(btn == buttonQuestSectionQuestInfo) {
-				textBoxQuestSectionQuestInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", Classes.UtilityHelper.readExcelCSV("QuestInfo", 0, 1), textBoxQuestSectionQuestInfo.Text);
+				textBoxQuestSectionQuestInfo.Text = Classes.PopupHelper.createPopupSelection("Quest Info", "QuestInfo", 0, 1, textBoxQuestSectionQuestInfo.Text, true);
 			} else if(btn == buttonQuestSectionSourceSpellID) {
-				textBoxQuestSectionSourceSpellID.Text = Classes.PopupHelper.createPopupSelection("Spells", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxQuestSectionSourceSpellID.Text);
+				textBoxQuestSectionSourceSpellID.Text = Classes.PopupHelper.createPopupSelection("Spells", "Spells", 0, 1, textBoxQuestSectionSourceSpellID.Text, true);
 			} else if(btn == buttonQuestSectionReqNPCID1) {
 				textBoxQuestSectionReqNPCID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionReqNPCID1.Text, new bool[] { false, true, false });
 			} else if(btn == buttonQuestSectionReqItemID1) {
@@ -2455,18 +2456,18 @@ namespace Manti.Views {
 			} else if(btn == buttonQuestSectionRewItemID1) {
 				textBoxQuestSectionRewItemID1.Text = Classes.PopupHelper.createPopupEntity(textBoxQuestSectionRewItemID1.Text, new bool[] { true, false, false });
 			} else if(btn == buttonQuestSectionRewFactionID1) {
-				textBoxQuestSectionRewFactionID1.Text = Classes.PopupHelper.createPopupSelection("Faction Selection", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxQuestSectionRewFactionID1.Text);
+				textBoxQuestSectionRewFactionID1.Text = Classes.PopupHelper.createPopupSelection("Faction Selection", "Faction", 0, 23, textBoxQuestSectionRewFactionID1.Text, true);
 			} else if(btn == buttonQuestSectionRewOtherTitleID) {
-				textBoxQuestSectionRewOtherTitleID.Text = Classes.PopupHelper.createPopupSelection("Title Selection", Classes.UtilityHelper.readExcelCSV("CharTitles", 0, 2), textBoxQuestSectionRewOtherTitleID.Text);
+				textBoxQuestSectionRewOtherTitleID.Text = Classes.PopupHelper.createPopupSelection("Title Selection", "CharTitles", 0, 2, textBoxQuestSectionRewOtherTitleID.Text, true);
 			} else if(btn == buttonQuestSectionRewSpell) {
-				textBoxQuestSectionRewSpell.Text = Classes.PopupHelper.createPopupSelection("Spell Selection", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxQuestSectionRewSpell.Text);
+				textBoxQuestSectionRewSpell.Text = Classes.PopupHelper.createPopupSelection("Spell Selection", "Spells", 0, 1, textBoxQuestSectionRewSpell.Text, true);
 			}
 		}
 		public void buttonGameObjectPopup_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
 			if(btn == buttonGameObjectTempType) {
-				textBoxGameObjectTempType.Text = Classes.PopupHelper.createPopupSelection("Game Object Type Selection", Classes.UtilityHelper.readExcelCSV("GameObjectTypes", 0, 1), textBoxGameObjectTempType.Text);
+				textBoxGameObjectTempType.Text = Classes.PopupHelper.createPopupSelection("Game Object Type Selection", "GameObjectTypes", 0, 1, textBoxGameObjectTempType.Text, true);
 			} else if(btn == buttonGameObjectTempFlags) {
 				textBoxGameObjectTempFlags.Text = Classes.PopupHelper.createPopupChecklist("Game Object Flags Selection", Classes.UtilityHelper.readExcelCSV("GameObjectFlags", 0, 1), textBoxGameObjectTempFlags.Text, true);
 			}
@@ -2474,88 +2475,131 @@ namespace Manti.Views {
 		public void buttonItemPopup_Click(object sender, EventArgs e) {
 			Button btn = (Button) sender;
 
-			if(btn == buttonItemSearchClass) {
-				textBoxItemSearchClass.Text = Classes.PopupHelper.createPopupSelection("Class Selection", DataItemClass(), textBoxItemSearchClass.Text);
+			if(btn == buttonItemSearchClass || btn == buttonItemTempTypeClass) {
+				TextBox tb = (btn == buttonItemSearchClass ? textBoxItemSearchClass : textBoxItemTempTypeClass);
+				tb.Text = Classes.PopupHelper.createPopupSelection("Class Selection", "ItemClass", 0, 1, tb.Text, true);
 			} else if(btn == buttonItemSearchSubclass) {
-				textBoxItemSearchSubclass.Text = Classes.PopupHelper.createPopupSelection("Subclass Selection", DataItemSubclass(textBoxItemSearchClass.Text.Trim()), textBoxItemSearchSubclass.Text);
-			} else if(btn == buttonItemTempTypeClass) {
-				textBoxItemTempTypeClass.Text = Classes.PopupHelper.createPopupSelection("Class Selection", DataItemClass(), textBoxItemTempTypeClass.Text);
-			} else if(btn == buttonItemTempSubclass) {
-				textBoxItemTempSubclass.Text = Classes.PopupHelper.createPopupSelection("Subclass Selection", DataItemSubclass(textBoxItemTempTypeClass.Text.Trim()), textBoxItemTempSubclass.Text);
+				if(string.IsNullOrEmpty(textBoxItemSearchClass.Text)) {
+					return;
+				}
+
+				TextBox tb = (btn == buttonItemSearchSubclass ? textBoxItemSearchSubclass : textBoxItemTempSubclass);
+				string subName = "ItemSubclass";
+
+				switch(textBoxItemSearchClass.Text) {
+					case "0": // Consumable
+						subName += "Consumable"; break;
+					case "1": // Container
+						subName += "Container"; break;
+					case "2": // Weapon
+						subName += "Weapon"; break;
+					case "3": // Gem
+						subName += "Gem"; break;
+					case "4": // Armor
+						subName += "Armor"; break;
+					case "5": // Reagent
+						subName += "Reagent"; break;
+					case "6": // Projectile
+						subName += "Projectile"; break;
+					case "7": // Trade Goods
+						subName += "TradeGoods"; break;
+					case "8": // Generic (OBSOLETE)
+						subName += "Generic"; break;
+					case "9": // Recipe
+						subName += "Recipe"; break;
+					case "10": // Money (OBSOLETE)
+						subName += "Money"; break;
+					case "11": // Quiver
+						subName += "Quiver"; break;
+					case "12": // Quest
+						subName += "Quest"; break;
+					case "13": // Key
+						subName += "Key"; break;
+					case "14": // Permanent (OBSOLETE)
+						subName += "Permanent"; break;
+					case "15": // Miscellaneous
+						subName += "Miscellaneous"; break;
+					case "16": // Glyph
+						subName += "Glyph"; break;
+					default: break;
+				}
+
+				tb.Text = Classes.PopupHelper.createPopupSelection("Class Selection", subName, 0, 1, tb.Text, true);
+
 			} else if(btn == buttonItemTempDisplayID) {
 				textBoxItemTempDisplayID.Text = Classes.PopupHelper.createPopupEntity(textBoxItemTempDisplayID.Text, new bool[] { true, false, false }, false);
 			} else if(btn == buttonItemTempQuality) {
-				textBoxItemTempQuality.Text = Classes.PopupHelper.createPopupSelection("Quality Selection", Classes.UtilityHelper.readExcelCSV("ItemQuality", 0, 1), textBoxItemTempQuality.Text);
+				textBoxItemTempQuality.Text = Classes.PopupHelper.createPopupSelection("Quality Selection", "ItemQuality", 0, 1, textBoxItemTempQuality.Text, true);
 			} else if(btn == buttonItemTempFlags) {
 				textBoxItemTempFlags.Text = Classes.PopupHelper.createPopupChecklist("Flags", Classes.UtilityHelper.readExcelCSV("ItemFlags", 0, 1), textBoxItemTempFlags.Text, true);
 			} else if(btn == buttonItemTempEFlags) {
 				textBoxItemTempEFlags.Text = Classes.PopupHelper.createPopupChecklist("Extra Flags", Classes.UtilityHelper.readExcelCSV("ItemFlagsExtra", 0, 1), textBoxItemTempEFlags.Text, true);
 			} else if(btn == buttonItemTempDmgType1) {
-				textBoxItemTempDmgType1.Text = Classes.PopupHelper.createPopupSelection("Damage Type I Selection", Classes.UtilityHelper.readExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType1.Text);
+				textBoxItemTempDmgType1.Text = Classes.PopupHelper.createPopupSelection("Damage Type I Selection", "ItemDamageTypes", 0, 1, textBoxItemTempDmgType1.Text, true);
 			} else if(btn == buttonItemTempDmgType2) {
-				textBoxItemTempDmgType2.Text = Classes.PopupHelper.createPopupSelection("Damage Type II Selection", Classes.UtilityHelper.readExcelCSV("ItemDamageTypes", 0, 1), textBoxItemTempDmgType2.Text);
+				textBoxItemTempDmgType2.Text = Classes.PopupHelper.createPopupSelection("Damage Type II Selection", "ItemDamageTypes", 0, 1, textBoxItemTempDmgType2.Text, true);
 			} else if(btn == buttonItemTempAmmoType) {
-				textBoxItemTempAmmoType.Text = Classes.PopupHelper.createPopupSelection("Ammo Types", Classes.UtilityHelper.readExcelCSV("ItemAmmoType", 0, 1), textBoxItemTempAmmoType.Text);
+				textBoxItemTempAmmoType.Text = Classes.PopupHelper.createPopupSelection("Ammo Types", "ItemAmmoType", 0, 1, textBoxItemTempAmmoType.Text, true);
 			} else if(btn == buttonItemTempItemSet) {
-				textBoxItemTempItemSet.Text = Classes.PopupHelper.createPopupSelection("ItemSet Selection", Classes.UtilityHelper.readExcelCSV("ItemSet", 0, 1), textBoxItemTempItemSet.Text);
+				textBoxItemTempItemSet.Text = Classes.PopupHelper.createPopupSelection("ItemSet Selection", "ItemSet", 0, 1, textBoxItemTempItemSet.Text, true);
 			} else if(btn == buttonItemTempBonding) {
-				textBoxItemTempBonding.Text = Classes.PopupHelper.createPopupSelection("Bonding Selection", Classes.UtilityHelper.readExcelCSV("ItemBondings", 0, 1), textBoxItemTempBonding.Text);
+				textBoxItemTempBonding.Text = Classes.PopupHelper.createPopupSelection("Bonding Selection", "ItemBondings", 0, 1, textBoxItemTempBonding.Text, true);
 			} else if(btn == buttonItemTempSheath) {
-				textBoxItemTempSheath.Text = Classes.PopupHelper.createPopupSelection("Sheath Selection", Classes.UtilityHelper.readExcelCSV("ItemSheaths", 0, 1), textBoxItemTempSheath.Text);
+				textBoxItemTempSheath.Text = Classes.PopupHelper.createPopupSelection("Sheath Selection", "ItemSheaths", 0, 1, textBoxItemTempSheath.Text, true);
 			} else if(btn == buttonItemTempColor1) {
-				textBoxItemTempColor1.Text = Classes.PopupHelper.createPopupSelection("Color Selection I", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor1.Text);
+				textBoxItemTempColor1.Text = Classes.PopupHelper.createPopupSelection("Color Selection I", "ItemSocketColors", 0, 1, textBoxItemTempColor1.Text, true);
 			} else if(btn == buttonItemTempColor2) {
-				textBoxItemTempColor2.Text = Classes.PopupHelper.createPopupSelection("Color Selection II", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor2.Text);
+				textBoxItemTempColor2.Text = Classes.PopupHelper.createPopupSelection("Color Selection II", "ItemSocketColors", 0, 1, textBoxItemTempColor2.Text, true);
 			} else if(btn == buttonItemTempColor3) {
-				textBoxItemTempColor3.Text = Classes.PopupHelper.createPopupSelection("Color Selection III", Classes.UtilityHelper.readExcelCSV("ItemSocketColors", 0, 1), textBoxItemTempColor3.Text);
+				textBoxItemTempColor3.Text = Classes.PopupHelper.createPopupSelection("Color Selection III", "ItemSocketColors", 0, 1, textBoxItemTempColor3.Text, true);
 			} else if(btn == buttonItemTempSocketBonus) {
-				textBoxItemTempSocketBonus.Text = Classes.PopupHelper.createPopupSelection("Socket Bonus Selection III", Classes.UtilityHelper.readExcelCSV("ItemSocketBonus", 0, 1), textBoxItemTempSocketBonus.Text);
+				textBoxItemTempSocketBonus.Text = Classes.PopupHelper.createPopupSelection("Socket Bonus Selection III", "ItemSocketBonus", 0, 1, textBoxItemTempSocketBonus.Text, true);
 			} else if(btn == buttonItemTempStatsType1) {
-				textBoxItemTempStatsType1.Text = Classes.PopupHelper.createPopupSelection("Stat Selection I", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType1.Text);
+				textBoxItemTempStatsType1.Text = Classes.PopupHelper.createPopupSelection("Stat Selection I", "ItemStatTypes", 0, 1, textBoxItemTempStatsType1.Text, true);
 			} else if(btn == buttonItemTempStatsType2) {
-				textBoxItemTempStatsType2.Text = Classes.PopupHelper.createPopupSelection("Stat Selection II", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType2.Text);
+				textBoxItemTempStatsType2.Text = Classes.PopupHelper.createPopupSelection("Stat Selection II", "ItemStatTypes", 0, 1, textBoxItemTempStatsType2.Text, true);
 			} else if(btn == buttonItemTempStatsType3) {
-				Classes.PopupHelper.createPopupSelection("Stat Selection III", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType3.Text);
+				textBoxItemTempStatsType3.Text = Classes.PopupHelper.createPopupSelection("Stat Selection III", "ItemStatTypes", 0, 1, textBoxItemTempStatsType3.Text, true);
 			} else if(btn == buttonItemTempStatsType4) {
-				Classes.PopupHelper.createPopupSelection("Stat Selection IV", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType4.Text);
+				textBoxItemTempStatsType4.Text = Classes.PopupHelper.createPopupSelection("Stat Selection IV", "ItemStatTypes", 0, 1, textBoxItemTempStatsType4.Text, true);
 			} else if(btn == buttonItemTempStatsType5) {
-				textBoxItemTempStatsType5.Text = Classes.PopupHelper.createPopupSelection("Stat Selection V", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType5.Text);
+				textBoxItemTempStatsType5.Text = Classes.PopupHelper.createPopupSelection("Stat Selection V", "ItemStatTypes", 0, 1, textBoxItemTempStatsType5.Text, true);
 			} else if(btn == buttonItemTempStatsType6) {
-				textBoxItemTempStatsType6.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VI", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType6.Text);
+				textBoxItemTempStatsType6.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VI", "ItemStatTypes", 0, 1, textBoxItemTempStatsType6.Text, true);
 			} else if(btn == buttonItemTempStatsType7) {
-				textBoxItemTempStatsType7.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VII", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType7.Text);
+				textBoxItemTempStatsType7.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VII", "ItemStatTypes", 0, 1, textBoxItemTempStatsType7.Text, true);
 			} else if(btn == buttonItemTempStatsType8) {
-				textBoxItemTempStatsType8.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VIII", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType8.Text);
+				textBoxItemTempStatsType8.Text = Classes.PopupHelper.createPopupSelection("Stat Selection VIII", "ItemStatTypes", 0, 1, textBoxItemTempStatsType8.Text, true);
 			} else if(btn == buttonItemTempStatsType9) {
-				textBoxItemTempStatsType9.Text = Classes.PopupHelper.createPopupSelection("Stat Selection IX", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType9.Text);
+				textBoxItemTempStatsType9.Text = Classes.PopupHelper.createPopupSelection("Stat Selection IX", "ItemStatTypes", 0, 1, textBoxItemTempStatsType9.Text, true);
 			} else if(btn == buttonItemTempStatsType10) {
-				textBoxItemTempStatsType10.Text = Classes.PopupHelper.createPopupSelection("Stat Selection X", Classes.UtilityHelper.readExcelCSV("ItemStatTypes", 0, 1), textBoxItemTempStatsType10.Text);
+				textBoxItemTempStatsType10.Text = Classes.PopupHelper.createPopupSelection("Stat Selection X", "ItemStatTypes", 0, 1, textBoxItemTempStatsType10.Text, true);
 			} else if(btn == buttonItemTempSpellID1) {
-				textBoxItemTempSpellID1.Text = Classes.PopupHelper.createPopupSelection("Required Spell", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxItemTempSpellID1.Text);
+				textBoxItemTempSpellID1.Text = Classes.PopupHelper.createPopupSelection("Required Spell", "Spells", 0, 1, textBoxItemTempSpellID1.Text, false);
 			} else if(btn == buttonItemTempTrigger1) {
-				textBoxItemTempTrigger1.Text = Classes.PopupHelper.createPopupSelection("Spell Trigger", Classes.UtilityHelper.readExcelCSV("ItemSpellTrigger", 0, 1), textBoxItemTempTrigger1.Text);
+				textBoxItemTempTrigger1.Text = Classes.PopupHelper.createPopupSelection("Spell Trigger", "ItemSpellTrigger", 0, 1, textBoxItemTempTrigger1.Text, true);
 			} else if(btn == buttonItemTempReqRace) {
 				textBoxItemTempReqRace.Text = Classes.PopupHelper.createPopupChecklist("Race Requirement", Classes.UtilityHelper.readExcelCSV("ChrRaces", 0, 14), textBoxItemTempReqRace.Text, true);
 			} else if(btn == buttonItemTempReqClass) {
 				textBoxItemTempReqClass.Text = Classes.PopupHelper.createPopupChecklist("Class Requirement", Classes.UtilityHelper.readExcelCSV("ChrClasses", 0, 4), textBoxItemTempReqClass.Text, true);
 			} else if(btn == buttonItemTempReqSkill) {
-				textBoxItemTempReqSkill.Text = Classes.PopupHelper.createPopupSelection("Required Skill", Classes.UtilityHelper.readExcelCSV("SkillLine", 0, 3), textBoxItemTempReqSkill.Text);
+				textBoxItemTempReqSkill.Text = Classes.PopupHelper.createPopupSelection("Required Skill", "SkillLine", 0, 3, textBoxItemTempReqSkill.Text, true);
 			} else if(btn == buttonItemTempReqRepFaction) {
-				textBoxItemTempReqRepFaction.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Faction", Classes.UtilityHelper.readExcelCSV("Faction", 0, 23), textBoxItemTempReqRepFaction.Text);
+				textBoxItemTempReqRepFaction.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Faction", "Faction", 0, 23, textBoxItemTempReqRepFaction.Text, true);
 			} else if(btn == buttonItemTempReqRepRank) {
-				textBoxItemTempReqRepRank.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Rank", Classes.UtilityHelper.readExcelCSV("ItemReqReputationRank", 0, 1), textBoxItemTempReqRepRank.Text);
+				textBoxItemTempReqRepRank.Text = Classes.PopupHelper.createPopupSelection("Required Reputation Rank", "ItemReqReputationRank", 0, 1, textBoxItemTempReqRepRank.Text, true);
 			} else if(btn == buttonItemTempReqSpell) {
-				textBoxItemTempReqSpell.Text = Classes.PopupHelper.createPopupSelection("Required Spell", Classes.UtilityHelper.readExcelCSV("Spells", 0, 1), textBoxItemTempReqSpell.Text);
+				textBoxItemTempReqSpell.Text = Classes.PopupHelper.createPopupSelection("Required Spell", "Spells", 0, 1, textBoxItemTempReqSpell.Text, false);
 			} else if(btn == buttonItemTempMaterial) {
-				textBoxItemTempMaterial.Text = Classes.PopupHelper.createPopupSelection("Materials", Classes.UtilityHelper.readExcelCSV("ItemMaterial", 0, 1), textBoxItemTempMaterial.Text);
+				textBoxItemTempMaterial.Text = Classes.PopupHelper.createPopupSelection("Materials", "ItemMaterial", 0, 1, textBoxItemTempMaterial.Text, true);
 			} else if(btn == buttonItemTempFoodType) {
-				textBoxItemTempFoodType.Text = Classes.PopupHelper.createPopupSelection("Food Type", Classes.UtilityHelper.readExcelCSV("ItemFoodType", 0, 1), textBoxItemTempFoodType.Text);
+				textBoxItemTempFoodType.Text = Classes.PopupHelper.createPopupSelection("Food Type", "ItemFoodType", 0, 1, textBoxItemTempFoodType.Text, true);
 			} else if(btn == buttonItemTempBagFamily) {
-				textBoxItemTempBagFamily.Text = Classes.PopupHelper.createPopupSelection("Bag Family", Classes.UtilityHelper.readExcelCSV("ItemBagFamily", 0, 1), textBoxItemTempBagFamily.Text);
+				textBoxItemTempBagFamily.Text = Classes.PopupHelper.createPopupSelection("Bag Family", "ItemBagFamily", 0, 1, textBoxItemTempBagFamily.Text, true);
 			} else if(btn == buttonItemTempFlagsC) {
-				textBoxItemTempFlagsC.Text = Classes.PopupHelper.createPopupSelection("Custom Flags", Classes.UtilityHelper.readExcelCSV("ItemFlagsCustom", 0, 1), textBoxItemTempFlagsC.Text);
+				textBoxItemTempFlagsC.Text = Classes.PopupHelper.createPopupSelection("Custom Flags", "ItemFlagsCustom", 0, 1, textBoxItemTempFlagsC.Text, true);
 			} else if(btn == buttonItemTempTotemCategory) {
-				textBoxItemTempTotemCategory.Text = Classes.PopupHelper.createPopupSelection("Totem Category", Classes.UtilityHelper.readExcelCSV("ItemTotemCategory", 0, 1), textBoxItemTempTotemCategory.Text);
+				textBoxItemTempTotemCategory.Text = Classes.PopupHelper.createPopupSelection("Totem Category", "ItemTotemCategory", 0, 1, textBoxItemTempTotemCategory.Text, true);
 			}
 		}
 

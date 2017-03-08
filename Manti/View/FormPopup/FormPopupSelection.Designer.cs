@@ -30,15 +30,15 @@
 			this.columnHeaderTICID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeaderTICValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.textBoxPopupSearchID = new System.Windows.Forms.TextBox();
+			this.buttonSearch = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// textBoxPopupSearchValue
 			// 
 			this.textBoxPopupSearchValue.Location = new System.Drawing.Point(78, 12);
 			this.textBoxPopupSearchValue.Name = "textBoxPopupSearchValue";
-			this.textBoxPopupSearchValue.Size = new System.Drawing.Size(294, 20);
+			this.textBoxPopupSearchValue.Size = new System.Drawing.Size(268, 20);
 			this.textBoxPopupSearchValue.TabIndex = 1;
-			this.textBoxPopupSearchValue.TextChanged += new System.EventHandler(this.textBoxPopupSearchValue_TextChanged);
 			// 
 			// buttonPopupOK
 			// 
@@ -53,6 +53,7 @@
 			// buttonPopupClose
 			// 
 			this.buttonPopupClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonPopupClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 			this.buttonPopupClose.Location = new System.Drawing.Point(12, 376);
 			this.buttonPopupClose.Name = "buttonPopupClose";
 			this.buttonPopupClose.Size = new System.Drawing.Size(179, 23);
@@ -100,14 +101,27 @@
 			this.textBoxPopupSearchID.Name = "textBoxPopupSearchID";
 			this.textBoxPopupSearchID.Size = new System.Drawing.Size(60, 20);
 			this.textBoxPopupSearchID.TabIndex = 4;
-			this.textBoxPopupSearchID.TextChanged += new System.EventHandler(this.textBoxPopupSearchID_TextChanged);
+			// 
+			// buttonSearch
+			// 
+			this.buttonSearch.BackgroundImage = global::Manti.Properties.Resources.iconSearch;
+			this.buttonSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.buttonSearch.Location = new System.Drawing.Point(352, 12);
+			this.buttonSearch.Name = "buttonSearch";
+			this.buttonSearch.Size = new System.Drawing.Size(20, 20);
+			this.buttonSearch.TabIndex = 5;
+			this.buttonSearch.UseVisualStyleBackColor = true;
+			this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
 			// 
 			// FormPopupSelection
 			// 
+			this.AcceptButton = this.buttonSearch;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.CancelButton = this.buttonPopupClose;
 			this.ClientSize = new System.Drawing.Size(384, 411);
 			this.ControlBox = false;
+			this.Controls.Add(this.buttonSearch);
 			this.Controls.Add(this.textBoxPopupSearchID);
 			this.Controls.Add(this.listViewPopupSelection);
 			this.Controls.Add(this.buttonPopupClose);
@@ -131,5 +145,6 @@
 		private System.Windows.Forms.ColumnHeader columnHeaderTICID;
 		private System.Windows.Forms.ColumnHeader columnHeaderTICValue;
 		private System.Windows.Forms.TextBox textBoxPopupSearchID;
+		private System.Windows.Forms.Button buttonSearch;
 	}
 }
